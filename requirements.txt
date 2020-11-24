@@ -1,0 +1,9 @@
+# Dev Dependencies
+importchecker==2.0
+pycodestyle==2.4.0
+pytest==3.5.1
+twine==1.11.0
+wheel
+
+# Dependencies
+pytz==2019.3
