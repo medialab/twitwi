@@ -1,8 +1,19 @@
 # =============================================================================
 # Twitwi Utilities Unit Tests
 # =============================================================================
+from pytz import timezone
+from twitwi.utils import get_dates
+
+GET_DATES_TESTS = [
+    (('Thu Feb 07 06:43:33 +0000 2013', 'Europe/Paris'), (1360215813, '2013-02-07T07:43:33')),
+    (('Tue Nov 24 12:24:06 +0000 2020', 'Europe/Paris'), (1606217046, '2020-11-24T13:24:06')),
+    (('Sun Nov 22 22:49:46 +0000 2020', 'Australia/Adelaide'), (1606081786, '2020-11-23T09:19:46'))
+]
 
 
 class TestUtils(object):
-    def test_basics(self):
-        pass
+    def test_get_dates(self):
+        for (date_str, tz), result in GET_DATES_TESTS:
+            tz = timezone(tz)
+
+            assert get_dates(date_str, locale=tz) == result, (date_str, tz)
