@@ -5,9 +5,9 @@ from pytz import timezone
 from twitwi.utils import get_dates
 
 GET_DATES_TESTS = [
-    (('Thu Feb 07 06:43:33 +0000 2013', 'Europe/Paris'), (1360215813, '2013-02-07T07:43:33')),
-    (('Tue Nov 24 12:24:06 +0000 2020', 'Europe/Paris'), (1606217046, '2020-11-24T13:24:06')),
-    (('Sun Nov 22 22:49:46 +0000 2020', 'Australia/Adelaide'), (1606081786, '2020-11-23T09:19:46'))
+    (('Thu Feb 07 06:43:33 +0000 2013', 'Europe/Paris'), (1360219413, '2013-02-07T07:43:33')),
+    (('Tue Nov 24 16:43:53 +0000 2020', 'Europe/Paris'), (1606236233, '2020-11-24T17:43:53')),
+    (('Tue Nov 24 16:52:48 +0000 2020', 'Australia/Adelaide'), (1606236768, '2020-11-25T03:22:48'))
 ]
 
 
