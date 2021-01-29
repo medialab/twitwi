@@ -5,7 +5,6 @@
 # Miscellaneous utility functions.
 #
 from datetime import datetime
-from time import mktime
 from pytz import timezone
 
 from twitwi.constants import (
