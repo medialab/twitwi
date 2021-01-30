@@ -8,7 +8,7 @@ TWEET_DATETIME_FORMAT = '%a %b %d %H:%M:%S +0000 %Y'
 FORMATTED_TWEET_DATETIME_FORMAT = '%Y-%m-%dT%H:%M:%S'
 
 # More details on Twitter's tweets metadata can be read here: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
-TWEET_CSV_HEADERS = [
+TWEET_FIELDS = [
     'id',                             # digital ID
     'timestamp_utc',                  # UNIX timestamp of creation - UTC time
     'local_time',                     # ISO datetime of creation - local time
@@ -80,7 +80,7 @@ TWEET_CSV_HEADERS = [
 ]
 
 # More details on Twitter's users metadata can be read here: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
-TWITTER_USER_CSV_HEADERS = [
+USER_FIELDS = [
     'id',
     'screen_name',
     'name',
@@ -118,3 +118,20 @@ TWITTER_USER_CSV_HEADERS = [
     # 'profile_sidebar_fill_color',         # dropped by Twitter (since May 19), ignorable
     # 'profile_sidebar_border_color'        # dropped by Twitter (since May 19), ignorable
 ]
+
+TWEET_PLURAL_FIELDS = {
+    'links',
+    'hashtags',
+    'collected_via',
+    'media_urls',
+    'media_files',
+    'media_types',
+    'mentioned_names',
+    'mentioned_ids'
+}
+
+TWEET_BOOLEAN_FIELDS = {
+    'possibly_sensitive',
+    'user_verified',
+    'match_query'
+}
