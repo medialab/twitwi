@@ -17,6 +17,7 @@ setup(name='twitwi',
       packages=find_packages(exclude=['scripts', 'test']),
       package_data={'docs': ['README.md']},
       install_requires=[
-        'pytz>=2019.3'
+        'pytz>=2019.3',
+        'ural==0.25.1'
       ],
       zip_safe=True)
