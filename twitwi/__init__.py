@@ -2,3 +2,4 @@
 # Twitwi Library Endpoint
 # =============================================================================
 #
+from twitwi.client_wrapper import TwitterWrapper
