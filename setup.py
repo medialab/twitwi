@@ -18,6 +18,7 @@ setup(name='twitwi',
       package_data={'docs': ['README.md']},
       install_requires=[
         'pytz>=2019.3',
-        'ural==0.25.1'
+        'ural>=0.25.1',
+        'twitter>=1.18.0'
       ],
       zip_safe=True)

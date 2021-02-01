@@ -7,3 +7,4 @@ wheel
 
 # Dependencies
 pytz==2019.3
+twitter==1.18.0
