@@ -104,7 +104,7 @@ def grab_extra_meta(source, result, locale=None):
     return result
 
 
-def prepare_tweet(tweet, locale=None):
+def prepare_tweet(tweet, locale=None, id_key='id'):
         results = []
         if "extended_tweet" in tweet:
             for field in tweet["extended_tweet"]:
@@ -119,7 +119,7 @@ def prepare_tweet(tweet, locale=None):
             rtu = tweet['retweeted_status']['user']['screen_name']
             rtuid = tweet['retweeted_status']['user']['id_str']
             tweet['retweeted_status']["gazouilloire_source"] = "retweet"
-            nested = prepare_tweet(tweet['retweeted_status'], locale=locale)
+            nested = prepare_tweet(tweet['retweeted_status'], locale=locale, id_key=id_key)
             rtweet = nested[-1]
             results.extend(nested)
             rtime = rtweet['timestamp_utc']
@@ -141,7 +141,7 @@ def prepare_tweet(tweet, locale=None):
             qtu = tweet['quoted_status']['user']['screen_name']
             qtuid = tweet['quoted_status']['user']['id_str']
             tweet['quoted_status']["gazouilloire_source"] = "quote"
-            nested = prepare_tweet(tweet['quoted_status'], locale=locale)
+            nested = prepare_tweet(tweet['quoted_status'], locale=locale, id_key=id_key)
             qtweet = nested[-1]
             results.extend(nested)
             if 'quoted_status_permalink' in tweet:
@@ -197,7 +197,7 @@ def prepare_tweet(tweet, locale=None):
         timestamp_utc, local_time = get_dates(tweet["created_at"], locale)
         text = unescape(text)
         tw = {
-            '_id': tweet['id_str'],
+            id_key: tweet['id_str'],
             'local_time': local_time,
             'timestamp_utc': timestamp_utc,
             'text': text,
