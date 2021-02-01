@@ -7,7 +7,7 @@
 from datetime import datetime
 from pytz import timezone
 from ural import normalize_url
-from html.entities import name2codepoint
+from html import unescape
 import re
 
 
@@ -18,7 +18,6 @@ from twitwi.constants import (
 )
 
 UTC_TIMEZONE = timezone('UTC')
-re_entities = re.compile(r'&([^;]+);')
 re_clean_rt = re.compile(r"^RT @\w+: ")
 
 
@@ -41,28 +40,6 @@ def normalize(url):
     return normalize_url(url, strip_authentication=False, strip_trailing_slash=False, strip_protocol=False,
                          strip_irrelevant_subdomains=False, strip_fragment=False, normalize_amp=False,
                          fix_common_mistakes=False, infer_redirection=False, quoted=True)
-
-
-def unescape_html(text):
-    return re_entities.sub(decode_entities, text)
-
-
-def decode_entities(x):
-    if x.group(1).startswith('#'):
-        char = x.group(1)[1:]
-        if char.startswith('x'):
-            try:
-                return chr(int(x.group(1)[2:], 16))
-            except:
-                pass
-        try:
-            return chr(int(x.group(1)[1:]))
-        except:
-            pass
-    try:
-        return chr(name2codepoint[x.group(1)])
-    except:
-        return x.group(1)
 
 
 def process_extract(text, car):
@@ -218,7 +195,7 @@ def prepare_tweet(tweet, locale=None):
             for mention in tweet['entities'].get('user_mentions', []):
                 mentions[mention['screen_name'].lower()] = mention['id_str']
         timestamp_utc, local_time = get_dates(tweet["created_at"], locale)
-        text = unescape_html(text)
+        text = unescape(text)
         tw = {
             '_id': tweet['id_str'],
             'local_time': local_time,
