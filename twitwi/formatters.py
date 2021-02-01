@@ -11,16 +11,16 @@ from twitwi.constants import (
 )
 
 
-def transform_tweet_into_csv_dict(tweet, normalize_id=False, has_proper_links=False,
+def transform_tweet_into_csv_dict(tweet, tweet_id=None, has_proper_links=False,
                                   plural_separator='|'):
-    if normalize_id:
-        tweet['id'] = tweet['_id']
+    if tweet_id is not None:
+        tweet['id'] = tweet_id
 
     if has_proper_links:
         tweet['links'] = tweet.get('proper_links', tweet.get('links', []))
 
     for plural_field in TWEET_PLURAL_FIELDS:
-        tweet[plural_field] = plural_separator.join(tweet[plural_field])
+        tweet[plural_field] = plural_separator.join(tweet.get(plural_field, []))
 
     for boolean_field in TWEET_BOOLEAN_FIELDS:
-        tweet[plural_field] = '1' if tweet.get(boolean_field, False) else ''
+        tweet[boolean_field] = int(tweet[boolean_field]) if boolean_field in tweet else ''
