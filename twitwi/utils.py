@@ -50,7 +50,7 @@ def normalize(url):
     )
 
 
-def process_extract(text, char):
+def extract_items_from_text(text, char):
     splitter = re.compile(r'[^\w%s]+' % char)
 
     return sorted(
@@ -60,6 +60,14 @@ def process_extract(text, char):
             if r.startswith(char)
         )
     )
+
+
+def extract_hashtags_from_text(text):
+    return extract_items_from_text(text, '#')
+
+
+def extract_mentions_from_text(text):
+    return extract_items_from_text(text, '@')
 
 
 def resolve_entities(tweet, prefix):
@@ -73,6 +81,10 @@ def resolve_entities(tweet, prefix):
             tweet[ent][field] = tweet[ent].get(field, [])
             if field in tweet[status_key][ent]:
                 tweet[ent][field] += tweet[status_key][ent][field]
+
+
+def get_bitrate(x):
+    return x.get('bitrate', 0)
 
 
 def nostr_field(f):
@@ -187,25 +199,32 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
         media_urls = []
         media_files = []
         media_types = []
+
         links = set()
         hashtags = set()
         mentions = {}
+
         if 'entities' in tweet or 'extended_entities' in tweet:
             source_id = rti or qti or tweet['id_str']
-            for entity in tweet.get('extended_entities', tweet['entities']).get('media', []) + tweet['entities'].get(
-                    'urls', []):
+
+            entities = tweet.get('extended_entities', tweet['entities']).get('media', [])
+            entities += tweet['entities'].get('urls', [])
+
+            for entity in entities:
                 if 'expanded_url' in entity and 'url' in entity and entity['expanded_url']:
                     try:
                         text = text.replace(entity['url'], entity['expanded_url'])
-                    except:
+                    except KeyError:
                         pass
+
                 if 'media_url' in entity:
                     if 'video_info' in entity:
-                        med_url = sorted(entity['video_info']['variants'], key=lambda x: x.get(
-                            'bitrate', 0))[-1]['url']
+                        med_url = max(entity['video_info']['variants'], key=get_bitrate)['url']
                     else:
                         med_url = entity['media_url_https']
-                    med_name = med_url.split('/')[-1].split('?tag=')[0]
+
+                    med_name = med_url.rsplit('/', 1)[-1].split('?tag=', 1)[0]
+
                     if med_name not in medids:
                         medids.add(med_name)
                         media_types.append(entity['type'])
@@ -214,12 +233,16 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
                 else:
                     normalized = normalize(entity['expanded_url'])
                     links.add(normalized)
+
             for hashtag in tweet['entities'].get('hashtags', []):
                 hashtags.add(hashtag['text'].lower())
+
             for mention in tweet['entities'].get('user_mentions', []):
                 mentions[mention['screen_name'].lower()] = mention['id_str']
+
         timestamp_utc, local_time = get_dates(tweet['created_at'], locale)
         text = unescape(text)
+
         tw = {
             id_key: tweet['id_str'],
             'local_time': local_time,
@@ -239,14 +262,16 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
             'media_urls': media_urls,
             'links': sorted(links),
             'links_to_resolve': len(links) > 0,
-            'hashtags': sorted(hashtags) if hashtags else process_extract(text, '#'),
+            'hashtags': sorted(hashtags) if hashtags else extract_hashtags_from_text(text),
             'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
-            'mentioned_names': sorted(mentions.keys()) if mentions else process_extract(text, '@'),
+            'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),
             'collection_time': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'),
             'collected_via': [tweet['collection_source']],
             'match_query': tweet['collection_source'] != 'thread' and tweet['collection_source'] != 'quote'
         }
 
         tw = grab_extra_meta(tweet, tw, locale)
+
         results.append(tw)
+
         return results
