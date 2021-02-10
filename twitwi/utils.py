@@ -191,7 +191,8 @@ def grab_extra_meta(source, result, locale=None):
     return result
 
 
-def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=False):
+def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=False,
+                    collection_source=None):
     """
     Function "normalizing" a tweet as returned by Twitter's API in order to
     cleanup and optimize some fields.
@@ -205,6 +206,8 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
             the original tweet or the full list of tweets found in the given
             tweet payload (including quoted and retweeted tweets). Defaults
             to `False`.
+        collection_source (str, optional): string explaining how the tweet
+            was collected. Defaults to `None`.
 
     Returns:
         (dict or list): Either a single tweet dict or a list of tweet dicts if
@@ -229,13 +232,15 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         rti = tweet['retweeted_status']['id_str']
         rtu = tweet['retweeted_status']['user']['screen_name']
         rtuid = tweet['retweeted_status']['user']['id_str']
-        tweet['retweeted_status']['collection_source'] = 'retweet'
+
         nested = normalize_tweet(
             tweet['retweeted_status'],
             locale=locale,
             id_key=id_key,
-            extract_referenced_tweets=True
+            extract_referenced_tweets=True,
+            collection_source='retweet'
         )
+
         rtweet = nested[-1]
 
         if extract_referenced_tweets:
@@ -255,13 +260,15 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         qti = tweet['quoted_status']['id_str']
         qtu = tweet['quoted_status']['user']['screen_name']
         qtuid = tweet['quoted_status']['user']['id_str']
-        tweet['quoted_status']['collection_source'] = 'quote'
+
         nested = normalize_tweet(
             tweet['quoted_status'],
             locale=locale,
             id_key=id_key,
-            extract_referenced_tweets=True
+            extract_referenced_tweets=True,
+            collection_source='quote'
         )
+
         qtweet = nested[-1]
 
         if extract_referenced_tweets:
@@ -325,6 +332,9 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
     timestamp_utc, local_time = get_dates(tweet['created_at'], locale)
     text = unescape(text)
 
+    if collection_source is None:
+        collection_source = tweet.get('collection_source')
+
     prepared_tweet = {
         id_key: tweet['id_str'],
         'local_time': local_time,
@@ -348,8 +358,8 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
         'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),
         'collection_time': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'),
-        'collected_via': [tweet['collection_source']],
-        'match_query': tweet['collection_source'] != 'thread' and tweet['collection_source'] != 'quote'
+        'collected_via': [collection_source],
+        'match_query': collection_source != 'thread' and collection_source != 'quote'
     }
 
     grab_extra_meta(tweet, prepared_tweet, locale)
