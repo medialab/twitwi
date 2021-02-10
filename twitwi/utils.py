@@ -124,19 +124,23 @@ def grab_extra_meta(source, result, locale=None):
 
 def prepare_tweet(tweet, locale=None, id_key='id'):
         results = []
+
         if 'extended_tweet' in tweet:
             for field in tweet['extended_tweet']:
                 tweet[field] = tweet['extended_tweet'][field]
+
         text = tweet.get('full_text', tweet.get('text', ''))
+
         rti = None
         rtu = None
         rtuid = None
         rtime = None
+
         if 'retweeted_status' in tweet and tweet['retweeted_status']['id_str'] != tweet['id_str']:
             rti = tweet['retweeted_status']['id_str']
             rtu = tweet['retweeted_status']['user']['screen_name']
             rtuid = tweet['retweeted_status']['user']['id_str']
-            tweet['retweeted_status']['gazouilloire_source'] = 'retweet'
+            tweet['retweeted_status']['collection_source'] = 'retweet'
             nested = prepare_tweet(tweet['retweeted_status'], locale=locale, id_key=id_key)
             rtweet = nested[-1]
             results.extend(nested)
@@ -154,11 +158,12 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
         qtu = None
         qtuid = None
         qtime = None
+
         if 'quoted_status' in tweet and tweet['quoted_status']['id_str'] != tweet['id_str']:
             qti = tweet['quoted_status']['id_str']
             qtu = tweet['quoted_status']['user']['screen_name']
             qtuid = tweet['quoted_status']['user']['id_str']
-            tweet['quoted_status']['gazouilloire_source'] = 'quote'
+            tweet['quoted_status']['collection_source'] = 'quote'
             nested = prepare_tweet(tweet['quoted_status'], locale=locale, id_key=id_key)
             qtweet = nested[-1]
             results.extend(nested)
@@ -237,8 +242,8 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
             'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
             'mentioned_names': sorted(mentions.keys()) if mentions else process_extract(text, '@'),
             'collection_time': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'),
-            'collected_via': [tweet['gazouilloire_source']],
-            'match_query': tweet['gazouilloire_source'] != 'thread' and tweet['gazouilloire_source'] != 'quote'
+            'collected_via': [tweet['collection_source']],
+            'match_query': tweet['collection_source'] != 'thread' and tweet['collection_source'] != 'quote'
         }
 
         tw = grab_extra_meta(tweet, tw, locale)
