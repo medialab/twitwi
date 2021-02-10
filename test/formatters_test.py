@@ -27,8 +27,7 @@ class TestFormatters(object):
                 tweet = item['_source']
                 transform_tweet_into_csv_dict(
                     tweet,
-                    tweet_id=item['_id'],
-                    has_proper_links=True
+                    tweet_id=item['_id']
                 )
 
                 writer.writerow(tweet)

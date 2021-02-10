@@ -11,13 +11,11 @@ from twitwi.constants import (
 )
 
 
-def transform_tweet_into_csv_dict(tweet, tweet_id=None, has_proper_links=False,
-                                  plural_separator='|'):
+def transform_tweet_into_csv_dict(tweet, tweet_id=None, plural_separator='|'):
     if tweet_id is not None:
         tweet['id'] = tweet_id
 
-    if has_proper_links:
-        tweet['links'] = tweet.get('proper_links', tweet.get('links', []))
+    tweet['links'] = tweet.get('proper_links', tweet.get('links', []))
 
     for plural_field in TWEET_PLURAL_FIELDS:
         tweet[plural_field] = plural_separator.join(tweet.get(plural_field, []))

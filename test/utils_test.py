@@ -39,7 +39,7 @@ class TestUtils(object):
     def test_prepare_tweet(self):
         tz = timezone("Europe/Paris")
         for tweet, correct_result in PREPARE_TWEET_TEST:
-            result = prepare_tweet(tweet, locale=tz)
+            result = prepare_tweet(tweet, locale=tz, id_key='_id')
             for sub_tweet, correct_sub_tweet in zip(result, correct_result):
                 for key in correct_sub_tweet:
                     if key != "collection_time":
