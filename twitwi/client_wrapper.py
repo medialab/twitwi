@@ -71,7 +71,7 @@ class TwitterWrapper(object):
 
                 # Rate limited
                 if e.e.code == 429:
-                    now = time()
+                    now = time.time()
                     reset = int(e.e.headers['X-Rate-Limit-Reset'])
 
                     if route not in self.waits:
