@@ -65,7 +65,7 @@ class TwitterWrapper(object):
             auth = self.auth[route]
 
             try:
-                return self.api[auth].__getattr__(route)(**kwargs)
+                return self.endpoints[auth].__getattr__(route)(**kwargs)
 
             except TwitterHTTPError as e:
 
