@@ -234,6 +234,63 @@
         "user_timestamp_utc": 1479320381.0,
         "source_url": "https://mobile.twitter.com",
         "source_name": "Twitter Web App"
+      },
+      {
+        "_id": "1355191242137743365",
+        "local_time": "2021-01-29T17:29:05",
+        "timestamp_utc": 1611937745.0,
+        "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
+        "url": "https://twitter.com/debmapmom2/statuses/1355191242137743365",
+        "quoted_id": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "quoted_timestamp_utc": null,
+        "retweeted_id": "1355046668995977219",
+        "retweeted_user": "NickKnudsenUS",
+        "retweeted_user_id": "798953701972938752",
+        "retweeted_timestamp_utc": 1611903276.0,
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "links": [],
+        "links_to_resolve": false,
+        "hashtags": [],
+        "mentioned_ids": [
+          "798953701972938752"
+        ],
+        "mentioned_names": [
+          "nickknudsenus"
+        ],
+        "collection_time": "2021-02-10T14:44:22.881747",
+        "collected_via": [
+          "stream"
+        ],
+        "match_query": true,
+        "coordinates": null,
+        "to_tweetid": null,
+        "to_username": null,
+        "to_userid": null,
+        "lang": "en",
+        "retweet_count": 0,
+        "like_count": 0,
+        "reply_count": 0,
+        "user_id": "1350513055",
+        "user_screen_name": "debmapmom2",
+        "user_name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
+        "user_friends": 4977,
+        "user_followers": 4121,
+        "user_location": "Edmond, OK",
+        "user_verified": false,
+        "user_description": "WEAR A FREAKING MASK! I am antifa!  \nI'd rather be hated for being myself than loved for who I'm not...Kurt Cobain \n#fbr #resist #BLM",
+        "user_created_at": "2013-04-14T01:39:20",
+        "user_tweets": 4418,
+        "user_likes": 72502,
+        "user_lists": 5,
+        "user_image": "https://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
+        "user_url": null,
+        "user_timestamp_utc": 1365896360.0,
+        "source_url": "http://twitter.com/download/android",
+        "source_name": "Twitter for Android"
       }
     ]
   },
@@ -387,63 +444,6 @@
         "user_timestamp_utc": 1479320381.0,
         "source_url": "https://mobile.twitter.com",
         "source_name": "Twitter Web App"
-      },
-      {
-        "_id": "1355191242137743365",
-        "local_time": "2021-01-29T17:29:05",
-        "timestamp_utc": 1611937745.0,
-        "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
-        "url": "https://twitter.com/debmapmom2/statuses/1355191242137743365",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": "1355046668995977219",
-        "retweeted_user": "NickKnudsenUS",
-        "retweeted_user_id": "798953701972938752",
-        "retweeted_timestamp_utc": 1611903276.0,
-        "media_files": [],
-        "media_types": [],
-        "media_urls": [],
-        "links": [],
-        "links_to_resolve": false,
-        "hashtags": [],
-        "mentioned_ids": [
-          "798953701972938752"
-        ],
-        "mentioned_names": [
-          "nickknudsenus"
-        ],
-        "collection_time": "2021-01-29T17:29:10.220398",
-        "collected_via": [
-          "stream"
-        ],
-        "match_query": true,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "en",
-        "coordinates": null,
-        "retweet_count": 0,
-        "like_count": 0,
-        "reply_count": 0,
-        "user_id": "1350513055",
-        "user_screen_name": "debmapmom2",
-        "user_name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
-        "user_friends": 4977,
-        "user_followers": 4121,
-        "user_location": "Edmond, OK",
-        "user_verified": false,
-        "user_description": "WEAR A FREAKING MASK! I am antifa!  \nI'd rather be hated for being myself than loved for who I'm not...Kurt Cobain \n#fbr #resist #BLM",
-        "user_created_at": "2013-04-14T01:39:20",
-        "user_tweets": 4418,
-        "user_likes": 72502,
-        "user_lists": 5,
-        "user_image": "https://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
-        "user_url": null,
-        "user_timestamp_utc": 1365896360.0,
-        "source_url": "http://twitter.com/download/android",
-        "source_name": "Twitter for Android"
       }
     ]
   },
@@ -892,6 +892,81 @@
         "user_timestamp_utc": 1561430779.0,
         "source_url": "http://twitter.com/download/android",
         "source_name": "Twitter for Android"
+      },
+      {
+        "_id": "1356288731519479810",
+        "local_time": "2021-02-01T18:10:06",
+        "timestamp_utc": 1612199406.0,
+        "text": "\u23f0\u25062/1  26\u6642\u534a start\u2764\ud83d\udc97\n\ud83d\udc64\u2506\u30c7\u30e5\u30aa\n\ud83d\udcb8\u2506500 \u00d72  \u307a\u3044\u307a\u3044\n\n\u30d1\u30b9\u30c4\u30a4Just\n \u25b6 @neosuke1203\n\n\u30ea\u30b6\u30eb\u30c8\u63d0\u51fa\u5148\n\u25b6 @kananba_1\n#\u30c7\u30e5\u30aa #26\u6642\u534a\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9 \n#\u30c7\u30e5\u30aa26\u6642\u534a https://twitter.com/rizu_1122/status/1356256391653019649",
+        "url": "https://twitter.com/piiro08/statuses/1356288731519479810",
+        "quoted_id": "1356256391653019649",
+        "quoted_user": "rizu_1122",
+        "quoted_user_id": "1143349673995853824",
+        "quoted_timestamp_utc": 1612191696.0,
+        "retweeted_id": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "retweeted_timestamp_utc": null,
+        "media_files": [
+          "1356256391653019649_EtJj_RYUUAAAph9.jpg"
+        ],
+        "media_types": [
+          "photo"
+        ],
+        "media_urls": [
+          "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg"
+        ],
+        "links": [
+          "https://twitter.com/rizu_1122/status/1356256391653019649"
+        ],
+        "links_to_resolve": true,
+        "hashtags": [
+          "26\u6642\u534a",
+          "2\u67081\u65e5",
+          "\u30c7\u30e5\u30aa",
+          "\u30c7\u30e5\u30aa26\u6642\u534a",
+          "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+        ],
+        "mentioned_ids": [
+          "1115927821925277701",
+          "1068760421371326464",
+          "1143349673995853824"
+        ],
+        "mentioned_names": [
+          "kananba_1",
+          "neosuke1203",
+          "rizu_1122"
+        ],
+        "collection_time": "2021-02-10T15:01:48.705744",
+        "collected_via": [
+          "search"
+        ],
+        "match_query": true,
+        "coordinates": null,
+        "to_tweetid": null,
+        "to_username": null,
+        "to_userid": null,
+        "lang": "ja",
+        "possibly_sensitive": true,
+        "retweet_count": 0,
+        "like_count": 0,
+        "user_id": "1165568564843048960",
+        "user_screen_name": "piiro08",
+        "user_name": "\u3074\u308d\u3010\u305e\u308f\u72c2\u3011",
+        "user_friends": 713,
+        "user_followers": 282,
+        "user_location": "\u65e5\u672c",
+        "user_verified": false,
+        "user_description": "\u8352\u91ce\u57a2\u3067\u3059\ud83d\ude0a\u4e3b\u50ac\u3082\u3057\u3066\u308b\u3057\u30b2\u30ea\u30e9\u3082\u51fa\u3066\u308b\u306e\u304a\u9858\u3044\u3057\u307e\u3059\uff01 @zowa008\u4fe1\u8005\ud83d\ude0d",
+        "user_created_at": "2019-08-25T12:16:27",
+        "user_tweets": 519,
+        "user_likes": 423,
+        "user_lists": 0,
+        "user_image": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "user_url": null,
+        "user_timestamp_utc": 1566728187.0,
+        "source_url": "http://twitter.com/download/iphone",
+        "source_name": "Twitter for iPhone"
       }
     ]
   }
