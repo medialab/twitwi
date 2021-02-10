@@ -2,7 +2,7 @@
 # Twitwi Utilities Unit Tests
 # =============================================================================
 from pytz import timezone
-from twitwi.utils import get_dates, prepare_tweet
+from twitwi.utils import get_dates, normalize_tweet
 
 GET_DATES_TESTS = [
     (('Thu Feb 07 06:43:33 +0000 2013', 'Europe/Paris'), (1360219413, '2013-02-07T07:43:33')),
@@ -34,10 +34,10 @@ class TestUtils(object):
 
             assert get_dates(date_str, locale=tz) == result, (date_str, tz)
 
-    def test_prepare_tweet(self):
+    def test_normalize_tweet(self):
         tz = timezone('Europe/Paris')
         for tweet, correct_result in PREPARE_TWEET_TEST:
-            result = prepare_tweet(tweet, locale=tz, id_key='_id')
+            result = normalize_tweet(tweet, locale=tz, id_key='_id')
             for sub_tweet, correct_sub_tweet in zip(result, correct_result):
                 for key in correct_sub_tweet:
                     if key != 'collection_time':

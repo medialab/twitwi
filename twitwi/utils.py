@@ -5,6 +5,7 @@
 # Miscellaneous utility functions.
 #
 import re
+from functools import partial
 from datetime import datetime
 from pytz import timezone
 from ural import normalize_url
@@ -35,19 +36,18 @@ def get_dates(date_str, locale=None):
     )
 
 
-def normalize(url):
-    return normalize_url(
-        url,
-        strip_authentication=False,
-        strip_trailing_slash=False,
-        strip_protocol=False,
-        strip_irrelevant_subdomains=False,
-        strip_fragment=False,
-        normalize_amp=False,
-        fix_common_mistakes=False,
-        infer_redirection=False,
-        quoted=True
-    )
+custom_normalize_url = partial(
+    normalize_url,
+    strip_authentication=False,
+    strip_trailing_slash=False,
+    strip_protocol=False,
+    strip_irrelevant_subdomains=False,
+    strip_fragment=False,
+    normalize_amp=False,
+    fix_common_mistakes=False,
+    infer_redirection=False,
+    quoted=True
+)
 
 
 def extract_items_from_text(text, char):
@@ -185,7 +185,7 @@ def grab_extra_meta(source, result, locale=None):
     return result
 
 
-def prepare_tweet(tweet, locale=None, id_key='id'):
+def normalize_tweet(tweet, locale=None, id_key='id'):
         results = []
 
         if 'extended_tweet' in tweet:
@@ -204,7 +204,7 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
             rtu = tweet['retweeted_status']['user']['screen_name']
             rtuid = tweet['retweeted_status']['user']['id_str']
             tweet['retweeted_status']['collection_source'] = 'retweet'
-            nested = prepare_tweet(tweet['retweeted_status'], locale=locale, id_key=id_key)
+            nested = normalize_tweet(tweet['retweeted_status'], locale=locale, id_key=id_key)
             rtweet = nested[-1]
             results.extend(nested)
             rtime = rtweet['timestamp_utc']
@@ -221,7 +221,7 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
             qtu = tweet['quoted_status']['user']['screen_name']
             qtuid = tweet['quoted_status']['user']['id_str']
             tweet['quoted_status']['collection_source'] = 'quote'
-            nested = prepare_tweet(tweet['quoted_status'], locale=locale, id_key=id_key)
+            nested = normalize_tweet(tweet['quoted_status'], locale=locale, id_key=id_key)
             qtweet = nested[-1]
             results.extend(nested)
             if 'quoted_status_permalink' in tweet:
@@ -269,7 +269,7 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
                         media_urls.append(med_url.split('?tag=')[0])
                         media_files.append('%s_%s' % (source_id, med_name))
                 else:
-                    normalized = normalize(entity['expanded_url'])
+                    normalized = custom_normalize_url(entity['expanded_url'])
                     links.add(normalized)
 
             for hashtag in tweet['entities'].get('hashtags', []):
