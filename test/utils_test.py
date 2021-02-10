@@ -41,10 +41,8 @@ class TestUtils(object):
                 extract_referenced_tweets=True
             )
 
-            print([t['_id'] for t in result], [t['_id'] for t in test['normalized']])
-
             assert isinstance(result, list)
-            assert len(result) == len(test['normalized'])
+            assert set(t['_id'] for t in result) == set(t['_id'] for t in test['normalized'])
 
             for tweet in result:
                 assert 'collection_time' in tweet and isinstance(tweet['collection_time'], str)
