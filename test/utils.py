@@ -11,16 +11,6 @@ def open_resource(name):
     return open(join(RESOURCES_DIR, name))
 
 
-def open_json_resource(name):
+def get_json_resource(name):
     with open(join(RESOURCES_DIR, name)) as f:
         return json.load(f)
-
-
-def omit(o, keys):
-    c = {}
-
-    for k, v in o.items():
-        if k not in keys:
-            c[k] = v
-
-    return c

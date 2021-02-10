@@ -2,7 +2,7 @@
 # Twitwi Utilities Unit Tests
 # =============================================================================
 from pytz import timezone
-from test.utils import open_json_resource
+from test.utils import get_json_resource
 
 from twitwi.utils import get_dates, normalize_tweet
 
@@ -31,7 +31,7 @@ class TestUtils(object):
     def test_normalize_tweet(self):
         tz = timezone('Europe/Paris')
 
-        tests = open_json_resource('normalization.json')
+        tests = get_json_resource('normalization.json')
 
         for test in tests:
             result = normalize_tweet(test['source'], locale=tz, id_key='_id')
