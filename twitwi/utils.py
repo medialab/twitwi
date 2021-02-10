@@ -91,7 +91,7 @@ def nostr_field(f):
     return f.replace('_str', '')
 
 
-FIRST_META_FIELDS = [
+META_FIELDS = [
     'in_reply_to_status_id_str',
     'in_reply_to_screen_name',
     'in_reply_to_user_id_str',
@@ -102,7 +102,7 @@ FIRST_META_FIELDS = [
     'reply_count'
 ]
 
-SECOND_META_FIELDS = [
+USER_META_FIELDS = [
     'id_str',
     'screen_name',
     'name',
@@ -132,13 +132,13 @@ def grab_extra_meta(source, result, locale=None):
         # TODO: this is hardly optimal
         result['coordinates'] = None
 
-    for meta in FIRST_META_FIELDS:
+    for meta in META_FIELDS:
         if meta in source:
             result[SHORT_FIELDNAMES.get(meta, meta)] = source[meta]
         elif nostr_field(meta) in source:
             result[meta] = str(source[nostr_field(meta)])
 
-    for meta in SECOND_META_FIELDS:
+    for meta in USER_META_FIELDS:
         key = 'user_%s' % meta.replace('_count', '')
 
         if key in source:
