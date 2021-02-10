@@ -62,6 +62,19 @@ def process_extract(text, char):
     )
 
 
+def resolve_entities(tweet, prefix):
+    status_key = '%s_status' % prefix
+
+    for ent in ['entities', 'extended_entities']:
+        if ent not in tweet[status_key]:
+            continue
+        tweet[ent] = tweet.get(ent, {})
+        for field in tweet[status_key][ent]:
+            tweet[ent][field] = tweet[ent].get(field, [])
+            if field in tweet[status_key][ent]:
+                tweet[ent][field] += tweet[status_key][ent][field]
+
+
 def nostr_field(f):
     return f.replace('_str', '')
 
@@ -146,14 +159,8 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
             results.extend(nested)
             rtime = rtweet['timestamp_utc']
             text = 'RT @%s: %s' % (rtu, rtweet['text'])
-            for ent in ['entities', 'extended_entities']:
-                if ent not in tweet['retweeted_status']:
-                    continue
-                tweet[ent] = tweet.get(ent, {})
-                for field in tweet['retweeted_status'][ent]:
-                    tweet[ent][field] = tweet[ent].get(field, [])
-                    if field in tweet['retweeted_status'][ent]:
-                        tweet[ent][field] += tweet['retweeted_status'][ent][field]
+            resolve_entities(tweet, 'retweeted')
+
         qti = None
         qtu = None
         qtuid = None
@@ -174,14 +181,8 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
             qtime = qtweet['timestamp_utc']
             text = text.replace(qturl, u'« %s: %s — %s »' %
                                 (qtu, qtweet['text'], qturl))
-            for ent in ['entities', 'extended_entities']:
-                if ent not in tweet['quoted_status']:
-                    continue
-                tweet[ent] = tweet.get(ent, {})
-                for field in tweet['quoted_status'][ent]:
-                    tweet[ent][field] = tweet[ent].get(field, [])
-                    if field in tweet['quoted_status'][ent]:
-                        tweet[ent][field] += tweet['quoted_status'][ent][field]
+            resolve_entities(tweet, 'quoted')
+
         medids = set()
         media_urls = []
         media_files = []
