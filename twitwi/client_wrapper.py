@@ -52,6 +52,11 @@ class TwitterWrapper(object):
     def call(self, route, max_attempts=DEFAULT_MAX_ATTEMPTS, **kwargs):
         attempts = 0
 
+        if not isinstance(route, list):
+            raise TypeError('twitwi.TwitterWrapper.call: expecting route as a list, such as ["friends", "ids"].')
+
+        route = '/'.join(route)
+
         while attempts < max_attempts:
 
             if route not in self.auth:
@@ -60,7 +65,7 @@ class TwitterWrapper(object):
             auth = self.auth[route]
 
             try:
-                return self.api[auth].__getattr__('/'.join(route))(**kwargs)
+                return self.api[auth].__getattr__(route)(**kwargs)
 
             except TwitterHTTPError as e:
 
