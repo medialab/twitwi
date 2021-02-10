@@ -80,10 +80,10 @@ TWEET_FIELDS = [
 ]
 
 SHORT_FIELDNAMES = {
-    "in_reply_to_status_id_str": "to_tweetid",
-    "in_reply_to_screen_name": "to_username",
-    "in_reply_to_user_id_str": "to_userid",
-    "favorite_count": "like_count"
+    'in_reply_to_status_id_str': 'to_tweetid',
+    'in_reply_to_screen_name': 'to_username',
+    'in_reply_to_user_id_str': 'to_userid',
+    'favorite_count': 'like_count'
 }
 
 # More details on Twitter's users metadata can be read here: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
