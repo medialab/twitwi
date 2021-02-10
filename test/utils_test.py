@@ -34,7 +34,17 @@ class TestUtils(object):
         tests = get_json_resource('normalization.json')
 
         for test in tests:
-            result = normalize_tweet(test['source'], locale=tz, id_key='_id')
+            result = normalize_tweet(
+                test['source'],
+                locale=tz,
+                id_key='_id',
+                extract_referenced_tweets=True
+            )
+
+            print([t['_id'] for t in result], [t['_id'] for t in test['normalized']])
+
+            assert isinstance(result, list)
+            assert len(result) == len(test['normalized'])
 
             for tweet in result:
                 assert 'collection_time' in tweet and isinstance(tweet['collection_time'], str)
