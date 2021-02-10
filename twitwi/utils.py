@@ -91,21 +91,56 @@ def nostr_field(f):
     return f.replace('_str', '')
 
 
+FIRST_META_FIELDS = [
+    'in_reply_to_status_id_str',
+    'in_reply_to_screen_name',
+    'in_reply_to_user_id_str',
+    'lang',
+    'possibly_sensitive',
+    'retweet_count',
+    'favorite_count',
+    'reply_count'
+]
+
+SECOND_META_FIELDS = [
+    'id_str',
+    'screen_name',
+    'name',
+    'friends_count',
+    'followers_count',
+    'location',
+    'verified',
+    'description',
+    'created_at'
+]
+
+PLACE_META_FIELDS = [
+    'country_code',
+    'full_name',
+    'place_type'
+]
+
+
 def grab_extra_meta(source, result, locale=None):
-    for meta in ['in_reply_to_status_id_str', 'in_reply_to_screen_name', 'in_reply_to_user_id_str', 'lang', 'coordinates', 'possibly_sensitive', 'retweet_count', 'favorite_count', 'reply_count']:
+
+    if source.get('coordinates'):
+        result['coordinates'] = source['coordinates']['coordinates']
+        result['lat'] = source['coordinates']['coordinates'][1]
+        result['lng'] = source['coordinates']['coordinates'][0]
+    else:
+
+        # TODO: this is hardly optimal
+        result['coordinates'] = None
+
+    for meta in FIRST_META_FIELDS:
         if meta in source:
-            if meta == 'coordinates' and source['coordinates']:
-                result['coordinates'] = source['coordinates']['coordinates']
-                result['lat'] = source['coordinates']['coordinates'][1]
-                result['lng'] = source['coordinates']['coordinates'][0]
-            if meta in SHORT_FIELDNAMES:
-                result[SHORT_FIELDNAMES[meta]] = source[meta]
-            else:
-                result[meta] = source[meta]
+            result[SHORT_FIELDNAMES.get(meta, meta)] = source[meta]
         elif nostr_field(meta) in source:
             result[meta] = str(source[nostr_field(meta)])
-    for meta in ['id_str', 'screen_name', 'name', 'friends_count', 'followers_count', 'location', 'verified', 'description', 'created_at']:
+
+    for meta in SECOND_META_FIELDS:
         key = 'user_%s' % meta.replace('_count', '')
+
         if key in source:
             result[nostr_field(key)] = source[key]
         elif nostr_field(key) in source:
@@ -114,36 +149,39 @@ def grab_extra_meta(source, result, locale=None):
             result[nostr_field(key)] = source['user'][meta]
         elif 'user' in source and nostr_field(meta) in source['user']:
             result[nostr_field(key)] = source['user'][nostr_field(meta)]
+
     if 'user' in source:
         result['user_tweets'] = source['user']['statuses_count']
         result['user_likes'] = source['user']['favourites_count']
         result['user_lists'] = source['user']['listed_count']
         result['user_image'] = source['user']['profile_image_url_https']
+
     if 'place' in source and source['place'] is not None:
-        for meta in ['country_code', 'full_name', 'place_type']:
+        for meta in PLACE_META_FIELDS:
             if meta in source['place']:
                 key = 'place_%s' % meta.replace('place_', '').replace('full_', '')
                 result[key] = source['place'][meta]
+
         if 'bounding_box' in source['place'] \
                 and source['place']['bounding_box'] is not None \
                 and 'coordinates' in source['place']['bounding_box']:
             result['place_coordinates'] = source['place']['bounding_box']['coordinates'][0]
+
+    # TODO: nested_get
     try:
         result['user_url'] = source['user']['entities']['url']['urls'][0]['expanded_url']
-    except:
+    except (KeyError, IndexError):
         try:
             result['user_url'] = source['user']['url']
-        except:
+        except KeyError:
             pass
-    try:
-        result['user_timestamp_utc'], result['user_created_at'] = get_dates(
-            result['user_created_at'], locale)
-    except:
-        pass
-    if 'source' in source and source['source']:
-        split_source = source['source'].replace('<a href="', '').replace('</a>', '').split('" rel="nofollow">')
-        result['source_url'] = split_source[0]
-        result['source_name'] = split_source[1]
+
+    if 'user_created_at' in result:
+        result['user_timestamp_utc'], result['user_created_at'] = get_dates(result['user_created_at'], locale)
+
+    if source.get('source'):
+        result['source_url'], result['source_name'] = source['source'].replace('<a href="', '').replace('</a>', '').split('" rel="nofollow">')
+
     return result
 
 
@@ -243,7 +281,7 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
         timestamp_utc, local_time = get_dates(tweet['created_at'], locale)
         text = unescape(text)
 
-        tw = {
+        prepared_tweet = {
             id_key: tweet['id_str'],
             'local_time': local_time,
             'timestamp_utc': timestamp_utc,
@@ -270,8 +308,8 @@ def prepare_tweet(tweet, locale=None, id_key='id'):
             'match_query': tweet['collection_source'] != 'thread' and tweet['collection_source'] != 'quote'
         }
 
-        tw = grab_extra_meta(tweet, tw, locale)
+        grab_extra_meta(tweet, prepared_tweet, locale)
 
-        results.append(tw)
+        results.append(prepared_tweet)
 
         return results
