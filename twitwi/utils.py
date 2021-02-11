@@ -13,7 +13,8 @@ from html import unescape
 
 from twitwi.constants import (
     TWEET_DATETIME_FORMAT,
-    FORMATTED_TWEET_DATETIME_FORMAT
+    FORMATTED_TWEET_DATETIME_FORMAT,
+    CANONICAL_URL_KWARGS
 )
 
 UTC_TIMEZONE = timezone('UTC')
@@ -37,15 +38,7 @@ def get_dates(date_str, locale=None):
 
 custom_normalize_url = partial(
     normalize_url,
-    strip_authentication=False,
-    strip_trailing_slash=False,
-    strip_protocol=False,
-    strip_irrelevant_subdomains=False,
-    strip_fragment=False,
-    normalize_amp=False,
-    fix_common_mistakes=False,
-    infer_redirection=False,
-    quoted=True
+    **CANONICAL_URL_KWARGS
 )
 
 
