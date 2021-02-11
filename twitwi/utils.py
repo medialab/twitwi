@@ -30,7 +30,7 @@ def get_dates(date_str, locale=None):
         locale_datetime = utc_datetime.astimezone(locale)
 
     return (
-        utc_datetime.timestamp(),
+        int(utc_datetime.timestamp()),
         datetime.strftime(locale_datetime, FORMATTED_TWEET_DATETIME_FORMAT)
     )
 
