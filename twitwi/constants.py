@@ -135,3 +135,15 @@ TWEET_BOOLEAN_FIELDS = {
     'user_verified',
     'match_query'
 }
+
+CANONICAL_URL_KWARGS = {
+    "strip_authentication": False,
+    "strip_trailing_slash": False,
+    "strip_protocol": False,
+    "strip_irrelevant_subdomains": False,
+    "strip_fragment": False,
+    "normalize_amp": False,
+    "fix_common_mistakes": False,
+    "infer_redirection": False,
+    "quoted": True
+}
