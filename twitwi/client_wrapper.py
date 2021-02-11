@@ -6,7 +6,7 @@
 # endpoints to maximize throughput.
 #
 import json
-import time
+from time import sleep, time
 from operator import itemgetter
 from twitter import Twitter, OAuth, OAuth2, TwitterHTTPError
 
@@ -37,7 +37,7 @@ class TwitterWrapper(object):
             bearer_token_client.oauth2.token(grant_type='client_credentials')
         )['access_token']
 
-        self.oauth2 = OAuth2(bearer_token, consumer_key, consumer_secret)
+        self.oauth2 = OAuth2(bearer_token=bearer_token)
 
         self.endpoints = {
             'user': Twitter(auth=self.oauth),
@@ -71,7 +71,7 @@ class TwitterWrapper(object):
 
                 # Rate limited
                 if e.e.code == 429:
-                    now = time.time()
+                    now = int(time())
                     reset = int(e.e.headers['X-Rate-Limit-Reset'])
 
                     if route not in self.waits:
@@ -99,7 +99,7 @@ class TwitterWrapper(object):
                                 'sleep': sleeptime
                             })
 
-                        time.sleep(sleeptime)
+                        sleep(sleeptime)
 
                     self.auth[route] = min_wait[0]
 
@@ -108,5 +108,10 @@ class TwitterWrapper(object):
                 # Different error
                 else:
                     attempts += 1
+
+                    if callable(self.listener):
+                        self.listener('error', {
+                            'error': e
+                        })
 
         raise TwitterWrapperMaxAttemptsExceeded
