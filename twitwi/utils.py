@@ -214,7 +214,8 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         for field in tweet['extended_tweet']:
             tweet[field] = tweet['extended_tweet'][field]
 
-    text = tweet.get('full_text', tweet.get('text', ''))
+    original_text = tweet.get('full_text', tweet.get('text', ''))
+    text = original_text
 
     rti = None
     rtu = None
@@ -282,6 +283,9 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
     media_files = []
     media_types = []
 
+    has_hashtags_in_entities = False
+    has_mentions_in_entities = False
+
     links = set()
     hashtags = set()
     mentions = {}
@@ -316,8 +320,12 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
                 normalized = custom_normalize_url(entity['expanded_url'])
                 links.add(normalized)
 
+        has_hashtags_in_entities = 'hashtags' in tweet['entities']
+
         for hashtag in tweet['entities'].get('hashtags', []):
             hashtags.add(hashtag['text'].lower())
+
+        has_mentions_in_entities = 'user_mentions' in tweet['entities']
 
         for mention in tweet['entities'].get('user_mentions', []):
             mentions[mention['screen_name'].lower()] = mention['id_str']
@@ -347,9 +355,9 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         'media_urls': media_urls,
         'links': sorted(links),
         'links_to_resolve': len(links) > 0,
-        'hashtags': sorted(hashtags) if hashtags else extract_hashtags_from_text(text),
+        'hashtags': sorted(hashtags) if has_hashtags_in_entities else extract_hashtags_from_text(original_text),
         'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
-        'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),
+        'mentioned_names': sorted(mentions.keys()) if has_mentions_in_entities else extract_mentions_from_text(original_text),
         'collection_time': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'),
         'collected_via': [collection_source],
         'match_query': collection_source != 'thread' and collection_source != 'quote'
