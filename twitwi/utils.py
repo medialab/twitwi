@@ -415,6 +415,7 @@ def normalize_user(user, locale=None):
         'friends': user['friends_count'],
         'likes': user['favourites_count'],
         'lists': user['listed_count'],
+        'image': user.get('profile_image_url_https'),
         'default_profile': user.get('default_profile'),
         'default_profile_image': user.get('default_profile_image'),
         'witheld_in_countries': user.get('witheld_in_countries', []),

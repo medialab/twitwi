@@ -137,12 +137,12 @@ USER_FIELDS = [
     # 'profile_sidebar_border_color'        # dropped by Twitter (since May 19), ignorable
     'default_profile',
     'default_profile_image',
-    'withheld_in_countries',
-    'withheld_scope'
+    'witheld_in_countries',
+    'witheld_scope'
 ]
 
 USER_PLURAL_FIELDS = {
-    'withheld_in_countries'
+    'witheld_in_countries'
 }
 
 USER_BOOLEAN_FIELDS = {
