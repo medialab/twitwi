@@ -14,6 +14,17 @@ from twitwi.exceptions import TwitterWrapperMaxAttemptsExceeded
 
 DEFAULT_MAX_ATTEMPTS = 5
 
+# Established from: https://developer.twitter.com/en/support/twitter-api/error-troubleshooting
+NO_RETRY_STATUSES = set([
+    400,
+    401,
+    403,
+    404,
+    406,
+    410,
+    422
+])
+
 
 class TwitterWrapper(object):
 
@@ -104,6 +115,10 @@ class TwitterWrapper(object):
                     self.auth[route] = min_wait[0]
 
                     continue
+
+                # Errors that should terminate immediately
+                elif e.e.code in NO_RETRY_STATUSES:
+                    raise e
 
                 # Different error
                 else:
