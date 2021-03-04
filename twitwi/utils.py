@@ -64,15 +64,16 @@ def extract_mentions_from_text(text):
 
 def resolve_entities(tweet, prefix):
     status_key = '%s_status' % prefix
+    target = tweet[status_key]
 
     for ent in ['entities', 'extended_entities']:
-        if ent not in tweet[status_key]:
+        if ent not in target:
             continue
         tweet[ent] = tweet.get(ent, {})
-        for field in tweet[status_key][ent]:
+        for field in target[ent]:
             tweet[ent][field] = tweet[ent].get(field, [])
-            if field in tweet[status_key][ent]:
-                tweet[ent][field] += tweet[status_key][ent][field]
+            if field in target[ent]:
+                tweet[ent][field] += target[ent][field]
 
 
 def get_bitrate(x):
@@ -189,6 +190,8 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
     """
     Function "normalizing" a tweet as returned by Twitter's API in order to
     cleanup and optimize some fields.
+
+    Note that this function mutates the argument to work.
 
     Args:
         tweet (dict): Tweet json dict from Twitter API.
@@ -328,7 +331,7 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
     if collection_source is None:
         collection_source = tweet.get('collection_source')
 
-    prepared_tweet = {
+    normalized_tweet = {
         id_key: tweet['id_str'],
         'local_time': local_time,
         'timestamp_utc': timestamp_utc,
@@ -355,11 +358,49 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         'match_query': collection_source != 'thread' and collection_source != 'quote'
     }
 
-    grab_extra_meta(tweet, prepared_tweet, locale)
+    grab_extra_meta(tweet, normalized_tweet, locale)
 
-    results.append(prepared_tweet)
+    results.append(normalized_tweet)
 
     if not extract_referenced_tweets:
         return results[0]
 
     return results
+
+
+def resolve_user_entities(user):
+    if 'entities' in user:
+        for k in user['entities']:
+            if 'urls' in user['entities'][k]:
+                for url in user['entities'][k]['urls']:
+                    if not url['expanded_url']:
+                        continue
+                    if k in user:
+                        user[k] = user[k].replace(url['url'], url['expanded_url'])
+
+
+def normalize_user(user, locale=None, id_key='id'):
+    """
+    Function "normalizing" a user as returned by Twitter's API in order to
+    cleanup and optimize some fields.
+
+    Note that this function mutates the argument to work.
+
+    Args:
+        user (dict): Twitter user json dict from Twitter API.
+        locale (pytz.timezone, optional): Timezone for date conversions.
+        id_key (str, optional): Name of the tweet id key.
+            Defaults to `id`.
+
+    Returns:
+        dict: The normalized user.
+
+    """
+
+    normalized_user = {
+        id_key: user['id_str'],
+        'screen_name': user['screen_name'],
+        'name': user['name']
+    }
+
+    return normalized_user
