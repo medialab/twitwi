@@ -68,7 +68,7 @@ class TestUtils(object):
 
         api_users = get_json_resource('api-users-v1.json')
 
-        normalized_users = [normalize_user(user) for user in api_users]
+        normalized_users = [normalize_user(user, locale=tz) for user in api_users]
 
         # with open('./test/resources/normalized-users.json', 'w') as f:
         #     import json
