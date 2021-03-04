@@ -54,11 +54,13 @@
     "profile_use_background_image": false,
     "has_extended_profile": true,
     "default_profile": false,
-    "default_profile_image": false,
+    "default_profile_image": true,
     "following": true,
     "follow_request_sent": false,
     "notifications": false,
-    "translator_type": "none"
+    "translator_type": "none",
+    "witheld_in_countries": ["FR", "GR"],
+    "witheld_scope": "user"
   },
   {
     "id": 1565623927,
@@ -86,7 +88,7 @@
         "urls": []
       }
     },
-    "protected": false,
+    "protected": true,
     "followers_count": 610,
     "friends_count": 856,
     "listed_count": 52,

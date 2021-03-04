@@ -79,6 +79,23 @@ TWEET_FIELDS = [
     'hashtags'                        # list of hashtags used, lowercased, separated by |
 ]
 
+TWEET_PLURAL_FIELDS = {
+    'links',
+    'hashtags',
+    'collected_via',
+    'media_urls',
+    'media_files',
+    'media_types',
+    'mentioned_names',
+    'mentioned_ids'
+}
+
+TWEET_BOOLEAN_FIELDS = {
+    'possibly_sensitive',
+    'user_verified',
+    'match_query'
+}
+
 # More details on Twitter's users metadata can be read here: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
 USER_FIELDS = [
     'id',
@@ -87,7 +104,8 @@ USER_FIELDS = [
     'description',
     'url',
     # 'lang',                               # dropped from tweet objects only by Twitter (since May 19)
-    'created_at',
+    'timestamp_utc',
+    'local_time',
     # 'utc_offset',                         # dropped by Twitter (since May 18), ignorable
     # 'time_zone',                          # dropped by Twitter (since May 18), ignorable
     'location',
@@ -117,23 +135,21 @@ USER_FIELDS = [
     # 'profile_text_color',                 # dropped by Twitter (since May 19), ignorable
     # 'profile_sidebar_fill_color',         # dropped by Twitter (since May 19), ignorable
     # 'profile_sidebar_border_color'        # dropped by Twitter (since May 19), ignorable
+    'default_profile',
+    'default_profile_image',
+    'withheld_in_countries',
+    'withheld_scope'
 ]
 
-TWEET_PLURAL_FIELDS = {
-    'links',
-    'hashtags',
-    'collected_via',
-    'media_urls',
-    'media_files',
-    'media_types',
-    'mentioned_names',
-    'mentioned_ids'
+USER_PLURAL_FIELDS = {
+    'withheld_in_countries'
 }
 
-TWEET_BOOLEAN_FIELDS = {
-    'possibly_sensitive',
-    'user_verified',
-    'match_query'
+USER_BOOLEAN_FIELDS = {
+    'verified',
+    'protected',
+    'default_profile',
+    'default_profile_image'
 }
 
 CANONICAL_URL_KWARGS = {

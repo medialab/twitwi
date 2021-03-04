@@ -5,7 +5,7 @@ from functools import partial
 from pytz import timezone
 from test.utils import get_json_resource
 
-from twitwi.utils import get_dates, normalize_tweet
+from twitwi.utils import get_dates, normalize_tweet, normalize_user
 
 GET_DATES_TESTS = [
     (('Thu Feb 07 06:43:33 +0000 2013', 'Europe/Paris'), (1360219413, '2013-02-07T07:43:33')),
@@ -62,3 +62,16 @@ class TestUtils(object):
             tweet = fn(test['source'], collection_source='unit_test')
 
             assert tweet['collected_via'] == ['unit_test']
+
+    def test_normalize_user(self):
+        tz = timezone('Europe/Paris')
+
+        api_users = get_json_resource('api-users-v1.json')
+
+        normalized_users = [normalize_user(user) for user in api_users]
+
+        # with open('./test/resources/normalized-users.json', 'w') as f:
+        #     import json
+        #     json.dump(normalized_users, f, ensure_ascii=False, indent=2)
+
+        assert normalized_users == get_json_resource('normalized-users.json')
