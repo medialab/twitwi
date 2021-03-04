@@ -30,7 +30,7 @@ class TestFormatters(object):
                 tweet = item['_source']
                 transform_tweet_into_csv_dict(
                     tweet,
-                    tweet_id=item['_id']
+                    item_id=item['_id']
                 )
 
                 writer.writerow(tweet)
@@ -48,7 +48,7 @@ class TestFormatters(object):
         with open_resource('tweet-export.jsonl') as f:
             for item in ndjson.reader(f):
                 tweet = item['_source']
-                row = format_tweet_as_csv_row(tweet, tweet_id=item['_id'])
+                row = format_tweet_as_csv_row(tweet, item_id=item['_id'])
 
                 assert len(row) == len(TWEET_FIELDS)
 
