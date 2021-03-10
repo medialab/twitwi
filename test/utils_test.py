@@ -1,8 +1,10 @@
 # =============================================================================
 # Twitwi Utilities Unit Tests
 # =============================================================================
+import pytest
 from functools import partial
 from pytz import timezone
+from copy import deepcopy
 from test.utils import get_json_resource
 
 from twitwi.utils import get_dates, normalize_tweet, normalize_user
@@ -63,6 +65,16 @@ class TestUtils(object):
 
             assert tweet['collected_via'] == ['unit_test']
 
+    @pytest.mark.skip()
+    def test_normalize_tweet_should_not_mutate(self):
+        tweet = get_json_resource('normalization.json')[0]['source']
+
+        original_arg = deepcopy(tweet)
+
+        ntweet = normalize_tweet(tweet)
+
+        assert tweet == original_arg
+
     def test_normalize_user(self):
         tz = timezone('Europe/Paris')
 
@@ -75,3 +87,13 @@ class TestUtils(object):
         #     json.dump(normalized_users, f, ensure_ascii=False, indent=2)
 
         assert normalized_users == get_json_resource('normalized-users.json')
+
+    @pytest.mark.skip()
+    def test_normalize_user_should_not_mutate(self):
+        user = get_json_resource('api-users-v1.json')[0]
+
+        original_arg = deepcopy(user)
+
+        nuser = normalize_user(user)
+
+        assert user == original_arg
