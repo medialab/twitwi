@@ -354,9 +354,11 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
         'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),
         'collection_time': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'),
-        'collected_via': [collection_source],
         'match_query': collection_source != 'thread' and collection_source != 'quote'
     }
+
+    if collection_source is not None:
+        normalized_tweet['collected_via'] = [collection_source]
 
     grab_extra_meta(tweet, normalized_tweet, locale)
 

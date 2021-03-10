@@ -7,6 +7,7 @@ from io import StringIO
 from test.utils import open_resource, get_json_resource
 
 from twitwi.constants import TWEET_FIELDS, USER_FIELDS
+from twitwi.utils import normalize_tweet
 from twitwi.formatters import (
     transform_tweet_into_csv_dict,
     format_tweet_as_csv_row,
@@ -80,6 +81,19 @@ class TestFormatters(object):
         with open_resource('tweet-export.csv') as f:
             output.seek(0)
             assert list(csv.reader(output)) == list(csv.reader(f))
+
+    def test_format_tweet_as_csv_row_no_collection_source(self):
+        tweet = get_json_resource('normalization.json')[0]['source']
+        del tweet['collection_source']
+
+        ntweet = normalize_tweet(tweet)
+
+        assert 'collected_via' not in ntweet
+
+        row = format_tweet_as_csv_row(ntweet)
+        collected_via = row[TWEET_FIELDS.index('collected_via')]
+
+        assert collected_via == ''
 
     def test_format_user_as_csv_row(self):
         output = StringIO()
