@@ -1,7 +1,6 @@
 # =============================================================================
 # Twitwi Utilities Unit Tests
 # =============================================================================
-import pytest
 from functools import partial
 from pytz import timezone
 from copy import deepcopy
@@ -65,7 +64,6 @@ class TestUtils(object):
 
             assert tweet['collected_via'] == ['unit_test']
 
-    @pytest.mark.skip()
     def test_normalize_tweet_should_not_mutate(self):
         tweet = get_json_resource('normalization.json')[0]['source']
 
@@ -88,7 +86,6 @@ class TestUtils(object):
 
         assert normalized_users == get_json_resource('normalized-users.json')
 
-    @pytest.mark.skip()
     def test_normalize_user_should_not_mutate(self):
         user = get_json_resource('api-users-v1.json')[0]
 

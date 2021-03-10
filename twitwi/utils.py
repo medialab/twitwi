@@ -5,6 +5,7 @@
 # Miscellaneous utility functions.
 #
 import re
+from copy import deepcopy
 from functools import partial
 from datetime import datetime
 from pytz import timezone
@@ -186,7 +187,7 @@ def grab_extra_meta(source, result, locale=None):
 
 
 def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=False,
-                    collection_source=None):
+                    collection_source=None, pure=True):
     """
     Function "normalizing" a tweet as returned by Twitter's API in order to
     cleanup and optimize some fields.
@@ -204,12 +205,17 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
             to `False`.
         collection_source (str, optional): string explaining how the tweet
             was collected. Defaults to `None`.
+        pure (bool, optional): whether to allow the function to mutate its
+            original argument. Default to `True`.
 
     Returns:
         (dict or list): Either a single tweet dict or a list of tweet dicts if
             `extract_referenced_tweets` was set to `True`.
 
     """
+
+    if pure:
+        tweet = deepcopy(tweet)
 
     results = []
 
@@ -234,7 +240,8 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
             locale=locale,
             id_key=id_key,
             extract_referenced_tweets=True,
-            collection_source='retweet'
+            collection_source='retweet',
+            pure=False
         )
 
         rtweet = nested[-1]
@@ -262,7 +269,8 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
             locale=locale,
             id_key=id_key,
             extract_referenced_tweets=True,
-            collection_source='quote'
+            collection_source='quote',
+            pure=False
         )
 
         qtweet = nested[-1]
@@ -381,7 +389,7 @@ def resolve_user_entities(user):
                         user[k] = user[k].replace(url['url'], url['expanded_url'])
 
 
-def normalize_user(user, locale=None):
+def normalize_user(user, locale=None, pure=True):
     """
     Function "normalizing" a user as returned by Twitter's API in order to
     cleanup and optimize some fields.
@@ -391,11 +399,16 @@ def normalize_user(user, locale=None):
     Args:
         user (dict): Twitter user json dict from Twitter API.
         locale (pytz.timezone, optional): Timezone for date conversions.
+        pure (bool, optional): whether to allow the function to mutate its
+            original argument. Default to `True`.
 
     Returns:
         dict: The normalized user.
 
     """
+
+    if pure:
+        user = deepcopy(user)
 
     resolve_user_entities(user)
 
