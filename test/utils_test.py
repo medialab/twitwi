@@ -34,14 +34,14 @@ class TestUtils(object):
         tz = timezone('Europe/Paris')
 
         tests = get_json_resource('normalization.json')
-        fn = partial(normalize_tweet, locale=tz, id_key='_id')
+        fn = partial(normalize_tweet, locale=tz)
 
         # With referenced tweets
         for test in tests:
             result = fn(test['source'], extract_referenced_tweets=True)
 
             assert isinstance(result, list)
-            assert set(t['_id'] for t in result) == set(t['_id'] for t in test['normalized'])
+            assert set(t['id'] for t in result) == set(t['id'] for t in test['normalized'])
 
             for tweet in result:
                 assert 'collection_time' in tweet and isinstance(tweet['collection_time'], str)
@@ -56,7 +56,7 @@ class TestUtils(object):
             assert isinstance(tweet, dict)
 
             _id = test['source']['id_str']
-            compare_tweets(_id, tweet, next(t for t in test['normalized'] if t['_id'] == _id))
+            compare_tweets(_id, tweet, next(t for t in test['normalized'] if t['id'] == _id))
 
         # With custom collection_source
         for test in tests:

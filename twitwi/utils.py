@@ -186,7 +186,7 @@ def grab_extra_meta(source, result, locale=None):
     return result
 
 
-def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=False,
+def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
                     collection_source=None, pure=True):
     """
     Function "normalizing" a tweet as returned by Twitter's API in order to
@@ -197,8 +197,6 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
     Args:
         tweet (dict): Tweet json dict from Twitter API.
         locale (pytz.timezone, optional): Timezone for date conversions.
-        id_key (str, optional): Name of the tweet id key.
-            Defaults to `id`.
         extract_referenced_tweets (bool, optional): Whether to return only
             the original tweet or the full list of tweets found in the given
             tweet payload (including quoted and retweeted tweets). Defaults
@@ -238,7 +236,6 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         nested = normalize_tweet(
             tweet['retweeted_status'],
             locale=locale,
-            id_key=id_key,
             extract_referenced_tweets=True,
             collection_source='retweet',
             pure=False
@@ -267,7 +264,6 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         nested = normalize_tweet(
             tweet['quoted_status'],
             locale=locale,
-            id_key=id_key,
             extract_referenced_tweets=True,
             collection_source='quote',
             pure=False
@@ -340,7 +336,7 @@ def normalize_tweet(tweet, locale=None, id_key='id', extract_referenced_tweets=F
         collection_source = tweet.get('collection_source')
 
     normalized_tweet = {
-        id_key: tweet['id_str'],
+        'id': tweet['id_str'],
         'local_time': local_time,
         'timestamp_utc': timestamp_utc,
         'text': text,
