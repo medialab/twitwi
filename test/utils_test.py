@@ -112,6 +112,6 @@ class TestUtils(object):
             # print()
             # for t in tweets:
             #     print()
-            #     for k, v in t.items():
+            #     for k, v in sorted(t.items()):
             #         print('%s: %r' % (k, v))
             # print()

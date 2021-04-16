@@ -56,6 +56,10 @@ def format_tweet_url(screen_name, tweet_id):
     return 'https://twitter.com/%s/statuses/%s' % (screen_name, tweet_id)
 
 
+def extract_media_name_from_url(media_url):
+    return media_url.rsplit('/', 1)[-1].split('?tag=', 1)[0]
+
+
 custom_normalize_url = partial(
     normalize_url,
     **CANONICAL_URL_KWARGS
@@ -330,7 +334,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
                 else:
                     med_url = entity['media_url_https']
 
-                med_name = med_url.rsplit('/', 1)[-1].split('?tag=', 1)[0]
+                med_name = extract_media_name_from_url(med_url)
 
                 if med_name not in medids:
                     medids.add(med_name)
@@ -458,22 +462,24 @@ def includes_index(payload, key, index_key='id'):
     return {item[index_key]: item for item in payload['includes'].get(key, [])}
 
 
-# 'text',                           # message's text content
-# 'user_url',                       # link to a website given in the author's profile (at collection time)
-# 'user_image',                     # link to the image avatar of the author's profile (at collection time)
-# 'links',                          # list of links included in the text content, with redirections resolved, separated by |
-# 'media_urls',                     # list of links to images/videos embedded, separated by |
-# 'media_files',                    # list of filenames of images/videos embedded and downloaded, separated by |, ignorable when medias collections isn't enabled
-# 'media_types',                    # list of media types (photo, video, animated gif), separated by |
+def get_best_url(item):
+    if 'unwound_url' in item:
+        return item['unwound_url']
+
+    if 'expanded_url' in item:
+        return item['expanded_url']
+
+    return None
 
 
 def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_id,
-                       users_by_id, locale=None, collection_source=None,
+                       users_by_id, media_by_key, locale=None, collection_source=None,
                        extract_referenced_tweets=False):
     timestamp_utc, local_time = get_dates(tweet['created_at'], locale=locale, v2=True)
 
     user = users_by_id[tweet['author_id']]
     user_timestamp_utc, user_created_at = get_dates(user['created_at'], locale=locale, v2=True)
+    user_entities = user.get('entities', {})
 
     entities = tweet.get('entities', {})
     referenced_tweets = tweet.get('referenced_tweets', [])
@@ -516,6 +522,9 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
             if 'geo' in place_data and 'bbox' in place_data['geo']:
                 place_info['place_coordinates'] = place_data['geo']['bbox']
 
+    # Text
+    text = tweet['text']
+
     # References
     refs = {t['type']: t['id'] for t in referenced_tweets}
 
@@ -543,6 +552,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 places_by_id=places_by_id,
                 tweets_by_id=tweets_by_id,
                 users_by_id=users_by_id,
+                media_by_key=media_by_key,
                 locale=locale,
                 collection_source=collection_source
             )
@@ -550,6 +560,11 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
             retweet_info['retweeted_user'] = normalized_retweet['user_screen_name']
             retweet_info['retweeted_user_id'] = normalized_retweet['user_id']
             retweet_info['retweeted_timestamp_utc'] = normalized_retweet['timestamp_utc']
+
+            text = format_rt_text(
+                normalized_retweet['user_screen_name'],
+                normalized_retweet['text']
+            )
 
     # Quoted
     quote_info = {}
@@ -566,6 +581,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 places_by_id=places_by_id,
                 tweets_by_id=tweets_by_id,
                 users_by_id=users_by_id,
+                media_by_key=media_by_key,
                 locale=locale,
                 collection_source=collection_source
             )
@@ -574,16 +590,58 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
             quote_info['quoted_user_id'] = normalized_quote['user_id']
             quote_info['quoted_timestamp_utc'] = normalized_quote['timestamp_utc']
 
+            text = format_qt_text(
+                normalized_quote['user_screen_name'],
+                text,
+                normalized_quote['text'],
+                normalized_quote['url']
+            )
+
+    # Replace urls in text
+    links = set()
+
+    for url_data in entities.get('urls', []):
+        replacement_url = get_best_url(url_data)
+
+        if replacement_url:
+            text = text.replace(url_data['url'], replacement_url)
+
+        if not replacement_url:
+            replacement_url = url_data['url']
+
+        links.add(custom_normalize_url(replacement_url))
+
     # Metrics
     is_retweet = 'retweeted' in refs
     public_metrics = tweet['public_metrics']
     user_public_metrics = user['public_metrics']
 
+    user_url = user['url']
+
+    if 'url' in user_entities and 'urls' in user_entities['url']:
+        user_url_entity = user_entities['url']['urls'][0]
+        user_url = get_best_url(user_url_entity) or user_url
+
+    medias = []
+
+    if 'attachments' in tweet and 'media_keys' in tweet['attachments']:
+        source_id = refs.get('retweeted_id', tweet['id'])
+
+        for media_key in tweet['attachments']['media_keys']:
+            if media_key in media_by_key:
+                media_data = media_by_key[media_key]
+
+                medias.append((
+                    media_data['url'],
+                    '%s_%s' % (source_id, extract_media_name_from_url(media_data['url'])),
+                    media_data['type']
+                ))
+
     normalized_tweet = {
         'id': tweet['id'],
         'local_time': local_time,
         'timestamp_utc': timestamp_utc,
-        'text': None,
+        'text': unescape(text),
         'url': format_tweet_url(user['username'], tweet['id']),
         'hashtags': sorted(hashtags),
         'mentioned_names': sorted(mentions),
@@ -592,6 +650,8 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'user_id': user['id'],
         'user_screen_name': user['username'],
         'user_name': user['name'],
+        'user_image': user['profile_image_url'],
+        'user_url': user_url or None,
         'user_location': user.get('location'),
         'user_verified': user['verified'],
         'user_description': user['description'],
@@ -607,6 +667,10 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'reply_count': public_metrics['reply_count'] if not is_retweet else 0,
         'lang': tweet['lang'],
         'source': tweet['source'],
+        'links': sorted(links),
+        'media_urls': [m[0] for m in medias],
+        'media_files': [m[1] for m in medias],
+        'media_types': [m[2] for m in medias],
         **place_info,
         **reply_info,
         **retweet_info,
@@ -625,6 +689,7 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
     users_by_id = includes_index(payload, 'users')
     places_by_id = includes_index(payload, 'places')
     tweets_by_id = includes_index(payload, 'tweets')
+    media_by_key = includes_index(payload, 'media', index_key='media_key')
 
     output = []
 
@@ -635,6 +700,7 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
             users_by_screen_name=users_by_screen_name,
             places_by_id=places_by_id,
             tweets_by_id=tweets_by_id,
+            media_by_key=media_by_key,
             locale=locale,
             collection_source=collection_source
         )
