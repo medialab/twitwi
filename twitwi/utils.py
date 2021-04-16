@@ -455,15 +455,13 @@ def normalize_user(user, locale=None, pure=True):
 
 
 def includes_index(payload, key, index_key='id'):
-    return {item[index_key]: item for item in payload['includes'][key]}
+    return {item[index_key]: item for item in payload['includes'].get(key, [])}
 
 
 # 'text',                           # message's text content
 # 'to_username',                    # text ID of the user the message is answering to
 # 'to_userid',                      # digital ID of the user the message is answering to
 # 'to_tweetid',                     # digital ID of the tweet the message is answering to
-# 'lat',                            # latitude of messages geolocalized
-# 'lng',                            # longitude of messages geolocalized
 # 'user_url',                       # link to a website given in the author's profile (at collection time)
 # 'user_image',                     # link to the image avatar of the author's profile (at collection time)
 # 'user_created_at',                # ISO datetime of creation of the author's account
@@ -476,17 +474,14 @@ def includes_index(payload, key, index_key='id'):
 # 'quoted_user',                    # text ID of the user who authored the quoted message
 # 'quoted_user_id',                 # digital ID of the user who authoring the quoted message
 # 'quoted_timestamp_utc',           # UNIX timestamp of creation of the quoted message - UTC time
-# 'place_country_code',             # if the tweet has an associated 'place', country code of that place
-# 'place_name',                     # if the tweet has an associated 'place', name of that place
-# 'place_type',                     # if the tweet has an associated 'place', type of that place ('city', 'admin', etc.)
-# 'place_coordinates',              # if the tweet has an associated 'place', coordinates of that place, separated by |
 # 'links',                          # list of links included in the text content, with redirections resolved, separated by |
 # 'media_urls',                     # list of links to images/videos embedded, separated by |
 # 'media_files',                    # list of filenames of images/videos embedded and downloaded, separated by |, ignorable when medias collections isn't enabled
 # 'media_types',                    # list of media types (photo, video, animated gif), separated by |
 
 
-def normalize_tweet_v2(tweet, user, *, user_index, locale=None, collection_source=None):
+def normalize_tweet_v2(tweet, user, *, users_by_screen_name, places_by_id,
+                       locale=None, collection_source=None):
     local_time, timestamp_utc = get_dates(tweet['created_at'], locale=locale, v2=True)
 
     entities = tweet.get('entities', {})
@@ -502,6 +497,34 @@ def normalize_tweet_v2(tweet, user, *, user_index, locale=None, collection_sourc
     for mention in entities.get('mentions', []):
         mentions.add(mention['username'])
 
+    place_info = {}
+
+    if 'geo' in tweet:
+        geo_data = tweet['geo']
+
+        if 'coordinates' in geo_data:
+            point = geo_data['coordinates']
+
+            if point['type'] == 'Point':
+                lng, lat = point['coordinates']
+                place_info['lng'] = lng
+                place_info['lat'] = lat
+
+        if 'place_id' in geo_data:
+            place_data = places_by_id[geo_data['place_id']]
+
+            if 'country_code' in place_data:
+                place_info['place_country_code'] = place_data['country_code']
+
+            if 'full_name' in place_data:
+                place_info['place_name'] = place_data['full_name']
+
+            if 'place_type' in place_data:
+                place_info['place_type'] = place_data['place_type']
+
+            if 'geo' in place_data and 'bbox' in place_data['geo']:
+                place_info['place_coordinates'] = place_data['geo']['bbox']
+
     is_retweet = any(t['type'] == 'retweeted' for t in referenced_tweets)
     public_metrics = tweet['public_metrics']
 
@@ -515,7 +538,7 @@ def normalize_tweet_v2(tweet, user, *, user_index, locale=None, collection_sourc
         'url': format_tweet_url(user['username'], tweet['id']),
         'hashtags': sorted(hashtags),
         'mentioned_names': sorted(mentions),
-        'mentioned_ids': sorted(user_index[name]['id'] for name in mentions),
+        'mentioned_ids': sorted(users_by_screen_name[name]['id'] for name in mentions),
         'collection_time': get_collection_time(),
         'user_id': user['id'],
         'user_screen_name': user['username'],
@@ -532,7 +555,8 @@ def normalize_tweet_v2(tweet, user, *, user_index, locale=None, collection_sourc
         'retweet_count': public_metrics['retweet_count'] if not is_retweet else 0,
         'reply_count': public_metrics['reply_count'] if not is_retweet else 0,
         'lang': tweet['lang'],
-        'source': tweet['source']
+        'source': tweet['source'],
+        **place_info
     }
 
     if collection_source is not None:
@@ -545,6 +569,7 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
                                 collection_source=None):
     users_by_screen_name = includes_index(payload, 'users', index_key='username')
     users_by_id = includes_index(payload, 'users')
+    places_by_id = includes_index(payload, 'places')
     refs = includes_index(payload, 'tweets')
 
     output = []
@@ -553,9 +578,10 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
         normalized_tweet = normalize_tweet_v2(
             item,
             users_by_id[item['author_id']],
-            user_index=users_by_screen_name,
+            users_by_screen_name=users_by_screen_name,
             locale=locale,
-            collection_source=collection_source
+            collection_source=collection_source,
+            places_by_id=places_by_id
         )
         output.append(normalized_tweet)
 

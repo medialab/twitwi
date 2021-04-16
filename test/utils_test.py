@@ -101,13 +101,17 @@ class TestUtils(object):
         assert user == original_arg
 
     def test_normalize_tweets_payload_v2(self):
-        payload = get_json_resource('payload_v2.json')
+        payloads = [
+            get_json_resource('payload_v2.json'),
+            get_json_resource('payload_v2_geo.json')
+        ]
 
-        tweets = normalize_tweets_payload_v2(payload)
+        for payload in payloads:
+            tweets = normalize_tweets_payload_v2(payload)
 
-        print()
-        for t in tweets:
-            print()
-            for k, v in t.items():
-                print('%s: %r' % (k, v))
-        print()
+            # print()
+            # for t in tweets:
+            #     print()
+            #     for k, v in t.items():
+            #         print('%s: %r' % (k, v))
+            # print()
