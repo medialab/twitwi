@@ -52,6 +52,10 @@ def format_qt_text(user, text, quoted_text, url):
     return text.replace(url, quote)
 
 
+def format_tweet_url(screen_name, tweet_id):
+    return 'https://twitter.com/%s/statuses/%s' % (screen_name, tweet_id)
+
+
 custom_normalize_url = partial(
     normalize_url,
     **CANONICAL_URL_KWARGS
@@ -354,7 +358,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
         'local_time': local_time,
         'timestamp_utc': timestamp_utc,
         'text': text,
-        'url': 'https://twitter.com/%s/statuses/%s' % (tweet['user']['screen_name'], tweet['id_str']),
+        'url': format_tweet_url(tweet['user']['screen_name'], tweet['id_str']),
         'quoted_id': qti,
         'quoted_user': qtu,
         'quoted_user_id': qtuid,
@@ -483,11 +487,20 @@ def includes_index(payload, key):
 def normalize_tweet_v2(tweet, user, locale=None):
     local_time, timestamp_utc = get_dates(tweet['created_at'], locale=locale, v2=True)
 
+    entities = tweet.get('entities', {})
+
+    hashtags = set()
+
+    for hashtag in entities.get('hashtags', []):
+        hashtags.add(hashtag['tag'])
+
     normalized_tweet = {
         'id': tweet['id'],
         'local_time': local_time,
         'timestamp_utc': timestamp_utc,
         'text': None,
+        'url': format_tweet_url(user['username'], tweet['id']),
+        'hashtags': sorted(hashtags),
         'collection_time': get_collection_time()
     }
 
