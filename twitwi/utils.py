@@ -459,30 +459,21 @@ def includes_index(payload, key, index_key='id'):
 
 
 # 'text',                           # message's text content
-# 'to_username',                    # text ID of the user the message is answering to
-# 'to_userid',                      # digital ID of the user the message is answering to
-# 'to_tweetid',                     # digital ID of the tweet the message is answering to
 # 'user_url',                       # link to a website given in the author's profile (at collection time)
 # 'user_image',                     # link to the image avatar of the author's profile (at collection time)
-# 'user_created_at',                # ISO datetime of creation of the author's account
-# 'user_timestamp_utc',             # UNIX timestamp of creation of the author's account - UTC time
-# 'retweeted_id',                   # digital ID of the retweeted message
-# 'retweeted_user',                 # text ID of the user who authored the retweeted message
-# 'retweeted_user_id',              # digital ID of the user who authoring the retweeted message
-# 'retweeted_timestamp_utc',        # UNIX timestamp of creation of the retweeted message - UTC time
-# 'quoted_id',                      # digital ID of the retweeted message
-# 'quoted_user',                    # text ID of the user who authored the quoted message
-# 'quoted_user_id',                 # digital ID of the user who authoring the quoted message
-# 'quoted_timestamp_utc',           # UNIX timestamp of creation of the quoted message - UTC time
 # 'links',                          # list of links included in the text content, with redirections resolved, separated by |
 # 'media_urls',                     # list of links to images/videos embedded, separated by |
 # 'media_files',                    # list of filenames of images/videos embedded and downloaded, separated by |, ignorable when medias collections isn't enabled
 # 'media_types',                    # list of media types (photo, video, animated gif), separated by |
 
 
-def normalize_tweet_v2(tweet, user, *, users_by_screen_name, places_by_id,
-                       locale=None, collection_source=None):
-    local_time, timestamp_utc = get_dates(tweet['created_at'], locale=locale, v2=True)
+def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_id,
+                       users_by_id, locale=None, collection_source=None,
+                       extract_referenced_tweets=False):
+    timestamp_utc, local_time = get_dates(tweet['created_at'], locale=locale, v2=True)
+
+    user = users_by_id[tweet['author_id']]
+    user_timestamp_utc, user_created_at = get_dates(user['created_at'], locale=locale, v2=True)
 
     entities = tweet.get('entities', {})
     referenced_tweets = tweet.get('referenced_tweets', [])
@@ -525,9 +516,67 @@ def normalize_tweet_v2(tweet, user, *, users_by_screen_name, places_by_id,
             if 'geo' in place_data and 'bbox' in place_data['geo']:
                 place_info['place_coordinates'] = place_data['geo']['bbox']
 
-    is_retweet = any(t['type'] == 'retweeted' for t in referenced_tweets)
-    public_metrics = tweet['public_metrics']
+    # References
+    refs = {t['type']: t['id'] for t in referenced_tweets}
 
+    # Reply
+    reply_info = {}
+
+    if 'replied_to' in refs:
+        reply = tweets_by_id[refs['replied_to']]
+        reply_info['to_username'] = users_by_id[reply['author_id']]['username']
+        reply_info['to_userid'] = reply['author_id']
+        reply_info['to_tweetid'] = reply['id']
+
+    # Retweet
+    retweet_info = {}
+    normalized_retweet = None
+
+    if 'retweeted' in refs:
+        retweet_info['retweeted_id'] = refs['retweeted']
+
+        if refs['retweeted'] in tweets_by_id:
+            retweet = tweets_by_id[refs['retweeted']]
+            normalized_retweet = normalize_tweet_v2(
+                retweet,
+                users_by_screen_name=users_by_screen_name,
+                places_by_id=places_by_id,
+                tweets_by_id=tweets_by_id,
+                users_by_id=users_by_id,
+                locale=locale,
+                collection_source=collection_source
+            )
+
+            retweet_info['retweeted_user'] = normalized_retweet['user_screen_name']
+            retweet_info['retweeted_user_id'] = normalized_retweet['user_id']
+            retweet_info['retweeted_timestamp_utc'] = normalized_retweet['timestamp_utc']
+
+    # Quoted
+    quote_info = {}
+    normalized_quote = None
+
+    if 'quoted' in refs:
+        quote_info['quoted_id'] = refs['quoted']
+
+        if refs['quoted'] in tweets_by_id:
+            quote = tweets_by_id[refs['quoted']]
+            normalized_quote = normalize_tweet_v2(
+                quote,
+                users_by_screen_name=users_by_screen_name,
+                places_by_id=places_by_id,
+                tweets_by_id=tweets_by_id,
+                users_by_id=users_by_id,
+                locale=locale,
+                collection_source=collection_source
+            )
+
+            quote_info['quoted_user'] = normalized_quote['user_screen_name']
+            quote_info['quoted_user_id'] = normalized_quote['user_id']
+            quote_info['quoted_timestamp_utc'] = normalized_quote['timestamp_utc']
+
+    # Metrics
+    is_retweet = 'retweeted' in refs
+    public_metrics = tweet['public_metrics']
     user_public_metrics = user['public_metrics']
 
     normalized_tweet = {
@@ -550,13 +599,18 @@ def normalize_tweet_v2(tweet, user, *, users_by_screen_name, places_by_id,
         'user_followers': user_public_metrics['followers_count'],
         'user_friends': user_public_metrics['following_count'],
         'user_lists': user_public_metrics['listed_count'],
+        'user_created_at': user_created_at,
+        'user_timestamp_utc': user_timestamp_utc,
         'possibly_sensitive': tweet['possibly_sensitive'],
         'like_count': public_metrics['like_count'] if not is_retweet else 0,
         'retweet_count': public_metrics['retweet_count'] if not is_retweet else 0,
         'reply_count': public_metrics['reply_count'] if not is_retweet else 0,
         'lang': tweet['lang'],
         'source': tweet['source'],
-        **place_info
+        **place_info,
+        **reply_info,
+        **retweet_info,
+        **quote_info
     }
 
     if collection_source is not None:
@@ -570,18 +624,19 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
     users_by_screen_name = includes_index(payload, 'users', index_key='username')
     users_by_id = includes_index(payload, 'users')
     places_by_id = includes_index(payload, 'places')
-    refs = includes_index(payload, 'tweets')
+    tweets_by_id = includes_index(payload, 'tweets')
 
     output = []
 
     for item in payload['data']:
         normalized_tweet = normalize_tweet_v2(
             item,
-            users_by_id[item['author_id']],
+            users_by_id=users_by_id,
             users_by_screen_name=users_by_screen_name,
+            places_by_id=places_by_id,
+            tweets_by_id=tweets_by_id,
             locale=locale,
-            collection_source=collection_source,
-            places_by_id=places_by_id
+            collection_source=collection_source
         )
         output.append(normalized_tweet)
 
