@@ -1,3567 +1,1908 @@
 {
-   "data" : [
-      {
-         "author_id" : "4890312130",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Computer programming",
-                  "id" : "848921413196984320",
-                  "name" : "Computer programming"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Artificial Intelligence",
-                  "id" : "898262889378619392",
-                  "name" : "Artificial intelligence"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Machine Learning",
-                  "id" : "898661583827615744",
-                  "name" : "Machine learning"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Web Development",
-                  "id" : "898673391980261376",
-                  "name" : "Web development"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Data Science",
-                  "id" : "930484568305541120",
-                  "name" : "Data science"
-               }
-            }
-         ],
-         "conversation_id" : "1374786010656210949",
-         "created_at" : "2021-03-24T18:11:41.000Z",
-         "entities" : {
-            "hashtags" : [
-               {
-                  "end" : 76,
-                  "start" : 69,
-                  "tag" : "Python"
-               },
-               {
-                  "end" : 127,
-                  "start" : 119,
-                  "tag" : "traefik"
-               },
-               {
-                  "end" : 131,
-                  "start" : 128,
-                  "tag" : "ML"
-               },
-               {
-                  "end" : 135,
-                  "start" : 132,
-                  "tag" : "AI"
-               },
-               {
-                  "end" : 140,
-                  "start" : 136,
-                  "tag" : "API"
-               }
-            ],
-            "urls" : [
-               {
-                  "description" : "Generate a backend and frontend stack using Python, including interactive API documentation.",
-                  "display_url" : "bit.ly/2OhvyEW",
-                  "end" : 118,
-                  "expanded_url" : "https://bit.ly/2OhvyEW",
-                  "images" : [
-                     {
-                        "height" : 448,
-                        "url" : "https://pbs.twimg.com/news_img/1374786015341248513/8BujHyog?format=jpg&name=orig",
-                        "width" : 811
-                     },
-                     {
-                        "height" : 150,
-                        "url" : "https://pbs.twimg.com/news_img/1374786015341248513/8BujHyog?format=jpg&name=150x150",
-                        "width" : 150
-                     }
-                  ],
-                  "start" : 95,
-                  "status" : 200,
-                  "title" : "Generate a backend and frontend stack using Python",
-                  "unwound_url" : "https://pythonawesome.com/generate-a-backend-and-frontend-stack-using-python/?utm_campaign=Community%20Contributions&utm_content=157527439&utm_medium=social&utm_source=twitter&hss_channel=tw-4890312130",
-                  "url" : "https://t.co/lwuQJ4eOa0"
-               }
-            ]
-         },
-         "id" : "1374786010656210949",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 0
-         },
-         "reply_settings" : "everyone",
-         "source" : "HubSpot",
-         "text" : "Community Contribution 👉 Generate a backend and frontend stack using #Python by Python Awesome https://t.co/lwuQJ4eOa0 #traefik #ML #AI #API"
-      },
-      {
-         "author_id" : "1288754505211883521",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Artificial Intelligence",
-                  "id" : "898262889378619392",
-                  "name" : "Artificial intelligence"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Machine Learning",
-                  "id" : "898661583827615744",
-                  "name" : "Machine learning"
-               }
-            }
-         ],
-         "conversation_id" : "1374786009230106628",
-         "created_at" : "2021-03-24T18:11:41.000Z",
-         "entities" : {
-            "hashtags" : [
-               {
-                  "end" : 27,
-                  "start" : 22,
-                  "tag" : "cool"
-               },
-               {
-                  "end" : 31,
-                  "start" : 28,
-                  "tag" : "AI"
-               },
-               {
-                  "end" : 101,
-                  "start" : 92,
-                  "tag" : "StyleGAN"
-               },
-               {
-                  "end" : 118,
-                  "start" : 102,
-                  "tag" : "MachineLearning"
-               },
-               {
-                  "end" : 132,
-                  "start" : 119,
-                  "tag" : "DeepLearning"
-               },
-               {
-                  "end" : 137,
-                  "start" : 133,
-                  "tag" : "NLP"
-               }
-            ],
-            "mentions" : [
-               {
-                  "end" : 15,
-                  "start" : 3,
-                  "username" : "RichNiemiec"
-               },
-               {
-                  "end" : 52,
-                  "start" : 39,
-                  "username" : "CitizenPlain"
-               },
-               {
-                  "end" : 91,
-                  "start" : 79,
-                  "username" : "mymodernmet"
-               }
-            ],
-            "urls" : [
-               {
-                  "description" : "This artist uses AI technology to reimagine what some of the worldâs most notable figures would look like in real life.",
-                  "display_url" : "mymodernmet.com/nathan-shipleyâ¦",
-                  "end" : 77,
-                  "expanded_url" : "https://mymodernmet.com/nathan-shipley-historical-ai-portraits/",
-                  "images" : [
-                     {
-                        "height" : 630,
-                        "url" : "https://pbs.twimg.com/news_img/1374028170186403840/Ao8-rg4P?format=jpg&name=orig",
-                        "width" : 1200
-                     },
-                     {
-                        "height" : 150,
-                        "url" : "https://pbs.twimg.com/news_img/1374028170186403840/Ao8-rg4P?format=jpg&name=150x150",
-                        "width" : 150
-                     }
-                  ],
-                  "start" : 54,
-                  "status" : 200,
-                  "title" : "Artist Uses AI To Recreate How Famous Figures Would Look IRL",
-                  "unwound_url" : "https://mymodernmet.com/nathan-shipley-historical-ai-portraits/",
-                  "url" : "https://t.co/lsekOUDkyh"
-               }
-            ]
-         },
-         "id" : "1374786009230106628",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 2
-         },
-         "referenced_tweets" : [
-            {
-               "id" : "1374785352108507150",
-               "type" : "retweeted"
-            }
-         ],
-         "reply_settings" : "everyone",
-         "source" : "Python Data Science Tweets",
-         "text" : "RT @RichNiemiec: More #cool #AI images @CitizenPlain:\nhttps://t.co/lsekOUDkyh\n\n@mymodernmet #StyleGAN #MachineLearning #DeepLearning #NLP #â¦"
-      },
-      {
-         "author_id" : "1355691489561600001",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Computer programming",
-                  "id" : "848921413196984320",
-                  "name" : "Computer programming"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Web Development",
-                  "id" : "898673391980261376",
-                  "name" : "Web development"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Data Science",
-                  "id" : "930484568305541120",
-                  "name" : "Data science"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "JavaScript",
-                  "id" : "898659750950207489",
-                  "name" : "JavaScript"
-               }
-            }
-         ],
-         "conversation_id" : "1374786006537412612",
-         "created_at" : "2021-03-24T18:11:40.000Z",
-         "entities" : {
-            "annotations" : [
-               {
-                  "end" : 82,
-                  "normalized_text" : "Mahatma Gandhi",
-                  "probability" : 0.9822,
-                  "start" : 69,
-                  "type" : "Person"
-               }
-            ],
-            "hashtags" : [
-               {
-                  "end" : 101,
-                  "start" : 84,
-                  "tag" : "softwareengineer"
-               },
-               {
-                  "end" : 113,
-                  "start" : 102,
-                  "tag" : "javascript"
-               },
-               {
-                  "end" : 121,
-                  "start" : 114,
-                  "tag" : "python"
-               },
-               {
-                  "end" : 124,
-                  "start" : 122,
-                  "tag" : "C"
-               },
-               {
-                  "end" : 134,
-                  "start" : 127,
-                  "tag" : "golang"
-               }
-            ],
-            "mentions" : [
-               {
-                  "end" : 15,
-                  "start" : 3,
-                  "username" : "glitchbotio"
-               }
-            ]
-         },
-         "id" : "1374786006537412612",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 3
-         },
-         "referenced_tweets" : [
-            {
-               "id" : "1374785963390599173",
-               "type" : "retweeted"
-            }
-         ],
-         "reply_settings" : "everyone",
-         "source" : "Twitter",
-         "text" : "RT @glitchbotio: \"Be the change that you want to see in the world.\"- Mahatma Gandhi #softwareengineer #javascript #python #C++ #golang #nodâ¦"
-      },
-      {
-         "author_id" : "1270236553818845185",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Hobbies and interests",
-                  "id" : "847868745150119936",
-                  "name" : "Home & family"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Computer programming",
-                  "id" : "848921413196984320",
-                  "name" : "Computer programming"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Web Development",
-                  "id" : "898673391980261376",
-                  "name" : "Web development"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Data Science",
-                  "id" : "930484568305541120",
-                  "name" : "Data science"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "History",
-                  "id" : "1047111583309029381",
-                  "name" : "History"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Philosophy",
-                  "id" : "1047111740322865153",
-                  "name" : "Philosophy"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "id" : "1237095288671596545",
-                  "name" : "Mathematics"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "JavaScript",
-                  "id" : "898659750950207489",
-                  "name" : "JavaScript"
-               }
-            }
-         ],
-         "conversation_id" : "1374786002120761346",
-         "created_at" : "2021-03-24T18:11:39.000Z",
-         "entities" : {
-            "hashtags" : [
-               {
-                  "end" : 51,
-                  "start" : 45,
-                  "tag" : "Essay"
-               },
-               {
-                  "end" : 59,
-                  "start" : 52,
-                  "tag" : "Course"
-               },
-               {
-                  "end" : 73,
-                  "start" : 65,
-                  "tag" : "Project"
-               },
-               {
-                  "end" : 80,
-                  "start" : 74,
-                  "tag" : "Essay"
-               },
-               {
-                  "end" : 89,
-                  "start" : 85,
-                  "tag" : "Pay"
-               },
-               {
-                  "end" : 109,
-                  "start" : 96,
-                  "tag" : "econometrics"
-               },
-               {
-                  "end" : 119,
-                  "start" : 110,
-                  "tag" : "Paperpay"
-               },
-               {
-                  "end" : 128,
-                  "start" : 120,
-                  "tag" : "Someone"
-               },
-               {
-                  "end" : 145,
-                  "start" : 140,
-                  "tag" : "Case"
-               },
-               {
-                  "end" : 163,
-                  "start" : 152,
-                  "tag" : "javascript"
-               },
-               {
-                  "end" : 171,
-                  "start" : 164,
-                  "tag" : "python"
-               },
-               {
-                  "end" : 180,
-                  "start" : 172,
-                  "tag" : "History"
-               },
-               {
-                  "end" : 190,
-                  "start" : 181,
-                  "tag" : "Homework"
-               },
-               {
-                  "end" : 203,
-                  "start" : 192,
-                  "tag" : "Philosophy"
-               },
-               {
-                  "end" : 216,
-                  "start" : 205,
-                  "tag" : "Assignment"
-               },
-               {
-                  "end" : 229,
-                  "start" : 221,
-                  "tag" : "History"
-               },
-               {
-                  "end" : 241,
-                  "start" : 230,
-                  "tag" : "Statistics"
-               }
-            ],
-            "urls" : [
-               {
-                  "display_url" : "twitter.com/messages/compoâ¦",
-                  "end" : 267,
-                  "expanded_url" : "https://twitter.com/messages/compose?recipient_id=1270236553818845185",
-                  "start" : 244,
-                  "status" : 200,
-                  "unwound_url" : "https://twitter.com/messages/compose?recipient_id=1270236553818845185",
-                  "url" : "https://t.co/q4M02MODTD"
-               }
-            ]
-         },
-         "id" : "1374786002120761346",
-         "lang" : "en",
-         "possibly_sensitive" : true,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 0
-         },
-         "reply_settings" : "everyone",
-         "source" : "Twitter Web App",
-         "text" : "Pay academic experts to help you write your;\n#Essay\n#Course work\n#Project\n#Essay due\n#Pay write\n#econometrics\n#Paperpay\n#Someone help paper\n#Case study\n#javascript\n#python\n#History\n#Homework \n#Philosophy.\n#Assignment due\n#History\n#Statistics,\n\nhttps://t.co/q4M02MODTD"
-      },
-      {
-         "author_id" : "1139186989733990401",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Education through the lens of those passionate about resources and news. This topic excludes Education policy and reform.",
-                  "id" : "847546154439000064",
-                  "name" : "Education"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Online education",
-                  "id" : "852291840472629248",
-                  "name" : "Online education"
-               }
-            }
-         ],
-         "conversation_id" : "1374785985175773196",
-         "created_at" : "2021-03-24T18:11:35.000Z",
-         "entities" : {
-            "annotations" : [
-               {
-                  "end" : 78,
-                  "normalized_text" : "S. Vreeland",
-                  "probability" : 0.6749,
-                  "start" : 68,
-                  "type" : "Person"
-               }
-            ],
-            "hashtags" : [
-               {
-                  "end" : 63,
-                  "start" : 54,
-                  "tag" : "learning"
-               }
-            ],
-            "mentions" : [
-               {
-                  "end" : 15,
-                  "start" : 3,
-                  "username" : "liwaiwaicom"
-               },
-               {
-                  "end" : 121,
-                  "start" : 109,
-                  "username" : "aster_cloud"
-               },
-               {
-                  "end" : 132,
-                  "start" : 122,
-                  "username" : "gcpdotcom"
-               }
-            ],
-            "urls" : [
-               {
-                  "description" : "The significance ofÂ artificial intelligenceÂ and machine learningÂ (AIML) has increased by much in technology in recent years. It has gone to a point where they are helping businesses gain an advantage over their competitors. With the ever-increasing volumes of data generated each day, it becomes essential to process it in real-time. This is whereÂ AIMLÂ comes into the picture ...",
-                  "display_url" : "liwaiwai.com/2021/02/04/unlâ¦",
-                  "end" : 107,
-                  "expanded_url" : "https://liwaiwai.com/2021/02/04/unlock-your-career-in-artificial-intelligence-and-machine-learning/",
-                  "images" : [
-                     {
-                        "height" : 872,
-                        "url" : "https://pbs.twimg.com/news_img/1373922870569492481/yiPhiAPx?format=jpg&name=orig",
-                        "width" : 1600
-                     },
-                     {
-                        "height" : 150,
-                        "url" : "https://pbs.twimg.com/news_img/1373922870569492481/yiPhiAPx?format=jpg&name=150x150",
-                        "width" : 150
-                     }
-                  ],
-                  "start" : 84,
-                  "status" : 200,
-                  "title" : "Unlock Your Career In Artificial Intelligence And Machine Learning - Liwaiwai",
-                  "unwound_url" : "https://liwaiwai.com/2021/02/04/unlock-your-career-in-artificial-intelligence-and-machine-learning/",
-                  "url" : "https://t.co/CwaYAJ0nNL"
-               }
-            ]
-         },
-         "id" : "1374785985175773196",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 47
-         },
-         "referenced_tweets" : [
-            {
-               "id" : "1373922856401211395",
-               "type" : "retweeted"
-            }
-         ],
-         "reply_settings" : "everyone",
-         "source" : "code thug",
-         "text" : "RT @liwaiwaicom: What The World Calls Failure, I Call #learning. \n- S. Vreeland 🤖👇\n\nhttps://t.co/CwaYAJ0nNL\n\n@aster_cloud @gcpdotcom #Machiâ¦"
-      },
-      {
-         "attachments" : {
-            "media_keys" : [
-               "3_1374783705336659969",
-               "3_1374783705349304325",
-               "3_1374783705345097738",
-               "3_1374783705345097736"
-            ]
-         },
-         "author_id" : "1293962931315585024",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Computer programming",
-                  "id" : "848921413196984320",
-                  "name" : "Computer programming"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Data Science",
-                  "id" : "930484568305541120",
-                  "name" : "Data science"
-               }
-            }
-         ],
-         "conversation_id" : "1374785976963317762",
-         "created_at" : "2021-03-24T18:11:33.000Z",
-         "entities" : {
-            "hashtags" : [
-               {
-                  "end" : 103,
-                  "start" : 91,
-                  "tag" : "datascience"
-               },
-               {
-                  "end" : 111,
-                  "start" : 104,
-                  "tag" : "Python"
-               }
-            ],
-            "mentions" : [
-               {
-                  "end" : 14,
-                  "start" : 3,
-                  "username" : "Josh_Ebner"
-               }
-            ],
-            "urls" : [
-               {
-                  "description" : "This tutorial will show you how to use the Numpy log function. It explains the syntax of np.log and provides clear, step-by-step examples.",
-                  "display_url" : "sharpsightlabs.com/blog/numpy-logâ¦",
-                  "end" : 89,
-                  "expanded_url" : "https://www.sharpsightlabs.com/blog/numpy-log/?utm_source=twitter&utm_medium=social",
-                  "images" : [
-                     {
-                        "height" : 664,
-                        "url" : "https://pbs.twimg.com/news_img/1374783746650599432/62RKjzD7?format=png&name=orig",
-                        "width" : 1028
-                     },
-                     {
-                        "height" : 150,
-                        "url" : "https://pbs.twimg.com/news_img/1374783746650599432/62RKjzD7?format=png&name=150x150",
-                        "width" : 150
-                     }
-                  ],
-                  "start" : 66,
-                  "status" : 200,
-                  "title" : "Numpy Log Explained",
-                  "unwound_url" : "https://www.sharpsightlabs.com/blog/numpy-log/?utm_source=twitter&utm_medium=social",
-                  "url" : "https://t.co/BMMixm5zZV"
-               },
-               {
-                  "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                  "end" : 135,
-                  "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                  "start" : 112,
-                  "url" : "https://t.co/R0HfeSH1KR"
-               },
-               {
-                  "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                  "end" : 135,
-                  "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                  "start" : 112,
-                  "url" : "https://t.co/R0HfeSH1KR"
-               },
-               {
-                  "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                  "end" : 135,
-                  "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                  "start" : 112,
-                  "url" : "https://t.co/R0HfeSH1KR"
-               },
-               {
-                  "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                  "end" : 135,
-                  "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                  "start" : 112,
-                  "url" : "https://t.co/R0HfeSH1KR"
-               }
-            ]
-         },
-         "id" : "1374785976963317762",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 2
-         },
-         "referenced_tweets" : [
-            {
-               "id" : "1374783743341297665",
-               "type" : "retweeted"
-            }
-         ],
-         "reply_settings" : "everyone",
-         "source" : "Twitter",
-         "text" : "RT @Josh_Ebner: How to Compute Logarithms in Python using Numpy \n\nhttps://t.co/BMMixm5zZV\n\n#datascience #Python https://t.co/R0HfeSH1KR"
-      },
-      {
-         "author_id" : "1327935633445199874",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level entities that describe a Brands industry",
-                  "id" : "45",
-                  "name" : "Brand Vertical"
-               },
-               "entity" : {
-                  "id" : "781974596157251587",
-                  "name" : "Government/Education"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Categories within Brand Verticals that narrow down the scope of Brands",
-                  "id" : "46",
-                  "name" : "Brand Category"
-               },
-               "entity" : {
-                  "id" : "781974597226729473",
-                  "name" : "Non-profit"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Brands and Companies",
-                  "id" : "47",
-                  "name" : "Brand"
-               },
-               "entity" : {
-                  "id" : "10043701943",
-                  "name" : "Women in tech"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Computer programming",
-                  "id" : "848921413196984320",
-                  "name" : "Computer programming"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Data Science",
-                  "id" : "930484568305541120",
-                  "name" : "Data science"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level entities that describe a Brands industry",
-                  "id" : "45",
-                  "name" : "Brand Vertical"
-               },
-               "entity" : {
-                  "id" : "781974596157251587",
-                  "name" : "Government/Education"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Categories within Brand Verticals that narrow down the scope of Brands",
-                  "id" : "46",
-                  "name" : "Brand Category"
-               },
-               "entity" : {
-                  "id" : "781974596165570560",
-                  "name" : "Education Related"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Brands and Companies",
-                  "id" : "47",
-                  "name" : "Brand"
-               },
-               "entity" : {
-                  "id" : "10043701955",
-                  "name" : "Women Who Code"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Education through the lens of those passionate about resources and news. This topic excludes Education policy and reform.",
-                  "id" : "847546154439000064",
-                  "name" : "Education"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Online education",
-                  "id" : "852291840472629248",
-                  "name" : "Online education"
-               }
-            }
-         ],
-         "conversation_id" : "1374785974379634691",
-         "created_at" : "2021-03-24T18:11:33.000Z",
-         "entities" : {
-            "hashtags" : [
-               {
-                  "end" : 47,
-                  "start" : 40,
-                  "tag" : "python"
-               },
-               {
-                  "end" : 58,
-                  "start" : 48,
-                  "tag" : "chemistry"
-               },
-               {
-                  "end" : 73,
-                  "start" : 60,
-                  "tag" : "WomenWhoCode"
-               },
-               {
-                  "end" : 86,
-                  "start" : 75,
-                  "tag" : "Assignment"
-               },
-               {
-                  "end" : 99,
-                  "start" : 87,
-                  "tag" : "Onlineclass"
-               },
-               {
-                  "end" : 109,
-                  "start" : 100,
-                  "tag" : "Essaypay"
-               },
-               {
-                  "end" : 124,
-                  "start" : 110,
-                  "tag" : "100DaysOfCode"
-               },
-               {
-                  "end" : 138,
-                  "start" : 125,
-                  "tag" : "Econometrics"
-               }
-            ],
-            "mentions" : [
-               {
-                  "end" : 13,
-                  "start" : 3,
-                  "username" : "LizzEssay"
-               }
-            ]
-         },
-         "id" : "1374785974379634691",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 2
-         },
-         "referenced_tweets" : [
-            {
-               "id" : "1374785916145958918",
-               "type" : "retweeted"
-            }
-         ],
-         "reply_settings" : "everyone",
-         "source" : "Twitter",
-         "text" : "RT @LizzEssay: Hire us for quality work\n#python\n#chemistry \n#WomenWhoCode \n#Assignment\n#Onlineclass\n#Essaypay\n#100DaysOfCode\n#Econometricsâ¦"
-      },
-      {
-         "author_id" : "1369531284",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Cybersecurity",
-                  "id" : "898650876658634752",
-                  "name" : "Cybersecurity"
-               }
-            }
-         ],
-         "conversation_id" : "1374785970927730694",
-         "created_at" : "2021-03-24T18:11:32.000Z",
-         "entities" : {
-            "annotations" : [
-               {
-                  "end" : 33,
-                  "normalized_text" : "Black Kingdom",
-                  "probability" : 0.4602,
-                  "start" : 21,
-                  "type" : "Other"
-               }
-            ],
-            "mentions" : [
-               {
-                  "end" : 19,
-                  "start" : 3,
-                  "username" : "MalwareTechBlog"
-               }
-            ]
-         },
-         "id" : "1374785970927730694",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 350
-         },
-         "referenced_tweets" : [
-            {
-               "id" : "1374635740307484674",
-               "type" : "retweeted"
-            }
-         ],
-         "reply_settings" : "everyone",
-         "source" : "Twitter for iPhone",
-         "text" : "RT @MalwareTechBlog: Black Kingdom ransomware is by far the worst Iâve ever seen. It doesnât exclude exe, dll, or sys files so in cases briâ¦"
-      },
-      {
-         "author_id" : "812555214024740865",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Computer programming",
-                  "id" : "848921413196984320",
-                  "name" : "Computer programming"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Web Development",
-                  "id" : "898673391980261376",
-                  "name" : "Web development"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Data Science",
-                  "id" : "930484568305541120",
-                  "name" : "Data science"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "JavaScript",
-                  "id" : "898659750950207489",
-                  "name" : "JavaScript"
-               }
-            }
-         ],
-         "conversation_id" : "1374785967652020225",
-         "created_at" : "2021-03-24T18:11:31.000Z",
-         "entities" : {
-            "annotations" : [
-               {
-                  "end" : 82,
-                  "normalized_text" : "Mahatma Gandhi",
-                  "probability" : 0.9822,
-                  "start" : 69,
-                  "type" : "Person"
-               }
-            ],
-            "hashtags" : [
-               {
-                  "end" : 101,
-                  "start" : 84,
-                  "tag" : "softwareengineer"
-               },
-               {
-                  "end" : 113,
-                  "start" : 102,
-                  "tag" : "javascript"
-               },
-               {
-                  "end" : 121,
-                  "start" : 114,
-                  "tag" : "python"
-               },
-               {
-                  "end" : 124,
-                  "start" : 122,
-                  "tag" : "C"
-               },
-               {
-                  "end" : 134,
-                  "start" : 127,
-                  "tag" : "golang"
-               }
-            ],
-            "mentions" : [
-               {
-                  "end" : 15,
-                  "start" : 3,
-                  "username" : "glitchbotio"
-               }
-            ]
-         },
-         "id" : "1374785967652020225",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 3
-         },
-         "referenced_tweets" : [
-            {
-               "id" : "1374785963390599173",
-               "type" : "retweeted"
-            }
-         ],
-         "reply_settings" : "everyone",
-         "source" : "React Dev autobot",
-         "text" : "RT @glitchbotio: \"Be the change that you want to see in the world.\"- Mahatma Gandhi #softwareengineer #javascript #python #C++ #golang #nodâ¦"
-      },
-      {
-         "author_id" : "1243665419501744133",
-         "context_annotations" : [
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Computer programming",
-                  "id" : "848921413196984320",
-                  "name" : "Computer programming"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Web Development",
-                  "id" : "898673391980261376",
-                  "name" : "Web development"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Data Science",
-                  "id" : "930484568305541120",
-                  "name" : "Data science"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Business",
-                  "id" : "847529762566230016",
-                  "name" : "Business and finance"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                  "id" : "65",
-                  "name" : "Interests and Hobbies Vertical"
-               },
-               "entity" : {
-                  "description" : "Technology and computing",
-                  "id" : "848920371311001600",
-                  "name" : "Technology"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "Personal finance",
-                  "id" : "847888632711061504",
-                  "name" : "Personal finance"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                  "id" : "66",
-                  "name" : "Interests and Hobbies Category"
-               },
-               "entity" : {
-                  "description" : "JavaScript",
-                  "id" : "898659750950207489",
-                  "name" : "JavaScript"
-               }
-            },
-            {
-               "domain" : {
-                  "description" : "Interests, opinions, and behaviors of individuals, groups, or cultures; like Speciality Cooking or Theme Parks",
-                  "id" : "67",
-                  "name" : "Interests and Hobbies"
-               },
-               "entity" : {
-                  "description" : "Stocks",
-                  "id" : "847894852779900928",
-                  "name" : "Stocks & indices"
-               }
-            }
-         ],
-         "conversation_id" : "1374785963390599173",
-         "created_at" : "2021-03-24T18:11:30.000Z",
-         "entities" : {
-            "annotations" : [
-               {
-                  "end" : 65,
-                  "normalized_text" : "Mahatma Gandhi",
-                  "probability" : 0.9852,
-                  "start" : 52,
-                  "type" : "Person"
-               }
-            ],
-            "cashtags" : [
-               {
-                  "end" : 171,
-                  "start" : 167,
-                  "tag" : "SPX"
-               },
-               {
-                  "end" : 176,
-                  "start" : 172,
-                  "tag" : "QQQ"
-               },
-               {
-                  "end" : 181,
-                  "start" : 177,
-                  "tag" : "RUT"
-               },
-               {
-                  "end" : 186,
-                  "start" : 182,
-                  "tag" : "VIX"
-               }
-            ],
-            "hashtags" : [
-               {
-                  "end" : 84,
-                  "start" : 67,
-                  "tag" : "softwareengineer"
-               },
-               {
-                  "end" : 96,
-                  "start" : 85,
-                  "tag" : "javascript"
-               },
-               {
-                  "end" : 104,
-                  "start" : 97,
-                  "tag" : "python"
-               },
-               {
-                  "end" : 107,
-                  "start" : 105,
-                  "tag" : "C"
-               },
-               {
-                  "end" : 117,
-                  "start" : 110,
-                  "tag" : "golang"
-               },
-               {
-                  "end" : 125,
-                  "start" : 118,
-                  "tag" : "nodejs"
-               },
-               {
-                  "end" : 134,
-                  "start" : 126,
-                  "tag" : "reactjs"
-               },
-               {
-                  "end" : 148,
-                  "start" : 135,
-                  "tag" : "stockopertor"
-               },
-               {
-                  "end" : 166,
-                  "start" : 149,
-                  "tag" : "highgrowthstocks"
-               },
-               {
-                  "end" : 195,
-                  "start" : 187,
-                  "tag" : "canslim"
-               },
-               {
-                  "end" : 210,
-                  "start" : 196,
-                  "tag" : "100DaysOfCode"
-               }
-            ]
-         },
-         "id" : "1374785963390599173",
-         "lang" : "en",
-         "possibly_sensitive" : false,
-         "public_metrics" : {
-            "like_count" : 0,
-            "quote_count" : 0,
-            "reply_count" : 0,
-            "retweet_count" : 3
-         },
-         "reply_settings" : "everyone",
-         "source" : "Motivational App",
-         "text" : "\"Be the change that you want to see in the world.\"- Mahatma Gandhi #softwareengineer #javascript #python #C++ #golang #nodejs #reactjs #stockopertor #highgrowthstocks $SPX $QQQ $RUT $VIX #canslim #100DaysOfCode"
-      }
-   ],
-   "includes" : {
-      "media" : [
-         {
-            "height" : 930,
-            "media_key" : "3_1374783705336659969",
-            "type" : "photo",
-            "url" : "https://pbs.twimg.com/media/ExQ2fv-WQAE0GuQ.jpg",
-            "width" : 1498
-         },
-         {
-            "height" : 1042,
-            "media_key" : "3_1374783705349304325",
-            "type" : "photo",
-            "url" : "https://pbs.twimg.com/media/ExQ2fwBXMAU7zPv.png",
-            "width" : 1496
-         },
-         {
-            "height" : 1152,
-            "media_key" : "3_1374783705345097738",
-            "type" : "photo",
-            "url" : "https://pbs.twimg.com/media/ExQ2fwAXAAo-_Mo.jpg",
-            "width" : 1508
-         },
-         {
-            "height" : 1200,
-            "media_key" : "3_1374783705345097736",
-            "type" : "photo",
-            "url" : "https://pbs.twimg.com/media/ExQ2fwAXAAgglSg.jpg",
-            "width" : 1550
-         }
-      ],
-      "tweets" : [
-         {
-            "attachments" : {
-               "media_keys" : [
-                  "3_1374777879985328131",
-                  "3_1374777921315946503",
-                  "3_1374778039654100994",
-                  "3_1374778360992309248"
-               ]
-            },
-            "author_id" : "223194898",
-            "context_annotations" : [
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Computer programming",
-                     "id" : "848921413196984320",
-                     "name" : "Computer programming"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Artificial Intelligence",
-                     "id" : "898262889378619392",
-                     "name" : "Artificial intelligence"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Machine Learning",
-                     "id" : "898661583827615744",
-                     "name" : "Machine learning"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Web Development",
-                     "id" : "898673391980261376",
-                     "name" : "Web development"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Data Science",
-                     "id" : "930484568305541120",
-                     "name" : "Data science"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "id" : "1118167720866930689",
-                     "name" : "Big Data"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Named people in the world like Nelson Mandela",
-                     "id" : "10",
-                     "name" : "Person"
-                  },
-                  "entity" : {
-                     "description" : "Queen of the United Kingdom and the other Commonwealth realms",
-                     "id" : "842043844686356480",
-                     "name" : "Elizabeth II"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Politicians in the world, like Joe Biden",
-                     "id" : "35",
-                     "name" : "Politician"
-                  },
-                  "entity" : {
-                     "description" : "Queen of the United Kingdom and the other Commonwealth realms",
-                     "id" : "842043844686356480",
-                     "name" : "Elizabeth II"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Linux",
-                     "id" : "848959431836487680",
-                     "name" : "Linux"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Internet of Things",
-                     "id" : "898657691010191360",
-                     "name" : "Internet of things"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "JavaScript",
-                     "id" : "898659750950207489",
-                     "name" : "JavaScript"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Virtual Reality",
-                     "id" : "898670051594649601",
-                     "name" : "Virtual reality"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Video Game Hardware",
-                     "id" : "79",
-                     "name" : "Video Game Hardware"
-                  },
-                  "entity" : {
-                     "description" : "Virtual Reality",
-                     "id" : "898670051594649601",
-                     "name" : "Virtual reality"
-                  }
-               }
-            ],
-            "conversation_id" : "1374785352108507150",
-            "created_at" : "2021-03-24T18:09:04.000Z",
-            "entities" : {
-               "hashtags" : [
-                  {
-                     "end" : 10,
-                     "start" : 5,
-                     "tag" : "cool"
-                  },
-                  {
-                     "end" : 14,
-                     "start" : 11,
-                     "tag" : "AI"
-                  },
-                  {
-                     "end" : 84,
-                     "start" : 75,
-                     "tag" : "StyleGAN"
-                  },
-                  {
-                     "end" : 101,
-                     "start" : 85,
-                     "tag" : "MachineLearning"
-                  },
-                  {
-                     "end" : 115,
-                     "start" : 102,
-                     "tag" : "DeepLearning"
-                  },
-                  {
-                     "end" : 120,
-                     "start" : 116,
-                     "tag" : "NLP"
-                  },
-                  {
-                     "end" : 128,
-                     "start" : 121,
-                     "tag" : "Robots"
-                  },
-                  {
-                     "end" : 132,
-                     "start" : 129,
-                     "tag" : "AI"
-                  },
-                  {
-                     "end" : 137,
-                     "start" : 133,
-                     "tag" : "IoT"
-                  },
-                  {
-                     "end" : 146,
-                     "start" : 138,
-                     "tag" : "BigData"
-                  },
-                  {
-                     "end" : 158,
-                     "start" : 147,
-                     "tag" : "Algorithms"
-                  },
-                  {
-                     "end" : 162,
-                     "start" : 159,
-                     "tag" : "AI"
-                  },
-                  {
-                     "end" : 170,
-                     "start" : 163,
-                     "tag" : "Python"
-                  },
-                  {
-                     "end" : 182,
-                     "start" : 171,
-                     "tag" : "javascript"
-                  },
-                  {
-                     "end" : 188,
-                     "start" : 183,
-                     "tag" : "java"
-                  },
-                  {
-                     "end" : 194,
-                     "start" : 189,
-                     "tag" : "json"
-                  },
-                  {
-                     "end" : 201,
-                     "start" : 195,
-                     "tag" : "Linux"
-                  },
-                  {
-                     "end" : 205,
-                     "start" : 202,
-                     "tag" : "VR"
-                  },
-                  {
-                     "end" : 216,
-                     "start" : 206,
-                     "tag" : "developer"
-                  },
-                  {
-                     "end" : 220,
-                     "start" : 217,
-                     "tag" : "AI"
-                  },
-                  {
-                     "end" : 232,
-                     "start" : 221,
-                     "tag" : "TensorFlow"
-                  },
-                  {
-                     "end" : 249,
-                     "start" : 233,
-                     "tag" : "marieantoinette"
-                  },
-                  {
-                     "end" : 265,
-                     "start" : 250,
-                     "tag" : "QueenElizabeth"
-                  },
-                  {
-                     "end" : 275,
-                     "start" : 266,
-                     "tag" : "snackbox"
-                  }
-               ],
-               "mentions" : [
-                  {
-                     "end" : 35,
-                     "start" : 22,
-                     "username" : "CitizenPlain"
-                  },
-                  {
-                     "end" : 74,
-                     "start" : 62,
-                     "username" : "mymodernmet"
-                  }
-               ],
-               "urls" : [
-                  {
-                     "description" : "This artist uses AI technology to reimagine what some of the worldâs most notable figures would look like in real life.",
-                     "display_url" : "mymodernmet.com/nathan-shipleyâ¦",
-                     "end" : 60,
-                     "expanded_url" : "https://mymodernmet.com/nathan-shipley-historical-ai-portraits/",
-                     "images" : [
-                        {
-                           "height" : 630,
-                           "url" : "https://pbs.twimg.com/news_img/1374028170186403840/Ao8-rg4P?format=jpg&name=orig",
-                           "width" : 1200
-                        },
-                        {
-                           "height" : 150,
-                           "url" : "https://pbs.twimg.com/news_img/1374028170186403840/Ao8-rg4P?format=jpg&name=150x150",
-                           "width" : 150
-                        }
-                     ],
-                     "start" : 37,
-                     "status" : 200,
-                     "title" : "Artist Uses AI To Recreate How Famous Figures Would Look IRL",
-                     "unwound_url" : "https://mymodernmet.com/nathan-shipley-historical-ai-portraits/",
-                     "url" : "https://t.co/lsekOUDkyh"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/Ttd5Mwj4hR",
-                     "end" : 299,
-                     "expanded_url" : "https://twitter.com/RichNiemiec/status/1374785352108507150/photo/1",
-                     "start" : 276,
-                     "url" : "https://t.co/Ttd5Mwj4hR"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/Ttd5Mwj4hR",
-                     "end" : 299,
-                     "expanded_url" : "https://twitter.com/RichNiemiec/status/1374785352108507150/photo/1",
-                     "start" : 276,
-                     "url" : "https://t.co/Ttd5Mwj4hR"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/Ttd5Mwj4hR",
-                     "end" : 299,
-                     "expanded_url" : "https://twitter.com/RichNiemiec/status/1374785352108507150/photo/1",
-                     "start" : 276,
-                     "url" : "https://t.co/Ttd5Mwj4hR"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/Ttd5Mwj4hR",
-                     "end" : 299,
-                     "expanded_url" : "https://twitter.com/RichNiemiec/status/1374785352108507150/photo/1",
-                     "start" : 276,
-                     "url" : "https://t.co/Ttd5Mwj4hR"
-                  }
-               ]
-            },
-            "id" : "1374785352108507150",
-            "lang" : "en",
-            "possibly_sensitive" : false,
-            "public_metrics" : {
-               "like_count" : 1,
-               "quote_count" : 0,
-               "reply_count" : 0,
-               "retweet_count" : 2
-            },
-            "reply_settings" : "everyone",
-            "source" : "Twitter Web App",
-            "text" : "More #cool #AI images @CitizenPlain:\nhttps://t.co/lsekOUDkyh\n\n@mymodernmet #StyleGAN #MachineLearning #DeepLearning #NLP #Robots #AI #IoT #BigData #Algorithms #AI #Python #javascript #java #json #Linux #VR #developer #AI #TensorFlow #marieantoinette #QueenElizabeth #snackbox https://t.co/Ttd5Mwj4hR"
-         },
-         {
-            "author_id" : "1243665419501744133",
-            "context_annotations" : [
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Computer programming",
-                     "id" : "848921413196984320",
-                     "name" : "Computer programming"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Web Development",
-                     "id" : "898673391980261376",
-                     "name" : "Web development"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Data Science",
-                     "id" : "930484568305541120",
-                     "name" : "Data science"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Business",
-                     "id" : "847529762566230016",
-                     "name" : "Business and finance"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Personal finance",
-                     "id" : "847888632711061504",
-                     "name" : "Personal finance"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "JavaScript",
-                     "id" : "898659750950207489",
-                     "name" : "JavaScript"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Interests, opinions, and behaviors of individuals, groups, or cultures; like Speciality Cooking or Theme Parks",
-                     "id" : "67",
-                     "name" : "Interests and Hobbies"
-                  },
-                  "entity" : {
-                     "description" : "Stocks",
-                     "id" : "847894852779900928",
-                     "name" : "Stocks & indices"
-                  }
-               }
-            ],
-            "conversation_id" : "1374785963390599173",
-            "created_at" : "2021-03-24T18:11:30.000Z",
-            "entities" : {
-               "annotations" : [
-                  {
-                     "end" : 65,
-                     "normalized_text" : "Mahatma Gandhi",
-                     "probability" : 0.9852,
-                     "start" : 52,
-                     "type" : "Person"
-                  }
-               ],
-               "cashtags" : [
-                  {
-                     "end" : 171,
-                     "start" : 167,
-                     "tag" : "SPX"
-                  },
-                  {
-                     "end" : 176,
-                     "start" : 172,
-                     "tag" : "QQQ"
-                  },
-                  {
-                     "end" : 181,
-                     "start" : 177,
-                     "tag" : "RUT"
-                  },
-                  {
-                     "end" : 186,
-                     "start" : 182,
-                     "tag" : "VIX"
-                  }
-               ],
-               "hashtags" : [
-                  {
-                     "end" : 84,
-                     "start" : 67,
-                     "tag" : "softwareengineer"
-                  },
-                  {
-                     "end" : 96,
-                     "start" : 85,
-                     "tag" : "javascript"
-                  },
-                  {
-                     "end" : 104,
-                     "start" : 97,
-                     "tag" : "python"
-                  },
-                  {
-                     "end" : 107,
-                     "start" : 105,
-                     "tag" : "C"
-                  },
-                  {
-                     "end" : 117,
-                     "start" : 110,
-                     "tag" : "golang"
-                  },
-                  {
-                     "end" : 125,
-                     "start" : 118,
-                     "tag" : "nodejs"
-                  },
-                  {
-                     "end" : 134,
-                     "start" : 126,
-                     "tag" : "reactjs"
-                  },
-                  {
-                     "end" : 148,
-                     "start" : 135,
-                     "tag" : "stockopertor"
-                  },
-                  {
-                     "end" : 166,
-                     "start" : 149,
-                     "tag" : "highgrowthstocks"
-                  },
-                  {
-                     "end" : 195,
-                     "start" : 187,
-                     "tag" : "canslim"
-                  },
-                  {
-                     "end" : 210,
-                     "start" : 196,
-                     "tag" : "100DaysOfCode"
-                  }
-               ]
-            },
-            "id" : "1374785963390599173",
-            "lang" : "en",
-            "possibly_sensitive" : false,
-            "public_metrics" : {
-               "like_count" : 0,
-               "quote_count" : 0,
-               "reply_count" : 0,
-               "retweet_count" : 3
-            },
-            "reply_settings" : "everyone",
-            "source" : "Motivational App",
-            "text" : "\"Be the change that you want to see in the world.\"- Mahatma Gandhi #softwareengineer #javascript #python #C++ #golang #nodejs #reactjs #stockopertor #highgrowthstocks $SPX $QQQ $RUT $VIX #canslim #100DaysOfCode"
-         },
-         {
-            "attachments" : {
-               "media_keys" : [
-                  "3_1373922847626719237"
-               ]
-            },
-            "author_id" : "1123605506612875264",
-            "context_annotations" : [
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Computer programming",
-                     "id" : "848921413196984320",
-                     "name" : "Computer programming"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Artificial Intelligence",
-                     "id" : "898262889378619392",
-                     "name" : "Artificial intelligence"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Machine Learning",
-                     "id" : "898661583827615744",
-                     "name" : "Machine learning"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Data Science",
-                     "id" : "930484568305541120",
-                     "name" : "Data science"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Business",
-                     "id" : "847529762566230016",
-                     "name" : "Business and finance"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Education through the lens of those passionate about resources and news. This topic excludes Education policy and reform.",
-                     "id" : "847546154439000064",
-                     "name" : "Education"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Online education",
-                     "id" : "852291840472629248",
-                     "name" : "Online education"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Technology",
-                     "id" : "857879456773357569",
-                     "name" : "Technology"
-                  }
-               }
-            ],
-            "conversation_id" : "1373922856401211395",
-            "created_at" : "2021-03-22T09:01:49.000Z",
-            "entities" : {
-               "annotations" : [
-                  {
-                     "end" : 61,
-                     "normalized_text" : "S. Vreeland",
-                     "probability" : 0.6188,
-                     "start" : 51,
-                     "type" : "Person"
-                  }
-               ],
-               "hashtags" : [
-                  {
-                     "end" : 46,
-                     "start" : 37,
-                     "tag" : "learning"
-                  },
-                  {
-                     "end" : 132,
-                     "start" : 116,
-                     "tag" : "MachineLearning"
-                  },
-                  {
-                     "end" : 145,
-                     "start" : 133,
-                     "tag" : "DataScience"
-                  },
-                  {
-                     "end" : 153,
-                     "start" : 146,
-                     "tag" : "Python"
-                  },
-                  {
-                     "end" : 157,
-                     "start" : 154,
-                     "tag" : "AI"
-                  },
-                  {
-                     "end" : 172,
-                     "start" : 158,
-                     "tag" : "100DaysOfCode"
-                  },
-                  {
-                     "end" : 184,
-                     "start" : 173,
-                     "tag" : "LifeGoesOn"
-                  },
-                  {
-                     "end" : 190,
-                     "start" : 185,
-                     "tag" : "tech"
-                  },
-                  {
-                     "end" : 214,
-                     "start" : 191,
-                     "tag" : "ArtificialIntelligence"
-                  },
-                  {
-                     "end" : 227,
-                     "start" : 215,
-                     "tag" : "programming"
-                  },
-                  {
-                     "end" : 240,
-                     "start" : 228,
-                     "tag" : "Engineering"
-                  },
-                  {
-                     "end" : 252,
-                     "start" : 241,
-                     "tag" : "technology"
-                  }
-               ],
-               "mentions" : [
-                  {
-                     "end" : 104,
-                     "start" : 92,
-                     "username" : "aster_cloud"
-                  },
-                  {
-                     "end" : 115,
-                     "start" : 105,
-                     "username" : "gcpdotcom"
-                  }
-               ],
-               "urls" : [
-                  {
-                     "description" : "The significance ofÂ artificial intelligenceÂ and machine learningÂ (AIML) has increased by much in technology in recent years. It has gone to a point where they are helping businesses gain an advantage over their competitors. With the ever-increasing volumes of data generated each day, it becomes essential to process it in real-time. This is whereÂ AIMLÂ comes into the picture ...",
-                     "display_url" : "liwaiwai.com/2021/02/04/unlâ¦",
-                     "end" : 90,
-                     "expanded_url" : "https://liwaiwai.com/2021/02/04/unlock-your-career-in-artificial-intelligence-and-machine-learning/",
-                     "images" : [
-                        {
-                           "height" : 872,
-                           "url" : "https://pbs.twimg.com/news_img/1373922870569492481/yiPhiAPx?format=jpg&name=orig",
-                           "width" : 1600
-                        },
-                        {
-                           "height" : 150,
-                           "url" : "https://pbs.twimg.com/news_img/1373922870569492481/yiPhiAPx?format=jpg&name=150x150",
-                           "width" : 150
-                        }
-                     ],
-                     "start" : 67,
-                     "status" : 200,
-                     "title" : "Unlock Your Career In Artificial Intelligence And Machine Learning - Liwaiwai",
-                     "unwound_url" : "https://liwaiwai.com/2021/02/04/unlock-your-career-in-artificial-intelligence-and-machine-learning/",
-                     "url" : "https://t.co/CwaYAJ0nNL"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/KvB00CVWYn",
-                     "end" : 276,
-                     "expanded_url" : "https://twitter.com/liwaiwaicom/status/1373922856401211395/photo/1",
-                     "start" : 253,
-                     "url" : "https://t.co/KvB00CVWYn"
-                  }
-               ]
-            },
-            "id" : "1373922856401211395",
-            "lang" : "en",
-            "possibly_sensitive" : false,
-            "public_metrics" : {
-               "like_count" : 13,
-               "quote_count" : 0,
-               "reply_count" : 0,
-               "retweet_count" : 47
-            },
-            "reply_settings" : "everyone",
-            "source" : "Twitter Web App",
-            "text" : "What The World Calls Failure, I Call #learning. \n- S. Vreeland 🤖👇\n\nhttps://t.co/CwaYAJ0nNL\n\n@aster_cloud @gcpdotcom #MachineLearning #DataScience #Python #AI #100DaysOfCode #LifeGoesOn #tech #ArtificialIntelligence #programming #Engineering #technology https://t.co/KvB00CVWYn"
-         },
-         {
-            "attachments" : {
-               "media_keys" : [
-                  "3_1374783705336659969",
-                  "3_1374783705349304325",
-                  "3_1374783705345097738",
-                  "3_1374783705345097736"
-               ]
-            },
-            "author_id" : "554048989",
-            "context_annotations" : [
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Computer programming",
-                     "id" : "848921413196984320",
-                     "name" : "Computer programming"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Data Science",
-                     "id" : "930484568305541120",
-                     "name" : "Data science"
-                  }
-               }
-            ],
-            "conversation_id" : "1374783743341297665",
-            "created_at" : "2021-03-24T18:02:41.000Z",
-            "entities" : {
-               "hashtags" : [
-                  {
-                     "end" : 87,
-                     "start" : 75,
-                     "tag" : "datascience"
-                  },
-                  {
-                     "end" : 95,
-                     "start" : 88,
-                     "tag" : "Python"
-                  }
-               ],
-               "urls" : [
-                  {
-                     "description" : "This tutorial will show you how to use the Numpy log function. It explains the syntax of np.log and provides clear, step-by-step examples.",
-                     "display_url" : "sharpsightlabs.com/blog/numpy-logâ¦",
-                     "end" : 73,
-                     "expanded_url" : "https://www.sharpsightlabs.com/blog/numpy-log/?utm_source=twitter&utm_medium=social",
-                     "images" : [
-                        {
-                           "height" : 664,
-                           "url" : "https://pbs.twimg.com/news_img/1374783746650599432/62RKjzD7?format=png&name=orig",
-                           "width" : 1028
-                        },
-                        {
-                           "height" : 150,
-                           "url" : "https://pbs.twimg.com/news_img/1374783746650599432/62RKjzD7?format=png&name=150x150",
-                           "width" : 150
-                        }
-                     ],
-                     "start" : 50,
-                     "status" : 200,
-                     "title" : "Numpy Log Explained",
-                     "unwound_url" : "https://www.sharpsightlabs.com/blog/numpy-log/?utm_source=twitter&utm_medium=social",
-                     "url" : "https://t.co/BMMixm5zZV"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                     "end" : 119,
-                     "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                     "start" : 96,
-                     "url" : "https://t.co/R0HfeSH1KR"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                     "end" : 119,
-                     "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                     "start" : 96,
-                     "url" : "https://t.co/R0HfeSH1KR"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                     "end" : 119,
-                     "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                     "start" : 96,
-                     "url" : "https://t.co/R0HfeSH1KR"
-                  },
-                  {
-                     "display_url" : "pic.twitter.com/R0HfeSH1KR",
-                     "end" : 119,
-                     "expanded_url" : "https://twitter.com/Josh_Ebner/status/1374783743341297665/photo/1",
-                     "start" : 96,
-                     "url" : "https://t.co/R0HfeSH1KR"
-                  }
-               ]
-            },
-            "id" : "1374783743341297665",
-            "lang" : "en",
-            "possibly_sensitive" : false,
-            "public_metrics" : {
-               "like_count" : 1,
-               "quote_count" : 0,
-               "reply_count" : 0,
-               "retweet_count" : 2
-            },
-            "reply_settings" : "everyone",
-            "source" : "Twitter Web App",
-            "text" : "How to Compute Logarithms in Python using Numpy \n\nhttps://t.co/BMMixm5zZV\n\n#datascience #Python https://t.co/R0HfeSH1KR"
-         },
-         {
-            "author_id" : "1328156927193468929",
-            "context_annotations" : [
-               {
-                  "domain" : {
-                     "description" : "Top level entities that describe a Brands industry",
-                     "id" : "45",
-                     "name" : "Brand Vertical"
-                  },
-                  "entity" : {
-                     "id" : "781974596157251587",
-                     "name" : "Government/Education"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Categories within Brand Verticals that narrow down the scope of Brands",
-                     "id" : "46",
-                     "name" : "Brand Category"
-                  },
-                  "entity" : {
-                     "id" : "781974597226729473",
-                     "name" : "Non-profit"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Brands and Companies",
-                     "id" : "47",
-                     "name" : "Brand"
-                  },
-                  "entity" : {
-                     "id" : "10043701943",
-                     "name" : "Women in tech"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Computer programming",
-                     "id" : "848921413196984320",
-                     "name" : "Computer programming"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Data Science",
-                     "id" : "930484568305541120",
-                     "name" : "Data science"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "id" : "1237095288671596545",
-                     "name" : "Mathematics"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level entities that describe a Brands industry",
-                     "id" : "45",
-                     "name" : "Brand Vertical"
-                  },
-                  "entity" : {
-                     "id" : "781974596157251587",
-                     "name" : "Government/Education"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Categories within Brand Verticals that narrow down the scope of Brands",
-                     "id" : "46",
-                     "name" : "Brand Category"
-                  },
-                  "entity" : {
-                     "id" : "781974596165570560",
-                     "name" : "Education Related"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Brands and Companies",
-                     "id" : "47",
-                     "name" : "Brand"
-                  },
-                  "entity" : {
-                     "id" : "10043701955",
-                     "name" : "Women Who Code"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Education through the lens of those passionate about resources and news. This topic excludes Education policy and reform.",
-                     "id" : "847546154439000064",
-                     "name" : "Education"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Online education",
-                     "id" : "852291840472629248",
-                     "name" : "Online education"
-                  }
-               }
-            ],
-            "conversation_id" : "1374785916145958918",
-            "created_at" : "2021-03-24T18:11:19.000Z",
-            "entities" : {
-               "hashtags" : [
-                  {
-                     "end" : 32,
-                     "start" : 25,
-                     "tag" : "python"
-                  },
-                  {
-                     "end" : 43,
-                     "start" : 33,
-                     "tag" : "chemistry"
-                  },
-                  {
-                     "end" : 58,
-                     "start" : 45,
-                     "tag" : "WomenWhoCode"
-                  },
-                  {
-                     "end" : 71,
-                     "start" : 60,
-                     "tag" : "Assignment"
-                  },
-                  {
-                     "end" : 84,
-                     "start" : 72,
-                     "tag" : "Onlineclass"
-                  },
-                  {
-                     "end" : 94,
-                     "start" : 85,
-                     "tag" : "Essaypay"
-                  },
-                  {
-                     "end" : 109,
-                     "start" : 95,
-                     "tag" : "100DaysOfCode"
-                  },
-                  {
-                     "end" : 123,
-                     "start" : 110,
-                     "tag" : "Econometrics"
-                  },
-                  {
-                     "end" : 129,
-                     "start" : 124,
-                     "tag" : "Math"
-                  },
-                  {
-                     "end" : 142,
-                     "start" : 133,
-                     "tag" : "Essaydue"
-                  }
-               ]
-            },
-            "id" : "1374785916145958918",
-            "lang" : "en",
-            "possibly_sensitive" : false,
-            "public_metrics" : {
-               "like_count" : 0,
-               "quote_count" : 0,
-               "reply_count" : 0,
-               "retweet_count" : 2
-            },
-            "reply_settings" : "everyone",
-            "source" : "Twitter Web App",
-            "text" : "Hire us for quality work\n#python\n#chemistry \n#WomenWhoCode \n#Assignment\n#Onlineclass\n#Essaypay\n#100DaysOfCode\n#Econometrics\n#Math hw\n#Essaydue"
-         },
-         {
-            "author_id" : "1540951016",
-            "context_annotations" : [
-               {
-                  "domain" : {
-                     "description" : "Top level interests and hobbies groupings, like Food or Travel",
-                     "id" : "65",
-                     "name" : "Interests and Hobbies Vertical"
-                  },
-                  "entity" : {
-                     "description" : "Technology and computing",
-                     "id" : "848920371311001600",
-                     "name" : "Technology"
-                  }
-               },
-               {
-                  "domain" : {
-                     "description" : "A grouping of interests and hobbies entities, like Novelty Food or Destinations",
-                     "id" : "66",
-                     "name" : "Interests and Hobbies Category"
-                  },
-                  "entity" : {
-                     "description" : "Cybersecurity",
-                     "id" : "898650876658634752",
-                     "name" : "Cybersecurity"
-                  }
-               }
-            ],
-            "conversation_id" : "1374635740307484674",
-            "created_at" : "2021-03-24T08:14:34.000Z",
-            "id" : "1374635740307484674",
-            "lang" : "en",
-            "possibly_sensitive" : false,
-            "public_metrics" : {
-               "like_count" : 1595,
-               "quote_count" : 34,
-               "reply_count" : 46,
-               "retweet_count" : 350
-            },
-            "reply_settings" : "everyone",
-            "source" : "Twitter for iPhone",
-            "text" : "Black Kingdom ransomware is by far the worst Iâve ever seen. It doesnât exclude exe, dll, or sys files so in cases bricks the system. It doesnât track if itâs been run previously, so every victim Iâve seen has been recursively encrypted at least 4 times. And itâs coded in python."
-         }
-      ],
-      "users" : [
-         {
-            "created_at" : "2016-02-09T00:03:45.000Z",
-            "description" : "𝘔𝘢𝘬𝘦𝘴 𝘕𝘦𝘵𝘸𝘰𝘳𝘬𝘪𝘯𝘨 𝘉𝘰𝘳𝘪𝘯𝘨 â The company behind Traefik Proxy, Mesh, Pilot and Enterprise.",
-            "entities" : {
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "traefik.io",
-                        "end" : 23,
-                        "expanded_url" : "http://traefik.io",
-                        "start" : 0,
-                        "url" : "https://t.co/0LB4oaDWEv"
-                     }
-                  ]
-               }
-            },
-            "id" : "4890312130",
-            "name" : "Traefik Labs",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1308682916332003329/arXvfo5u_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 8576,
-               "following_count" : 29,
-               "listed_count" : 183,
-               "tweet_count" : 5214
-            },
-            "url" : "https://t.co/0LB4oaDWEv",
-            "username" : "traefik",
-            "verified" : false
-         },
-         {
-            "created_at" : "2020-07-30T08:33:21.000Z",
-            "description" : "Interested in using #Python for #DataScience. A bot maintained by \n@AlexBetts. Retweets are not endorsements. For #rstats, check out my other bot @rstats4ds.",
-            "entities" : {
-               "description" : {
-                  "hashtags" : [
-                     {
-                        "end" : 27,
-                        "start" : 20,
-                        "tag" : "Python"
-                     },
-                     {
-                        "end" : 44,
-                        "start" : 32,
-                        "tag" : "DataScience"
-                     },
-                     {
-                        "end" : 121,
-                        "start" : 114,
-                        "tag" : "rstats"
-                     }
-                  ],
-                  "mentions" : [
-                     {
-                        "end" : 77,
-                        "start" : 67,
-                        "username" : "AlexBetts"
-                     },
-                     {
-                        "end" : 156,
-                        "start" : 146,
-                        "username" : "rstats4ds"
-                     }
-                  ]
-               }
-            },
-            "id" : "1288754505211883521",
-            "name" : "Python for Data Science",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1288765343339614208/JNqvhKEe_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 2491,
-               "following_count" : 2,
-               "listed_count" : 32,
-               "tweet_count" : 61416
-            },
-            "url" : "",
-            "username" : "py_data_sci",
-            "verified" : false
-         },
-         {
-            "created_at" : "2010-12-05T17:41:53.000Z",
-            "description" : "#author #database #innovation #machinelearning #robotics #AI #ml #deeplearning #nosql #cloud #iot #bigdata #tech #oracle #aws @ioug @oatug1 @odtug @viscosityna",
-            "entities" : {
-               "description" : {
-                  "hashtags" : [
-                     {
-                        "end" : 7,
-                        "start" : 0,
-                        "tag" : "author"
-                     },
-                     {
-                        "end" : 17,
-                        "start" : 8,
-                        "tag" : "database"
-                     },
-                     {
-                        "end" : 29,
-                        "start" : 18,
-                        "tag" : "innovation"
-                     },
-                     {
-                        "end" : 46,
-                        "start" : 30,
-                        "tag" : "machinelearning"
-                     },
-                     {
-                        "end" : 56,
-                        "start" : 47,
-                        "tag" : "robotics"
-                     },
-                     {
-                        "end" : 60,
-                        "start" : 57,
-                        "tag" : "AI"
-                     },
-                     {
-                        "end" : 64,
-                        "start" : 61,
-                        "tag" : "ml"
-                     },
-                     {
-                        "end" : 78,
-                        "start" : 65,
-                        "tag" : "deeplearning"
-                     },
-                     {
-                        "end" : 85,
-                        "start" : 79,
-                        "tag" : "nosql"
-                     },
-                     {
-                        "end" : 92,
-                        "start" : 86,
-                        "tag" : "cloud"
-                     },
-                     {
-                        "end" : 97,
-                        "start" : 93,
-                        "tag" : "iot"
-                     },
-                     {
-                        "end" : 106,
-                        "start" : 98,
-                        "tag" : "bigdata"
-                     },
-                     {
-                        "end" : 112,
-                        "start" : 107,
-                        "tag" : "tech"
-                     },
-                     {
-                        "end" : 120,
-                        "start" : 113,
-                        "tag" : "oracle"
-                     },
-                     {
-                        "end" : 125,
-                        "start" : 121,
-                        "tag" : "aws"
-                     }
-                  ],
-                  "mentions" : [
-                     {
-                        "end" : 131,
-                        "start" : 126,
-                        "username" : "ioug"
-                     },
-                     {
-                        "end" : 139,
-                        "start" : 132,
-                        "username" : "oatug1"
-                     },
-                     {
-                        "end" : 146,
-                        "start" : 140,
-                        "username" : "odtug"
-                     },
-                     {
-                        "end" : 159,
-                        "start" : 147,
-                        "username" : "viscosityna"
-                     }
-                  ]
-               }
-            },
-            "id" : "223194898",
-            "location" : "Chicago, IL",
-            "name" : "Rich Niemiec",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1305913566768304130/mD6OJHM3_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 1019,
-               "following_count" : 3,
-               "listed_count" : 49,
-               "tweet_count" : 773
-            },
-            "url" : "",
-            "username" : "RichNiemiec",
-            "verified" : false
-         },
-         {
-            "created_at" : "2008-11-03T08:37:50.000Z",
-            "description" : "Currently exploring AI generative art.  Director of Creative Technology @GSP.  VFX, technical director, creative technologist, motion graphics artist.",
-            "entities" : {
-               "description" : {
-                  "mentions" : [
-                     {
-                        "end" : 76,
-                        "start" : 72,
-                        "username" : "GSP"
-                     }
-                  ]
-               },
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "nathanshipley.com",
-                        "end" : 22,
-                        "expanded_url" : "http://www.nathanshipley.com/",
-                        "start" : 0,
-                        "url" : "http://t.co/MOD5pv9Mi0"
-                     }
-                  ]
-               }
-            },
-            "id" : "17127883",
-            "location" : "San Francisco, CA",
-            "name" : "Nathan Shipley",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/691797707602657282/48kWIhwq_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 3956,
-               "following_count" : 411,
-               "listed_count" : 48,
-               "tweet_count" : 373
-            },
-            "url" : "http://t.co/MOD5pv9Mi0",
-            "username" : "CitizenPlain",
-            "verified" : false
-         },
-         {
-            "created_at" : "2008-10-08T20:42:16.000Z",
-            "description" : "My Modern Met is the big city that celebrates creative ideas.",
-            "entities" : {
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "mymodernmet.com",
-                        "end" : 22,
-                        "expanded_url" : "http://www.mymodernmet.com",
-                        "start" : 0,
-                        "url" : "http://t.co/xkTb7vpVE3"
-                     }
-                  ]
-               }
-            },
-            "id" : "16655930",
-            "name" : "My Modern Met",
-            "pinned_tweet_id" : "1171309750396628993",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/885061776420859904/gFNVH_u4_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 293894,
-               "following_count" : 169,
-               "listed_count" : 3508,
-               "tweet_count" : 30034
-            },
-            "url" : "http://t.co/xkTb7vpVE3",
-            "username" : "mymodernmet",
-            "verified" : false
-         },
-         {
-            "created_at" : "2021-01-31T01:37:00.000Z",
-            "description" : "Follow me for useful #NodeJS, #Fastify, #NextJS, and #TypeScript tweets!\n\nBuilt By: \n@wolfejw86",
-            "entities" : {
-               "description" : {
-                  "hashtags" : [
-                     {
-                        "end" : 28,
-                        "start" : 21,
-                        "tag" : "NodeJS"
-                     },
-                     {
-                        "end" : 38,
-                        "start" : 30,
-                        "tag" : "Fastify"
-                     },
-                     {
-                        "end" : 47,
-                        "start" : 40,
-                        "tag" : "NextJS"
-                     },
-                     {
-                        "end" : 64,
-                        "start" : 53,
-                        "tag" : "TypeScript"
-                     }
-                  ],
-                  "mentions" : [
-                     {
-                        "end" : 95,
-                        "start" : 85,
-                        "username" : "wolfejw86"
-                     }
-                  ]
-               }
-            },
-            "id" : "1355691489561600001",
-            "name" : "powerupcoding",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1357143442992861184/jPzBhX2E_normal.png",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 497,
-               "following_count" : 143,
-               "listed_count" : 16,
-               "tweet_count" : 68180
-            },
-            "url" : "",
-            "username" : "powerupcoding1",
-            "verified" : false
-         },
-         {
-            "created_at" : "2020-03-27T22:25:34.000Z",
-            "description" : "Software Engineer | Hacker | Stock Option Swing Trader",
-            "id" : "1243665419501744133",
-            "location" : "Intra - Dimensional",
-            "name" : "${trader}",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1266019322704670727/fLMqePla_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 934,
-               "following_count" : 340,
-               "listed_count" : 14,
-               "tweet_count" : 90931
-            },
-            "url" : "",
-            "username" : "glitchbotio",
-            "verified" : false
-         },
-         {
-            "created_at" : "2020-06-09T06:09:46.000Z",
-            "description" : "DM for #essay pay #paper pay  #pay chem #pay stats #pay online class #essay due #math help #research paper #pay Bio/Chem/Econ \nEmail:Globalwriterspro@gmail.com",
-            "entities" : {
-               "description" : {
-                  "hashtags" : [
-                     {
-                        "end" : 13,
-                        "start" : 7,
-                        "tag" : "essay"
-                     },
-                     {
-                        "end" : 24,
-                        "start" : 18,
-                        "tag" : "paper"
-                     },
-                     {
-                        "end" : 34,
-                        "start" : 30,
-                        "tag" : "pay"
-                     },
-                     {
-                        "end" : 44,
-                        "start" : 40,
-                        "tag" : "pay"
-                     },
-                     {
-                        "end" : 55,
-                        "start" : 51,
-                        "tag" : "pay"
-                     },
-                     {
-                        "end" : 75,
-                        "start" : 69,
-                        "tag" : "essay"
-                     },
-                     {
-                        "end" : 85,
-                        "start" : 80,
-                        "tag" : "math"
-                     },
-                     {
-                        "end" : 100,
-                        "start" : 91,
-                        "tag" : "research"
-                     },
-                     {
-                        "end" : 111,
-                        "start" : 107,
-                        "tag" : "pay"
-                     }
-                  ]
-               }
-            },
-            "id" : "1270236553818845185",
-            "location" : "Etats-Unis",
-            "name" : "ONLINE ASSIGNMENTS WRITERS🇺🇸🎓",
-            "pinned_tweet_id" : "1270238672693145600",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1371849715193630722/x-FiUkcy_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 3694,
-               "following_count" : 4584,
-               "listed_count" : 4,
-               "tweet_count" : 15935
-            },
-            "url" : "",
-            "username" : "Online_Writers2",
-            "verified" : false
-         },
-         {
-            "created_at" : "2019-06-13T15:05:18.000Z",
-            "description" : "If debugging is the process of removing software bugs, then programming must be the process of putting them in. Follow I follow.",
-            "entities" : {
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "instagram.com/full_bugs",
-                        "end" : 23,
-                        "expanded_url" : "https://www.instagram.com/full_bugs",
-                        "start" : 0,
-                        "url" : "https://t.co/VTmznMlscM"
-                     }
-                  ]
-               }
-            },
-            "id" : "1139186989733990401",
-            "location" : "127.0.0.1",
-            "name" : "CodeFullOfBugs",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1139927754382729217/3Jz5pgyU_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 462,
-               "following_count" : 265,
-               "listed_count" : 7,
-               "tweet_count" : 202123
-            },
-            "url" : "https://t.co/VTmznMlscM",
-            "username" : "full_bugs",
-            "verified" : false
-         },
-         {
-            "created_at" : "2019-05-01T15:10:03.000Z",
-            "description" : "about = [\"artificial_intelligence\", \"machine_learning\", \"software\", \"technology\", \"programming\"]",
-            "entities" : {
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "liwaiwai.com",
-                        "end" : 23,
-                        "expanded_url" : "https://liwaiwai.com/",
-                        "start" : 0,
-                        "url" : "https://t.co/9yW68v3S8I"
-                     }
-                  ]
-               }
-            },
-            "id" : "1123605506612875264",
-            "name" : "liwaiwai",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1123618661485252608/jUDPhHbR_normal.png",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 224,
-               "following_count" : 185,
-               "listed_count" : 9,
-               "tweet_count" : 1737
-            },
-            "url" : "https://t.co/9yW68v3S8I",
-            "username" : "liwaiwaicom",
-            "verified" : false
-         },
-         {
-            "created_at" : "2019-05-01T15:00:50.000Z",
-            "description" : "about = [\"cloud_computing\", \"software\", \"programming\", \"technology\", \"devops\", \"dev_tutorials\", \"tech_news\"]",
-            "entities" : {
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "aster.cloud",
-                        "end" : 23,
-                        "expanded_url" : "https://aster.cloud/",
-                        "start" : 0,
-                        "url" : "https://t.co/xygYNAfA9v"
-                     }
-                  ]
-               }
-            },
-            "id" : "1123603187095621632",
-            "name" : "aster.cloud",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1123615703653728257/0maE5z0k_normal.png",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 223,
-               "following_count" : 281,
-               "listed_count" : 3,
-               "tweet_count" : 2149
-            },
-            "url" : "https://t.co/xygYNAfA9v",
-            "username" : "aster_cloud",
-            "verified" : false
-         },
-         {
-            "created_at" : "2020-12-10T09:21:30.000Z",
-            "description" : "Cloud Computing . Software . Technology",
-            "entities" : {
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "globalcloudplatforms.com",
-                        "end" : 23,
-                        "expanded_url" : "https://globalcloudplatforms.com/",
-                        "start" : 0,
-                        "url" : "https://t.co/GtBoNl14ra"
-                     }
-                  ]
-               }
-            },
-            "id" : "1336963747177381888",
-            "name" : "globalcloudplatforms",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1336964577750237184/UUujdSC8_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 16,
-               "following_count" : 14,
-               "listed_count" : 0,
-               "tweet_count" : 284
-            },
-            "url" : "https://t.co/GtBoNl14ra",
-            "username" : "gcpdotcom",
-            "verified" : false
-         },
-         {
-            "created_at" : "2020-08-13T17:29:45.000Z",
-            "description" : "PythonHub Supporting you with the sentiment everyone has about your favorite programming language",
-            "id" : "1293962931315585024",
-            "name" : "PythonProgrammingHub_Bot",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1293963978280968195/fWBluFPZ_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 304,
-               "following_count" : 0,
-               "listed_count" : 9,
-               "tweet_count" : 29026
-            },
-            "url" : "",
-            "username" : "PythonCodeHub",
-            "verified" : false
-         },
-         {
-            "created_at" : "2012-04-15T03:47:51.000Z",
-            "description" : "I show people how to master data science and machine learning, ultra-fast.\n\nFollow me to learn.\n\nEd: Cornell Physics\n\nEx Data Scientist at Apple",
-            "entities" : {
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "sharpsightlabs.com",
-                        "end" : 23,
-                        "expanded_url" : "http://sharpsightlabs.com",
-                        "start" : 0,
-                        "url" : "https://t.co/UMmqbHZkOp"
-                     }
-                  ]
-               }
-            },
-            "id" : "554048989",
-            "location" : "Austin, TX",
-            "name" : "Joshua Ebner",
-            "pinned_tweet_id" : "1369040352439631876",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/427277358517608448/HoV5E-fr_normal.jpeg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 1004,
-               "following_count" : 654,
-               "listed_count" : 61,
-               "tweet_count" : 7421
-            },
-            "url" : "https://t.co/UMmqbHZkOp",
-            "username" : "Josh_Ebner",
-            "verified" : false
-         },
-         {
-            "created_at" : "2020-11-15T11:25:09.000Z",
-            "description" : "I'm a bot that retweets the hashtag #WomenWhoCode, #WomenInSTEM, #WomenInTech and #GirlsWhoCode. Created by @excurbia. Follow to support!",
-            "entities" : {
-               "description" : {
-                  "hashtags" : [
-                     {
-                        "end" : 49,
-                        "start" : 36,
-                        "tag" : "WomenWhoCode"
-                     },
-                     {
-                        "end" : 63,
-                        "start" : 51,
-                        "tag" : "WomenInSTEM"
-                     },
-                     {
-                        "end" : 77,
-                        "start" : 65,
-                        "tag" : "WomenInTech"
-                     },
-                     {
-                        "end" : 95,
-                        "start" : 82,
-                        "tag" : "GirlsWhoCode"
-                     }
-                  ],
-                  "mentions" : [
-                     {
-                        "end" : 117,
-                        "start" : 108,
-                        "username" : "excurbia"
-                     }
-                  ]
-               }
-            },
-            "id" : "1327935633445199874",
-            "name" : "Female Coders Bot",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1327935744132796420/ioOhjo7P_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 1288,
-               "following_count" : 1,
-               "listed_count" : 23,
-               "tweet_count" : 144005
-            },
-            "url" : "",
-            "username" : "BotFemale",
-            "verified" : false
-         },
-         {
-            "created_at" : "2020-11-16T02:04:39.000Z",
-            "description" : "We do projects, proposals, online classes, essays, Term papers, Articles, and Quizzes. DM/ WhatsApp+1(213)214-0631",
-            "id" : "1328156927193468929",
-            "location" : "California",
-            "name" : "Lizz_Essay",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1328159398649360384/TWpFm41v_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 200,
-               "following_count" : 63,
-               "listed_count" : 1,
-               "tweet_count" : 191
-            },
-            "url" : "",
-            "username" : "LizzEssay",
-            "verified" : false
-         },
-         {
-            "created_at" : "2013-04-21T13:18:12.000Z",
-            "description" : "I work with code, digital devices, digital networks, & people. Tweets are mine. An RT, a reply or a follow is not an endorsement. I also play.",
-            "id" : "1369531284",
-            "name" : "Kingson Chinedu Odogwu",
-            "pinned_tweet_id" : "730361187964178432",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1326817975916228610/c8k3VqxG_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 645,
-               "following_count" : 942,
-               "listed_count" : 190,
-               "tweet_count" : 66365
-            },
-            "url" : "",
-            "username" : "kc_odogwu",
-            "verified" : false
-         },
-         {
-            "created_at" : "2013-06-23T13:10:56.000Z",
-            "description" : "AKA Marcus Hutchins. Tweets about Cybersecurity, Malware, Hacking, Programming, and Infosec.\nPatreon: https://t.co/1LPZoDhcHE, YT: https://t.co/QBEKLhWnCe",
-            "entities" : {
-               "description" : {
-                  "urls" : [
-                     {
-                        "display_url" : "patreon.com/MalwareTech",
-                        "end" : 125,
-                        "expanded_url" : "http://patreon.com/MalwareTech",
-                        "start" : 102,
-                        "url" : "https://t.co/1LPZoDhcHE"
-                     },
-                     {
-                        "display_url" : "youtube.com/MalwareTechBlog",
-                        "end" : 154,
-                        "expanded_url" : "http://youtube.com/MalwareTechBlog",
-                        "start" : 131,
-                        "url" : "https://t.co/QBEKLhWnCe"
-                     }
-                  ]
-               },
-               "url" : {
-                  "urls" : [
-                     {
-                        "display_url" : "malwaretech.com",
-                        "end" : 23,
-                        "expanded_url" : "http://www.malwaretech.com/",
-                        "start" : 0,
-                        "url" : "https://t.co/7zZT4cqZng"
-                     }
-                  ]
-               }
-            },
-            "id" : "1540951016",
-            "location" : "Los Angeles, CA",
-            "name" : "MalwareTech",
-            "pinned_tweet_id" : "1260162731954458627",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/1324063182483152896/Pdz08DC7_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 243378,
-               "following_count" : 470,
-               "listed_count" : 3101,
-               "tweet_count" : 34783
-            },
-            "url" : "https://t.co/7zZT4cqZng",
-            "username" : "MalwareTechBlog",
-            "verified" : true
-         },
-         {
-            "created_at" : "2016-12-24T07:07:14.000Z",
-            "description" : "React, Redux and React-Native Developer",
-            "id" : "812555214024740865",
-            "location" : "Everywhere",
-            "name" : "React Developer",
-            "pinned_tweet_id" : "818021364145733632",
-            "profile_image_url" : "https://pbs.twimg.com/profile_images/812556678344351744/SiRnLTqx_normal.jpg",
-            "protected" : false,
-            "public_metrics" : {
-               "followers_count" : 7538,
-               "following_count" : 91,
-               "listed_count" : 146,
-               "tweet_count" : 240637
-            },
-            "url" : "",
-            "username" : "_reactdev",
-            "verified" : false
-         }
-      ]
-   },
-   "meta" : {
-      "newest_id" : "1374786010656210949",
-      "next_token" : "b26v89c19zqg8o3fosqspavs7lwvit6r6agepytnxelx9",
-      "oldest_id" : "1374785963390599173",
-      "result_count" : 10
-   }
+	"data": [
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374722047423647745",
+						"name": "V Muraleedharan"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374747783970754562",
+						"name": "P Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"conversation_id": "1383055313276964865",
+			"public_metrics": {
+				"retweet_count": 257,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for Android",
+			"author_id": "1217864994852941825",
+			"entities": {
+				"mentions": [
+					{
+						"start": 3,
+						"end": 19,
+						"username": "PChidambaram_IN"
+					}
+				],
+				"annotations": [
+					{
+						"start": 38,
+						"end": 55,
+						"probability": 0.7337,
+						"type": "Person",
+						"normalized_text": "Mr V Muraleedharan"
+					},
+					{
+						"start": 91,
+						"end": 96,
+						"probability": 0.6921,
+						"type": "Place",
+						"normalized_text": "Kerala"
+					}
+				]
+			},
+			"created_at": "2021-04-16T13:50:57.000Z",
+			"id": "1383055313276964865",
+			"reply_settings": "everyone",
+			"text": "RT @PChidambaram_IN: Central minister Mr V Muraleedharan is reported to have described CM, Kerala as a \"Covidiot\". Shocking \n\nIs there no o…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383026700695441414"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374722047423647745",
+						"name": "V Muraleedharan"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374747783970754562",
+						"name": "P Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"conversation_id": "1383055194603323392",
+			"public_metrics": {
+				"retweet_count": 257,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for Android",
+			"author_id": "1144416857761308672",
+			"entities": {
+				"mentions": [
+					{
+						"start": 3,
+						"end": 19,
+						"username": "PChidambaram_IN"
+					}
+				],
+				"annotations": [
+					{
+						"start": 38,
+						"end": 55,
+						"probability": 0.7337,
+						"type": "Person",
+						"normalized_text": "Mr V Muraleedharan"
+					},
+					{
+						"start": 91,
+						"end": 96,
+						"probability": 0.6921,
+						"type": "Place",
+						"normalized_text": "Kerala"
+					}
+				]
+			},
+			"created_at": "2021-04-16T13:50:28.000Z",
+			"id": "1383055194603323392",
+			"reply_settings": "everyone",
+			"text": "RT @PChidambaram_IN: Central minister Mr V Muraleedharan is reported to have described CM, Kerala as a \"Covidiot\". Shocking \n\nIs there no o…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383026700695441414"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374722047423647745",
+						"name": "V Muraleedharan"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374747783970754562",
+						"name": "P Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"conversation_id": "1383055184734003208",
+			"public_metrics": {
+				"retweet_count": 257,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for Android",
+			"author_id": "186505571",
+			"entities": {
+				"mentions": [
+					{
+						"start": 3,
+						"end": 19,
+						"username": "PChidambaram_IN"
+					}
+				],
+				"annotations": [
+					{
+						"start": 38,
+						"end": 55,
+						"probability": 0.7337,
+						"type": "Person",
+						"normalized_text": "Mr V Muraleedharan"
+					},
+					{
+						"start": 91,
+						"end": 96,
+						"probability": 0.6921,
+						"type": "Place",
+						"normalized_text": "Kerala"
+					}
+				]
+			},
+			"created_at": "2021-04-16T13:50:26.000Z",
+			"id": "1383055184734003208",
+			"reply_settings": "everyone",
+			"text": "RT @PChidambaram_IN: Central minister Mr V Muraleedharan is reported to have described CM, Kerala as a \"Covidiot\". Shocking \n\nIs there no o…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383026700695441414"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374722047423647745",
+						"name": "V Muraleedharan"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374747783970754562",
+						"name": "P Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"conversation_id": "1383055055817908238",
+			"public_metrics": {
+				"retweet_count": 257,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for Android",
+			"author_id": "3187712887",
+			"entities": {
+				"mentions": [
+					{
+						"start": 3,
+						"end": 19,
+						"username": "PChidambaram_IN"
+					}
+				],
+				"annotations": [
+					{
+						"start": 38,
+						"end": 55,
+						"probability": 0.7337,
+						"type": "Person",
+						"normalized_text": "Mr V Muraleedharan"
+					},
+					{
+						"start": 91,
+						"end": 96,
+						"probability": 0.6921,
+						"type": "Place",
+						"normalized_text": "Kerala"
+					}
+				]
+			},
+			"created_at": "2021-04-16T13:49:55.000Z",
+			"id": "1383055055817908238",
+			"reply_settings": "everyone",
+			"text": "RT @PChidambaram_IN: Central minister Mr V Muraleedharan is reported to have described CM, Kerala as a \"Covidiot\". Shocking \n\nIs there no o…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383026700695441414"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374722047423647745",
+						"name": "V Muraleedharan"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374747783970754562",
+						"name": "P Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"conversation_id": "1383054954059816966",
+			"public_metrics": {
+				"retweet_count": 257,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for iPhone",
+			"author_id": "563442749",
+			"entities": {
+				"mentions": [
+					{
+						"start": 3,
+						"end": 19,
+						"username": "PChidambaram_IN"
+					}
+				],
+				"annotations": [
+					{
+						"start": 38,
+						"end": 55,
+						"probability": 0.7337,
+						"type": "Person",
+						"normalized_text": "Mr V Muraleedharan"
+					},
+					{
+						"start": 91,
+						"end": 96,
+						"probability": 0.6921,
+						"type": "Place",
+						"normalized_text": "Kerala"
+					}
+				]
+			},
+			"created_at": "2021-04-16T13:49:31.000Z",
+			"id": "1383054954059816966",
+			"reply_settings": "everyone",
+			"text": "RT @PChidambaram_IN: Central minister Mr V Muraleedharan is reported to have described CM, Kerala as a \"Covidiot\". Shocking \n\nIs there no o…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383026700695441414"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"entities": {
+				"hashtags": [
+					{
+						"start": 17,
+						"end": 27,
+						"tag": "WhereIsPM"
+					}
+				],
+				"mentions": [
+					{
+						"start": 3,
+						"end": 15,
+						"username": "Ad_Tel_2101"
+					}
+				]
+			},
+			"conversation_id": "1383054948208766985",
+			"public_metrics": {
+				"retweet_count": 4,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for iPhone",
+			"author_id": "162687171",
+			"created_at": "2021-04-16T13:49:30.000Z",
+			"id": "1383054948208766985",
+			"reply_settings": "everyone",
+			"text": "RT @Ad_Tel_2101: #WhereIsPM\n\nThousands of crore collected in the fraud called PM Cares.\n\nInstead of ramping up oxygen, Remdesivir &amp; vaccine…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383031438912548865"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"entities": {
+				"hashtags": [
+					{
+						"start": 67,
+						"end": 73,
+						"tag": "AYUSH"
+					},
+					{
+						"start": 89,
+						"end": 95,
+						"tag": "liver"
+					},
+					{
+						"start": 96,
+						"end": 112,
+						"tag": "transplantation"
+					},
+					{
+						"start": 116,
+						"end": 122,
+						"tag": "India"
+					},
+					{
+						"start": 130,
+						"end": 136,
+						"tag": "giloy"
+					}
+				],
+				"mentions": [
+					{
+						"start": 3,
+						"end": 17,
+						"username": "drabbyphilips"
+					}
+				]
+			},
+			"conversation_id": "1383054927191175168",
+			"public_metrics": {
+				"retweet_count": 9,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for Android",
+			"author_id": "1130881384615071744",
+			"created_at": "2021-04-16T13:49:25.000Z",
+			"id": "1383054927191175168",
+			"reply_settings": "everyone",
+			"text": "RT @drabbyphilips: The only thing that can come out of taking this #AYUSH pledge is more #liver #transplantation in #India due to #giloy an…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383018622486863883"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"entities": {
+				"urls": [
+					{
+						"start": 123,
+						"end": 146,
+						"url": "https://t.co/6nTcwFGTuL",
+						"expanded_url": "https://twitter.com/toknell/status/1383054846186639361/photo/1",
+						"display_url": "pic.twitter.com/6nTcwFGTuL"
+					}
+				],
+				"hashtags": [
+					{
+						"start": 113,
+						"end": 122,
+						"tag": "covidiot"
+					}
+				],
+				"mentions": [
+					{
+						"start": 0,
+						"end": 15,
+						"username": "johanwadenback"
+					},
+					{
+						"start": 16,
+						"end": 29,
+						"username": "Andromake000"
+					},
+					{
+						"start": 30,
+						"end": 40,
+						"username": "Expressen"
+					}
+				]
+			},
+			"conversation_id": "1383003504734781442",
+			"public_metrics": {
+				"retweet_count": 0,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for iPhone",
+			"author_id": "1241438544339632128",
+			"attachments": {
+				"media_keys": [
+					"3_1383054841124159488"
+				]
+			},
+			"created_at": "2021-04-16T13:49:05.000Z",
+			"id": "1383054846186639361",
+			"reply_settings": "everyone",
+			"in_reply_to_user_id": "1000827618546110464",
+			"text": "@johanwadenback @Andromake000 @Expressen Det är bara att läsa vad som själva CDC säger och sluta vilseleda jävla #covidiot https://t.co/6nTcwFGTuL",
+			"lang": "sv",
+			"referenced_tweets": [
+				{
+					"type": "replied_to",
+					"id": "1383054056906711040"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"conversation_id": "1383054775869116416",
+			"public_metrics": {
+				"retweet_count": 2,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter Web App",
+			"author_id": "180953075",
+			"entities": {
+				"mentions": [
+					{
+						"start": 3,
+						"end": 19,
+						"username": "LaureGonlezamar"
+					}
+				]
+			},
+			"created_at": "2021-04-16T13:48:49.000Z",
+			"id": "1383054775869116416",
+			"reply_settings": "everyone",
+			"text": "RT @LaureGonlezamar: Du un contre un.\n1 covidiot et 1 complotiste enfermés pendant 1h. Ils ont le choix des armes (graphiques, chiffres, vi…",
+			"lang": "fr",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383042690846179329"
+				}
+			]
+		},
+		{
+			"context_annotations": [
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374722047423647745",
+						"name": "V Muraleedharan"
+					}
+				},
+				{
+					"domain": {
+						"id": "10",
+						"name": "Person",
+						"description": "Named people in the world like Nelson Mandela"
+					},
+					"entity": {
+						"id": "1374747783970754562",
+						"name": "P Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1111676702428557312",
+						"name": "Pinarayi Vijayan",
+						"description": "Chief Minister of Kerala, India\n"
+					}
+				},
+				{
+					"domain": {
+						"id": "35",
+						"name": "Politician",
+						"description": "Politicians in the world, like Joe Biden"
+					},
+					"entity": {
+						"id": "1149627978864705542",
+						"name": "Palaniappan Chidambaram",
+						"description": "Palaniappan Chidambaram"
+					}
+				},
+				{
+					"domain": {
+						"id": "123",
+						"name": "Ongoing News Story",
+						"description": "Ongoing News Stories like 'Brexit'"
+					},
+					"entity": {
+						"id": "1220701888179359745",
+						"name": "COVID-19"
+					}
+				}
+			],
+			"conversation_id": "1383054697423015942",
+			"public_metrics": {
+				"retweet_count": 257,
+				"reply_count": 0,
+				"like_count": 0,
+				"quote_count": 0
+			},
+			"possibly_sensitive": false,
+			"source": "Twitter for Android",
+			"author_id": "1313897929430630400",
+			"entities": {
+				"mentions": [
+					{
+						"start": 3,
+						"end": 19,
+						"username": "PChidambaram_IN"
+					}
+				],
+				"annotations": [
+					{
+						"start": 38,
+						"end": 55,
+						"probability": 0.7337,
+						"type": "Person",
+						"normalized_text": "Mr V Muraleedharan"
+					},
+					{
+						"start": 91,
+						"end": 96,
+						"probability": 0.6921,
+						"type": "Place",
+						"normalized_text": "Kerala"
+					}
+				]
+			},
+			"created_at": "2021-04-16T13:48:30.000Z",
+			"id": "1383054697423015942",
+			"reply_settings": "everyone",
+			"text": "RT @PChidambaram_IN: Central minister Mr V Muraleedharan is reported to have described CM, Kerala as a \"Covidiot\". Shocking \n\nIs there no o…",
+			"lang": "en",
+			"referenced_tweets": [
+				{
+					"type": "retweeted",
+					"id": "1383026700695441414"
+				}
+			]
+		}
+	],
+	"includes": {
+		"users": [
+			{
+				"public_metrics": {
+					"followers_count": 469,
+					"following_count": 485,
+					"tweet_count": 38345,
+					"listed_count": 0
+				},
+				"name": "\uD83E\uDD18MEHBUB\uD83E\uDD18",
+				"description": "working HBI international",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1305416436119207936/uUKBPEee_normal.jpg",
+				"url": "",
+				"id": "1217864994852941825",
+				"created_at": "2020-01-16T17:44:09.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "Mehbub89927336"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 1598271,
+					"following_count": 9,
+					"tweet_count": 4950,
+					"listed_count": 741
+				},
+				"entities": {
+					"url": {
+						"urls": [
+							{
+								"start": 0,
+								"end": 23,
+								"url": "https://t.co/U20Trq6U2s",
+								"expanded_url": "http://pchidambaram.in/",
+								"display_url": "pchidambaram.in"
+							}
+						]
+					}
+				},
+				"name": "P. Chidambaram",
+				"description": "Official account of P. Chidambaram | Member of Parliament, RajyaSabha | Former Finance Minister, GoI | Here for short but serious comment on contemporary issues",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/603422412785328128/9Y6OuwJM_normal.jpg",
+				"url": "https://t.co/U20Trq6U2s",
+				"id": "3097503906",
+				"created_at": "2015-03-19T09:14:38.000Z",
+				"protected": false,
+				"verified": true,
+				"username": "PChidambaram_IN",
+				"pinned_tweet_id": "1381095201612042249"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 28,
+					"following_count": 74,
+					"tweet_count": 9637,
+					"listed_count": 0
+				},
+				"name": "Mpk",
+				"description": "",
+				"profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+				"url": "",
+				"id": "1144416857761308672",
+				"created_at": "2019-06-28T01:26:55.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "Mpk73818044",
+				"pinned_tweet_id": "1239206916137422849"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 716,
+					"following_count": 619,
+					"tweet_count": 11203,
+					"listed_count": 0
+				},
+				"name": "Anish Abraham",
+				"description": "I love to run....that's explains why I am always running out of money.....\uD83E\uDD14",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/866593758908960768/bRx0KxG__normal.jpg",
+				"url": "",
+				"location": "India",
+				"id": "186505571",
+				"created_at": "2010-09-03T16:59:48.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "anishabraham10",
+				"pinned_tweet_id": "1366949270461444097"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 1808,
+					"following_count": 2730,
+					"tweet_count": 471194,
+					"listed_count": 48
+				},
+				"name": "आंदोलनजीवी आचार्य रूद्र भारद्वाज\uD83D\uDE4F( AN INDIAN",
+				"description": "ईश्वर श्रेष्ठ है। सिर्फ उनके लिए ,जो कर्म करते है।",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1352929435578601474/_D9uRj--_normal.jpg",
+				"url": "",
+				"location": "New London, CT",
+				"id": "3187712887",
+				"created_at": "2015-05-07T12:46:13.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "rooster16111611"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 676,
+					"following_count": 452,
+					"tweet_count": 29637,
+					"listed_count": 8
+				},
+				"entities": {
+					"url": {
+						"urls": [
+							{
+								"start": 0,
+								"end": 23,
+								"url": "https://t.co/0xUcY2bRct",
+								"expanded_url": "http://Instagram.com/Imdanish56",
+								"display_url": "Instagram.com/Imdanish56"
+							}
+						]
+					},
+					"description": {
+						"mentions": [
+							{
+								"start": 9,
+								"end": 21,
+								"username": "IrfanPathan"
+							},
+							{
+								"start": 88,
+								"end": 103,
+								"username": "Allrounderirfy"
+							}
+						]
+					}
+				},
+				"name": "Mohd Danish",
+				"description": "A Fan of @IrfanPathan Bhai☺️ ,Jamia Millia Islamia\uD83D\uDDA4,Cricket Lover \uD83C\uDFCF ,Swimming\uD83C\uDFCA , Page➡️ @Allrounderirfy \uD83E\uDD13",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1331543470914162694/Q-44H5Qr_normal.jpg",
+				"url": "https://t.co/0xUcY2bRct",
+				"location": "New Delhi,India",
+				"id": "563442749",
+				"created_at": "2012-04-26T04:42:34.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "Imdanish56",
+				"pinned_tweet_id": "831185517421027328"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 699,
+					"following_count": 312,
+					"tweet_count": 221941,
+					"listed_count": 51
+				},
+				"name": "animesh tyagi",
+				"description": "Total Congressi. was State secretary in Haryana Congress. RT does not mean endorsement.",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1812859253/animesh_normal.jpg",
+				"url": "",
+				"location": "Yamunanagar, Haryana",
+				"id": "162687171",
+				"created_at": "2010-07-04T11:48:54.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "animeshynr"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 330,
+					"following_count": 317,
+					"tweet_count": 37624,
+					"listed_count": 0
+				},
+				"entities": {
+					"description": {
+						"hashtags": [
+							{
+								"start": 69,
+								"end": 78,
+								"tag": "teambaan"
+							}
+						]
+					}
+				},
+				"name": "Adheesh_2101 \uD83C\uDFF9",
+				"description": "Bramhin by birth only. Anti-casteism and secular liberal by choice.\n\n#teambaan \uD83C\uDFF9",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1382908645805940745/1O8Ip6VT_normal.jpg",
+				"url": "",
+				"location": "Pune, India",
+				"id": "1260163143214313473",
+				"created_at": "2020-05-12T11:01:30.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "Ad_Tel_2101",
+				"pinned_tweet_id": "1380920361789714432"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 4554,
+					"following_count": 372,
+					"tweet_count": 6082,
+					"listed_count": 42
+				},
+				"entities": {
+					"url": {
+						"urls": [
+							{
+								"start": 0,
+								"end": 23,
+								"url": "https://t.co/z6kCqDz3ZD",
+								"expanded_url": "http://www.instagram.com/abbyphilips",
+								"display_url": "instagram.com/abbyphilips"
+							}
+						]
+					},
+					"description": {
+						"hashtags": [
+							{
+								"start": 0,
+								"end": 6,
+								"tag": "Liver"
+							},
+							{
+								"start": 18,
+								"end": 28,
+								"tag": "Physician"
+							},
+							{
+								"start": 29,
+								"end": 39,
+								"tag": "Scientist"
+							},
+							{
+								"start": 88,
+								"end": 92,
+								"tag": "FMT"
+							},
+							{
+								"start": 93,
+								"end": 104,
+								"tag": "microbiota"
+							},
+							{
+								"start": 105,
+								"end": 114,
+								"tag": "Ayurveda"
+							},
+							{
+								"start": 115,
+								"end": 122,
+								"tag": "herbal"
+							},
+							{
+								"start": 144,
+								"end": 158,
+								"tag": "pseudoscience"
+							}
+						],
+						"mentions": [
+							{
+								"start": 61,
+								"end": 77,
+								"username": "Rajagiri_Hosptl"
+							}
+						]
+					}
+				},
+				"name": "(Cyriac) Abby Philips",
+				"description": "#Liver Specialist #Physician #Scientist \nThe Liver Institute @Rajagiri_Hosptl\nResearch: #FMT #microbiota #Ayurveda #herbal liver injury\nDebunks #pseudoscience",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1381209804543119365/A41IAe2Q_normal.jpg",
+				"url": "https://t.co/z6kCqDz3ZD",
+				"location": "Kochi, Gods Own Country, India",
+				"id": "1130881384615071744",
+				"created_at": "2019-05-21T17:01:47.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "drabbyphilips",
+				"pinned_tweet_id": "1338512692747796480"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 462,
+					"following_count": 213,
+					"tweet_count": 20948,
+					"listed_count": 8
+				},
+				"entities": {
+					"description": {
+						"hashtags": [
+							{
+								"start": 31,
+								"end": 37,
+								"tag": "MEWAS"
+							}
+						]
+					}
+				},
+				"name": "Toknell \uD83C\uDDF8\uD83C\uDDEA\uD83C\uDDF8\uD83C\uDDEA",
+				"description": "Not a troll nor a Russian bot. #MEWAS fanboy.  No pasaran’s worst nightmare.",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1244944672490950658/M6O6n-wN_normal.jpg",
+				"url": "",
+				"location": "Sweden",
+				"id": "1241438544339632128",
+				"created_at": "2020-03-21T18:57:18.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "toknell",
+				"pinned_tweet_id": "1382666588978089985"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 1423,
+					"following_count": 1207,
+					"tweet_count": 17847,
+					"listed_count": 4
+				},
+				"entities": {
+					"description": {
+						"urls": [
+							{
+								"start": 135,
+								"end": 158,
+								"url": "https://t.co/0LZACfB0hh",
+								"expanded_url": "http://t.me/johanwadenback",
+								"display_url": "t.me/johanwadenback"
+							}
+						],
+						"mentions": [
+							{
+								"start": 109,
+								"end": 124,
+								"username": "johanwadenback"
+							}
+						]
+					}
+				},
+				"name": "\uD835\uDCE3\uD835\uDCEE\uD835\uDCF4\uD835\uDCF7.\uD835\uDCED\uD835\uDCFB \uD835\uDCD9\uD835\uDCF8\uD835\uDCF1\uD835\uDCEA\uD835\uDCF7",
+				"description": "PhD (Engineering) in Biology & MSc in Chemical Engineering, musician, polyglot, Scanian & Scandinavian.\nGab: @johanwadenback\nTelegram: https://t.co/0LZACfB0hh",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1243531134148980737/0HDIm83p_normal.jpg",
+				"url": "",
+				"location": "Greater Copenhagen",
+				"id": "1000827618546110464",
+				"created_at": "2018-05-27T19:54:33.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "johanwadenback",
+				"pinned_tweet_id": "1196917278601814016"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 2517,
+					"following_count": 2389,
+					"tweet_count": 107385,
+					"listed_count": 31
+				},
+				"name": "Andromache",
+				"description": "Förbryllad. Kvinna.",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/697839109734330368/_9Q9gyyy_normal.jpg",
+				"url": "",
+				"id": "2893142548",
+				"created_at": "2014-11-26T08:54:08.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "Andromake000",
+				"pinned_tweet_id": "697849504020697088"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 203723,
+					"following_count": 23933,
+					"tweet_count": 119120,
+					"listed_count": 1252
+				},
+				"entities": {
+					"url": {
+						"urls": [
+							{
+								"start": 0,
+								"end": 23,
+								"url": "https://t.co/z0fuhbCL35",
+								"expanded_url": "http://expressen.se",
+								"display_url": "expressen.se"
+							}
+						]
+					},
+					"description": {
+						"mentions": [
+							{
+								"start": 59,
+								"end": 71,
+								"username": "ExpressenTV"
+							},
+							{
+								"start": 123,
+								"end": 133,
+								"username": "Expressen"
+							}
+						]
+					}
+				},
+				"name": "Expressen",
+				"description": "Officiellt konto från AB Kvällstidningen Expressen • Se på @ExpressenTV • Ansvarig utgivare är Klas Granström • Instagram: @Expressen",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1007223357828411393/ggNEEna5_normal.jpg",
+				"url": "https://t.co/z0fuhbCL35",
+				"location": "Stockholm",
+				"id": "2097191",
+				"created_at": "2007-03-24T10:34:57.000Z",
+				"protected": false,
+				"verified": true,
+				"username": "Expressen"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 81,
+					"following_count": 278,
+					"tweet_count": 11433,
+					"listed_count": 1
+				},
+				"name": "Amano Jackou",
+				"description": "You can do it",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/819591443757023233/o0G8j1Nl_normal.jpg",
+				"url": "",
+				"id": "180953075",
+				"created_at": "2010-08-20T22:46:41.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "Amanojackou"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 7363,
+					"following_count": 779,
+					"tweet_count": 16078,
+					"listed_count": 25
+				},
+				"entities": {
+					"url": {
+						"urls": [
+							{
+								"start": 0,
+								"end": 23,
+								"url": "https://t.co/CeqW55y4Xc",
+								"expanded_url": "https://threadreaderapp.com/user/Lauregonlezamar",
+								"display_url": "threadreaderapp.com/user/Lauregonl…"
+							}
+						]
+					}
+				},
+				"name": "Laure Gonlézamarres",
+				"description": "Il n'est point de bonheur sans liberté, ni de liberté sans courage. Périclès, 25 siècles avant nous. Comme quoi.",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1368563592845537280/7qMEXapY_normal.jpg",
+				"url": "https://t.co/CeqW55y4Xc",
+				"location": "France",
+				"id": "1285867636333707265",
+				"created_at": "2020-07-22T09:22:02.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "LaureGonlezamar",
+				"pinned_tweet_id": "1361604619202363394"
+			},
+			{
+				"public_metrics": {
+					"followers_count": 133,
+					"following_count": 1931,
+					"tweet_count": 5098,
+					"listed_count": 0
+				},
+				"name": "India\uD83C\uDDEE\uD83C\uDDF3#jobkibaat",
+				"description": "It's not wise to use social media too much..\nUse it for Revolution ✊✊",
+				"profile_image_url": "https://pbs.twimg.com/profile_images/1325507331400953856/JCgOkvPb_normal.jpg",
+				"url": "",
+				"location": "New Delhi",
+				"id": "1313897929430630400",
+				"created_at": "2020-10-07T17:44:26.000Z",
+				"protected": false,
+				"verified": false,
+				"username": "NoOne_012345"
+			}
+		],
+		"tweets": [
+			{
+				"context_annotations": [
+					{
+						"domain": {
+							"id": "10",
+							"name": "Person",
+							"description": "Named people in the world like Nelson Mandela"
+						},
+						"entity": {
+							"id": "1111676702428557312",
+							"name": "Pinarayi Vijayan",
+							"description": "Chief Minister of Kerala, India\n"
+						}
+					},
+					{
+						"domain": {
+							"id": "10",
+							"name": "Person",
+							"description": "Named people in the world like Nelson Mandela"
+						},
+						"entity": {
+							"id": "1149627978864705542",
+							"name": "Palaniappan Chidambaram",
+							"description": "Palaniappan Chidambaram"
+						}
+					},
+					{
+						"domain": {
+							"id": "10",
+							"name": "Person",
+							"description": "Named people in the world like Nelson Mandela"
+						},
+						"entity": {
+							"id": "1374722047423647745",
+							"name": "V Muraleedharan"
+						}
+					},
+					{
+						"domain": {
+							"id": "10",
+							"name": "Person",
+							"description": "Named people in the world like Nelson Mandela"
+						},
+						"entity": {
+							"id": "1374747783970754562",
+							"name": "P Chidambaram"
+						}
+					},
+					{
+						"domain": {
+							"id": "35",
+							"name": "Politician",
+							"description": "Politicians in the world, like Joe Biden"
+						},
+						"entity": {
+							"id": "1111676702428557312",
+							"name": "Pinarayi Vijayan",
+							"description": "Chief Minister of Kerala, India\n"
+						}
+					},
+					{
+						"domain": {
+							"id": "35",
+							"name": "Politician",
+							"description": "Politicians in the world, like Joe Biden"
+						},
+						"entity": {
+							"id": "1149627978864705542",
+							"name": "Palaniappan Chidambaram",
+							"description": "Palaniappan Chidambaram"
+						}
+					},
+					{
+						"domain": {
+							"id": "123",
+							"name": "Ongoing News Story",
+							"description": "Ongoing News Stories like 'Brexit'"
+						},
+						"entity": {
+							"id": "1220701888179359745",
+							"name": "COVID-19"
+						}
+					}
+				],
+				"conversation_id": "1383026700695441414",
+				"public_metrics": {
+					"retweet_count": 257,
+					"reply_count": 46,
+					"like_count": 1032,
+					"quote_count": 11
+				},
+				"possibly_sensitive": false,
+				"source": "Twitter for iPhone",
+				"author_id": "3097503906",
+				"entities": {
+					"annotations": [
+						{
+							"start": 17,
+							"end": 34,
+							"probability": 0.6779,
+							"type": "Person",
+							"normalized_text": "Mr V Muraleedharan"
+						},
+						{
+							"start": 70,
+							"end": 75,
+							"probability": 0.7745,
+							"type": "Place",
+							"normalized_text": "Kerala"
+						},
+						{
+							"start": 128,
+							"end": 130,
+							"probability": 0.678,
+							"type": "Organization",
+							"normalized_text": "BJP"
+						}
+					]
+				},
+				"created_at": "2021-04-16T11:57:15.000Z",
+				"id": "1383026700695441414",
+				"reply_settings": "everyone",
+				"text": "Central minister Mr V Muraleedharan is reported to have described CM, Kerala as a \"Covidiot\". Shocking \n\nIs there no one in the BJP's leadership who will reprimand the minister for using unacceptable language?",
+				"lang": "en"
+			},
+			{
+				"context_annotations": [
+					{
+						"domain": {
+							"id": "123",
+							"name": "Ongoing News Story",
+							"description": "Ongoing News Stories like 'Brexit'"
+						},
+						"entity": {
+							"id": "1220701888179359745",
+							"name": "COVID-19"
+						}
+					}
+				],
+				"entities": {
+					"hashtags": [
+						{
+							"start": 0,
+							"end": 10,
+							"tag": "WhereIsPM"
+						},
+						{
+							"start": 242,
+							"end": 251,
+							"tag": "Covidiot"
+						}
+					]
+				},
+				"conversation_id": "1383031438912548865",
+				"public_metrics": {
+					"retweet_count": 4,
+					"reply_count": 0,
+					"like_count": 4,
+					"quote_count": 0
+				},
+				"possibly_sensitive": false,
+				"source": "Twitter for Android",
+				"author_id": "1260163143214313473",
+				"created_at": "2021-04-16T12:16:05.000Z",
+				"id": "1383031438912548865",
+				"reply_settings": "everyone",
+				"text": "#WhereIsPM\n\nThousands of crore collected in the fraud called PM Cares.\n\nInstead of ramping up oxygen, Remdesivir &amp; vaccine \"subject to trials\" pre-order, he used it to topple opposition state governments.\n\nThe country is suffering due to #Covidiot andh-bhakts.",
+				"lang": "en"
+			},
+			{
+				"context_annotations": [
+					{
+						"domain": {
+							"id": "123",
+							"name": "Ongoing News Story",
+							"description": "Ongoing News Stories like 'Brexit'"
+						},
+						"entity": {
+							"id": "1220701888179359745",
+							"name": "COVID-19"
+						}
+					}
+				],
+				"entities": {
+					"urls": [
+						{
+							"start": 275,
+							"end": 298,
+							"url": "https://t.co/H38DfKJ6IR",
+							"expanded_url": "https://twitter.com/mygovindia/status/1382607043240988673",
+							"display_url": "twitter.com/mygovindia/sta…"
+						}
+					],
+					"hashtags": [
+						{
+							"start": 48,
+							"end": 54,
+							"tag": "AYUSH"
+						},
+						{
+							"start": 70,
+							"end": 76,
+							"tag": "liver"
+						},
+						{
+							"start": 77,
+							"end": 93,
+							"tag": "transplantation"
+						},
+						{
+							"start": 97,
+							"end": 103,
+							"tag": "India"
+						},
+						{
+							"start": 111,
+							"end": 117,
+							"tag": "giloy"
+						},
+						{
+							"start": 122,
+							"end": 134,
+							"tag": "Ashwagandha"
+						},
+						{
+							"start": 136,
+							"end": 145,
+							"tag": "Ayurveda"
+						},
+						{
+							"start": 146,
+							"end": 160,
+							"tag": "pseudoscience"
+						},
+						{
+							"start": 161,
+							"end": 170,
+							"tag": "quackery"
+						},
+						{
+							"start": 188,
+							"end": 194,
+							"tag": "Masks"
+						},
+						{
+							"start": 230,
+							"end": 240,
+							"tag": "vaccinate"
+						},
+						{
+							"start": 241,
+							"end": 253,
+							"tag": "vaccination"
+						},
+						{
+							"start": 265,
+							"end": 274,
+							"tag": "COVIDIOT"
+						}
+					]
+				},
+				"conversation_id": "1383018622486863883",
+				"public_metrics": {
+					"retweet_count": 9,
+					"reply_count": 1,
+					"like_count": 15,
+					"quote_count": 0
+				},
+				"possibly_sensitive": false,
+				"source": "Twitter for Android",
+				"author_id": "1130881384615071744",
+				"created_at": "2021-04-16T11:25:09.000Z",
+				"id": "1383018622486863883",
+				"reply_settings": "everyone",
+				"text": "The only thing that can come out of taking this #AYUSH pledge is more #liver #transplantation in #India due to #giloy and #Ashwagandha.\n#Ayurveda #pseudoscience #quackery\n\nPledge 2\n➡️wear #Masks\n➡️avoid festivities, ceremonies.\n➡️#vaccinate #vaccination\n➡️not be a #COVIDIOT https://t.co/H38DfKJ6IR",
+				"lang": "en",
+				"referenced_tweets": [
+					{
+						"type": "quoted",
+						"id": "1382607043240988673"
+					}
+				]
+			},
+			{
+				"conversation_id": "1383003504734781442",
+				"public_metrics": {
+					"retweet_count": 0,
+					"reply_count": 1,
+					"like_count": 0,
+					"quote_count": 0
+				},
+				"possibly_sensitive": false,
+				"source": "Twitter Web App",
+				"author_id": "1000827618546110464",
+				"entities": {
+					"mentions": [
+						{
+							"start": 0,
+							"end": 8,
+							"username": "toknell"
+						},
+						{
+							"start": 9,
+							"end": 22,
+							"username": "Andromake000"
+						},
+						{
+							"start": 23,
+							"end": 33,
+							"username": "Expressen"
+						}
+					]
+				},
+				"created_at": "2021-04-16T13:45:57.000Z",
+				"id": "1383054056906711040",
+				"reply_settings": "everyone",
+				"in_reply_to_user_id": "1241438544339632128",
+				"text": "@toknell @Andromake000 @Expressen Att du hänvisar till \"fact checkers\" säger mer än nåt annat.",
+				"lang": "sv",
+				"referenced_tweets": [
+					{
+						"type": "replied_to",
+						"id": "1383052259429339138"
+					}
+				]
+			},
+			{
+				"context_annotations": [
+					{
+						"domain": {
+							"id": "123",
+							"name": "Ongoing News Story",
+							"description": "Ongoing News Stories like 'Brexit'"
+						},
+						"entity": {
+							"id": "1220701888179359745",
+							"name": "COVID-19"
+						}
+					}
+				],
+				"entities": {
+					"urls": [
+						{
+							"start": 250,
+							"end": 273,
+							"url": "https://t.co/ZBHkhfl7bE",
+							"expanded_url": "https://twitter.com/LaureGonlezamar/status/1383042690846179329/photo/1",
+							"display_url": "pic.twitter.com/ZBHkhfl7bE"
+						}
+					]
+				},
+				"conversation_id": "1383042690846179329",
+				"public_metrics": {
+					"retweet_count": 2,
+					"reply_count": 15,
+					"like_count": 12,
+					"quote_count": 1
+				},
+				"possibly_sensitive": false,
+				"source": "Twitter for Android",
+				"author_id": "1285867636333707265",
+				"attachments": {
+					"media_keys": [
+						"3_1383042658529075203"
+					]
+				},
+				"created_at": "2021-04-16T13:00:47.000Z",
+				"id": "1383042690846179329",
+				"reply_settings": "everyone",
+				"text": "Du un contre un.\n1 covidiot et 1 complotiste enfermés pendant 1h. Ils ont le choix des armes (graphiques, chiffres, vidéos, études).\nÀ la fin ils sortent : soit on les vaccine tous les deux, soit les doses sont détruites.\n\uD83D\uDE08\nVous prenez qui en duel ? https://t.co/ZBHkhfl7bE",
+				"lang": "fr"
+			}
+		],
+		"media": [
+			{
+				"url": "https://pbs.twimg.com/media/EzGZDN4XAAAwSQS.jpg",
+				"height": 1150,
+				"width": 1284,
+				"media_key": "3_1383054841124159488",
+				"type": "photo"
+			}
+		]
+	},
+	"meta": {
+		"newest_id": "1383055313276964865",
+		"oldest_id": "1383054697423015942",
+		"result_count": 10,
+		"next_token": "b26v89c19zqg8o3fosts1md1wmmwtk662avly1ptlc2v1"
+	}
 }

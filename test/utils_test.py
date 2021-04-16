@@ -105,7 +105,9 @@ class TestUtils(object):
 
         tweets = normalize_tweets_payload_v2(payload)
 
-        # print()
-        # for t in tweets:
-        #     print(t)
-        # print()
+        print()
+        for t in tweets:
+            print()
+            for k, v in t.items():
+                print('%s: %r' % (k, v))
+        print()
