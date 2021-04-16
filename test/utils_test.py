@@ -6,7 +6,12 @@ from pytz import timezone
 from copy import deepcopy
 from test.utils import get_json_resource
 
-from twitwi.utils import get_dates, normalize_tweet, normalize_user
+from twitwi.utils import (
+    get_dates,
+    normalize_tweet,
+    normalize_user,
+    normalize_tweets_payload_v2
+)
 
 GET_DATES_TESTS = [
     (('Thu Feb 07 06:43:33 +0000 2013', 'Europe/Paris'), (1360219413, '2013-02-07T07:43:33')),
@@ -94,3 +99,13 @@ class TestUtils(object):
         nuser = normalize_user(user)
 
         assert user == original_arg
+
+    def test_normalize_tweets_payload_v2(self):
+        payload = get_json_resource('payload_v2.json')
+
+        tweets = normalize_tweets_payload_v2(payload)
+
+        # print()
+        # for t in tweets:
+        #     print(t)
+        # print()

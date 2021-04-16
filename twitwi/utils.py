@@ -15,6 +15,7 @@ from html import unescape
 from twitwi.constants import (
     TWEET_DATETIME_FORMAT,
     FORMATTED_TWEET_DATETIME_FORMAT,
+    TWEET_DATETIME_FORMAT_V2,
     CANONICAL_URL_KWARGS
 )
 
@@ -22,8 +23,8 @@ UTC_TIMEZONE = timezone('UTC')
 CLEAN_RT_PATTERN = re.compile(r'^RT @\w+: ')
 
 
-def get_dates(date_str, locale=None):
-    parsed_datetime = datetime.strptime(date_str, TWEET_DATETIME_FORMAT)
+def get_dates(date_str, locale=None, v2=False):
+    parsed_datetime = datetime.strptime(date_str, TWEET_DATETIME_FORMAT_V2 if v2 else TWEET_DATETIME_FORMAT)
     utc_datetime = parsed_datetime
     locale_datetime = parsed_datetime
 
@@ -35,6 +36,20 @@ def get_dates(date_str, locale=None):
         int(utc_datetime.timestamp()),
         datetime.strftime(locale_datetime, FORMATTED_TWEET_DATETIME_FORMAT)
     )
+
+
+def get_collection_time():
+    return datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f')
+
+
+def format_rt_text(user, text):
+    return 'RT @%s: %s' % (user, text)
+
+
+def format_qt_text(user, text, quoted_text, url):
+    quote = '« %s: %s — %s »' % (user, quoted_text, url)
+
+    return text.replace(url, quote)
 
 
 custom_normalize_url = partial(
@@ -247,7 +262,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
             results.extend(nested)
 
         rtime = rtweet['timestamp_utc']
-        text = 'RT @%s: %s' % (rtu, rtweet['text'])
+        text = format_rt_text(rtu, rtweet['text'])
 
         resolve_entities(tweet, 'retweeted')
 
@@ -279,8 +294,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
         else:
             qturl = qtweet['url']
         qtime = qtweet['timestamp_utc']
-        text = text.replace(qturl, u'« %s: %s — %s »' %
-                            (qtu, qtweet['text'], qturl))
+        text = format_qt_text(qtu, text, qtweet['text'], qturl)
 
         resolve_entities(tweet, 'quoted')
 
@@ -357,7 +371,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
         'hashtags': sorted(hashtags) if hashtags else extract_hashtags_from_text(text),
         'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
         'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),
-        'collection_time': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'),
+        'collection_time': get_collection_time(),
         'match_query': collection_source != 'thread' and collection_source != 'quote'
     }
 
@@ -434,3 +448,60 @@ def normalize_user(user, locale=None, pure=True):
     }
 
     return normalized_user
+
+# normalized_tweet = {
+#     'id': tweet['id_str'],
+#     'local_time': local_time,
+#     'timestamp_utc': timestamp_utc,
+#     'text': text,
+#     'url': 'https://twitter.com/%s/statuses/%s' % (tweet['user']['screen_name'], tweet['id_str']),
+#     'quoted_id': qti,
+#     'quoted_user': qtu,
+#     'quoted_user_id': qtuid,
+#     'quoted_timestamp_utc': qtime,
+#     'retweeted_id': rti,
+#     'retweeted_user': rtu,
+#     'retweeted_user_id': rtuid,
+#     'retweeted_timestamp_utc': rtime,
+#     'media_files': media_files,
+#     'media_types': media_types,
+#     'media_urls': media_urls,
+#     'links': sorted(links),
+#     'links_to_resolve': len(links) > 0,
+#     'hashtags': sorted(hashtags) if hashtags else extract_hashtags_from_text(text),
+#     'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
+#     'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),
+#     'collection_time': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%f'),
+#     'match_query': collection_source != 'thread' and collection_source != 'quote'
+# }
+
+
+def includes_index(payload, key):
+    return {item['id']: item for item in payload['includes'][key]}
+
+
+def normalize_tweet_v2(tweet, user, locale=None):
+    local_time, timestamp_utc = get_dates(tweet['created_at'], locale=locale, v2=True)
+
+    normalized_tweet = {
+        'id': tweet['id'],
+        'local_time': local_time,
+        'timestamp_utc': timestamp_utc,
+        'text': None,
+        'collection_time': get_collection_time()
+    }
+
+    return normalized_tweet
+
+
+def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=False):
+    users = includes_index(payload, 'users')
+    refs = includes_index(payload, 'tweets')
+
+    output = []
+
+    for item in payload['data']:
+        normalized_tweet = normalize_tweet_v2(item, users[item['author_id']], locale=locale)
+        output.append(normalized_tweet)
+
+    return output
