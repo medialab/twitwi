@@ -554,7 +554,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 users_by_id=users_by_id,
                 media_by_key=media_by_key,
                 locale=locale,
-                collection_source=collection_source
+                collection_source='retweet'
             )
 
             retweet_info['retweeted_user'] = normalized_retweet['user_screen_name']
@@ -583,7 +583,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 users_by_id=users_by_id,
                 media_by_key=media_by_key,
                 locale=locale,
-                collection_source=collection_source
+                collection_source='quote'
             )
 
             quote_info['quoted_user'] = normalized_quote['user_screen_name']
@@ -637,6 +637,9 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                     media_data['type']
                 ))
 
+    if collection_source is None:
+        collection_source = tweet.get('collection_source')
+
     normalized_tweet = {
         'id': tweet['id'],
         'local_time': local_time,
@@ -671,6 +674,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'media_urls': [m[0] for m in medias],
         'media_files': [m[1] for m in medias],
         'media_types': [m[2] for m in medias],
+        'match_query': collection_source != 'thread' and collection_source != 'quote',
         **place_info,
         **reply_info,
         **retweet_info,

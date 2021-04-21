@@ -29,6 +29,9 @@ def compare_tweets(_id, t1, t2):
 
         assert t1[k] == t2[k], 'Different value for key "%s" with tweet "%s"' % (k, _id)
 
+    for k in t1.keys():
+        assert k in t2, 'Missing key "%s" with tweet "%s"' % (k, _id)
+
 
 class TestUtils(object):
     def test_get_dates(self):

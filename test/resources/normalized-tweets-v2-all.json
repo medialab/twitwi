@@ -23,7 +23,7 @@
     "mentioned_ids": [
       "1094092760"
     ],
-    "collection_time": "2021-04-21T17:22:01.345089",
+    "collection_time": "2021-04-21T17:38:48.724817",
     "user_id": "1094092760",
     "user_screen_name": "joselcherrez",
     "user_name": "Jose L Cherrez",
@@ -50,6 +50,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "lng": -80.1936,
     "lat": 25.7751,
     "place_country_code": "US",
@@ -60,6 +61,9 @@
       25.7090404,
       -80.144974,
       25.855667
+    ],
+    "collected_via": [
+      "retweet"
     ]
   },
   {
@@ -82,7 +86,7 @@
     "mentioned_ids": [
       "1094092760"
     ],
-    "collection_time": "2021-04-21T17:22:01.345117",
+    "collection_time": "2021-04-21T17:38:48.724842",
     "user_id": "2866962568",
     "user_screen_name": "christanley29",
     "user_name": "*♛*Chris*♛*",
@@ -107,6 +111,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1382840699322732544",
     "retweeted_user": "joselcherrez",
     "retweeted_user_id": "1094092760",
@@ -135,7 +140,7 @@
     ],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-21T17:22:01.344272",
+    "collection_time": "2021-04-21T17:38:48.723990",
     "user_id": "1130881384615071744",
     "user_screen_name": "drabbyphilips",
     "user_name": "(Cyriac) Abby Philips",
@@ -162,7 +167,11 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
-    "quoted_id": "1382607043240988673"
+    "match_query": true,
+    "quoted_id": "1382607043240988673",
+    "collected_via": [
+      "retweet"
+    ]
   },
   {
     "id": "1383026700695441414",
@@ -173,7 +182,7 @@
     "hashtags": [],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-21T17:22:01.342993",
+    "collection_time": "2021-04-21T17:38:48.722777",
     "user_id": "3097503906",
     "user_screen_name": "PChidambaram_IN",
     "user_name": "P. Chidambaram",
@@ -197,7 +206,11 @@
     "links": [],
     "media_urls": [],
     "media_files": [],
-    "media_types": []
+    "media_types": [],
+    "match_query": true,
+    "collected_via": [
+      "retweet"
+    ]
   },
   {
     "id": "1383031438912548865",
@@ -211,7 +224,7 @@
     ],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-21T17:22:01.344049",
+    "collection_time": "2021-04-21T17:38:48.723762",
     "user_id": "1260163143214313473",
     "user_screen_name": "Ad_Tel_2101",
     "user_name": "Adheesh_2101 🏹",
@@ -235,7 +248,11 @@
     "links": [],
     "media_urls": [],
     "media_files": [],
-    "media_types": []
+    "media_types": [],
+    "match_query": true,
+    "collected_via": [
+      "retweet"
+    ]
   },
   {
     "id": "1383042690846179329",
@@ -246,7 +263,7 @@
     "hashtags": [],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-21T17:22:01.344633",
+    "collection_time": "2021-04-21T17:38:48.724366",
     "user_id": "1285867636333707265",
     "user_screen_name": "LaureGonlezamar",
     "user_name": "Laure Gonlézamarres",
@@ -272,7 +289,11 @@
     ],
     "media_urls": [],
     "media_files": [],
-    "media_types": []
+    "media_types": [],
+    "match_query": true,
+    "collected_via": [
+      "retweet"
+    ]
   },
   {
     "id": "1383054697423015942",
@@ -287,7 +308,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-21T17:22:01.344849",
+    "collection_time": "2021-04-21T17:38:48.724578",
     "user_id": "1313897929430630400",
     "user_screen_name": "NoOne_012345",
     "user_name": "India🇮🇳#jobkibaat",
@@ -312,6 +333,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
@@ -330,7 +352,7 @@
     "mentioned_ids": [
       "1285867636333707265"
     ],
-    "collection_time": "2021-04-21T17:22:01.344654",
+    "collection_time": "2021-04-21T17:38:48.724389",
     "user_id": "180953075",
     "user_screen_name": "Amanojackou",
     "user_name": "Amano Jackou",
@@ -355,6 +377,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383042690846179329",
     "retweeted_user": "LaureGonlezamar",
     "retweeted_user_id": "1285867636333707265",
@@ -379,7 +402,7 @@
       "2097191",
       "2893142548"
     ],
-    "collection_time": "2021-04-21T17:22:01.344433",
+    "collection_time": "2021-04-21T17:38:48.724158",
     "user_id": "1241438544339632128",
     "user_screen_name": "toknell",
     "user_name": "Toknell 🇸🇪🇸🇪",
@@ -412,6 +435,7 @@
     "media_types": [
       "photo"
     ],
+    "match_query": true,
     "to_username": "johanwadenback",
     "to_userid": "1000827618546110464",
     "to_tweetid": "1383054056906711040"
@@ -435,7 +459,7 @@
     "mentioned_ids": [
       "1130881384615071744"
     ],
-    "collection_time": "2021-04-21T17:22:01.344295",
+    "collection_time": "2021-04-21T17:38:48.724013",
     "user_id": "1130881384615071744",
     "user_screen_name": "drabbyphilips",
     "user_name": "(Cyriac) Abby Philips",
@@ -460,6 +484,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383018622486863883",
     "retweeted_user": "drabbyphilips",
     "retweeted_user_id": "1130881384615071744",
@@ -480,7 +505,7 @@
     "mentioned_ids": [
       "1260163143214313473"
     ],
-    "collection_time": "2021-04-21T17:22:01.344070",
+    "collection_time": "2021-04-21T17:38:48.723782",
     "user_id": "162687171",
     "user_screen_name": "animeshynr",
     "user_name": "animesh tyagi",
@@ -505,6 +530,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383031438912548865",
     "retweeted_user": "Ad_Tel_2101",
     "retweeted_user_id": "1260163143214313473",
@@ -523,7 +549,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-21T17:22:01.343880",
+    "collection_time": "2021-04-21T17:38:48.723595",
     "user_id": "563442749",
     "user_screen_name": "Imdanish56",
     "user_name": "Mohd Danish",
@@ -548,6 +574,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
@@ -566,7 +593,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-21T17:22:01.343701",
+    "collection_time": "2021-04-21T17:38:48.723408",
     "user_id": "3187712887",
     "user_screen_name": "rooster16111611",
     "user_name": "आंदोलनजीवी आचार्य रूद्र भारद्वाज🙏( AN INDIAN",
@@ -591,6 +618,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
@@ -609,7 +637,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-21T17:22:01.343516",
+    "collection_time": "2021-04-21T17:38:48.723218",
     "user_id": "186505571",
     "user_screen_name": "anishabraham10",
     "user_name": "Anish Abraham",
@@ -634,6 +662,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
@@ -652,7 +681,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-21T17:22:01.343265",
+    "collection_time": "2021-04-21T17:38:48.723037",
     "user_id": "1144416857761308672",
     "user_screen_name": "Mpk73818044",
     "user_name": "Mpk",
@@ -677,6 +706,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
@@ -695,7 +725,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-21T17:22:01.343022",
+    "collection_time": "2021-04-21T17:38:48.722820",
     "user_id": "1217864994852941825",
     "user_screen_name": "Mehbub89927336",
     "user_name": "🤘MEHBUB🤘",
@@ -720,6 +750,7 @@
     "media_urls": [],
     "media_files": [],
     "media_types": [],
+    "match_query": true,
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
