@@ -90,9 +90,8 @@ class TestUtils(object):
 
         normalized_users = [normalize_user(user, locale=tz) for user in api_users]
 
-        # with open('./test/resources/normalized-users.json', 'w') as f:
-        #     import json
-        #     json.dump(normalized_users, f, ensure_ascii=False, indent=2)
+        # from test.utils import dump_json_resource
+        # dump_json_resource(normalized_users, 'normalized-users.json')
 
         assert normalized_users == get_json_resource('normalized-users.json')
 
@@ -125,9 +124,8 @@ class TestUtils(object):
         #         print('%s: %r' % (k, v))
         # print()
 
-        # with open('./test/resources/normalized-tweets-v2.json', 'w') as f:
-        #     import json
-        #     json.dump(ntweets, f, ensure_ascii=False, indent=2)
+        # from test.utils import dump_json_resource
+        # dump_json_resource(ntweets, 'normalized-tweets-v2.json')
 
         test_data = get_json_resource('normalized-tweets-v2.json')
 
@@ -147,9 +145,8 @@ class TestUtils(object):
 
         assert len(ntweets) < len(all_ntweets)
 
-        # with open('./test/resources/normalized-tweets-v2-all.json', 'w') as f:
-        #     import json
-        #     json.dump(all_ntweets, f, ensure_ascii=False, indent=2)
+        # from test.utils import dump_json_resource
+        # dump_json_resource(all_ntweets, 'normalized-tweets-v2-all.json')
 
         test_data = get_json_resource('normalized-tweets-v2-all.json')
 
