@@ -103,6 +103,8 @@ class TestUtils(object):
         assert user == original_arg
 
     def test_normalize_tweets_payload_v2(self):
+        tz = timezone('Europe/Paris')
+
         payloads = [
             get_json_resource('payload-v2.json'),
             get_json_resource('payload-v2-geo.json')
@@ -111,7 +113,7 @@ class TestUtils(object):
         ntweets = []
 
         for payload in payloads:
-            ntweets.extend(normalize_tweets_payload_v2(payload))
+            ntweets.extend(normalize_tweets_payload_v2(payload, locale=tz))
 
         # print()
         # for t in ntweets:
@@ -134,7 +136,7 @@ class TestUtils(object):
         all_ntweets = []
 
         for payload in payloads:
-            batch = normalize_tweets_payload_v2(payload, extract_referenced_tweets=True)
+            batch = normalize_tweets_payload_v2(payload, extract_referenced_tweets=True, locale=tz)
             assert sorted(set(t['id'] for t in batch)) == sorted(t['id'] for t in batch)
             all_ntweets.extend(batch)
 
