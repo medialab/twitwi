@@ -102,16 +102,28 @@ class TestUtils(object):
 
     def test_normalize_tweets_payload_v2(self):
         payloads = [
-            get_json_resource('payload_v2.json'),
-            get_json_resource('payload_v2_geo.json')
+            get_json_resource('payload-v2.json'),
+            get_json_resource('payload-v2-geo.json')
         ]
 
-        for payload in payloads:
-            tweets = normalize_tweets_payload_v2(payload)
+        ntweets = []
 
-            # print()
-            # for t in tweets:
-            #     print()
-            #     for k, v in sorted(t.items()):
-            #         print('%s: %r' % (k, v))
-            # print()
+        for payload in payloads:
+            ntweets.extend(normalize_tweets_payload_v2(payload))
+
+        # print()
+        # for t in ntweets:
+        #     print()
+        #     for k, v in sorted(t.items()):
+        #         print('%s: %r' % (k, v))
+        # print()
+
+        # with open('./test/resources/normalized-tweets-v2.json', 'w') as f:
+        #     import json
+        #     json.dump(ntweets, f, ensure_ascii=False, indent=2)
+
+        test_data = get_json_resource('normalized-tweets-v2.json')
+
+        for t1, t2 in zip(ntweets, test_data):
+            assert 'collection_time' in t1 and isinstance(t1['collection_time'], str)
+            compare_tweets(t2['id'], t1, t2)
