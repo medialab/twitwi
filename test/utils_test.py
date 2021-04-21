@@ -4,6 +4,8 @@
 from functools import partial
 from pytz import timezone
 from copy import deepcopy
+from ebbe import sorted_uniq
+from operator import itemgetter
 from test.utils import get_json_resource
 
 from twitwi.utils import (
@@ -125,5 +127,27 @@ class TestUtils(object):
         test_data = get_json_resource('normalized-tweets-v2.json')
 
         for t1, t2 in zip(ntweets, test_data):
+            assert 'collection_time' in t1 and isinstance(t1['collection_time'], str)
+            compare_tweets(t2['id'], t1, t2)
+
+        # Testing extracting referenced tweets
+        all_ntweets = []
+
+        for payload in payloads:
+            batch = normalize_tweets_payload_v2(payload, extract_referenced_tweets=True)
+            assert sorted(set(t['id'] for t in batch)) == sorted(t['id'] for t in batch)
+            all_ntweets.extend(batch)
+
+        all_ntweets = sorted_uniq(all_ntweets, key=itemgetter('id'))
+
+        assert len(ntweets) < len(all_ntweets)
+
+        # with open('./test/resources/normalized-tweets-v2-all.json', 'w') as f:
+        #     import json
+        #     json.dump(all_ntweets, f, ensure_ascii=False, indent=2)
+
+        test_data = get_json_resource('normalized-tweets-v2-all.json')
+
+        for t1, t2 in zip(all_ntweets, test_data):
             assert 'collection_time' in t1 and isinstance(t1['collection_time'], str)
             compare_tweets(t2['id'], t1, t2)

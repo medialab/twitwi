@@ -680,6 +680,17 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     if collection_source is not None:
         normalized_tweet['collected_via'] = [collection_source]
 
+    if extract_referenced_tweets:
+        normalized_tweets = [normalized_tweet]
+
+        if normalized_retweet is not None:
+            normalized_tweets.append(normalized_retweet)
+
+        if normalized_quote is not None:
+            normalized_tweets.append(normalized_quote)
+
+        return normalized_tweets
+
     return normalized_tweet
 
 
@@ -692,9 +703,10 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
     media_by_key = includes_index(payload, 'media', index_key='media_key')
 
     output = []
+    already_seen = set()
 
     for item in payload['data']:
-        normalized_tweet = normalize_tweet_v2(
+        normalized_tweets = normalize_tweet_v2(
             item,
             users_by_id=users_by_id,
             users_by_screen_name=users_by_screen_name,
@@ -702,8 +714,21 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
             tweets_by_id=tweets_by_id,
             media_by_key=media_by_key,
             locale=locale,
-            collection_source=collection_source
+            collection_source=collection_source,
+            extract_referenced_tweets=True
         )
-        output.append(normalized_tweet)
+
+        if extract_referenced_tweets:
+            for normalized_tweet in normalized_tweets:
+                k = int(normalized_tweet['id'])
+
+                if k in already_seen:
+                    continue
+
+                already_seen.add(k)
+                output.append(normalized_tweet)
+        else:
+            assert len(normalized_tweets)
+            output.append(normalized_tweets[0])
 
     return output
