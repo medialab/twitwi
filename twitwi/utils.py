@@ -24,13 +24,15 @@ CLEAN_RT_PATTERN = re.compile(r'^RT @\w+: ')
 
 
 def get_dates(date_str, locale=None, v2=False):
+    if locale is None:
+        locale = UTC_TIMEZONE
+
     parsed_datetime = datetime.strptime(date_str, TWEET_DATETIME_FORMAT_V2 if v2 else TWEET_DATETIME_FORMAT)
     utc_datetime = parsed_datetime
     locale_datetime = parsed_datetime
 
-    if locale:
-        utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
-        locale_datetime = utc_datetime.astimezone(locale)
+    utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
+    locale_datetime = utc_datetime.astimezone(locale)
 
     return (
         int(utc_datetime.timestamp()),

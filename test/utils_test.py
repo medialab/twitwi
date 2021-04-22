@@ -137,7 +137,7 @@ class TestUtils(object):
         all_ntweets = []
 
         for payload in payloads:
-            batch = normalize_tweets_payload_v2(payload, extract_referenced_tweets=True, locale=tz)
+            batch = normalize_tweets_payload_v2(payload, extract_referenced_tweets=True)
             assert sorted(set(t['id'] for t in batch)) == sorted(t['id'] for t in batch)
             all_ntweets.extend(batch)
 
