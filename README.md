@@ -24,6 +24,11 @@ pip install twitwi
 * [transform_user_into_csv_dict](#transform_user_into_csv_dict)
 * [format_tweet_as_csv_row](#format_tweet_as_csv_row)
 
+*Useful constants (under twitwi.constants)*
+
+* [TWEET_FIELDS](#tweet_fields)
+* [USER_FIELDS](#user_fields)
+
 ### normalize_tweets_payload_v2
 
 Function taking an entire tweets payload from the v2 API and returning a list of the contained tweets normalized and structured in a way that makes further analysis of the data convenient.
@@ -92,4 +97,34 @@ Function formatting the given normalized Twitter user as a list able to be writt
 from twitwi import format_user_as_csv_row
 
 row = format_user_as_csv_row(normalized_user)
+```
+
+### TWEET_FIELDS
+
+List of tweet field names. Useful to declare headers with csv writers:
+
+```python
+from twitwi.constants import TWEET_FIELDS
+
+# Using csv.writer
+w = csv.writer(f)
+w.writerow(TWEET_FIELDS)
+
+# Using csv.DictWriter
+w = csv.DictWriter(f, fieldnames=TWEET_FIELDS)
+w.writeheader()
+```
+
+### USER_FIELDS
+
+```python
+from twitwi.constants import USER_FIELDS
+
+# Using csv.writer
+w = csv.writer(f)
+w.writerow(USER_FIELDS)
+
+# Using csv.DictWriter
+w = csv.DictWriter(f, fieldnames=USER_FIELDS)
+w.writeheader()
 ```
