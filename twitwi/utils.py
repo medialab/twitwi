@@ -28,9 +28,6 @@ def get_dates(date_str, locale=None, v2=False):
         locale = UTC_TIMEZONE
 
     parsed_datetime = datetime.strptime(date_str, TWEET_DATETIME_FORMAT_V2 if v2 else TWEET_DATETIME_FORMAT)
-    utc_datetime = parsed_datetime
-    locale_datetime = parsed_datetime
-
     utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
     locale_datetime = utc_datetime.astimezone(locale)
 
