@@ -109,13 +109,14 @@ class TestUtils(object):
 
         payloads = [
             get_json_resource('payload-v2.json'),
-            get_json_resource('payload-v2-geo.json')
+            get_json_resource('payload-v2-geo.json'),
+            get_json_resource('payload-v2-tweet-retweet.json')
         ]
 
         ntweets = []
 
         for payload in payloads:
-            ntweets.extend(normalize_tweets_payload_v2(payload, locale=tz))
+            ntweets.extend(normalize_tweets_payload_v2(payload, locale=tz, collection_source='test'))
 
         # print()
         # for t in ntweets:
@@ -137,7 +138,7 @@ class TestUtils(object):
         all_ntweets = []
 
         for payload in payloads:
-            batch = normalize_tweets_payload_v2(payload, extract_referenced_tweets=True)
+            batch = normalize_tweets_payload_v2(payload, extract_referenced_tweets=True, collection_source='test')
             assert sorted(set(t['id'] for t in batch)) == sorted(t['id'] for t in batch)
             all_ntweets.extend(batch)
 

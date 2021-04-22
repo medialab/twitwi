@@ -23,7 +23,7 @@
     "mentioned_ids": [
       "1094092760"
     ],
-    "collection_time": "2021-04-22T11:36:27.943630",
+    "collection_time": "2021-04-22T11:51:25.654883",
     "user_id": "1094092760",
     "user_screen_name": "joselcherrez",
     "user_name": "Jose L Cherrez",
@@ -63,7 +63,8 @@
       25.855667
     ],
     "collected_via": [
-      "retweet"
+      "retweet",
+      "test"
     ]
   },
   {
@@ -86,7 +87,7 @@
     "mentioned_ids": [
       "1094092760"
     ],
-    "collection_time": "2021-04-22T11:36:27.943648",
+    "collection_time": "2021-04-22T11:51:25.654906",
     "user_id": "2866962568",
     "user_screen_name": "christanley29",
     "user_name": "*♛*Chris*♛*",
@@ -115,7 +116,10 @@
     "retweeted_id": "1382840699322732544",
     "retweeted_user": "joselcherrez",
     "retweeted_user_id": "1094092760",
-    "retweeted_timestamp_utc": 1618529889
+    "retweeted_timestamp_utc": 1618529889,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383018622486863883",
@@ -140,7 +144,7 @@
     ],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-22T11:36:27.943079",
+    "collection_time": "2021-04-22T11:51:25.653974",
     "user_id": "1130881384615071744",
     "user_screen_name": "drabbyphilips",
     "user_name": "(Cyriac) Abby Philips",
@@ -182,7 +186,7 @@
     "hashtags": [],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-22T11:36:27.942316",
+    "collection_time": "2021-04-22T11:51:25.652936",
     "user_id": "3097503906",
     "user_screen_name": "PChidambaram_IN",
     "user_name": "P. Chidambaram",
@@ -224,7 +228,7 @@
     ],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-22T11:36:27.942928",
+    "collection_time": "2021-04-22T11:51:25.653749",
     "user_id": "1260163143214313473",
     "user_screen_name": "Ad_Tel_2101",
     "user_name": "Adheesh_2101 🏹",
@@ -263,7 +267,7 @@
     "hashtags": [],
     "mentioned_names": [],
     "mentioned_ids": [],
-    "collection_time": "2021-04-22T11:36:27.943330",
+    "collection_time": "2021-04-22T11:51:25.654381",
     "user_id": "1285867636333707265",
     "user_screen_name": "LaureGonlezamar",
     "user_name": "Laure Gonlézamarres",
@@ -308,7 +312,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-22T11:36:27.943469",
+    "collection_time": "2021-04-22T11:51:25.654650",
     "user_id": "1313897929430630400",
     "user_screen_name": "NoOne_012345",
     "user_name": "India🇮🇳#jobkibaat",
@@ -337,7 +341,10 @@
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
-    "retweeted_timestamp_utc": 1618574235
+    "retweeted_timestamp_utc": 1618574235,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383054775869116416",
@@ -352,7 +359,7 @@
     "mentioned_ids": [
       "1285867636333707265"
     ],
-    "collection_time": "2021-04-22T11:36:27.943346",
+    "collection_time": "2021-04-22T11:51:25.654407",
     "user_id": "180953075",
     "user_screen_name": "Amanojackou",
     "user_name": "Amano Jackou",
@@ -381,7 +388,10 @@
     "retweeted_id": "1383042690846179329",
     "retweeted_user": "LaureGonlezamar",
     "retweeted_user_id": "1285867636333707265",
-    "retweeted_timestamp_utc": 1618578047
+    "retweeted_timestamp_utc": 1618578047,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383054846186639361",
@@ -402,7 +412,7 @@
       "2097191",
       "2893142548"
     ],
-    "collection_time": "2021-04-22T11:36:27.943190",
+    "collection_time": "2021-04-22T11:51:25.654117",
     "user_id": "1241438544339632128",
     "user_screen_name": "toknell",
     "user_name": "Toknell 🇸🇪🇸🇪",
@@ -438,7 +448,10 @@
     "match_query": true,
     "to_username": "johanwadenback",
     "to_userid": "1000827618546110464",
-    "to_tweetid": "1383054056906711040"
+    "to_tweetid": "1383054056906711040",
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383054927191175168",
@@ -459,7 +472,7 @@
     "mentioned_ids": [
       "1130881384615071744"
     ],
-    "collection_time": "2021-04-22T11:36:27.943097",
+    "collection_time": "2021-04-22T11:51:25.653997",
     "user_id": "1130881384615071744",
     "user_screen_name": "drabbyphilips",
     "user_name": "(Cyriac) Abby Philips",
@@ -488,7 +501,10 @@
     "retweeted_id": "1383018622486863883",
     "retweeted_user": "drabbyphilips",
     "retweeted_user_id": "1130881384615071744",
-    "retweeted_timestamp_utc": 1618572309
+    "retweeted_timestamp_utc": 1618572309,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383054948208766985",
@@ -505,7 +521,7 @@
     "mentioned_ids": [
       "1260163143214313473"
     ],
-    "collection_time": "2021-04-22T11:36:27.942944",
+    "collection_time": "2021-04-22T11:51:25.653768",
     "user_id": "162687171",
     "user_screen_name": "animeshynr",
     "user_name": "animesh tyagi",
@@ -534,7 +550,10 @@
     "retweeted_id": "1383031438912548865",
     "retweeted_user": "Ad_Tel_2101",
     "retweeted_user_id": "1260163143214313473",
-    "retweeted_timestamp_utc": 1618575365
+    "retweeted_timestamp_utc": 1618575365,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383054954059816966",
@@ -549,7 +568,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-22T11:36:27.942820",
+    "collection_time": "2021-04-22T11:51:25.653609",
     "user_id": "563442749",
     "user_screen_name": "Imdanish56",
     "user_name": "Mohd Danish",
@@ -578,7 +597,10 @@
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
-    "retweeted_timestamp_utc": 1618574235
+    "retweeted_timestamp_utc": 1618574235,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383055055817908238",
@@ -593,7 +615,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-22T11:36:27.942704",
+    "collection_time": "2021-04-22T11:51:25.653464",
     "user_id": "3187712887",
     "user_screen_name": "rooster16111611",
     "user_name": "आंदोलनजीवी आचार्य रूद्र भारद्वाज🙏( AN INDIAN",
@@ -622,7 +644,10 @@
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
-    "retweeted_timestamp_utc": 1618574235
+    "retweeted_timestamp_utc": 1618574235,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383055184734003208",
@@ -637,7 +662,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-22T11:36:27.942573",
+    "collection_time": "2021-04-22T11:51:25.653314",
     "user_id": "186505571",
     "user_screen_name": "anishabraham10",
     "user_name": "Anish Abraham",
@@ -666,7 +691,10 @@
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
-    "retweeted_timestamp_utc": 1618574235
+    "retweeted_timestamp_utc": 1618574235,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383055194603323392",
@@ -681,7 +709,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-22T11:36:27.942451",
+    "collection_time": "2021-04-22T11:51:25.653122",
     "user_id": "1144416857761308672",
     "user_screen_name": "Mpk73818044",
     "user_name": "Mpk",
@@ -710,7 +738,10 @@
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
-    "retweeted_timestamp_utc": 1618574235
+    "retweeted_timestamp_utc": 1618574235,
+    "collected_via": [
+      "test"
+    ]
   },
   {
     "id": "1383055313276964865",
@@ -725,7 +756,7 @@
     "mentioned_ids": [
       "3097503906"
     ],
-    "collection_time": "2021-04-22T11:36:27.942333",
+    "collection_time": "2021-04-22T11:51:25.652962",
     "user_id": "1217864994852941825",
     "user_screen_name": "Mehbub89927336",
     "user_name": "🤘MEHBUB🤘",
@@ -754,6 +785,280 @@
     "retweeted_id": "1383026700695441414",
     "retweeted_user": "PChidambaram_IN",
     "retweeted_user_id": "3097503906",
-    "retweeted_timestamp_utc": 1618574235
+    "retweeted_timestamp_utc": 1618574235,
+    "collected_via": [
+      "test"
+    ]
+  },
+  {
+    "id": "1383483507071021058",
+    "local_time": "2021-04-17T18:12:26",
+    "timestamp_utc": 1618683146,
+    "text": "@anadiplose_ Cal?",
+    "url": "https://twitter.com/AlexCastroNogu1/statuses/1383483507071021058",
+    "hashtags": [],
+    "mentioned_names": [
+      "anadiplose_"
+    ],
+    "mentioned_ids": [
+      "796438477533392896"
+    ],
+    "collection_time": "2021-04-22T11:51:25.655586",
+    "user_id": "859076623684993024",
+    "user_screen_name": "AlexCastroNogu1",
+    "user_name": "AKN-47",
+    "user_image": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    "user_url": null,
+    "user_location": "Lalín, Galicia",
+    "user_verified": false,
+    "user_description": "Soy de los que no les gusta salir de casa sin cuarentena o sin ella",
+    "user_tweets": 2573,
+    "user_followers": 118,
+    "user_friends": 87,
+    "user_lists": 2,
+    "user_created_at": "2017-05-01T16:06:42",
+    "user_timestamp_utc": 1493654802,
+    "possibly_sensitive": false,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "und",
+    "source": "Twitter for Android",
+    "links": [],
+    "media_urls": [],
+    "media_files": [],
+    "media_types": [],
+    "match_query": true,
+    "to_username": "anadiplose_",
+    "to_userid": "796438477533392896",
+    "to_tweetid": "1383446177060773890",
+    "collected_via": [
+      "test"
+    ]
+  },
+  {
+    "id": "1384158791877287943",
+    "local_time": "2021-04-19T14:55:47",
+    "timestamp_utc": 1618844147,
+    "text": "@anadiplose_ De Sun Tzu, Lenin ou Mickey Mouse se é preciso.",
+    "url": "https://twitter.com/MSeijoP/statuses/1384158791877287943",
+    "hashtags": [],
+    "mentioned_names": [
+      "anadiplose_"
+    ],
+    "mentioned_ids": [
+      "796438477533392896"
+    ],
+    "collection_time": "2021-04-22T11:51:25.655508",
+    "user_id": "414967371",
+    "user_screen_name": "MSeijoP",
+    "user_name": "⟳",
+    "user_image": "https://pbs.twimg.com/profile_images/1366370600537755649/8WDOE4cC_normal.jpg",
+    "user_url": null,
+    "user_location": "Vigo, Galicia",
+    "user_verified": false,
+    "user_description": "Máis menos que máis.",
+    "user_tweets": 65069,
+    "user_followers": 616,
+    "user_friends": 319,
+    "user_lists": 8,
+    "user_created_at": "2011-11-17T18:38:48",
+    "user_timestamp_utc": 1321555128,
+    "possibly_sensitive": false,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "it",
+    "source": "Twitter Web App",
+    "links": [],
+    "media_urls": [],
+    "media_files": [],
+    "media_types": [],
+    "match_query": true,
+    "to_username": "anadiplose_",
+    "to_userid": "796438477533392896",
+    "to_tweetid": "1384103943995740161",
+    "collected_via": [
+      "test"
+    ]
+  },
+  {
+    "id": "1384603875454328841",
+    "local_time": "2021-04-20T20:24:23",
+    "timestamp_utc": 1618950263,
+    "text": "@anadiplose_ é que de verdade que eu non sei de que vai ese señor, todo fatal",
+    "url": "https://twitter.com/ghelipollas/statuses/1384603875454328841",
+    "hashtags": [],
+    "mentioned_names": [
+      "anadiplose_"
+    ],
+    "mentioned_ids": [
+      "796438477533392896"
+    ],
+    "collection_time": "2021-04-22T11:51:25.655434",
+    "user_id": "762700055556030464",
+    "user_screen_name": "ghelipollas",
+    "user_name": "🐸🗡️",
+    "user_image": "https://pbs.twimg.com/profile_images/1382084248996343820/3ypiZSpL_normal.jpg",
+    "user_url": null,
+    "user_location": "A casa da Collona",
+    "user_verified": false,
+    "user_description": "(he/she/they) //\nno gender, only froggie",
+    "user_tweets": 17477,
+    "user_followers": 641,
+    "user_friends": 554,
+    "user_lists": 2,
+    "user_created_at": "2016-08-08T17:20:38",
+    "user_timestamp_utc": 1470676838,
+    "possibly_sensitive": false,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "lang": "es",
+    "source": "Twitter for Android",
+    "links": [],
+    "media_urls": [],
+    "media_files": [],
+    "media_types": [],
+    "match_query": true,
+    "to_username": "anadiplose_",
+    "to_userid": "796438477533392896",
+    "to_tweetid": "1384602018787045377",
+    "collected_via": [
+      "test"
+    ]
+  },
+  {
+    "id": "1384605207619719170",
+    "local_time": "2021-04-20T20:29:40",
+    "timestamp_utc": 1618950580,
+    "text": "@anadiplose_ eminencia será pero imbécil é todavía máis xdd",
+    "url": "https://twitter.com/ghelipollas/statuses/1384605207619719170",
+    "hashtags": [],
+    "mentioned_names": [
+      "anadiplose_"
+    ],
+    "mentioned_ids": [
+      "796438477533392896"
+    ],
+    "collection_time": "2021-04-22T11:51:25.655358",
+    "user_id": "762700055556030464",
+    "user_screen_name": "ghelipollas",
+    "user_name": "🐸🗡️",
+    "user_image": "https://pbs.twimg.com/profile_images/1382084248996343820/3ypiZSpL_normal.jpg",
+    "user_url": null,
+    "user_location": "A casa da Collona",
+    "user_verified": false,
+    "user_description": "(he/she/they) //\nno gender, only froggie",
+    "user_tweets": 17477,
+    "user_followers": 641,
+    "user_friends": 554,
+    "user_lists": 2,
+    "user_created_at": "2016-08-08T17:20:38",
+    "user_timestamp_utc": 1470676838,
+    "possibly_sensitive": false,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "es",
+    "source": "Twitter for Android",
+    "links": [],
+    "media_urls": [],
+    "media_files": [],
+    "media_types": [],
+    "match_query": true,
+    "to_username": "anadiplose_",
+    "to_userid": "796438477533392896",
+    "to_tweetid": "1384605039881162755",
+    "collected_via": [
+      "test"
+    ]
+  },
+  {
+    "id": "1385164195260469248",
+    "local_time": "2021-04-22T09:30:53",
+    "timestamp_utc": 1619083853,
+    "text": "anadiplose (test)",
+    "url": "https://twitter.com/BeatriceMazoyer/statuses/1385164195260469248",
+    "hashtags": [],
+    "mentioned_names": [],
+    "mentioned_ids": [],
+    "collection_time": "2021-04-22T11:51:25.655189",
+    "user_id": "709702331412176896",
+    "user_screen_name": "BeatriceMazoyer",
+    "user_name": "Béatrice Mazoyer",
+    "user_image": "https://pbs.twimg.com/profile_images/784788789214453760/B6rTyIKy_normal.jpg",
+    "user_url": null,
+    "user_location": null,
+    "user_verified": false,
+    "user_description": "",
+    "user_tweets": 372,
+    "user_followers": 57,
+    "user_friends": 269,
+    "user_lists": 2,
+    "user_created_at": "2016-03-15T11:26:36",
+    "user_timestamp_utc": 1458041196,
+    "possibly_sensitive": false,
+    "like_count": 1,
+    "retweet_count": 1,
+    "reply_count": 0,
+    "lang": "es",
+    "source": "Twitter Web App",
+    "links": [],
+    "media_urls": [],
+    "media_files": [],
+    "media_types": [],
+    "match_query": true,
+    "collected_via": [
+      "retweet",
+      "test"
+    ]
+  },
+  {
+    "id": "1385164269059198978",
+    "local_time": "2021-04-22T09:31:11",
+    "timestamp_utc": 1619083871,
+    "text": "RT @BeatriceMazoyer: anadiplose (test)",
+    "url": "https://twitter.com/Yomguithereal/statuses/1385164269059198978",
+    "hashtags": [],
+    "mentioned_names": [
+      "BeatriceMazoyer"
+    ],
+    "mentioned_ids": [
+      "709702331412176896"
+    ],
+    "collection_time": "2021-04-22T11:51:25.655207",
+    "user_id": "1565623927",
+    "user_screen_name": "Yomguithereal",
+    "user_name": "Guillaume Plique",
+    "user_image": "https://pbs.twimg.com/profile_images/431400804587536385/xf1B4bp4_normal.jpeg",
+    "user_url": "https://github.com/Yomguithereal",
+    "user_location": "France",
+    "user_verified": false,
+    "user_description": "Research engineer at SciencesPo's médialab. JavaScript, Python & Shawarma.",
+    "user_tweets": 1598,
+    "user_followers": 618,
+    "user_friends": 864,
+    "user_lists": 53,
+    "user_created_at": "2013-07-03T12:02:53",
+    "user_timestamp_utc": 1372852973,
+    "possibly_sensitive": false,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "lang": "es",
+    "source": "Twitter Web App",
+    "links": [],
+    "media_urls": [],
+    "media_files": [],
+    "media_types": [],
+    "match_query": true,
+    "retweeted_id": "1385164195260469248",
+    "retweeted_user": "BeatriceMazoyer",
+    "retweeted_user_id": "709702331412176896",
+    "retweeted_timestamp_utc": 1619083853,
+    "collected_via": [
+      "test"
+    ]
   }
 ]

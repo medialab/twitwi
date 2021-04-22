@@ -706,7 +706,7 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
     media_by_key = includes_index(payload, 'media', index_key='media_key')
 
     output = []
-    already_seen = set()
+    already_seen = {}
 
     for item in payload['data']:
         normalized_tweets = normalize_tweet_v2(
@@ -724,11 +724,21 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
         if extract_referenced_tweets:
             for normalized_tweet in normalized_tweets:
                 k = int(normalized_tweet['id'])
+                earlier_normalized_tweet = already_seen.get(k)
 
-                if k in already_seen:
+                if earlier_normalized_tweet is not None:
+                    if 'collected_via' in normalized_tweet:
+                        new_collection_source = normalized_tweet['collected_via'][0]
+
+                        if 'collected_via' not in earlier_normalized_tweet:
+                            earlier_normalized_tweet['collected_via'] = [new_collection_source]
+                        else:
+                            if new_collection_source not in earlier_normalized_tweet['collected_via']:
+                                earlier_normalized_tweet['collected_via'].append(new_collection_source)
+
                     continue
 
-                already_seen.add(k)
+                already_seen[k] = normalized_tweet
                 output.append(normalized_tweet)
         else:
             assert len(normalized_tweets)
