@@ -36,3 +36,21 @@ def get_dates(date_str, locale=None, v2=False):
         int(utc_datetime.timestamp()),
         datetime.strftime(locale_datetime, FORMATTED_TWEET_DATETIME_FORMAT)
     )
+
+
+def validate_payload_v2(payload):
+    if not isinstance(payload, dict):
+        return False
+
+    if 'data' not in payload or not isinstance(payload['data'], list):
+        return False
+
+    # NOTE: not sure it cannot be absent altogether
+    if 'meta' not in payload or not isinstance(payload['meta'], dict):
+        return False
+
+    # NOTE: not sure it cannot be absent altogether
+    if 'includes' not in payload or not isinstance(payload['includes'], dict):
+        return False
+
+    return True

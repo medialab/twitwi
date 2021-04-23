@@ -5,7 +5,8 @@ from pytz import timezone
 from test.utils import get_json_resource
 
 from twitwi.utils import (
-    get_dates
+    get_dates,
+    validate_payload_v2
 )
 
 GET_DATES_TESTS = [
@@ -21,3 +22,9 @@ class TestUtils(object):
             tz = timezone(tz)
 
             assert get_dates(date_str, locale=tz) == result, (date_str, tz)
+
+    def test_validate_payload_v2(self):
+        assert not validate_payload_v2('hello')
+        assert not validate_payload_v2([1, 2, 3])
+        assert not validate_payload_v2({'meta': {}})
+        assert validate_payload_v2(get_json_resource('payload-v2.json'))
