@@ -11,7 +11,11 @@ from copy import deepcopy
 from datetime import datetime
 from html import unescape
 
-from twitwi.utils import get_dates, custom_normalize_url
+from twitwi.utils import (
+    get_dates,
+    custom_normalize_url,
+    validate_payload_v2
+)
 
 CLEAN_RT_PATTERN = re.compile(r'^RT @\w+: ')
 
@@ -672,6 +676,10 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
 
 def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=False,
                                 collection_source=None):
+
+    if not validate_payload_v2(payload):
+        raise TypeError('given value is not a Twitter API v2 payload')
+
     users_by_screen_name = includes_index(payload, 'users', index_key='username')
     users_by_id = includes_index(payload, 'users')
     places_by_id = includes_index(payload, 'places')

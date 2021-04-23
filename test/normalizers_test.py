@@ -1,6 +1,7 @@
 # =============================================================================
 # Twitwi Utilities Unit Tests
 # =============================================================================
+import pytest
 from functools import partial
 from pytz import timezone
 from copy import deepcopy
@@ -92,6 +93,9 @@ class TestNormalizers(object):
         assert user == original_arg
 
     def test_normalize_tweets_payload_v2(self):
+        with pytest.raises(TypeError):
+            normalize_tweets_payload_v2('test')
+
         tz = timezone('Europe/Paris')
 
         payloads = [
