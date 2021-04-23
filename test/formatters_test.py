@@ -7,7 +7,7 @@ from io import StringIO
 from test.utils import open_resource, get_json_resource
 
 from twitwi.constants import TWEET_FIELDS, USER_FIELDS
-from twitwi.utils import normalize_tweet
+from twitwi.normalizers import normalize_tweet
 from twitwi.formatters import (
     transform_tweet_into_csv_dict,
     format_tweet_as_csv_row,
