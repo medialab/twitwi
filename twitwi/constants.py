@@ -72,6 +72,7 @@ TWEET_FIELDS = [
     'place_type',                     # if the tweet has an associated 'place', type of that place ('city', 'admin', etc.)
     'place_coordinates',              # if the tweet has an associated 'place', coordinates of that place, separated by |
     'links',                          # list of links included in the text content, with redirections resolved, separated by |
+    'domains',                        # list of domain names in the links fields, separated by |
     'media_urls',                     # list of links to images/videos embedded, separated by |
     'media_files',                    # list of filenames of images/videos embedded and downloaded, separated by |, ignorable when medias collections isn't enabled
     'media_types',                    # list of media types (photo, video, animated gif), separated by |
@@ -82,6 +83,7 @@ TWEET_FIELDS = [
 
 TWEET_PLURAL_FIELDS = {
     'links',
+    'domains',
     'hashtags',
     'collected_via',
     'media_urls',
