@@ -16,7 +16,6 @@ from twitwi.utils import (
 )
 from twitwi.normalizers import (
     normalize_tweet,
-    get_domains,
     normalize_user,
     normalize_tweets_payload_v2
 )

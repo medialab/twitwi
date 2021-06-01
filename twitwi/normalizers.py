@@ -10,7 +10,7 @@ import re
 from copy import deepcopy
 from datetime import datetime
 from html import unescape
-from ural import get_hostname
+from ural import get_normalized_hostname
 
 from twitwi.utils import (
     get_dates,
@@ -75,16 +75,6 @@ def resolve_entities(tweet, prefix):
             tweet[ent][field] = tweet[ent].get(field, [])
             if field in target[ent]:
                 tweet[ent][field] += target[ent][field]
-
-
-def get_domains(url):
-    result = []
-    domain = get_hostname(url)
-    if domain:
-        domain_parts = domain.split(".")
-        for enum, part in enumerate(domain_parts):
-            result.append(".".join(domain_parts[enum:]))
-    return result
 
 
 def get_bitrate(x):
@@ -332,8 +322,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
             else:
                 normalized = custom_normalize_url(entity['expanded_url'])
                 links.add(normalized)
-                for part in get_domains(normalized):
-                    domains.add(part)
+                domains.add(get_normalized_hostname(normalized))
 
         for hashtag in tweet['entities'].get('hashtags', []):
             hashtags.add(hashtag['text'].lower())
@@ -366,7 +355,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
         'media_urls': media_urls,
         'links': sorted(links),
         'links_to_resolve': len(links) > 0,
-        'domains': sorted(domains, key=len, reverse=True),
+        'domains': [d for _, d in sorted(zip(links, domains))],
         'hashtags': sorted(hashtags) if hashtags else extract_hashtags_from_text(text),
         'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
         'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),

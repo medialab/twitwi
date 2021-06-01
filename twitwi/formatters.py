@@ -15,30 +15,6 @@ from twitwi.constants import (
 )
 
 
-def find_longest(domains, already_found):
-    if len(domains) == 0:
-        return None
-    candidate = max(domains, key=len)
-    if len(already_found) == 0:
-        return candidate
-    for found in already_found:
-        if candidate in found:
-            domains.remove(candidate)
-            candidate = find_longest(domains, already_found)
-    return candidate
-
-
-def n_longest_domains(domains, nb_results):
-    candidates = set(domains)
-    results = set()
-    for i in range(nb_results):
-        new_longest = find_longest(candidates, results)
-        if new_longest is not None:
-            results.add(new_longest)
-            candidates.remove(new_longest)
-    return sorted(results, key=len, reverse=True)
-
-
 def make_transform_into_csv_dict(plural_fields, boolean_fields):
 
     def transform_into_csv_dict(item, item_id=None, plural_separator='|'):
@@ -46,7 +22,7 @@ def make_transform_into_csv_dict(plural_fields, boolean_fields):
             item['id'] = item_id
 
         item['links'] = item.get('proper_links', item.get('links', []))
-        item['domains'] = n_longest_domains(item['domains'], len(item['links'])) if "domains" in item else []
+
         for plural_field in plural_fields:
             item[plural_field] = plural_separator.join(item.get(plural_field, []))
 
@@ -69,9 +45,6 @@ def make_format_as_csv_row(fields, plural_fields, boolean_fields):
 
             if field == 'links':
                 v = item.get('proper_links', v)
-
-            if field == 'domains':
-                v = n_longest_domains(v, len(item.get('links', [])))
 
             return plural_separator.join(v)
 
