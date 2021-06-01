@@ -201,6 +201,7 @@
         "media_urls": [],
         "links": [],
         "links_to_resolve": false,
+        "domains": [],
         "hashtags": [],
         "mentioned_ids": [],
         "mentioned_names": [],
@@ -254,6 +255,7 @@
         "media_urls": [],
         "links": [],
         "links_to_resolve": false,
+        "domains": [],
         "hashtags": [],
         "mentioned_ids": [
           "798953701972938752"
@@ -411,6 +413,7 @@
         "media_urls": [],
         "links": [],
         "links_to_resolve": false,
+        "domains": [],
         "hashtags": [],
         "mentioned_ids": [],
         "mentioned_names": [],
@@ -846,6 +849,7 @@
         ],
         "links": [],
         "links_to_resolve": false,
+        "domains": [],
         "hashtags": [
           "2\u67081\u65e5",
           "\u30c7\u30e5\u30aa",
@@ -920,6 +924,10 @@
           "https://twitter.com/rizu_1122/status/1356256391653019649"
         ],
         "links_to_resolve": true,
+        "domains": [
+          "twitter.com",
+          "com"
+        ],
         "hashtags": [
           "26\u6642\u534a",
           "2\u67081\u65e5",
@@ -1476,6 +1484,7 @@
         ],
         "links": [],
         "links_to_resolve": false,
+        "domains": [],
         "hashtags": [
           "climatr\u00e9silience",
           "maprimerenov"
@@ -1544,6 +1553,10 @@
           "https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1"
         ],
         "links_to_resolve": true,
+        "domains": [
+          "twitter.com",
+          "com"
+        ],
         "hashtags": [
           "climatr\u00e9silience",
           "maprimerenov"
@@ -1802,6 +1815,7 @@
         "media_urls": [],
         "links": [],
         "links_to_resolve": false,
+        "domains": [],
         "hashtags": [],
         "mentioned_ids": [],
         "mentioned_names": [],
@@ -1857,6 +1871,7 @@
         "media_urls": [],
         "links": [],
         "links_to_resolve": false,
+        "domains": [],
         "hashtags": [],
         "mentioned_ids": [
           "997821294866567168"
