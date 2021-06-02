@@ -322,7 +322,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
             else:
                 normalized = custom_normalize_url(entity['expanded_url'])
                 links.add(normalized)
-                domains.add(get_normalized_hostname(normalized))
+                domains.add(get_normalized_hostname(normalized, normalize_amp=False, infer_redirection=False))
 
         for hashtag in tweet['entities'].get('hashtags', []):
             hashtags.add(hashtag['text'].lower())
