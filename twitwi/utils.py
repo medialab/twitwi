@@ -5,7 +5,7 @@
 # Miscellaneous utility functions.
 #
 from pytz import timezone
-from ural import normalize_url
+from ural import normalize_url, get_normalized_hostname
 from functools import partial
 from datetime import datetime
 
@@ -13,7 +13,8 @@ from twitwi.constants import (
     TWEET_DATETIME_FORMAT,
     FORMATTED_TWEET_DATETIME_FORMAT,
     TWEET_DATETIME_FORMAT_V2,
-    CANONICAL_URL_KWARGS
+    CANONICAL_URL_KWARGS,
+    CANONICAL_HOSTNAME_KWARGS
 )
 
 UTC_TIMEZONE = timezone('UTC')
@@ -21,6 +22,11 @@ UTC_TIMEZONE = timezone('UTC')
 custom_normalize_url = partial(
     normalize_url,
     **CANONICAL_URL_KWARGS
+)
+
+custom_get_normalized_hostname = partial(
+    get_normalized_hostname,
+    **CANONICAL_HOSTNAME_KWARGS
 )
 
 

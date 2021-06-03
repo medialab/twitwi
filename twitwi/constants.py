@@ -166,3 +166,8 @@ CANONICAL_URL_KWARGS = {
     'infer_redirection': False,
     'quoted': True
 }
+
+CANONICAL_HOSTNAME_KWARGS = {
+    'normalize_amp': False,
+    'infer_redirection': False
+}

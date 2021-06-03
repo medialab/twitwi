@@ -10,12 +10,12 @@ import re
 from copy import deepcopy
 from datetime import datetime
 from html import unescape
-from ural import get_normalized_hostname
 
 from twitwi.utils import (
     get_dates,
     custom_normalize_url,
-    validate_payload_v2
+    validate_payload_v2,
+    custom_get_normalized_hostname
 )
 
 CLEAN_RT_PATTERN = re.compile(r'^RT @\w+: ')
@@ -289,7 +289,6 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
     media_types = []
 
     links = set()
-    domains = set()
     hashtags = set()
     mentions = {}
 
@@ -322,7 +321,6 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
             else:
                 normalized = custom_normalize_url(entity['expanded_url'])
                 links.add(normalized)
-                domains.add(get_normalized_hostname(normalized, normalize_amp=False, infer_redirection=False))
 
         for hashtag in tweet['entities'].get('hashtags', []):
             hashtags.add(hashtag['text'].lower())
@@ -335,7 +333,8 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
 
     if collection_source is None:
         collection_source = tweet.get('collection_source')
-
+    links = sorted(links)
+    domains = [custom_get_normalized_hostname(l, normalize_amp=False, infer_redirection=False) for l in links]
     normalized_tweet = {
         'id': tweet['id_str'],
         'local_time': local_time,
@@ -353,9 +352,9 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
         'media_files': media_files,
         'media_types': media_types,
         'media_urls': media_urls,
-        'links': sorted(links),
+        'links': links,
         'links_to_resolve': len(links) > 0,
-        'domains': [d for _, d in sorted(zip(links, domains))],
+        'domains': domains,
         'hashtags': sorted(hashtags) if hashtags else extract_hashtags_from_text(text),
         'mentioned_ids': [mentions[m] for m in sorted(mentions.keys())],
         'mentioned_names': sorted(mentions.keys()) if mentions else extract_mentions_from_text(text),
