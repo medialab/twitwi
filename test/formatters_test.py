@@ -3,8 +3,9 @@
 # =============================================================================
 import ndjson
 import csv
+import pytest
 from io import StringIO
-from test.utils import open_resource, get_json_resource
+from test.utils import open_resource, get_json_resource, get_jsonl_resource
 
 from twitwi.constants import TWEET_FIELDS, USER_FIELDS
 from twitwi.normalizers import normalize_tweet
@@ -81,6 +82,16 @@ class TestFormatters(object):
         with open_resource('tweet-export.csv') as f:
             output.seek(0)
             assert list(csv.reader(output)) == list(csv.reader(f))
+
+    def test_tweet_plural_fields(self):
+        tweets = get_jsonl_resource('tweet-export.jsonl')
+        tweet = tweets[0]
+        tweet["collected_via"] = ["search", None]
+        with pytest.raises(TypeError):
+            transform_tweet_into_csv_dict(tweet.copy())
+
+        transform_tweet_into_csv_dict(tweet, allow_erroneous_plurals=True)
+        assert tweet["collected_via"] == "search|"
 
     def test_format_tweet_as_csv_row_no_collection_source(self):
         tweet = get_json_resource('normalization.json')[0]['source']

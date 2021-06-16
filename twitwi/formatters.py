@@ -17,14 +17,17 @@ from twitwi.constants import (
 
 def make_transform_into_csv_dict(plural_fields, boolean_fields):
 
-    def transform_into_csv_dict(item, item_id=None, plural_separator='|'):
+    def transform_into_csv_dict(item, item_id=None, plural_separator='|', allow_erroneous_plurals=False):
         if item_id is not None:
             item['id'] = item_id
 
         item['links'] = item.get('proper_links', item.get('links', []))
 
         for plural_field in plural_fields:
-            item[plural_field] = plural_separator.join(item.get(plural_field, []))
+            plurals = item.get(plural_field, [])
+            if allow_erroneous_plurals:
+                plurals = [element if element is not None else '' for element in plurals]
+            item[plural_field] = plural_separator.join(plurals)
 
         for boolean_field in boolean_fields:
             item[boolean_field] = int(item[boolean_field]) if boolean_field in item else ''
