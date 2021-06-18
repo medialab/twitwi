@@ -4,7 +4,7 @@ with open('./README.md', 'r') as f:
     long_description = f.read()
 
 setup(name='twitwi',
-      version='0.9.0',
+      version='0.9.1',
       description='A collection of Twitter-related helper functions for python.',
       long_description=long_description,
       long_description_content_type='text/markdown',
@@ -18,7 +18,7 @@ setup(name='twitwi',
       package_data={'docs': ['README.md']},
       install_requires=[
         'pytz>=2019.3',
-        'twitter>=1.19.0',
+        'twitter>=1.19.3',
         'ural>=0.25.1'
       ],
       zip_safe=True)

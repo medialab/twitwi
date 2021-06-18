@@ -9,5 +9,5 @@ wheel
 
 # Dependencies
 pytz==2019.3
-twitter==1.18.0
-ural==0.25.1
+twitter>=1.19.3
+ural>=0.25.1
