@@ -19,6 +19,6 @@ setup(name='twitwi',
       install_requires=[
         'pytz>=2019.3',
         'twitter>=1.19.3',
-        'ural>=0.25.1'
+        'ural>=0.31.1'
       ],
       zip_safe=True)
