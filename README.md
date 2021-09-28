@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/medialab/twitwi.svg)](https://travis-ci.org/medialab/twitwi)
+[![Build Status](https://github.com/medialab/twitwi/workflows/Tests/badge.svg)](https://github.com/medialab/twitwi/actions)
 
 # Twitwi
 
