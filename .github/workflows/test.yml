@@ -14,10 +14,6 @@ jobs:
 
           # Current ubuntu
           - os: ubuntu-latest
-            python-version: "2.7"
-          - os: ubuntu-latest
-            python-version: "3.5"
-          - os: ubuntu-latest
             python-version: "3.6"
           - os: ubuntu-latest
             python-version: "3.7"
