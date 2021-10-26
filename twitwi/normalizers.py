@@ -324,8 +324,8 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
                 normalized = custom_normalize_url(entity['expanded_url'])
                 links.add(normalized)
                 
-        for alt_text in tweet['entities'].get('ext_alt_text', []):
-            alt_texts.append(alt_text)
+            if 'ext_alt_text' in entity:
+                alt_texts.append(entity['ext_alt_text'] if entity['ext_alt_text'] else '')
 
         for hashtag in tweet['entities'].get('hashtags', []):
             hashtags.add(hashtag['text'].lower())
