@@ -287,6 +287,8 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
     media_urls = []
     media_files = []
     media_types = []
+    
+    alt_texts = set()
 
     links = set()
     hashtags = set()
@@ -321,6 +323,9 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
             else:
                 normalized = custom_normalize_url(entity['expanded_url'])
                 links.add(normalized)
+                
+        for alt_text in tweet['entities'].get('ext_alt_text', []):
+            alt_texts.add(alt_text)
 
         for hashtag in tweet['entities'].get('hashtags', []):
             hashtags.add(hashtag['text'].lower())
@@ -352,6 +357,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
         'media_files': media_files,
         'media_types': media_types,
         'media_urls': media_urls,
+        'alt_texts': alt_texts,
         'links': links,
         'links_to_resolve': len(links) > 0,
         'domains': domains,
