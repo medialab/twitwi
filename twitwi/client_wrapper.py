@@ -8,7 +8,7 @@
 import json
 from time import sleep, time
 from operator import itemgetter
-from twitter import Twitter, OAuth, OAuth2, TwitterHTTPError
+from twitter import Twitter, OAuth, OAuth2, TwitterHTTPError, Twitter2
 
 from twitwi.exceptions import TwitterWrapperMaxAttemptsExceeded
 
@@ -29,7 +29,7 @@ NO_RETRY_STATUSES = set([
 class TwitterWrapper(object):
 
     def __init__(self, token, token_secret, consumer_key, consumer_secret,
-                 listener=None):
+                 listener=None, api_version=None):
         self.oauth = OAuth(
             token,
             token_secret,
@@ -50,13 +50,32 @@ class TwitterWrapper(object):
 
         self.oauth2 = OAuth2(bearer_token=bearer_token)
 
-        self.endpoints = {
-            'user': Twitter(auth=self.oauth),
-            'app': Twitter(auth=self.oauth2)
-        }
+        if api_version == '2':
+            self.endpoints = {
+                'user': Twitter2(auth=self.oauth),
+                'app': Twitter2(auth=self.oauth2)
+            }
 
-        self.waits = {}
-        self.auth = {}
+            self.auth = {
+                'tweets/counts/recent': 'app',
+                'tweets/counts/all': 'app',
+                'tweets/search/all': 'app'
+            }
+
+            self.waits = {
+                'tweets/counts/recent': {'app': 0},
+                'tweets/counts/all': {'app': 0},
+                'tweets/search/all': {'app': 0}
+            }
+
+        else:
+            self.endpoints = {
+                'user': Twitter(auth=self.oauth),
+                'app': Twitter(auth=self.oauth2)
+            }
+
+            self.auth = {}
+            self.waits = {}
 
         self.listener = listener
 

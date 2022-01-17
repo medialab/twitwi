@@ -9,5 +9,5 @@ wheel
 
 # Dependencies
 pytz==2019.3
-twitter>=1.19.3
 ural>=0.30.2
+-e git+git://github.com/python-twitter-tools/twitter@api_v2#egg=twitter
