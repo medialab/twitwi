@@ -468,10 +468,13 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     for hashtag in entities.get('hashtags', []):
         hashtags.add(hashtag['tag'])
 
-    mentions = set()
+    mentions = {}
 
     for mention in entities.get('mentions', []):
-        mentions.add(mention['username'])
+        if 'id' in mention:
+            mentions[mention['username']] = mention['id']
+        else:
+            mentions[mention['username']] = users_by_screen_name[mention['username']]['id']
 
     place_info = {}
 
@@ -487,7 +490,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 place_info['lat'] = lat
 
         if 'place_id' in geo_data:
-            place_data = places_by_id[geo_data['place_id']]
+            place_data = places_by_id.get(geo_data['place_id'], {})
 
             if 'country_code' in place_data:
                 place_info['place_country_code'] = place_data['country_code']
@@ -511,10 +514,13 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     reply_info = {}
 
     if 'replied_to' in refs:
-        reply = tweets_by_id[refs['replied_to']]
-        reply_info['to_username'] = users_by_id[reply['author_id']]['username']
-        reply_info['to_userid'] = reply['author_id']
-        reply_info['to_tweetid'] = reply['id']
+        reply = tweets_by_id.get(refs['replied_to'], {})
+        if 'author_id' in reply:
+            reply_info['to_username'] = users_by_id[reply['author_id']]['username']
+        else:
+            reply_info['to_username'] = ''
+        reply_info['to_userid'] = reply.get('author_id', '')
+        reply_info['to_tweetid'] = reply.get('id', '')
 
     # Retweet
     retweet_info = {}
@@ -611,8 +617,8 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 media_data = media_by_key[media_key]
 
                 medias.append((
-                    media_data['url'],
-                    '%s_%s' % (source_id, extract_media_name_from_url(media_data['url'])),
+                    media_data.get('url', ''),
+                    '%s_%s' % (source_id, extract_media_name_from_url(media_data.get('url', ''))),
                     media_data['type']
                 ))
 
@@ -626,8 +632,8 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'text': unescape(text),
         'url': format_tweet_url(user['username'], tweet['id']),
         'hashtags': sorted(hashtags),
-        'mentioned_names': sorted(mentions),
-        'mentioned_ids': sorted(users_by_screen_name[name]['id'] for name in mentions),
+        'mentioned_names': sorted(mentions.keys()),
+        'mentioned_ids': sorted(mentions.values()),
         'collection_time': get_collection_time(),
         'user_id': user['id'],
         'user_screen_name': user['username'],
