@@ -386,7 +386,7 @@ def resolve_user_entities(user):
                         user[k] = user[k].replace(url['url'], url['expanded_url'])
 
 
-def normalize_user(user, locale=None, pure=True):
+def normalize_user(user, locale=None, pure=True, v2=False):
     """
     Function "normalizing" a user as returned by Twitter's API in order to
     cleanup and optimize some fields.
@@ -409,11 +409,11 @@ def normalize_user(user, locale=None, pure=True):
 
     resolve_user_entities(user)
 
-    timestamp_utc, local_time = get_dates(user['created_at'], locale)
+    timestamp_utc, local_time = get_dates(user['created_at'], locale, v2)
 
     normalized_user = {
-        'id': user['id_str'],
-        'screen_name': user['screen_name'],
+        'id': user['id_str'] if not v2 else user['id'],
+        'screen_name': user['screen_name'] if not v2 else user['username'],
         'name': user['name'],
         'description': user['description'],
         'url': user['url'],
@@ -422,11 +422,11 @@ def normalize_user(user, locale=None, pure=True):
         'location': user.get('location'),
         'verified': user.get('verified'),
         'protected': user.get('protected'),
-        'tweets': user['statuses_count'],
-        'followers': user['followers_count'],
-        'friends': user['friends_count'],
-        'likes': user['favourites_count'],
-        'lists': user['listed_count'],
+        'tweets': user['statuses_count'] if not v2 else user['public_metrics']['tweet_count'],
+        'followers': user['followers_count'] if not v2 else user['public_metrics']['followers_count'],
+        'friends': user['friends_count'] if not v2 else '',
+        'likes': user['favourites_count'] if not v2 else '',
+        'lists': user['listed_count'] if not v2 else user['public_metrics']['listed_count'],
         'image': user.get('profile_image_url_https'),
         'default_profile': user.get('default_profile'),
         'default_profile_image': user.get('default_profile_image'),
