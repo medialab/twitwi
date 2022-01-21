@@ -380,6 +380,8 @@ def resolve_user_entities(user):
         for k in user['entities']:
             if 'urls' in user['entities'][k]:
                 for url in user['entities'][k]['urls']:
+                    if 'expanded_url' not in url:
+                        continue
                     if not url['expanded_url']:
                         continue
                     if k in user:
@@ -411,6 +413,14 @@ def normalize_user(user, locale=None, pure=True, v2=False):
 
     timestamp_utc, local_time = get_dates(user['created_at'], locale, v2)
 
+    if v2 and 'withheld' in user:
+        withheld = user['withheld']
+        withheld_in_countries = withheld.get('country_codes', [])
+        withheld_scope = withheld.get('withheld_scope', '')
+    else:
+        withheld_in_countries = []
+        withheld_scope = ''
+
     normalized_user = {
         'id': user['id_str'] if not v2 else user['id'],
         'screen_name': user['screen_name'] if not v2 else user['username'],
@@ -419,7 +429,7 @@ def normalize_user(user, locale=None, pure=True, v2=False):
         'url': user['url'],
         'timestamp_utc': timestamp_utc,
         'local_time': local_time,
-        'location': user.get('location'),
+        'location': user.get('location', ''),
         'verified': user.get('verified'),
         'protected': user.get('protected'),
         'tweets': user['statuses_count'] if not v2 else user['public_metrics']['tweet_count'],
@@ -427,11 +437,11 @@ def normalize_user(user, locale=None, pure=True, v2=False):
         'friends': user['friends_count'] if not v2 else '',
         'likes': user['favourites_count'] if not v2 else '',
         'lists': user['listed_count'] if not v2 else user['public_metrics']['listed_count'],
-        'image': user.get('profile_image_url_https'),
-        'default_profile': user.get('default_profile'),
-        'default_profile_image': user.get('default_profile_image'),
-        'witheld_in_countries': user.get('witheld_in_countries', []),
-        'witheld_scope': user.get('witheld_scope')
+        'image': user.get('profile_image_url_https') if not v2 else user.get('profile_image_url'),
+        'default_profile': user.get('default_profile', False),
+        'default_profile_image': user.get('default_profile_image', False),
+        'witheld_in_countries': user.get('witheld_in_countries', []) if not v2 else withheld_in_countries,
+        'witheld_scope': user.get('witheld_scope') if not v2 else withheld_scope
     }
 
     return normalized_user
