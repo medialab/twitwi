@@ -101,7 +101,7 @@ class TestNormalizers(object):
         payloads = [
             get_json_resource('payload-v2.json'),
             get_json_resource('payload-v2-geo.json'),
-            get_json_resource('payload-v2-tweet-retweet.json'),
+            get_json_resource('payload-v2-tweet-retweet.json')
         ]
 
         ntweets = []

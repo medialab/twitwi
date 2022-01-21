@@ -633,7 +633,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'url': format_tweet_url(user['username'], tweet['id']),
         'hashtags': sorted(hashtags),
         'mentioned_names': sorted(mentions.keys()),
-        'mentioned_ids': sorted(mentions.values()),
+        'mentioned_ids': [mentions[k] for k in sorted(mentions.keys())],
         'collection_time': get_collection_time(),
         'user_id': user['id'],
         'user_screen_name': user['username'],

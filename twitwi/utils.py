@@ -52,10 +52,6 @@ def validate_payload_v2(payload):
         return False
 
     # NOTE: not sure it cannot be absent altogether
-    if 'meta' not in payload or not isinstance(payload['meta'], dict):
-        return False
-
-    # NOTE: not sure it cannot be absent altogether
     if 'includes' not in payload or not isinstance(payload['includes'], dict):
         return False
 
