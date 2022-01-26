@@ -12,3 +12,7 @@ class TwitwiError(Exception):
 
 class TwitterWrapperMaxAttemptsExceeded(TwitwiError):
     pass
+
+
+class ApiVersionError(TwitwiError):
+    pass

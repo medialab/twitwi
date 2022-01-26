@@ -10,7 +10,7 @@ from time import sleep, time
 from operator import itemgetter
 from twitter import Twitter, OAuth, OAuth2, TwitterHTTPError, Twitter2
 
-from twitwi.exceptions import TwitterWrapperMaxAttemptsExceeded
+from twitwi.exceptions import TwitterWrapperMaxAttemptsExceeded, ApiVersionError
 from twitwi.constants_api_v2 import APP_ONLY_ROUTES
 
 DEFAULT_MAX_ATTEMPTS = 5
@@ -31,6 +31,13 @@ class TwitterWrapper(object):
 
     def __init__(self, token, token_secret, consumer_key, consumer_secret,
                  listener=None, api_version='1.1'):
+
+        if not isinstance(api_version, str):
+            api_version = str(api_version)
+
+        if api_version not in ['1.1', '2']:
+            raise ApiVersionError('API version can only be \'1.1\' or \'2\'.')
+
         self.oauth = OAuth(
             token,
             token_secret,
