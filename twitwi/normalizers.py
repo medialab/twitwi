@@ -380,13 +380,15 @@ def resolve_user_entities(user):
         for k in user['entities']:
             if 'urls' in user['entities'][k]:
                 for url in user['entities'][k]['urls']:
+                    if 'expanded_url' not in url:
+                        continue
                     if not url['expanded_url']:
                         continue
                     if k in user:
                         user[k] = user[k].replace(url['url'], url['expanded_url'])
 
 
-def normalize_user(user, locale=None, pure=True):
+def normalize_user(user, locale=None, pure=True, v2=False):
     """
     Function "normalizing" a user as returned by Twitter's API in order to
     cleanup and optimize some fields.
@@ -409,29 +411,37 @@ def normalize_user(user, locale=None, pure=True):
 
     resolve_user_entities(user)
 
-    timestamp_utc, local_time = get_dates(user['created_at'], locale)
+    timestamp_utc, local_time = get_dates(user['created_at'], locale, v2)
+
+    if v2 and 'withheld' in user:
+        withheld = user['withheld']
+        withheld_in_countries = withheld.get('country_codes', [])
+        withheld_scope = withheld.get('withheld_scope', '')
+    else:
+        withheld_in_countries = []
+        withheld_scope = ''
 
     normalized_user = {
-        'id': user['id_str'],
-        'screen_name': user['screen_name'],
+        'id': user['id_str'] if not v2 else user['id'],
+        'screen_name': user['screen_name'] if not v2 else user['username'],
         'name': user['name'],
         'description': user['description'],
         'url': user['url'],
         'timestamp_utc': timestamp_utc,
         'local_time': local_time,
-        'location': user.get('location'),
+        'location': user.get('location', ''),
         'verified': user.get('verified'),
         'protected': user.get('protected'),
-        'tweets': user['statuses_count'],
-        'followers': user['followers_count'],
-        'friends': user['friends_count'],
-        'likes': user['favourites_count'],
-        'lists': user['listed_count'],
-        'image': user.get('profile_image_url_https'),
-        'default_profile': user.get('default_profile'),
-        'default_profile_image': user.get('default_profile_image'),
-        'witheld_in_countries': user.get('witheld_in_countries', []),
-        'witheld_scope': user.get('witheld_scope')
+        'tweets': user['statuses_count'] if not v2 else user['public_metrics']['tweet_count'],
+        'followers': user['followers_count'] if not v2 else user['public_metrics']['followers_count'],
+        'friends': user['friends_count'] if not v2 else user['public_metrics']['following_count'],
+        'likes': user['favourites_count'] if not v2 else 0,
+        'lists': user['listed_count'] if not v2 else user['public_metrics']['listed_count'],
+        'image': user.get('profile_image_url_https') if not v2 else user.get('profile_image_url'),
+        'default_profile': user.get('default_profile', ''),
+        'default_profile_image': user.get('default_profile_image', ''),
+        'witheld_in_countries': user.get('witheld_in_countries', []) if not v2 else withheld_in_countries,
+        'witheld_scope': user.get('witheld_scope') if not v2 else withheld_scope
     }
 
     return normalized_user
@@ -468,10 +478,13 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     for hashtag in entities.get('hashtags', []):
         hashtags.add(hashtag['tag'])
 
-    mentions = set()
+    mentions = {}
 
     for mention in entities.get('mentions', []):
-        mentions.add(mention['username'])
+        if 'id' in mention:
+            mentions[mention['username']] = mention['id']
+        else:
+            mentions[mention['username']] = users_by_screen_name[mention['username']]['id']
 
     place_info = {}
 
@@ -487,7 +500,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 place_info['lat'] = lat
 
         if 'place_id' in geo_data:
-            place_data = places_by_id[geo_data['place_id']]
+            place_data = places_by_id.get(geo_data['place_id'], {})
 
             if 'country_code' in place_data:
                 place_info['place_country_code'] = place_data['country_code']
@@ -511,10 +524,13 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     reply_info = {}
 
     if 'replied_to' in refs:
-        reply = tweets_by_id[refs['replied_to']]
-        reply_info['to_username'] = users_by_id[reply['author_id']]['username']
-        reply_info['to_userid'] = reply['author_id']
-        reply_info['to_tweetid'] = reply['id']
+        reply = tweets_by_id.get(refs['replied_to'], {})
+        if 'author_id' in reply:
+            reply_info['to_username'] = users_by_id[reply['author_id']]['username']
+        else:
+            reply_info['to_username'] = ''
+        reply_info['to_userid'] = reply.get('author_id', '')
+        reply_info['to_tweetid'] = reply.get('id', '')
 
     # Retweet
     retweet_info = {}
@@ -611,8 +627,8 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 media_data = media_by_key[media_key]
 
                 medias.append((
-                    media_data['url'],
-                    '%s_%s' % (source_id, extract_media_name_from_url(media_data['url'])),
+                    media_data.get('url', ''),
+                    '%s_%s' % (source_id, extract_media_name_from_url(media_data.get('url', ''))),
                     media_data['type']
                 ))
 
@@ -626,8 +642,8 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'text': unescape(text),
         'url': format_tweet_url(user['username'], tweet['id']),
         'hashtags': sorted(hashtags),
-        'mentioned_names': sorted(mentions),
-        'mentioned_ids': sorted(users_by_screen_name[name]['id'] for name in mentions),
+        'mentioned_names': sorted(mentions.keys()),
+        'mentioned_ids': [mentions[k] for k in sorted(mentions.keys())],
         'collection_time': get_collection_time(),
         'user_id': user['id'],
         'user_screen_name': user['username'],

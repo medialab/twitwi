@@ -97,3 +97,9 @@ LIST_TWEETS_OR_MEMBERS_PARAMS = {
 }
 
 LIST_MEMBERS_EXPANSIONS = 'pinned_tweet_id'
+
+APP_ONLY_ROUTES = {
+    'tweets/counts/recent',
+    'tweets/counts/all',
+    'tweets/search/all'
+}

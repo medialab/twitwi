@@ -10,7 +10,8 @@ from time import sleep, time
 from operator import itemgetter
 from twitter import Twitter, OAuth, OAuth2, TwitterHTTPError, Twitter2
 
-from twitwi.exceptions import TwitterWrapperMaxAttemptsExceeded
+from twitwi.exceptions import TwitterWrapperMaxAttemptsExceeded, ApiVersionError
+from twitwi.constants_api_v2 import APP_ONLY_ROUTES
 
 DEFAULT_MAX_ATTEMPTS = 5
 
@@ -29,7 +30,14 @@ NO_RETRY_STATUSES = set([
 class TwitterWrapper(object):
 
     def __init__(self, token, token_secret, consumer_key, consumer_secret,
-                 listener=None, api_version=None):
+                 listener=None, api_version='1.1'):
+
+        if not isinstance(api_version, str):
+            api_version = str(api_version)
+
+        if api_version not in ['1.1', '2']:
+            raise ApiVersionError('API version can only be \'1.1\' or \'2\'.')
+
         self.oauth = OAuth(
             token,
             token_secret,
@@ -50,32 +58,24 @@ class TwitterWrapper(object):
 
         self.oauth2 = OAuth2(bearer_token=bearer_token)
 
+        self.auth = {}
+        self.waits = {}
+
         if api_version == '2':
             self.endpoints = {
                 'user': Twitter2(auth=self.oauth),
                 'app': Twitter2(auth=self.oauth2)
             }
 
-            self.auth = {
-                'tweets/counts/recent': 'app',
-                'tweets/counts/all': 'app',
-                'tweets/search/all': 'app'
-            }
-
-            self.waits = {
-                'tweets/counts/recent': {'app': 0},
-                'tweets/counts/all': {'app': 0},
-                'tweets/search/all': {'app': 0}
-            }
+            for route in APP_ONLY_ROUTES:
+                self.auth[route] = 'app'
+                self.waits[route] = {'app': 0}
 
         else:
             self.endpoints = {
                 'user': Twitter(auth=self.oauth),
                 'app': Twitter(auth=self.oauth2)
             }
-
-            self.auth = {}
-            self.waits = {}
 
         self.listener = listener
 
