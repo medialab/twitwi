@@ -635,6 +635,8 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     if collection_source is None:
         collection_source = tweet.get('collection_source')
 
+    sorted_mentions = sorted(mentions.keys())
+
     normalized_tweet = {
         'id': tweet['id'],
         'local_time': local_time,
@@ -642,8 +644,8 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'text': unescape(text),
         'url': format_tweet_url(user['username'], tweet['id']),
         'hashtags': sorted(hashtags),
-        'mentioned_names': sorted(mentions.keys()),
-        'mentioned_ids': [mentions[k] for k in sorted(mentions.keys())],
+        'mentioned_names': sorted_mentions,
+        'mentioned_ids': [mentions[k] for k in sorted_mentions],
         'collection_time': get_collection_time(),
         'user_id': user['id'],
         'user_screen_name': user['username'],
