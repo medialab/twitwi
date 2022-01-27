@@ -438,8 +438,8 @@ def normalize_user(user, locale=None, pure=True, v2=False):
         'likes': user['favourites_count'] if not v2 else 0,
         'lists': user['listed_count'] if not v2 else user['public_metrics']['listed_count'],
         'image': user.get('profile_image_url_https') if not v2 else user.get('profile_image_url'),
-        'default_profile': user.get('default_profile', ''),
-        'default_profile_image': user.get('default_profile_image', ''),
+        'default_profile': user.get('default_profile', False),
+        'default_profile_image': user.get('default_profile_image', False),
         'witheld_in_countries': user.get('witheld_in_countries', []) if not v2 else withheld_in_countries,
         'witheld_scope': user.get('witheld_scope') if not v2 else withheld_scope
     }
