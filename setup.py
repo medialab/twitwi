@@ -4,7 +4,7 @@ with open('./README.md', 'r') as f:
     long_description = f.read()
 
 setup(name='twitwi',
-      version='0.9.3-alpha',
+      version='0.9.3-alpha1',
       description='A collection of Twitter-related helper functions for python.',
       long_description=long_description,
       long_description_content_type='text/markdown',
