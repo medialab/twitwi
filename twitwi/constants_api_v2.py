@@ -1,102 +1,124 @@
-TWEETS_LOOKUP_PARAMS = {
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld',
-    'media.fields': 'media_key,type,duration_ms,height,preview_image_url,public_metrics,width,alt_text',
-    'poll.fields': 'id,options,duration_minutes,end_datetime,voting_status',
-    'place.fields': 'full_name,id,contained_within,country,country_code,geo,name,place_type',
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld'
+TWEET_FIELDS = {
+    'attachments',
+    'author_id',
+    'context_annotations',
+    'conversation_id',
+    'created_at',
+    'entities',
+    'geo',
+    'id',
+    'in_reply_to_user_id',
+    'lang',
+    'possibly_sensitive',
+    'public_metrics',
+    'referenced_tweets',
+    'reply_settings',
+    'source',
+    'text',
+    'withheld'
 }
 
-TWEETS_LOOKUP_EXPANSIONS = 'author_id,referenced_tweets.id,in_reply_to_user_id,attachments.media_keys,attachments.poll_ids,geo.place_id,entities.mentions.username,referenced_tweets.id.author_id'
-
-USER_TWEET_OR_MENTION_TIMELINE_EXPANSIONS = 'attachments.poll_ids,attachments.media_keys,author_id,entities.mentions.username,geo.place_id,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id'
-
-USER_TWEET_OR_MENTION_TIMELINE_PARAMS = {
-    'media.fields': 'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics,non_public_metrics,organic_metrics,promoted_metrics,alt_text',
-    'poll.fields': 'id,options,duration_minutes,end_datetime,voting_status',
-    'place.fields': 'full_name,id,contained_within,country,country_code,geo,name,place_type',
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld',
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld'
+MEDIA_FIELDS = {
+    'media_key',
+    'type',
+    'duration_ms',
+    'height',
+    'preview_image_url',
+    'public_metrics',
+    'width',
+    'alt_text'
 }
 
-SEARCH_TWEETS_EXPANSIONS = 'attachments.poll_ids,attachments.media_keys,author_id,entities.mentions.username,geo.place_id,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id'
-
-SEARCH_TWEETS_PARAMS = {
-    'media.fields': 'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics,non_public_metrics,organic_metrics,promoted_metrics,alt_text',
-    'poll.fields': 'id,options,duration_minutes,end_datetime,voting_status',
-    'place.fields': 'full_name,id,contained_within,country,country_code,geo,name,place_type',
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld',
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld'
+POLL_FIELDS = {
+    'id',
+    'options',
+    'duration_minutes',
+    'end_datetime',
+    'voting_status'
 }
 
-# only the last 100 retweeters
-RETWEETERS_EXPANSIONS = 'pinned_tweet_id'
-
-RETWEETERS_PARAMS = {
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld',
-    'media.fields': 'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics,non_public_metrics,organic_metrics,promoted_metrics,alt_text',
-    'poll.fields': 'id,options,duration_minutes,end_datetime,voting_status',
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld',
-    'place.fields': 'full_name,id,contained_within,country,country_code,geo,name,place_type'
+PLACE_FIELDS = {
+    'full_name',
+    'id',
+    'contained_within',
+    'country',
+    'country_code',
+    'geo',
+    'name',
+    'place_type'
 }
 
-LIKED_BY_USERS_EXPANSIONS = 'pinned_tweet_id'
-
-LIKED_BY_USERS_PARAMS = {
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld',
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld',
-    'media.fields': 'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics,non_public_metrics,organic_metrics,promoted_metrics,alt_text',
-    'poll.fields': 'id,options,duration_minutes,end_datetime,voting_status',
-    'place.fields': 'full_name,id,contained_within,country,country_code,geo,name,place_type'
+USER_FIELDS = {
+    'id',
+    'name',
+    'username',
+    'created_at',
+    'description',
+    'entities',
+    'location',
+    'pinned_tweet_id',
+    'profile_image_url',
+    'protected',
+    'public_metrics',
+    'url',
+    'verified',
+    'withheld'
 }
 
-LIKED_TWEETS_EXPANSIONS = 'attachments.poll_ids,attachments.media_keys,author_id,entities.mentions.username,geo.place_id,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id'
-
-LIKED_TWEETS_PARAMS = {
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld',
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld',
-    'media.fields': 'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics,non_public_metrics,organic_metrics,promoted_metrics,alt_text',
-    'poll.fields': 'id,options,duration_minutes,end_datetime,voting_status',
-    'place.fields': 'full_name,id,contained_within,country,country_code,geo,name,place_type'
+TWEET_EXPANSIONS = {
+    'author_id',
+    'referenced_tweets.id',
+    'in_reply_to_user_id',
+    'attachments.media_keys',
+    'attachments.poll_ids',
+    'geo.place_id',
+    'entities.mentions.username',
+    'referenced_tweets.id.author_id'
 }
 
-USERS_LOOKUP_EXPANSIONS = 'pinned_tweet_id'
-
-USERS_LOOKUP_PARAMS = {
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld',
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld'
+TWEET_PARAMS = {
+    'tweet.fields': ','.join(field for field in TWEET_FIELDS),
+    'media.fields': ','.join(field for field in MEDIA_FIELDS),
+    'poll.fields': ','.join(field for field in POLL_FIELDS),
+    'place.fields': ','.join(field for field in PLACE_FIELDS),
+    'user.fields': ','.join(field for field in USER_FIELDS)
 }
 
-FOLLOWING_OR_FOLLOWERS_EXPANSIONS = 'pinned_tweet_id'
+USER_EXPANSIONS = {
+    'pinned_tweet_id'
+}
 
-FOLLOWING_OR_FOLLOWERS_PARAMS = {
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld',
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld'
+USER_PARAMS = {
+    'user.fields': ','.join(field for field in USER_FIELDS),
+    'tweet.fields': ','.join(field for field in TWEET_FIELDS)
 }
 
 # Lists
 
-LIST_LOOKUP_EXPANSIONS = 'owner_id'
-
-LIST_LOOKUP_PARAMS = {
-    'list.fields': 'created_at,follower_count,member_count,private,description,owner_id',
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld'
+LIST_FIELDS = {
+    'created_at',
+    'follower_count',
+    'member_count',
+    'private',
+    'description',
+    'owner_id'
 }
 
-OWNED_LISTS_EXPANSIONS = 'owner_id'
+LIST_EXPANSIONS = 'owner_id'
 
-OWNED_LISTS_PARAMS = {
-    'list.fields': 'created_at,follower_count,member_count,private,description,owner_id',
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld'
+LIST_PARAMS = {
+    'list.fields': ','.join(field for field in LIST_FIELDS),
+    'user.fields': ','.join(field for field in USER_FIELDS)
 }
 
 LIST_TWEETS_EXPANSIONS = 'author_id'
 
-LIST_TWEETS_OR_MEMBERS_PARAMS = {
-    'tweet.fields': 'attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld',
-    'user.fields': 'id,name,username,created_at,description,entities,location,pinned_tweet_id,profile_image_url,protected,public_metrics,url,verified,withheld'
-}
-
 LIST_MEMBERS_EXPANSIONS = 'pinned_tweet_id'
+
+LIST_TWEETS_OR_MEMBERS_PARAMS = {
+    'tweet.fields': ','.join(field for field in TWEET_FIELDS),
+    'user.fields': ','.join(field for field in USER_FIELDS)
+}
 
 APP_ONLY_ROUTES = {
     'tweets/counts/recent',
