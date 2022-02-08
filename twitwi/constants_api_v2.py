@@ -77,11 +77,11 @@ TWEET_EXPANSIONS = {
 }
 
 TWEET_PARAMS = {
-    'tweet.fields': ','.join(field for field in TWEET_FIELDS),
-    'media.fields': ','.join(field for field in MEDIA_FIELDS),
-    'poll.fields': ','.join(field for field in POLL_FIELDS),
-    'place.fields': ','.join(field for field in PLACE_FIELDS),
-    'user.fields': ','.join(field for field in USER_FIELDS)
+    'tweet.fields': ','.join(TWEET_FIELDS),
+    'media.fields': ','.join(MEDIA_FIELDS),
+    'poll.fields': ','.join(POLL_FIELDS),
+    'place.fields': ','.join(PLACE_FIELDS),
+    'user.fields': ','.join(USER_FIELDS)
 }
 
 USER_EXPANSIONS = {
@@ -89,8 +89,8 @@ USER_EXPANSIONS = {
 }
 
 USER_PARAMS = {
-    'user.fields': ','.join(field for field in USER_FIELDS),
-    'tweet.fields': ','.join(field for field in TWEET_FIELDS)
+    'user.fields': ','.join(USER_FIELDS),
+    'tweet.fields': ','.join(TWEET_FIELDS)
 }
 
 # Lists
@@ -107,8 +107,8 @@ LIST_FIELDS = {
 LIST_EXPANSIONS = 'owner_id'
 
 LIST_PARAMS = {
-    'list.fields': ','.join(field for field in LIST_FIELDS),
-    'user.fields': ','.join(field for field in USER_FIELDS)
+    'list.fields': ','.join(LIST_FIELDS),
+    'user.fields': ','.join(USER_FIELDS)
 }
 
 LIST_TWEETS_EXPANSIONS = 'author_id'
@@ -116,8 +116,8 @@ LIST_TWEETS_EXPANSIONS = 'author_id'
 LIST_MEMBERS_EXPANSIONS = 'pinned_tweet_id'
 
 LIST_TWEETS_OR_MEMBERS_PARAMS = {
-    'tweet.fields': ','.join(field for field in TWEET_FIELDS),
-    'user.fields': ','.join(field for field in USER_FIELDS)
+    'tweet.fields': ','.join(TWEET_FIELDS),
+    'user.fields': ','.join(USER_FIELDS)
 }
 
 APP_ONLY_ROUTES = {
