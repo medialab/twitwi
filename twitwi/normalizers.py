@@ -409,7 +409,10 @@ def normalize_user(user, locale=None, pure=True, v2=False):
 
     resolve_user_entities(user)
 
-    timestamp_utc, local_time = get_dates(user['created_at'], locale, v2)
+    timestamp_utc = ''
+    local_time = ''
+    if 'created_at' in user:
+        timestamp_utc, local_time = get_dates(user['created_at'], locale, v2)
 
     if v2 and 'withheld' in user:
         withheld = user['withheld']
