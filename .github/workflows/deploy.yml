@@ -6,6 +6,7 @@ on:
 
 jobs:
   build:
+    if: github.repository == 'medialab/twitwi'
     runs-on: ubuntu-20.04
 
     steps:
