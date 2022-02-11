@@ -11,7 +11,7 @@ from operator import itemgetter
 from twitter import Twitter, OAuth, OAuth2, TwitterHTTPError, Twitter2
 
 from twitwi.exceptions import TwitterWrapperMaxAttemptsExceeded
-from twitwi.constants_api_v2 import APP_ONLY_ROUTES
+from twitwi.constants import APP_ONLY_ROUTES
 
 DEFAULT_MAX_ATTEMPTS = 5
 

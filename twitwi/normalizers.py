@@ -380,7 +380,7 @@ def resolve_user_entities(user):
         for k in user['entities']:
             if 'urls' in user['entities'][k]:
                 for url in user['entities'][k]['urls']:
-                    if not url.get('expanded_url', None):
+                    if not url.get('expanded_url'):
                         continue
                     if k in user:
                         user[k] = user[k].replace(url['url'], url['expanded_url'])
