@@ -433,7 +433,7 @@ def normalize_user(user, locale=None, pure=True, v2=False):
         'tweets': user['statuses_count'] if not v2 else user['public_metrics']['tweet_count'],
         'followers': user['followers_count'] if not v2 else user['public_metrics']['followers_count'],
         'friends': user['friends_count'] if not v2 else user['public_metrics']['following_count'],
-        'likes': user['favourites_count'] if not v2 else 0,
+        'likes': user['favourites_count'] if not v2 else None,
         'lists': user['listed_count'] if not v2 else user['public_metrics']['listed_count'],
         'image': user.get('profile_image_url_https') if not v2 else user.get('profile_image_url'),
         'default_profile': user.get('default_profile', False),
