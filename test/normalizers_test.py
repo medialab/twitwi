@@ -145,3 +145,21 @@ class TestNormalizers(object):
         for t1, t2 in zip(all_ntweets, test_data):
             assert 'collection_time' in t1 and isinstance(t1['collection_time'], str)
             compare_tweets(t2['id'], t1, t2)
+
+        alternative_payload = get_json_resource('alternative-payload-v2.json')
+
+        normalized_tweets = normalize_tweets_payload_v2(alternative_payload, extract_referenced_tweets=True)
+
+        all_ntweets = []
+        assert sorted(set(t['id'] for t in normalized_tweets)) == sorted(t['id'] for t in normalized_tweets)
+        all_ntweets.extend(normalized_tweets)
+
+        all_ntweets = sorted_uniq(all_ntweets, key=itemgetter('id'))
+
+        test_data = get_json_resource('normalized-alternative-payload.json')
+
+        test_data = sorted_uniq(test_data, key=itemgetter('id'))
+
+        for t1, t2 in zip(all_ntweets, test_data):
+            assert 'collection_time' in t1 and isinstance(t1['collection_time'], str)
+            compare_tweets(t2['id'], t1, t2)
