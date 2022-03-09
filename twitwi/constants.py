@@ -84,7 +84,10 @@ TWEET_FIELDS = [
 
 TWEET_FIELDS_TCAT = {
 
-    'identical_to_tcat': {
+    'identical_fields': {
+        'id': 'id',
+        'timestamp_utc': 'time',
+        'local_time': 'created_at',
         'user_screen_name': 'from_user_name',
         'text': 'text',
         'possibly_sensitive': 'possibly_sensitive',
@@ -109,16 +112,20 @@ TWEET_FIELDS_TCAT = {
         'user_friends': 'from_user_friendcount',
         'user_likes': 'from_user_favourites_count',
         'user_lists': 'from_user_listed',
+        'user_created_at': 'from_user_created_at',
         'links': 'urls_expanded',
         'domains': 'domains',
         'mentioned_ids': 'mentions',
         'hashtags': 'hashtags',
         'media_urls': 'media_urls',
         'media_types': 'media_type'
-
     },
 
-    'removed_from_tcat': {
+    'modified_fields': [
+        'source'
+    ],
+
+    'removed_fields': [
         'filter_level',
         'witheld_copyright',
         'withheld_scope',
@@ -133,40 +140,36 @@ TWEET_FIELDS_TCAT = {
         'media_indice_end',
         'photo_sizes_width',
         'photo_sizes_height',
-        'photo_resize'
-    },
+        'photo_resize',
+    ],
 
-    'added_to_tcat': {
-        'user_timestamp_utc': 'user_timestamp_utc',
-        'collected_via': 'collected_via',
-        'match_query': 'match_query',
-        'retweeted_id': 'retweeted_id',
-        'retweeted_user': 'retweeted_user',
-        'retweeted_user_id': 'retweeted_user_id',
-        'retweeted_timestamp_utc': 'retweeted_timestamp_utc',
-        'quoted_user': 'quoted_user',
-        'quoted_user_id': 'quoted_user_id',
-        'quoted_timestamp_utc': 'quoted_timestamp_utc',
-        'collection_time': 'collection_time',
-        'url': 'url',
-        'place_country_code': 'place_country_code',
-        'place_name': 'place_name',
-        'place_type': 'place_type',
-        'place_coordinates': 'place_coordinates',
-        'media_files': 'media_files',
-        'mentioned_names': 'mentioned_names'
-    },
-
-    'modified': {
-        'timestamp_utc': 'time',
-        'local_time': 'created_at',
-        'source': 'source',
-        'user_created_at': 'from_user_created_at',
-    }
+    'added_fields': [
+        'user_timestamp_utc',
+        'source_url',
+        'source_name',
+        'collected_via',
+        'match_query',
+        'retweeted_id',
+        'retweeted_user',
+        'retweeted_user_id',
+        'retweeted_timestamp_utc',
+        'quoted_user',
+        'quoted_user_id',
+        'quoted_timestamp_utc',
+        'collection_time',
+        'url',
+        'place_country_code',
+        'place_name',
+        'place_type',
+        'place_coordinates',
+        'media_files',
+        'mentioned_names'
+    ],
 }
 
 TWEET_PLURAL_FIELDS = {
     'links',
+    'urls_expanded',
     'domains',
     'hashtags',
     'collected_via',
@@ -175,7 +178,8 @@ TWEET_PLURAL_FIELDS = {
     'media_types',
     'alt_texts',
     'mentioned_names',
-    'mentioned_ids'
+    'mentioned_ids',
+    'mentions'
 }
 
 TWEET_BOOLEAN_FIELDS = {
