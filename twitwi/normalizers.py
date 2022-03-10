@@ -36,7 +36,7 @@ def format_qt_text(user, text, quoted_text, url):
 
 
 def format_tweet_url(screen_name, tweet_id):
-    return 'https://twitter.com/%s/statuses/%s' % (screen_name, tweet_id)
+    return 'https://twitter.com/%s/status/%s' % (screen_name, tweet_id)
 
 
 def extract_media_name_from_url(media_url):
@@ -247,7 +247,6 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
             results.extend(nested)
 
         rtime = rtweet['timestamp_utc']
-        text = format_rt_text(rtu, rtweet['text'])
 
         resolve_entities(tweet, 'retweeted')
 
@@ -275,11 +274,10 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
             results.extend(nested)
 
         if 'quoted_status_permalink' in tweet:
-            qturl = tweet['quoted_status_permalink']['url']
+            qturl = tweet['quoted_status_permalink']['expanded']
         else:
             qturl = qtweet['url']
         qtime = qtweet['timestamp_utc']
-        text = format_qt_text(qtu, text, qtweet['text'], qturl)
 
         resolve_entities(tweet, 'quoted')
 
@@ -332,6 +330,12 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
 
         for mention in tweet['entities'].get('user_mentions', []):
             mentions[mention['screen_name'].lower()] = mention['id_str']
+
+    if rtu:
+        text = format_rt_text(rtu, rtweet['text'])
+
+    if qtu:
+        text = format_qt_text(qtu, text, qtweet['text'], qturl)
 
     timestamp_utc, local_time = get_dates(tweet['created_at'], locale)
     text = unescape(text)
