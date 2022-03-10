@@ -558,11 +558,6 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
             retweet_info['retweeted_user_id'] = normalized_retweet['user_id']
             retweet_info['retweeted_timestamp_utc'] = normalized_retweet['timestamp_utc']
 
-            text = format_rt_text(
-                normalized_retweet['user_screen_name'],
-                normalized_retweet['text']
-            )
-
     # Quoted
     quote_info = {}
     normalized_quote = None
@@ -587,13 +582,6 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
             quote_info['quoted_user_id'] = normalized_quote['user_id']
             quote_info['quoted_timestamp_utc'] = normalized_quote['timestamp_utc']
 
-            text = format_qt_text(
-                normalized_quote['user_screen_name'],
-                text,
-                normalized_quote['text'],
-                normalized_quote['url']
-            )
-
     # Replace urls in text
     links = set()
 
@@ -607,6 +595,20 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
             replacement_url = url_data['url']
 
         links.add(custom_normalize_url(replacement_url))
+
+    if normalized_retweet:
+        text = format_rt_text(
+            normalized_retweet['user_screen_name'],
+            normalized_retweet['text']
+        )
+
+    if normalized_quote:
+        text = format_qt_text(
+            normalized_quote['user_screen_name'],
+            text,
+            normalized_quote['text'],
+            normalized_quote['url']
+        )
 
     # Metrics
     is_retweet = 'retweeted' in refs
