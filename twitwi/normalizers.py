@@ -104,7 +104,6 @@ META_FIELD_TRANSLATIONS = {
 }
 
 USER_META_FIELDS = [
-    'id_str',
     'screen_name',
     'name',
     'friends_count',
@@ -141,17 +140,13 @@ def grab_extra_meta(source, result, locale=None):
 
     for meta in USER_META_FIELDS:
         key = 'user_%s' % meta.replace('_count', '')
-
         if key in source:
-            result[nostr_field(key)] = source[key]
-        elif nostr_field(key) in source:
-            result[nostr_field(key)] = str(source[nostr_field(key)])
+            result[key] = source[key]
         elif 'user' in source and meta in source['user']:
-            result[nostr_field(key)] = source['user'][meta]
-        elif 'user' in source and nostr_field(meta) in source['user']:
-            result[nostr_field(key)] = source['user'][nostr_field(meta)]
+            result[key] = source['user'][meta] if source['user'][meta] != "" else None
 
     if 'user' in source:
+        result['user_id'] = source['user']['id_str']
         result['user_tweets'] = source['user']['statuses_count']
         result['user_likes'] = source['user']['favourites_count']
         result['user_lists'] = source['user']['listed_count']
@@ -656,9 +651,9 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'user_name': user['name'],
         'user_image': user['profile_image_url'],
         'user_url': user_url or None,
-        'user_location': user.get('location'),
+        'user_location': user.get("location") if user.get("location") else None,
         'user_verified': user['verified'],
-        'user_description': user['description'],
+        'user_description': user['description'] if user["description"] else None,
         'user_tweets': user_public_metrics['tweet_count'],
         'user_followers': user_public_metrics['followers_count'],
         'user_friends': user_public_metrics['following_count'],
