@@ -706,6 +706,9 @@ def normalize_tweets_payload_v2(payload, locale=None, extract_referenced_tweets=
     if not validate_payload_v2(payload):
         raise TypeError('given value is not a Twitter API v2 payload')
 
+    if 'data' not in payload:
+        return []
+
     users_by_screen_name = includes_index(payload, 'users', index_key='username')
     users_by_id = includes_index(payload, 'users')
     places_by_id = includes_index(payload, 'places')
