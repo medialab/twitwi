@@ -96,6 +96,9 @@ class TestNormalizers(object):
         with pytest.raises(TypeError):
             normalize_tweets_payload_v2('test')
 
+        empty_payload = {'meta': {'result_count': 0}}
+        assert normalize_tweets_payload_v2(empty_payload) == []
+
         tz = timezone('Europe/Paris')
 
         payloads = [

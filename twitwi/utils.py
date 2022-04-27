@@ -48,7 +48,13 @@ def validate_payload_v2(payload):
     if not isinstance(payload, dict):
         return False
 
-    if 'data' not in payload or not isinstance(payload['data'], list):
+    if 'data' not in payload:
+        if 'meta' in payload and 'result_count' in payload['meta'] and payload['meta']['result_count'] == 0:
+            return True
+        else:
+            return False
+
+    if not isinstance(payload['data'], list):
         return False
 
     # NOTE: not sure it cannot be absent altogether
