@@ -99,6 +99,21 @@ class TwitterWrapper(object):
                 # Rate limited
                 if e.e.code == 429:
                     now = int(time())
+
+                    # If there are still API calls available, we obviously
+                    # queried Twitter too fast and should just let it breathe
+                    remaining = int(e.e.headers['X-Rate-Limit-Remaining'])
+                    if remaining > 0:
+                        attempts += 1
+
+                        if callable(self.listener):
+                            self.listener('error', {
+                                'error': e
+                            })
+
+                        sleep(1)
+                        continue
+
                     reset = int(e.e.headers['X-Rate-Limit-Reset'])
 
                     if route not in self.waits:
