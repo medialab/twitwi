@@ -107,8 +107,11 @@ class TwitterWrapper(object):
                         attempts += 1
 
                         if callable(self.listener):
-                            self.listener('error', {
-                                'error': e
+                            self.listener('excessive-rate', {
+                                'error': e,
+                                'route': route,
+                                'attempts': attempts,
+                                'auth': auth
                             })
 
                         sleep(1)
