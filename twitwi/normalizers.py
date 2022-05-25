@@ -280,7 +280,6 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
     media_urls = []
     media_files = []
     media_types = []
-    
     media_alt_texts = []
 
     links = set()
