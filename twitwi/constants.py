@@ -76,7 +76,7 @@ TWEET_FIELDS = [
     'media_urls',                     # list of links to images/videos embedded, separated by |
     'media_files',                    # list of filenames of images/videos embedded and downloaded, separated by |, ignorable when medias collections isn't enabled
     'media_types',                    # list of media types (photo, video, animated gif), separated by |
-    'alt_texts',                      # list of alternative texts, separated by |
+    'media_alt_texts',                # list of alternative texts (image descriptions), separated by |
     'mentioned_names',                # list of text IDs of users mentionned, separated by |
     'mentioned_ids',                  # list of digital IDs of users mentionned, separated by |
     'hashtags'                        # list of hashtags used, lowercased, separated by |
@@ -176,7 +176,7 @@ TWEET_PLURAL_FIELDS = {
     'media_urls',
     'media_files',
     'media_types',
-    'alt_texts',
+    'media_alt_texts',
     'mentioned_names',
     'mentioned_ids',
     'mentions'
