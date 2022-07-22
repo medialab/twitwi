@@ -159,6 +159,9 @@ class TestNormalizers(object):
 
         all_ntweets = sorted_uniq(all_ntweets, key=itemgetter('id'))
 
+        # from test.utils import dump_json_resource
+        # dump_json_resource(all_ntweets, 'normalized-alternative-payload.json')
+
         test_data = get_json_resource('normalized-alternative-payload.json')
 
         test_data = sorted_uniq(test_data, key=itemgetter('id'))
