@@ -141,30 +141,7 @@ TWEET_FIELDS_TCAT = {
         'photo_sizes_width',
         'photo_sizes_height',
         'photo_resize',
-    ],
-
-    'added_fields': [
-        'user_timestamp_utc',
-        'source_url',
-        'source_name',
-        'collected_via',
-        'match_query',
-        'retweeted_id',
-        'retweeted_user',
-        'retweeted_user_id',
-        'retweeted_timestamp_utc',
-        'quoted_user',
-        'quoted_user_id',
-        'quoted_timestamp_utc',
-        'collection_time',
-        'url',
-        'place_country_code',
-        'place_name',
-        'place_type',
-        'place_coordinates',
-        'media_files',
-        'mentioned_names'
-    ],
+    ]
 }
 
 TWEET_PLURAL_FIELDS = {
