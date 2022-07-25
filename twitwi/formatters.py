@@ -7,12 +7,20 @@
 #
 from twitwi.constants import (
     TWEET_FIELDS,
+    TWEET_FIELDS_TCAT,
     TWEET_BOOLEAN_FIELDS,
     TWEET_PLURAL_FIELDS,
     USER_FIELDS,
     USER_BOOLEAN_FIELDS,
     USER_PLURAL_FIELDS
 )
+
+
+def apply_tcat_format(item):
+    result = {v: item[k] for k, v in TWEET_FIELDS_TCAT['identical_fields'].items() if k in item}
+    result.update({k: item[k] for k in TWEET_FIELDS_TCAT['added_fields'] + TWEET_FIELDS_TCAT['modified_fields'] if k in item})
+    result['source'] = "<a href=""{}"" rel=""nofollow"">{}</a>".format(item["source_url"], item["source_name"])
+    return result
 
 
 def make_transform_into_csv_dict(plural_fields, boolean_fields):
@@ -96,5 +104,6 @@ __all__ = [
     'transform_tweet_into_csv_dict',
     'format_tweet_as_csv_row',
     'transform_user_into_csv_dict',
-    'format_user_as_csv_row'
+    'format_user_as_csv_row',
+    'apply_tcat_format'
 ]
