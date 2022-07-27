@@ -669,7 +669,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'quote_count': public_metrics['quote_count'] if not is_retweet else 0,
         'reply_count': public_metrics['reply_count'] if not is_retweet else 0,
         'lang': tweet['lang'],
-        'source': tweet['source'],
+        'source_name': tweet.get('source'),
         'links': sorted(links),
         'media_urls': [m[0] for m in medias],
         'media_files': [m[1] for m in medias],
