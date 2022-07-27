@@ -7,7 +7,7 @@
 #
 from twitwi.constants import (
     TWEET_FIELDS,
-    TWEET_FIELDS_TCAT,
+    GAZOU_TO_TCAT,
     TWEET_BOOLEAN_FIELDS,
     TWEET_PLURAL_FIELDS,
     USER_FIELDS,
@@ -17,7 +17,7 @@ from twitwi.constants import (
 
 
 def apply_tcat_format(item):
-    result = {v: item[k] for k, v in TWEET_FIELDS_TCAT['identical_fields'].items() if k in item}
+    result = {v: item[k] for k, v in GAZOU_TO_TCAT['identical_fields'].items() if k in item}
     result['source'] = "<a href=""{}"" rel=""nofollow"">{}</a>".format(item["source_url"], item["source_name"])
     return result
 

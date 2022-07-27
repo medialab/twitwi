@@ -82,7 +82,61 @@ TWEET_FIELDS = [
     'hashtags'                        # list of hashtags used, lowercased, separated by |
 ]
 
-TWEET_FIELDS_TCAT = {
+TWEET_FIELDS_TCAT = [
+    'id',
+    'time',
+    'created_at',
+    'from_user_name',
+    'text',
+    'filter_level',
+    'possibly_sensitive',
+    'withheld_copyright',
+    'withheld_scope',
+    'truncated',
+    'retweet_count',
+    'favorite_count',
+    'lang',
+    'to_user_name',
+    'in_reply_to_status_id',
+    'quoted_status_id',
+    'source',
+    'location',
+    'lat',
+    'lng',
+    'from_user_id',
+    'from_user_realname',
+    'from_user_verified',
+    'from_user_description',
+    'from_user_url',
+    'from_user_profile_image_url',
+    'from_user_utcoffset',
+    'from_user_timezone',
+    'from_user_lang',
+    'from_user_tweetcount',
+    'from_user_followercount',
+    'from_user_friendcount',
+    'from_user_favourites_count',
+    'from_user_listed',
+    'from_user_withheld_scope',
+    'from_user_created_at',
+    'urls',
+    'urls_expanded',
+    'urls_followed',
+    'domains',
+    'HTTP status code',
+    'media_id',
+    'media_urls',
+    'media_type',
+    'media_indice_start',
+    'media_indice_end',
+    'photo_sizes_width',
+    'photo_sizes_height',
+    'photo_resize',
+    'mentions',
+    'hashtags'
+]
+
+GAZOU_TO_TCAT = {
 
     'identical_fields': {
         'id': 'id',
