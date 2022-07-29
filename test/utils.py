@@ -24,4 +24,4 @@ def get_jsonl_resource(name):
 
 def dump_json_resource(data, name):
     with open(join(RESOURCES_DIR, name), 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(data, f, indent=2, ensure_ascii=True, sort_keys=True)

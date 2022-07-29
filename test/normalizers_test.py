@@ -34,6 +34,11 @@ class TestNormalizers(object):
         tests = get_json_resource('normalization.json')
         fn = partial(normalize_tweet, locale=tz)
 
+        # from test.utils import dump_json_resource
+        # for idx, test in enumerate(tests):
+        #     tests[idx]['normalized'] = fn(test['source'], extract_referenced_tweets=True)
+        # dump_json_resource(tests, 'normalization.json')
+
         # With referenced tweets
         for test in tests:
             result = fn(test['source'], extract_referenced_tweets=True)

@@ -1,465 +1,623 @@
 [
   {
-    "source": {
-      "created_at": "Fri Jan 29 16:29:05 +0000 2021",
-      "id_str": "1355191242137743365",
-      "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're tr\u2026",
-      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-      "truncated": false,
-      "in_reply_to_status_id": null,
-      "in_reply_to_status_id_str": null,
-      "in_reply_to_user_id": null,
-      "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-        "id": 1350513055,
-        "id_str": "1350513055",
-        "name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
-        "screen_name": "debmapmom2",
-        "location": "Edmond, OK",
-        "url": null,
-        "description": "WEAR A FREAKING MASK! I am antifa!  \nI'd rather be hated for being myself than loved for who I'm not...Kurt Cobain \n#fbr #resist #BLM",
-        "translator_type": "none",
-        "protected": false,
-        "verified": false,
-        "followers_count": 4121,
-        "friends_count": 4977,
-        "listed_count": 5,
-        "favourites_count": 72502,
-        "statuses_count": 4418,
-        "created_at": "Sat Apr 13 23:39:20 +0000 2013",
-        "utc_offset": null,
-        "time_zone": null,
-        "geo_enabled": true,
-        "lang": null,
-        "contributors_enabled": false,
-        "is_translator": false,
-        "profile_background_color": "C0DEED",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-        "profile_background_tile": false,
-        "profile_link_color": "1DA1F2",
-        "profile_sidebar_border_color": "C0DEED",
-        "profile_sidebar_fill_color": "DDEEF6",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1350513055/1611292161",
-        "default_profile": true,
-        "default_profile_image": false,
-        "following": null,
-        "follow_request_sent": null,
-        "notifications": null
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "retweeted_status": {
-        "created_at": "Fri Jan 29 06:54:36 +0000 2021",
-        "id": 1355046668995977219,
-        "id_str": "1355046668995977219",
-        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'\u2026 https://t.co/WDj7ABMVAb",
-        "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-        "truncated": true,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-          "id": 798953701972938752,
-          "id_str": "798953701972938752",
-          "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
-          "screen_name": "NickKnudsenUS",
-          "location": "Portland, OR",
-          "url": "http://www.demcastusa.com",
-          "description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
-          "translator_type": "none",
-          "protected": false,
-          "verified": false,
-          "followers_count": 195281,
-          "friends_count": 15570,
-          "listed_count": 796,
-          "favourites_count": 75320,
-          "statuses_count": 65634,
-          "created_at": "Wed Nov 16 18:19:41 +0000 2016",
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": false,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "profile_background_color": "000000",
-          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_tile": false,
-          "profile_link_color": "19CF86",
-          "profile_sidebar_border_color": "000000",
-          "profile_sidebar_fill_color": "000000",
-          "profile_text_color": "000000",
-          "profile_use_background_image": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/798953701972938752/1611643068",
-          "default_profile": false,
-          "default_profile_image": false,
-          "following": null,
-          "follow_request_sent": null,
-          "notifications": null
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "extended_tweet": {
-          "full_text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
-          "display_text_range": [
-            0,
-            280
-          ],
-          "entities": {
-            "hashtags": [],
-            "urls": [],
-            "user_mentions": [],
-            "symbols": []
-          }
-        },
-        "quote_count": 397,
-        "reply_count": 317,
-        "retweet_count": 8297,
-        "favorite_count": 33427,
-        "entities": {
-          "hashtags": [],
-          "urls": [
-            {
-              "url": "https://t.co/WDj7ABMVAb",
-              "expanded_url": "https://twitter.com/i/web/status/1355046668995977219",
-              "display_url": "twitter.com/i/web/status/1\u2026",
-              "indices": [
-                117,
-                140
-              ]
-            }
-          ],
-          "user_mentions": [],
-          "symbols": []
-        },
-        "favorited": false,
-        "retweeted": false,
-        "filter_level": "low",
-        "lang": "en"
-      },
-      "is_quote_status": false,
-      "quote_count": 0,
-      "reply_count": 0,
-      "retweet_count": 0,
-      "favorite_count": 0,
-      "entities": {
-        "hashtags": [],
-        "urls": [],
-        "user_mentions": [
-          {
-            "screen_name": "NickKnudsenUS",
-            "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
-            "id": 798953701972938752,
-            "id_str": "798953701972938752",
-            "indices": [
-              3,
-              17
-            ]
-          }
-        ],
-        "symbols": []
-      },
-      "favorited": false,
-      "retweeted": false,
-      "filter_level": "low",
-      "lang": "en",
-      "timestamp_ms": "1611937745018",
-      "collection_source": "stream"
-    },
     "normalized": [
       {
-        "id": "1355046668995977219",
-        "media_alt_texts": [],
-        "local_time": "2021-01-29T07:54:36",
-        "timestamp_utc": 1611903276,
-        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
-        "url": "https://twitter.com/NickKnudsenUS/status/1355046668995977219",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": null,
-        "retweeted_user": null,
-        "retweeted_user_id": null,
-        "retweeted_timestamp_utc": null,
-        "media_files": [],
-        "media_types": [],
-        "media_urls": [],
-        "links": [],
-        "links_to_resolve": false,
-        "domains": [],
-        "hashtags": [],
-        "mentioned_ids": [],
-        "mentioned_names": [],
-        "collection_time": "2021-01-29T17:29:10.218648",
         "collected_via": [
           "retweet"
         ],
-        "match_query": true,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "en",
+        "collection_time": "2022-07-29T12:15:48.802806",
         "coordinates": null,
-        "retweet_count": 8297,
+        "domains": [],
+        "hashtags": [],
+        "id": "1355046668995977219",
+        "lang": "en",
         "like_count": 33427,
-        "reply_count": 317,
-        "user_id": "798953701972938752",
-        "user_screen_name": "NickKnudsenUS",
-        "user_name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
-        "user_friends": 15570,
-        "user_followers": 195281,
-        "user_location": "Portland, OR",
-        "user_verified": false,
-        "user_description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
-        "user_created_at": "2016-11-16T19:19:41",
-        "user_tweets": 65634,
-        "user_likes": 75320,
-        "user_lists": 796,
-        "user_image": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
-        "user_url": "http://www.demcastusa.com",
-        "user_timestamp_utc": 1479320381,
-        "source_url": "https://mobile.twitter.com",
-        "source_name": "Twitter Web App"
-      },
-      {
-        "id": "1355191242137743365",
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-01-29T07:54:36",
+        "match_query": true,
         "media_alt_texts": [],
-        "local_time": "2021-01-29T17:29:05",
-        "timestamp_utc": 1611937745,
-        "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
-        "url": "https://twitter.com/debmapmom2/status/1355191242137743365",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": "1355046668995977219",
-        "retweeted_user": "NickKnudsenUS",
-        "retweeted_user_id": "798953701972938752",
-        "retweeted_timestamp_utc": 1611903276,
         "media_files": [],
         "media_types": [],
         "media_urls": [],
-        "links": [],
-        "links_to_resolve": false,
+        "mentioned_ids": [],
+        "mentioned_names": [],
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "reply_count": 317,
+        "retweet_count": 8297,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "Twitter Web App",
+        "source_url": "https://mobile.twitter.com",
+        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
+        "timestamp_utc": 1611903276,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/NickKnudsenUS/status/1355046668995977219",
+        "user_created_at": "2016-11-16T19:19:41",
+        "user_description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+        "user_followers": 195281,
+        "user_friends": 15570,
+        "user_id": "798953701972938752",
+        "user_image": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
+        "user_likes": 75320,
+        "user_lists": 796,
+        "user_location": "Portland, OR",
+        "user_name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+        "user_screen_name": "NickKnudsenUS",
+        "user_timestamp_utc": 1479320381,
+        "user_tweets": 65634,
+        "user_url": "http://www.demcastusa.com",
+        "user_verified": false
+      },
+      {
+        "collected_via": [
+          "stream"
+        ],
+        "collection_time": "2022-07-29T12:15:48.802907",
+        "coordinates": null,
         "domains": [],
         "hashtags": [],
+        "id": "1355191242137743365",
+        "lang": "en",
+        "like_count": 0,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-01-29T17:29:05",
+        "match_query": true,
+        "media_alt_texts": [],
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
         "mentioned_ids": [
           "798953701972938752"
         ],
         "mentioned_names": [
           "nickknudsenus"
         ],
-        "collection_time": "2021-02-10T14:44:22.881747",
-        "collected_via": [
-          "stream"
-        ],
-        "match_query": true,
-        "coordinates": null,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "en",
-        "retweet_count": 0,
-        "like_count": 0,
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
         "reply_count": 0,
-        "user_id": "1350513055",
-        "user_screen_name": "debmapmom2",
-        "user_name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
-        "user_friends": 4977,
-        "user_followers": 4121,
-        "user_location": "Edmond, OK",
-        "user_verified": false,
-        "user_description": "WEAR A FREAKING MASK! I am antifa!  \nI'd rather be hated for being myself than loved for who I'm not...Kurt Cobain \n#fbr #resist #BLM",
+        "retweet_count": 0,
+        "retweeted_id": "1355046668995977219",
+        "retweeted_timestamp_utc": 1611903276,
+        "retweeted_user": "NickKnudsenUS",
+        "retweeted_user_id": "798953701972938752",
+        "source_name": "Twitter for Android",
+        "source_url": "http://twitter.com/download/android",
+        "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
+        "timestamp_utc": 1611937745,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/debmapmom2/status/1355191242137743365",
         "user_created_at": "2013-04-14T01:39:20",
-        "user_tweets": 4418,
+        "user_description": "WEAR A FREAKING MASK! I am antifa!  \nI'd rather be hated for being myself than loved for who I'm not...Kurt Cobain \n#fbr #resist #BLM",
+        "user_followers": 4121,
+        "user_friends": 4977,
+        "user_id": "1350513055",
+        "user_image": "https://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
         "user_likes": 72502,
         "user_lists": 5,
-        "user_image": "https://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
-        "user_url": null,
+        "user_location": "Edmond, OK",
+        "user_name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
+        "user_screen_name": "debmapmom2",
         "user_timestamp_utc": 1365896360,
-        "source_url": "http://twitter.com/download/android",
-        "source_name": "Twitter for Android"
+        "user_tweets": 4418,
+        "user_url": null,
+        "user_verified": false
       }
-    ]
-  },
-  {
+    ],
     "source": {
-      "created_at": "Fri Jan 29 06:54:36 +0000 2021",
-      "id_str": "1355046668995977219",
-      "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'\u2026 https://t.co/WDj7ABMVAb",
-      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-      "truncated": true,
+      "collection_source": "stream",
+      "contributors": null,
+      "coordinates": null,
+      "created_at": "Fri Jan 29 16:29:05 +0000 2021",
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "id": 798953701972938752,
+            "id_str": "798953701972938752",
+            "indices": [
+              3,
+              17
+            ],
+            "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+            "screen_name": "NickKnudsenUS"
+          }
+        ]
+      },
+      "favorite_count": 0,
+      "favorited": false,
+      "filter_level": "low",
+      "geo": null,
+      "id_str": "1355191242137743365",
+      "in_reply_to_screen_name": null,
       "in_reply_to_status_id": null,
       "in_reply_to_status_id_str": null,
       "in_reply_to_user_id": null,
       "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
+      "is_quote_status": false,
+      "lang": "en",
+      "place": null,
+      "quote_count": 0,
+      "reply_count": 0,
+      "retweet_count": 0,
+      "retweeted": false,
+      "retweeted_status": {
+        "contributors": null,
+        "coordinates": null,
+        "created_at": "Fri Jan 29 06:54:36 +0000 2021",
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "urls": [
+            {
+              "display_url": "twitter.com/i/web/status/1\u2026",
+              "expanded_url": "https://twitter.com/i/web/status/1355046668995977219",
+              "indices": [
+                117,
+                140
+              ],
+              "url": "https://t.co/WDj7ABMVAb"
+            }
+          ],
+          "user_mentions": []
+        },
+        "extended_tweet": {
+          "display_text_range": [
+            0,
+            280
+          ],
+          "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "urls": [],
+            "user_mentions": []
+          },
+          "full_text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean."
+        },
+        "favorite_count": 33427,
+        "favorited": false,
+        "filter_level": "low",
+        "geo": null,
+        "id": 1355046668995977219,
+        "id_str": "1355046668995977219",
+        "in_reply_to_screen_name": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "is_quote_status": false,
+        "lang": "en",
+        "place": null,
+        "quote_count": 397,
+        "reply_count": 317,
+        "retweet_count": 8297,
+        "retweeted": false,
+        "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'\u2026 https://t.co/WDj7ABMVAb",
+        "truncated": true,
+        "user": {
+          "contributors_enabled": false,
+          "created_at": "Wed Nov 16 18:19:41 +0000 2016",
+          "default_profile": false,
+          "default_profile_image": false,
+          "description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+          "favourites_count": 75320,
+          "follow_request_sent": null,
+          "followers_count": 195281,
+          "following": null,
+          "friends_count": 15570,
+          "geo_enabled": false,
+          "id": 798953701972938752,
+          "id_str": "798953701972938752",
+          "is_translator": false,
+          "lang": null,
+          "listed_count": 796,
+          "location": "Portland, OR",
+          "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+          "notifications": null,
+          "profile_background_color": "000000",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_tile": false,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/798953701972938752/1611643068",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
+          "profile_link_color": "19CF86",
+          "profile_sidebar_border_color": "000000",
+          "profile_sidebar_fill_color": "000000",
+          "profile_text_color": "000000",
+          "profile_use_background_image": false,
+          "protected": false,
+          "screen_name": "NickKnudsenUS",
+          "statuses_count": 65634,
+          "time_zone": null,
+          "translator_type": "none",
+          "url": "http://www.demcastusa.com",
+          "utc_offset": null,
+          "verified": false
+        }
+      },
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're tr\u2026",
+      "timestamp_ms": "1611937745018",
+      "truncated": false,
       "user": {
-        "id": 798953701972938752,
-        "id_str": "798953701972938752",
-        "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
-        "screen_name": "NickKnudsenUS",
-        "location": "Portland, OR",
-        "url": "http://www.demcastusa.com",
-        "description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
-        "translator_type": "none",
-        "protected": false,
-        "verified": false,
-        "followers_count": 195281,
-        "friends_count": 15570,
-        "listed_count": 796,
-        "favourites_count": 75320,
-        "statuses_count": 65634,
-        "created_at": "Wed Nov 16 18:19:41 +0000 2016",
-        "utc_offset": null,
-        "time_zone": null,
-        "geo_enabled": false,
-        "lang": null,
         "contributors_enabled": false,
+        "created_at": "Sat Apr 13 23:39:20 +0000 2013",
+        "default_profile": true,
+        "default_profile_image": false,
+        "description": "WEAR A FREAKING MASK! I am antifa!  \nI'd rather be hated for being myself than loved for who I'm not...Kurt Cobain \n#fbr #resist #BLM",
+        "favourites_count": 72502,
+        "follow_request_sent": null,
+        "followers_count": 4121,
+        "following": null,
+        "friends_count": 4977,
+        "geo_enabled": true,
+        "id": 1350513055,
+        "id_str": "1350513055",
         "is_translator": false,
-        "profile_background_color": "000000",
+        "lang": null,
+        "listed_count": 5,
+        "location": "Edmond, OK",
+        "name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
+        "notifications": null,
+        "profile_background_color": "C0DEED",
         "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
         "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
         "profile_background_tile": false,
-        "profile_link_color": "19CF86",
-        "profile_sidebar_border_color": "000000",
-        "profile_sidebar_fill_color": "000000",
-        "profile_text_color": "000000",
-        "profile_use_background_image": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/798953701972938752/1611643068",
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": null,
-        "follow_request_sent": null,
-        "notifications": null
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1350513055/1611292161",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1352483266943721475/Z4qPzA9T_normal.jpg",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "debmapmom2",
+        "statuses_count": 4418,
+        "time_zone": null,
+        "translator_type": "none",
+        "url": null,
+        "utc_offset": null,
+        "verified": false
+      }
+    }
+  },
+  {
+    "normalized": [
+      {
+        "collected_via": [
+          "retweet"
+        ],
+        "collection_time": "2022-07-29T12:15:48.803081",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [],
+        "id": "1355046668995977219",
+        "lang": "en",
+        "like_count": 33427,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-01-29T07:54:36",
+        "match_query": true,
+        "media_alt_texts": [],
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "mentioned_ids": [],
+        "mentioned_names": [],
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "reply_count": 317,
+        "retweet_count": 8297,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "Twitter Web App",
+        "source_url": "https://mobile.twitter.com",
+        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
+        "timestamp_utc": 1611903276,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/NickKnudsenUS/status/1355046668995977219",
+        "user_created_at": "2016-11-16T19:19:41",
+        "user_description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+        "user_followers": 195281,
+        "user_friends": 15570,
+        "user_id": "798953701972938752",
+        "user_image": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
+        "user_likes": 75320,
+        "user_lists": 796,
+        "user_location": "Portland, OR",
+        "user_name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+        "user_screen_name": "NickKnudsenUS",
+        "user_timestamp_utc": 1479320381,
+        "user_tweets": 65634,
+        "user_url": "http://www.demcastusa.com",
+        "user_verified": false
+      }
+    ],
+    "source": {
+      "collection_source": "retweet",
       "contributors": null,
-      "is_quote_status": false,
+      "coordinates": null,
+      "created_at": "Fri Jan 29 06:54:36 +0000 2021",
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [
+          {
+            "display_url": "twitter.com/i/web/status/1\u2026",
+            "expanded_url": "https://twitter.com/i/web/status/1355046668995977219",
+            "indices": [
+              117,
+              140
+            ],
+            "url": "https://t.co/WDj7ABMVAb"
+          }
+        ],
+        "user_mentions": []
+      },
       "extended_tweet": {
-        "full_text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
         "display_text_range": [
           0,
           280
         ],
         "entities": {
           "hashtags": [],
+          "symbols": [],
           "urls": [],
-          "user_mentions": [],
-          "symbols": []
-        }
+          "user_mentions": []
+        },
+        "full_text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean."
       },
+      "favorite_count": 33427,
+      "favorited": false,
+      "filter_level": "low",
+      "geo": null,
+      "id_str": "1355046668995977219",
+      "in_reply_to_screen_name": null,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "is_quote_status": false,
+      "lang": "en",
+      "place": null,
       "quote_count": 397,
       "reply_count": 317,
       "retweet_count": 8297,
-      "favorite_count": 33427,
-      "entities": {
-        "hashtags": [],
-        "urls": [
-          {
-            "url": "https://t.co/WDj7ABMVAb",
-            "expanded_url": "https://twitter.com/i/web/status/1355046668995977219",
-            "display_url": "twitter.com/i/web/status/1\u2026",
-            "indices": [
-              117,
-              140
-            ]
-          }
-        ],
-        "user_mentions": [],
-        "symbols": []
-      },
-      "favorited": false,
       "retweeted": false,
-      "filter_level": "low",
-      "lang": "en",
-      "collection_source": "retweet"
-    },
-    "normalized": [
-      {
-        "id": "1355046668995977219",
-        "media_alt_texts": [],
-        "local_time": "2021-01-29T07:54:36",
-        "timestamp_utc": 1611903276,
-        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're trying to steal the election!\nEveryone: That's *literally* what you're doing.\nGOP: We must revolt!\nCrazies: Revolt!\nEveryone: You're traitors.\nGOP: Don't be mean.",
-        "url": "https://twitter.com/NickKnudsenUS/status/1355046668995977219",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": null,
-        "retweeted_user": null,
-        "retweeted_user_id": null,
-        "retweeted_timestamp_utc": null,
-        "media_files": [],
-        "media_types": [],
-        "media_urls": [],
-        "links": [],
-        "links_to_resolve": false,
-        "domains": [],
-        "hashtags": [],
-        "mentioned_ids": [],
-        "mentioned_names": [],
-        "collection_time": "2021-01-29T17:29:10.218648",
-        "collected_via": [
-          "retweet"
-        ],
-        "match_query": true,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "en",
-        "coordinates": null,
-        "retweet_count": 8297,
-        "like_count": 33427,
-        "reply_count": 317,
-        "user_id": "798953701972938752",
-        "user_screen_name": "NickKnudsenUS",
-        "user_name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
-        "user_friends": 15570,
-        "user_followers": 195281,
-        "user_location": "Portland, OR",
-        "user_verified": false,
-        "user_description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
-        "user_created_at": "2016-11-16T19:19:41",
-        "user_tweets": 65634,
-        "user_likes": 75320,
-        "user_lists": 796,
-        "user_image": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
-        "user_url": "http://www.demcastusa.com",
-        "user_timestamp_utc": 1479320381,
-        "source_url": "https://mobile.twitter.com",
-        "source_name": "Twitter Web App"
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'\u2026 https://t.co/WDj7ABMVAb",
+      "truncated": true,
+      "user": {
+        "contributors_enabled": false,
+        "created_at": "Wed Nov 16 18:19:41 +0000 2016",
+        "default_profile": false,
+        "default_profile_image": false,
+        "description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+        "favourites_count": 75320,
+        "follow_request_sent": null,
+        "followers_count": 195281,
+        "following": null,
+        "friends_count": 15570,
+        "geo_enabled": false,
+        "id": 798953701972938752,
+        "id_str": "798953701972938752",
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 796,
+        "location": "Portland, OR",
+        "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+        "notifications": null,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/798953701972938752/1611643068",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1252470219232014337/5mzgTlRw_normal.jpg",
+        "profile_link_color": "19CF86",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "protected": false,
+        "screen_name": "NickKnudsenUS",
+        "statuses_count": 65634,
+        "time_zone": null,
+        "translator_type": "none",
+        "url": "http://www.demcastusa.com",
+        "utc_offset": null,
+        "verified": false
       }
-    ]
+    }
   },
   {
+    "normalized": [
+      {
+        "collected_via": [
+          "quote"
+        ],
+        "collection_time": "2022-07-29T12:15:48.803404",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [
+          "2\u67081\u65e5",
+          "\u30c7\u30e5\u30aa",
+          "\u30c7\u30e5\u30aa26\u6642\u534a",
+          "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+        ],
+        "id": "1356256391653019649",
+        "lang": "ja",
+        "like_count": 33,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-02-01T16:01:36",
+        "match_query": false,
+        "media_alt_texts": [
+          ""
+        ],
+        "media_files": [
+          "1356256391653019649_EtJj_RYUUAAAph9.jpg"
+        ],
+        "media_types": [
+          "photo"
+        ],
+        "media_urls": [
+          "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg"
+        ],
+        "mentioned_ids": [
+          "1115927821925277701",
+          "1068760421371326464",
+          "1143349673995853824"
+        ],
+        "mentioned_names": [
+          "kananba_1",
+          "neosuke1203",
+          "rizu_1122"
+        ],
+        "possibly_sensitive": false,
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "retweet_count": 44,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "Twitter for Android",
+        "source_url": "http://twitter.com/download/android",
+        "text": "\u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
+        "timestamp_utc": 1612191696,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/rizu_1122/status/1356256391653019649",
+        "user_created_at": "2019-06-25T04:46:19",
+        "user_description": "\u50d5\u306e\u3070\u304b\ud83d\udc8d\u25b6@Ste11a_29 \ud83d\udc8d\u25b6@Ixx__17 \u5ac1\u304c\u623b\u308b\u307e\u3067\u754c\u9688\u53bb\u3089\u306a\u3044\u3088\u3002\u65e9\u304f\u623b\u3063\u3066\u304d\u3066\u25b6@Rey3222\u2665\u25b6@Sagiri_u3u                         \u30de\u30cd\u5148\u25b6@ruitya3 \n\ud83d\udc99\u25b6#\u308a\u305a\u3057\u3070\u5b9f\u7e3e",
+        "user_followers": 3572,
+        "user_friends": 351,
+        "user_id": "1143349673995853824",
+        "user_image": "https://pbs.twimg.com/profile_images/1356185388486852612/ksMmkZbF_normal.jpg",
+        "user_likes": 8087,
+        "user_lists": 4,
+        "user_location": null,
+        "user_name": "\ud83c\udfe1739\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc\u9023\u6226",
+        "user_screen_name": "rizu_1122",
+        "user_timestamp_utc": 1561430779,
+        "user_tweets": 9204,
+        "user_url": null,
+        "user_verified": false
+      },
+      {
+        "collected_via": [
+          "search"
+        ],
+        "collection_time": "2022-07-29T12:15:48.803575",
+        "coordinates": null,
+        "domains": [
+          "twitter.com"
+        ],
+        "hashtags": [
+          "26\u6642\u534a",
+          "2\u67081\u65e5",
+          "\u30c7\u30e5\u30aa",
+          "\u30c7\u30e5\u30aa26\u6642\u534a",
+          "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+        ],
+        "id": "1356288731519479810",
+        "lang": "ja",
+        "like_count": 0,
+        "links": [
+          "https://twitter.com/rizu_1122/status/1356256391653019649"
+        ],
+        "links_to_resolve": true,
+        "local_time": "2021-02-01T18:10:06",
+        "match_query": true,
+        "media_alt_texts": [
+          ""
+        ],
+        "media_files": [
+          "1356256391653019649_EtJj_RYUUAAAph9.jpg"
+        ],
+        "media_types": [
+          "photo"
+        ],
+        "media_urls": [
+          "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg"
+        ],
+        "mentioned_ids": [
+          "1115927821925277701",
+          "1068760421371326464",
+          "1143349673995853824"
+        ],
+        "mentioned_names": [
+          "kananba_1",
+          "neosuke1203",
+          "rizu_1122"
+        ],
+        "possibly_sensitive": true,
+        "quoted_id": "1356256391653019649",
+        "quoted_timestamp_utc": 1612191696,
+        "quoted_user": "rizu_1122",
+        "quoted_user_id": "1143349673995853824",
+        "retweet_count": 0,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "Twitter for iPhone",
+        "source_url": "http://twitter.com/download/iphone",
+        "text": "\u23f0\u25062/1  26\u6642\u534a start\u2764\ud83d\udc97\n\ud83d\udc64\u2506\u30c7\u30e5\u30aa\n\ud83d\udcb8\u2506500 \u00d72  \u307a\u3044\u307a\u3044\n\n\u30d1\u30b9\u30c4\u30a4Just\n \u25b6 @neosuke1203\n\n\u30ea\u30b6\u30eb\u30c8\u63d0\u51fa\u5148\n\u25b6 @kananba_1\n#\u30c7\u30e5\u30aa #26\u6642\u534a\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9 \n#\u30c7\u30e5\u30aa26\u6642\u534a \u00ab rizu_1122: \u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://twitter.com/rizu_1122/status/1356256391653019649/photo/1 \u2014 https://twitter.com/rizu_1122/status/1356256391653019649 \u00bb",
+        "timestamp_utc": 1612199406,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/piiro08/status/1356288731519479810",
+        "user_created_at": "2019-08-25T12:16:27",
+        "user_description": "\u8352\u91ce\u57a2\u3067\u3059\ud83d\ude0a\u4e3b\u50ac\u3082\u3057\u3066\u308b\u3057\u30b2\u30ea\u30e9\u3082\u51fa\u3066\u308b\u306e\u304a\u9858\u3044\u3057\u307e\u3059\uff01 @zowa008\u4fe1\u8005\ud83d\ude0d",
+        "user_followers": 282,
+        "user_friends": 713,
+        "user_id": "1165568564843048960",
+        "user_image": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+        "user_likes": 423,
+        "user_lists": 0,
+        "user_location": "\u65e5\u672c",
+        "user_name": "\u3074\u308d\u3010\u305e\u308f\u72c2\u3011",
+        "user_screen_name": "piiro08",
+        "user_timestamp_utc": 1566728187,
+        "user_tweets": 519,
+        "user_url": null,
+        "user_verified": false
+      }
+    ],
     "source": {
+      "collection_source": "search",
+      "contributors": null,
+      "coordinates": null,
       "created_at": "Mon Feb 01 17:10:06 +0000 2021",
-      "id": 1356288731519479810,
-      "id_str": "1356288731519479810",
-      "full_text": "\u23f0\u25062/1  26\u6642\u534a start\u2764\ud83d\udc97\n\ud83d\udc64\u2506\u30c7\u30e5\u30aa\n\ud83d\udcb8\u2506500 \u00d72  \u307a\u3044\u307a\u3044\n\n\u30d1\u30b9\u30c4\u30a4Just\n \u25b6 @neosuke1203\n\n\u30ea\u30b6\u30eb\u30c8\u63d0\u51fa\u5148\n\u25b6 @kananba_1\n#\u30c7\u30e5\u30aa #26\u6642\u534a\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9 \n#\u30c7\u30e5\u30aa26\u6642\u534a https://t.co/hjLyHeg0Bl",
-      "truncated": false,
       "display_text_range": [
         0,
         117
@@ -467,107 +625,345 @@
       "entities": {
         "hashtags": [
           {
-            "text": "\u30c7\u30e5\u30aa",
             "indices": [
               89,
               93
-            ]
+            ],
+            "text": "\u30c7\u30e5\u30aa"
           },
           {
-            "text": "26\u6642\u534a",
             "indices": [
               94,
               99
-            ]
+            ],
+            "text": "26\u6642\u534a"
           },
           {
-            "text": "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9",
             "indices": [
               100,
               107
-            ]
+            ],
+            "text": "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
           },
           {
-            "text": "\u30c7\u30e5\u30aa26\u6642\u534a",
             "indices": [
               109,
               117
-            ]
+            ],
+            "text": "\u30c7\u30e5\u30aa26\u6642\u534a"
           }
         ],
         "symbols": [],
+        "urls": [
+          {
+            "display_url": "twitter.com/rizu_1122/stat\u2026",
+            "expanded_url": "https://twitter.com/rizu_1122/status/1356256391653019649",
+            "indices": [
+              118,
+              141
+            ],
+            "url": "https://t.co/hjLyHeg0Bl"
+          }
+        ],
         "user_mentions": [
           {
-            "screen_name": "neosuke1203",
-            "name": "\u306d\u304a\u3059\u3051",
             "id": 1068760421371326464,
             "id_str": "1068760421371326464",
             "indices": [
               54,
               66
-            ]
+            ],
+            "name": "\u306d\u304a\u3059\u3051",
+            "screen_name": "neosuke1203"
           },
           {
-            "screen_name": "kananba_1",
-            "name": "kana*\ud83d\udc3b\u2764",
             "id": 1115927821925277701,
             "id_str": "1115927821925277701",
             "indices": [
               78,
               88
-            ]
-          }
-        ],
-        "urls": [
-          {
-            "url": "https://t.co/hjLyHeg0Bl",
-            "expanded_url": "https://twitter.com/rizu_1122/status/1356256391653019649",
-            "display_url": "twitter.com/rizu_1122/stat\u2026",
-            "indices": [
-              118,
-              141
-            ]
+            ],
+            "name": "kana*\ud83d\udc3b\u2764",
+            "screen_name": "kananba_1"
           }
         ]
       },
-      "metadata": {
-        "iso_language_code": "ja",
-        "result_type": "recent"
-      },
-      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "favorite_count": 0,
+      "favorited": false,
+      "full_text": "\u23f0\u25062/1  26\u6642\u534a start\u2764\ud83d\udc97\n\ud83d\udc64\u2506\u30c7\u30e5\u30aa\n\ud83d\udcb8\u2506500 \u00d72  \u307a\u3044\u307a\u3044\n\n\u30d1\u30b9\u30c4\u30a4Just\n \u25b6 @neosuke1203\n\n\u30ea\u30b6\u30eb\u30c8\u63d0\u51fa\u5148\n\u25b6 @kananba_1\n#\u30c7\u30e5\u30aa #26\u6642\u534a\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9 \n#\u30c7\u30e5\u30aa26\u6642\u534a https://t.co/hjLyHeg0Bl",
+      "geo": null,
+      "id": 1356288731519479810,
+      "id_str": "1356288731519479810",
+      "in_reply_to_screen_name": null,
       "in_reply_to_status_id": null,
       "in_reply_to_status_id_str": null,
       "in_reply_to_user_id": null,
       "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
+      "is_quote_status": true,
+      "lang": "ja",
+      "metadata": {
+        "iso_language_code": "ja",
+        "result_type": "recent"
+      },
+      "place": null,
+      "possibly_sensitive": true,
+      "quoted_status": {
+        "contributors": null,
+        "coordinates": null,
+        "created_at": "Mon Feb 01 15:01:36 +0000 2021",
+        "display_text_range": [
+          0,
+          185
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                18,
+                23
+              ],
+              "text": "2\u67081\u65e5"
+            },
+            {
+              "indices": [
+                51,
+                55
+              ],
+              "text": "\u30c7\u30e5\u30aa"
+            },
+            {
+              "indices": [
+                169,
+                176
+              ],
+              "text": "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+            },
+            {
+              "indices": [
+                177,
+                185
+              ],
+              "text": "\u30c7\u30e5\u30aa26\u6642\u534a"
+            }
+          ],
+          "media": [
+            {
+              "display_url": "pic.twitter.com/ZCkU5t831m",
+              "expanded_url": "https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
+              "id": 1356256376440246272,
+              "id_str": "1356256376440246272",
+              "indices": [
+                186,
+                209
+              ],
+              "media_url": "http://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
+              "sizes": {
+                "large": {
+                  "h": 1152,
+                  "resize": "fit",
+                  "w": 2048
+                },
+                "medium": {
+                  "h": 675,
+                  "resize": "fit",
+                  "w": 1200
+                },
+                "small": {
+                  "h": 383,
+                  "resize": "fit",
+                  "w": 680
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "photo",
+              "url": "https://t.co/ZCkU5t831m"
+            }
+          ],
+          "symbols": [],
+          "urls": [],
+          "user_mentions": [
+            {
+              "id": 1115927821925277701,
+              "id_str": "1115927821925277701",
+              "indices": [
+                62,
+                72
+              ],
+              "name": "kana*\ud83d\udc3b\u2764",
+              "screen_name": "kananba_1"
+            },
+            {
+              "id": 1143349673995853824,
+              "id_str": "1143349673995853824",
+              "indices": [
+                74,
+                84
+              ],
+              "name": "\u3084\u3093\u3067\u308c\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc",
+              "screen_name": "rizu_1122"
+            },
+            {
+              "id": 1068760421371326464,
+              "id_str": "1068760421371326464",
+              "indices": [
+                147,
+                159
+              ],
+              "name": "\u306d\u304a\u3059\u3051",
+              "screen_name": "neosuke1203"
+            }
+          ]
+        },
+        "extended_entities": {
+          "media": [
+            {
+              "display_url": "pic.twitter.com/ZCkU5t831m",
+              "expanded_url": "https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
+              "id": 1356256376440246272,
+              "id_str": "1356256376440246272",
+              "indices": [
+                186,
+                209
+              ],
+              "media_url": "http://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
+              "sizes": {
+                "large": {
+                  "h": 1152,
+                  "resize": "fit",
+                  "w": 2048
+                },
+                "medium": {
+                  "h": 675,
+                  "resize": "fit",
+                  "w": 1200
+                },
+                "small": {
+                  "h": 383,
+                  "resize": "fit",
+                  "w": 680
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "photo",
+              "url": "https://t.co/ZCkU5t831m"
+            }
+          ]
+        },
+        "favorite_count": 33,
+        "favorited": false,
+        "full_text": "\u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&amp;RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://t.co/ZCkU5t831m",
+        "geo": null,
+        "id": 1356256391653019649,
+        "id_str": "1356256391653019649",
+        "in_reply_to_screen_name": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "is_quote_status": false,
+        "lang": "ja",
+        "metadata": {
+          "iso_language_code": "ja",
+          "result_type": "recent"
+        },
+        "place": null,
+        "possibly_sensitive": false,
+        "retweet_count": 44,
+        "retweeted": false,
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "truncated": false,
+        "user": {
+          "contributors_enabled": false,
+          "created_at": "Tue Jun 25 02:46:19 +0000 2019",
+          "default_profile": true,
+          "default_profile_image": false,
+          "description": "\u50d5\u306e\u3070\u304b\ud83d\udc8d\u25b6@Ste11a_29 \ud83d\udc8d\u25b6@Ixx__17 \u5ac1\u304c\u623b\u308b\u307e\u3067\u754c\u9688\u53bb\u3089\u306a\u3044\u3088\u3002\u65e9\u304f\u623b\u3063\u3066\u304d\u3066\u25b6@Rey3222\u2665\u25b6@Sagiri_u3u                         \u30de\u30cd\u5148\u25b6@ruitya3 \n\ud83d\udc99\u25b6#\u308a\u305a\u3057\u3070\u5b9f\u7e3e",
+          "entities": {
+            "description": {
+              "urls": []
+            }
+          },
+          "favourites_count": 8087,
+          "follow_request_sent": false,
+          "followers_count": 3572,
+          "following": false,
+          "friends_count": 351,
+          "geo_enabled": false,
+          "has_extended_profile": false,
+          "id": 1143349673995853824,
+          "id_str": "1143349673995853824",
+          "is_translation_enabled": false,
+          "is_translator": false,
+          "lang": null,
+          "listed_count": 4,
+          "location": "",
+          "name": "\ud83c\udfe1739\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc\u9023\u6226",
+          "notifications": false,
+          "profile_background_color": "F5F8FA",
+          "profile_background_image_url": null,
+          "profile_background_image_url_https": null,
+          "profile_background_tile": false,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/1143349673995853824/1611729353",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1356185388486852612/ksMmkZbF_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1356185388486852612/ksMmkZbF_normal.jpg",
+          "profile_link_color": "1DA1F2",
+          "profile_sidebar_border_color": "C0DEED",
+          "profile_sidebar_fill_color": "DDEEF6",
+          "profile_text_color": "333333",
+          "profile_use_background_image": true,
+          "protected": false,
+          "screen_name": "rizu_1122",
+          "statuses_count": 9204,
+          "time_zone": null,
+          "translator_type": "none",
+          "url": null,
+          "utc_offset": null,
+          "verified": false
+        }
+      },
+      "quoted_status_id": 1356256391653019649,
+      "quoted_status_id_str": "1356256391653019649",
+      "retweet_count": 0,
+      "retweeted": false,
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
       "user": {
-        "id": 1165568564843048960,
-        "id_str": "1165568564843048960",
-        "name": "\u3074\u308d\u3010\u305e\u308f\u72c2\u3011",
-        "screen_name": "piiro08",
-        "location": "\u65e5\u672c",
+        "contributors_enabled": false,
+        "created_at": "Sun Aug 25 10:16:27 +0000 2019",
+        "default_profile": true,
+        "default_profile_image": true,
         "description": "\u8352\u91ce\u57a2\u3067\u3059\ud83d\ude0a\u4e3b\u50ac\u3082\u3057\u3066\u308b\u3057\u30b2\u30ea\u30e9\u3082\u51fa\u3066\u308b\u306e\u304a\u9858\u3044\u3057\u307e\u3059\uff01 @zowa008\u4fe1\u8005\ud83d\ude0d",
-        "url": null,
         "entities": {
           "description": {
             "urls": []
           }
         },
-        "protected": false,
-        "followers_count": 282,
-        "friends_count": 713,
-        "listed_count": 0,
-        "created_at": "Sun Aug 25 10:16:27 +0000 2019",
         "favourites_count": 423,
-        "utc_offset": null,
-        "time_zone": null,
+        "follow_request_sent": false,
+        "followers_count": 282,
+        "following": false,
+        "friends_count": 713,
         "geo_enabled": false,
-        "verified": false,
-        "statuses_count": 519,
-        "lang": null,
-        "contributors_enabled": false,
-        "is_translator": false,
+        "has_extended_profile": false,
+        "id": 1165568564843048960,
+        "id_str": "1165568564843048960",
         "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 0,
+        "location": "\u65e5\u672c",
+        "name": "\u3074\u308d\u3010\u305e\u308f\u72c2\u3011",
+        "notifications": false,
         "profile_background_color": "F5F8FA",
         "profile_background_image_url": null,
         "profile_background_image_url_https": null,
@@ -579,416 +975,169 @@
         "profile_sidebar_fill_color": "DDEEF6",
         "profile_text_color": "333333",
         "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": true,
-        "default_profile_image": true,
-        "following": false,
-        "follow_request_sent": false,
-        "notifications": false,
-        "translator_type": "none"
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "is_quote_status": true,
-      "quoted_status_id": 1356256391653019649,
-      "quoted_status_id_str": "1356256391653019649",
-      "quoted_status": {
-        "created_at": "Mon Feb 01 15:01:36 +0000 2021",
-        "id": 1356256391653019649,
-        "id_str": "1356256391653019649",
-        "full_text": "\u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&amp;RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://t.co/ZCkU5t831m",
-        "truncated": false,
-        "display_text_range": [
-          0,
-          185
-        ],
-        "entities": {
-          "hashtags": [
-            {
-              "text": "2\u67081\u65e5",
-              "indices": [
-                18,
-                23
-              ]
-            },
-            {
-              "text": "\u30c7\u30e5\u30aa",
-              "indices": [
-                51,
-                55
-              ]
-            },
-            {
-              "text": "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9",
-              "indices": [
-                169,
-                176
-              ]
-            },
-            {
-              "text": "\u30c7\u30e5\u30aa26\u6642\u534a",
-              "indices": [
-                177,
-                185
-              ]
-            }
-          ],
-          "symbols": [],
-          "user_mentions": [
-            {
-              "screen_name": "kananba_1",
-              "name": "kana*\ud83d\udc3b\u2764",
-              "id": 1115927821925277701,
-              "id_str": "1115927821925277701",
-              "indices": [
-                62,
-                72
-              ]
-            },
-            {
-              "screen_name": "rizu_1122",
-              "name": "\u3084\u3093\u3067\u308c\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc",
-              "id": 1143349673995853824,
-              "id_str": "1143349673995853824",
-              "indices": [
-                74,
-                84
-              ]
-            },
-            {
-              "screen_name": "neosuke1203",
-              "name": "\u306d\u304a\u3059\u3051",
-              "id": 1068760421371326464,
-              "id_str": "1068760421371326464",
-              "indices": [
-                147,
-                159
-              ]
-            }
-          ],
-          "urls": [],
-          "media": [
-            {
-              "id": 1356256376440246272,
-              "id_str": "1356256376440246272",
-              "indices": [
-                186,
-                209
-              ],
-              "media_url": "http://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
-              "media_url_https": "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
-              "url": "https://t.co/ZCkU5t831m",
-              "display_url": "pic.twitter.com/ZCkU5t831m",
-              "expanded_url": "https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
-              "type": "photo",
-              "sizes": {
-                "thumb": {
-                  "w": 150,
-                  "h": 150,
-                  "resize": "crop"
-                },
-                "small": {
-                  "w": 680,
-                  "h": 383,
-                  "resize": "fit"
-                },
-                "large": {
-                  "w": 2048,
-                  "h": 1152,
-                  "resize": "fit"
-                },
-                "medium": {
-                  "w": 1200,
-                  "h": 675,
-                  "resize": "fit"
-                }
-              }
-            }
-          ]
-        },
-        "extended_entities": {
-          "media": [
-            {
-              "id": 1356256376440246272,
-              "id_str": "1356256376440246272",
-              "indices": [
-                186,
-                209
-              ],
-              "media_url": "http://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
-              "media_url_https": "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg",
-              "url": "https://t.co/ZCkU5t831m",
-              "display_url": "pic.twitter.com/ZCkU5t831m",
-              "expanded_url": "https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
-              "type": "photo",
-              "sizes": {
-                "thumb": {
-                  "w": 150,
-                  "h": 150,
-                  "resize": "crop"
-                },
-                "small": {
-                  "w": 680,
-                  "h": 383,
-                  "resize": "fit"
-                },
-                "large": {
-                  "w": 2048,
-                  "h": 1152,
-                  "resize": "fit"
-                },
-                "medium": {
-                  "w": 1200,
-                  "h": 675,
-                  "resize": "fit"
-                }
-              }
-            }
-          ]
-        },
-        "metadata": {
-          "iso_language_code": "ja",
-          "result_type": "recent"
-        },
-        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-          "id": 1143349673995853824,
-          "id_str": "1143349673995853824",
-          "name": "\ud83c\udfe1739\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc\u9023\u6226",
-          "screen_name": "rizu_1122",
-          "location": "",
-          "description": "\u50d5\u306e\u3070\u304b\ud83d\udc8d\u25b6@Ste11a_29 \ud83d\udc8d\u25b6@Ixx__17 \u5ac1\u304c\u623b\u308b\u307e\u3067\u754c\u9688\u53bb\u3089\u306a\u3044\u3088\u3002\u65e9\u304f\u623b\u3063\u3066\u304d\u3066\u25b6@Rey3222\u2665\u25b6@Sagiri_u3u                         \u30de\u30cd\u5148\u25b6@ruitya3 \n\ud83d\udc99\u25b6#\u308a\u305a\u3057\u3070\u5b9f\u7e3e",
-          "url": null,
-          "entities": {
-            "description": {
-              "urls": []
-            }
-          },
-          "protected": false,
-          "followers_count": 3572,
-          "friends_count": 351,
-          "listed_count": 4,
-          "created_at": "Tue Jun 25 02:46:19 +0000 2019",
-          "favourites_count": 8087,
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": false,
-          "verified": false,
-          "statuses_count": 9204,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "is_translation_enabled": false,
-          "profile_background_color": "F5F8FA",
-          "profile_background_image_url": null,
-          "profile_background_image_url_https": null,
-          "profile_background_tile": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1356185388486852612/ksMmkZbF_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1356185388486852612/ksMmkZbF_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/1143349673995853824/1611729353",
-          "profile_link_color": "1DA1F2",
-          "profile_sidebar_border_color": "C0DEED",
-          "profile_sidebar_fill_color": "DDEEF6",
-          "profile_text_color": "333333",
-          "profile_use_background_image": true,
-          "has_extended_profile": false,
-          "default_profile": true,
-          "default_profile_image": false,
-          "following": false,
-          "follow_request_sent": false,
-          "notifications": false,
-          "translator_type": "none"
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 44,
-        "favorite_count": 33,
-        "favorited": false,
-        "retweeted": false,
-        "possibly_sensitive": false,
-        "lang": "ja"
-      },
-      "retweet_count": 0,
-      "favorite_count": 0,
-      "favorited": false,
-      "retweeted": false,
-      "possibly_sensitive": true,
-      "lang": "ja",
-      "collection_source": "search"
-    },
+        "protected": false,
+        "screen_name": "piiro08",
+        "statuses_count": 519,
+        "time_zone": null,
+        "translator_type": "none",
+        "url": null,
+        "utc_offset": null,
+        "verified": false
+      }
+    }
+  },
+  {
     "normalized": [
       {
-        "id": "1356256391653019649",
-        "media_alt_texts": [""],
-        "local_time": "2021-02-01T16:01:36",
-        "timestamp_utc": 1612191696,
-        "text": "\u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
-        "url": "https://twitter.com/rizu_1122/status/1356256391653019649",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": null,
-        "retweeted_user": null,
-        "retweeted_user_id": null,
-        "retweeted_timestamp_utc": null,
-        "media_files": [
-          "1356256391653019649_EtJj_RYUUAAAph9.jpg"
-        ],
-        "media_types": [
-          "photo"
-        ],
-        "media_urls": [
-          "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg"
-        ],
-        "links": [],
-        "links_to_resolve": false,
-        "domains": [],
-        "hashtags": [
-          "2\u67081\u65e5",
-          "\u30c7\u30e5\u30aa",
-          "\u30c7\u30e5\u30aa26\u6642\u534a",
-          "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
-        ],
-        "mentioned_ids": [
-          "1115927821925277701",
-          "1068760421371326464",
-          "1143349673995853824"
-        ],
-        "mentioned_names": [
-          "kananba_1",
-          "neosuke1203",
-          "rizu_1122"
-        ],
-        "collection_time": "2021-02-01T18:12:22.376610",
         "collected_via": [
           "quote"
         ],
-        "match_query": false,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "ja",
+        "collection_time": "2022-07-29T12:15:48.803946",
         "coordinates": null,
-        "possibly_sensitive": false,
-        "retweet_count": 44,
-        "like_count": 33,
-        "user_id": "1143349673995853824",
-        "user_screen_name": "rizu_1122",
-        "user_name": "\ud83c\udfe1739\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc\u9023\u6226",
-        "user_friends": 351,
-        "user_followers": 3572,
-        "user_location": null,
-        "user_verified": false,
-        "user_description": "\u50d5\u306e\u3070\u304b\ud83d\udc8d\u25b6@Ste11a_29 \ud83d\udc8d\u25b6@Ixx__17 \u5ac1\u304c\u623b\u308b\u307e\u3067\u754c\u9688\u53bb\u3089\u306a\u3044\u3088\u3002\u65e9\u304f\u623b\u3063\u3066\u304d\u3066\u25b6@Rey3222\u2665\u25b6@Sagiri_u3u                         \u30de\u30cd\u5148\u25b6@ruitya3 \n\ud83d\udc99\u25b6#\u308a\u305a\u3057\u3070\u5b9f\u7e3e",
-        "user_created_at": "2019-06-25T04:46:19",
-        "user_tweets": 9204,
-        "user_likes": 8087,
-        "user_lists": 4,
-        "user_image": "https://pbs.twimg.com/profile_images/1356185388486852612/ksMmkZbF_normal.jpg",
-        "user_url": null,
-        "user_timestamp_utc": 1561430779,
-        "source_url": "http://twitter.com/download/android",
-        "source_name": "Twitter for Android"
-      },
-      {
-        "id": "1356288731519479810",
-        "media_alt_texts": [""],
-        "local_time": "2021-02-01T18:10:06",
-        "timestamp_utc": 1612199406,
-        "text": "\u23f0\u25062/1  26\u6642\u534a start\u2764\ud83d\udc97\n\ud83d\udc64\u2506\u30c7\u30e5\u30aa\n\ud83d\udcb8\u2506500 \u00d72  \u307a\u3044\u307a\u3044\n\n\u30d1\u30b9\u30c4\u30a4Just\n \u25b6 @neosuke1203\n\n\u30ea\u30b6\u30eb\u30c8\u63d0\u51fa\u5148\n\u25b6 @kananba_1\n#\u30c7\u30e5\u30aa #26\u6642\u534a\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9 \n#\u30c7\u30e5\u30aa26\u6642\u534a \u00ab rizu_1122: \u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://twitter.com/rizu_1122/status/1356256391653019649/photo/1 \u2014 https://twitter.com/rizu_1122/status/1356256391653019649 \u00bb",
-        "url": "https://twitter.com/piiro08/status/1356288731519479810",
-        "quoted_id": "1356256391653019649",
-        "quoted_user": "rizu_1122",
-        "quoted_user_id": "1143349673995853824",
-        "quoted_timestamp_utc": 1612191696,
-        "retweeted_id": null,
-        "retweeted_user": null,
-        "retweeted_user_id": null,
-        "retweeted_timestamp_utc": null,
+        "domains": [],
+        "hashtags": [
+          "climatr\u00e9silience",
+          "maprimerenov"
+        ],
+        "id": "1359452400122290179",
+        "lang": "fr",
+        "like_count": 94,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-02-10T11:41:24",
+        "match_query": false,
+        "media_alt_texts": [
+          ""
+        ],
         "media_files": [
-          "1356256391653019649_EtJj_RYUUAAAph9.jpg"
+          "1359452400122290179_XICkBH2zcfQkgEmK.mp4"
         ],
         "media_types": [
-          "photo"
+          "video"
         ],
         "media_urls": [
-          "https://pbs.twimg.com/media/EtJj_RYUUAAAph9.jpg"
+          "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/1024x576/XICkBH2zcfQkgEmK.mp4"
         ],
-        "links": [
-          "https://twitter.com/rizu_1122/status/1356256391653019649"
+        "mentioned_ids": [
+          "454336881"
         ],
-        "links_to_resolve": true,
+        "mentioned_names": [
+          "barbarapompili"
+        ],
+        "possibly_sensitive": false,
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "retweet_count": 46,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "Twitter for Android",
+        "source_url": "http://twitter.com/download/android",
+        "text": "Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
+        "timestamp_utc": 1612953684,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/EmmWargon/status/1359452400122290179",
+        "user_created_at": "2018-10-16T09:58:44",
+        "user_description": "Ministre d\u00e9l\u00e9gu\u00e9e au Logement. @Ecologie_Gouv",
+        "user_followers": 38810,
+        "user_friends": 802,
+        "user_id": "1052106552222597120",
+        "user_image": "https://pbs.twimg.com/profile_images/1181954609818062848/LC0izmqE_normal.jpg",
+        "user_likes": 1592,
+        "user_lists": 385,
+        "user_location": "Paris, France",
+        "user_name": "Emmanuelle Wargon",
+        "user_screen_name": "EmmWargon",
+        "user_timestamp_utc": 1539676724,
+        "user_tweets": 2980,
+        "user_url": "https://m.facebook.com/EmmanuelleWargon/",
+        "user_verified": true
+      },
+      {
+        "collected_via": [
+          "thread"
+        ],
+        "collection_time": "2022-07-29T12:15:48.804066",
+        "coordinates": null,
         "domains": [
           "twitter.com"
         ],
         "hashtags": [
-          "26\u6642\u534a",
-          "2\u67081\u65e5",
-          "\u30c7\u30e5\u30aa",
-          "\u30c7\u30e5\u30aa26\u6642\u534a",
-          "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+          "climatr\u00e9silience",
+          "maprimerenov"
+        ],
+        "id": "1359485114112233472",
+        "lang": "fr",
+        "like_count": 50,
+        "links": [
+          "https://twitter.com/EmmWargon/status/1359452400122290179"
+        ],
+        "links_to_resolve": true,
+        "local_time": "2021-02-10T13:51:23",
+        "match_query": false,
+        "media_alt_texts": [
+          ""
+        ],
+        "media_files": [
+          "1359452400122290179_XICkBH2zcfQkgEmK.mp4"
+        ],
+        "media_types": [
+          "video"
+        ],
+        "media_urls": [
+          "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/1024x576/XICkBH2zcfQkgEmK.mp4"
         ],
         "mentioned_ids": [
-          "1115927821925277701",
-          "1068760421371326464",
-          "1143349673995853824"
+          "454336881"
         ],
         "mentioned_names": [
-          "kananba_1",
-          "neosuke1203",
-          "rizu_1122"
+          "barbarapompili"
         ],
-        "collection_time": "2021-02-10T15:01:48.705744",
-        "collected_via": [
-          "search"
-        ],
-        "match_query": true,
-        "coordinates": null,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "ja",
-        "possibly_sensitive": true,
-        "retweet_count": 0,
-        "like_count": 0,
-        "user_id": "1165568564843048960",
-        "user_screen_name": "piiro08",
-        "user_name": "\u3074\u308d\u3010\u305e\u308f\u72c2\u3011",
-        "user_friends": 713,
-        "user_followers": 282,
-        "user_location": "\u65e5\u672c",
-        "user_verified": false,
-        "user_description": "\u8352\u91ce\u57a2\u3067\u3059\ud83d\ude0a\u4e3b\u50ac\u3082\u3057\u3066\u308b\u3057\u30b2\u30ea\u30e9\u3082\u51fa\u3066\u308b\u306e\u304a\u9858\u3044\u3057\u307e\u3059\uff01 @zowa008\u4fe1\u8005\ud83d\ude0d",
-        "user_created_at": "2019-08-25T12:16:27",
-        "user_tweets": 519,
-        "user_likes": 423,
-        "user_lists": 0,
-        "user_image": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
-        "user_url": null,
-        "user_timestamp_utc": 1566728187,
-        "source_url": "http://twitter.com/download/iphone",
-        "source_name": "Twitter for iPhone"
+        "possibly_sensitive": false,
+        "quoted_id": "1359452400122290179",
+        "quoted_timestamp_utc": 1612953684,
+        "quoted_user": "EmmWargon",
+        "quoted_user_id": "1052106552222597120",
+        "retweet_count": 17,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "Twitter Web App",
+        "source_url": "https://mobile.twitter.com",
+        "text": "Le logement est le 2e secteur le plus \u00e9metteur de gaz \u00e0 effet de serre.\nOn ne pourra plus louer de passoires thermiques d\u00e8s 2028 :\n\u2192 les locataires pourront exiger des travaux\n\u2192 d'ici cette date, les loyers de ces logements ne pourront \u00eatre augment\u00e9s.\n\u00ab EmmWargon: Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1 \u2014 https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1 \u00bb",
+        "timestamp_utc": 1612961483,
+        "to_tweetid": "1359485112325468162",
+        "to_userid": "119081177",
+        "to_username": "JeanCASTEX",
+        "url": "https://twitter.com/JeanCASTEX/status/1359485114112233472",
+        "user_created_at": "2010-03-02T17:24:02",
+        "user_description": "Premier ministre de la R\u00e9publique fran\u00e7aise.",
+        "user_followers": 273068,
+        "user_friends": 1004,
+        "user_id": "119081177",
+        "user_image": "https://pbs.twimg.com/profile_images/1318123063926546435/WtVglzae_normal.jpg",
+        "user_likes": 330,
+        "user_lists": 798,
+        "user_location": "France",
+        "user_name": "Jean Castex",
+        "user_screen_name": "JeanCASTEX",
+        "user_timestamp_utc": 1267547042,
+        "user_tweets": 980,
+        "user_url": "http://www.gouvernement.fr/",
+        "user_verified": true
       }
-    ]
-  },
-  {
+    ],
     "source": {
+      "collection_source": "thread",
+      "contributors": null,
+      "coordinates": null,
       "created_at": "Wed Feb 10 12:51:23 +0000 2021",
-      "id": 1359485114112233472,
-      "id_str": "1359485114112233472",
-      "full_text": "Le logement est le 2e secteur le plus \u00e9metteur de gaz \u00e0 effet de serre.\nOn ne pourra plus louer de passoires thermiques d\u00e8s 2028 :\n\u2192 les locataires pourront exiger des travaux\n\u2192 d'ici cette date, les loyers de ces logements ne pourront \u00eatre augment\u00e9s.\nhttps://t.co/IXuTRLcf2S",
-      "truncated": false,
       "display_text_range": [
         0,
         275
@@ -996,403 +1145,91 @@
       "entities": {
         "hashtags": [
           {
-            "text": "MaPrimeRenov",
             "indices": [
               181,
               194
-            ]
+            ],
+            "text": "MaPrimeRenov"
           },
           {
-            "text": "ClimatR\u00e9silience",
             "indices": [
               247,
               264
-            ]
+            ],
+            "text": "ClimatR\u00e9silience"
+          }
+        ],
+        "media": [
+          {
+            "display_url": "pic.twitter.com/Eo9sNi3CGS",
+            "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
+            "id": 1359452311949631490,
+            "id_str": "1359452311949631490",
+            "indices": [
+              281,
+              304
+            ],
+            "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
+            "sizes": {
+              "large": {
+                "h": 576,
+                "resize": "fit",
+                "w": 1024
+              },
+              "medium": {
+                "h": 576,
+                "resize": "fit",
+                "w": 1024
+              },
+              "small": {
+                "h": 383,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/Eo9sNi3CGS"
           }
         ],
         "symbols": [],
+        "urls": [
+          {
+            "display_url": "twitter.com/EmmWargon/stat\u2026",
+            "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1",
+            "indices": [
+              252,
+              275
+            ],
+            "url": "https://t.co/IXuTRLcf2S"
+          }
+        ],
         "user_mentions": [
           {
-            "screen_name": "barbarapompili",
-            "name": "Barbara Pompili",
             "id": 454336881,
             "id_str": "454336881",
             "indices": [
               265,
               280
-            ]
-          }
-        ],
-        "urls": [
-          {
-            "url": "https://t.co/IXuTRLcf2S",
-            "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1",
-            "display_url": "twitter.com/EmmWargon/stat\u2026",
-            "indices": [
-              252,
-              275
-            ]
-          }
-        ],
-        "media": [
-          {
-            "id": 1359452311949631490,
-            "id_str": "1359452311949631490",
-            "indices": [
-              281,
-              304
             ],
-            "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
-            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
-            "url": "https://t.co/Eo9sNi3CGS",
-            "display_url": "pic.twitter.com/Eo9sNi3CGS",
-            "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
-            "type": "photo",
-            "sizes": {
-              "medium": {
-                "w": 1024,
-                "h": 576,
-                "resize": "fit"
-              },
-              "thumb": {
-                "w": 150,
-                "h": 150,
-                "resize": "crop"
-              },
-              "large": {
-                "w": 1024,
-                "h": 576,
-                "resize": "fit"
-              },
-              "small": {
-                "w": 680,
-                "h": 383,
-                "resize": "fit"
-              }
-            }
+            "name": "Barbara Pompili",
+            "screen_name": "barbarapompili"
           }
         ]
       },
-      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-      "in_reply_to_status_id": 1359485112325468162,
-      "in_reply_to_status_id_str": "1359485112325468162",
-      "in_reply_to_user_id": 119081177,
-      "in_reply_to_user_id_str": "119081177",
-      "in_reply_to_screen_name": "JeanCASTEX",
-      "user": {
-        "id": 119081177,
-        "id_str": "119081177",
-        "name": "Jean Castex",
-        "screen_name": "JeanCASTEX",
-        "location": "France",
-        "description": "Premier ministre de la R\u00e9publique fran\u00e7aise.",
-        "url": "https://t.co/49wO2Lr0ie",
-        "entities": {
-          "url": {
-            "urls": [
-              {
-                "url": "https://t.co/49wO2Lr0ie",
-                "expanded_url": "http://www.gouvernement.fr/",
-                "display_url": "gouvernement.fr",
-                "indices": [
-                  0,
-                  23
-                ]
-              }
-            ]
-          },
-          "description": {
-            "urls": []
-          }
-        },
-        "protected": false,
-        "followers_count": 273068,
-        "friends_count": 1004,
-        "listed_count": 798,
-        "created_at": "Tue Mar 02 16:24:02 +0000 2010",
-        "favourites_count": 330,
-        "utc_offset": null,
-        "time_zone": null,
-        "geo_enabled": true,
-        "verified": true,
-        "statuses_count": 980,
-        "lang": null,
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/1318123063926546435/WtVglzae_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1318123063926546435/WtVglzae_normal.jpg",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/119081177/1612551611",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": true,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": false,
-        "follow_request_sent": false,
-        "notifications": false,
-        "translator_type": "none"
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "is_quote_status": true,
-      "quoted_status_id": 1359452400122290179,
-      "quoted_status_id_str": "1359452400122290179",
-      "quoted_status_permalink": {
-        "url": "https://t.co/IXuTRLcf2S",
-        "expanded": "https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1",
-        "display": "twitter.com/EmmWargon/stat\u2026"
-      },
-      "quoted_status": {
-        "created_at": "Wed Feb 10 10:41:24 +0000 2021",
-        "id": 1359452400122290179,
-        "id_str": "1359452400122290179",
-        "full_text": "Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://t.co/Eo9sNi3CGS",
-        "truncated": false,
-        "display_text_range": [
-          0,
-          280
-        ],
-        "entities": {
-          "hashtags": [
-            {
-              "text": "MaPrimeRenov",
-              "indices": [
-                181,
-                194
-              ]
-            },
-            {
-              "text": "ClimatR\u00e9silience",
-              "indices": [
-                247,
-                264
-              ]
-            }
-          ],
-          "symbols": [],
-          "user_mentions": [
-            {
-              "screen_name": "barbarapompili",
-              "name": "Barbara Pompili",
-              "id": 454336881,
-              "id_str": "454336881",
-              "indices": [
-                265,
-                280
-              ]
-            }
-          ],
-          "urls": [],
-          "media": [
-            {
-              "id": 1359452311949631490,
-              "id_str": "1359452311949631490",
-              "indices": [
-                281,
-                304
-              ],
-              "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
-              "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
-              "url": "https://t.co/Eo9sNi3CGS",
-              "display_url": "pic.twitter.com/Eo9sNi3CGS",
-              "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
-              "type": "photo",
-              "sizes": {
-                "medium": {
-                  "w": 1024,
-                  "h": 576,
-                  "resize": "fit"
-                },
-                "thumb": {
-                  "w": 150,
-                  "h": 150,
-                  "resize": "crop"
-                },
-                "large": {
-                  "w": 1024,
-                  "h": 576,
-                  "resize": "fit"
-                },
-                "small": {
-                  "w": 680,
-                  "h": 383,
-                  "resize": "fit"
-                }
-              }
-            }
-          ]
-        },
-        "extended_entities": {
-          "media": [
-            {
-              "id": 1359452311949631490,
-              "id_str": "1359452311949631490",
-              "indices": [
-                281,
-                304
-              ],
-              "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
-              "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
-              "url": "https://t.co/Eo9sNi3CGS",
-              "display_url": "pic.twitter.com/Eo9sNi3CGS",
-              "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
-              "type": "video",
-              "sizes": {
-                "medium": {
-                  "w": 1024,
-                  "h": 576,
-                  "resize": "fit"
-                },
-                "thumb": {
-                  "w": 150,
-                  "h": 150,
-                  "resize": "crop"
-                },
-                "large": {
-                  "w": 1024,
-                  "h": 576,
-                  "resize": "fit"
-                },
-                "small": {
-                  "w": 680,
-                  "h": 383,
-                  "resize": "fit"
-                }
-              },
-              "video_info": {
-                "aspect_ratio": [
-                  16,
-                  9
-                ],
-                "duration_millis": 55520,
-                "variants": [
-                  {
-                    "bitrate": 2176000,
-                    "content_type": "video/mp4",
-                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/1024x576/XICkBH2zcfQkgEmK.mp4?tag=10"
-                  },
-                  {
-                    "bitrate": 256000,
-                    "content_type": "video/mp4",
-                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/480x270/zfMjfc8WiSWmpXJ7.mp4?tag=10"
-                  },
-                  {
-                    "content_type": "application/x-mpegURL",
-                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/pl/9dtHYbeQ5IqcpVpq.m3u8?tag=10"
-                  },
-                  {
-                    "bitrate": 832000,
-                    "content_type": "video/mp4",
-                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/640x360/fbphRbjTWwdMW6tn.mp4?tag=10"
-                  }
-                ]
-              },
-              "additional_media_info": {
-                "monetizable": false
-              }
-            }
-          ]
-        },
-        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-          "id": 1052106552222597120,
-          "id_str": "1052106552222597120",
-          "name": "Emmanuelle Wargon",
-          "screen_name": "EmmWargon",
-          "location": "Paris, France",
-          "description": "Ministre d\u00e9l\u00e9gu\u00e9e au Logement. @Ecologie_Gouv",
-          "url": "https://t.co/J8rfp7l720",
-          "entities": {
-            "url": {
-              "urls": [
-                {
-                  "url": "https://t.co/J8rfp7l720",
-                  "expanded_url": "https://m.facebook.com/EmmanuelleWargon/",
-                  "display_url": "m.facebook.com/EmmanuelleWarg\u2026",
-                  "indices": [
-                    0,
-                    23
-                  ]
-                }
-              ]
-            },
-            "description": {
-              "urls": []
-            }
-          },
-          "protected": false,
-          "followers_count": 38810,
-          "friends_count": 802,
-          "listed_count": 385,
-          "created_at": "Tue Oct 16 07:58:44 +0000 2018",
-          "favourites_count": 1592,
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": true,
-          "verified": true,
-          "statuses_count": 2980,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "is_translation_enabled": false,
-          "profile_background_color": "000000",
-          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_tile": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1181954609818062848/LC0izmqE_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1181954609818062848/LC0izmqE_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/1052106552222597120/1612810901",
-          "profile_link_color": "1B95E0",
-          "profile_sidebar_border_color": "000000",
-          "profile_sidebar_fill_color": "000000",
-          "profile_text_color": "000000",
-          "profile_use_background_image": false,
-          "has_extended_profile": false,
-          "default_profile": false,
-          "default_profile_image": false,
-          "following": false,
-          "follow_request_sent": false,
-          "notifications": false,
-          "translator_type": "none"
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 46,
-        "favorite_count": 94,
-        "favorited": false,
-        "retweeted": false,
-        "possibly_sensitive": false,
-        "lang": "fr",
-        "collection_source": "quote"
-      },
-      "retweet_count": 17,
-      "favorite_count": 50,
-      "favorited": false,
-      "retweeted": false,
-      "possibly_sensitive": false,
-      "lang": "fr",
-      "collection_source": "thread",
       "extended_entities": {
         "media": [
           {
+            "additional_media_info": {
+              "monetizable": false
+            },
+            "display_url": "pic.twitter.com/Eo9sNi3CGS",
+            "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
             "id": 1359452311949631490,
             "id_str": "1359452311949631490",
             "indices": [
@@ -1401,32 +1238,30 @@
             ],
             "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
             "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
-            "url": "https://t.co/Eo9sNi3CGS",
-            "display_url": "pic.twitter.com/Eo9sNi3CGS",
-            "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
-            "type": "video",
             "sizes": {
-              "medium": {
-                "w": 1024,
-                "h": 576,
-                "resize": "fit"
-              },
-              "thumb": {
-                "w": 150,
-                "h": 150,
-                "resize": "crop"
-              },
               "large": {
-                "w": 1024,
                 "h": 576,
-                "resize": "fit"
+                "resize": "fit",
+                "w": 1024
+              },
+              "medium": {
+                "h": 576,
+                "resize": "fit",
+                "w": 1024
               },
               "small": {
-                "w": 680,
                 "h": 383,
-                "resize": "fit"
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
               }
             },
+            "type": "video",
+            "url": "https://t.co/Eo9sNi3CGS",
             "video_info": {
               "aspect_ratio": [
                 16,
@@ -1454,164 +1289,453 @@
                   "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/640x360/fbphRbjTWwdMW6tn.mp4?tag=10"
                 }
               ]
-            },
-            "additional_media_info": {
-              "monetizable": false
             }
           }
         ]
-      }
-    },
-    "normalized": [
-      {
-        "id": "1359452400122290179",
-        "media_alt_texts": [""],
-        "local_time": "2021-02-10T11:41:24",
-        "timestamp_utc": 1612953684,
-        "text": "Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
-        "url": "https://twitter.com/EmmWargon/status/1359452400122290179",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": null,
-        "retweeted_user": null,
-        "retweeted_user_id": null,
-        "retweeted_timestamp_utc": null,
-        "media_files": [
-          "1359452400122290179_XICkBH2zcfQkgEmK.mp4"
-        ],
-        "media_types": [
-          "video"
-        ],
-        "media_urls": [
-          "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/1024x576/XICkBH2zcfQkgEmK.mp4"
-        ],
-        "links": [],
-        "links_to_resolve": false,
-        "domains": [],
-        "hashtags": [
-          "climatr\u00e9silience",
-          "maprimerenov"
-        ],
-        "mentioned_ids": [
-          "454336881"
-        ],
-        "mentioned_names": [
-          "barbarapompili"
-        ],
-        "collection_time": "2021-02-10T17:00:32.933258",
-        "collected_via": [
-          "quote"
-        ],
-        "match_query": false,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "fr",
+      },
+      "favorite_count": 50,
+      "favorited": false,
+      "full_text": "Le logement est le 2e secteur le plus \u00e9metteur de gaz \u00e0 effet de serre.\nOn ne pourra plus louer de passoires thermiques d\u00e8s 2028 :\n\u2192 les locataires pourront exiger des travaux\n\u2192 d'ici cette date, les loyers de ces logements ne pourront \u00eatre augment\u00e9s.\nhttps://t.co/IXuTRLcf2S",
+      "geo": null,
+      "id": 1359485114112233472,
+      "id_str": "1359485114112233472",
+      "in_reply_to_screen_name": "JeanCASTEX",
+      "in_reply_to_status_id": 1359485112325468162,
+      "in_reply_to_status_id_str": "1359485112325468162",
+      "in_reply_to_user_id": 119081177,
+      "in_reply_to_user_id_str": "119081177",
+      "is_quote_status": true,
+      "lang": "fr",
+      "place": null,
+      "possibly_sensitive": false,
+      "quoted_status": {
+        "collection_source": "quote",
+        "contributors": null,
         "coordinates": null,
+        "created_at": "Wed Feb 10 10:41:24 +0000 2021",
+        "display_text_range": [
+          0,
+          280
+        ],
+        "entities": {
+          "hashtags": [
+            {
+              "indices": [
+                181,
+                194
+              ],
+              "text": "MaPrimeRenov"
+            },
+            {
+              "indices": [
+                247,
+                264
+              ],
+              "text": "ClimatR\u00e9silience"
+            }
+          ],
+          "media": [
+            {
+              "display_url": "pic.twitter.com/Eo9sNi3CGS",
+              "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
+              "id": 1359452311949631490,
+              "id_str": "1359452311949631490",
+              "indices": [
+                281,
+                304
+              ],
+              "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
+              "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
+              "sizes": {
+                "large": {
+                  "h": 576,
+                  "resize": "fit",
+                  "w": 1024
+                },
+                "medium": {
+                  "h": 576,
+                  "resize": "fit",
+                  "w": 1024
+                },
+                "small": {
+                  "h": 383,
+                  "resize": "fit",
+                  "w": 680
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "photo",
+              "url": "https://t.co/Eo9sNi3CGS"
+            }
+          ],
+          "symbols": [],
+          "urls": [],
+          "user_mentions": [
+            {
+              "id": 454336881,
+              "id_str": "454336881",
+              "indices": [
+                265,
+                280
+              ],
+              "name": "Barbara Pompili",
+              "screen_name": "barbarapompili"
+            }
+          ]
+        },
+        "extended_entities": {
+          "media": [
+            {
+              "additional_media_info": {
+                "monetizable": false
+              },
+              "display_url": "pic.twitter.com/Eo9sNi3CGS",
+              "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
+              "id": 1359452311949631490,
+              "id_str": "1359452311949631490",
+              "indices": [
+                281,
+                304
+              ],
+              "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
+              "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1359452311949631490/pu/img/U7mb5qzw9vuAhrFc.jpg",
+              "sizes": {
+                "large": {
+                  "h": 576,
+                  "resize": "fit",
+                  "w": 1024
+                },
+                "medium": {
+                  "h": 576,
+                  "resize": "fit",
+                  "w": 1024
+                },
+                "small": {
+                  "h": 383,
+                  "resize": "fit",
+                  "w": 680
+                },
+                "thumb": {
+                  "h": 150,
+                  "resize": "crop",
+                  "w": 150
+                }
+              },
+              "type": "video",
+              "url": "https://t.co/Eo9sNi3CGS",
+              "video_info": {
+                "aspect_ratio": [
+                  16,
+                  9
+                ],
+                "duration_millis": 55520,
+                "variants": [
+                  {
+                    "bitrate": 2176000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/1024x576/XICkBH2zcfQkgEmK.mp4?tag=10"
+                  },
+                  {
+                    "bitrate": 256000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/480x270/zfMjfc8WiSWmpXJ7.mp4?tag=10"
+                  },
+                  {
+                    "content_type": "application/x-mpegURL",
+                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/pl/9dtHYbeQ5IqcpVpq.m3u8?tag=10"
+                  },
+                  {
+                    "bitrate": 832000,
+                    "content_type": "video/mp4",
+                    "url": "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/640x360/fbphRbjTWwdMW6tn.mp4?tag=10"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "favorite_count": 94,
+        "favorited": false,
+        "full_text": "Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://t.co/Eo9sNi3CGS",
+        "geo": null,
+        "id": 1359452400122290179,
+        "id_str": "1359452400122290179",
+        "in_reply_to_screen_name": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "is_quote_status": false,
+        "lang": "fr",
+        "place": null,
         "possibly_sensitive": false,
         "retweet_count": 46,
-        "like_count": 94,
-        "user_id": "1052106552222597120",
-        "user_screen_name": "EmmWargon",
-        "user_name": "Emmanuelle Wargon",
-        "user_friends": 802,
-        "user_followers": 38810,
-        "user_location": "Paris, France",
-        "user_verified": true,
-        "user_description": "Ministre d\u00e9l\u00e9gu\u00e9e au Logement. @Ecologie_Gouv",
-        "user_created_at": "2018-10-16T09:58:44",
-        "user_tweets": 2980,
-        "user_likes": 1592,
-        "user_lists": 385,
-        "user_image": "https://pbs.twimg.com/profile_images/1181954609818062848/LC0izmqE_normal.jpg",
-        "user_url": "https://m.facebook.com/EmmanuelleWargon/",
-        "user_timestamp_utc": 1539676724,
-        "source_url": "http://twitter.com/download/android",
-        "source_name": "Twitter for Android"
+        "retweeted": false,
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "truncated": false,
+        "user": {
+          "contributors_enabled": false,
+          "created_at": "Tue Oct 16 07:58:44 +0000 2018",
+          "default_profile": false,
+          "default_profile_image": false,
+          "description": "Ministre d\u00e9l\u00e9gu\u00e9e au Logement. @Ecologie_Gouv",
+          "entities": {
+            "description": {
+              "urls": []
+            },
+            "url": {
+              "urls": [
+                {
+                  "display_url": "m.facebook.com/EmmanuelleWarg\u2026",
+                  "expanded_url": "https://m.facebook.com/EmmanuelleWargon/",
+                  "indices": [
+                    0,
+                    23
+                  ],
+                  "url": "https://t.co/J8rfp7l720"
+                }
+              ]
+            }
+          },
+          "favourites_count": 1592,
+          "follow_request_sent": false,
+          "followers_count": 38810,
+          "following": false,
+          "friends_count": 802,
+          "geo_enabled": true,
+          "has_extended_profile": false,
+          "id": 1052106552222597120,
+          "id_str": "1052106552222597120",
+          "is_translation_enabled": false,
+          "is_translator": false,
+          "lang": null,
+          "listed_count": 385,
+          "location": "Paris, France",
+          "name": "Emmanuelle Wargon",
+          "notifications": false,
+          "profile_background_color": "000000",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+          "profile_background_tile": false,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/1052106552222597120/1612810901",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1181954609818062848/LC0izmqE_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1181954609818062848/LC0izmqE_normal.jpg",
+          "profile_link_color": "1B95E0",
+          "profile_sidebar_border_color": "000000",
+          "profile_sidebar_fill_color": "000000",
+          "profile_text_color": "000000",
+          "profile_use_background_image": false,
+          "protected": false,
+          "screen_name": "EmmWargon",
+          "statuses_count": 2980,
+          "time_zone": null,
+          "translator_type": "none",
+          "url": "https://t.co/J8rfp7l720",
+          "utc_offset": null,
+          "verified": true
+        }
       },
-      {
-        "id": "1359485114112233472",
-        "media_alt_texts": [""],
-        "local_time": "2021-02-10T13:51:23",
-        "timestamp_utc": 1612961483,
-        "text": "Le logement est le 2e secteur le plus \u00e9metteur de gaz \u00e0 effet de serre.\nOn ne pourra plus louer de passoires thermiques d\u00e8s 2028 :\n\u2192 les locataires pourront exiger des travaux\n\u2192 d'ici cette date, les loyers de ces logements ne pourront \u00eatre augment\u00e9s.\n\u00ab EmmWargon: Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1 \u2014 https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1 \u00bb",
-        "url": "https://twitter.com/JeanCASTEX/status/1359485114112233472",
-        "quoted_id": "1359452400122290179",
-        "quoted_user": "EmmWargon",
-        "quoted_user_id": "1052106552222597120",
-        "quoted_timestamp_utc": 1612953684,
-        "retweeted_id": null,
-        "retweeted_user": null,
-        "retweeted_user_id": null,
-        "retweeted_timestamp_utc": null,
-        "media_files": [
-          "1359452400122290179_XICkBH2zcfQkgEmK.mp4"
-        ],
-        "media_types": [
-          "video"
-        ],
-        "media_urls": [
-          "https://video.twimg.com/ext_tw_video/1359452311949631490/pu/vid/1024x576/XICkBH2zcfQkgEmK.mp4"
-        ],
-        "links": [
-          "https://twitter.com/EmmWargon/status/1359452400122290179"
-        ],
-        "links_to_resolve": true,
-        "domains": [
-          "twitter.com"
-        ],
-        "hashtags": [
-          "climatr\u00e9silience",
-          "maprimerenov"
-        ],
-        "mentioned_ids": [
-          "454336881"
-        ],
-        "mentioned_names": [
-          "barbarapompili"
-        ],
-        "collection_time": "2021-02-10T17:00:32.933561",
-        "collected_via": [
-          "thread"
-        ],
-        "match_query": false,
-        "to_tweetid": "1359485112325468162",
-        "to_username": "JeanCASTEX",
-        "to_userid": "119081177",
-        "lang": "fr",
-        "coordinates": null,
-        "possibly_sensitive": false,
-        "retweet_count": 17,
-        "like_count": 50,
-        "user_id": "119081177",
-        "user_screen_name": "JeanCASTEX",
-        "user_name": "Jean Castex",
-        "user_friends": 1004,
-        "user_followers": 273068,
-        "user_location": "France",
-        "user_verified": true,
-        "user_description": "Premier ministre de la R\u00e9publique fran\u00e7aise.",
-        "user_created_at": "2010-03-02T17:24:02",
-        "user_tweets": 980,
-        "user_likes": 330,
-        "user_lists": 798,
-        "user_image": "https://pbs.twimg.com/profile_images/1318123063926546435/WtVglzae_normal.jpg",
-        "user_url": "http://www.gouvernement.fr/",
-        "user_timestamp_utc": 1267547042,
-        "source_url": "https://mobile.twitter.com",
-        "source_name": "Twitter Web App"
+      "quoted_status_id": 1359452400122290179,
+      "quoted_status_id_str": "1359452400122290179",
+      "quoted_status_permalink": {
+        "display": "twitter.com/EmmWargon/stat\u2026",
+        "expanded": "https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1",
+        "url": "https://t.co/IXuTRLcf2S"
+      },
+      "retweet_count": 17,
+      "retweeted": false,
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "truncated": false,
+      "user": {
+        "contributors_enabled": false,
+        "created_at": "Tue Mar 02 16:24:02 +0000 2010",
+        "default_profile": false,
+        "default_profile_image": false,
+        "description": "Premier ministre de la R\u00e9publique fran\u00e7aise.",
+        "entities": {
+          "description": {
+            "urls": []
+          },
+          "url": {
+            "urls": [
+              {
+                "display_url": "gouvernement.fr",
+                "expanded_url": "http://www.gouvernement.fr/",
+                "indices": [
+                  0,
+                  23
+                ],
+                "url": "https://t.co/49wO2Lr0ie"
+              }
+            ]
+          }
+        },
+        "favourites_count": 330,
+        "follow_request_sent": false,
+        "followers_count": 273068,
+        "following": false,
+        "friends_count": 1004,
+        "geo_enabled": true,
+        "has_extended_profile": true,
+        "id": 119081177,
+        "id_str": "119081177",
+        "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 798,
+        "location": "France",
+        "name": "Jean Castex",
+        "notifications": false,
+        "profile_background_color": "022330",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+        "profile_background_tile": false,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/119081177/1612551611",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1318123063926546435/WtVglzae_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1318123063926546435/WtVglzae_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "A8C7F7",
+        "profile_sidebar_fill_color": "C0DFEC",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "JeanCASTEX",
+        "statuses_count": 980,
+        "time_zone": null,
+        "translator_type": "none",
+        "url": "https://t.co/49wO2Lr0ie",
+        "utc_offset": null,
+        "verified": true
       }
-    ]
+    }
   },
   {
+    "normalized": [
+      {
+        "collected_via": [
+          "retweet"
+        ],
+        "collection_time": "2022-07-29T12:15:48.804292",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [],
+        "id": "1312662126675275777",
+        "lang": "fr",
+        "like_count": 4,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2020-10-04T09:53:33",
+        "match_query": true,
+        "media_alt_texts": [],
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "mentioned_ids": [],
+        "mentioned_names": [],
+        "place_country_code": "",
+        "place_name": "[Place name removed]",
+        "place_type": "poi",
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "retweet_count": 2,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "Twitter for Android",
+        "source_url": "http://twitter.com/download/android",
+        "text": "Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+        "timestamp_utc": 1601798013,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/KaderSouad/status/1312662126675275777",
+        "user_created_at": "2018-05-19T14:48:30",
+        "user_description": "\ud83c\udfb6\u2764\ufe0f\ud83d\udc95\ud83d\ude48\ud83d\ude18",
+        "user_followers": 22,
+        "user_friends": 151,
+        "user_id": "997821294866567168",
+        "user_image": "https://pbs.twimg.com/profile_images/1312662535162789888/B8EvygQx_normal.jpg",
+        "user_likes": 5,
+        "user_lists": 0,
+        "user_location": "conakry",
+        "user_name": "Souad Kader Bangoua",
+        "user_screen_name": "KaderSouad",
+        "user_timestamp_utc": 1526734110,
+        "user_tweets": 6,
+        "user_url": null,
+        "user_verified": false
+      },
+      {
+        "collected_via": [
+          "search"
+        ],
+        "collection_time": "2022-07-29T12:15:48.804360",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [],
+        "id": "1357594877148737545",
+        "lang": "fr",
+        "like_count": 0,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-02-05T08:40:16",
+        "match_query": true,
+        "media_alt_texts": [],
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "mentioned_ids": [
+          "997821294866567168"
+        ],
+        "mentioned_names": [
+          "kadersouad"
+        ],
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "retweet_count": 2,
+        "retweeted_id": "1312662126675275777",
+        "retweeted_timestamp_utc": 1601798013,
+        "retweeted_user": "KaderSouad",
+        "retweeted_user_id": "997821294866567168",
+        "source_name": "Twitter for Android",
+        "source_url": "http://twitter.com/download/android",
+        "text": "RT @KaderSouad: Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+        "timestamp_utc": 1612510816,
+        "to_tweetid": null,
+        "to_userid": null,
+        "to_username": null,
+        "url": "https://twitter.com/AubinDore/status/1357594877148737545",
+        "user_created_at": "2019-05-31T15:30:29",
+        "user_description": "\u00c9tudiant en sciences \u00e9conomiques \ud83c\udf93 passionn\u00e9 de voyage\u2708 et de foot\u26bd\ufe0f",
+        "user_followers": 214,
+        "user_friends": 229,
+        "user_id": "1134452086337413120",
+        "user_image": "https://pbs.twimg.com/profile_images/1359241679765651469/mywDBzpr_normal.jpg",
+        "user_likes": 820,
+        "user_lists": 0,
+        "user_location": "Guin\u00e9e",
+        "user_name": "Dor\u00e9 Aubin Arthus \ud83c\uddec\ud83c\uddf3",
+        "user_screen_name": "AubinDore",
+        "user_timestamp_utc": 1559309429,
+        "user_tweets": 416,
+        "user_url": null,
+        "user_verified": false
+      }
+    ],
     "source": {
+      "collection_source": "search",
+      "contributors": null,
+      "coordinates": null,
       "created_at": "Fri Feb 05 07:40:16 +0000 2021",
-      "id": 1357594877148737545,
-      "id_str": "1357594877148737545",
-      "full_text": "RT @KaderSouad: Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
-      "truncated": false,
       "display_text_range": [
         0,
         126
@@ -1619,88 +1743,45 @@
       "entities": {
         "hashtags": [],
         "symbols": [],
+        "urls": [],
         "user_mentions": [
           {
-            "screen_name": "KaderSouad",
-            "name": "Souad Kader Bangoua",
             "id": 997821294866567168,
             "id_str": "997821294866567168",
             "indices": [
               3,
               14
-            ]
+            ],
+            "name": "Souad Kader Bangoua",
+            "screen_name": "KaderSouad"
           }
-        ],
-        "urls": []
+        ]
       },
-      "metadata": {
-        "iso_language_code": "fr",
-        "result_type": "recent"
-      },
-      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "favorite_count": 0,
+      "favorited": false,
+      "full_text": "RT @KaderSouad: Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+      "geo": null,
+      "id": 1357594877148737545,
+      "id_str": "1357594877148737545",
+      "in_reply_to_screen_name": null,
       "in_reply_to_status_id": null,
       "in_reply_to_status_id_str": null,
       "in_reply_to_user_id": null,
       "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-        "id": 1134452086337413120,
-        "id_str": "1134452086337413120",
-        "name": "Dor\u00e9 Aubin Arthus \ud83c\uddec\ud83c\uddf3",
-        "screen_name": "AubinDore",
-        "location": "Guin\u00e9e",
-        "description": "\u00c9tudiant en sciences \u00e9conomiques \ud83c\udf93 passionn\u00e9 de voyage\u2708 et de foot\u26bd\ufe0f",
-        "url": null,
-        "entities": {
-          "description": {
-            "urls": []
-          }
-        },
-        "protected": false,
-        "followers_count": 214,
-        "friends_count": 229,
-        "listed_count": 0,
-        "created_at": "Fri May 31 13:30:29 +0000 2019",
-        "favourites_count": 820,
-        "utc_offset": null,
-        "time_zone": null,
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 416,
-        "lang": null,
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "F5F8FA",
-        "profile_background_image_url": null,
-        "profile_background_image_url_https": null,
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/1359241679765651469/mywDBzpr_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1359241679765651469/mywDBzpr_normal.jpg",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1134452086337413120/1596024459",
-        "profile_link_color": "1DA1F2",
-        "profile_sidebar_border_color": "C0DEED",
-        "profile_sidebar_fill_color": "DDEEF6",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": true,
-        "default_profile": true,
-        "default_profile_image": false,
-        "following": false,
-        "follow_request_sent": false,
-        "notifications": false,
-        "translator_type": "none"
+      "is_quote_status": false,
+      "lang": "fr",
+      "metadata": {
+        "iso_language_code": "fr",
+        "result_type": "recent"
       },
-      "geo": null,
-      "coordinates": null,
       "place": null,
-      "contributors": null,
+      "retweet_count": 2,
+      "retweeted": false,
       "retweeted_status": {
+        "collection_source": "retweet",
+        "contributors": null,
+        "coordinates": null,
         "created_at": "Sun Oct 04 07:53:33 +0000 2020",
-        "id": 1312662126675275777,
-        "id_str": "1312662126675275777",
-        "full_text": "Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
-        "truncated": false,
         "display_text_range": [
           0,
           110
@@ -1708,224 +1789,147 @@
         "entities": {
           "hashtags": [],
           "symbols": [],
-          "user_mentions": [],
-          "urls": []
+          "urls": [],
+          "user_mentions": []
         },
-        "metadata": {
-          "iso_language_code": "fr",
-          "result_type": "recent"
-        },
-        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "favorite_count": 4,
+        "favorited": false,
+        "full_text": "Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+        "geo": null,
+        "id": 1312662126675275777,
+        "id_str": "1312662126675275777",
+        "in_reply_to_screen_name": null,
         "in_reply_to_status_id": null,
         "in_reply_to_status_id_str": null,
         "in_reply_to_user_id": null,
         "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
+        "is_quote_status": false,
+        "lang": "fr",
+        "metadata": {
+          "iso_language_code": "fr",
+          "result_type": "recent"
+        },
+        "place": {
+          "attributes": {},
+          "bounding_box": null,
+          "contained_within": [],
+          "country": "",
+          "country_code": "",
+          "full_name": "[Place name removed]",
+          "id": "07d9f16288481000",
+          "name": "[Place name removed]",
+          "place_type": "poi",
+          "url": "https://api.twitter.com/1.1/geo/id/07d9f16288481000.json"
+        },
+        "retweet_count": 2,
+        "retweeted": false,
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "truncated": false,
         "user": {
-          "id": 997821294866567168,
-          "id_str": "997821294866567168",
-          "name": "Souad Kader Bangoua",
-          "screen_name": "KaderSouad",
-          "location": "conakry",
+          "contributors_enabled": false,
+          "created_at": "Sat May 19 12:48:30 +0000 2018",
+          "default_profile": true,
+          "default_profile_image": false,
           "description": "\ud83c\udfb6\u2764\ufe0f\ud83d\udc95\ud83d\ude48\ud83d\ude18",
-          "url": null,
           "entities": {
             "description": {
               "urls": []
             }
           },
-          "protected": false,
-          "followers_count": 22,
-          "friends_count": 151,
-          "listed_count": 0,
-          "created_at": "Sat May 19 12:48:30 +0000 2018",
           "favourites_count": 5,
-          "utc_offset": null,
-          "time_zone": null,
+          "follow_request_sent": false,
+          "followers_count": 22,
+          "following": false,
+          "friends_count": 151,
           "geo_enabled": true,
-          "verified": false,
-          "statuses_count": 6,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
+          "has_extended_profile": true,
+          "id": 997821294866567168,
+          "id_str": "997821294866567168",
           "is_translation_enabled": false,
+          "is_translator": false,
+          "lang": null,
+          "listed_count": 0,
+          "location": "conakry",
+          "name": "Souad Kader Bangoua",
+          "notifications": false,
           "profile_background_color": "F5F8FA",
           "profile_background_image_url": null,
           "profile_background_image_url_https": null,
           "profile_background_tile": false,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/997821294866567168/1601798108",
           "profile_image_url": "http://pbs.twimg.com/profile_images/1312662535162789888/B8EvygQx_normal.jpg",
           "profile_image_url_https": "https://pbs.twimg.com/profile_images/1312662535162789888/B8EvygQx_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/997821294866567168/1601798108",
           "profile_link_color": "1DA1F2",
           "profile_sidebar_border_color": "C0DEED",
           "profile_sidebar_fill_color": "DDEEF6",
           "profile_text_color": "333333",
           "profile_use_background_image": true,
-          "has_extended_profile": true,
-          "default_profile": true,
-          "default_profile_image": false,
-          "following": false,
-          "follow_request_sent": false,
-          "notifications": false,
-          "translator_type": "none"
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": {
-          "id": "07d9f16288481000",
-          "url": "https://api.twitter.com/1.1/geo/id/07d9f16288481000.json",
-          "place_type": "poi",
-          "name": "[Place name removed]",
-          "full_name": "[Place name removed]",
-          "country_code": "",
-          "country": "",
-          "contained_within": [],
-          "bounding_box": null,
-          "attributes": {}
-        },
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 2,
-        "favorite_count": 4,
-        "favorited": false,
-        "retweeted": false,
-        "lang": "fr",
-        "collection_source": "retweet"
+          "protected": false,
+          "screen_name": "KaderSouad",
+          "statuses_count": 6,
+          "time_zone": null,
+          "translator_type": "none",
+          "url": null,
+          "utc_offset": null,
+          "verified": false
+        }
       },
-      "is_quote_status": false,
-      "retweet_count": 2,
-      "favorite_count": 0,
-      "favorited": false,
-      "retweeted": false,
-      "lang": "fr",
-      "collection_source": "search"
-    },
-    "normalized": [
-      {
-        "id": "1312662126675275777",
-        "media_alt_texts": [],
-        "local_time": "2020-10-04T09:53:33",
-        "timestamp_utc": 1601798013,
-        "text": "Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
-        "url": "https://twitter.com/KaderSouad/status/1312662126675275777",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": null,
-        "retweeted_user": null,
-        "retweeted_user_id": null,
-        "retweeted_timestamp_utc": null,
-        "media_files": [],
-        "media_types": [],
-        "media_urls": [],
-        "links": [],
-        "links_to_resolve": false,
-        "domains": [],
-        "hashtags": [],
-        "mentioned_ids": [],
-        "mentioned_names": [],
-        "collection_time": "2021-02-10T17:44:10.023367",
-        "collected_via": [
-          "retweet"
-        ],
-        "match_query": true,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "fr",
-        "coordinates": null,
-        "retweet_count": 2,
-        "like_count": 4,
-        "user_id": "997821294866567168",
-        "user_screen_name": "KaderSouad",
-        "user_name": "Souad Kader Bangoua",
-        "user_friends": 151,
-        "user_followers": 22,
-        "user_location": "conakry",
-        "user_verified": false,
-        "user_description": "\ud83c\udfb6\u2764\ufe0f\ud83d\udc95\ud83d\ude48\ud83d\ude18",
-        "user_created_at": "2018-05-19T14:48:30",
-        "user_tweets": 6,
-        "user_likes": 5,
-        "user_lists": 0,
-        "user_image": "https://pbs.twimg.com/profile_images/1312662535162789888/B8EvygQx_normal.jpg",
-        "place_country_code": "",
-        "place_name": "[Place name removed]",
-        "place_type": "poi",
-        "user_url": null,
-        "user_timestamp_utc": 1526734110,
-        "source_url": "http://twitter.com/download/android",
-        "source_name": "Twitter for Android"
-      },
-      {
-        "id": "1357594877148737545",
-        "media_alt_texts": [],
-        "local_time": "2021-02-05T08:40:16",
-        "timestamp_utc": 1612510816,
-        "text": "RT @KaderSouad: Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
-        "url": "https://twitter.com/AubinDore/status/1357594877148737545",
-        "quoted_id": null,
-        "quoted_user": null,
-        "quoted_user_id": null,
-        "quoted_timestamp_utc": null,
-        "retweeted_id": "1312662126675275777",
-        "retweeted_user": "KaderSouad",
-        "retweeted_user_id": "997821294866567168",
-        "retweeted_timestamp_utc": 1601798013,
-        "media_files": [],
-        "media_types": [],
-        "media_urls": [],
-        "links": [],
-        "links_to_resolve": false,
-        "domains": [],
-        "hashtags": [],
-        "mentioned_ids": [
-          "997821294866567168"
-        ],
-        "mentioned_names": [
-          "kadersouad"
-        ],
-        "collection_time": "2021-02-10T17:44:10.023652",
-        "collected_via": [
-          "search"
-        ],
-        "match_query": true,
-        "to_tweetid": null,
-        "to_username": null,
-        "to_userid": null,
-        "lang": "fr",
-        "coordinates": null,
-        "retweet_count": 2,
-        "like_count": 0,
-        "user_id": "1134452086337413120",
-        "user_screen_name": "AubinDore",
-        "user_name": "Dor\u00e9 Aubin Arthus \ud83c\uddec\ud83c\uddf3",
-        "user_friends": 229,
-        "user_followers": 214,
-        "user_location": "Guin\u00e9e",
-        "user_verified": false,
-        "user_description": "\u00c9tudiant en sciences \u00e9conomiques \ud83c\udf93 passionn\u00e9 de voyage\u2708 et de foot\u26bd\ufe0f",
-        "user_created_at": "2019-05-31T15:30:29",
-        "user_tweets": 416,
-        "user_likes": 820,
-        "user_lists": 0,
-        "user_image": "https://pbs.twimg.com/profile_images/1359241679765651469/mywDBzpr_normal.jpg",
-        "user_url": null,
-        "user_timestamp_utc": 1559309429,
-        "source_url": "http://twitter.com/download/android",
-        "source_name": "Twitter for Android"
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "user": {
+        "contributors_enabled": false,
+        "created_at": "Fri May 31 13:30:29 +0000 2019",
+        "default_profile": true,
+        "default_profile_image": false,
+        "description": "\u00c9tudiant en sciences \u00e9conomiques \ud83c\udf93 passionn\u00e9 de voyage\u2708 et de foot\u26bd\ufe0f",
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "favourites_count": 820,
+        "follow_request_sent": false,
+        "followers_count": 214,
+        "following": false,
+        "friends_count": 229,
+        "geo_enabled": true,
+        "has_extended_profile": true,
+        "id": 1134452086337413120,
+        "id_str": "1134452086337413120",
+        "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 0,
+        "location": "Guin\u00e9e",
+        "name": "Dor\u00e9 Aubin Arthus \ud83c\uddec\ud83c\uddf3",
+        "notifications": false,
+        "profile_background_color": "F5F8FA",
+        "profile_background_image_url": null,
+        "profile_background_image_url_https": null,
+        "profile_background_tile": false,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1134452086337413120/1596024459",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1359241679765651469/mywDBzpr_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1359241679765651469/mywDBzpr_normal.jpg",
+        "profile_link_color": "1DA1F2",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "AubinDore",
+        "statuses_count": 416,
+        "time_zone": null,
+        "translator_type": "none",
+        "url": null,
+        "utc_offset": null,
+        "verified": false
       }
-    ]
+    }
   },
   {
     "normalized": [
       {
-        "media_alt_texts": [
-          "I want to remember this summer, but not like this, Troy.",
-          "Vanessa Hudgens' boyfriend sitting at home plate after swinging at and missing an Andrew Chafin pitch for strike three"
-        ],
-        "collection_time": "2022-05-25T10:11:51.963595",
+        "collection_time": "2022-07-29T12:15:48.804550",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -1936,6 +1940,10 @@
         "links_to_resolve": false,
         "local_time": "2022-05-04T21:28:41",
         "match_query": true,
+        "media_alt_texts": [
+          "I want to remember this summer, but not like this, Troy.",
+          "Vanessa Hudgens' boyfriend sitting at home plate after swinging at and missing an Andrew Chafin pitch for strike three"
+        ],
         "media_files": [
           "1521934858360082434_FR7-2gtXIAA4PA3.png",
           "1521934858360082434_FR7_qonXIAIu_Sr.jpg"
@@ -2199,12 +2207,7 @@
   {
     "normalized": [
       {
-        "media_alt_texts": [
-          "metadata generated via PTT! \u26055zzWtmAmlT",
-          "",
-          ""
-        ],
-        "collection_time": "2022-05-25T10:11:51.964146",
+        "collection_time": "2022-07-29T12:15:48.804768",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -2215,6 +2218,11 @@
         "links_to_resolve": false,
         "local_time": "2022-02-06T20:16:18",
         "match_query": true,
+        "media_alt_texts": [
+          "metadata generated via PTT! \u26055zzWtmAmlT",
+          "",
+          ""
+        ],
         "media_files": [
           "1490404000017137666_FK76iUkWYAQ2HpJ.png",
           "1490404000017137666_FK76icJXEAQJTAj.png",
@@ -2526,8 +2534,7 @@
   {
     "normalized": [
       {
-        "media_alt_texts": [],
-        "collection_time": "2022-05-25T10:11:51.964572",
+        "collection_time": "2022-07-29T12:15:48.804939",
         "coordinates": null,
         "domains": [
           "twitter.com"
@@ -2542,6 +2549,7 @@
         "links_to_resolve": true,
         "local_time": "2022-05-24T16:45:51",
         "match_query": true,
+        "media_alt_texts": [],
         "media_files": [],
         "media_types": [],
         "media_urls": [],
