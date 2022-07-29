@@ -38,7 +38,7 @@ def format_qt_text(user, text, quoted_text, url):
     url_pos = text_lc.find(url_lc)
     if url_pos != -1:
         url_len = len(url)
-        return ("%s%s%s" % (text[:url_pos], quote, text[url_pos+url_len:])).strip()
+        return ("%s%s%s" % (text[:url_pos], quote, text[url_pos + url_len:])).strip()
     return "%s %s" % (text, quote)
 
 
@@ -235,7 +235,6 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
     qtuid = None
     qtime = None
 
-
     if 'retweeted_status' in tweet and tweet['retweeted_status']['id_str'] != tweet['id_str']:
         rti = tweet['retweeted_status']['id_str']
         rtu = tweet['retweeted_status']['user']['screen_name']
@@ -338,9 +337,9 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
 
     if qturl:
         qturl_lc = custom_normalize_url(qturl).lower()
-        for l in list(links):
-            if l.lower() == qturl_lc:
-                links.remove(l)
+        for link in list(links):
+            if link.lower() == qturl_lc:
+                links.remove(link)
 
     timestamp_utc, local_time = get_dates(tweet['created_at'], locale)
     text = unescape(text)
@@ -348,7 +347,8 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
     if collection_source is None:
         collection_source = tweet.get('collection_source')
     links = sorted(links)
-    domains = [custom_get_normalized_hostname(l, normalize_amp=False, infer_redirection=False) for l in links]
+    domains = [custom_get_normalized_hostname(link, normalize_amp=False, infer_redirection=False)
+               for link in links]
     normalized_tweet = {
         'id': tweet['id_str'],
         'local_time': local_time,
