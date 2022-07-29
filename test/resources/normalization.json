@@ -5,7 +5,7 @@
         "collected_via": [
           "retweet"
         ],
-        "collection_time": "2022-07-29T12:31:37.767956",
+        "collection_time": "2022-07-29T12:34:28.962065",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -60,7 +60,7 @@
         "collected_via": [
           "stream"
         ],
-        "collection_time": "2022-07-29T12:31:37.768037",
+        "collection_time": "2022-07-29T12:34:28.962150",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -86,7 +86,7 @@
         "quoted_user": null,
         "quoted_user_id": null,
         "reply_count": 0,
-        "retweet_count": 0,
+        "retweet_count": 8297,
         "retweeted_id": "1355046668995977219",
         "retweeted_timestamp_utc": 1611903276,
         "retweeted_user": "NickKnudsenUS",
@@ -304,7 +304,7 @@
         "collected_via": [
           "retweet"
         ],
-        "collection_time": "2022-07-29T12:31:37.768185",
+        "collection_time": "2022-07-29T12:34:28.962300",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -459,7 +459,7 @@
         "collected_via": [
           "quote"
         ],
-        "collection_time": "2022-07-29T12:31:37.768447",
+        "collection_time": "2022-07-29T12:34:28.962570",
         "coordinates": null,
         "domains": [],
         "hashtags": [
@@ -535,11 +535,9 @@
         "collected_via": [
           "search"
         ],
-        "collection_time": "2022-07-29T12:31:37.768563",
+        "collection_time": "2022-07-29T12:34:28.962710",
         "coordinates": null,
-        "domains": [
-          "twitter.com"
-        ],
+        "domains": [],
         "hashtags": [
           "26時半",
           "2月1日",
@@ -550,10 +548,8 @@
         "id": "1356288731519479810",
         "lang": "ja",
         "like_count": 0,
-        "links": [
-          "https://twitter.com/rizu_1122/status/1356256391653019649"
-        ],
-        "links_to_resolve": true,
+        "links": [],
+        "links_to_resolve": false,
         "local_time": "2021-02-01T18:10:06",
         "match_query": true,
         "media_alt_texts": [
@@ -992,7 +988,7 @@
         "collected_via": [
           "quote"
         ],
-        "collection_time": "2022-07-29T12:31:37.768868",
+        "collection_time": "2022-07-29T12:34:28.963049",
         "coordinates": null,
         "domains": [],
         "hashtags": [
@@ -1062,11 +1058,9 @@
         "collected_via": [
           "thread"
         ],
-        "collection_time": "2022-07-29T12:31:37.768974",
+        "collection_time": "2022-07-29T12:34:28.963208",
         "coordinates": null,
-        "domains": [
-          "twitter.com"
-        ],
+        "domains": [],
         "hashtags": [
           "climatrésilience",
           "maprimerenov"
@@ -1074,10 +1068,8 @@
         "id": "1359485114112233472",
         "lang": "fr",
         "like_count": 50,
-        "links": [
-          "https://twitter.com/EmmWargon/status/1359452400122290179"
-        ],
-        "links_to_resolve": true,
+        "links": [],
+        "links_to_resolve": false,
         "local_time": "2021-02-10T13:51:23",
         "match_query": false,
         "media_alt_texts": [
@@ -1110,7 +1102,7 @@
         "retweeted_user_id": null,
         "source_name": "Twitter Web App",
         "source_url": "https://mobile.twitter.com",
-        "text": "Le logement est le 2e secteur le plus émetteur de gaz à effet de serre.\nOn ne pourra plus louer de passoires thermiques dès 2028 :\n→ les locataires pourront exiger des travaux\n→ d'ici cette date, les loyers de ces logements ne pourront être augmentés.\n« EmmWargon: Toutes les passoires thermiques seront interdites à la location d'ici 2028 : 1,8 million de logements concernés !\n\nLe but n'est pas de les sortir du marché mais de les rénover.\n\n➡️ #MaPrimeRenov est désormais accessible à tous les propriétaires.\n\n#ClimatRésilience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1 — https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1 »",
+        "text": "Le logement est le 2e secteur le plus émetteur de gaz à effet de serre.\nOn ne pourra plus louer de passoires thermiques dès 2028 :\n→ les locataires pourront exiger des travaux\n→ d'ici cette date, les loyers de ces logements ne pourront être augmentés.\n« EmmWargon: Toutes les passoires thermiques seront interdites à la location d'ici 2028 : 1,8 million de logements concernés !\n\nLe but n'est pas de les sortir du marché mais de les rénover.\n\n➡️ #MaPrimeRenov est désormais accessible à tous les propriétaires.\n\n#ClimatRésilience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1 — https://twitter.com/EmmWargon/status/1359452400122290179 »",
         "timestamp_utc": 1612961483,
         "to_tweetid": "1359485112325468162",
         "to_userid": "119081177",
@@ -1619,7 +1611,7 @@
         "collected_via": [
           "retweet"
         ],
-        "collection_time": "2022-07-29T12:31:37.769162",
+        "collection_time": "2022-07-29T12:34:28.963408",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -1676,7 +1668,7 @@
         "collected_via": [
           "search"
         ],
-        "collection_time": "2022-07-29T12:31:37.769228",
+        "collection_time": "2022-07-29T12:34:28.963479",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -1929,7 +1921,7 @@
   {
     "normalized": [
       {
-        "collection_time": "2022-07-29T12:31:37.769406",
+        "collection_time": "2022-07-29T12:34:28.963676",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -2207,7 +2199,7 @@
   {
     "normalized": [
       {
-        "collection_time": "2022-07-29T12:31:37.769613",
+        "collection_time": "2022-07-29T12:34:28.963890",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -2534,7 +2526,7 @@
   {
     "normalized": [
       {
-        "collection_time": "2022-07-29T12:31:37.769777",
+        "collection_time": "2022-07-29T12:34:28.964057",
         "coordinates": null,
         "domains": [
           "twitter.com"
