@@ -229,6 +229,12 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
     rtu = None
     rtuid = None
     rtime = None
+    qti = None
+    qturl = None
+    qtu = None
+    qtuid = None
+    qtime = None
+
 
     if 'retweeted_status' in tweet and tweet['retweeted_status']['id_str'] != tweet['id_str']:
         rti = tweet['retweeted_status']['id_str']
@@ -252,12 +258,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
 
         resolve_entities(tweet, 'retweeted')
 
-    qti = None
-    qtu = None
-    qtuid = None
-    qtime = None
-
-    if 'quoted_status' in tweet and tweet['quoted_status']['id_str'] != tweet['id_str']:
+    elif 'quoted_status' in tweet and tweet['quoted_status']['id_str'] != tweet['id_str']:
         qti = tweet['quoted_status']['id_str']
         qtu = tweet['quoted_status']['user']['screen_name']
         qtuid = tweet['quoted_status']['user']['id_str']
