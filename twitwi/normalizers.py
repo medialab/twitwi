@@ -31,10 +31,12 @@ def format_rt_text(user, text):
 
 def format_qt_text(user, text, quoted_text, url):
     quote = '« %s: %s — %s »' % (user, quoted_text, url)
-    if quote.lower() in text.lower():
+    text_lc = text.lower()
+    if quote.lower() in text_lc:
         return text
-    if url.lower() in text.lower():
-        url_pos = text.lower().find(url.lower())
+    url_lc = url.lower()
+    url_pos = text_lc.find(url_lc)
+    if url_pos != -1:
         url_len = len(url)
         return ("%s%s%s" % (text[:url_pos], quote, text[url_pos+url_len:])).strip()
     return "%s %s" % (text, quote)
