@@ -5,7 +5,7 @@
         "collected_via": [
           "retweet"
         ],
-        "collection_time": "2022-07-29T12:15:48.802806",
+        "collection_time": "2022-07-29T12:31:37.767956",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -41,7 +41,7 @@
         "to_username": null,
         "url": "https://twitter.com/NickKnudsenUS/status/1355046668995977219",
         "user_created_at": "2016-11-16T19:19:41",
-        "user_description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+        "user_description": "Executive Director @DemCastUSA 🇺🇸 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
         "user_followers": 195281,
         "user_friends": 15570,
         "user_id": "798953701972938752",
@@ -49,7 +49,7 @@
         "user_likes": 75320,
         "user_lists": 796,
         "user_location": "Portland, OR",
-        "user_name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+        "user_name": "Nick Knudsen 🇺🇸",
         "user_screen_name": "NickKnudsenUS",
         "user_timestamp_utc": 1479320381,
         "user_tweets": 65634,
@@ -60,7 +60,7 @@
         "collected_via": [
           "stream"
         ],
-        "collection_time": "2022-07-29T12:15:48.802907",
+        "collection_time": "2022-07-29T12:31:37.768037",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -108,7 +108,7 @@
         "user_likes": 72502,
         "user_lists": 5,
         "user_location": "Edmond, OK",
-        "user_name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
+        "user_name": "MsDreadNoMore🌊🇺🇸 #Biden2020",
         "user_screen_name": "debmapmom2",
         "user_timestamp_utc": 1365896360,
         "user_tweets": 4418,
@@ -133,7 +133,7 @@
               3,
               17
             ],
-            "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+            "name": "Nick Knudsen 🇺🇸",
             "screen_name": "NickKnudsenUS"
           }
         ]
@@ -164,7 +164,7 @@
           "symbols": [],
           "urls": [
             {
-              "display_url": "twitter.com/i/web/status/1\u2026",
+              "display_url": "twitter.com/i/web/status/1…",
               "expanded_url": "https://twitter.com/i/web/status/1355046668995977219",
               "indices": [
                 117,
@@ -207,14 +207,14 @@
         "retweet_count": 8297,
         "retweeted": false,
         "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'\u2026 https://t.co/WDj7ABMVAb",
+        "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'… https://t.co/WDj7ABMVAb",
         "truncated": true,
         "user": {
           "contributors_enabled": false,
           "created_at": "Wed Nov 16 18:19:41 +0000 2016",
           "default_profile": false,
           "default_profile_image": false,
-          "description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+          "description": "Executive Director @DemCastUSA 🇺🇸 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
           "favourites_count": 75320,
           "follow_request_sent": null,
           "followers_count": 195281,
@@ -227,7 +227,7 @@
           "lang": null,
           "listed_count": 796,
           "location": "Portland, OR",
-          "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+          "name": "Nick Knudsen 🇺🇸",
           "notifications": null,
           "profile_background_color": "000000",
           "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
@@ -252,7 +252,7 @@
         }
       },
       "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-      "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're tr\u2026",
+      "text": "RT @NickKnudsenUS: Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You're tr…",
       "timestamp_ms": "1611937745018",
       "truncated": false,
       "user": {
@@ -273,7 +273,7 @@
         "lang": null,
         "listed_count": 5,
         "location": "Edmond, OK",
-        "name": "MsDreadNoMore\ud83c\udf0a\ud83c\uddfa\ud83c\uddf8 #Biden2020",
+        "name": "MsDreadNoMore🌊🇺🇸 #Biden2020",
         "notifications": null,
         "profile_background_color": "C0DEED",
         "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
@@ -304,7 +304,7 @@
         "collected_via": [
           "retweet"
         ],
-        "collection_time": "2022-07-29T12:15:48.803081",
+        "collection_time": "2022-07-29T12:31:37.768185",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -340,7 +340,7 @@
         "to_username": null,
         "url": "https://twitter.com/NickKnudsenUS/status/1355046668995977219",
         "user_created_at": "2016-11-16T19:19:41",
-        "user_description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+        "user_description": "Executive Director @DemCastUSA 🇺🇸 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
         "user_followers": 195281,
         "user_friends": 15570,
         "user_id": "798953701972938752",
@@ -348,7 +348,7 @@
         "user_likes": 75320,
         "user_lists": 796,
         "user_location": "Portland, OR",
-        "user_name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+        "user_name": "Nick Knudsen 🇺🇸",
         "user_screen_name": "NickKnudsenUS",
         "user_timestamp_utc": 1479320381,
         "user_tweets": 65634,
@@ -366,7 +366,7 @@
         "symbols": [],
         "urls": [
           {
-            "display_url": "twitter.com/i/web/status/1\u2026",
+            "display_url": "twitter.com/i/web/status/1…",
             "expanded_url": "https://twitter.com/i/web/status/1355046668995977219",
             "indices": [
               117,
@@ -408,14 +408,14 @@
       "retweet_count": 8297,
       "retweeted": false,
       "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-      "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'\u2026 https://t.co/WDj7ABMVAb",
+      "text": "Everyone: Biden won.\nGOP: He cheated!\nEveryone: Evidence?\nGOP: We said so.\nEveryone: That's not evidence.\nGOP: You'… https://t.co/WDj7ABMVAb",
       "truncated": true,
       "user": {
         "contributors_enabled": false,
         "created_at": "Wed Nov 16 18:19:41 +0000 2016",
         "default_profile": false,
         "default_profile_image": false,
-        "description": "Executive Director @DemCastUSA \ud83c\uddfa\ud83c\uddf8 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
+        "description": "Executive Director @DemCastUSA 🇺🇸 Formerly: Editor-In-Chief, DemWritePress. Writing: @HuffPost @PatNotPart. We still have a lot of work to do. #DemCast",
         "favourites_count": 75320,
         "follow_request_sent": null,
         "followers_count": 195281,
@@ -428,7 +428,7 @@
         "lang": null,
         "listed_count": 796,
         "location": "Portland, OR",
-        "name": "Nick Knudsen \ud83c\uddfa\ud83c\uddf8",
+        "name": "Nick Knudsen 🇺🇸",
         "notifications": null,
         "profile_background_color": "000000",
         "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
@@ -459,14 +459,14 @@
         "collected_via": [
           "quote"
         ],
-        "collection_time": "2022-07-29T12:15:48.803404",
+        "collection_time": "2022-07-29T12:31:37.768447",
         "coordinates": null,
         "domains": [],
         "hashtags": [
-          "2\u67081\u65e5",
-          "\u30c7\u30e5\u30aa",
-          "\u30c7\u30e5\u30aa26\u6642\u534a",
-          "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+          "2月1日",
+          "デュオ",
+          "デュオ26時半",
+          "デュオゲリラ"
         ],
         "id": "1356256391653019649",
         "lang": "ja",
@@ -509,14 +509,14 @@
         "retweeted_user_id": null,
         "source_name": "Twitter for Android",
         "source_url": "http://twitter.com/download/android",
-        "text": "\u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
+        "text": "かなりずるーむ✿\"\n連戦\"2\"\n📅　#2月1日\n\n⏰　26:30\n\n🥇　500×2 (pay)\n\n🐻　#デュオ\n\n【条件】 @kananba_1/ @rizu_1122\n                follow&RT \n\n【リプ】代表者IDのみ拡散優先\n\n【パスツイ】just→  @neosuke1203\n交換枠など追記⬇\n#デュオゲリラ\n#デュオ26時半 https://twitter.com/rizu_1122/status/1356256391653019649/photo/1",
         "timestamp_utc": 1612191696,
         "to_tweetid": null,
         "to_userid": null,
         "to_username": null,
         "url": "https://twitter.com/rizu_1122/status/1356256391653019649",
         "user_created_at": "2019-06-25T04:46:19",
-        "user_description": "\u50d5\u306e\u3070\u304b\ud83d\udc8d\u25b6@Ste11a_29 \ud83d\udc8d\u25b6@Ixx__17 \u5ac1\u304c\u623b\u308b\u307e\u3067\u754c\u9688\u53bb\u3089\u306a\u3044\u3088\u3002\u65e9\u304f\u623b\u3063\u3066\u304d\u3066\u25b6@Rey3222\u2665\u25b6@Sagiri_u3u                         \u30de\u30cd\u5148\u25b6@ruitya3 \n\ud83d\udc99\u25b6#\u308a\u305a\u3057\u3070\u5b9f\u7e3e",
+        "user_description": "僕のばか💍▶@Ste11a_29 💍▶@Ixx__17 嫁が戻るまで界隈去らないよ。早く戻ってきて▶@Rey3222♥▶@Sagiri_u3u                         マネ先▶@ruitya3 \n💙▶#りずしば実績",
         "user_followers": 3572,
         "user_friends": 351,
         "user_id": "1143349673995853824",
@@ -524,7 +524,7 @@
         "user_likes": 8087,
         "user_lists": 4,
         "user_location": null,
-        "user_name": "\ud83c\udfe1739\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc\u9023\u6226",
+        "user_name": "🏡739〆りずあ🔪今日▶コラボ連戦",
         "user_screen_name": "rizu_1122",
         "user_timestamp_utc": 1561430779,
         "user_tweets": 9204,
@@ -535,17 +535,17 @@
         "collected_via": [
           "search"
         ],
-        "collection_time": "2022-07-29T12:15:48.803575",
+        "collection_time": "2022-07-29T12:31:37.768563",
         "coordinates": null,
         "domains": [
           "twitter.com"
         ],
         "hashtags": [
-          "26\u6642\u534a",
-          "2\u67081\u65e5",
-          "\u30c7\u30e5\u30aa",
-          "\u30c7\u30e5\u30aa26\u6642\u534a",
-          "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+          "26時半",
+          "2月1日",
+          "デュオ",
+          "デュオ26時半",
+          "デュオゲリラ"
         ],
         "id": "1356288731519479810",
         "lang": "ja",
@@ -590,22 +590,22 @@
         "retweeted_user_id": null,
         "source_name": "Twitter for iPhone",
         "source_url": "http://twitter.com/download/iphone",
-        "text": "\u23f0\u25062/1  26\u6642\u534a start\u2764\ud83d\udc97\n\ud83d\udc64\u2506\u30c7\u30e5\u30aa\n\ud83d\udcb8\u2506500 \u00d72  \u307a\u3044\u307a\u3044\n\n\u30d1\u30b9\u30c4\u30a4Just\n \u25b6 @neosuke1203\n\n\u30ea\u30b6\u30eb\u30c8\u63d0\u51fa\u5148\n\u25b6 @kananba_1\n#\u30c7\u30e5\u30aa #26\u6642\u534a\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9 \n#\u30c7\u30e5\u30aa26\u6642\u534a \u00ab rizu_1122: \u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://twitter.com/rizu_1122/status/1356256391653019649/photo/1 \u2014 https://twitter.com/rizu_1122/status/1356256391653019649 \u00bb",
+        "text": "⏰┆2/1  26時半 start❤💗\n👤┆デュオ\n💸┆500 ×2  ぺいぺい\n\nパスツイJust\n ▶ @neosuke1203\n\nリザルト提出先\n▶ @kananba_1\n#デュオ #26時半\n#デュオゲリラ \n#デュオ26時半 « rizu_1122: かなりずるーむ✿\"\n連戦\"2\"\n📅　#2月1日\n\n⏰　26:30\n\n🥇　500×2 (pay)\n\n🐻　#デュオ\n\n【条件】 @kananba_1/ @rizu_1122\n                follow&RT \n\n【リプ】代表者IDのみ拡散優先\n\n【パスツイ】just→  @neosuke1203\n交換枠など追記⬇\n#デュオゲリラ\n#デュオ26時半 https://twitter.com/rizu_1122/status/1356256391653019649/photo/1 — https://twitter.com/rizu_1122/status/1356256391653019649 »",
         "timestamp_utc": 1612199406,
         "to_tweetid": null,
         "to_userid": null,
         "to_username": null,
         "url": "https://twitter.com/piiro08/status/1356288731519479810",
         "user_created_at": "2019-08-25T12:16:27",
-        "user_description": "\u8352\u91ce\u57a2\u3067\u3059\ud83d\ude0a\u4e3b\u50ac\u3082\u3057\u3066\u308b\u3057\u30b2\u30ea\u30e9\u3082\u51fa\u3066\u308b\u306e\u304a\u9858\u3044\u3057\u307e\u3059\uff01 @zowa008\u4fe1\u8005\ud83d\ude0d",
+        "user_description": "荒野垢です😊主催もしてるしゲリラも出てるのお願いします！ @zowa008信者😍",
         "user_followers": 282,
         "user_friends": 713,
         "user_id": "1165568564843048960",
         "user_image": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
         "user_likes": 423,
         "user_lists": 0,
-        "user_location": "\u65e5\u672c",
-        "user_name": "\u3074\u308d\u3010\u305e\u308f\u72c2\u3011",
+        "user_location": "日本",
+        "user_name": "ぴろ【ぞわ狂】",
         "user_screen_name": "piiro08",
         "user_timestamp_utc": 1566728187,
         "user_tweets": 519,
@@ -629,34 +629,34 @@
               89,
               93
             ],
-            "text": "\u30c7\u30e5\u30aa"
+            "text": "デュオ"
           },
           {
             "indices": [
               94,
               99
             ],
-            "text": "26\u6642\u534a"
+            "text": "26時半"
           },
           {
             "indices": [
               100,
               107
             ],
-            "text": "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+            "text": "デュオゲリラ"
           },
           {
             "indices": [
               109,
               117
             ],
-            "text": "\u30c7\u30e5\u30aa26\u6642\u534a"
+            "text": "デュオ26時半"
           }
         ],
         "symbols": [],
         "urls": [
           {
-            "display_url": "twitter.com/rizu_1122/stat\u2026",
+            "display_url": "twitter.com/rizu_1122/stat…",
             "expanded_url": "https://twitter.com/rizu_1122/status/1356256391653019649",
             "indices": [
               118,
@@ -673,7 +673,7 @@
               54,
               66
             ],
-            "name": "\u306d\u304a\u3059\u3051",
+            "name": "ねおすけ",
             "screen_name": "neosuke1203"
           },
           {
@@ -683,14 +683,14 @@
               78,
               88
             ],
-            "name": "kana*\ud83d\udc3b\u2764",
+            "name": "kana*🐻❤",
             "screen_name": "kananba_1"
           }
         ]
       },
       "favorite_count": 0,
       "favorited": false,
-      "full_text": "\u23f0\u25062/1  26\u6642\u534a start\u2764\ud83d\udc97\n\ud83d\udc64\u2506\u30c7\u30e5\u30aa\n\ud83d\udcb8\u2506500 \u00d72  \u307a\u3044\u307a\u3044\n\n\u30d1\u30b9\u30c4\u30a4Just\n \u25b6 @neosuke1203\n\n\u30ea\u30b6\u30eb\u30c8\u63d0\u51fa\u5148\n\u25b6 @kananba_1\n#\u30c7\u30e5\u30aa #26\u6642\u534a\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9 \n#\u30c7\u30e5\u30aa26\u6642\u534a https://t.co/hjLyHeg0Bl",
+      "full_text": "⏰┆2/1  26時半 start❤💗\n👤┆デュオ\n💸┆500 ×2  ぺいぺい\n\nパスツイJust\n ▶ @neosuke1203\n\nリザルト提出先\n▶ @kananba_1\n#デュオ #26時半\n#デュオゲリラ \n#デュオ26時半 https://t.co/hjLyHeg0Bl",
       "geo": null,
       "id": 1356288731519479810,
       "id_str": "1356288731519479810",
@@ -722,28 +722,28 @@
                 18,
                 23
               ],
-              "text": "2\u67081\u65e5"
+              "text": "2月1日"
             },
             {
               "indices": [
                 51,
                 55
               ],
-              "text": "\u30c7\u30e5\u30aa"
+              "text": "デュオ"
             },
             {
               "indices": [
                 169,
                 176
               ],
-              "text": "\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9"
+              "text": "デュオゲリラ"
             },
             {
               "indices": [
                 177,
                 185
               ],
-              "text": "\u30c7\u30e5\u30aa26\u6642\u534a"
+              "text": "デュオ26時半"
             }
           ],
           "media": [
@@ -794,7 +794,7 @@
                 62,
                 72
               ],
-              "name": "kana*\ud83d\udc3b\u2764",
+              "name": "kana*🐻❤",
               "screen_name": "kananba_1"
             },
             {
@@ -804,7 +804,7 @@
                 74,
                 84
               ],
-              "name": "\u3084\u3093\u3067\u308c\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc",
+              "name": "やんでれ〆りずあ🔪今日▶コラボ",
               "screen_name": "rizu_1122"
             },
             {
@@ -814,7 +814,7 @@
                 147,
                 159
               ],
-              "name": "\u306d\u304a\u3059\u3051",
+              "name": "ねおすけ",
               "screen_name": "neosuke1203"
             }
           ]
@@ -861,7 +861,7 @@
         },
         "favorite_count": 33,
         "favorited": false,
-        "full_text": "\u304b\u306a\u308a\u305a\u308b\u30fc\u3080\u273f\"\n\u9023\u6226\"2\"\n\ud83d\udcc5\u3000#2\u67081\u65e5\n\n\u23f0\u300026:30\n\n\ud83e\udd47\u3000500\u00d72 (pay)\n\n\ud83d\udc3b\u3000#\u30c7\u30e5\u30aa\n\n\u3010\u6761\u4ef6\u3011 @kananba_1/ @rizu_1122\n                follow&amp;RT \n\n\u3010\u30ea\u30d7\u3011\u4ee3\u8868\u8005ID\u306e\u307f\u62e1\u6563\u512a\u5148\n\n\u3010\u30d1\u30b9\u30c4\u30a4\u3011just\u2192  @neosuke1203\n\u4ea4\u63db\u67a0\u306a\u3069\u8ffd\u8a18\u2b07\n#\u30c7\u30e5\u30aa\u30b2\u30ea\u30e9\n#\u30c7\u30e5\u30aa26\u6642\u534a https://t.co/ZCkU5t831m",
+        "full_text": "かなりずるーむ✿\"\n連戦\"2\"\n📅　#2月1日\n\n⏰　26:30\n\n🥇　500×2 (pay)\n\n🐻　#デュオ\n\n【条件】 @kananba_1/ @rizu_1122\n                follow&amp;RT \n\n【リプ】代表者IDのみ拡散優先\n\n【パスツイ】just→  @neosuke1203\n交換枠など追記⬇\n#デュオゲリラ\n#デュオ26時半 https://t.co/ZCkU5t831m",
         "geo": null,
         "id": 1356256391653019649,
         "id_str": "1356256391653019649",
@@ -887,7 +887,7 @@
           "created_at": "Tue Jun 25 02:46:19 +0000 2019",
           "default_profile": true,
           "default_profile_image": false,
-          "description": "\u50d5\u306e\u3070\u304b\ud83d\udc8d\u25b6@Ste11a_29 \ud83d\udc8d\u25b6@Ixx__17 \u5ac1\u304c\u623b\u308b\u307e\u3067\u754c\u9688\u53bb\u3089\u306a\u3044\u3088\u3002\u65e9\u304f\u623b\u3063\u3066\u304d\u3066\u25b6@Rey3222\u2665\u25b6@Sagiri_u3u                         \u30de\u30cd\u5148\u25b6@ruitya3 \n\ud83d\udc99\u25b6#\u308a\u305a\u3057\u3070\u5b9f\u7e3e",
+          "description": "僕のばか💍▶@Ste11a_29 💍▶@Ixx__17 嫁が戻るまで界隈去らないよ。早く戻ってきて▶@Rey3222♥▶@Sagiri_u3u                         マネ先▶@ruitya3 \n💙▶#りずしば実績",
           "entities": {
             "description": {
               "urls": []
@@ -907,7 +907,7 @@
           "lang": null,
           "listed_count": 4,
           "location": "",
-          "name": "\ud83c\udfe1739\u3006\u308a\u305a\u3042\ud83d\udd2a\u4eca\u65e5\u25b6\u30b3\u30e9\u30dc\u9023\u6226",
+          "name": "🏡739〆りずあ🔪今日▶コラボ連戦",
           "notifications": false,
           "profile_background_color": "F5F8FA",
           "profile_background_image_url": null,
@@ -942,7 +942,7 @@
         "created_at": "Sun Aug 25 10:16:27 +0000 2019",
         "default_profile": true,
         "default_profile_image": true,
-        "description": "\u8352\u91ce\u57a2\u3067\u3059\ud83d\ude0a\u4e3b\u50ac\u3082\u3057\u3066\u308b\u3057\u30b2\u30ea\u30e9\u3082\u51fa\u3066\u308b\u306e\u304a\u9858\u3044\u3057\u307e\u3059\uff01 @zowa008\u4fe1\u8005\ud83d\ude0d",
+        "description": "荒野垢です😊主催もしてるしゲリラも出てるのお願いします！ @zowa008信者😍",
         "entities": {
           "description": {
             "urls": []
@@ -961,8 +961,8 @@
         "is_translator": false,
         "lang": null,
         "listed_count": 0,
-        "location": "\u65e5\u672c",
-        "name": "\u3074\u308d\u3010\u305e\u308f\u72c2\u3011",
+        "location": "日本",
+        "name": "ぴろ【ぞわ狂】",
         "notifications": false,
         "profile_background_color": "F5F8FA",
         "profile_background_image_url": null,
@@ -992,11 +992,11 @@
         "collected_via": [
           "quote"
         ],
-        "collection_time": "2022-07-29T12:15:48.803946",
+        "collection_time": "2022-07-29T12:31:37.768868",
         "coordinates": null,
         "domains": [],
         "hashtags": [
-          "climatr\u00e9silience",
+          "climatrésilience",
           "maprimerenov"
         ],
         "id": "1359452400122290179",
@@ -1036,14 +1036,14 @@
         "retweeted_user_id": null,
         "source_name": "Twitter for Android",
         "source_url": "http://twitter.com/download/android",
-        "text": "Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
+        "text": "Toutes les passoires thermiques seront interdites à la location d'ici 2028 : 1,8 million de logements concernés !\n\nLe but n'est pas de les sortir du marché mais de les rénover.\n\n➡️ #MaPrimeRenov est désormais accessible à tous les propriétaires.\n\n#ClimatRésilience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1",
         "timestamp_utc": 1612953684,
         "to_tweetid": null,
         "to_userid": null,
         "to_username": null,
         "url": "https://twitter.com/EmmWargon/status/1359452400122290179",
         "user_created_at": "2018-10-16T09:58:44",
-        "user_description": "Ministre d\u00e9l\u00e9gu\u00e9e au Logement. @Ecologie_Gouv",
+        "user_description": "Ministre déléguée au Logement. @Ecologie_Gouv",
         "user_followers": 38810,
         "user_friends": 802,
         "user_id": "1052106552222597120",
@@ -1062,13 +1062,13 @@
         "collected_via": [
           "thread"
         ],
-        "collection_time": "2022-07-29T12:15:48.804066",
+        "collection_time": "2022-07-29T12:31:37.768974",
         "coordinates": null,
         "domains": [
           "twitter.com"
         ],
         "hashtags": [
-          "climatr\u00e9silience",
+          "climatrésilience",
           "maprimerenov"
         ],
         "id": "1359485114112233472",
@@ -1110,14 +1110,14 @@
         "retweeted_user_id": null,
         "source_name": "Twitter Web App",
         "source_url": "https://mobile.twitter.com",
-        "text": "Le logement est le 2e secteur le plus \u00e9metteur de gaz \u00e0 effet de serre.\nOn ne pourra plus louer de passoires thermiques d\u00e8s 2028 :\n\u2192 les locataires pourront exiger des travaux\n\u2192 d'ici cette date, les loyers de ces logements ne pourront \u00eatre augment\u00e9s.\n\u00ab EmmWargon: Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1 \u2014 https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1 \u00bb",
+        "text": "Le logement est le 2e secteur le plus émetteur de gaz à effet de serre.\nOn ne pourra plus louer de passoires thermiques dès 2028 :\n→ les locataires pourront exiger des travaux\n→ d'ici cette date, les loyers de ces logements ne pourront être augmentés.\n« EmmWargon: Toutes les passoires thermiques seront interdites à la location d'ici 2028 : 1,8 million de logements concernés !\n\nLe but n'est pas de les sortir du marché mais de les rénover.\n\n➡️ #MaPrimeRenov est désormais accessible à tous les propriétaires.\n\n#ClimatRésilience @barbarapompili https://twitter.com/EmmWargon/status/1359452400122290179/video/1 — https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1 »",
         "timestamp_utc": 1612961483,
         "to_tweetid": "1359485112325468162",
         "to_userid": "119081177",
         "to_username": "JeanCASTEX",
         "url": "https://twitter.com/JeanCASTEX/status/1359485114112233472",
         "user_created_at": "2010-03-02T17:24:02",
-        "user_description": "Premier ministre de la R\u00e9publique fran\u00e7aise.",
+        "user_description": "Premier ministre de la République française.",
         "user_followers": 273068,
         "user_friends": 1004,
         "user_id": "119081177",
@@ -1156,7 +1156,7 @@
               247,
               264
             ],
-            "text": "ClimatR\u00e9silience"
+            "text": "ClimatRésilience"
           }
         ],
         "media": [
@@ -1200,7 +1200,7 @@
         "symbols": [],
         "urls": [
           {
-            "display_url": "twitter.com/EmmWargon/stat\u2026",
+            "display_url": "twitter.com/EmmWargon/stat…",
             "expanded_url": "https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1",
             "indices": [
               252,
@@ -1295,7 +1295,7 @@
       },
       "favorite_count": 50,
       "favorited": false,
-      "full_text": "Le logement est le 2e secteur le plus \u00e9metteur de gaz \u00e0 effet de serre.\nOn ne pourra plus louer de passoires thermiques d\u00e8s 2028 :\n\u2192 les locataires pourront exiger des travaux\n\u2192 d'ici cette date, les loyers de ces logements ne pourront \u00eatre augment\u00e9s.\nhttps://t.co/IXuTRLcf2S",
+      "full_text": "Le logement est le 2e secteur le plus émetteur de gaz à effet de serre.\nOn ne pourra plus louer de passoires thermiques dès 2028 :\n→ les locataires pourront exiger des travaux\n→ d'ici cette date, les loyers de ces logements ne pourront être augmentés.\nhttps://t.co/IXuTRLcf2S",
       "geo": null,
       "id": 1359485114112233472,
       "id_str": "1359485114112233472",
@@ -1331,7 +1331,7 @@
                 247,
                 264
               ],
-              "text": "ClimatR\u00e9silience"
+              "text": "ClimatRésilience"
             }
           ],
           "media": [
@@ -1460,7 +1460,7 @@
         },
         "favorite_count": 94,
         "favorited": false,
-        "full_text": "Toutes les passoires thermiques seront interdites \u00e0 la location d'ici 2028 : 1,8 million de logements concern\u00e9s !\n\nLe but n'est pas de les sortir du march\u00e9 mais de les r\u00e9nover.\n\n\u27a1\ufe0f #MaPrimeRenov est d\u00e9sormais accessible \u00e0 tous les propri\u00e9taires.\n\n#ClimatR\u00e9silience @barbarapompili https://t.co/Eo9sNi3CGS",
+        "full_text": "Toutes les passoires thermiques seront interdites à la location d'ici 2028 : 1,8 million de logements concernés !\n\nLe but n'est pas de les sortir du marché mais de les rénover.\n\n➡️ #MaPrimeRenov est désormais accessible à tous les propriétaires.\n\n#ClimatRésilience @barbarapompili https://t.co/Eo9sNi3CGS",
         "geo": null,
         "id": 1359452400122290179,
         "id_str": "1359452400122290179",
@@ -1482,7 +1482,7 @@
           "created_at": "Tue Oct 16 07:58:44 +0000 2018",
           "default_profile": false,
           "default_profile_image": false,
-          "description": "Ministre d\u00e9l\u00e9gu\u00e9e au Logement. @Ecologie_Gouv",
+          "description": "Ministre déléguée au Logement. @Ecologie_Gouv",
           "entities": {
             "description": {
               "urls": []
@@ -1490,7 +1490,7 @@
             "url": {
               "urls": [
                 {
-                  "display_url": "m.facebook.com/EmmanuelleWarg\u2026",
+                  "display_url": "m.facebook.com/EmmanuelleWarg…",
                   "expanded_url": "https://m.facebook.com/EmmanuelleWargon/",
                   "indices": [
                     0,
@@ -1542,7 +1542,7 @@
       "quoted_status_id": 1359452400122290179,
       "quoted_status_id_str": "1359452400122290179",
       "quoted_status_permalink": {
-        "display": "twitter.com/EmmWargon/stat\u2026",
+        "display": "twitter.com/EmmWargon/stat…",
         "expanded": "https://twitter.com/EmmWargon/status/1359452400122290179?s=20/video/1",
         "url": "https://t.co/IXuTRLcf2S"
       },
@@ -1555,7 +1555,7 @@
         "created_at": "Tue Mar 02 16:24:02 +0000 2010",
         "default_profile": false,
         "default_profile_image": false,
-        "description": "Premier ministre de la R\u00e9publique fran\u00e7aise.",
+        "description": "Premier ministre de la République française.",
         "entities": {
           "description": {
             "urls": []
@@ -1619,7 +1619,7 @@
         "collected_via": [
           "retweet"
         ],
-        "collection_time": "2022-07-29T12:15:48.804292",
+        "collection_time": "2022-07-29T12:31:37.769162",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -1650,14 +1650,14 @@
         "retweeted_user_id": null,
         "source_name": "Twitter for Android",
         "source_url": "http://twitter.com/download/android",
-        "text": "Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+        "text": "Ne soyons pas déçus des gens mais déçu de nous même pour avoir mis notre espoir au près des autres qu'en Allah",
         "timestamp_utc": 1601798013,
         "to_tweetid": null,
         "to_userid": null,
         "to_username": null,
         "url": "https://twitter.com/KaderSouad/status/1312662126675275777",
         "user_created_at": "2018-05-19T14:48:30",
-        "user_description": "\ud83c\udfb6\u2764\ufe0f\ud83d\udc95\ud83d\ude48\ud83d\ude18",
+        "user_description": "🎶❤️💕🙈😘",
         "user_followers": 22,
         "user_friends": 151,
         "user_id": "997821294866567168",
@@ -1676,7 +1676,7 @@
         "collected_via": [
           "search"
         ],
-        "collection_time": "2022-07-29T12:15:48.804360",
+        "collection_time": "2022-07-29T12:31:37.769228",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -1708,22 +1708,22 @@
         "retweeted_user_id": "997821294866567168",
         "source_name": "Twitter for Android",
         "source_url": "http://twitter.com/download/android",
-        "text": "RT @KaderSouad: Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+        "text": "RT @KaderSouad: Ne soyons pas déçus des gens mais déçu de nous même pour avoir mis notre espoir au près des autres qu'en Allah",
         "timestamp_utc": 1612510816,
         "to_tweetid": null,
         "to_userid": null,
         "to_username": null,
         "url": "https://twitter.com/AubinDore/status/1357594877148737545",
         "user_created_at": "2019-05-31T15:30:29",
-        "user_description": "\u00c9tudiant en sciences \u00e9conomiques \ud83c\udf93 passionn\u00e9 de voyage\u2708 et de foot\u26bd\ufe0f",
+        "user_description": "Étudiant en sciences économiques 🎓 passionné de voyage✈ et de foot⚽️",
         "user_followers": 214,
         "user_friends": 229,
         "user_id": "1134452086337413120",
         "user_image": "https://pbs.twimg.com/profile_images/1359241679765651469/mywDBzpr_normal.jpg",
         "user_likes": 820,
         "user_lists": 0,
-        "user_location": "Guin\u00e9e",
-        "user_name": "Dor\u00e9 Aubin Arthus \ud83c\uddec\ud83c\uddf3",
+        "user_location": "Guinée",
+        "user_name": "Doré Aubin Arthus 🇬🇳",
         "user_screen_name": "AubinDore",
         "user_timestamp_utc": 1559309429,
         "user_tweets": 416,
@@ -1759,7 +1759,7 @@
       },
       "favorite_count": 0,
       "favorited": false,
-      "full_text": "RT @KaderSouad: Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+      "full_text": "RT @KaderSouad: Ne soyons pas déçus des gens mais déçu de nous même pour avoir mis notre espoir au près des autres qu'en Allah",
       "geo": null,
       "id": 1357594877148737545,
       "id_str": "1357594877148737545",
@@ -1794,7 +1794,7 @@
         },
         "favorite_count": 4,
         "favorited": false,
-        "full_text": "Ne soyons pas d\u00e9\u00e7us des gens mais d\u00e9\u00e7u de nous m\u00eame pour avoir mis notre espoir au pr\u00e8s des autres qu'en Allah",
+        "full_text": "Ne soyons pas déçus des gens mais déçu de nous même pour avoir mis notre espoir au près des autres qu'en Allah",
         "geo": null,
         "id": 1312662126675275777,
         "id_str": "1312662126675275777",
@@ -1830,7 +1830,7 @@
           "created_at": "Sat May 19 12:48:30 +0000 2018",
           "default_profile": true,
           "default_profile_image": false,
-          "description": "\ud83c\udfb6\u2764\ufe0f\ud83d\udc95\ud83d\ude48\ud83d\ude18",
+          "description": "🎶❤️💕🙈😘",
           "entities": {
             "description": {
               "urls": []
@@ -1881,7 +1881,7 @@
         "created_at": "Fri May 31 13:30:29 +0000 2019",
         "default_profile": true,
         "default_profile_image": false,
-        "description": "\u00c9tudiant en sciences \u00e9conomiques \ud83c\udf93 passionn\u00e9 de voyage\u2708 et de foot\u26bd\ufe0f",
+        "description": "Étudiant en sciences économiques 🎓 passionné de voyage✈ et de foot⚽️",
         "entities": {
           "description": {
             "urls": []
@@ -1900,8 +1900,8 @@
         "is_translator": false,
         "lang": null,
         "listed_count": 0,
-        "location": "Guin\u00e9e",
-        "name": "Dor\u00e9 Aubin Arthus \ud83c\uddec\ud83c\uddf3",
+        "location": "Guinée",
+        "name": "Doré Aubin Arthus 🇬🇳",
         "notifications": false,
         "profile_background_color": "F5F8FA",
         "profile_background_image_url": null,
@@ -1929,7 +1929,7 @@
   {
     "normalized": [
       {
-        "collection_time": "2022-07-29T12:15:48.804550",
+        "collection_time": "2022-07-29T12:31:37.769406",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -2207,7 +2207,7 @@
   {
     "normalized": [
       {
-        "collection_time": "2022-07-29T12:15:48.804768",
+        "collection_time": "2022-07-29T12:31:37.769613",
         "coordinates": null,
         "domains": [],
         "hashtags": [],
@@ -2219,7 +2219,7 @@
         "local_time": "2022-02-06T20:16:18",
         "match_query": true,
         "media_alt_texts": [
-          "metadata generated via PTT! \u26055zzWtmAmlT",
+          "metadata generated via PTT! ★5zzWtmAmlT",
           "",
           ""
         ],
@@ -2252,7 +2252,7 @@
         "retweeted_user_id": null,
         "source_name": "python twitter wrapper",
         "source_url": "https://help.twitter.com/en/using-twitter/how-to-tweet#source-labels",
-        "text": "I can even tweet multiple pictures at once and attach metadata onto some! \u2605  TagPq4uqiw https://twitter.com/PythonTwitTools/status/1490404000017137666/photo/1",
+        "text": "I can even tweet multiple pictures at once and attach metadata onto some! ★  TagPq4uqiw https://twitter.com/PythonTwitTools/status/1490404000017137666/photo/1",
         "timestamp_utc": 1644174978,
         "to_tweetid": null,
         "to_userid": null,
@@ -2328,7 +2328,7 @@
           {
             "display_url": "pic.twitter.com/p4MzLL0Ygf",
             "expanded_url": "https://twitter.com/PythonTwitTools/status/1490404000017137666/photo/1",
-            "ext_alt_text": "metadata generated via PTT! \u26055zzWtmAmlT",
+            "ext_alt_text": "metadata generated via PTT! ★5zzWtmAmlT",
             "id": 1490403994249879556,
             "id_str": "1490403994249879556",
             "indices": [
@@ -2455,7 +2455,7 @@
       "retweet_count": 0,
       "retweeted": false,
       "source": "<a href=\"https://help.twitter.com/en/using-twitter/how-to-tweet#source-labels\" rel=\"nofollow\">python twitter wrapper</a>",
-      "text": "I can even tweet multiple pictures at once and attach metadata onto some! \u2605  TagPq4uqiw https://t.co/p4MzLL0Ygf",
+      "text": "I can even tweet multiple pictures at once and attach metadata onto some! ★  TagPq4uqiw https://t.co/p4MzLL0Ygf",
       "truncated": false,
       "user": {
         "contributors_enabled": false,
@@ -2467,7 +2467,7 @@
           "description": {
             "urls": [
               {
-                "display_url": "github.com/python-twitter\u2026",
+                "display_url": "github.com/python-twitter…",
                 "expanded_url": "https://github.com/python-twitter-tools/twitter",
                 "indices": [
                   20,
@@ -2480,7 +2480,7 @@
           "url": {
             "urls": [
               {
-                "display_url": "github.com/python-twitter\u2026",
+                "display_url": "github.com/python-twitter…",
                 "expanded_url": "https://github.com/python-twitter-tools/twitter",
                 "indices": [
                   0,
@@ -2534,7 +2534,7 @@
   {
     "normalized": [
       {
-        "collection_time": "2022-07-29T12:15:48.804939",
+        "collection_time": "2022-07-29T12:31:37.769777",
         "coordinates": null,
         "domains": [
           "twitter.com"
@@ -2567,14 +2567,14 @@
         "retweeted_user_id": null,
         "source_name": "TweetDeck",
         "source_url": "https://about.twitter.com/products/tweetdeck",
-        "text": "La reconversion de l'ex-ministre Jean-Baptiste Djebbari chez l'armateur CMA-CGM a \u00e9t\u00e9 recal\u00e9e par la Haute autorit\u00e9\u2026 https://twitter.com/i/web/status/1529111439562223616",
+        "text": "La reconversion de l'ex-ministre Jean-Baptiste Djebbari chez l'armateur CMA-CGM a été recalée par la Haute autorité… https://twitter.com/i/web/status/1529111439562223616",
         "timestamp_utc": 1653403551,
         "to_tweetid": null,
         "to_userid": null,
         "to_username": null,
         "url": "https://twitter.com/afpfr/status/1529111439562223616",
         "user_created_at": "2011-07-20T14:07:59",
-        "user_description": "Morceaux choisis des fils d'actu, coulisses & RT des 1.700 journalistes de l'AFP \u00e0 travers le monde. Ailleurs sur Twitter: https://t.co/VOvpA2ky3O",
+        "user_description": "Morceaux choisis des fils d'actu, coulisses & RT des 1.700 journalistes de l'AFP à travers le monde. Ailleurs sur Twitter: https://t.co/VOvpA2ky3O",
         "user_followers": 3974603,
         "user_friends": 1354,
         "user_id": "338985020",
@@ -2599,7 +2599,7 @@
         "symbols": [],
         "urls": [
           {
-            "display_url": "twitter.com/i/web/status/1\u2026",
+            "display_url": "twitter.com/i/web/status/1…",
             "expanded_url": "https://twitter.com/i/web/status/1529111439562223616",
             "indices": [
               117,
@@ -2627,14 +2627,14 @@
       "retweet_count": 1787,
       "retweeted": false,
       "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-      "text": "La reconversion de l'ex-ministre Jean-Baptiste Djebbari chez l'armateur CMA-CGM a \u00e9t\u00e9 recal\u00e9e par la Haute autorit\u00e9\u2026 https://t.co/luvq2QWe9O",
+      "text": "La reconversion de l'ex-ministre Jean-Baptiste Djebbari chez l'armateur CMA-CGM a été recalée par la Haute autorité… https://t.co/luvq2QWe9O",
       "truncated": true,
       "user": {
         "contributors_enabled": false,
         "created_at": "Wed Jul 20 12:07:59 +0000 2011",
         "default_profile": false,
         "default_profile_image": false,
-        "description": "Morceaux choisis des fils d'actu, coulisses & RT des 1.700 journalistes de l'AFP \u00e0 travers le monde. Ailleurs sur Twitter: https://t.co/VOvpA2ky3O",
+        "description": "Morceaux choisis des fils d'actu, coulisses & RT des 1.700 journalistes de l'AFP à travers le monde. Ailleurs sur Twitter: https://t.co/VOvpA2ky3O",
         "entities": {
           "description": {
             "urls": [
