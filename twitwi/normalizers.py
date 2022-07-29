@@ -30,7 +30,8 @@ def format_rt_text(user, text):
 
 
 def format_qt_text(user, text, quoted_text, url):
-    quote = '« %s: %s — %s »' % (user, quoted_text, url)
+    clean_url = re.sub(r'(\?s=\d+|/(video|photo)/\d+)+', '', url.lower())
+    quote = '« %s: %s — %s »' % (user, quoted_text, clean_url)
     text_lc = text.lower()
     if quote.lower() in text_lc:
         return text
@@ -275,7 +276,10 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
         if extract_referenced_tweets:
             results.extend(nested)
 
-        qturl = qtweet['url']
+        if "quoted_status_permalink" in tweet:
+            qturl = tweet['quoted_status_permalink']['expanded']
+        else:
+            qturl = qtweet['url']
         qtime = qtweet['timestamp_utc']
 
         resolve_entities(tweet, 'quoted')
