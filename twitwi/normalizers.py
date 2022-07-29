@@ -330,9 +330,17 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
 
     if rtu:
         text = format_rt_text(rtu, rtweet['text'])
+        if rtweet["quoted_id"]:
+            qturl = format_tweet_url(rtweet["quoted_user"], rtweet["quoted_id"])
 
-    if qtu:
+    elif qtu:
         text = format_qt_text(qtu, text, qtweet['text'], qturl)
+
+    if qturl:
+        qturl_lc = custom_normalize_url(qturl).lower()
+        for l in list(links):
+            if l.lower() == qturl_lc:
+                links.remove(l)
 
     timestamp_utc, local_time = get_dates(tweet['created_at'], locale)
     text = unescape(text)
