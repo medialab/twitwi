@@ -373,6 +373,9 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
 
     grab_extra_meta(tweet, normalized_tweet, locale)
 
+    if rtu and not normalized_tweet["retweet_count"]:
+        normalized_tweet["retweet_count"] = rtweet["retweet_count"]
+
     results.append(normalized_tweet)
 
     if not extract_referenced_tweets:
