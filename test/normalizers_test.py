@@ -16,15 +16,14 @@ from twitwi.normalizers import (
 )
 
 
-def compare_tweets(_id, t1, t2):
+def compare_tweets(_id, t1, t2, ignore_fields=[]):
     for k in t2.keys():
-        if k == 'collection_time':
-            continue
-
-        assert t1[k] == t2[k], 'Different value for key "%s" with tweet "%s"' % (k, _id)
+        if k not in ignore_fields + ['collection_time']:
+            assert t1[k] == t2[k], 'Different value for key "%s" with tweet "%s"' % (k, _id)
 
     for k in t1.keys():
-        assert k in t2, 'Missing key "%s" with tweet "%s"' % (k, _id)
+        if k not in ignore_fields:
+            assert k in t2, 'Missing key "%s" with tweet "%s"' % (k, _id)
 
 
 class TestNormalizers(object):
@@ -66,6 +65,20 @@ class TestNormalizers(object):
             tweet = fn(test['source'], collection_source='unit_test')
 
             assert tweet['collected_via'] == ['unit_test']
+
+    def test_normalize_tweet_should_be_normalized_across_sources(self):
+        tz = timezone('Europe/Paris')
+        fn = partial(normalize_tweet, locale=tz, extract_referenced_tweets=True)
+
+        tests = [get_json_resource('normalization-payload-%s.json' % source)
+                 for source in ["show", "search", "stream"]]
+
+        ref = fn(tests[0])
+        for test in tests[1:]:
+            res = fn(test)
+            for t1, t2 in zip(res, ref):
+                compare_tweets(test['id_str'], t1, t2,
+                               ignore_fields=["reply_count", "possibly_sensitive", "collected_via"])
 
     def test_normalize_tweet_should_not_mutate(self):
         tweet = get_json_resource('normalization.json')[0]['source']

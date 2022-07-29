@@ -1,0 +1,413 @@
+{
+  "collection_source": "search",
+  "contributors": null,
+  "coordinates": null,
+  "created_at": "Thu Jul 28 16:10:07 +0000 2022",
+  "display_text_range": [
+    0,
+    140
+  ],
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "urls": [],
+    "user_mentions": [
+      {
+        "id": 311601642,
+        "id_str": "311601642",
+        "indices": [
+          3,
+          16
+        ],
+        "name": "Eric Coquerel",
+        "screen_name": "ericcoquerel"
+      }
+    ]
+  },
+  "favorite_count": 0,
+  "favorited": false,
+  "full_text": "RT @ericcoquerel: Voil\u00e0 pourquoi j\u2019ai propos\u00e9 \u00e0 la commission des finances une mission d\u2019information sur la fiscalit\u00e9 des entreprises (plus\u2026",
+  "geo": null,
+  "id": 1552687856111566848,
+  "id_str": "1552687856111566848",
+  "in_reply_to_screen_name": null,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "is_quote_status": true,
+  "lang": "fr",
+  "metadata": {
+    "iso_language_code": "fr",
+    "result_type": "recent"
+  },
+  "place": null,
+  "quoted_status_id": 1552568929406664705,
+  "quoted_status_id_str": "1552568929406664705",
+  "retweet_count": 156,
+  "retweeted": false,
+  "retweeted_status": {
+    "contributors": null,
+    "coordinates": null,
+    "created_at": "Thu Jul 28 11:52:24 +0000 2022",
+    "display_text_range": [
+      0,
+      270
+    ],
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [
+        {
+          "display_url": "twitter.com/maximcombes/st\u2026",
+          "expanded_url": "https://twitter.com/maximcombes/status/1552568929406664705",
+          "indices": [
+            271,
+            294
+          ],
+          "url": "https://t.co/IAH0lxFIr3"
+        }
+      ],
+      "user_mentions": []
+    },
+    "favorite_count": 283,
+    "favorited": false,
+    "full_text": "Voil\u00e0 pourquoi j\u2019ai propos\u00e9 \u00e0 la commission des finances une mission d\u2019information sur la fiscalit\u00e9 des entreprises (plusieurs du CAC 40 b\u00e9n\u00e9ficiaires ne paient pas d\u2019imp\u00f4ts en France, les PME paient plus de 25% d\u2019imp\u00f4t contre 17,54 en moyenne pour les 300 plus grosses) https://t.co/IAH0lxFIr3",
+    "geo": null,
+    "id": 1552622999664205829,
+    "id_str": "1552622999664205829",
+    "in_reply_to_screen_name": null,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "is_quote_status": true,
+    "lang": "fr",
+    "metadata": {
+      "iso_language_code": "fr",
+      "result_type": "recent"
+    },
+    "place": null,
+    "possibly_sensitive": false,
+    "quoted_status": {
+      "contributors": null,
+      "coordinates": null,
+      "created_at": "Thu Jul 28 08:17:32 +0000 2022",
+      "display_text_range": [
+        0,
+        279
+      ],
+      "entities": {
+        "hashtags": [],
+        "media": [
+          {
+            "display_url": "pic.twitter.com/4RQmDuYqel",
+            "expanded_url": "https://twitter.com/MaximCombes/status/1552568929406664705/photo/1",
+            "id": 1552568335430303745,
+            "id_str": "1552568335430303745",
+            "indices": [
+              280,
+              303
+            ],
+            "media_url": "http://pbs.twimg.com/media/FYvUrNrXwAEwihf.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/FYvUrNrXwAEwihf.jpg",
+            "sizes": {
+              "large": {
+                "h": 512,
+                "resize": "fit",
+                "w": 1024
+              },
+              "medium": {
+                "h": 512,
+                "resize": "fit",
+                "w": 1024
+              },
+              "small": {
+                "h": 340,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/4RQmDuYqel"
+          }
+        ],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "id": 79962986,
+            "id_str": "79962986",
+            "indices": [
+              25,
+              39
+            ],
+            "name": "TotalEnergies",
+            "screen_name": "TotalEnergies"
+          },
+          {
+            "id": 145556011,
+            "id_str": "145556011",
+            "indices": [
+              267,
+              279
+            ],
+            "name": "Basta!",
+            "screen_name": "bastamedia_"
+          }
+        ]
+      },
+      "extended_entities": {
+        "media": [
+          {
+            "display_url": "pic.twitter.com/4RQmDuYqel",
+            "expanded_url": "https://twitter.com/MaximCombes/status/1552568929406664705/photo/1",
+            "id": 1552568335430303745,
+            "id_str": "1552568335430303745",
+            "indices": [
+              280,
+              303
+            ],
+            "media_url": "http://pbs.twimg.com/media/FYvUrNrXwAEwihf.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/FYvUrNrXwAEwihf.jpg",
+            "sizes": {
+              "large": {
+                "h": 512,
+                "resize": "fit",
+                "w": 1024
+              },
+              "medium": {
+                "h": 512,
+                "resize": "fit",
+                "w": 1024
+              },
+              "small": {
+                "h": 340,
+                "resize": "fit",
+                "w": 680
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/4RQmDuYqel"
+          }
+        ]
+      },
+
+
+      "favorite_count": 1499,
+      "favorited": false,
+      "full_text": "[REVELATIONS]\n\nAlors que @TotalEnergies annonce plus de 17,7 milliards \u20ac de profits (18,8 Mds $) sur le seul 1er semestre 2022, nous sommes en mesure d'affirmer que le groupe n'a pas pay\u00e9 d\u2019imp\u00f4ts sur les soci\u00e9t\u00e9s en France ni en 2019 ni en 2020\n\nArticle \u00e0 venir sur @bastamedia_ https://t.co/4RQmDuYqel",
+      "geo": null,
+      "id": 1552568929406664705,
+      "id_str": "1552568929406664705",
+      "in_reply_to_screen_name": null,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "is_quote_status": false,
+      "lang": "fr",
+      "metadata": {
+        "iso_language_code": "fr",
+        "result_type": "recent"
+      },
+      "place": null,
+      "possibly_sensitive": false,
+      "retweet_count": 979,
+      "retweeted": false,
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+      "truncated": false,
+      "user": {
+        "contributors_enabled": false,
+        "created_at": "Mon Oct 05 20:49:46 +0000 2009",
+        "default_profile": false,
+        "default_profile_image": false,
+        "description": "Economiste\nUn pognon de dingue mais pour qui ? l'argent magique de la pand\u00e9mie (mai 2022) (Seuil)\nPapa de #AlloBercy avec l'Obs des @transnationales",
+        "entities": {
+          "description": {
+            "urls": []
+          },
+          "url": {
+            "urls": [
+              {
+                "display_url": "allobercy.org",
+                "expanded_url": "https://allobercy.org/",
+                "indices": [
+                  0,
+                  23
+                ],
+                "url": "https://t.co/3Km3HmR1U5"
+              }
+            ]
+          }
+        },
+        "favourites_count": 45901,
+        "follow_request_sent": null,
+        "followers_count": 52630,
+        "following": null,
+        "friends_count": 226,
+        "geo_enabled": false,
+        "has_extended_profile": false,
+        "id": 80122680,
+        "id_str": "80122680",
+        "is_translation_enabled": false,
+        "is_translator": false,
+        "lang": null,
+        "listed_count": 591,
+        "location": "Par ici ou par l\u00e0",
+        "name": "Maxime Combes",
+        "notifications": null,
+        "profile_background_color": "642D8B",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme10/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme10/bg.gif",
+        "profile_background_tile": true,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/80122680/1619530558",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/731050591372357632/E_IiyLhf_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/731050591372357632/E_IiyLhf_normal.jpg",
+        "profile_link_color": "FF0000",
+        "profile_sidebar_border_color": "65B0DA",
+        "profile_sidebar_fill_color": "7AC3EE",
+        "profile_text_color": "3D1957",
+        "profile_use_background_image": true,
+        "protected": false,
+        "screen_name": "MaximCombes",
+        "statuses_count": 41537,
+        "time_zone": null,
+        "translator_type": "none",
+        "url": "https://t.co/3Km3HmR1U5",
+        "utc_offset": null,
+        "verified": false,
+        "withheld_in_countries": []
+      }
+    },
+    "quoted_status_id": 1552568929406664705,
+    "quoted_status_id_str": "1552568929406664705",
+    "retweet_count": 156,
+    "retweeted": false,
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "user": {
+      "contributors_enabled": false,
+      "created_at": "Sun Jun 05 18:41:54 +0000 2011",
+      "default_profile": false,
+      "default_profile_image": false,
+      "description": "D\u00e9put\u00e9 de la 1\u00e8re circonscription du 93 | Pr\u00e9sident de la Commission des Finances AN",
+      "entities": {
+        "description": {
+          "urls": []
+        },
+        "url": {
+          "urls": [
+            {
+              "display_url": "editionsatelier.com/boutique/accue\u2026",
+              "expanded_url": "https://editionsatelier.com/boutique/accueil/311-lachez-nous-la-dette--9782708253889.html",
+              "indices": [
+                0,
+                23
+              ],
+              "url": "https://t.co/wSdAflqCWf"
+            }
+          ]
+        }
+      },
+      "favourites_count": 1244,
+      "follow_request_sent": null,
+      "followers_count": 107395,
+      "following": null,
+      "friends_count": 2222,
+      "geo_enabled": true,
+      "has_extended_profile": false,
+      "id": 311601642,
+      "id_str": "311601642",
+      "is_translation_enabled": false,
+      "is_translator": false,
+      "lang": null,
+      "listed_count": 727,
+      "location": "Gps",
+      "name": "Eric Coquerel",
+      "notifications": null,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme9/bg.gif",
+      "profile_background_tile": false,
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/311601642/1655832631",
+      "profile_image_url": "http://pbs.twimg.com/profile_images/911118770755833856/HlG9Ozah_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/911118770755833856/HlG9Ozah_normal.jpg",
+      "profile_link_color": "D9001D",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "protected": false,
+      "screen_name": "ericcoquerel",
+      "statuses_count": 29804,
+      "time_zone": null,
+      "translator_type": "none",
+      "url": "https://t.co/wSdAflqCWf",
+      "utc_offset": null,
+      "verified": true,
+      "withheld_in_countries": []
+    }
+  },
+  "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+  "truncated": false,
+  "user": {
+    "contributors_enabled": false,
+    "created_at": "Fri Nov 18 18:03:09 +0000 2011",
+    "default_profile": false,
+    "default_profile_image": false,
+    "description": "gaucho techno dodo",
+    "entities": {
+      "description": {
+        "urls": []
+      }
+    },
+    "favourites_count": 1889,
+    "follow_request_sent": null,
+    "followers_count": 102,
+    "following": null,
+    "friends_count": 293,
+    "geo_enabled": false,
+    "has_extended_profile": false,
+    "id": 415704821,
+    "id_str": "415704821",
+    "is_translation_enabled": false,
+    "is_translator": false,
+    "lang": null,
+    "listed_count": 25,
+    "location": "",
+    "name": "RaidKarD",
+    "notifications": null,
+    "profile_background_color": "131516",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+    "profile_background_tile": true,
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/415704821/1381508267",
+    "profile_image_url": "http://pbs.twimg.com/profile_images/1645526467/200px-Red_card_normal.png",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1645526467/200px-Red_card_normal.png",
+    "profile_link_color": "F57200",
+    "profile_sidebar_border_color": "EEEEEE",
+    "profile_sidebar_fill_color": "EFEFEF",
+    "profile_text_color": "FF0000",
+    "profile_use_background_image": true,
+    "protected": false,
+    "screen_name": "RaidKarD",
+    "statuses_count": 9728,
+    "time_zone": null,
+    "translator_type": "none",
+    "url": null,
+    "utc_offset": null,
+    "verified": false,
+    "withheld_in_countries": []
+  }
+}
