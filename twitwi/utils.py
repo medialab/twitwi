@@ -14,7 +14,9 @@ from twitwi.constants import (
     FORMATTED_TWEET_DATETIME_FORMAT,
     TWEET_DATETIME_FORMAT_V2,
     CANONICAL_URL_KWARGS,
-    CANONICAL_HOSTNAME_KWARGS
+    CANONICAL_HOSTNAME_KWARGS,
+    PRE_SNOWFLAKE_LAST_TWEET_ID,
+    OFFSET_TIMESTAMP,
 )
 
 UTC_TIMEZONE = timezone('UTC')
@@ -65,10 +67,8 @@ def validate_payload_v2(payload):
 
 
 def get_timestamp_from_id(id):
-    pre_snowflake_last_tweet_id = 29700859247
-    if id > pre_snowflake_last_tweet_id:
-        offset = 1288834974657
-        timestamp = (id >> 22) + offset
+    if id > PRE_SNOWFLAKE_LAST_TWEET_ID:
+        timestamp = (id >> 22) + OFFSET_TIMESTAMP
         return int(timestamp / 1000)
     else:
         return None

@@ -426,3 +426,6 @@ APP_ONLY_ROUTES = {
     'tweets/counts/all',
     'tweets/search/all'
 }
+
+PRE_SNOWFLAKE_LAST_TWEET_ID = 29700859247
+OFFSET_TIMESTAMP = 1288834974657
