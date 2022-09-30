@@ -6,6 +6,7 @@ from test.utils import get_json_resource
 
 from twitwi.utils import (
     get_dates,
+    get_timestamp_from_id,
     validate_payload_v2
 )
 
@@ -14,6 +15,8 @@ GET_DATES_TESTS = [
     (('Tue Nov 24 16:43:53 +0000 2020', 'Europe/Paris'), (1606236233, '2020-11-24T17:43:53')),
     (('Tue Nov 24 16:52:48 +0000 2020', 'Australia/Adelaide'), (1606236768, '2020-11-25T03:22:48'))
 ]
+
+GET_TIMESTAMP = [(1479161354066051075, 1641494522), (1503824656331165704, 1647374712), (1487215657854795777, 1643414818)]
 
 
 class TestUtils(object):
@@ -28,3 +31,7 @@ class TestUtils(object):
         assert not validate_payload_v2([1, 2, 3])
         assert not validate_payload_v2({'meta': {}})
         assert validate_payload_v2(get_json_resource('payload-v2.json'))
+
+    def test_get_timestamp_from_id(self):
+        for id, result in GET_TIMESTAMP:
+            assert get_timestamp_from_id(id) == result
