@@ -33,5 +33,5 @@ class TestUtils(object):
         assert validate_payload_v2(get_json_resource('payload-v2.json'))
 
     def test_get_timestamp_from_id(self):
-        for id, result in GET_TIMESTAMP:
+        for id, result in GET_TIMESTAMP_TESTS:
             assert get_timestamp_from_id(id) == result
