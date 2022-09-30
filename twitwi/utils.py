@@ -67,8 +67,8 @@ def validate_payload_v2(payload):
 
 
 def get_timestamp_from_id(id):
+    id = int(id)
     if id > PRE_SNOWFLAKE_LAST_TWEET_ID:
         timestamp = (id >> 22) + OFFSET_TIMESTAMP
         return int(timestamp / 1000)
-    else:
-        return None
+    return None
