@@ -321,7 +321,8 @@ MEDIA_FIELDS = {
     'preview_image_url',
     'public_metrics',
     'width',
-    'alt_text'
+    'alt_text',
+    'url'
 }
 
 POLL_FIELDS = {
