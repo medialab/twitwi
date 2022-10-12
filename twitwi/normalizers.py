@@ -446,7 +446,7 @@ def normalize_user(user, locale=None, pure=True, v2=False):
         'screen_name': user['screen_name'] if not v2 else user['username'],
         'name': user['name'],
         'description': user['description'] if user["description"] else None,
-        'url': user['url'],
+        'url': user.get('url'),
         'timestamp_utc': timestamp_utc,
         'local_time': local_time,
         'location': user.get('location'),
@@ -633,7 +633,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     public_metrics = tweet['public_metrics']
     user_public_metrics = user['public_metrics']
 
-    user_url = user['url']
+    user_url = user.get('url')
 
     if 'url' in user_entities and 'urls' in user_entities['url']:
         user_url_entity = user_entities['url']['urls'][0]
