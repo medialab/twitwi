@@ -7,7 +7,8 @@ from test.utils import get_json_resource
 from twitwi.utils import (
     get_dates,
     get_timestamp_from_id,
-    validate_payload_v2
+    validate_payload_v2,
+    get_dates_from_id,
 )
 
 GET_DATES_TESTS = [
@@ -17,6 +18,12 @@ GET_DATES_TESTS = [
 ]
 
 GET_TIMESTAMP_TESTS = [(1479161354066051075, 1641494522), (1503824656331165704, 1647374712), (1487215657854795777, 1643414818)]
+
+GET_DATES_ID_TESTS = [
+    ((1432936593862631424, 'Europe/Paris'), (1630473681, '2021-09-01T07:21:21')),
+    ((1433053229135323139, 'America/Toronto'), (1630501489, '2021-09-01T09:04:49')),
+    ((1433960202903035905, 'Australia/Adelaide'), (1630717728, '2021-09-04T10:38:48')),
+]
 
 
 class TestUtils(object):
@@ -35,3 +42,9 @@ class TestUtils(object):
     def test_get_timestamp_from_id(self):
         for id, result in GET_TIMESTAMP_TESTS:
             assert get_timestamp_from_id(id) == result
+
+    def test_get_dates_from_id(self):
+        for (tweet_id, tz), result in GET_DATES_ID_TESTS:
+            tz = timezone(tz)
+
+            assert get_dates_from_id(tweet_id, tz) == result
