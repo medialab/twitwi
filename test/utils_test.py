@@ -23,6 +23,7 @@ GET_DATES_ID_TESTS = [
     ((1432936593862631424, 'Europe/Paris'), (1630473681, '2021-09-01T07:21:21')),
     ((1433053229135323139, 'America/Toronto'), (1630501489, '2021-09-01T09:04:49')),
     ((1433960202903035905, 'Australia/Adelaide'), (1630717728, '2021-09-04T10:38:48')),
+    ((1282743734036312066, None), (1594664913, '2020-07-13T18:28:33'))
 ]
 
 GET_DATES_ID_NO_LOCALE_TESTS = (1282743734036312066, (1594664913, '2020-07-13T18:28:33'))
@@ -47,9 +48,8 @@ class TestUtils(object):
 
     def test_get_dates_from_id(self):
         for (tweet_id, tz), result in GET_DATES_ID_TESTS:
-            tz = timezone(tz)
+
+            if tz:
+                tz = timezone(tz)
 
             assert get_dates_from_id(tweet_id, tz) == result
-
-        tweet_id, result = GET_DATES_ID_NO_LOCALE_TESTS
-        assert get_dates_from_id(tweet_id) == result
