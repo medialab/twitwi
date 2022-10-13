@@ -13,7 +13,9 @@ from twitwi.formatters import (
 # NOTE: should we drop this from public exports?
 from twitwi.utils import (
     get_dates,
-    custom_normalize_url
+    custom_normalize_url,
+    get_timestamp_from_id,
+    get_dates_from_id,
 )
 from twitwi.normalizers import (
     normalize_tweet,

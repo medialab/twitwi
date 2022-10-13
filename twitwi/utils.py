@@ -66,9 +66,22 @@ def validate_payload_v2(payload):
     return True
 
 
-def get_timestamp_from_id(id):
-    id = int(id)
-    if id > PRE_SNOWFLAKE_LAST_TWEET_ID:
-        timestamp = (id >> 22) + OFFSET_TIMESTAMP
+def get_timestamp_from_id(tweet_id):
+    tweet_id = int(tweet_id)
+
+    if tweet_id > PRE_SNOWFLAKE_LAST_TWEET_ID:
+        timestamp = (tweet_id >> 22) + OFFSET_TIMESTAMP
         return int(timestamp / 1000)
+
     return None
+
+
+def get_dates_from_id(tweet_id, locale=None):
+    if locale is None:
+        locale = UTC_TIMEZONE
+
+    timestamp = get_timestamp_from_id(tweet_id)
+
+    locale_datetime = datetime.fromtimestamp(timestamp, locale)
+
+    return (timestamp, datetime.strftime(locale_datetime, FORMATTED_TWEET_DATETIME_FORMAT))
