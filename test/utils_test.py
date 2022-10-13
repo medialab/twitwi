@@ -8,7 +8,7 @@ from twitwi.utils import (
     get_dates,
     get_timestamp_from_id,
     validate_payload_v2,
-    get_dates_from_id,
+    get_dates_from_id
 )
 
 GET_DATES_TESTS = [
@@ -24,6 +24,8 @@ GET_DATES_ID_TESTS = [
     ((1433053229135323139, 'America/Toronto'), (1630501489, '2021-09-01T09:04:49')),
     ((1433960202903035905, 'Australia/Adelaide'), (1630717728, '2021-09-04T10:38:48')),
 ]
+
+GET_DATES_ID_NO_LOCALE_TESTS = (1282743734036312066, (1594664913, '2020-07-13T18:28:33'))
 
 
 class TestUtils(object):
@@ -48,3 +50,6 @@ class TestUtils(object):
             tz = timezone(tz)
 
             assert get_dates_from_id(tweet_id, tz) == result
+
+        tweet_id, result = GET_DATES_ID_NO_LOCALE_TESTS
+        assert get_dates_from_id(tweet_id) == result
