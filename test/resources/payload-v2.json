@@ -89,7 +89,8 @@
 				"retweet_count": 257,
 				"reply_count": 0,
 				"like_count": 0,
-				"quote_count": 0
+				"quote_count": 0,
+				"impression_count": 32
 			},
 			"possibly_sensitive": false,
 			"source": "Twitter for Android",
@@ -220,7 +221,8 @@
 				"retweet_count": 257,
 				"reply_count": 0,
 				"like_count": 0,
-				"quote_count": 0
+				"quote_count": 0,
+				"impression_count": 0
 			},
 			"possibly_sensitive": false,
 			"source": "Twitter for Android",
@@ -351,7 +353,8 @@
 				"retweet_count": 257,
 				"reply_count": 0,
 				"like_count": 0,
-				"quote_count": 0
+				"quote_count": 0,
+				"impression_count": 0
 			},
 			"possibly_sensitive": false,
 			"source": "Twitter for Android",
@@ -482,7 +485,8 @@
 				"retweet_count": 257,
 				"reply_count": 0,
 				"like_count": 0,
-				"quote_count": 0
+				"quote_count": 0,
+				"impression_count": 0
 			},
 			"possibly_sensitive": false,
 			"source": "Twitter for Android",
@@ -613,7 +617,8 @@
 				"retweet_count": 257,
 				"reply_count": 0,
 				"like_count": 0,
-				"quote_count": 0
+				"quote_count": 0,
+				"impression_count": 0
 			},
 			"possibly_sensitive": false,
 			"source": "Twitter for iPhone",

@@ -688,6 +688,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         'retweet_count': public_metrics['retweet_count'] if not is_retweet else 0,
         'quote_count': public_metrics['quote_count'] if not is_retweet else 0,
         'reply_count': public_metrics['reply_count'] if not is_retweet else 0,
+        'impression_count': public_metrics.get('impression_count'),
         'lang': tweet['lang'],
         'source_name': tweet.get('source'),
         'links': sorted(links),
