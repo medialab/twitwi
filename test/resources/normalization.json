@@ -2696,5 +2696,142 @@
         "withheld_in_countries": []
       }
     }
+  },
+  {
+    "normalized": [
+      {
+        "collection_time": "2023-01-27T17:17:35.869826",
+        "coordinates": null,
+        "id": "1529111439562223616",
+        "impression_count": 1456,
+        "hashtags": ["afp"],
+        "lang": "fr",
+        "like_count": 7586,
+        "links": [],
+        "links_to_resolve": false, "domains": [],
+        "local_time": "2022-05-24T16:45:51",
+        "match_query": true,
+        "media_alt_texts": [],
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "mentioned_ids": [],
+        "mentioned_names": [],
+        "possibly_sensitive": false,
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "retweet_count": 1837,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "source_name": "TweetDeck",
+        "source_url": "https://about.twitter.com/products/tweetdeck",
+        "text": "La reconversion de l'ex-ministre Jean-Baptiste Djebbari chez l'armateur CMA-CGM a été recalée par la Haute autorité pour la transparence de la vie publique #AFP https://twitter.com/afpfr/status/1529111439562223616/photo/1",
+        "timestamp_utc": 1653403551,
+        "to_tweetid": null,
+        "to_username": null,
+        "to_userid": null,
+        "url": "https://twitter.com/afpfr/status/1529111439562223616",
+        "user_created_at": "2011-07-20T14:07:59",
+        "user_description": "Morceaux choisis des fils d'actu, coulisses & RT des 1.700 journalistes de l'AFP à travers le monde. Ailleurs sur Twitter: https://t.co/VOvpA2ky3O",
+        "user_followers": 4080240,
+        "user_friends": 1344,
+        "user_id": "338985020",
+        "user_image": "https://pbs.twimg.com/profile_images/1272769405575925767/uRtKtfhk_normal.jpg",
+        "user_likes": 71,
+        "user_lists": 16846,
+        "user_location": "Tout Autour du Monde",
+        "user_name": "Agence France-Presse",
+        "user_screen_name": "afpfr",
+        "user_timestamp_utc": 1311163679,
+        "user_tweets": 459054,
+        "user_url": "http://www.afp.com",
+        "user_verified": true
+      }
+    ],
+    "source": {
+      "contributors": null,
+      "coordinates": null,
+      "created_at": "Tue May 24 14:45:51 +0000 2022",
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": []
+      },
+      "favorite_count": 7586,
+      "favorited": false,
+      "full_text": "La reconversion de l'ex-ministre Jean-Baptiste Djebbari chez l'armateur CMA-CGM a été recalée par la Haute autorité pour la transparence de la vie publique #AFP https://twitter.com/afpfr/status/1529111439562223616/photo/1",
+      "geo": null,
+      "id": 1529111439562223616,
+      "id_str": "1529111439562223616",
+      "in_reply_to_screen_name": null,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "is_quote_status": false,
+      "lang": "fr",
+      "place": null,
+      "possibly_sensitive": false,
+      "retweet_count": 1837,
+      "retweeted": false,
+      "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
+      "truncated": false,
+      "ext_views": {
+        "state": "Enabled",
+        "count": 1456
+      },
+      "user": {
+        "contributors_enabled": false,
+        "created_at": "Wed Jul 20 12:07:59 +0000 2011",
+        "description": "Morceaux choisis des fils d'actu, coulisses & RT des 1.700 journalistes de l'AFP à travers le monde. Ailleurs sur Twitter: https://t.co/VOvpA2ky3O",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/l1tEDjlKD9",
+                "expanded_url": "http://www.afp.com",
+                "display_url": "afp.com",
+                "indices": [0, 23]
+              }
+            ]
+          },
+          "description": {
+            "urls": [
+              {
+                "url": "https://t.co/VOvpA2ky3O",
+                "expanded_url": "http://u.afp.com/AFPTwitter",
+                "display_url": "u.afp.com/AFPTwitter",
+                "indices": [123, 146]
+              }
+            ]
+          }
+        },
+        "fast_followers_count": 0,
+        "favourites_count": 71,
+        "followers_count": 4080240,
+        "friends_count": 1344,
+        "id": 338985020,
+        "id_str": "338985020",
+        "listed_count": 16846,
+        "lang": null,
+        "location": "Tout Autour du Monde",
+        "media_count": 217381,
+        "name": "Agence France-Presse",
+        "normal_followers_count": 4080240,
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1272769405575925767/uRtKtfhk_normal.jpg",
+        "protected": false,
+        "screen_name": "afpfr",
+        "statuses_count": 459054,
+        "time_zone": null,
+        "url": "https://t.co/l1tEDjlKD9",
+        "utc_offset": null,
+        "verified": true
+      }
+    }
   }
 ]

@@ -101,7 +101,8 @@ META_FIELDS = [
     'possibly_sensitive',
     'retweet_count',
     'favorite_count',
-    'reply_count'
+    'reply_count',
+    'ext_views'
 ]
 
 META_FIELD_TRANSLATIONS = {
@@ -142,7 +143,10 @@ def grab_extra_meta(source, result, locale=None):
 
     for meta in META_FIELDS:
         if meta in source:
-            result[META_FIELD_TRANSLATIONS.get(meta, meta)] = source[meta]
+            if meta == 'ext_views':
+                result['impression_count'] = source[meta].get('count')
+            else:
+                result[META_FIELD_TRANSLATIONS.get(meta, meta)] = source[meta]
         elif nostr_field(meta) in source:
             result[meta] = str(source[nostr_field(meta)])
 
