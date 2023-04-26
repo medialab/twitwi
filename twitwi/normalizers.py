@@ -11,6 +11,7 @@ from copy import deepcopy
 from datetime import datetime
 from html import unescape
 
+from twitwi.exceptions import TwitterPayloadV2IncompleteIncludesError
 from twitwi.utils import (
     get_dates,
     custom_normalize_url,
@@ -490,7 +491,11 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                        extract_referenced_tweets=False):
     timestamp_utc, local_time = get_dates(tweet['created_at'], locale=locale, v2=True)
 
-    user = users_by_id[tweet['author_id']]
+    try:
+        user = users_by_id[tweet['author_id']]
+    except KeyError:
+        raise TwitterPayloadV2IncompleteIncludesError('user', tweet['author_id'])
+
     user_timestamp_utc, user_created_at = get_dates(user['created_at'], locale=locale, v2=True)
     user_entities = user.get('entities', {})
 
@@ -508,7 +513,10 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         if 'id' in mention:
             mentions[mention['username']] = mention['id']
         else:
-            mentions[mention['username']] = users_by_screen_name[mention['username']]['id']
+            try:
+                mentions[mention['username']] = users_by_screen_name[mention['username']]['id']
+            except KeyError:
+                raise TwitterPayloadV2IncompleteIncludesError('user', mention['username'])
 
     place_info = {}
 
@@ -550,7 +558,10 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
     if 'replied_to' in refs:
         reply = tweets_by_id.get(refs['replied_to'], {})
         if 'author_id' in reply:
-            reply_info['to_username'] = users_by_id[reply['author_id']]['username']
+            try:
+                reply_info['to_username'] = users_by_id[reply['author_id']]['username']
+            except KeyError:
+                raise TwitterPayloadV2IncompleteIncludesError('replied_user', reply['author_id'])
         else:
             reply_info['to_username'] = ''
         reply_info['to_userid'] = reply.get('author_id', '')
@@ -650,7 +661,10 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
 
         for media_key in tweet['attachments']['media_keys']:
             if media_key in media_by_key:
-                media_data = media_by_key[media_key]
+                try:
+                    media_data = media_by_key[media_key]
+                except KeyError:
+                    raise TwitterPayloadV2IncompleteIncludesError('media', media_key)
 
                 medias.append((
                     media_data.get('url', ''),

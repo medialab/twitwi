@@ -9,6 +9,7 @@ from ebbe import sorted_uniq
 from operator import itemgetter
 from test.utils import get_json_resource
 
+from twitwi.exceptions import TwitterPayloadV2IncompleteIncludesError
 from twitwi.normalizers import (
     normalize_tweet,
     normalize_user,
@@ -187,3 +188,15 @@ class TestNormalizers(object):
         for t1, t2 in zip(all_ntweets, test_data):
             assert 'collection_time' in t1 and isinstance(t1['collection_time'], str)
             compare_tweets(t2['id'], t1, t2)
+
+    def test_incomplete_includes(self):
+        payload = get_json_resource('payload-v2.json')
+
+        # Dropping a users to simulate faulty payload
+        payload['includes']['users'].pop(0)
+
+        with pytest.raises(TwitterPayloadV2IncompleteIncludesError) as exc_info:
+            normalize_tweets_payload_v2(payload)
+
+        assert exc_info.value.kind == 'user'
+        assert exc_info.value.key == '1217864994852941825'
