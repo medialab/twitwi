@@ -297,7 +297,9 @@ CANONICAL_HOSTNAME_KWARGS = {
 TWEET_FIELDS_V2 = {
     'attachments',
     'author_id',
-    'context_annotations',
+    # NOTE: (2023-04-26) dropping this because we don't use it and it prevents us
+    # from being able to get 500 tweets per call using academic v2 API.
+    # 'context_annotations',
     'conversation_id',
     'created_at',
     'entities',
