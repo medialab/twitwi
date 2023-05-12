@@ -89,8 +89,10 @@ def resolve_entities(tweet, prefix):
 def get_bitrate(x):
     return x.get('bitrate', 0)
 
+
 def get_bitrate_v2(x):
     return x.get('bit_rate', 0)
+
 
 def nostr_field(f):
     return f.replace('_str', '')
