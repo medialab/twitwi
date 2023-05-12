@@ -1,0 +1,110 @@
+{
+    "data": [
+        {
+            "attachments": {
+                "media_keys": [
+                    "13_1656683977720094731"
+                ]
+            },
+            "author_id": "140776364",
+            "conversation_id": "1656684087061381121",
+            "created_at": "2023-05-11T15:34:00.000Z",
+            "edit_history_tweet_ids": [
+                "1656684087061381121"
+            ],
+            "entities": {
+                "urls": [
+                    {
+                        "display_url": "pic.twitter.com/8aMoCzgu0V",
+                        "end": 166,
+                        "expanded_url": "https://twitter.com/bfmbusiness/status/1656684087061381121/video/1",
+                        "media_key": "13_1656683977720094731",
+                        "start": 143,
+                        "url": "https://t.co/8aMoCzgu0V"
+                    }
+                ]
+            },
+            "id": "1656684087061381121",
+            "lang": "fr",
+            "possibly_sensitive": false,
+            "public_metrics": {
+                "impression_count": 19422,
+                "like_count": 93,
+                "quote_count": 10,
+                "reply_count": 22,
+                "retweet_count": 29
+            },
+            "reply_settings": "everyone",
+            "text": "Emmanuel Macron annonce une r\u00e9forme des crit\u00e8res d'attribution du bonus automobile: \"En gros, on va soutenir les v\u00e9hicules produits en Europe\" https://t.co/8aMoCzgu0V"
+        }
+    ],
+    "includes": {
+        "media": [
+            {
+              "duration_ms": 62229,
+              "height": 720,
+              "media_key": "13_1656683977720094731",
+              "preview_image_url": "https://pbs.twimg.com/media/Fv25ZRAWcAIQAGK.jpg",
+              "public_metrics": {
+                "view_count": 5956
+              },
+              "type": "video",
+              "variants": [
+                {
+                  "bit_rate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/1656683977720094731/vid/1280x720/jKBosd0XYnY98HAD.mp4?tag=16"
+                },
+                {
+                  "bit_rate": 288000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/1656683977720094731/vid/480x270/SHODWZWboFgjwYz8.mp4?tag=16"
+                },
+                {
+                  "bit_rate": 832000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/amplify_video/1656683977720094731/vid/640x360/viu8mLIXkfDnIemM.mp4?tag=16"
+                },
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/amplify_video/1656683977720094731/pl/razxJ3G_fqhirHio.m3u8?tag=16&container=fmp4"
+                }
+              ],
+              "width": 1280
+            }
+        ],
+        "users": [
+            {
+                "created_at": "2010-05-06T10:21:56.000Z",
+                "description": "Premi\u00e8re cha\u00eene d\u2019information \u00e9conomique et financi\u00e8re de France.",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "bfmbusiness.bfmtv.com",
+                                "end": 23,
+                                "expanded_url": "https://bfmbusiness.bfmtv.com/",
+                                "start": 0,
+                                "url": "https://t.co/H0SqHdiC6K"
+                            }
+                        ]
+                    }
+                },
+                "id": "140776364",
+                "name": "BFM Business",
+                "pinned_tweet_id": "1656609787474239488",
+                "profile_image_url": "https://pbs.twimg.com/profile_images/1630523842853580800/WGUaboq7_normal.jpg",
+                "protected": false,
+                "public_metrics": {
+                    "followers_count": 294858,
+                    "following_count": 1571,
+                    "listed_count": 2504,
+                    "tweet_count": 165675
+                },
+                "url": "https://t.co/H0SqHdiC6K",
+                "username": "bfmbusiness",
+                "verified": false
+            }
+        ]
+    }
+}
