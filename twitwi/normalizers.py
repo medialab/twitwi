@@ -89,6 +89,8 @@ def resolve_entities(tweet, prefix):
 def get_bitrate(x):
     return x.get('bitrate', 0)
 
+def get_bitrate_v2(x):
+    return x.get('bit_rate', 0)
 
 def nostr_field(f):
     return f.replace('_str', '')
@@ -654,6 +656,7 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
         user_url_entity = user_entities['url']['urls'][0]
         user_url = get_best_url(user_url_entity) or user_url
 
+    # Media
     medias = []
 
     if 'attachments' in tweet and 'media_keys' in tweet['attachments']:
@@ -666,9 +669,13 @@ def normalize_tweet_v2(tweet, *, users_by_screen_name, places_by_id, tweets_by_i
                 except KeyError:
                     raise TwitterPayloadV2IncompleteIncludesError('media', media_key)
 
+                if "variants" in media_data:
+                    media_url = max(media_data['variants'], key=get_bitrate_v2)['url']
+                else:
+                    media_url = media_data.get('url', '')
                 medias.append((
-                    media_data.get('url', ''),
-                    '%s_%s' % (source_id, extract_media_name_from_url(media_data.get('url', ''))),
+                    media_url,
+                    '%s_%s' % (source_id, extract_media_name_from_url(media_url)),
                     media_data['type']
                 ))
 

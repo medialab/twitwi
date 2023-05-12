@@ -1104,5 +1104,54 @@
     "user_tweets": 1598,
     "user_url": "https://github.com/Yomguithereal",
     "user_verified": false
+  },
+  {
+    "collected_via": [
+      "test"
+    ],
+    "collection_time": "2023-05-12T14:42:08.206096",
+    "hashtags": [],
+    "id": "1656684087061381121",
+    "impression_count": 19422,
+    "lang": "fr",
+    "like_count": 93,
+    "links": [
+      "https://twitter.com/bfmbusiness/status/1656684087061381121/video/1"
+    ],
+    "local_time": "2023-05-11T15:34:00",
+    "match_query": true,
+    "media_files": [
+      "1656684087061381121_jKBosd0XYnY98HAD.mp4"
+    ],
+    "media_types": [
+      "video"
+    ],
+    "media_urls": [
+      "https://video.twimg.com/amplify_video/1656683977720094731/vid/1280x720/jKBosd0XYnY98HAD.mp4?tag=16"
+    ],
+    "mentioned_ids": [],
+    "mentioned_names": [],
+    "possibly_sensitive": false,
+    "quote_count": 10,
+    "reply_count": 22,
+    "retweet_count": 29,
+    "source_name": null,
+    "text": "Emmanuel Macron annonce une réforme des critères d'attribution du bonus automobile: \"En gros, on va soutenir les véhicules produits en Europe\" https://twitter.com/bfmbusiness/status/1656684087061381121/video/1",
+    "timestamp_utc": 1683819240,
+    "url": "https://twitter.com/bfmbusiness/status/1656684087061381121",
+    "user_created_at": "2010-05-06T10:21:56",
+    "user_description": "Première chaîne d’information économique et financière de France.",
+    "user_followers": 294858,
+    "user_friends": 1571,
+    "user_id": "140776364",
+    "user_image": "https://pbs.twimg.com/profile_images/1630523842853580800/WGUaboq7_normal.jpg",
+    "user_lists": 2504,
+    "user_location": null,
+    "user_name": "BFM Business",
+    "user_screen_name": "bfmbusiness",
+    "user_timestamp_utc": 1273141316,
+    "user_tweets": 165675,
+    "user_url": "https://bfmbusiness.bfmtv.com/",
+    "user_verified": false
   }
 ]
