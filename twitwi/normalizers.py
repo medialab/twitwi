@@ -316,7 +316,7 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
                 except KeyError:
                     pass
 
-            if 'media_url' in entity:
+            if 'media_url' in entity or 'media_url_https' in entity:
                 if 'video_info' in entity:
                     med_url = max(entity['video_info']['variants'], key=get_bitrate)['url']
                 else:
