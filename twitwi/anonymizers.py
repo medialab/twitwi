@@ -1,10 +1,10 @@
 import re
 
-QUOTED_REDACT_RE = re.compile(r"«\s+[^»]+:\s+([^»])+\s+»")
+QUOTED_REDACT_RE = re.compile(r"«\s+[^»]+:\s+([^»]+)\s+»")
 
 
 def redact_quoted_text(text: str) -> str:
-    return QUOTED_REDACT_RE.sub("« $1 »", text)
+    return QUOTED_REDACT_RE.sub(r"« \1 »", text)
 
 
 def redact_rt_text(text: str) -> str:

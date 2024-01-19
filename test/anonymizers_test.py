@@ -7,11 +7,17 @@ from io import StringIO
 from test.utils import get_json_resource
 
 from twitwi.constants import TWEET_FIELDS
-from twitwi.anonymizers import anonymize_normalized_tweet
+from twitwi.anonymizers import anonymize_normalized_tweet, redact_quoted_text, redact_rt_text
 from twitwi.formatters import transform_tweet_into_csv_dict
 
 
 class TestAnonymizers(object):
+    def test_redact_quoted_text(self):
+        assert redact_quoted_text("test « bidule: voilà voilà »") == "test « voilà voilà »"
+
+    def test_redact_rt_text(self):
+        assert redact_rt_text("RT @bidule: voilà voilà") == "RT: voilà voilà"
+
     def test_anonymize_normalized_tweet(self):
         tweets = get_json_resource("normalized-tweets-v2-all.json")
         tweets_index = {t["id"]: t for t in tweets}
