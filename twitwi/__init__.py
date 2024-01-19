@@ -2,6 +2,7 @@
 # Twitwi Library Endpoint
 # =============================================================================
 #
+from twitwi.anonymizers import anonymize_normalized_tweet
 from twitwi.client_wrapper import TwitterWrapper
 from twitwi.formatters import (
     transform_tweet_into_csv_dict,

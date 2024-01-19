@@ -1,5 +1,5 @@
 # =============================================================================
-# Twitwi Utilities Unit Tests
+# Twitwi Normalizers Unit Tests
 # =============================================================================
 import pytest
 from functools import partial
