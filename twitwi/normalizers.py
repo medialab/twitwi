@@ -330,7 +330,11 @@ def normalize_tweet(tweet, locale=None, extract_referenced_tweets=False,
                     media_urls.append(med_url.split('?tag=')[0])
                     media_files.append('%s_%s' % (source_id, med_name))
                     media_alt_texts.append(entity.get("ext_alt_text") or '')
-            else:
+
+            # NOTE: fun fact, Twitter is starting to break down and we cannot guarantee
+            # expanded_url exists anymore. It even crashes the website itself lol:
+            # https://x.com/lmerzeau/status/426318495450943488
+            elif "expanded_url" in entity:
                 normalized = custom_normalize_url(entity['expanded_url'])
                 links.add(normalized)
 
