@@ -3,7 +3,6 @@
 # =============================================================================
 #
 from twitwi.anonymizers import anonymize_normalized_tweet
-from twitwi.client_wrapper import TwitterWrapper
 from twitwi.formatters import (
     transform_tweet_into_csv_dict,
     format_tweet_as_csv_row,
