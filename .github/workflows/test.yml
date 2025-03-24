@@ -8,10 +8,6 @@ jobs:
       matrix:
         include:
 
-          # Old ubuntu
-          - os: ubuntu-20.04
-            python-version: "3.8"
-
           # Current ubuntu
           - os: ubuntu-22.04
             python-version: "3.8"

@@ -7,20 +7,12 @@ on:
 jobs:
   build:
     if: github.repository == 'medialab/twitwi'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
-      - name: Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: deploy-${{ hashFiles('**/setup.py') }}
-          restore-keys: |
-            deploy-
 
       - name: Set up Python
         uses: actions/setup-python@v2
