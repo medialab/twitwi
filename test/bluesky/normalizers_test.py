@@ -8,10 +8,9 @@ class TestNormalizers:
         profiles = get_json_resource("bluesky-profiles.json")
         normalized_profiles = [normalize_profile(profile) for profile in profiles]
 
-        # with open("test/resources/bluesky-normalized-profiles.json", "w") as f:
-        #     import json
+        # from test.utils import dump_json_resource
 
-        #     json.dump(normalized_profiles, f, indent=2, ensure_ascii=False)
+        # dump_json_resource(normalized_profiles, "bluesky-normalized-profiles.json")
 
         expected = get_json_resource("bluesky-normalized-profiles.json")
 

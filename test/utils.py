@@ -12,6 +12,11 @@ def open_resource(name):
     return open(join(RESOURCES_DIR, name), encoding="utf-8")
 
 
+def get_resource(name):
+    with open(join(RESOURCES_DIR, name), encoding="utf-8") as f:
+        return f.read()
+
+
 def get_json_resource(name):
     with open(join(RESOURCES_DIR, name), encoding="utf-8") as f:
         return json.load(f)
