@@ -8,13 +8,12 @@ def redact_quoted_text(text: str) -> str:
 
 
 def redact_rt_text(text: str) -> str:
-    return 'RT: ' + text.split(': ', 1)[1]
+    return "RT: " + text.split(": ", 1)[1]
 
 
 FIELDS_TO_DELETE = [
     # The tweet's url leaks the user
     "url",
-
     # User's place
     "lat",
     "lng",
@@ -23,7 +22,6 @@ FIELDS_TO_DELETE = [
     "place_name",
     "place_type",
     "user_location",
-
     # User info
     "user_created_at",
     "user_description",
@@ -34,16 +32,13 @@ FIELDS_TO_DELETE = [
     "user_timestamp_utc",
     "user_url",
     "user_verified",
-
     # Retweeted user info
     "retweeted_timestamp_utc",
     "retweeted_user",
     "retweeted_user_id",
-
     # Replied user info
     "to_userid",
     "to_username",
-
     # Quoted user info
     "quoted_user",
     "quoted_user_id",
@@ -56,14 +51,13 @@ FIELDS_TO_DELETE = [
 # NOTE: we do not redact mentions either.
 # NOTE: we also don't redact replies.
 def anonymize_normalized_tweet(normalized_tweet) -> None:
-
     # Text mangling
     text = normalized_tweet["text"]
 
-    if normalized_tweet.get('retweeted_id', None) is not None:
+    if normalized_tweet.get("retweeted_id", None) is not None:
         normalized_tweet["text"] = redact_rt_text(text)
 
-    elif normalized_tweet.get('quoted_id', None) is not None:
+    elif normalized_tweet.get("quoted_id", None) is not None:
         normalized_tweet["text"] = redact_quoted_text(text)
 
     for field in FIELDS_TO_DELETE:
