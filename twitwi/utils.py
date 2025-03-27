@@ -12,7 +12,7 @@ from datetime import datetime
 from twitwi.constants import (
     TWEET_DATETIME_FORMAT,
     FORMATTED_TWEET_DATETIME_FORMAT,
-    FORMATTED_BSKY_DATETIME_FORMAT,
+    FORMATTED_FULL_DATETIME_FORMAT,
     TWEET_DATETIME_FORMAT_V2,
     CANONICAL_URL_KWARGS,
     CANONICAL_HOSTNAME_KWARGS,
@@ -30,7 +30,7 @@ custom_get_normalized_hostname = partial(
 
 
 def get_collection_time():
-    return datetime.now().strftime(FORMATTED_BSKY_DATETIME_FORMAT)
+    return datetime.now().strftime(FORMATTED_FULL_DATETIME_FORMAT)
 
 
 def get_dates(date_str, locale=None, source="v1"):
@@ -48,7 +48,7 @@ def get_dates(date_str, locale=None, source="v1"):
 
     return (
         int(utc_datetime.timestamp()),
-        datetime.strftime(locale_datetime, FORMATTED_BSKY_DATETIME_FORMAT if source == "bluesky" else FORMATTED_TWEET_DATETIME_FORMAT),
+        datetime.strftime(locale_datetime, FORMATTED_FULL_DATETIME_FORMAT if source == "bluesky" else FORMATTED_TWEET_DATETIME_FORMAT),
     )
 
 

@@ -8,7 +8,7 @@ TWEET_DATETIME_FORMAT = "%a %b %d %H:%M:%S +0000 %Y"
 TWEET_DATETIME_FORMAT_V2 = "%Y-%m-%dT%H:%M:%S.%fZ"
 FORMATTED_TWEET_DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S"
 
-FORMATTED_BSKY_DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
+FORMATTED_FULL_DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
 
 # More details on Twitter's tweets metadata can be read here: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
 TWEET_FIELDS = [
