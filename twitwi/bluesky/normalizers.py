@@ -1,10 +1,10 @@
-from typing import Dict, Union
+from typing import Dict, Optional
 
 from twitwi.utils import get_collection_time, get_dates
 from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
 
 
-def normalize_profile(data: Dict, locale: Union[str, None] = None) -> BlueskyProfile:
+def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfile:
     associated = data["associated"]
 
     pinned_post_uri = None
@@ -48,7 +48,7 @@ def format_post_url(user_handle, post_did):
     return f"https://bsky.app/profile/{user_handle}/post/{post_did}"
 
 
-def normalize_post(data: Dict, locale: Union[str, None] = None) -> BlueskyPost:
+def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
     post = {}
 
