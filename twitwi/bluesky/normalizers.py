@@ -1,9 +1,10 @@
-from typing import Dict
+from typing import Dict, Union
 
+from twitwi.utils import get_dates
 from twitwi.bluesky.types import BlueskyProfile
 
 
-def normalize_profile(data: Dict) -> BlueskyProfile:
+def normalize_profile(data: Dict, locale: Union[str, None] = None) -> BlueskyProfile:
     associated = data["associated"]
 
     pinned_post_uri = None
@@ -12,11 +13,14 @@ def normalize_profile(data: Dict) -> BlueskyProfile:
     if pinned_post_data is not None:
         pinned_post_uri = pinned_post_data["uri"]
 
+    timestamp_utc, created_at = get_dates(data["createdAt"], locale=locale, source="bluesky")
+
     return {
         "did": data["did"],
         "handle": data["handle"],
         "display_name": data["displayName"],
-        "created_at": data["createdAt"],
+        "created_at": created_at,
+        "timestamp_utc": timestamp_utc,
         "description": data["description"],
         "avatar": data["avatar"],
         "posts": data["postsCount"],

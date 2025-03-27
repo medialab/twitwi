@@ -6,6 +6,7 @@ class BlueskyProfile(TypedDict):
     handle: str
     display_name: str
     created_at: str
+    timestamp_utc: int
     description: str
     posts: int
     followers: int
