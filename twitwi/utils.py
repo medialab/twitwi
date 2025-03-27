@@ -35,7 +35,7 @@ def get_collection_time():
 
 def get_dates(date_str, locale=None, source="v1"):
     if source not in ["v1", "v2", "bluesky"]:
-        raise(Exception("source should be one of v1, v2 or bluesky"))
+        raise Exception("source should be one of v1, v2 or bluesky")
 
     if locale is None:
         locale = UTC_TIMEZONE
@@ -48,7 +48,12 @@ def get_dates(date_str, locale=None, source="v1"):
 
     return (
         int(utc_datetime.timestamp()),
-        datetime.strftime(locale_datetime, FORMATTED_FULL_DATETIME_FORMAT if source == "bluesky" else FORMATTED_TWEET_DATETIME_FORMAT),
+        datetime.strftime(
+            locale_datetime,
+            FORMATTED_FULL_DATETIME_FORMAT
+            if source == "bluesky"
+            else FORMATTED_TWEET_DATETIME_FORMAT,
+        ),
     )
 
 

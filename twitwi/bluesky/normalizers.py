@@ -13,7 +13,9 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
     if pinned_post_data is not None:
         pinned_post_uri = pinned_post_data["uri"]
 
-    timestamp_utc, created_at = get_dates(data["createdAt"], locale=locale, source="bluesky")
+    timestamp_utc, created_at = get_dates(
+        data["createdAt"], locale=locale, source="bluesky"
+    )
 
     return {
         "did": data["did"],
@@ -36,12 +38,9 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
 
 def parse_post_uri(uri):
     if not uri.startswith("at://") and "/app.bsky.feed.post/" not in uri:
-        raise(Exception(f"Not a BlueSky post uri: {uri}"))
+        raise Exception(f"Not a BlueSky post uri: {uri}")
     pieces = uri[5:].split("/app.bsky.feed.post/")
-    return {
-        "user_did": pieces[0],
-        "post_did": pieces[1]
-    }
+    return {"user_did": pieces[0], "post_did": pieces[1]}
 
 
 def format_post_url(user_handle, post_did):
@@ -49,7 +48,6 @@ def format_post_url(user_handle, post_did):
 
 
 def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
-
     post = {}
 
     post["collection_time"] = get_collection_time()
@@ -60,19 +58,24 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     post_dids = parse_post_uri(data["uri"])
     post["did"] = post_dids["post_did"]
 
-    post["timestamp_utc"], post["local_time"] = get_dates(data["record"]["createdAt"], locale=locale, source="bluesky")
+    post["timestamp_utc"], post["local_time"] = get_dates(
+        data["record"]["createdAt"], locale=locale, source="bluesky"
+    )
 
     post["user_did"] = post_dids["user_did"]
     if post["user_did"] != data["author"]["did"]:
-        raise(Exception(f"Inconsistent user did between BlueSky post uri and post's author metadata: {data['uri']}"))
+        raise Exception(
+            f"Inconsistent user did between BlueSky post uri and post's author metadata: {data['uri']}"
+        )
 
     post["user_handle"] = data["author"]["handle"]
     post["user_name"] = data["author"]["displayName"]
     post["user_image"] = data["author"]["avatar"]
-    post["user_timestamp_utc"], post["user_created_at"] = get_dates(data["author"]["createdAt"], locale=locale, source="bluesky")
+    post["user_timestamp_utc"], post["user_created_at"] = get_dates(
+        data["author"]["createdAt"], locale=locale, source="bluesky"
+    )
     post["user_langs"] = data["record"]["langs"]
 
     post["url"] = format_post_url(post["user_handle"], post["did"])
 
     return post
-

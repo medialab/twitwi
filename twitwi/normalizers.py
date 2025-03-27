@@ -465,7 +465,9 @@ def normalize_user(user, locale=None, pure=True, v2=False):
 
     resolve_user_entities(user)
 
-    timestamp_utc, local_time = get_dates(user["created_at"], locale, source="v2" if v2 else "v1")
+    timestamp_utc, local_time = get_dates(
+        user["created_at"], locale, source="v2" if v2 else "v1"
+    )
 
     if v2 and "withheld" in user:
         withheld = user["withheld"]
@@ -539,7 +541,9 @@ def normalize_tweet_v2(
     collection_source=None,
     extract_referenced_tweets=False,
 ):
-    timestamp_utc, local_time = get_dates(tweet["created_at"], locale=locale, source="v2")
+    timestamp_utc, local_time = get_dates(
+        tweet["created_at"], locale=locale, source="v2"
+    )
 
     try:
         user = users_by_id[tweet["author_id"]]
