@@ -1,6 +1,11 @@
 from typing import Dict, Optional
 
-from twitwi.utils import get_collection_time, get_dates
+from twitwi.utils import (
+    get_collection_time,
+    get_dates,
+    custom_normalize_url,
+    custom_get_normalized_hostname,
+)
 from twitwi.bluesky.utils import validate_post_payload
 from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
 
@@ -90,6 +95,64 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     post["like_count"] = data["likeCount"]
     post["quote_count"] = data["quoteCount"]
 
+    # Handle hashtags, mentions & links from facets
+    post["mentioned_user_handles"] = []
+    post["mentioned_user_dids"] = []
+    hashtags = set()
+    links = set()
+    links_to_replace = []
+    for facet in data["record"].get("facets", []):
+        if len(facet["features"]) != 1:
+            raise Exception(
+                "Unusual facet content for post %s: %s" % (post["url"], facet)
+            )
+
+        feat = facet["features"][0]
+        if feat["$type"].endswith("#tag"):
+            hashtags.add(feat["tag"].strip().lower())
+
+        elif feat["$type"].endswith("#mention"):
+            post["mentioned_user_dids"].append(feat["did"])
+            handle = (
+                data["record"]["text"][
+                    facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]
+                ]
+                .strip()
+                .lower()
+            )
+            post["mentioned_user_handles"].append(handle)
+
+        elif feat["$type"].endswith("#link"):
+            links.add(custom_normalize_url(feat["uri"]))
+            links_to_replace.append(
+                {
+                    "uri": feat["uri"].encode("utf-8"),
+                    "start": facet["index"]["byteStart"],
+                    "end": facet["index"]["byteEnd"],
+                }
+            )
+
+        else:
+            raise Exception("Unusual facet type for post %s: %s" % (post["url"], feat))
+    post["hashtags"] = sorted(hashtags)
+    post["links"] = sorted(links)
+
+    # Process links domains
+    post["domains"] = [
+        custom_get_normalized_hostname(
+            link, normalize_amp=False, infer_redirection=False
+        )
+        for link in post["links"]
+    ]
+
+    # Rewrite full links within post's text
+    text = data["record"]["text"].encode("utf-8")
+    for link in sorted(links_to_replace, key=lambda x: x["start"], reverse=True):
+        text = text[: link["start"]] + link["uri"] + text[link["end"] :]
+    post["text"] = text.decode("utf-8")
+
+    # TODO: add card infos from embed? (type, title, url, image, description
+
     # Handle thread info when applicable
     if "reply" in data["record"]:
         if "parent" in data["record"]["reply"]:
@@ -103,37 +166,16 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
             )
             post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
 
+        # TODO : complete with to_user_handle when did found within mentioned_users, and add to_post_url in those cases?
+
     # TODO: handle quotes
 
     # TODO: handle reposts when we can find some in payloads (from user timeline maybe?)
 
-    # TODO: handle links
-
     # TODO: handle medias
 
-    # Handle hashtags & mentions
-    post["mentioned_user_handles"] = []
-    post["mentioned_user_dids"] = []
-    hashtags = set()
-    for facet in data["record"].get("facets", []):
-        if len(facet["features"]) != 1:
-            raise Exception("Unusual facet content for post %s: %s" % (post["url"], facet))
+    # TODO: handle threadgates?
 
-        feat = facet["features"][0]
-        if feat["$type"].endswith("#tag"):
-            hashtags.add(feat["tag"].strip().lower())
-
-        elif feat["$type"].endswith("#mention"):
-            post["mentioned_user_dids"].append(feat["did"])
-            handle = data["record"]["text"][facet["index"]["byteStart"]+1:facet["index"]["byteEnd"]].strip().lower()
-            post["mentioned_user_handles"].append(handle)
-
-        else:
-            raise Exception("Unusual facet type for post %s: %s" % (post["url"], feat))
-    post["hashtags"] = sorted(hashtags)
-
-
-    # TODO: complete text with links/medias/quotes when necessary
-    post["text"] = data["record"]["text"]
+    # TODO: complete text with medias/quotes when necessary
 
     return post
