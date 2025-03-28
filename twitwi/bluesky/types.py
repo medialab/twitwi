@@ -33,7 +33,6 @@ class BlueskyPost(TypedDict):
     like_count: int
     reply_count: int
     quote_count: int
-    lang: str
     user_name: str
     # user_description: str
     # user_url: str
@@ -45,10 +44,16 @@ class BlueskyPost(TypedDict):
     user_created_at: str
     user_timestamp_utc: int
     user_langs: List[str]
-    to_user_handle: str
-    to_user_did: str
-    to_post_did: str
-    to_root_post_did: str
+    # to_user_handle: Optional[str]
+    to_user_did: Optional[str]
+    to_post_cid: Optional[str]
+    to_post_did: Optional[str]
+    # to_post_url: Optional[str]
+    # to_root_user_handle: Optional[str]
+    to_root_user_did: Optional[str]
+    to_root_post_cid: Optional[str]
+    to_root_post_did: Optional[str]
+    # to_root_post_url: Optional[str]
     reposted_did: str
     reposted_user_handle: str
     reposted_user_did: str

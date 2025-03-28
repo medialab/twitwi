@@ -37,10 +37,11 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
 
 
 def parse_post_uri(uri):
+    """Returns a tuple of (author_did, post_did) from an at:// post URI"""
+
     if not uri.startswith("at://") and "/app.bsky.feed.post/" not in uri:
         raise Exception(f"Not a BlueSky post uri: {uri}")
-    pieces = uri[5:].split("/app.bsky.feed.post/")
-    return {"user_did": pieces[0], "post_did": pieces[1]}
+    return uri[5:].split("/app.bsky.feed.post/")
 
 
 def format_post_url(user_handle, post_did):
@@ -59,14 +60,12 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     post["cid"] = data["cid"]
     post["uri"] = data["uri"]
 
-    post_dids = parse_post_uri(data["uri"])
-    post["did"] = post_dids["post_did"]
+    post["user_did"], post["did"] = parse_post_uri(data["uri"])
 
     post["timestamp_utc"], post["local_time"] = get_dates(
         data["record"]["createdAt"], locale=locale, source="bluesky"
     )
 
-    post["user_did"] = post_dids["user_did"]
     if post["user_did"] != data["author"]["did"]:
         raise Exception(
             f"Inconsistent user did between BlueSky post uri and post's author metadata: {data['uri']}"
@@ -81,5 +80,20 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     post["user_langs"] = data["record"]["langs"]
 
     post["url"] = format_post_url(post["user_handle"], post["did"])
+
+    post["repost_count"] = data["repostCount"]
+    post["reply_count"] = data["replyCount"]
+    post["like_count"] = data["likeCount"]
+    post["quote_count"] = data["quoteCount"]
+
+    if "reply" in data["record"]:
+        if "parent" in data["record"]["reply"]:
+            post["to_user_did"], post["to_post_did"] = parse_post_uri(data["record"]["reply"]["parent"]["uri"])
+            post["to_post_cid"] = data["record"]["reply"]["parent"]["cid"]
+        if "root" in data["record"]["reply"]:
+            post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(data["record"]["reply"]["root"]["uri"])
+            post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
+
+    # TODO: handle reposts when we can find some in payloads (from user timeline maybe?)
 
     return post
