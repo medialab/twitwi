@@ -17,6 +17,7 @@ class BlueskyProfile(TypedDict):
     avatar: str
     banner: str
     pinned_post_uri: Optional[str]
+    collection_time: Optional[str]
 
 
 class BlueskyPost(TypedDict):

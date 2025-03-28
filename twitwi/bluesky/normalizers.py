@@ -33,6 +33,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
         "starter_packs": associated["starterPacks"],
         "banner": data["banner"],
         "pinned_post_uri": pinned_post_uri,
+        "collection_time": get_collection_time()
     }
 
 
@@ -40,7 +41,7 @@ def parse_post_uri(uri):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
     if not uri.startswith("at://") and "/app.bsky.feed.post/" not in uri:
-        raise Exception(f"Not a BlueSky post uri: {uri}")
+        raise Exception(f"Not a Bluesky post uri: {uri}")
     return uri[5:].split("/app.bsky.feed.post/")
 
 
@@ -51,7 +52,7 @@ def format_post_url(user_handle, post_did):
 def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
     if not validate_post_payload(data):
-        raise TypeError("data provided to normalize_post is not a standard BlueSky post payload")
+        raise TypeError("data provided to normalize_post is not a standard Bluesky post payload")
 
     post = {}
 
@@ -68,7 +69,7 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
     if post["user_did"] != data["author"]["did"]:
         raise Exception(
-            f"Inconsistent user did between BlueSky post uri and post's author metadata: {data['uri']}"
+            f"Inconsistent user did between Bluesky post uri and post's author metadata: {data['uri']}"
         )
 
     post["user_handle"] = data["author"]["handle"]

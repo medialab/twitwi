@@ -2,7 +2,8 @@
   {
     "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
     "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreie5aljfyfrjju5g43fz4qzp53mqlrdnvn25rvfnqdxebhsvk77j7q@jpeg",
-    "created_at": "2023-10-10T14:58:21.049000",
+    "collection_time": "2025-03-28T16:10:04.228690",
+    "created_at": "2023-10-10T16:58:21.049000",
     "description": "Research Engineer at SciencesPo's médialab.",
     "did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
     "display_name": "Guillaume Plique",
@@ -19,7 +20,8 @@
   {
     "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
     "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreih5pmycry3pxs7ohmwaguffyj72cdkflursmgxuihyayuuezdmg3y@jpeg",
-    "created_at": "2023-09-01T13:36:06.055000",
+    "collection_time": "2025-03-28T16:10:04.228718",
+    "created_at": "2023-09-01T15:36:06.055000",
     "description": "CTO & Research Engineer at médialab Sciences Po (Paris)\nCofounder of https://RegardsCitoyens.org & https://NosDeputes.fr\nLong-term american comic books enthusiast!\n\nhttps://medialab.sciencespo.fr/equipe/benjamin-ooghe-tabanou/\nhttps://github.com/boogheta",
     "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
     "display_name": "Benjamin Ooghe-Tabanou",
@@ -36,7 +38,8 @@
   {
     "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:v4ircu6fe6vv5aanmbpuciu5/bafkreice5f2jdvzjdbyyougormlqnmiyl4zjijucwdwvrf4ok4rqq5uibq@jpeg",
     "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:v4ircu6fe6vv5aanmbpuciu5/bafkreibxv63ku6s7sqnftatdhkkgkcavuowpy74v56dwo4iw3og7rnf3te@jpeg",
-    "created_at": "2024-11-28T19:23:36.208000",
+    "collection_time": "2025-03-28T16:10:04.228741",
+    "created_at": "2024-11-28T20:23:36.208000",
     "description": "The Sciences Po médialab is a research center dedicated to connecting the social sciences with new digital tools.",
     "did": "did:plc:v4ircu6fe6vv5aanmbpuciu5",
     "display_name": "Sciences Po médialab ",
@@ -53,7 +56,8 @@
   {
     "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eclio37ymobqex2ncko63h4r/bafkreidvvqj5jymmpaeklwkpq6gi532el447mjy2yultuukypzqm5ohfju@jpeg",
     "banner": "https://cdn.bsky.app/img/banner/plain/did:plc:eclio37ymobqex2ncko63h4r/bafkreiaiorkgl6t2j5w3sf6nj37drvwuvriq3e3vqwf4yn3pchpwfbekta@jpeg",
-    "created_at": "2023-06-05T18:50:31.498000",
+    "collection_time": "2025-03-28T16:10:04.228762",
+    "created_at": "2023-06-05T20:50:31.498000",
     "description": "In-depth, independent reporting to better understand the world, now on Bluesky. News tips? Share them here: http://nyti.ms/2FVHq9v",
     "did": "did:plc:eclio37ymobqex2ncko63h4r",
     "display_name": "The New York Times",
