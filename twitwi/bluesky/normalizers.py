@@ -48,6 +48,10 @@ def format_post_url(user_handle, post_did):
 
 
 def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
+
+    if not validate_post_payload(data):
+        raise TypeError("data provided to normalize_post is not a standard BlueSky post payload")
+
     post = {}
 
     post["collection_time"] = get_collection_time()
