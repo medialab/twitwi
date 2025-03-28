@@ -23,7 +23,7 @@ def validate_post_payload(post):
 
     if not all(
         key in post["record"]
-        for key in ["$type", "createdAt", "langs", "text", "embed", "facets"]
+        for key in ["$type", "createdAt", "langs", "text", "embed"]
     ):
         return False
 

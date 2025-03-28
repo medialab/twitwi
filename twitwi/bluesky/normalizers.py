@@ -111,9 +111,27 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
     # TODO: handle medias
 
-    # TODO: handle mentions
+    # Handle hashtags & mentions
+    post["mentioned_user_handles"] = []
+    post["mentioned_user_dids"] = []
+    hashtags = set()
+    for facet in data["record"].get("facets", []):
+        if len(facet["features"]) != 1:
+            raise Exception("Unusual facet content for post %s: %s" % (post["url"], facet))
 
-    # TODO: handle hashtags
+        feat = facet["features"][0]
+        if feat["$type"].endswith("#tag"):
+            hashtags.add(feat["tag"].strip().lower())
+
+        elif feat["$type"].endswith("#mention"):
+            post["mentioned_user_dids"].append(feat["did"])
+            handle = data["record"]["text"][facet["index"]["byteStart"]+1:facet["index"]["byteEnd"]].strip().lower()
+            post["mentioned_user_handles"].append(handle)
+
+        else:
+            raise Exception("Unusual facet type for post %s: %s" % (post["url"], feat))
+    post["hashtags"] = sorted(hashtags)
+
 
     # TODO: complete text with links/medias/quotes when necessary
     post["text"] = data["record"]["text"]
