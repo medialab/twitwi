@@ -5,9 +5,8 @@ class BlueskyProfile(TypedDict):
     did: str
     handle: str
     display_name: str
-    created_at: str
-    timestamp_utc: int
     description: str
+    # TODO: add url if possible
     posts: int
     followers: int
     follows: int
@@ -17,6 +16,8 @@ class BlueskyProfile(TypedDict):
     avatar: str
     banner: str
     pinned_post_uri: Optional[str]
+    created_at: str
+    timestamp_utc: int
     collection_time: Optional[str]
 
 
@@ -34,17 +35,17 @@ class BlueskyPost(TypedDict):
     like_count: int
     reply_count: int
     quote_count: int
-    user_name: str
+    user_diplay_name: str
     # user_description: str
     # user_url: str
-    user_image: str
     # user_posts: int
     # user_followers: int
-    # user_friends: int
-    # user_likes: int
+    # user_follows: int
+    # user_lists: int
+    user_langs: List[str]
+    user_avatar: str
     user_created_at: str
     user_timestamp_utc: int
-    user_langs: List[str]
     # to_user_handle: Optional[str]
     to_user_did: Optional[str]
     to_post_cid: Optional[str]

@@ -34,7 +34,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
         "starter_packs": associated["starterPacks"],
         "banner": data["banner"],
         "pinned_post_uri": pinned_post_uri,
-        "collection_time": get_collection_time()
+        "collection_time": get_collection_time(),
     }
 
 
@@ -51,9 +51,10 @@ def format_post_url(user_handle, post_did):
 
 
 def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
-
     if not validate_post_payload(data):
-        raise TypeError("data provided to normalize_post is not a standard Bluesky post payload")
+        raise TypeError(
+            "data provided to normalize_post is not a standard Bluesky post payload"
+        )
 
     post = {}
 
@@ -76,8 +77,8 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
         )
 
     # Handle user metadata
-    post["user_name"] = data["author"]["displayName"]
-    post["user_image"] = data["author"]["avatar"]
+    post["user_diplay_name"] = data["author"]["displayName"]
+    post["user_avatar"] = data["author"]["avatar"]
     post["user_timestamp_utc"], post["user_created_at"] = get_dates(
         data["author"]["createdAt"], locale=locale, source="bluesky"
     )
@@ -92,10 +93,14 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     # Handle thread info when applicable
     if "reply" in data["record"]:
         if "parent" in data["record"]["reply"]:
-            post["to_user_did"], post["to_post_did"] = parse_post_uri(data["record"]["reply"]["parent"]["uri"])
+            post["to_user_did"], post["to_post_did"] = parse_post_uri(
+                data["record"]["reply"]["parent"]["uri"]
+            )
             post["to_post_cid"] = data["record"]["reply"]["parent"]["cid"]
         if "root" in data["record"]["reply"]:
-            post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(data["record"]["reply"]["root"]["uri"])
+            post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(
+                data["record"]["reply"]["root"]["uri"]
+            )
             post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
 
     # TODO: handle quotes
