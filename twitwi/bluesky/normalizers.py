@@ -55,6 +55,12 @@ def format_post_url(user_handle, post_did):
     return f"https://bsky.app/profile/{user_handle}/post/{post_did}"
 
 
+def format_media_url_and_file(user_handle, media_cid, mime_type):
+    media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_handle}/{media_cid}@{mime_type}"
+    media_file = f"{user_handle}_{media_cid}.{mime_type}"
+    return (media_url, media_file)
+
+
 def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     if not validate_post_payload(data):
         raise TypeError(
@@ -152,6 +158,9 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     post["text"] = text.decode("utf-8")
 
     # TODO: add card infos from embed? (type, title, url, image, description
+    if "embed" in data:
+        pass
+        # Sometimes embed.record.embeds ???
 
     # Handle thread info when applicable
     if "reply" in data["record"]:
@@ -168,11 +177,47 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
         # TODO : complete with to_user_handle when did found within mentioned_users, and add to_post_url in those cases?
 
-    # TODO: handle quotes
-
     # TODO: handle reposts when we can find some in payloads (from user timeline maybe?)
 
-    # TODO: handle medias
+    # TODO: handle quotes & medias
+    media_ids = set()
+    media_urls = []
+    media_files = []
+    media_types = []
+    media_alt_texts = []
+    if "embed" in data["record"]:
+        embed = data["record"]["embed"]
+        if embed["$type"].endswith(".record"):    # => quote
+            # embed.record uri + cid
+            # + from card data.embed.record (replace value by record for full payload)
+            pass
+
+        elif embed["$type"].endswith(".recordWithMedia"): # => media and/orquote?
+            # embed.media.images alt + image.ref.$link + image.ref.mimeType
+            # ou from card data.embed.media.images alt + fullsize
+            pass
+
+        # medias
+        elif embed["$type"].endswith(".images"):
+            for image in embed["images"]:
+                media_id = image["image"]["ref"]["$link"]
+                if media_id not in media_ids:
+                    media_ids.add(media_id)
+                    media_type = image["image"]["mimeType"].split("/")[1]
+                    media_url, media_file = format_media_url_and_file(post["user_did"], media_id, media_type)
+                    media_urls.append(media_url)
+                    media_types.append(image["image"]["mimeType"])
+                    media_alt_texts.append(image["alt"])
+                    media_files.append(media_file)
+
+                # ou from card data.embed.images alt + fullsize
+
+        else:
+            raise Exception("Unusual record.embed type for post %s: %s" % (post["url"], embed))
+    post["media_urls"] = media_urls
+    post["media_types"] = media_types
+    post["media_alt_texts"] = media_alt_texts
+    post["media_files"] = media_files
 
     # TODO: handle threadgates?
 
