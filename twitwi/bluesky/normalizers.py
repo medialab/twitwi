@@ -1,6 +1,7 @@
 from typing import Dict, Optional
 
 from twitwi.utils import get_collection_time, get_dates
+from twitwi.bluesky.utils import validate_post_payload
 from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
 
 
@@ -56,23 +57,25 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
     post = {}
 
+    # Handle datetime fields
     post["collection_time"] = get_collection_time()
-
-    post["cid"] = data["cid"]
-    post["uri"] = data["uri"]
-
-    post["user_did"], post["did"] = parse_post_uri(data["uri"])
-
     post["timestamp_utc"], post["local_time"] = get_dates(
         data["record"]["createdAt"], locale=locale, source="bluesky"
     )
+
+    # Handle post/user identifiers
+    post["cid"] = data["cid"]
+    post["uri"] = data["uri"]
+    post["user_handle"] = data["author"]["handle"]
+    post["user_did"], post["did"] = parse_post_uri(data["uri"])
+    post["url"] = format_post_url(post["user_handle"], post["did"])
 
     if post["user_did"] != data["author"]["did"]:
         raise Exception(
             f"Inconsistent user did between Bluesky post uri and post's author metadata: {data['uri']}"
         )
 
-    post["user_handle"] = data["author"]["handle"]
+    # Handle user metadata
     post["user_name"] = data["author"]["displayName"]
     post["user_image"] = data["author"]["avatar"]
     post["user_timestamp_utc"], post["user_created_at"] = get_dates(
@@ -80,13 +83,13 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     )
     post["user_langs"] = data["record"]["langs"]
 
-    post["url"] = format_post_url(post["user_handle"], post["did"])
-
+    # Handle metrics
     post["repost_count"] = data["repostCount"]
     post["reply_count"] = data["replyCount"]
     post["like_count"] = data["likeCount"]
     post["quote_count"] = data["quoteCount"]
 
+    # Handle thread info when applicable
     if "reply" in data["record"]:
         if "parent" in data["record"]["reply"]:
             post["to_user_did"], post["to_post_did"] = parse_post_uri(data["record"]["reply"]["parent"]["uri"])
@@ -95,6 +98,19 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
             post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(data["record"]["reply"]["root"]["uri"])
             post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
 
+    # TODO: handle quotes
+
     # TODO: handle reposts when we can find some in payloads (from user timeline maybe?)
+
+    # TODO: handle links
+
+    # TODO: handle medias
+
+    # TODO: handle mentions
+
+    # TODO: handle hashtags
+
+    # TODO: complete text with links/medias/quotes when necessary
+    post["text"] = data["record"]["text"]
 
     return post
