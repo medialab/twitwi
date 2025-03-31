@@ -230,9 +230,12 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
                 # ou from card data.embed.video playlist + thumbnail
 
-        # Link card
+        # Gif images & Link cards
         elif embed["$type"].endswith(".external"):
-            # example https://bsky.app/profile/bricabraque.bsky.social/post/3lkdnb2gtzk2c
+            # example of gif : https://bsky.app/profile/shiseptiana.bsky.social/post/3lkbalaxeys2v
+            # embed.external title(=alt) + uri + thumb.ref.$link/thumb.mimeType (=thumb)
+
+            # example of link card https://bsky.app/profile/bricabraque.bsky.social/post/3lkdnb2gtzk2c
             # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
             # store as média ? or new card field
             pass
