@@ -165,6 +165,7 @@ def normalize_post(
             hashtags.add(feat["tag"].strip().lower())
 
         elif feat["$type"].endswith("#mention"):
+            # TODO ? check user mentioned multiple times and keep only once? ex https://bsky.app/profile/bikopie.bsky.social/post/3llkleq3lyk2d
             post["mentioned_user_dids"].append(feat["did"])
             handle = (
                 text[facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]]
@@ -187,15 +188,6 @@ def normalize_post(
         else:
             raise Exception("Unusual facet type for post %s: %s" % (post["url"], feat))
     post["hashtags"] = sorted(hashtags)
-    post["links"] = sorted(links)
-
-    # Process links domains
-    post["domains"] = [
-        custom_get_normalized_hostname(
-            link, normalize_amp=False, infer_redirection=False
-        )
-        for link in post["links"]
-    ]
 
     # Rewrite full links within post's text
     for link in sorted(links_to_replace, key=lambda x: x["start"], reverse=True):
@@ -278,7 +270,7 @@ def normalize_post(
             post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
             text += (" « @%s: %s — %s »" % (quoted["user_handle"], quoted["text"], quoted["url"])).encode("utf-8")
 
-            # TODO ? add quoted_user as mentionned ? add quoted url as link ? add quoted hashtags to hashtags ?
+            # TODO ? add quoted_user as mentionned ? add quoted url as link ? add quoted hashtags to hashtags ? add quoted links as links ?
 
         # Images
         if embed["$type"].endswith(".images"):
@@ -320,21 +312,32 @@ def normalize_post(
         # Gif images & Link cards
         if embed["$type"].endswith(".external"):
 
-        #TODO : grab links from here as sometimes in quotes they don't return facets, yeehah
+            # Link from cards (includes gif links and links sometimes not already present within facets & text)
+            link = embed["external"]["uri"]
+            norm_link = custom_normalize_url(link)
+            if norm_link not in links:
+                links.add(norm_link)
+                text += b" " + link.encode("utf-8")
 
-            # example of gif : https://bsky.app/profile/shiseptiana.bsky.social/post/3lkbalaxeys2v
+            # example of gif : https://bsky.app/profile/shiseptiana.bsky.social/post/3lkbalaxeys2v https://bsky.app/profile/nicholehiltz.bsky.social/post/3llmkipfkc22q
+            # -> seems like gif embedded always come from media.tenor.com, handle these separately as media instead of links?
             # embed.external title(=alt) + uri + thumb.ref.$link/thumb.mimeType (=thumb)
-
-            # example of link card https://bsky.app/profile/bricabraque.bsky.social/post/3lkdnb2gtzk2c
-            # example of link card for YouTube https://bsky.app/profile/necrophyte-gaming.bsky.social/post/3lkbdabzzoc2l
             # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
             # store as média ? or new card field
-            pass
+
 
     # TODO: add card infos from embed? (type, title, url, image, description
     if "embed" in data:
         pass
 
+    # Process links domains
+    post["links"] = sorted(links)
+    post["domains"] = [
+        custom_get_normalized_hostname(
+            link, normalize_amp=False, infer_redirection=False
+        )
+        for link in post["links"]
+    ]
 
     post["media_urls"] = media_urls
     post["media_types"] = media_types
