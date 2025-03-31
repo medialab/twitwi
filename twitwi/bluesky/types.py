@@ -56,13 +56,17 @@ class BlueskyPost(TypedDict):
     to_root_post_cid: Optional[str]
     to_root_post_did: Optional[str]
     # to_root_post_url: Optional[str]
+    reposted_cid: str
     reposted_did: str
     reposted_user_handle: str
     reposted_user_did: str
+    # reposted_url: str
     reposted_timestamp_utc: int
+    quoted_cid: str
     quoted_did: str
     quoted_user_handle: str
     quoted_user_did: str
+    # quoted_url: str
     quoted_timestamp_utc: int
     links: List[str]
     domains: List[str]

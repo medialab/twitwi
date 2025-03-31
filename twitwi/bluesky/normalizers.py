@@ -1,3 +1,4 @@
+from copy import deepcopy
 from typing import List, Dict, Union, Optional
 
 from twitwi.utils import (
@@ -69,6 +70,8 @@ def format_media_url_and_file(user_did, media_cid, mime_type):
     return (media_url, media_file)
 
 
+# TODO: give more debugging info on source in all Exception raised
+
 def normalize_post(
     data: Dict,
     locale: Optional[str] = None,
@@ -101,6 +104,9 @@ def normalize_post(
         )
 
     post = {}
+
+    if extract_referenced_posts:
+        referenced_posts = []
 
     if collection_source is None:
         collection_source = data.get("collection_source")
@@ -224,9 +230,31 @@ def normalize_post(
         embed = data["record"]["embed"]
         # Quote
         if embed["$type"].endswith(".record"):
-            # embed.record uri + cid
-            # + from card data.embed.record (replace value by record for full payload)
-            pass
+            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(embed["record"]["uri"])
+            post["quoted_cid"] = embed["record"]["cid"]
+
+            quoted_data = deepcopy(data["embed"]["record"])
+            if quoted_data["cid"] != post["quoted_cid"]:
+                raise Exception("Inconsistent quote cid found between record.embed.record.cid & embed.record.cid")
+
+            quoted_data["record"] = quoted_data["value"]
+            del(quoted_data["value"])
+            if "embeds" in quoted_data:
+                if len(quoted_data["embeds"]) != 1:
+                    raise Exception("Unusual multiple embeds found within a post!")
+                quoted_data["embed"] = quoted_data["embeds"][0]
+                del(quoted_data["embeds"])
+
+            nested = normalize_post(quoted_data, locale=locale, extract_referenced_posts=True, collection_source="quote")
+            quoted = nested[-1]
+            if extract_referenced_posts:
+                referenced_posts.extend(nested)
+
+            post["quoted_user_handle"] = quoted["user_handle"]
+            post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
+            text += (" « @%s: %s — %s »" % (quoted["user_handle"], quoted["text"], quoted["url"])).encode("utf-8")
+
+            # TODO ? add quoted_user as mentionned ? add quoted url as link ? add quoted hashtags to hashtags ?
 
         # Media and/or quote
         elif embed["$type"].endswith(".recordWithMedia"):
@@ -288,6 +316,7 @@ def normalize_post(
     post["media_types"] = media_types
     post["media_alt_texts"] = media_alt_texts
     post["media_files"] = media_files
+    # TODO ? add media_urls as link ?
 
     # TODO: handle threadgates?
 
@@ -298,5 +327,8 @@ def normalize_post(
     post["match_query"] = collection_source not in ["thread", "quote"]
 
     post["text"] = text.decode("utf-8")
+
+    if extract_referenced_posts:
+        return referenced_posts + [post]
 
     return post
