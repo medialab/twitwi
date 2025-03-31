@@ -55,9 +55,17 @@ def format_post_url(user_handle, post_did):
     return f"https://bsky.app/profile/{user_handle}/post/{post_did}"
 
 
-def format_media_url_and_file(user_handle, media_cid, mime_type):
-    media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_handle}/{media_cid}@{mime_type}"
-    media_file = f"{user_handle}_{media_cid}.{mime_type}"
+def format_media_url_and_file(user_did, media_cid, mime_type):
+    media_type = mime_type.split("/")[1]
+    if mime_type.startswith("image"):
+        media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@{media_type}"
+    elif mime_type.startswith("video"):
+        media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
+    else:
+        raise Exception("Unusual media mimeType for post : %s" % (mime_type))
+
+    user = user_did.replace("did:plc:", "")
+    media_file = f"{user}_{media_cid}.{media_type}"
     return (media_url, media_file)
 
 
@@ -187,7 +195,8 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     media_alt_texts = []
     if "embed" in data["record"]:
         embed = data["record"]["embed"]
-        if embed["$type"].endswith(".record"):    # => quote
+        # Quote
+        if embed["$type"].endswith(".record"):
             # embed.record uri + cid
             # + from card data.embed.record (replace value by record for full payload)
             pass
@@ -197,23 +206,46 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
             # ou from card data.embed.media.images alt + fullsize
             pass
 
-        # medias
+        # Images
         elif embed["$type"].endswith(".images"):
             for image in embed["images"]:
                 media_id = image["image"]["ref"]["$link"]
                 if media_id not in media_ids:
                     media_ids.add(media_id)
-                    media_type = image["image"]["mimeType"].split("/")[1]
+                    media_type = image["image"]["mimeType"]
                     media_url, media_file = format_media_url_and_file(post["user_did"], media_id, media_type)
                     media_urls.append(media_url)
-                    media_types.append(image["image"]["mimeType"])
+                    media_types.append(media_type)
                     media_alt_texts.append(image["alt"])
                     media_files.append(media_file)
 
                 # ou from card data.embed.images alt + fullsize
 
+        # Video
+        elif embed["$type"].endswith(".video"):
+            media_id = embed["video"]["ref"]["$link"]
+            if media_id not in media_ids:
+                media_ids.add(media_id)
+                media_type = embed["video"]["mimeType"]
+                media_url, media_file = format_media_url_and_file(post["user_did"], media_id, media_type)
+                media_urls.append(media_url)
+                media_types.append(media_type)
+                # TODO ? store thumbnail in url and playlist in file?
+                media_alt_texts.append("")
+                media_files.append(media_file)
+
+                # ou from card data.embed.video playlist + thumbnail
+
+        # Link card
+        elif embed["$type"].endswith(".external"):
+            # example https://bsky.app/profile/bricabraque.bsky.social/post/3lkdnb2gtzk2c
+            # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
+            # store as média ? or new card field
+            pass
+
         else:
             raise Exception("Unusual record.embed type for post %s: %s" % (post["url"], embed))
+
     post["media_urls"] = media_urls
     post["media_types"] = media_types
     post["media_alt_texts"] = media_alt_texts
