@@ -43,7 +43,8 @@ def get_dates(date_str, locale=None, source="v1"):
 
     try:
         parsed_datetime = datetime.strptime(
-            date_str, SOURCE_DATETIME_FORMAT if source == "v1" else SOURCE_DATETIME_FORMAT_V2
+            date_str,
+            SOURCE_DATETIME_FORMAT if source == "v1" else SOURCE_DATETIME_FORMAT_V2,
         )
     except ValueError as e:
         if source == "bluesky":

@@ -75,6 +75,7 @@ def format_media_url_and_file(user_did, media_cid, mime_type):
 
 re_embed_types = re.compile(r"\.(record|recordWithMedia|images|video|external)$")
 
+
 def normalize_post(
     data: Dict,
     locale: Optional[str] = None,
@@ -219,105 +220,17 @@ def normalize_post(
     if "embed" in data["record"]:
         embed = data["record"]["embed"]
         quoted_data = None
-        images_data = []
+        media_data = []
+        extra_links = []
 
-        if not(re_embed_types.search(embed["$type"])):
+        if not re_embed_types.search(embed["$type"]):
             raise Exception(
                 "Unusual record.embed type for post %s: %s" % (post["url"], embed)
             )
 
-        # Quote
-        if embed["$type"].endswith(".record"):
-            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(embed["record"]["uri"])
-            post["quoted_cid"] = embed["record"]["cid"]
-
-            quoted_data = deepcopy(data["embed"]["record"])
-
-        # Quote with medias
-        if embed["$type"].endswith(".recordWithMedia"):
-            # example https://bsky.app/profile/pecqueuxanthony.bsky.social/post/3lkizm6uvhc2b
-            # embed.media.images alt + image.ref.$link + image.ref.mimeType
-            # ou from card data.embed.media.images alt + fullsize
-            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(embed["record"]["record"]["uri"])
-            post["quoted_cid"] = embed["record"]["record"]["cid"]
-
-            quoted_data = deepcopy(data["embed"]["record"]["record"])
-
-            if embed["media"]["$type"].endswith(".images"):
-                images_data = embed["media"]["images"]
-            else:
-                raise Exception("Encountered unhandled recordWithMedia type: %s" % embed["media"]["$type"])
-
-        # Process quotes
-        if quoted_data:
-            if quoted_data["cid"] != post["quoted_cid"]:
-                raise Exception("Inconsistent quote cid found between record.embed.record.cid & embed.record.cid")
-
-            quoted_data["record"] = quoted_data["value"]
-            del(quoted_data["value"])
-            if "embeds" in quoted_data and len(quoted_data["embeds"]):
-                if len(quoted_data["embeds"]) != 1:
-                    raise Exception("Unusual multiple embeds found within a post!")
-                quoted_data["embed"] = quoted_data["embeds"][0]
-                del(quoted_data["embeds"])
-
-            nested = normalize_post(quoted_data, locale=locale, extract_referenced_posts=True, collection_source="quote")
-            quoted = nested[-1]
-            if extract_referenced_posts:
-                referenced_posts.extend(nested)
-
-            post["quoted_user_handle"] = quoted["user_handle"]
-            post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
-            text += (" « @%s: %s — %s »" % (quoted["user_handle"], quoted["text"], quoted["url"])).encode("utf-8")
-
-            # TODO ? add quoted_user as mentionned ? add quoted url as link ? add quoted hashtags to hashtags ? add quoted links as links ?
-
-        # Images
-        if embed["$type"].endswith(".images"):
-            images_data = embed["images"]
-
-        # Process images
-        for image in images_data:
-            media_id = image["image"]["ref"]["$link"]
-            if media_id not in media_ids:
-                media_ids.add(media_id)
-                media_type = image["image"]["mimeType"]
-                media_url, media_file = format_media_url_and_file(
-                    post["user_did"], media_id, media_type
-                )
-                media_urls.append(media_url)
-                media_types.append(media_type)
-                media_alt_texts.append(image["alt"])
-                media_files.append(media_file)
-
-            # ou from card data.embed.images alt + fullsize
-
-        # Video
-        if embed["$type"].endswith(".video"):
-            media_id = embed["video"]["ref"]["$link"]
-            if media_id not in media_ids:
-                media_ids.add(media_id)
-                media_type = embed["video"]["mimeType"]
-                media_url, media_file = format_media_url_and_file(
-                    post["user_did"], media_id, media_type
-                )
-                media_urls.append(media_url)
-                media_types.append(media_type)
-                # TODO ? store thumbnail in url and playlist in file?
-                media_alt_texts.append("")
-                media_files.append(media_file)
-
-                # ou from card data.embed.video playlist + thumbnail
-
-        # Gif images & Link cards
+        # Link from cards (includes native gif links and links sometimes not already present within facets & text due to manual action in post form)
         if embed["$type"].endswith(".external"):
-
-            # Link from cards (includes gif links and links sometimes not already present within facets & text)
-            link = embed["external"]["uri"]
-            norm_link = custom_normalize_url(link)
-            if norm_link not in links:
-                links.add(norm_link)
-                text += b" " + link.encode("utf-8")
+            extra_links.append(embed["external"]["uri"])
 
             # example of gif : https://bsky.app/profile/shiseptiana.bsky.social/post/3lkbalaxeys2v https://bsky.app/profile/nicholehiltz.bsky.social/post/3llmkipfkc22q
             # -> seems like gif embedded always come from media.tenor.com, handle these separately as media instead of links?
@@ -325,12 +238,147 @@ def normalize_post(
             # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
             # store as média ? or new card field
 
+        # Images
+        if embed["$type"].endswith(".images"):
+            media_data.extend(
+                [
+                    {
+                        "id": i["image"]["ref"]["$link"],
+                        "type": i["image"]["mimeType"],
+                        "alt": i["alt"],
+                    }
+                    for i in embed["images"]
+                ]
+            )
+
+        # Video
+        if embed["$type"].endswith(".video"):
+            media_data.append(
+                {
+                    "id": embed["video"]["ref"]["$link"],
+                    "type": embed["video"]["mimeType"],
+                }
+            )
+
+        # Quote
+        if embed["$type"].endswith(".record"):
+            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
+                embed["record"]["uri"]
+            )
+            post["quoted_cid"] = embed["record"]["cid"]
+
+            if "embed" in data:
+                quoted_data = deepcopy(data["embed"]["record"])
+
+        # Quote with medias
+        if embed["$type"].endswith(".recordWithMedia"):
+            # example https://bsky.app/profile/pecqueuxanthony.bsky.social/post/3lkizm6uvhc2b
+            # embed.media.images alt + image.ref.$link + image.ref.mimeType
+            # ou from card data.embed.media.images alt + fullsize
+            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
+                embed["record"]["record"]["uri"]
+            )
+            post["quoted_cid"] = embed["record"]["record"]["cid"]
+
+            if "embed" in data:
+                quoted_data = deepcopy(data["embed"]["record"]["record"])
+
+            if embed["media"]["$type"].endswith(".images"):
+                media_data.extend(
+                    [
+                        {
+                            "id": i["image"]["ref"]["$link"],
+                            "type": i["image"]["mimeType"],
+                            "alt": i["alt"],
+                        }
+                        for i in embed["media"]["images"]
+                    ]
+                )
+
+            elif embed["media"]["$type"].endswith(".video"):
+                media_data.append(
+                    {
+                        "id": embed["media"]["video"]["ref"]["$link"],
+                        "type": embed["media"]["video"]["mimeType"],
+                    }
+                )
+
+            elif embed["media"]["$type"].endswith(".external"):
+                extra_links = [embed["media"]["external"]["uri"]] + extra_links
+
+            # TODO : recordWithMedia
+
+            else:
+                raise Exception(
+                    "Encountered unhandled recordWithMedia type: %s"
+                    % embed["media"]["$type"]
+                )
+
+        # Process extra links
+        for link in extra_links:
+            norm_link = custom_normalize_url(link)
+            if norm_link not in links:
+                links.add(norm_link)
+                text += b" " + link.encode("utf-8")
+
+        # Process medias
+        for media in media_data:
+            if media["id"] not in media_ids:
+                media_ids.add(media["id"])
+                media_type = media["type"]
+                media_url, media_file = format_media_url_and_file(
+                    post["user_did"], media["id"], media_type
+                )
+                media_urls.append(media_url)
+                media_types.append(media_type)
+                media_alt_texts.append(media.get("alt", ""))
+                media_files.append(media_file)
+                # TODO ? store videos thumbnail in url and playlist in file?
+
+            # ou from card data.embed.images alt + fullsize
+            # ou from card data.embed.video playlist + thumbnail
+
+        # Process quotes
+        if quoted_data:
+            if quoted_data["cid"] != post["quoted_cid"]:
+                raise Exception(
+                    "Inconsistent quote cid found between record.embed.record.cid & embed.record.cid"
+                )
+
+            quoted_data["record"] = quoted_data["value"]
+            del quoted_data["value"]
+            if "embeds" in quoted_data and len(quoted_data["embeds"]):
+                if len(quoted_data["embeds"]) != 1:
+                    raise Exception("Unusual multiple embeds found within a post!")
+                quoted_data["embed"] = quoted_data["embeds"][0]
+                del quoted_data["embeds"]
+
+            nested = normalize_post(
+                quoted_data,
+                locale=locale,
+                extract_referenced_posts=True,
+                collection_source="quote",
+            )
+            quoted = nested[-1]
+            if extract_referenced_posts:
+                referenced_posts.extend(nested)
+
+            post["quoted_user_handle"] = quoted["user_handle"]
+            post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
+            # TODO : need to rewrite quoted url when present (from manual quotes) like we use to do in twitter, ex: https://bsky.app/profile/boogheta.bsky.social/post/3llon4g5lks2h
+            text += (
+                " « @%s: %s — %s »"
+                % (quoted["user_handle"], quoted["text"], quoted["url"])
+            ).encode("utf-8")
+
+            # TODO ? add quoted_user as mentionned ? add quoted url as link ? add quoted hashtags to hashtags ? add quoted links as links ?
 
     # TODO: add card infos from embed? (type, title, url, image, description
     if "embed" in data:
         pass
 
     # Process links domains
+    # TODO? same code as Tw, actually subdomains returned, more practical, but inaccurate with naming, change it?
     post["links"] = sorted(links)
     post["domains"] = [
         custom_get_normalized_hostname(

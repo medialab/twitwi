@@ -20,9 +20,7 @@ def validate_post_payload(post):
     if not isinstance(post["record"], dict):
         return False
 
-    if not all(
-        key in post["record"] for key in ["$type", "createdAt", "text"]
-    ):
+    if not all(key in post["record"] for key in ["$type", "createdAt", "text"]):
         return False
 
     if post["record"].get("$type") != "app.bsky.feed.post":
