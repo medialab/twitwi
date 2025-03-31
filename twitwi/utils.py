@@ -10,10 +10,11 @@ from functools import partial
 from datetime import datetime
 
 from twitwi.constants import (
-    TWEET_DATETIME_FORMAT,
+    SOURCE_DATETIME_FORMAT,
+    SOURCE_DATETIME_FORMAT_V2,
+    SOURCE_DATETIME_FORMAT_V3,
     FORMATTED_TWEET_DATETIME_FORMAT,
     FORMATTED_FULL_DATETIME_FORMAT,
-    TWEET_DATETIME_FORMAT_V2,
     CANONICAL_URL_KWARGS,
     CANONICAL_HOSTNAME_KWARGS,
     PRE_SNOWFLAKE_LAST_TWEET_ID,
@@ -40,9 +41,16 @@ def get_dates(date_str, locale=None, source="v1"):
     if locale is None:
         locale = UTC_TIMEZONE
 
-    parsed_datetime = datetime.strptime(
-        date_str, TWEET_DATETIME_FORMAT if source == "v1" else TWEET_DATETIME_FORMAT_V2
-    )
+    try:
+        parsed_datetime = datetime.strptime(
+            date_str, SOURCE_DATETIME_FORMAT if source == "v1" else SOURCE_DATETIME_FORMAT_V2
+        )
+    except ValueError as e:
+        if source == "bluesky":
+            parsed_datetime = datetime.strptime(date_str, SOURCE_DATETIME_FORMAT_V3)
+        else:
+            raise e
+
     utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
     locale_datetime = utc_datetime.astimezone(locale)
 
