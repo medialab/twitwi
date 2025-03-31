@@ -71,6 +71,7 @@ class BlueskyPost(TypedDict):
     links: List[str]
     domains: List[str]
     media_urls: List[str]
+    # TODO: remove? for videos at least?
     media_files: List[str]
     media_types: List[str]
     media_alt_texts: List[str]

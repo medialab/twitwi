@@ -11,5 +11,9 @@ def format_profile_as_csv_row(data: BlueskyProfile) -> List:
 def format_post_as_csv_row(data: BlueskyPost) -> List:
     # TODO: handle other field types than str, maybe reuse formater functions from twitwi/formatters
     return [
-        data.get(field, "") for field in POST_FIELDS if field not in POST_LIST_FIELDS
+        data.get(field, "")
+        if field not in POST_LIST_FIELDS
+        else "|".join(data.get(field, []))
+        for field in POST_FIELDS
+        if field not in POST_LIST_FIELDS
     ]

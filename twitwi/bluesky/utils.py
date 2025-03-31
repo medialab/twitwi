@@ -35,6 +35,4 @@ def validate_post_payload(post):
     ):
         return False
 
-    # TODO: test all valid $type in embed and associated elements
-
     return True

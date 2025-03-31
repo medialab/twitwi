@@ -71,7 +71,11 @@ def format_media_url_and_file(user_did, media_cid, mime_type):
     return (media_url, media_file)
 
 
-# TODO: give more debugging info on source in all Exception raised
+# TODO :
+# - give more debugging info on source in all Exception raised
+# - complete formatters
+# - add tests for normalizer & formatter
+
 
 re_embed_types = re.compile(r"\.(record|recordWithMedia|images|video|external)$")
 
@@ -207,9 +211,9 @@ def normalize_post(
             )
             post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
 
-        # TODO : complete with to_user_handle when did found within mentioned_users, and add to_post_url in those cases? Add replied to mentionned?
+        # TODO ? complete with to_user_handle when did found within mentioned_users or quoted_user, and add to_post_url in those cases? Add also replied_to_user to mentionned?
 
-    # TODO: handle reposts when we can find some in payloads (from user timeline maybe?)
+    # TODO : handle reposts when we can find some in payloads (from user timeline maybe?)
 
     # Handle quotes & medias
     media_ids = set()
@@ -232,11 +236,11 @@ def normalize_post(
         if embed["$type"].endswith(".external"):
             extra_links.append(embed["external"]["uri"])
 
-            # example of gif : https://bsky.app/profile/shiseptiana.bsky.social/post/3lkbalaxeys2v https://bsky.app/profile/nicholehiltz.bsky.social/post/3llmkipfkc22q
-            # -> seems like gif embedded always come from media.tenor.com, handle these separately as media instead of links?
-            # embed.external title(=alt) + uri + thumb.ref.$link/thumb.mimeType (=thumb)
+            # TODO ? handle native embedded gifs from media.tenor.com as media instead of links?
+            # examples : https://bsky.app/profile/shiseptiana.bsky.social/post/3lkbalaxeys2v https://bsky.app/profile/nicholehiltz.bsky.social/post/3llmkipfkc22q
+            # extra fields available in that case: embed.external title(=alt) + uri + thumb.ref.$link/thumb.mimeType (=thumb)
+            # TODO ? Keep card extra metadata on main link embedded? as media? or new card fields?
             # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
-            # store as média ? or new card field
 
         # Images
         if embed["$type"].endswith(".images"):
@@ -272,9 +276,6 @@ def normalize_post(
 
         # Quote with medias
         if embed["$type"].endswith(".recordWithMedia"):
-            # example https://bsky.app/profile/pecqueuxanthony.bsky.social/post/3lkizm6uvhc2b
-            # embed.media.images alt + image.ref.$link + image.ref.mimeType
-            # ou from card data.embed.media.images alt + fullsize
             post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
                 embed["record"]["record"]["uri"]
             )
@@ -306,11 +307,9 @@ def normalize_post(
             elif embed["media"]["$type"].endswith(".external"):
                 extra_links = [embed["media"]["external"]["uri"]] + extra_links
 
-            # TODO : recordWithMedia
-
             else:
                 raise Exception(
-                    "Encountered unhandled recordWithMedia type: %s"
+                    "Encountered unhandled media type from a recordWithMedia: %s"
                     % embed["media"]["$type"]
                 )
 
@@ -334,9 +333,7 @@ def normalize_post(
                 media_alt_texts.append(media.get("alt", ""))
                 media_files.append(media_file)
                 # TODO ? store videos thumbnail in url and playlist in file?
-
-            # ou from card data.embed.images alt + fullsize
-            # ou from card data.embed.video playlist + thumbnail
+                # from card data.embed.video playlist + thumbnail
 
         # Process quotes
         if quoted_data:
@@ -373,13 +370,9 @@ def normalize_post(
 
             # TODO ? add quoted_user as mentionned ? add quoted url as link ? add quoted hashtags to hashtags ? add quoted links as links ?
 
-    # TODO: add card infos from embed? (type, title, url, image, description
-    if "embed" in data:
-        pass
-
     # Process links domains
-    # TODO? same code as Tw, actually subdomains returned, more practical, but inaccurate with naming, change it?
     post["links"] = sorted(links)
+    # TODO ? same code as Tw, actually subdomains returned, more practical, but inaccurate with naming, change it?
     post["domains"] = [
         custom_get_normalized_hostname(
             link, normalize_amp=False, infer_redirection=False
@@ -393,9 +386,9 @@ def normalize_post(
     post["media_files"] = media_files
     # TODO ? add media_urls as link ?
 
-    # TODO: handle threadgates?
+    # TODO ? handle threadgates?
 
-    # TODO: complete text with medias when necessary
+    # TODO ? complete text with medias urls ?
 
     post["text"] = text.decode("utf-8")
 
