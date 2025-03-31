@@ -77,6 +77,8 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
     post = {}
 
+    text = data["record"]["text"].encode("utf-8")
+
     # Handle datetime fields
     post["collection_time"] = get_collection_time()
     post["timestamp_utc"], post["local_time"] = get_dates(
@@ -127,13 +129,7 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
         elif feat["$type"].endswith("#mention"):
             post["mentioned_user_dids"].append(feat["did"])
-            handle = (
-                data["record"]["text"][
-                    facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]
-                ]
-                .strip()
-                .lower()
-            )
+            handle = text[facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]].strip().lower().decode("utf-8")
             post["mentioned_user_handles"].append(handle)
 
         elif feat["$type"].endswith("#link"):
@@ -160,10 +156,8 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     ]
 
     # Rewrite full links within post's text
-    text = data["record"]["text"].encode("utf-8")
     for link in sorted(links_to_replace, key=lambda x: x["start"], reverse=True):
         text = text[: link["start"]] + link["uri"] + text[link["end"] :]
-    post["text"] = text.decode("utf-8")
 
     # TODO: add card infos from embed? (type, title, url, image, description
     if "embed" in data:
@@ -254,5 +248,7 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     # TODO: handle threadgates?
 
     # TODO: complete text with medias/quotes when necessary
+
+    post["text"] = text.decode("utf-8")
 
     return post
