@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import List, Dict, Union, Optional
 
 from twitwi.utils import (
     get_collection_time,
@@ -69,13 +69,41 @@ def format_media_url_and_file(user_did, media_cid, mime_type):
     return (media_url, media_file)
 
 
-def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
+def normalize_post(
+    data: Dict,
+    locale: Optional[str] = None,
+    extract_referenced_posts: bool = False,
+    collection_source=None,
+) -> Union[BlueskyPost, List[BlueskyPost]]:
+    """
+    Function "normalizing" a post as returned by Bluesky's API in order to
+    cleanup and optimize some fields.
+
+    Args:
+        data (dict): Post json dict from Bluesky API.
+        locale (pytz.timezone, optional): Timezone for date conversions.
+        extract_referenced_posts (bool, optional): Whether to return only
+            the original post or the full list of posts found in the given
+            payload (including quoted and reposted posts). Defaults
+            to `False`.
+        collection_source (str, optional): string explaining how the post
+            was collected. Defaults to `None`.
+
+    Returns:
+        (dict or list): Either a single post dict or a list of post dicts if
+            `extract_referenced_posts` was set to `True`.
+
+    """
+
     if not validate_post_payload(data):
         raise TypeError(
             "data provided to normalize_post is not a standard Bluesky post payload"
         )
 
     post = {}
+
+    if collection_source is None:
+        collection_source = data.get("collection_source")
 
     text = data["record"]["text"].encode("utf-8")
 
@@ -129,7 +157,12 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
 
         elif feat["$type"].endswith("#mention"):
             post["mentioned_user_dids"].append(feat["did"])
-            handle = text[facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]].strip().lower().decode("utf-8")
+            handle = (
+                text[facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]]
+                .strip()
+                .lower()
+                .decode("utf-8")
+            )
             post["mentioned_user_handles"].append(handle)
 
         elif feat["$type"].endswith("#link"):
@@ -195,7 +228,9 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
             # + from card data.embed.record (replace value by record for full payload)
             pass
 
-        elif embed["$type"].endswith(".recordWithMedia"): # => media and/orquote?
+        # Media and/or quote
+        elif embed["$type"].endswith(".recordWithMedia"):
+            # example https://bsky.app/profile/pecqueuxanthony.bsky.social/post/3lkizm6uvhc2b
             # embed.media.images alt + image.ref.$link + image.ref.mimeType
             # ou from card data.embed.media.images alt + fullsize
             pass
@@ -207,7 +242,9 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
                 if media_id not in media_ids:
                     media_ids.add(media_id)
                     media_type = image["image"]["mimeType"]
-                    media_url, media_file = format_media_url_and_file(post["user_did"], media_id, media_type)
+                    media_url, media_file = format_media_url_and_file(
+                        post["user_did"], media_id, media_type
+                    )
                     media_urls.append(media_url)
                     media_types.append(media_type)
                     media_alt_texts.append(image["alt"])
@@ -221,7 +258,9 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
             if media_id not in media_ids:
                 media_ids.add(media_id)
                 media_type = embed["video"]["mimeType"]
-                media_url, media_file = format_media_url_and_file(post["user_did"], media_id, media_type)
+                media_url, media_file = format_media_url_and_file(
+                    post["user_did"], media_id, media_type
+                )
                 media_urls.append(media_url)
                 media_types.append(media_type)
                 # TODO ? store thumbnail in url and playlist in file?
@@ -241,7 +280,9 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
             pass
 
         else:
-            raise Exception("Unusual record.embed type for post %s: %s" % (post["url"], embed))
+            raise Exception(
+                "Unusual record.embed type for post %s: %s" % (post["url"], embed)
+            )
 
     post["media_urls"] = media_urls
     post["media_types"] = media_types
@@ -251,6 +292,10 @@ def normalize_post(data: Dict, locale: Optional[str] = None) -> BlueskyPost:
     # TODO: handle threadgates?
 
     # TODO: complete text with medias/quotes when necessary
+
+    if collection_source is not None:
+        post["collected_via"] = [collection_source]
+    post["match_query"] = collection_source not in ["thread", "quote"]
 
     post["text"] = text.decode("utf-8")
 
