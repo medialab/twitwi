@@ -67,8 +67,8 @@ class BlueskyPost(TypedDict):
     reposted_timestamp_utc: int
     quoted_cid: str
     quoted_did: str
-    quoted_uri: str  # TODO ADD
-    quoted_url: str  # TODO ADD
+    quoted_uri: str
+    quoted_url: str
     quoted_user_handle: str
     quoted_user_did: str
     quoted_timestamp_utc: int

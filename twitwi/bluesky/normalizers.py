@@ -53,8 +53,8 @@ def parse_post_uri(uri):
     return uri[5:].split("/app.bsky.feed.post/")
 
 
-def format_post_url(user_handle, post_did):
-    return f"https://bsky.app/profile/{user_handle}/post/{post_did}"
+def format_post_url(user_handle_or_did, post_did):
+    return f"https://bsky.app/profile/{user_handle_or_did}/post/{post_did}"
 
 
 def format_media_url(user_did, media_cid, mime_type):
@@ -268,23 +268,33 @@ def normalize_post(
 
         # Quote
         if embed["$type"].endswith(".record"):
-            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
-                embed["record"]["uri"]
-            )
             post["quoted_cid"] = embed["record"]["cid"]
+            post["quoted_uri"] = embed["record"]["uri"]
+            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
+                post["quoted_uri"]
+            )
 
             if "embed" in data:
                 quoted_data = deepcopy(data["embed"]["record"])
+            else:
+                post["quoted_url"] = format_post_url(
+                    post["quoted_user_did"], post["quoted_did"]
+                )
 
         # Quote with medias
         if embed["$type"].endswith(".recordWithMedia"):
-            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
-                embed["record"]["record"]["uri"]
-            )
             post["quoted_cid"] = embed["record"]["record"]["cid"]
+            post["quoted_uri"] = embed["record"]["record"]["uri"]
+            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
+                post["quoted_uri"]
+            )
 
             if "embed" in data:
                 quoted_data = deepcopy(data["embed"]["record"]["record"])
+            else:
+                post["quoted_url"] = format_post_url(
+                    post["quoted_user_did"], post["quoted_did"]
+                )
 
             if embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
@@ -360,6 +370,9 @@ def normalize_post(
             if extract_referenced_posts:
                 referenced_posts.extend(nested)
 
+            post["quoted_url"] = format_post_url(
+                quoted["user_handle"], post["quoted_did"]
+            )
             post["quoted_user_handle"] = quoted["user_handle"]
             post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
             # TODO : need to rewrite quoted url when present (from manual quotes) like we use to do in twitter, ex: https://bsky.app/profile/boogheta.bsky.social/post/3llon4g5lks2h
@@ -368,24 +381,18 @@ def normalize_post(
                 % (quoted["user_handle"], quoted["text"], quoted["url"])
             ).encode("utf-8")
 
-            # TODO ? add quoted_user as mentionned ? add quoted url as link ? add quoted hashtags to hashtags ? add quoted links as links ?
-
     # Process links domains
     post["links"] = sorted(links)
-    # TODO ? same code as Tw, actually subdomains returned, more practical, but inaccurate with naming, change it?
-    post["domains"] = [
-        custom_get_normalized_hostname(
-            link, normalize_amp=False, infer_redirection=False
-        )
-        for link in post["links"]
-    ]
+    post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
 
     post["media_urls"] = media_urls
     post["media_types"] = media_types
     post["media_alt_texts"] = media_alt_texts
-    # TODO ? add media_urls as link ?
 
     # TODO ? handle threadgates?
+    # reply_rules
+    # hidden_replies
+    # createdat
 
     # TODO ? complete text with medias urls ?
 
