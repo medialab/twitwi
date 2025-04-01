@@ -3,10 +3,10 @@ from typing import TypedDict, List, Optional
 
 class BlueskyProfile(TypedDict):
     did: str
+    url: str
     handle: str
     display_name: str
     description: str
-    # TODO: add url if possible
     posts: int
     followers: int
     follows: int
@@ -35,8 +35,8 @@ class BlueskyPost(TypedDict):
     like_count: int
     reply_count: int
     quote_count: int
+    user_url: str
     user_diplay_name: str
-    # user_url: str                         # TODO ADD
     # user_description: str
     # user_posts: int
     # user_followers: int
@@ -60,8 +60,8 @@ class BlueskyPost(TypedDict):
     # to_root_user_handle: Optional[str]
     reposted_cid: str
     reposted_did: str
-    reposted_uri: str  # TODO ADD
-    reposted_url: str  # TODO ADD
+    reposted_uri: str
+    reposted_url: str
     reposted_user_handle: str
     reposted_user_did: str
     reposted_timestamp_utc: int

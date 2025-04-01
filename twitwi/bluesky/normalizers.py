@@ -12,6 +12,10 @@ from twitwi.bluesky.utils import validate_post_payload
 from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
 
 
+def format_profile_url(user_handle_or_did):
+    return f"https://bsky.app/profile/{user_handle_or_did}"
+
+
 def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfile:
     associated = data["associated"]
 
@@ -27,6 +31,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
 
     return {
         "did": data["did"],
+        "url": format_profile_url(data["handle"]),
         "handle": data["handle"],
         "display_name": data["displayName"],
         "created_at": created_at,
@@ -127,8 +132,9 @@ def normalize_post(
     # Handle post/user identifiers
     post["cid"] = data["cid"]
     post["uri"] = data["uri"]
-    post["user_handle"] = data["author"]["handle"]
     post["user_did"], post["did"] = parse_post_uri(data["uri"])
+    post["user_handle"] = data["author"]["handle"]
+    post["user_url"] = format_profile_url(post["user_handle"])
     post["url"] = format_post_url(post["user_handle"], post["did"])
 
     if post["user_did"] != data["author"]["did"]:
@@ -296,7 +302,10 @@ def normalize_post(
                     post["quoted_user_did"], post["quoted_did"]
                 )
 
-            if embed["media"]["$type"].endswith(".images"):
+            if embed["media"]["$type"].endswith(".external"):
+                extra_links = [embed["media"]["external"]["uri"]] + extra_links
+
+            elif embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
                     [
                         {
@@ -315,9 +324,6 @@ def normalize_post(
                         "type": embed["media"]["video"]["mimeType"],
                     }
                 )
-
-            elif embed["media"]["$type"].endswith(".external"):
-                extra_links = [embed["media"]["external"]["uri"]] + extra_links
 
             else:
                 raise Exception(
@@ -344,6 +350,9 @@ def normalize_post(
                 # TODO ? store videos thumbnail in url and playlist in file?
                 # from card data.embed.video playlist + thumbnail
                 # => keep thumbnail for all medias
+
+                # TODO ? complete text with medias urls ?
+                # YES (playlist for video)
 
         # Process quotes
         if quoted_data:
@@ -379,12 +388,15 @@ def normalize_post(
                 links.remove(quoted["url"])
 
             # Rewrite post's text to include quote within (or replace the link to the quote if present)
-            quote = ("« @%s: %s — %s »" % (quoted["user_handle"], quoted["text"], quoted["url"])).encode("utf-8")
+            quote = (
+                "« @%s: %s — %s »"
+                % (quoted["user_handle"], quoted["text"], quoted["url"])
+            ).encode("utf-8")
             url_lower = quoted["url"].encode("utf-8").lower()
             text_lower = text.lower()
             if url_lower in text_lower:
                 url_pos = text_lower.find(url_lower)
-                text = text[:url_pos] + quote + text[url_pos + len(quoted["url"]):]
+                text = text[:url_pos] + quote + text[url_pos + len(quoted["url"]) :]
             else:
                 text += b" " + quote
 
@@ -396,12 +408,14 @@ def normalize_post(
     post["media_types"] = media_types
     post["media_alt_texts"] = media_alt_texts
 
-    # TODO ? handle threadgates?
-    # reply_rules
-    # hidden_replies
-    # createdat
+    # Handle threadgates
+    if "threadgate" in data:
+        pass
 
-    # TODO ? complete text with medias urls ?
+    # reply_rules (mentionned, followed, followers, none)
+    # hidden_replies
+    # forbid_quotes
+    # createdat
 
     post["text"] = text.decode("utf-8")
 
