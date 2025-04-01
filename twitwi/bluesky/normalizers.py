@@ -57,7 +57,7 @@ def format_post_url(user_handle, post_did):
     return f"https://bsky.app/profile/{user_handle}/post/{post_did}"
 
 
-def format_media_url_and_file(user_did, media_cid, mime_type):
+def format_media_url(user_did, media_cid, mime_type):
     media_type = mime_type.split("/")[1]
     if mime_type.startswith("image"):
         media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@{media_type}"
@@ -65,10 +65,7 @@ def format_media_url_and_file(user_did, media_cid, mime_type):
         media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
     else:
         raise Exception("Unusual media mimeType for post : %s" % (mime_type))
-
-    user = user_did.replace("did:plc:", "")
-    media_file = f"{user}_{media_cid}.{media_type}"
-    return (media_url, media_file)
+    return media_url
 
 
 # TODO :
@@ -211,14 +208,13 @@ def normalize_post(
             )
             post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
 
-        # TODO ? complete with to_user_handle when did found within mentioned_users or quoted_user, and add to_post_url in those cases? Add also replied_to_user to mentionned?
+        # TODO ? complete with to_user_handle when did found within mentioned_users or quoted_user, and add to_post_url in those cases? Add also replied_to_user to mentionned? NIET
 
     # TODO : handle reposts when we can find some in payloads (from user timeline maybe?)
 
     # Handle quotes & medias
     media_ids = set()
     media_urls = []
-    media_files = []
     media_types = []
     media_alt_texts = []
     if "embed" in data["record"]:
@@ -325,15 +321,13 @@ def normalize_post(
             if media["id"] not in media_ids:
                 media_ids.add(media["id"])
                 media_type = media["type"]
-                media_url, media_file = format_media_url_and_file(
-                    post["user_did"], media["id"], media_type
-                )
+                media_url = format_media_url(post["user_did"], media["id"], media_type)
                 media_urls.append(media_url)
                 media_types.append(media_type)
                 media_alt_texts.append(media.get("alt", ""))
-                media_files.append(media_file)
                 # TODO ? store videos thumbnail in url and playlist in file?
                 # from card data.embed.video playlist + thumbnail
+                # => keep thumbnail for all medias
 
         # Process quotes
         if quoted_data:
@@ -383,7 +377,6 @@ def normalize_post(
     post["media_urls"] = media_urls
     post["media_types"] = media_types
     post["media_alt_texts"] = media_alt_texts
-    post["media_files"] = media_files
     # TODO ? add media_urls as link ?
 
     # TODO ? handle threadgates?
