@@ -370,16 +370,23 @@ def normalize_post(
             if extract_referenced_posts:
                 referenced_posts.extend(nested)
 
-            post["quoted_url"] = format_post_url(
-                quoted["user_handle"], post["quoted_did"]
-            )
+            post["quoted_url"] = quoted["url"]
             post["quoted_user_handle"] = quoted["user_handle"]
             post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
-            # TODO : need to rewrite quoted url when present (from manual quotes) like we use to do in twitter, ex: https://bsky.app/profile/boogheta.bsky.social/post/3llon4g5lks2h
-            text += (
-                " « @%s: %s — %s »"
-                % (quoted["user_handle"], quoted["text"], quoted["url"])
-            ).encode("utf-8")
+
+            # Remove quoted link from post links if present in text
+            if quoted["url"] in links:
+                links.remove(quoted["url"])
+
+            # Rewrite post's text to include quote within (or replace the link to the quote if present)
+            quote = ("« @%s: %s — %s »" % (quoted["user_handle"], quoted["text"], quoted["url"])).encode("utf-8")
+            url_lower = quoted["url"].encode("utf-8").lower()
+            text_lower = text.lower()
+            if url_lower in text_lower:
+                url_pos = text_lower.find(url_lower)
+                text = text[:url_pos] + quote + text[url_pos + len(quoted["url"]):]
+            else:
+                text += b" " + quote
 
     # Process links domains
     post["links"] = sorted(links)
