@@ -173,7 +173,7 @@ def normalize_post(
             hashtags.add(feat["tag"].strip().lower())
 
         elif feat["$type"].endswith("#mention"):
-            if not feat["did"] in post["mentioned_user_dids"]:
+            if feat["did"] not in post["mentioned_user_dids"]:
                 post["mentioned_user_dids"].append(feat["did"])
                 handle = (
                     text[facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]]
