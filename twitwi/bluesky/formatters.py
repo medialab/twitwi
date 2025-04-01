@@ -15,5 +15,4 @@ def format_post_as_csv_row(data: BlueskyPost) -> List:
         if field not in POST_LIST_FIELDS
         else "|".join(data.get(field, []))
         for field in POST_FIELDS
-        if field not in POST_LIST_FIELDS
     ]
