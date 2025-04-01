@@ -24,8 +24,8 @@ class BlueskyProfile(TypedDict):
 class BlueskyPost(TypedDict):
     cid: str
     did: str
-    url: str
     uri: str
+    url: str
     timestamp_utc: int
     local_time: str
     user_did: str
@@ -36,8 +36,8 @@ class BlueskyPost(TypedDict):
     reply_count: int
     quote_count: int
     user_diplay_name: str
+    # user_url: str                         # TODO ADD
     # user_description: str
-    # user_url: str
     # user_posts: int
     # user_followers: int
     # user_follows: int
@@ -46,27 +46,31 @@ class BlueskyPost(TypedDict):
     user_avatar: str
     user_created_at: str
     user_timestamp_utc: int
-    # to_user_handle: Optional[str]
-    to_user_did: Optional[str]
     to_post_cid: Optional[str]
     to_post_did: Optional[str]
-    # to_post_url: Optional[str]
-    # to_root_user_handle: Optional[str]
-    to_root_user_did: Optional[str]
+    to_post_uri: Optional[str]
+    to_post_url: Optional[str]
+    to_user_did: Optional[str]
+    # to_user_handle: Optional[str]
     to_root_post_cid: Optional[str]
     to_root_post_did: Optional[str]
-    # to_root_post_url: Optional[str]
+    to_root_post_uri: Optional[str]
+    to_root_post_url: Optional[str]
+    to_root_user_did: Optional[str]
+    # to_root_user_handle: Optional[str]
     reposted_cid: str
     reposted_did: str
+    reposted_uri: str  # TODO ADD
+    reposted_url: str  # TODO ADD
     reposted_user_handle: str
     reposted_user_did: str
-    # reposted_url: str
     reposted_timestamp_utc: int
     quoted_cid: str
     quoted_did: str
+    quoted_uri: str  # TODO ADD
+    quoted_url: str  # TODO ADD
     quoted_user_handle: str
     quoted_user_did: str
-    # quoted_url: str
     quoted_timestamp_utc: int
     links: List[str]
     domains: List[str]

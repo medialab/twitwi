@@ -198,17 +198,23 @@ def normalize_post(
     # Handle thread info when applicable
     if "reply" in data["record"]:
         if "parent" in data["record"]["reply"]:
-            post["to_user_did"], post["to_post_did"] = parse_post_uri(
-                data["record"]["reply"]["parent"]["uri"]
-            )
             post["to_post_cid"] = data["record"]["reply"]["parent"]["cid"]
-        if "root" in data["record"]["reply"]:
-            post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(
-                data["record"]["reply"]["root"]["uri"]
+            post["to_post_uri"] = data["record"]["reply"]["parent"]["uri"]
+            post["to_user_did"], post["to_post_did"] = parse_post_uri(
+                post["to_post_uri"]
             )
+            post["to_post_url"] = format_post_url(
+                post["to_user_did"], post["to_post_did"]
+            )
+        if "root" in data["record"]["reply"]:
             post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
-
-        # TODO ? complete with to_user_handle when did found within mentioned_users or quoted_user, and add to_post_url in those cases? Add also replied_to_user to mentionned? NIET
+            post["to_root_post_uri"] = data["record"]["reply"]["root"]["uri"]
+            post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(
+                post["to_root_post_uri"]
+            )
+            post["to_root_post_url"] = format_post_url(
+                post["to_root_user_did"], post["to_root_post_did"]
+            )
 
     # TODO : handle reposts when we can find some in payloads (from user timeline maybe?)
 
