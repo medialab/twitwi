@@ -58,20 +58,21 @@ class BlueskyPost(TypedDict):
     to_root_post_url: Optional[str]
     to_root_user_did: Optional[str]
     # to_root_user_handle: Optional[str]
-    reposted_cid: str
-    reposted_did: str
-    reposted_uri: str
-    reposted_url: str
-    reposted_user_handle: str
-    reposted_user_did: str
-    reposted_timestamp_utc: int
-    quoted_cid: str
-    quoted_did: str
-    quoted_uri: str
-    quoted_url: str
-    quoted_user_handle: str
-    quoted_user_did: str
-    quoted_timestamp_utc: int
+    reposted_cid: Optional[str]
+    reposted_did: Optional[str]
+    reposted_uri: Optional[str]
+    reposted_url: Optional[str]
+    reposted_user_handle: Optional[str]
+    reposted_user_did: Optional[str]
+    reposted_timestamp_utc: Optional[int]
+    quoted_cid: Optional[str]
+    quoted_did: Optional[str]
+    quoted_uri: Optional[str]
+    quoted_url: Optional[str]
+    quoted_user_handle: Optional[str]
+    quoted_user_did: Optional[str]
+    quoted_timestamp_utc: Optional[int]
+    quoted_status: Optional[str]
     links: List[str]
     domains: List[str]
     media_urls: List[str]
@@ -80,6 +81,14 @@ class BlueskyPost(TypedDict):
     mentioned_user_handles: List[str]
     mentioned_user_dids: List[str]
     hashtags: List[str]
+    replies_rules: Optional[List[str]]
+    replies_rules_created_at: Optional[str]
+    replies_rules_timestamp_utc: Optional[int]
+    hidden_replies: Optional[List[str]]
+    # quotes_rule: Optional[str]
+    # quotes_rules_created_at: Optional[str]
+    # quotes_rules_timestamp_utc: Optional[int]
+    # detached_quotes: Optional[List[str]]
     collection_time: Optional[str]
     collected_via: Optional[List[str]]
     match_query: Optional[str]

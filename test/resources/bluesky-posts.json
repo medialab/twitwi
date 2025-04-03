@@ -3289,5 +3289,94 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j",
+    "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+    "author": {
+      "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+      "handle": "boogheta.bsky.social",
+      "displayName": "Benjamin Ooghe-Tabanou",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-09-01T13:36:06.055Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-04-03T14:47:11.203Z",
+      "embed": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+          "cid": "bafyreiggf67yfaimp2ns7r2b66tdsmzjcodv34xwwyfywtuwpr27zpebbu",
+          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u"
+        }
+      },
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "MoreAPItests"
+            }
+          ],
+          "index": {
+            "byteEnd": 13,
+            "byteStart": 0
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://bsky.app/profile/boogheta.bsky.social/post/3ljfbuxbsvs2u"
+            }
+          ],
+          "index": {
+            "byteEnd": 72,
+            "byteStart": 48
+          }
+        }
+      ],
+      "langs": [
+        "fr"
+      ],
+      "text": "#MoreAPItests\nLet's first quote a post manually\nbsky.app/profile/boog...\nThen detach the quote, and add a threadgate and quotegate"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.record#view",
+      "record": {
+        "$type": "app.bsky.embed.record#viewDetached",
+        "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u",
+        "detached": true
+      }
+    },
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-03T14:47:11.474Z",
+    "viewer": {
+      "threadMuted": false,
+      "replyDisabled": false,
+      "embeddingDisabled": false,
+      "pinned": false
+    },
+    "labels": [],
+    "threadgate": {
+      "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.threadgate/3llw5g6h6ps2j",
+      "cid": "bafyreigiyxuoorqrbbngrxfio54osoxatqrh5wqrw3m4l6wi7l3bftdsqa",
+      "record": {
+        "$type": "app.bsky.feed.threadgate",
+        "allow": [],
+        "createdAt": "2025-04-03T14:48:42.983Z",
+        "hiddenReplies": [],
+        "post": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j"
+      },
+      "lists": []
+    }
   }
 ]

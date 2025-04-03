@@ -280,12 +280,15 @@ def normalize_post(
                 post["quoted_uri"]
             )
 
-            if "embed" in data:
-                quoted_data = deepcopy(data["embed"]["record"])
-            else:
-                post["quoted_url"] = format_post_url(
-                    post["quoted_user_did"], post["quoted_did"]
-                )
+            post["quoted_url"] = format_post_url(
+                post["quoted_user_did"], post["quoted_did"]
+            )
+
+            if "embed" in data and "record" in data["embed"]:
+                if data["embed"]["record"].get("detached", False):
+                    post["quoted_status"] = "detached"
+                else:
+                    quoted_data = deepcopy(data["embed"]["record"])
 
         # Quote with medias
         if embed["$type"].endswith(".recordWithMedia"):
@@ -295,12 +298,19 @@ def normalize_post(
                 post["quoted_uri"]
             )
 
-            if "embed" in data:
-                quoted_data = deepcopy(data["embed"]["record"]["record"])
+            post["quoted_url"] = format_post_url(
+                post["quoted_user_did"], post["quoted_did"]
+            )
+
+            if (
+                "embed" in data
+                and "record" in data["embed"]
+                and "record" in data["embed"]["record"]
+            ):
+                if data["embed"]["record"]["record"].get("detached", False):
+                    post["quoted_status"] = "detached"
             else:
-                post["quoted_url"] = format_post_url(
-                    post["quoted_user_did"], post["quoted_did"]
-                )
+                quoted_data = deepcopy(data["embed"]["record"]["record"])
 
             if embed["media"]["$type"].endswith(".external"):
                 extra_links = [embed["media"]["external"]["uri"]] + extra_links
@@ -408,14 +418,42 @@ def normalize_post(
     post["media_types"] = media_types
     post["media_alt_texts"] = media_alt_texts
 
-    # Handle threadgates
+    # Handle threadgates (replies rules)
     if "threadgate" in data:
-        pass
+        post["replies_rules"] = []
+        if "allow" in data["threadgate"]["record"]:
+            for rule in data["threadgate"]["record"]["allow"]:
+                rule_string = (
+                    "allow_from_" + rule["$type"].split("#")[1].split("Rule")[0]
+                )
+                if rule_string.endswith("_list") and "list" in rule:
+                    for allowed_list in rule["list"]:
+                        post["replies_rules"].append(rule_string + ":" + allowed_list)
+                else:
+                    post["replies_rules"].append(rule_string)
+            if not data["threadgate"]["record"]["allow"]:
+                post["replies_rules"].append("disallow")
+        (
+            post["replies_rules_timestamp_utc"],
+            post["replies_rules_created_at"],
+        ) = get_dates(
+            data["threadgate"]["record"]["createdAt"], locale=locale, source="bluesky"
+        )
+        post["hidden_replies_uris"] = data["threadgate"]["record"].get(
+            "hiddenReplies", []
+        )
 
-    # reply_rules (mentionned, followed, followers, none)
-    # hidden_replies
-    # forbid_quotes
-    # createdat
+    # Handle postgates (quotes rules)
+    #
+    # Users can forbid others to quote a post, but payloads do not seem to
+    # include it yet although the API spec documents it:
+    # https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/feed/postgate.json
+    #
+    # if "postgate" in data:
+    #     if "embeddingRules" in data["postgate"]["record"] and data["postgate"]["record"]["embeddingRules"]:
+    #         post["quotes_rule"] = "disallow"
+    #     post["quotes_rules_timestamp_utc"], post["quotes_rules_created_at"] = get_dates(data["postgate"]["record"]["createdAt"], locale=locale, source="bluesky")
+    #     post["detached_quotes_uris"] = data["postgate"]["record"].get("detachedEmbeddingUris", [])
 
     post["text"] = text.decode("utf-8")
 
