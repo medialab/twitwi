@@ -66,11 +66,13 @@ def format_media_url(user_did, media_cid, mime_type):
     media_type = mime_type.split("/")[1]
     if mime_type.startswith("image"):
         media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@{media_type}"
+        media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@{media_type}"
     elif mime_type.startswith("video"):
         media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
+        media_thumb = f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
     else:
         raise Exception("Unusual media mimeType for post : %s" % (mime_type))
-    return media_url
+    return media_url, media_thumb
 
 
 # TODO :
@@ -227,6 +229,7 @@ def normalize_post(
     # Handle quotes & medias
     media_ids = set()
     media_urls = []
+    media_thumbs = []
     media_types = []
     media_alt_texts = []
     if "embed" in data["record"]:
@@ -348,22 +351,6 @@ def normalize_post(
                 links.add(norm_link)
                 text += b" " + link.encode("utf-8")
 
-        # Process medias
-        for media in media_data:
-            if media["id"] not in media_ids:
-                media_ids.add(media["id"])
-                media_type = media["type"]
-                media_url = format_media_url(post["user_did"], media["id"], media_type)
-                media_urls.append(media_url)
-                media_types.append(media_type)
-                media_alt_texts.append(media.get("alt", ""))
-                # TODO ? store videos thumbnail in url and playlist in file?
-                # from card data.embed.video playlist + thumbnail
-                # => keep thumbnail for all medias
-
-                # TODO ? complete text with medias urls ?
-                # YES (playlist for video)
-
         # Process quotes
         if quoted_data:
             if quoted_data["cid"] != post["quoted_cid"]:
@@ -409,6 +396,20 @@ def normalize_post(
                 text = text[:url_pos] + quote + text[url_pos + len(quoted["url"]) :]
             else:
                 text += b" " + quote
+
+        # Process medias
+        for media in media_data:
+            if media["id"] not in media_ids:
+                media_ids.add(media["id"])
+                media_type = media["type"]
+                media_url, media_thumb = format_media_url(post["user_did"], media["id"], media_type)
+                media_urls.append(media_url)
+                media_thumbs.append(media_thumb)
+                media_types.append(media_type)
+                media_alt_texts.append(media.get("alt", ""))
+
+                # Rewrite post's text to include links to medias within
+                text += b" " + (media_thumb if media_type.startswith("video") else media_url).encode("utf-8")
 
     # Process links domains
     post["links"] = sorted(links)
