@@ -245,13 +245,25 @@ def normalize_post(
 
         # Link from cards (includes native gif links and links sometimes not already present within facets & text due to manual action in post form)
         if embed["$type"].endswith(".external"):
-            extra_links.append(embed["external"]["uri"])
+            link = embed["external"]["uri"]
 
-            # TODO ? handle native embedded gifs from media.tenor.com as media instead of links?
-            # examples : https://bsky.app/profile/shiseptiana.bsky.social/post/3lkbalaxeys2v https://bsky.app/profile/nicholehiltz.bsky.social/post/3llmkipfkc22q
-            # extra fields available in that case: embed.external title(=alt) + uri + thumb.ref.$link/thumb.mimeType (=thumb)
-            # TODO ? Keep card extra metadata on main link embedded? as media? or new card fields?
-            # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
+            # Handle native gifs as medias
+            if link.startswith("https://media.tenor.com/"):
+                media_cid = embed["external"]["thumb"]["ref"]["$link"]
+                _, thumbnail = format_media_url(post["user_did"], media_cid, "image/jpeg")
+                media_data.append({
+                    "id": media_cid,
+                    "type": "image/gif",
+                    "alt": embed["external"]["title"],
+                    "url": embed["external"]["uri"],
+                    "thumb": thumbnail,
+                })
+            else:
+                extra_links.append(embed["external"]["uri"])
+
+        # TODO ? Keep card extra metadata on main link embedded? as media? or new card fields?
+        # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
+        # => keep cards metadata (from data.embed ?)
 
         # Images
         if embed["$type"].endswith(".images"):
@@ -312,11 +324,13 @@ def normalize_post(
             ):
                 if data["embed"]["record"]["record"].get("detached", False):
                     post["quoted_status"] = "detached"
-            else:
-                quoted_data = deepcopy(data["embed"]["record"]["record"])
+                else:
+                    quoted_data = deepcopy(data["embed"]["record"]["record"])
 
             if embed["media"]["$type"].endswith(".external"):
                 extra_links = [embed["media"]["external"]["uri"]] + extra_links
+                # TODO : handle native gifs here as well!
+
 
             elif embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
@@ -402,7 +416,11 @@ def normalize_post(
             if media["id"] not in media_ids:
                 media_ids.add(media["id"])
                 media_type = media["type"]
-                media_url, media_thumb = format_media_url(post["user_did"], media["id"], media_type)
+                if "url" in media:
+                    media_url = media["url"]
+                    media_thumb = media["thumb"]
+                else:
+                    media_url, media_thumb = format_media_url(post["user_did"], media["id"], media_type)
                 media_urls.append(media_url)
                 media_thumbs.append(media_thumb)
                 media_types.append(media_type)
@@ -416,6 +434,7 @@ def normalize_post(
     post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
 
     post["media_urls"] = media_urls
+    post["media_thumbnails"] = media_thumbs
     post["media_types"] = media_types
     post["media_alt_texts"] = media_alt_texts
 
