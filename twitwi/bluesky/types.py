@@ -31,6 +31,7 @@ class BlueskyPost(TypedDict):
     user_did: str
     user_handle: str
     text: str
+    original_text: str
     repost_count: int
     like_count: int
     reply_count: int

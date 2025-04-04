@@ -69,7 +69,9 @@ def format_media_url(user_did, media_cid, mime_type):
         media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@{media_type}"
     elif mime_type.startswith("video"):
         media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
-        media_thumb = f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
+        media_thumb = (
+            f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
+        )
     else:
         raise Exception("Unusual media mimeType for post : %s" % (mime_type))
     return media_url, media_thumb
@@ -115,15 +117,17 @@ def normalize_post(
             "data provided to normalize_post is not a standard Bluesky post payload"
         )
 
-    post = {}
-
     if extract_referenced_posts:
         referenced_posts = []
 
     if collection_source is None:
         collection_source = data.get("collection_source")
 
-    text = data["record"]["text"].encode("utf-8")
+    post = {}
+
+    # Store original text and prepare text for quotes & medias enriched version
+    post["original_text"] = data["record"]["text"]
+    text = post["original_text"].encode("utf-8")
 
     # Handle datetime fields
     post["collection_time"] = get_collection_time()
@@ -250,14 +254,18 @@ def normalize_post(
             # Handle native gifs as medias
             if link.startswith("https://media.tenor.com/"):
                 media_cid = embed["external"]["thumb"]["ref"]["$link"]
-                _, thumbnail = format_media_url(post["user_did"], media_cid, "image/jpeg")
-                media_data.append({
-                    "id": media_cid,
-                    "type": "image/gif",
-                    "alt": embed["external"]["title"],
-                    "url": embed["external"]["uri"],
-                    "thumb": thumbnail,
-                })
+                _, thumbnail = format_media_url(
+                    post["user_did"], media_cid, "image/jpeg"
+                )
+                media_data.append(
+                    {
+                        "id": media_cid,
+                        "type": "image/gif",
+                        "alt": embed["external"]["title"],
+                        "url": embed["external"]["uri"],
+                        "thumb": thumbnail,
+                    }
+                )
             else:
                 extra_links.append(embed["external"]["uri"])
 
@@ -328,9 +336,25 @@ def normalize_post(
                     quoted_data = deepcopy(data["embed"]["record"]["record"])
 
             if embed["media"]["$type"].endswith(".external"):
-                extra_links = [embed["media"]["external"]["uri"]] + extra_links
-                # TODO : handle native gifs here as well!
+                link = embed["media"]["external"]["uri"]
 
+                # Handle native gifs as medias
+                if link.startswith("https://media.tenor.com/"):
+                    media_cid = embed["media"]["external"]["thumb"]["ref"]["$link"]
+                    _, thumbnail = format_media_url(
+                        post["user_did"], media_cid, "image/jpeg"
+                    )
+                    media_data.append(
+                        {
+                            "id": media_cid,
+                            "type": "image/gif",
+                            "alt": embed["media"]["external"]["title"],
+                            "url": embed["media"]["external"]["uri"],
+                            "thumb": thumbnail,
+                        }
+                    )
+                else:
+                    extra_links = [link] + extra_links
 
             elif embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
@@ -364,6 +388,28 @@ def normalize_post(
             if norm_link not in links:
                 links.add(norm_link)
                 text += b" " + link.encode("utf-8")
+
+        # Process medias
+        for media in media_data:
+            if media["id"] not in media_ids:
+                media_ids.add(media["id"])
+                media_type = media["type"]
+                if "url" in media:
+                    media_url = media["url"]
+                    media_thumb = media["thumb"]
+                else:
+                    media_url, media_thumb = format_media_url(
+                        post["user_did"], media["id"], media_type
+                    )
+                media_urls.append(media_url)
+                media_thumbs.append(media_thumb)
+                media_types.append(media_type)
+                media_alt_texts.append(media.get("alt", ""))
+
+                # Rewrite post's text to include links to medias within
+                text += b" " + (
+                    media_thumb if media_type.startswith("video") else media_url
+                ).encode("utf-8")
 
         # Process quotes
         if quoted_data:
@@ -411,24 +457,6 @@ def normalize_post(
             else:
                 text += b" " + quote
 
-        # Process medias
-        for media in media_data:
-            if media["id"] not in media_ids:
-                media_ids.add(media["id"])
-                media_type = media["type"]
-                if "url" in media:
-                    media_url = media["url"]
-                    media_thumb = media["thumb"]
-                else:
-                    media_url, media_thumb = format_media_url(post["user_did"], media["id"], media_type)
-                media_urls.append(media_url)
-                media_thumbs.append(media_thumb)
-                media_types.append(media_type)
-                media_alt_texts.append(media.get("alt", ""))
-
-                # Rewrite post's text to include links to medias within
-                text += b" " + (media_thumb if media_type.startswith("video") else media_url).encode("utf-8")
-
     # Process links domains
     post["links"] = sorted(links)
     post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
@@ -439,6 +467,8 @@ def normalize_post(
     post["media_alt_texts"] = media_alt_texts
 
     # Handle threadgates (replies rules)
+    # WARNING: quoted posts do not seem to include threadgates info
+    # Issue opened about it here: https://github.com/bluesky-social/atproto/issues/3716
     if "threadgate" in data:
         post["replies_rules"] = []
         if "allow" in data["threadgate"]["record"]:
@@ -468,6 +498,7 @@ def normalize_post(
     # Users can forbid others to quote a post, but payloads do not seem to
     # include it yet although the API spec documents it:
     # https://github.com/bluesky-social/atproto/blob/main/lexicons/app/bsky/feed/postgate.json
+    # Issue opened about it here: https://github.com/bluesky-social/atproto/issues/3712
     #
     # if "postgate" in data:
     #     if "embeddingRules" in data["postgate"]["record"] and data["postgate"]["record"]["embeddingRules"]:

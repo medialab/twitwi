@@ -3378,5 +3378,539 @@
       },
       "lists": []
     }
+  },
+  {
+    "uri": "at://did:plc:2tcpwnpvacttgambthndvcas/app.bsky.feed.post/3lkd73d7zlj2w",
+    "cid": "bafyreibbidlec5w77hem3urbc5k3eqxttxtjl7hr3ln2dqkrjkn3u7fkle",
+    "author": {
+      "did": "did:plc:2tcpwnpvacttgambthndvcas",
+      "handle": "laviedesidees.bsky.social",
+      "displayName": "La Vie des idées",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2tcpwnpvacttgambthndvcas/bafkreiffq5jgl4szuravtong2756dtcr2jmixx3ovuk5mjgp23zpm2zubq@jpeg",
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-09-06T11:57:12.909Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-03-14T08:31:07Z",
+      "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+          "description": "Jugé opaque, bureaucratique et peu fiable, le travail d'évaluation de l'enseignement supérieur mené par l'HCERES suscite régulièrement critiques et mobilisations des universitaires. Clémentine Gozlan revient sur les origines et le fonctionnement de cette…",
+          "title": "L'HCERES et l'évaluation des universités",
+          "uri": "https://laviedesidees.fr/L-HCERES-et-l-evaluation-des-universites?utm_source=dlvr.it&utm_medium=bluesky"
+        }
+      },
+      "text": "Jugé opaque, bureaucratique et peu fiable, le travail d'évaluation de l'enseignement supérieur mené par l'HCERES suscite régulièrement critiques et mobilisations des universitaires. Clémentine Gozlan revient sur les origines et le fonctionnement de cette bureaucratie qui incarne l'entrée de…"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.external#view",
+      "external": {
+        "uri": "https://laviedesidees.fr/L-HCERES-et-l-evaluation-des-universites?utm_source=dlvr.it&utm_medium=bluesky",
+        "title": "L'HCERES et l'évaluation des universités",
+        "description": "Jugé opaque, bureaucratique et peu fiable, le travail d'évaluation de l'enseignement supérieur mené par l'HCERES suscite régulièrement critiques et mobilisations des universitaires. Clémentine Gozlan revient sur les origines et le fonctionnement de cette…"
+      }
+    },
+    "replyCount": 0,
+    "repostCount": 13,
+    "likeCount": 26,
+    "quoteCount": 5,
+    "indexedAt": "2025-03-14T08:31:08.019Z",
+    "viewer": {
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
+  },
+  {
+    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw7ynpcgc2b",
+    "cid": "bafyreido333f5gis6fzpwcgtipqqngfdpcja7lvfmmwjraixq274yaw2ne",
+    "author": {
+      "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+      "handle": "boogheta.bsky.social",
+      "displayName": "Benjamin Ooghe-Tabanou",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-09-01T13:36:06.055Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-04-03T15:33:18.661Z",
+      "embed": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+          "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j"
+        }
+      },
+      "langs": [
+        "fr"
+      ],
+      "text": "Wut??? That post should NOT be quotable! API doc is lying 😅"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.record#view",
+      "record": {
+        "$type": "app.bsky.embed.record#viewRecord",
+        "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j",
+        "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+        "author": {
+          "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+          "handle": "boogheta.bsky.social",
+          "displayName": "Benjamin Ooghe-Tabanou",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [],
+          "createdAt": "2023-09-01T13:36:06.055Z"
+        },
+        "value": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2025-04-03T14:47:11.203Z",
+          "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {
+              "cid": "bafyreiggf67yfaimp2ns7r2b66tdsmzjcodv34xwwyfywtuwpr27zpebbu",
+              "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u"
+            }
+          },
+          "facets": [
+            {
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#tag",
+                  "tag": "MoreAPItests"
+                }
+              ],
+              "index": {
+                "byteEnd": 13,
+                "byteStart": 0
+              }
+            },
+            {
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#link",
+                  "uri": "https://bsky.app/profile/boogheta.bsky.social/post/3ljfbuxbsvs2u"
+                }
+              ],
+              "index": {
+                "byteEnd": 72,
+                "byteStart": 48
+              }
+            }
+          ],
+          "langs": [
+            "fr"
+          ],
+          "text": "#MoreAPItests\nLet's first quote a post manually\nbsky.app/profile/boog...\nThen detach the quote, and add a threadgate and quotegate"
+        },
+        "labels": [],
+        "likeCount": 1,
+        "replyCount": 0,
+        "repostCount": 0,
+        "quoteCount": 2,
+        "indexedAt": "2025-04-03T14:47:11.474Z",
+        "embeds": [
+          {
+            "$type": "app.bsky.embed.record#view",
+            "record": {
+              "$type": "app.bsky.embed.record#viewDetached",
+              "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u",
+              "detached": true
+            }
+          }
+        ]
+      }
+    },
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-03T15:33:18.871Z",
+    "viewer": {
+      "threadMuted": false,
+      "embeddingDisabled": false,
+      "pinned": false
+    },
+    "labels": []
+  },
+  {
+    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27",
+    "cid": "bafyreibub46ahhsnergt2yna5avhpg2afovevhacgtj5ioi6ft2zqsmhgu",
+    "author": {
+      "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+      "handle": "boogheta.bsky.social",
+      "displayName": "Benjamin Ooghe-Tabanou",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-09-01T13:36:06.055Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-04-04T08:37:04.975Z",
+      "embed": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+          "cid": "bafyreig7zfz4bgk5uwp333wnbyd2cdqfgtk5mtkcpd43jqcxc7fle62lqy",
+          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j"
+        }
+      },
+      "langs": [
+        "fr"
+      ],
+      "text": "And let's quote a threadgated post to check whether that info is indeed missing from quoted data"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.record#view",
+      "record": {
+        "$type": "app.bsky.embed.record#viewRecord",
+        "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j",
+        "cid": "bafyreig7zfz4bgk5uwp333wnbyd2cdqfgtk5mtkcpd43jqcxc7fle62lqy",
+        "author": {
+          "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+          "handle": "boogheta.bsky.social",
+          "displayName": "Benjamin Ooghe-Tabanou",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [],
+          "createdAt": "2023-09-01T13:36:06.055Z"
+        },
+        "value": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2025-04-04T08:22:11.273Z",
+          "embed": {
+            "$type": "app.bsky.embed.recordWithMedia",
+            "media": {
+              "$type": "app.bsky.embed.external",
+              "external": {
+                "description": "ALT: a man wearing a blue shirt that says pressed van",
+                "thumb": {
+                  "$type": "blob",
+                  "ref": {
+                    "$link": "bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna"
+                  },
+                  "mimeType": "image/jpeg",
+                  "size": 401404
+                },
+                "title": "a man wearing a blue shirt that says pressed van",
+                "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498"
+              }
+            },
+            "record": {
+              "$type": "app.bsky.embed.record",
+              "record": {
+                "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+                "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j"
+              }
+            }
+          },
+          "langs": [
+            "fr"
+          ],
+          "text": "Still one potential case not tested: native gifs with a quote! 🫣"
+        },
+        "labels": [],
+        "likeCount": 0,
+        "replyCount": 0,
+        "repostCount": 0,
+        "quoteCount": 1,
+        "indexedAt": "2025-04-04T08:22:17.370Z",
+        "embeds": [
+          {
+            "$type": "app.bsky.embed.recordWithMedia#view",
+            "media": {
+              "$type": "app.bsky.embed.external#view",
+              "external": {
+                "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498",
+                "title": "a man wearing a blue shirt that says pressed van",
+                "description": "ALT: a man wearing a blue shirt that says pressed van",
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna@jpeg"
+              }
+            },
+            "record": {
+              "record": {
+                "$type": "app.bsky.embed.record#viewRecord",
+                "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j",
+                "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+                "author": {
+                  "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+                  "handle": "boogheta.bsky.social",
+                  "displayName": "Benjamin Ooghe-Tabanou",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+                  "viewer": {
+                    "muted": false,
+                    "blockedBy": false
+                  },
+                  "labels": [],
+                  "createdAt": "2023-09-01T13:36:06.055Z"
+                },
+                "value": {
+                  "$type": "app.bsky.feed.post",
+                  "createdAt": "2025-04-03T14:47:11.203Z",
+                  "embed": {
+                    "$type": "app.bsky.embed.record",
+                    "record": {
+                      "cid": "bafyreiggf67yfaimp2ns7r2b66tdsmzjcodv34xwwyfywtuwpr27zpebbu",
+                      "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u"
+                    }
+                  },
+                  "facets": [
+                    {
+                      "features": [
+                        {
+                          "$type": "app.bsky.richtext.facet#tag",
+                          "tag": "MoreAPItests"
+                        }
+                      ],
+                      "index": {
+                        "byteEnd": 13,
+                        "byteStart": 0
+                      }
+                    },
+                    {
+                      "features": [
+                        {
+                          "$type": "app.bsky.richtext.facet#link",
+                          "uri": "https://bsky.app/profile/boogheta.bsky.social/post/3ljfbuxbsvs2u"
+                        }
+                      ],
+                      "index": {
+                        "byteEnd": 72,
+                        "byteStart": 48
+                      }
+                    }
+                  ],
+                  "langs": [
+                    "fr"
+                  ],
+                  "text": "#MoreAPItests\nLet's first quote a post manually\nbsky.app/profile/boog...\nThen detach the quote, and add a threadgate and quotegate"
+                },
+                "labels": [],
+                "likeCount": 1,
+                "replyCount": 0,
+                "repostCount": 0,
+                "quoteCount": 2,
+                "indexedAt": "2025-04-03T14:47:11.474Z"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-04T08:37:05.571Z",
+    "viewer": {
+      "threadMuted": false,
+      "replyDisabled": false,
+      "embeddingDisabled": false,
+      "pinned": false
+    },
+    "labels": [],
+    "threadgate": {
+      "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.threadgate/3llxz7cfn6s27",
+      "cid": "bafyreidhyedrxg53lh72exscyb4zs36fr5ulqma2qhpa6auedgikommlni",
+      "record": {
+        "$type": "app.bsky.feed.threadgate",
+        "allow": [
+          {
+            "$type": "app.bsky.feed.threadgate#mentionRule"
+          }
+        ],
+        "createdAt": "2025-04-04T08:38:09.423Z",
+        "hiddenReplies": [],
+        "post": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27"
+      },
+      "lists": []
+    }
+  },
+  {
+    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j",
+    "cid": "bafyreig7zfz4bgk5uwp333wnbyd2cdqfgtk5mtkcpd43jqcxc7fle62lqy",
+    "author": {
+      "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+      "handle": "boogheta.bsky.social",
+      "displayName": "Benjamin Ooghe-Tabanou",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-09-01T13:36:06.055Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-04-04T08:22:11.273Z",
+      "embed": {
+        "$type": "app.bsky.embed.recordWithMedia",
+        "media": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "ALT: a man wearing a blue shirt that says pressed van",
+            "thumb": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna"
+              },
+              "mimeType": "image/jpeg",
+              "size": 401404
+            },
+            "title": "a man wearing a blue shirt that says pressed van",
+            "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498"
+          }
+        },
+        "record": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+            "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j"
+          }
+        }
+      },
+      "langs": [
+        "fr"
+      ],
+      "text": "Still one potential case not tested: native gifs with a quote! 🫣"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.recordWithMedia#view",
+      "media": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+          "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498",
+          "title": "a man wearing a blue shirt that says pressed van",
+          "description": "ALT: a man wearing a blue shirt that says pressed van",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna@jpeg"
+        }
+      },
+      "record": {
+        "record": {
+          "$type": "app.bsky.embed.record#viewRecord",
+          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j",
+          "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+          "author": {
+            "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+            "handle": "boogheta.bsky.social",
+            "displayName": "Benjamin Ooghe-Tabanou",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+            "viewer": {
+              "muted": false,
+              "blockedBy": false
+            },
+            "labels": [],
+            "createdAt": "2023-09-01T13:36:06.055Z"
+          },
+          "value": {
+            "$type": "app.bsky.feed.post",
+            "createdAt": "2025-04-03T14:47:11.203Z",
+            "embed": {
+              "$type": "app.bsky.embed.record",
+              "record": {
+                "cid": "bafyreiggf67yfaimp2ns7r2b66tdsmzjcodv34xwwyfywtuwpr27zpebbu",
+                "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u"
+              }
+            },
+            "facets": [
+              {
+                "features": [
+                  {
+                    "$type": "app.bsky.richtext.facet#tag",
+                    "tag": "MoreAPItests"
+                  }
+                ],
+                "index": {
+                  "byteEnd": 13,
+                  "byteStart": 0
+                }
+              },
+              {
+                "features": [
+                  {
+                    "$type": "app.bsky.richtext.facet#link",
+                    "uri": "https://bsky.app/profile/boogheta.bsky.social/post/3ljfbuxbsvs2u"
+                  }
+                ],
+                "index": {
+                  "byteEnd": 72,
+                  "byteStart": 48
+                }
+              }
+            ],
+            "langs": [
+              "fr"
+            ],
+            "text": "#MoreAPItests\nLet's first quote a post manually\nbsky.app/profile/boog...\nThen detach the quote, and add a threadgate and quotegate"
+          },
+          "labels": [],
+          "likeCount": 1,
+          "replyCount": 0,
+          "repostCount": 0,
+          "quoteCount": 2,
+          "indexedAt": "2025-04-03T14:47:11.474Z",
+          "embeds": [
+            {
+              "$type": "app.bsky.embed.record#view",
+              "record": {
+                "$type": "app.bsky.embed.record#viewDetached",
+                "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u",
+                "detached": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 1,
+    "indexedAt": "2025-04-04T08:22:17.370Z",
+    "viewer": {
+      "threadMuted": false,
+      "replyDisabled": false,
+      "embeddingDisabled": false,
+      "pinned": false
+    },
+    "labels": [],
+    "threadgate": {
+      "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.threadgate/3llxyeo3zdc2j",
+      "cid": "bafyreiabkleysrqkix24hhfwduewjd67ljgx667z4ss5nfgo3a6c2dzmfq",
+      "record": {
+        "$type": "app.bsky.feed.threadgate",
+        "allow": [
+          {
+            "$type": "app.bsky.feed.threadgate#mentionRule"
+          },
+          {
+            "$type": "app.bsky.feed.threadgate#followerRule"
+          }
+        ],
+        "createdAt": "2025-04-04T08:36:01.283Z",
+        "hiddenReplies": [],
+        "post": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j"
+      },
+      "lists": []
+    }
   }
 ]
