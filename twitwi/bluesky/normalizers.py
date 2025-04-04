@@ -112,7 +112,7 @@ def prepare_video_as_media(video_data):
     }
 
 
-def prepare_quote_data(post, embed_quote, card_data, links):
+def prepare_quote_data(embed_quote, card_data, post, links):
     # Warning: mutates post and links
 
     post["quoted_cid"] = embed_quote["cid"]
@@ -366,15 +366,15 @@ def normalize_post(
         # Quote
         if embed["$type"].endswith(".record"):
             post, quoted_data, links = prepare_quote_data(
-                post, embed["record"], data.get("embed", {}).get("record"), links
+                embed["record"], data.get("embed", {}).get("record"), post, links
             )
 
         # Quote with medias
         if embed["$type"].endswith(".recordWithMedia"):
             post, quoted_data, links = prepare_quote_data(
-                post,
                 embed["record"]["record"],
                 data.get("embed", {}).get("record", {}).get("record"),
+                post,
                 links,
             )
 
