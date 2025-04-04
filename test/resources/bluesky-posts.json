@@ -3912,5 +3912,950 @@
       },
       "lists": []
     }
+  },
+  {
+    "post": {
+      "uri": "at://did:plc:aru6i7k6wo43msubk6km5td3/app.bsky.feed.post/3lloj4ipqqh27",
+      "cid": "bafyreiejfgtltzu2hz6nsfry3uejhpz6tdeml4unnnihxszk3uv3zxkdeu",
+      "author": {
+        "did": "did:plc:aru6i7k6wo43msubk6km5td3",
+        "handle": "korben.info",
+        "displayName": "Korben",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aru6i7k6wo43msubk6km5td3/bafkreieaedwoulorwisx7yx4oqjse65vpintuq37czqcglpgs4thesfcxi@jpeg",
+        "viewer": {
+          "muted": false,
+          "blockedBy": false,
+          "following": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.graph.follow/3liw6lzi4ku26"
+        },
+        "labels": [],
+        "createdAt": "2023-04-21T06:25:47.542Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-31T13:55:10.752895Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "description": "Alors on est en 2025 et y’a encore des gens qui utilisent du CSV comme source de données. Non mais “allo quoi” comme on disait en 2013 ! ...",
+            "thumb": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreigbf4qgn36wtkyhiaseoceyszahoj5427ikyljeqhxwedlq2ygzpm"
+              },
+              "mimeType": "image/jpeg",
+              "size": 52184
+            },
+            "title": "Xan - Un outil surpuissant pour manipuler vos fichiers CSV en ligne de commande | Le site de Korben",
+            "uri": "https://korben.info/xan-couteau-suisse-manipulation-csv-ligne-commande.html"
+          }
+        },
+        "langs": [
+          "fr-FR"
+        ],
+        "text": "🔧 Découvrez Xan, l'outil ultime pour dompter vos fichiers CSV en ligne de commande ! Optimisez votre temps 🚀 #CSV #Tech #Productivité"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+          "uri": "https://korben.info/xan-couteau-suisse-manipulation-csv-ligne-commande.html",
+          "title": "Xan - Un outil surpuissant pour manipuler vos fichiers CSV en ligne de commande | Le site de Korben",
+          "description": "Alors on est en 2025 et y’a encore des gens qui utilisent du CSV comme source de données. Non mais “allo quoi” comme on disait en 2013 ! ...",
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:aru6i7k6wo43msubk6km5td3/bafkreigbf4qgn36wtkyhiaseoceyszahoj5427ikyljeqhxwedlq2ygzpm@jpeg"
+        }
+      },
+      "replyCount": 0,
+      "repostCount": 4,
+      "likeCount": 11,
+      "quoteCount": 1,
+      "indexedAt": "2025-03-31T13:55:14.474Z",
+      "viewer": {
+        "repost": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.repost/3llr5oin5ii24",
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    },
+    "reason": {
+      "$type": "app.bsky.feed.defs#reasonRepost",
+      "by": {
+        "did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
+        "handle": "yomguithereal.bsky.social",
+        "displayName": "Guillaume Plique",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
+        "viewer": {
+          "muted": false,
+          "blockedBy": false,
+          "following": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.graph.follow/3lbenienv2t2c",
+          "followedBy": "at://did:plc:5klvtukw5fucxsrkjldhrjxs/app.bsky.graph.follow/3kc75kdrn322u"
+        },
+        "labels": [],
+        "createdAt": "2023-10-10T14:58:21.049Z"
+      },
+      "indexedAt": "2025-04-02T17:00:19.684Z"
+    }
+  },
+  {
+    "post": {
+      "uri": "at://did:plc:5klvtukw5fucxsrkjldhrjxs/app.bsky.feed.post/3llp2zd2lec2r",
+      "cid": "bafyreiee4jam5eo5riwujwrlhc4fijl3v6ezns2hocievytwknrouekg24",
+      "author": {
+        "did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
+        "handle": "yomguithereal.bsky.social",
+        "displayName": "Guillaume Plique",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
+        "viewer": {
+          "muted": false,
+          "blockedBy": false,
+          "following": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.graph.follow/3lbenienv2t2c",
+          "followedBy": "at://did:plc:5klvtukw5fucxsrkjldhrjxs/app.bsky.graph.follow/3kc75kdrn322u"
+        },
+        "labels": [],
+        "createdAt": "2023-10-10T14:58:21.049Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-31T19:15:34.173Z",
+        "langs": [
+          "fr"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreic4na7aql34dstuzh4tn2hb54273rjbcqssv2klbqopvs2qrbqgqe",
+            "uri": "at://did:plc:oqynptsozcuxi52v5srdwau2/app.bsky.feed.post/3lloyjul7ec2u"
+          },
+          "root": {
+            "cid": "bafyreicaym3levwttdqfoxcs3rvek4wyx5zndqu3hbip2hyr4gftewwnky",
+            "uri": "at://did:plc:oklkinuievllgvhrv2nia4gu/app.bsky.feed.post/3llorpeiynx26"
+          }
+        },
+        "text": "xan est un fork de xsv maintenu par des fans de l’outil original, qui corrige pas mal de choses et ajoute des fonctionnalités et un langage d’expression ainsi que pas mal de visualisations directement dans le terminal oui :)"
+      },
+      "replyCount": 1,
+      "repostCount": 0,
+      "likeCount": 2,
+      "quoteCount": 0,
+      "indexedAt": "2025-03-31T19:15:34.668Z",
+      "viewer": {
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    },
+    "reply": {
+      "root": {
+        "uri": "at://did:plc:oklkinuievllgvhrv2nia4gu/app.bsky.feed.post/3llorpeiynx26",
+        "cid": "bafyreicaym3levwttdqfoxcs3rvek4wyx5zndqu3hbip2hyr4gftewwnky",
+        "author": {
+          "did": "did:plc:oklkinuievllgvhrv2nia4gu",
+          "handle": "bearstech.com",
+          "displayName": "Bearstech",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreido6n7zkc7ogsw4vrtpnqw6cfjo2hxccde5jltrxqpfhpowpqiouy@jpeg",
+          "associated": {
+            "chat": {
+              "allowIncoming": "following"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [],
+          "createdAt": "2023-07-03T16:21:05.120Z"
+        },
+        "record": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2025-03-31T16:28:55.000Z",
+          "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+              {
+                "alt": "Vue de xan en action",
+                "aspectRatio": {
+                  "height": 860,
+                  "width": 1534
+                },
+                "image": {
+                  "$type": "blob",
+                  "ref": {
+                    "$link": "bafkreib2rq2p3sqyxyvlxlo2xtkpcw4ovc2zga5nsikecexhzlpwkpie5e"
+                  },
+                  "mimeType": "image/png",
+                  "size": 437843
+                }
+              },
+              {
+                "alt": "Interface xan",
+                "aspectRatio": {
+                  "height": 851,
+                  "width": 1498
+                },
+                "image": {
+                  "$type": "blob",
+                  "ref": {
+                    "$link": "bafkreibme6u3kzbci6zs3eml2hljdv6vsq27oe54sjk7gifddo24vel4hm"
+                  },
+                  "mimeType": "image/png",
+                  "size": 246306
+                }
+              }
+            ]
+          },
+          "facets": [
+            {
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#link",
+                  "uri": "https://github.com/medialab/xan"
+                }
+              ],
+              "index": {
+                "byteEnd": 198,
+                "byteStart": 175
+              }
+            },
+            {
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#link",
+                  "uri": "https://medialab.sciencespo.fr/actu/a-love-letter-to-the-csv-format/"
+                }
+              ],
+              "index": {
+                "byteEnd": 278,
+                "byteStart": 255
+              }
+            }
+          ],
+          "text": "Xan : un outil en CLI Open Source, conçu pour manipuler les CSV développé chez Sciences Po Medialab 🇫🇷\n\n\"The CSV magician\"\n\nVersion actuelle 0.48.0\n\n👉 Le projet : github.com/medialab/xan\n👉 Lire l'article \"A love letter to the CSV format\" : medialab.sciencespo...."
+        },
+        "embed": {
+          "$type": "app.bsky.embed.images#view",
+          "images": [
+            {
+              "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreib2rq2p3sqyxyvlxlo2xtkpcw4ovc2zga5nsikecexhzlpwkpie5e@jpeg",
+              "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreib2rq2p3sqyxyvlxlo2xtkpcw4ovc2zga5nsikecexhzlpwkpie5e@jpeg",
+              "alt": "Vue de xan en action",
+              "aspectRatio": {
+                "height": 860,
+                "width": 1534
+              }
+            },
+            {
+              "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreibme6u3kzbci6zs3eml2hljdv6vsq27oe54sjk7gifddo24vel4hm@jpeg",
+              "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreibme6u3kzbci6zs3eml2hljdv6vsq27oe54sjk7gifddo24vel4hm@jpeg",
+              "alt": "Interface xan",
+              "aspectRatio": {
+                "height": 851,
+                "width": 1498
+              }
+            }
+          ]
+        },
+        "replyCount": 3,
+        "repostCount": 11,
+        "likeCount": 30,
+        "quoteCount": 0,
+        "indexedAt": "2025-03-31T16:28:56.981Z",
+        "viewer": {
+          "repost": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.repost/3llr5oe5g652z",
+          "threadMuted": false,
+          "embeddingDisabled": false
+        },
+        "labels": [],
+        "$type": "app.bsky.feed.defs#postView"
+      },
+      "parent": {
+        "uri": "at://did:plc:oqynptsozcuxi52v5srdwau2/app.bsky.feed.post/3lloyjul7ec2u",
+        "cid": "bafyreic4na7aql34dstuzh4tn2hb54273rjbcqssv2klbqopvs2qrbqgqe",
+        "author": {
+          "did": "did:plc:oqynptsozcuxi52v5srdwau2",
+          "handle": "djoo.org",
+          "displayName": "Julien Leroy",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oqynptsozcuxi52v5srdwau2/bafkreigxe2gkgiyh2f5luor2aw2v7prsjcpf5tfi42a23l273bsptjamxa@jpeg",
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [],
+          "createdAt": "2023-12-02T13:29:41.660Z"
+        },
+        "record": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2025-03-31T18:31:08.188Z",
+          "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+              "description": "A fast CSV command line toolkit written in Rust. Contribute to BurntSushi/xsv development by creating an account on GitHub.",
+              "thumb": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreiep7f7qn33odg3vbnm5x7k4u3ufpui2s3d4jusmh636tmnpavrbt4"
+                },
+                "mimeType": "image/jpeg",
+                "size": 114011
+              },
+              "title": "GitHub - BurntSushi/xsv: A fast CSV command line toolkit written in Rust.",
+              "uri": "https://github.com/BurntSushi/xsv"
+            }
+          },
+          "facets": [
+            {
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#link",
+                  "uri": "https://github.com/BurntSushi/xsv"
+                }
+              ],
+              "index": {
+                "byteEnd": 126,
+                "byteStart": 101
+              }
+            }
+          ],
+          "langs": [
+            "fr"
+          ],
+          "reply": {
+            "parent": {
+              "cid": "bafyreicaym3levwttdqfoxcs3rvek4wyx5zndqu3hbip2hyr4gftewwnky",
+              "uri": "at://did:plc:oklkinuievllgvhrv2nia4gu/app.bsky.feed.post/3llorpeiynx26"
+            },
+            "root": {
+              "cid": "bafyreicaym3levwttdqfoxcs3rvek4wyx5zndqu3hbip2hyr4gftewwnky",
+              "uri": "at://did:plc:oklkinuievllgvhrv2nia4gu/app.bsky.feed.post/3llorpeiynx26"
+            }
+          },
+          "text": "Je connaissais xsv pour ce type d'usage. xan a l'air plus orienté TUI que CLI si je comprends bien. github.com/BurntSushi/xsv"
+        },
+        "embed": {
+          "$type": "app.bsky.embed.external#view",
+          "external": {
+            "uri": "https://github.com/BurntSushi/xsv",
+            "title": "GitHub - BurntSushi/xsv: A fast CSV command line toolkit written in Rust.",
+            "description": "A fast CSV command line toolkit written in Rust. Contribute to BurntSushi/xsv development by creating an account on GitHub.",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oqynptsozcuxi52v5srdwau2/bafkreiep7f7qn33odg3vbnm5x7k4u3ufpui2s3d4jusmh636tmnpavrbt4@jpeg"
+          }
+        },
+        "replyCount": 1,
+        "repostCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "indexedAt": "2025-03-31T18:31:09.076Z",
+        "viewer": {
+          "threadMuted": false,
+          "embeddingDisabled": false
+        },
+        "labels": [],
+        "$type": "app.bsky.feed.defs#postView"
+      },
+      "grandparentAuthor": {
+        "did": "did:plc:oklkinuievllgvhrv2nia4gu",
+        "handle": "bearstech.com",
+        "displayName": "Bearstech",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreido6n7zkc7ogsw4vrtpnqw6cfjo2hxccde5jltrxqpfhpowpqiouy@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "following"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-07-03T16:21:05.120Z"
+      }
+    }
+  },
+  {
+    "post": {
+      "uri": "at://did:plc:oklkinuievllgvhrv2nia4gu/app.bsky.feed.post/3llorpeiynx26",
+      "cid": "bafyreicaym3levwttdqfoxcs3rvek4wyx5zndqu3hbip2hyr4gftewwnky",
+      "author": {
+        "did": "did:plc:oklkinuievllgvhrv2nia4gu",
+        "handle": "bearstech.com",
+        "displayName": "Bearstech",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreido6n7zkc7ogsw4vrtpnqw6cfjo2hxccde5jltrxqpfhpowpqiouy@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "following"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-07-03T16:21:05.120Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-31T16:28:55.000Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "Vue de xan en action",
+              "aspectRatio": {
+                "height": 860,
+                "width": 1534
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreib2rq2p3sqyxyvlxlo2xtkpcw4ovc2zga5nsikecexhzlpwkpie5e"
+                },
+                "mimeType": "image/png",
+                "size": 437843
+              }
+            },
+            {
+              "alt": "Interface xan",
+              "aspectRatio": {
+                "height": 851,
+                "width": 1498
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreibme6u3kzbci6zs3eml2hljdv6vsq27oe54sjk7gifddo24vel4hm"
+                },
+                "mimeType": "image/png",
+                "size": 246306
+              }
+            }
+          ]
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://github.com/medialab/xan"
+              }
+            ],
+            "index": {
+              "byteEnd": 198,
+              "byteStart": 175
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://medialab.sciencespo.fr/actu/a-love-letter-to-the-csv-format/"
+              }
+            ],
+            "index": {
+              "byteEnd": 278,
+              "byteStart": 255
+            }
+          }
+        ],
+        "text": "Xan : un outil en CLI Open Source, conçu pour manipuler les CSV développé chez Sciences Po Medialab 🇫🇷\n\n\"The CSV magician\"\n\nVersion actuelle 0.48.0\n\n👉 Le projet : github.com/medialab/xan\n👉 Lire l'article \"A love letter to the CSV format\" : medialab.sciencespo...."
+      },
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreib2rq2p3sqyxyvlxlo2xtkpcw4ovc2zga5nsikecexhzlpwkpie5e@jpeg",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreib2rq2p3sqyxyvlxlo2xtkpcw4ovc2zga5nsikecexhzlpwkpie5e@jpeg",
+            "alt": "Vue de xan en action",
+            "aspectRatio": {
+              "height": 860,
+              "width": 1534
+            }
+          },
+          {
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreibme6u3kzbci6zs3eml2hljdv6vsq27oe54sjk7gifddo24vel4hm@jpeg",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreibme6u3kzbci6zs3eml2hljdv6vsq27oe54sjk7gifddo24vel4hm@jpeg",
+            "alt": "Interface xan",
+            "aspectRatio": {
+              "height": 851,
+              "width": 1498
+            }
+          }
+        ]
+      },
+      "replyCount": 3,
+      "repostCount": 11,
+      "likeCount": 30,
+      "quoteCount": 0,
+      "indexedAt": "2025-03-31T16:28:56.981Z",
+      "viewer": {
+        "repost": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.repost/3llr5oe5g652z",
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    },
+    "reason": {
+      "$type": "app.bsky.feed.defs#reasonRepost",
+      "by": {
+        "did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
+        "handle": "yomguithereal.bsky.social",
+        "displayName": "Guillaume Plique",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
+        "viewer": {
+          "muted": false,
+          "blockedBy": false,
+          "following": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.graph.follow/3lbenienv2t2c",
+          "followedBy": "at://did:plc:5klvtukw5fucxsrkjldhrjxs/app.bsky.graph.follow/3kc75kdrn322u"
+        },
+        "labels": [],
+        "createdAt": "2023-10-10T14:58:21.049Z"
+      },
+      "indexedAt": "2025-03-31T19:12:11.153Z"
+    }
+  },
+  {
+    "post": {
+      "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llyse5an5k2c",
+      "cid": "bafyreiemziwnmvufg4x6hjeeqrew7yuq3myocbf4noroonlzslztwmohpy",
+      "author": {
+        "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+        "handle": "boogheta.bsky.social",
+        "displayName": "Benjamin Ooghe-Tabanou",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-09-01T13:36:06.055Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-04-04T16:07:10.887Z",
+        "langs": [
+          "fr"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreibub46ahhsnergt2yna5avhpg2afovevhacgtj5ioi6ft2zqsmhgu",
+            "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27"
+          },
+          "root": {
+            "cid": "bafyreibub46ahhsnergt2yna5avhpg2afovevhacgtj5ioi6ft2zqsmhgu",
+            "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27"
+          }
+        },
+        "text": "Testing a simple answer without any grand parent"
+      },
+      "replyCount": 0,
+      "repostCount": 0,
+      "likeCount": 0,
+      "quoteCount": 0,
+      "indexedAt": "2025-04-04T16:07:11.283Z",
+      "viewer": {
+        "threadMuted": false,
+        "replyDisabled": false,
+        "embeddingDisabled": false,
+        "pinned": false
+      },
+      "labels": []
+    },
+    "reply": {
+      "root": {
+        "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27",
+        "cid": "bafyreibub46ahhsnergt2yna5avhpg2afovevhacgtj5ioi6ft2zqsmhgu",
+        "author": {
+          "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+          "handle": "boogheta.bsky.social",
+          "displayName": "Benjamin Ooghe-Tabanou",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [],
+          "createdAt": "2023-09-01T13:36:06.055Z"
+        },
+        "record": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2025-04-04T08:37:04.975Z",
+          "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {
+              "cid": "bafyreig7zfz4bgk5uwp333wnbyd2cdqfgtk5mtkcpd43jqcxc7fle62lqy",
+              "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j"
+            }
+          },
+          "langs": [
+            "fr"
+          ],
+          "text": "And let's quote a threadgated post to check whether that info is indeed missing from quoted data"
+        },
+        "embed": {
+          "$type": "app.bsky.embed.record#view",
+          "record": {
+            "$type": "app.bsky.embed.record#viewRecord",
+            "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j",
+            "cid": "bafyreig7zfz4bgk5uwp333wnbyd2cdqfgtk5mtkcpd43jqcxc7fle62lqy",
+            "author": {
+              "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+              "handle": "boogheta.bsky.social",
+              "displayName": "Benjamin Ooghe-Tabanou",
+              "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+              "viewer": {
+                "muted": false,
+                "blockedBy": false
+              },
+              "labels": [],
+              "createdAt": "2023-09-01T13:36:06.055Z"
+            },
+            "value": {
+              "$type": "app.bsky.feed.post",
+              "createdAt": "2025-04-04T08:22:11.273Z",
+              "embed": {
+                "$type": "app.bsky.embed.recordWithMedia",
+                "media": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "description": "ALT: a man wearing a blue shirt that says pressed van",
+                    "thumb": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 401404
+                    },
+                    "title": "a man wearing a blue shirt that says pressed van",
+                    "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498"
+                  }
+                },
+                "record": {
+                  "$type": "app.bsky.embed.record",
+                  "record": {
+                    "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+                    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j"
+                  }
+                }
+              },
+              "langs": [
+                "fr"
+              ],
+              "text": "Still one potential case not tested: native gifs with a quote! 🫣"
+            },
+            "labels": [],
+            "likeCount": 0,
+            "replyCount": 0,
+            "repostCount": 0,
+            "quoteCount": 1,
+            "indexedAt": "2025-04-04T08:22:17.370Z",
+            "embeds": [
+              {
+                "$type": "app.bsky.embed.recordWithMedia#view",
+                "media": {
+                  "$type": "app.bsky.embed.external#view",
+                  "external": {
+                    "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498",
+                    "title": "a man wearing a blue shirt that says pressed van",
+                    "description": "ALT: a man wearing a blue shirt that says pressed van",
+                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna@jpeg"
+                  }
+                },
+                "record": {
+                  "record": {
+                    "$type": "app.bsky.embed.record#viewRecord",
+                    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j",
+                    "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+                    "author": {
+                      "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+                      "handle": "boogheta.bsky.social",
+                      "displayName": "Benjamin Ooghe-Tabanou",
+                      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+                      "viewer": {
+                        "muted": false,
+                        "blockedBy": false
+                      },
+                      "labels": [],
+                      "createdAt": "2023-09-01T13:36:06.055Z"
+                    },
+                    "value": {
+                      "$type": "app.bsky.feed.post",
+                      "createdAt": "2025-04-03T14:47:11.203Z",
+                      "embed": {
+                        "$type": "app.bsky.embed.record",
+                        "record": {
+                          "cid": "bafyreiggf67yfaimp2ns7r2b66tdsmzjcodv34xwwyfywtuwpr27zpebbu",
+                          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u"
+                        }
+                      },
+                      "facets": [
+                        {
+                          "features": [
+                            {
+                              "$type": "app.bsky.richtext.facet#tag",
+                              "tag": "MoreAPItests"
+                            }
+                          ],
+                          "index": {
+                            "byteEnd": 13,
+                            "byteStart": 0
+                          }
+                        },
+                        {
+                          "features": [
+                            {
+                              "$type": "app.bsky.richtext.facet#link",
+                              "uri": "https://bsky.app/profile/boogheta.bsky.social/post/3ljfbuxbsvs2u"
+                            }
+                          ],
+                          "index": {
+                            "byteEnd": 72,
+                            "byteStart": 48
+                          }
+                        }
+                      ],
+                      "langs": [
+                        "fr"
+                      ],
+                      "text": "#MoreAPItests\nLet's first quote a post manually\nbsky.app/profile/boog...\nThen detach the quote, and add a threadgate and quotegate"
+                    },
+                    "labels": [],
+                    "likeCount": 1,
+                    "replyCount": 0,
+                    "repostCount": 0,
+                    "quoteCount": 2,
+                    "indexedAt": "2025-04-03T14:47:11.474Z"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "replyCount": 1,
+        "repostCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "indexedAt": "2025-04-04T08:37:05.571Z",
+        "viewer": {
+          "threadMuted": false,
+          "replyDisabled": false,
+          "embeddingDisabled": false,
+          "pinned": false
+        },
+        "labels": [],
+        "threadgate": {
+          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.threadgate/3llxz7cfn6s27",
+          "cid": "bafyreidhyedrxg53lh72exscyb4zs36fr5ulqma2qhpa6auedgikommlni",
+          "record": {
+            "$type": "app.bsky.feed.threadgate",
+            "allow": [
+              {
+                "$type": "app.bsky.feed.threadgate#mentionRule"
+              }
+            ],
+            "createdAt": "2025-04-04T08:38:09.423Z",
+            "hiddenReplies": [],
+            "post": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27"
+          },
+          "lists": []
+        },
+        "$type": "app.bsky.feed.defs#postView"
+      },
+      "parent": {
+        "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27",
+        "cid": "bafyreibub46ahhsnergt2yna5avhpg2afovevhacgtj5ioi6ft2zqsmhgu",
+        "author": {
+          "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+          "handle": "boogheta.bsky.social",
+          "displayName": "Benjamin Ooghe-Tabanou",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [],
+          "createdAt": "2023-09-01T13:36:06.055Z"
+        },
+        "record": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2025-04-04T08:37:04.975Z",
+          "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {
+              "cid": "bafyreig7zfz4bgk5uwp333wnbyd2cdqfgtk5mtkcpd43jqcxc7fle62lqy",
+              "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j"
+            }
+          },
+          "langs": [
+            "fr"
+          ],
+          "text": "And let's quote a threadgated post to check whether that info is indeed missing from quoted data"
+        },
+        "embed": {
+          "$type": "app.bsky.embed.record#view",
+          "record": {
+            "$type": "app.bsky.embed.record#viewRecord",
+            "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxyeo3zdc2j",
+            "cid": "bafyreig7zfz4bgk5uwp333wnbyd2cdqfgtk5mtkcpd43jqcxc7fle62lqy",
+            "author": {
+              "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+              "handle": "boogheta.bsky.social",
+              "displayName": "Benjamin Ooghe-Tabanou",
+              "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+              "viewer": {
+                "muted": false,
+                "blockedBy": false
+              },
+              "labels": [],
+              "createdAt": "2023-09-01T13:36:06.055Z"
+            },
+            "value": {
+              "$type": "app.bsky.feed.post",
+              "createdAt": "2025-04-04T08:22:11.273Z",
+              "embed": {
+                "$type": "app.bsky.embed.recordWithMedia",
+                "media": {
+                  "$type": "app.bsky.embed.external",
+                  "external": {
+                    "description": "ALT: a man wearing a blue shirt that says pressed van",
+                    "thumb": {
+                      "$type": "blob",
+                      "ref": {
+                        "$link": "bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna"
+                      },
+                      "mimeType": "image/jpeg",
+                      "size": 401404
+                    },
+                    "title": "a man wearing a blue shirt that says pressed van",
+                    "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498"
+                  }
+                },
+                "record": {
+                  "$type": "app.bsky.embed.record",
+                  "record": {
+                    "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+                    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j"
+                  }
+                }
+              },
+              "langs": [
+                "fr"
+              ],
+              "text": "Still one potential case not tested: native gifs with a quote! 🫣"
+            },
+            "labels": [],
+            "likeCount": 0,
+            "replyCount": 0,
+            "repostCount": 0,
+            "quoteCount": 1,
+            "indexedAt": "2025-04-04T08:22:17.370Z",
+            "embeds": [
+              {
+                "$type": "app.bsky.embed.recordWithMedia#view",
+                "media": {
+                  "$type": "app.bsky.embed.external#view",
+                  "external": {
+                    "uri": "https://media.tenor.com/b-291TsIh3EAAAAC/tim-robinson-i-think-you-should-leave.gif?hh=373&ww=498",
+                    "title": "a man wearing a blue shirt that says pressed van",
+                    "description": "ALT: a man wearing a blue shirt that says pressed van",
+                    "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreic46z7bl4qm3tozmgkv2bxazglnbsijgxy5km3vonnj6toln7xbna@jpeg"
+                  }
+                },
+                "record": {
+                  "record": {
+                    "$type": "app.bsky.embed.record#viewRecord",
+                    "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llw5g6h6ps2j",
+                    "cid": "bafyreihmgieoeaa63ein3fyf7kbmf6h77sej3upo4hm5p4ed3v4xxzddwq",
+                    "author": {
+                      "did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
+                      "handle": "boogheta.bsky.social",
+                      "displayName": "Benjamin Ooghe-Tabanou",
+                      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
+                      "viewer": {
+                        "muted": false,
+                        "blockedBy": false
+                      },
+                      "labels": [],
+                      "createdAt": "2023-09-01T13:36:06.055Z"
+                    },
+                    "value": {
+                      "$type": "app.bsky.feed.post",
+                      "createdAt": "2025-04-03T14:47:11.203Z",
+                      "embed": {
+                        "$type": "app.bsky.embed.record",
+                        "record": {
+                          "cid": "bafyreiggf67yfaimp2ns7r2b66tdsmzjcodv34xwwyfywtuwpr27zpebbu",
+                          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3ljfbuxbsvs2u"
+                        }
+                      },
+                      "facets": [
+                        {
+                          "features": [
+                            {
+                              "$type": "app.bsky.richtext.facet#tag",
+                              "tag": "MoreAPItests"
+                            }
+                          ],
+                          "index": {
+                            "byteEnd": 13,
+                            "byteStart": 0
+                          }
+                        },
+                        {
+                          "features": [
+                            {
+                              "$type": "app.bsky.richtext.facet#link",
+                              "uri": "https://bsky.app/profile/boogheta.bsky.social/post/3ljfbuxbsvs2u"
+                            }
+                          ],
+                          "index": {
+                            "byteEnd": 72,
+                            "byteStart": 48
+                          }
+                        }
+                      ],
+                      "langs": [
+                        "fr"
+                      ],
+                      "text": "#MoreAPItests\nLet's first quote a post manually\nbsky.app/profile/boog...\nThen detach the quote, and add a threadgate and quotegate"
+                    },
+                    "labels": [],
+                    "likeCount": 1,
+                    "replyCount": 0,
+                    "repostCount": 0,
+                    "quoteCount": 2,
+                    "indexedAt": "2025-04-03T14:47:11.474Z"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "replyCount": 1,
+        "repostCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "indexedAt": "2025-04-04T08:37:05.571Z",
+        "viewer": {
+          "threadMuted": false,
+          "replyDisabled": false,
+          "embeddingDisabled": false,
+          "pinned": false
+        },
+        "labels": [],
+        "threadgate": {
+          "uri": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.threadgate/3llxz7cfn6s27",
+          "cid": "bafyreidhyedrxg53lh72exscyb4zs36fr5ulqma2qhpa6auedgikommlni",
+          "record": {
+            "$type": "app.bsky.feed.threadgate",
+            "allow": [
+              {
+                "$type": "app.bsky.feed.threadgate#mentionRule"
+              }
+            ],
+            "createdAt": "2025-04-04T08:38:09.423Z",
+            "hiddenReplies": [],
+            "post": "at://did:plc:hbbrkyeqnurr25zqve3a5udb/app.bsky.feed.post/3llxz7cfn6s27"
+          },
+          "lists": []
+        },
+        "$type": "app.bsky.feed.defs#postView"
+      }
+    }
   }
 ]

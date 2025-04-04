@@ -20,9 +20,8 @@ valid_record_keys = ["$type", "createdAt", "text"]
 valid_author_keys = ["did", "handle", "displayName", "avatar", "createdAt"]
 
 
-def validate_post_payload(post):
-    if not isinstance(post, dict):
-        return False, f"payload is not a dictionary: {post}"
+def validate_post_payload(data):
+    post = data.get("post", data)
 
     for key in valid_post_keys:
         if key not in post:
@@ -39,7 +38,9 @@ def validate_post_payload(post):
             )
 
     if post["record"].get("$type") != "app.bsky.feed.post":
-        return False, "payload's record $type is not a post: %s" % post["record"].get("$type")
+        return False, "payload's record $type is not a post: %s" % post["record"].get(
+            "$type"
+        )
 
     if not isinstance(post["author"], dict):
         return False, "payload's author is not a dictionary: %s" % post["author"]

@@ -154,7 +154,7 @@ def normalize_post(
 
 
 def normalize_post(
-    data: Dict,
+    payload: Dict,
     locale: Optional[str] = None,
     extract_referenced_posts: bool = False,
     collection_source: Optional[str] = None,
@@ -164,7 +164,7 @@ def normalize_post(
     cleanup and optimize some fields.
 
     Args:
-        data (dict): Post json dict from Bluesky API.
+        payload (dict): post or feed payload json dict from Bluesky API.
         locale (pytz.timezone, optional): Timezone for date conversions.
         extract_referenced_posts (bool, optional): Whether to return only
             the original post or the full list of posts found in the given
@@ -179,12 +179,26 @@ def normalize_post(
 
     """
 
-    valid, error = validate_post_payload(data)
+    if not isinstance(payload, dict):
+        raise BlueskyPayloadError(
+            "UNKNOWN", f"data provided to normalize_post is not a dictionary: {payload}"
+        )
+
+    valid, error = validate_post_payload(payload)
     if not valid:
         raise BlueskyPayloadError(
-            data.get("uri", "UNKNOWN"),
-            f"data provided to normalize_post is not a standard Bluesky post payload:\n{error}",
+            payload.get("uri", payload.get("post", {}).get("uri", "UNKNOWN")),
+            f"data provided to normalize_post is not a standard Bluesky post or feed payload:\n{error}",
         )
+
+    if "post" in payload:
+        data = payload["post"]
+        reply_data = payload.get("reply")
+        repost_data = payload.get("reason")
+    else:
+        data = payload
+        reply_data = None
+        repost_data = None
 
     if extract_referenced_posts:
         referenced_posts = []
@@ -306,8 +320,6 @@ def normalize_post(
             post["to_root_post_url"] = format_post_url(
                 post["to_root_user_did"], post["to_root_post_did"]
             )
-
-    # TODO : handle reposts when we can find some in payloads (from user timeline maybe?)
 
     # Handle quotes & medias
     media_ids = set()
@@ -469,6 +481,7 @@ def normalize_post(
             # Take better quoted url with user_handle
             post["quoted_url"] = quoted["url"]
             post["quoted_user_handle"] = quoted["user_handle"]
+            post["quoted_created_at"] = quoted["local_time"]
             post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
 
             # Remove quoted link from post links if present in text
@@ -532,6 +545,20 @@ def normalize_post(
     #     post["quotes_rules_timestamp_utc"], post["quotes_rules_created_at"] = get_dates(data["postgate"]["record"]["createdAt"], locale=locale, source="bluesky")
     #     post["detached_quotes_uris"] = data["postgate"]["record"].get("detachedEmbeddingUris", [])
 
+    # Handle reposts when data comes from a feed
+    if repost_data:
+        if not repost_data["$type"].endswith("reasonRepost"):
+            raise BlueskyPayloadError(
+                post["url"],
+                "unusual reason for including a post within a feed: %s" % repost_data,
+            )
+
+        post["repost_by_user_did"] = repost_data["by"]["did"]
+        post["repost_by_user_handle"] = repost_data["by"]["handle"]
+        post["repost_timestamp_utc"], post["repost_created_at"] = get_dates(
+            repost_data["indexedAt"], locale=locale, source="bluesky"
+        )
+
     post["text"] = text.decode("utf-8")
 
     if collection_source is not None:
@@ -539,6 +566,30 @@ def normalize_post(
     post["match_query"] = collection_source not in ["thread", "quote"]
 
     if extract_referenced_posts:
+        # Handle thread posts when data comes from a feed
+        if reply_data:
+            if "root" in reply_data:
+                nested = normalize_post(
+                    reply_data["root"],
+                    locale=locale,
+                    extract_referenced_posts=True,
+                    collection_source="thread",
+                )
+                referenced_posts.extend(nested)
+            if "parent" in reply_data:
+                nested = normalize_post(
+                    reply_data["parent"],
+                    locale=locale,
+                    extract_referenced_posts=True,
+                    collection_source="thread",
+                )
+                referenced_posts.extend(nested)
+            if "grandparentAuthor" in reply_data:
+                # TODO ? Shall we do anything from that?
+                pass
+
+        # TODO: cleanup/unify referenced_posts coming in duplicate from threads & quotes
+
         assert referenced_posts is not None
         return referenced_posts + [post]  # type: ignore
 
