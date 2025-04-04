@@ -50,6 +50,14 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
     }
 
 
+def parse_post_url(url):
+    """Returns a tuple of (author_handle/did, post_did) from an https://bsky.app post URL"""
+
+    if not url.startswith("https://bsky.app/profile/") and "/post/" not in url:
+        raise Exception(f"Not a Bluesky post url: {url}")
+    return url[25:].split("/post/")
+
+
 def parse_post_uri(uri):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
@@ -104,7 +112,9 @@ def prepare_video_as_media(video_data):
     }
 
 
-def prepare_quote_data(post, embed_quote, card_data):
+def prepare_quote_data(post, embed_quote, card_data, links):
+    # Warning: mutates post and links
+
     post["quoted_cid"] = embed_quote["cid"]
     post["quoted_uri"] = embed_quote["uri"]
     post["quoted_user_did"], post["quoted_did"] = parse_post_uri(post["quoted_uri"])
@@ -116,9 +126,27 @@ def prepare_quote_data(post, embed_quote, card_data):
     if card_data:
         if card_data.get("detached", False):
             post["quoted_status"] = "detached"
+
         else:
             quoted_data = deepcopy(card_data)
-    return post, quoted_data
+
+    # Grab user handle and cleanup links when no quote data but url in text
+    if not quoted_data:
+        for link in links:
+            if link.startswith("https://bsky.app/profile/") and link.endswith(
+                post["quoted_did"]
+            ):
+                # Take better quoted url with user_handle
+                post["quoted_url"] = link
+                break
+
+        # Remove quoted link from post links
+        links.remove(post["quoted_url"])
+
+        # Extract user handle from url
+        post["quoted_user_handle"], _ = parse_post_url(post["quoted_url"])
+
+    return (post, quoted_data, links)
 
 
 # TODO :
@@ -319,16 +347,17 @@ def normalize_post(
 
         # Quote
         if embed["$type"].endswith(".record"):
-            post, quoted_data = prepare_quote_data(
-                post, embed["record"], data.get("embed", {}).get("record")
+            post, quoted_data, links = prepare_quote_data(
+                post, embed["record"], data.get("embed", {}).get("record"), links
             )
 
         # Quote with medias
         if embed["$type"].endswith(".recordWithMedia"):
-            post, quoted_data = prepare_quote_data(
+            post, quoted_data, links = prepare_quote_data(
                 post,
                 embed["record"]["record"],
                 data.get("embed", {}).get("record", {}).get("record"),
+                links,
             )
 
             # Links from cards
