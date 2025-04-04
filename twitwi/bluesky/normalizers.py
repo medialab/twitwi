@@ -1,19 +1,23 @@
-import re
 from copy import deepcopy
 from typing import List, Dict, Union, Optional, Literal, overload
 
+from twitwi.exceptions import BlueskyPayloadError
 from twitwi.utils import (
     get_collection_time,
     get_dates,
     custom_normalize_url,
     custom_get_normalized_hostname,
 )
-from twitwi.bluesky.utils import validate_post_payload
+from twitwi.bluesky.utils import (
+    validate_post_payload,
+    valid_embed_type,
+    format_profile_url,
+    format_post_url,
+    parse_post_url,
+    parse_post_uri,
+    format_media_url,
+)
 from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
-
-
-def format_profile_url(user_handle_or_did):
-    return f"https://bsky.app/profile/{user_handle_or_did}"
 
 
 def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfile:
@@ -50,44 +54,9 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
     }
 
 
-def parse_post_url(url):
-    """Returns a tuple of (author_handle/did, post_did) from an https://bsky.app post URL"""
-
-    if not url.startswith("https://bsky.app/profile/") and "/post/" not in url:
-        raise Exception(f"Not a Bluesky post url: {url}")
-    return url[25:].split("/post/")
-
-
-def parse_post_uri(uri):
-    """Returns a tuple of (author_did, post_did) from an at:// post URI"""
-
-    if not uri.startswith("at://") and "/app.bsky.feed.post/" not in uri:
-        raise Exception(f"Not a Bluesky post uri: {uri}")
-    return uri[5:].split("/app.bsky.feed.post/")
-
-
-def format_post_url(user_handle_or_did, post_did):
-    return f"https://bsky.app/profile/{user_handle_or_did}/post/{post_did}"
-
-
-def format_media_url(user_did, media_cid, mime_type):
-    media_type = mime_type.split("/")[1]
-    if mime_type.startswith("image"):
-        media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@{media_type}"
-        media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@{media_type}"
-    elif mime_type.startswith("video"):
-        media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
-        media_thumb = (
-            f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
-        )
-    else:
-        raise Exception("Unusual media mimeType for post : %s" % (mime_type))
-    return media_url, media_thumb
-
-
-def prepare_native_gif_as_media(gif_data, user_did):
+def prepare_native_gif_as_media(gif_data, user_did, source):
     media_cid = gif_data["thumb"]["ref"]["$link"]
-    _, thumbnail = format_media_url(user_did, media_cid, "image/jpeg")
+    _, thumbnail = format_media_url(user_did, media_cid, "image/jpeg", source)
     return {
         "id": media_cid,
         "type": "image/gif",
@@ -127,7 +96,9 @@ def prepare_quote_data(embed_quote, card_data, post, links):
 
     post["quoted_cid"] = embed_quote["cid"]
     post["quoted_uri"] = embed_quote["uri"]
-    post["quoted_user_did"], post["quoted_did"] = parse_post_uri(post["quoted_uri"])
+    post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
+        post["quoted_uri"], post["url"]
+    )
 
     # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
     post["quoted_url"] = format_post_url(post["quoted_user_did"], post["quoted_did"])
@@ -154,18 +125,14 @@ def prepare_quote_data(embed_quote, card_data, post, links):
         links.remove(post["quoted_url"])
 
         # Extract user handle from url
-        post["quoted_user_handle"], _ = parse_post_url(post["quoted_url"])
+        post["quoted_user_handle"], _ = parse_post_url(post["quoted_url"], post["url"])
 
     return (post, quoted_data, links)
 
 
 # TODO :
-# - give more debugging info on source in all Exception raised
 # - complete formatters
 # - add tests for normalizer & formatter
-
-
-re_embed_types = re.compile(r"\.(record|recordWithMedia|images|video|external)$")
 
 
 @overload
@@ -212,9 +179,11 @@ def normalize_post(
 
     """
 
-    if not validate_post_payload(data):
-        raise TypeError(
-            "data provided to normalize_post is not a standard Bluesky post payload"
+    valid, error = validate_post_payload(data)
+    if not valid:
+        raise BlueskyPayloadError(
+            data.get("uri", "UNKNOWN"),
+            f"data provided to normalize_post is not a standard Bluesky post payload:\n{error}",
         )
 
     if extract_referenced_posts:
@@ -244,8 +213,10 @@ def normalize_post(
     post["url"] = format_post_url(post["user_handle"], post["did"])
 
     if post["user_did"] != data["author"]["did"]:
-        raise Exception(
-            f"Inconsistent user did between Bluesky post uri and post's author metadata: {data['uri']}"
+        raise BlueskyPayloadError(
+            post["url"],
+            "inconsistent user_did between Bluesky post's uri and post's author metadata: %s %s"
+            % (data["uri"], data["author"]),
         )
 
     # Handle user metadata
@@ -270,8 +241,10 @@ def normalize_post(
     links_to_replace = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
-            raise Exception(
-                "Unusual facet content for post %s: %s" % (post["url"], facet)
+            raise BlueskyPayloadError(
+                post["url"],
+                "unusual record facet content with more or less than a unique feature: %s"
+                % facet,
             )
 
         feat = facet["features"][0]
@@ -304,7 +277,9 @@ def normalize_post(
             )
 
         else:
-            raise Exception("Unusual facet type for post %s: %s" % (post["url"], feat))
+            raise BlueskyPayloadError(
+                post["url"], "unusual record facet feature $type: %s" % feat
+            )
     post["hashtags"] = sorted(hashtags)
 
     # Rewrite full links within post's text
@@ -317,7 +292,7 @@ def normalize_post(
             post["to_post_cid"] = data["record"]["reply"]["parent"]["cid"]
             post["to_post_uri"] = data["record"]["reply"]["parent"]["uri"]
             post["to_user_did"], post["to_post_did"] = parse_post_uri(
-                post["to_post_uri"]
+                post["to_post_uri"], post["url"]
             )
             post["to_post_url"] = format_post_url(
                 post["to_user_did"], post["to_post_did"]
@@ -326,7 +301,7 @@ def normalize_post(
             post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
             post["to_root_post_uri"] = data["record"]["reply"]["root"]["uri"]
             post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(
-                post["to_root_post_uri"]
+                post["to_root_post_uri"], post["url"]
             )
             post["to_root_post_url"] = format_post_url(
                 post["to_root_user_did"], post["to_root_post_did"]
@@ -346,9 +321,9 @@ def normalize_post(
         media_data = []
         extra_links = []
 
-        if not re_embed_types.search(embed["$type"]):
-            raise Exception(
-                "Unusual record.embed type for post %s: %s" % (post["url"], embed)
+        if not valid_embed_type(embed["$type"]):
+            raise BlueskyPayloadError(
+                post["url"], "unusual record embed $type: %s" % embed
             )
 
         # Links from cards
@@ -358,7 +333,9 @@ def normalize_post(
             # Handle native gifs as medias
             if link.startswith("https://media.tenor.com/"):
                 media_data.append(
-                    prepare_native_gif_as_media(embed["external"], post["user_did"])
+                    prepare_native_gif_as_media(
+                        embed["external"], post["user_did"], post["url"]
+                    )
                 )
 
             # Extra card links sometimes missing from facets & text due to manual action in post form
@@ -399,7 +376,7 @@ def normalize_post(
                 if link.startswith("https://media.tenor.com/"):
                     media_data.append(
                         prepare_native_gif_as_media(
-                            embed["media"]["external"], post["user_did"]
+                            embed["media"]["external"], post["user_did"], post["url"]
                         )
                     )
 
@@ -423,9 +400,10 @@ def normalize_post(
                 media_data.append(prepare_video_as_media(embed["media"]["video"]))
 
             else:
-                raise Exception(
-                    "Encountered unhandled media type from a recordWithMedia: %s"
-                    % embed["media"]["$type"]
+                raise BlueskyPayloadError(
+                    post["url"],
+                    "unusual record embed media $type from a recordWithMedia: %s"
+                    % embed,
                 )
 
         # Process extra links
@@ -445,7 +423,7 @@ def normalize_post(
                     media_thumb = media["thumb"]
                 else:
                     media_url, media_thumb = format_media_url(
-                        post["user_did"], media["id"], media_type
+                        post["user_did"], media["id"], media_type, post["url"]
                     )
                 post["media_urls"].append(media_url)
                 post["media_thumbnails"].append(media_thumb)
@@ -460,15 +438,21 @@ def normalize_post(
         # Process quotes
         if quoted_data:
             if quoted_data["cid"] != post["quoted_cid"]:
-                raise Exception(
-                    "Inconsistent quote cid found between record.embed.record.cid & embed.record.cid"
+                raise BlueskyPayloadError(
+                    post["url"],
+                    "inconsistent quote cid found between record.embed.record.cid & embed.record.cid: %s %s"
+                    % (post["quoted_cid"], quoted_data),
                 )
 
             quoted_data["record"] = quoted_data["value"]
             del quoted_data["value"]
             if "embeds" in quoted_data and len(quoted_data["embeds"]):
                 if len(quoted_data["embeds"]) != 1:
-                    raise Exception("Unusual multiple embeds found within a post!")
+                    raise BlueskyPayloadError(
+                        post["url"],
+                        "unusual multiple embeds found within a quoted post: %s"
+                        % quoted_data["embeds"],
+                    )
                 quoted_data["embed"] = quoted_data["embeds"][0]
                 del quoted_data["embeds"]
 

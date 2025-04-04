@@ -15,3 +15,10 @@ class TwitterPayloadV2IncompleteIncludesError(TwitwiError):
         self.kind = kind
         self.key = key
         super().__init__("{!r} ({})".format(key, kind))
+
+
+class BlueskyPayloadError(TwitwiError):
+    def __init__(self, source, message):
+        self.source = source
+        self.message = message
+        super().__init__(f"Error while processing Bluesky post {source}:\n{message}")
