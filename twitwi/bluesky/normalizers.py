@@ -77,6 +77,50 @@ def format_media_url(user_did, media_cid, mime_type):
     return media_url, media_thumb
 
 
+def prepare_native_gif_as_media(gif_data, user_did):
+    media_cid = gif_data["thumb"]["ref"]["$link"]
+    _, thumbnail = format_media_url(user_did, media_cid, "image/jpeg")
+    return {
+        "id": media_cid,
+        "type": "image/gif",
+        "alt": gif_data["title"],
+        "url": gif_data["uri"],
+        "thumb": thumbnail,
+    }
+
+
+def prepare_image_as_media(image_data):
+    return {
+        "id": image_data["image"]["ref"]["$link"],
+        "type": image_data["image"]["mimeType"],
+        "alt": image_data["alt"],
+    }
+
+
+def prepare_video_as_media(video_data):
+    return {
+        "id": video_data["ref"]["$link"],
+        "type": video_data["mimeType"],
+    }
+
+
+def prepare_quote_data(post, embed_quote, card_data):
+    post["quoted_cid"] = embed_quote["cid"]
+    post["quoted_uri"] = embed_quote["uri"]
+    post["quoted_user_did"], post["quoted_did"] = parse_post_uri(post["quoted_uri"])
+
+    # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
+    post["quoted_url"] = format_post_url(post["quoted_user_did"], post["quoted_did"])
+
+    quoted_data = None
+    if card_data:
+        if card_data.get("detached", False):
+            post["quoted_status"] = "detached"
+        else:
+            quoted_data = deepcopy(card_data)
+    return post, quoted_data
+
+
 # TODO :
 # - give more debugging info on source in all Exception raised
 # - complete formatters
@@ -175,9 +219,12 @@ def normalize_post(
             )
 
         feat = facet["features"][0]
+
+        # Hashtags
         if feat["$type"].endswith("#tag"):
             hashtags.add(feat["tag"].strip().lower())
 
+        # Mentions
         elif feat["$type"].endswith("#mention"):
             if feat["did"] not in post["mentioned_user_dids"]:
                 post["mentioned_user_dids"].append(feat["did"])
@@ -189,6 +236,7 @@ def normalize_post(
                 )
                 post["mentioned_user_handles"].append(handle)
 
+        # Links
         elif feat["$type"].endswith("#link"):
             links.add(custom_normalize_url(feat["uri"]))
             links_to_replace.append(
@@ -232,10 +280,10 @@ def normalize_post(
 
     # Handle quotes & medias
     media_ids = set()
-    media_urls = []
-    media_thumbs = []
-    media_types = []
-    media_alt_texts = []
+    post["media_urls"] = []
+    post["media_thumbnails"] = []
+    post["media_types"] = []
+    post["media_alt_texts"] = []
     if "embed" in data["record"]:
         embed = data["record"]["embed"]
         quoted_data = None
@@ -247,134 +295,67 @@ def normalize_post(
                 "Unusual record.embed type for post %s: %s" % (post["url"], embed)
             )
 
-        # Link from cards (includes native gif links and links sometimes not already present within facets & text due to manual action in post form)
+        # Links from cards
         if embed["$type"].endswith(".external"):
             link = embed["external"]["uri"]
 
             # Handle native gifs as medias
             if link.startswith("https://media.tenor.com/"):
-                media_cid = embed["external"]["thumb"]["ref"]["$link"]
-                _, thumbnail = format_media_url(
-                    post["user_did"], media_cid, "image/jpeg"
-                )
                 media_data.append(
-                    {
-                        "id": media_cid,
-                        "type": "image/gif",
-                        "alt": embed["external"]["title"],
-                        "url": embed["external"]["uri"],
-                        "thumb": thumbnail,
-                    }
+                    prepare_native_gif_as_media(embed["external"], post["user_did"])
                 )
+
+            # Extra card links sometimes missing from facets & text due to manual action in post form
             else:
                 extra_links.append(embed["external"]["uri"])
 
-        # TODO ? Keep card extra metadata on main link embedded? as media? or new card fields?
-        # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
-        # => keep cards metadata (from data.embed ?)
-
         # Images
         if embed["$type"].endswith(".images"):
-            media_data.extend(
-                [
-                    {
-                        "id": i["image"]["ref"]["$link"],
-                        "type": i["image"]["mimeType"],
-                        "alt": i["alt"],
-                    }
-                    for i in embed["images"]
-                ]
-            )
+            media_data.extend([prepare_image_as_media(i) for i in embed["images"]])
 
         # Video
         if embed["$type"].endswith(".video"):
-            media_data.append(
-                {
-                    "id": embed["video"]["ref"]["$link"],
-                    "type": embed["video"]["mimeType"],
-                }
-            )
+            media_data.append(prepare_video_as_media(embed["video"]))
 
         # Quote
         if embed["$type"].endswith(".record"):
-            post["quoted_cid"] = embed["record"]["cid"]
-            post["quoted_uri"] = embed["record"]["uri"]
-            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
-                post["quoted_uri"]
+            post, quoted_data = prepare_quote_data(
+                post, embed["record"], data.get("embed", {}).get("record")
             )
-
-            post["quoted_url"] = format_post_url(
-                post["quoted_user_did"], post["quoted_did"]
-            )
-
-            if "embed" in data and "record" in data["embed"]:
-                if data["embed"]["record"].get("detached", False):
-                    post["quoted_status"] = "detached"
-                else:
-                    quoted_data = deepcopy(data["embed"]["record"])
 
         # Quote with medias
         if embed["$type"].endswith(".recordWithMedia"):
-            post["quoted_cid"] = embed["record"]["record"]["cid"]
-            post["quoted_uri"] = embed["record"]["record"]["uri"]
-            post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
-                post["quoted_uri"]
+            post, quoted_data = prepare_quote_data(
+                post,
+                embed["record"]["record"],
+                data.get("embed", {}).get("record", {}).get("record"),
             )
 
-            post["quoted_url"] = format_post_url(
-                post["quoted_user_did"], post["quoted_did"]
-            )
-
-            if (
-                "embed" in data
-                and "record" in data["embed"]
-                and "record" in data["embed"]["record"]
-            ):
-                if data["embed"]["record"]["record"].get("detached", False):
-                    post["quoted_status"] = "detached"
-                else:
-                    quoted_data = deepcopy(data["embed"]["record"]["record"])
-
+            # Links from cards
             if embed["media"]["$type"].endswith(".external"):
                 link = embed["media"]["external"]["uri"]
 
                 # Handle native gifs as medias
                 if link.startswith("https://media.tenor.com/"):
-                    media_cid = embed["media"]["external"]["thumb"]["ref"]["$link"]
-                    _, thumbnail = format_media_url(
-                        post["user_did"], media_cid, "image/jpeg"
-                    )
                     media_data.append(
-                        {
-                            "id": media_cid,
-                            "type": "image/gif",
-                            "alt": embed["media"]["external"]["title"],
-                            "url": embed["media"]["external"]["uri"],
-                            "thumb": thumbnail,
-                        }
+                        prepare_native_gif_as_media(
+                            embed["media"]["external"], post["user_did"]
+                        )
                     )
+
+                # Extra card links sometimes missing from facets & text due to manual action in post form
                 else:
                     extra_links = [link] + extra_links
 
+            # Images
             elif embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
-                    [
-                        {
-                            "id": i["image"]["ref"]["$link"],
-                            "type": i["image"]["mimeType"],
-                            "alt": i["alt"],
-                        }
-                        for i in embed["media"]["images"]
-                    ]
+                    [prepare_image_as_media(i) for i in embed["media"]["images"]]
                 )
 
+            # Video
             elif embed["media"]["$type"].endswith(".video"):
-                media_data.append(
-                    {
-                        "id": embed["media"]["video"]["ref"]["$link"],
-                        "type": embed["media"]["video"]["mimeType"],
-                    }
-                )
+                media_data.append(prepare_video_as_media(embed["media"]["video"]))
 
             else:
                 raise Exception(
@@ -401,10 +382,10 @@ def normalize_post(
                     media_url, media_thumb = format_media_url(
                         post["user_did"], media["id"], media_type
                     )
-                media_urls.append(media_url)
-                media_thumbs.append(media_thumb)
-                media_types.append(media_type)
-                media_alt_texts.append(media.get("alt", ""))
+                post["media_urls"].append(media_url)
+                post["media_thumbnails"].append(media_thumb)
+                post["media_types"].append(media_type)
+                post["media_alt_texts"].append(media.get("alt", ""))
 
                 # Rewrite post's text to include links to medias within
                 text += b" " + (
@@ -436,6 +417,7 @@ def normalize_post(
             if extract_referenced_posts:
                 referenced_posts.extend(nested)
 
+            # Take better quoted url with user_handle
             post["quoted_url"] = quoted["url"]
             post["quoted_user_handle"] = quoted["user_handle"]
             post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
@@ -461,10 +443,8 @@ def normalize_post(
     post["links"] = sorted(links)
     post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
 
-    post["media_urls"] = media_urls
-    post["media_thumbnails"] = media_thumbs
-    post["media_types"] = media_types
-    post["media_alt_texts"] = media_alt_texts
+    # TODO : store card data from data.embed
+    # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
 
     # Handle threadgates (replies rules)
     # WARNING: quoted posts do not seem to include threadgates info
