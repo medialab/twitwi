@@ -112,6 +112,16 @@ def prepare_video_as_media(video_data):
     }
 
 
+def process_card_data(embed_data, post):
+    # Warning: mutates post
+
+    post["card_link"] = embed_data["uri"]
+    post["card_title"] = embed_data.get("title", "")
+    post["card_description"] = embed_data.get("description", "")
+    post["card_thumbnail"] = embed_data.get("thumb", "")
+    return post
+
+
 def prepare_quote_data(embed_quote, card_data, post, links):
     # Warning: mutates post and links
 
@@ -354,6 +364,9 @@ def normalize_post(
             # Extra card links sometimes missing from facets & text due to manual action in post form
             else:
                 extra_links.append(embed["external"]["uri"])
+                # Handle link card metadata
+                if "embed" in data:
+                    post = process_card_data(data["embed"]["external"], post)
 
         # Images
         if embed["$type"].endswith(".images"):
@@ -393,6 +406,11 @@ def normalize_post(
                 # Extra card links sometimes missing from facets & text due to manual action in post form
                 else:
                     extra_links = [link] + extra_links
+                    # Handle link card metadata
+                    if "embed" in data and "media" in data["embed"]["media"]:
+                        post = process_card_data(
+                            data["embed"]["media"]["external"], post
+                        )
 
             # Images
             elif embed["media"]["$type"].endswith(".images"):
@@ -489,9 +507,6 @@ def normalize_post(
     # Process links domains
     post["links"] = sorted(links)
     post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
-
-    # TODO : store card data from data.embed
-    # embed.external description + thumb.ref.$link/thumb.mimeType + title + uri
 
     # Handle threadgates (replies rules)
     # WARNING: quoted posts do not seem to include threadgates info
