@@ -1,6 +1,6 @@
 import re
 from copy import deepcopy
-from typing import List, Dict, Union, Optional
+from typing import List, Dict, Union, Optional, Literal, overload
 
 from twitwi.utils import (
     get_collection_time,
@@ -158,11 +158,29 @@ def prepare_quote_data(post, embed_quote, card_data, links):
 re_embed_types = re.compile(r"\.(record|recordWithMedia|images|video|external)$")
 
 
+@overload
+def normalize_post(
+    data: Dict,
+    locale: Optional[str] = ...,
+    extract_referenced_posts: Literal[True] = ...,
+    collection_source: Optional[str] = ...,
+) -> List[BlueskyPost]: ...
+
+
+@overload
+def normalize_post(
+    data: Dict,
+    locale: Optional[str] = ...,
+    extract_referenced_posts: Literal[False] = ...,
+    collection_source: Optional[str] = ...,
+) -> BlueskyPost: ...
+
+
 def normalize_post(
     data: Dict,
     locale: Optional[str] = None,
     extract_referenced_posts: bool = False,
-    collection_source=None,
+    collection_source: Optional[str] = None,
 ) -> Union[BlueskyPost, List[BlueskyPost]]:
     """
     Function "normalizing" a post as returned by Bluesky's API in order to
@@ -522,6 +540,7 @@ def normalize_post(
     post["match_query"] = collection_source not in ["thread", "quote"]
 
     if extract_referenced_posts:
-        return referenced_posts + [post]
+        assert referenced_posts is not None
+        return referenced_posts + [post]  # type: ignore
 
-    return post
+    return post  # type: ignore
