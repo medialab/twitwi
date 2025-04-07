@@ -130,6 +130,30 @@ def prepare_quote_data(embed_quote, card_data, post, links):
     return (post, quoted_data, links)
 
 
+def merge_nested_posts(referenced_posts, nested, source):
+    for new_post in nested:
+        ordered_id = "%s_%s" % (new_post["did"], new_post["user_handle"])
+        if ordered_id not in referenced_posts:
+            referenced_posts[ordered_id] = new_post
+        else:
+            old_post = referenced_posts[ordered_id]
+            for key in new_post.keys():
+                if key not in old_post:
+                    old_post[key] = new_post[key]
+                elif old_post[key] != new_post[key]:
+                    if key == "collected_via":
+                        old_post[key] += new_post[key]
+                    elif key == "match_query":
+                        old_post[key] = old_post[key] or new_post[key]
+                    elif key not in ["collection_time"]:
+                        raise BlueskyPayloadError(
+                            source,
+                            "a nested post appearing twice in the same payload has some diverging metadata for key %s: %s / %s"
+                            % (key, old_post[key], new_post[key]),
+                        )
+    return referenced_posts
+
+
 # TODO :
 # - complete formatters
 # - add tests for normalizer & formatter
@@ -201,7 +225,7 @@ def normalize_post(
         repost_data = None
 
     if extract_referenced_posts:
-        referenced_posts = []
+        referenced_posts = {}
 
     if collection_source is None:
         collection_source = data.get("collection_source")
@@ -301,6 +325,9 @@ def normalize_post(
         text = text[: link["start"]] + link["uri"] + text[link["end"] :]
 
     # Handle thread info when applicable
+    # Unfortunately posts' payload only provide at uris for these so we do not have the handles
+    # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
+    # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
     if "reply" in data["record"]:
         if "parent" in data["record"]["reply"]:
             post["to_post_cid"] = data["record"]["reply"]["parent"]["cid"]
@@ -476,7 +503,9 @@ def normalize_post(
             )
             quoted = nested[-1]
             if extract_referenced_posts:
-                referenced_posts.extend(nested)
+                referenced_posts = merge_nested_posts(
+                    referenced_posts, nested, post["url"]
+                )
 
             # Take better quoted url with user_handle
             post["quoted_url"] = quoted["url"]
@@ -568,14 +597,6 @@ def normalize_post(
     if extract_referenced_posts:
         # Handle thread posts when data comes from a feed
         if reply_data:
-            if "root" in reply_data:
-                nested = normalize_post(
-                    reply_data["root"],
-                    locale=locale,
-                    extract_referenced_posts=True,
-                    collection_source="thread",
-                )
-                referenced_posts.extend(nested)
             if "parent" in reply_data:
                 nested = normalize_post(
                     reply_data["parent"],
@@ -583,14 +604,32 @@ def normalize_post(
                     extract_referenced_posts=True,
                     collection_source="thread",
                 )
-                referenced_posts.extend(nested)
+                referenced_posts = merge_nested_posts(
+                    referenced_posts, nested, post["url"]
+                )
+
+            if "root" in reply_data:
+                if (
+                    "parent" not in reply_data
+                    or reply_data["parent"]["cid"] != reply_data["root"]["cid"]
+                ):
+                    nested = normalize_post(
+                        reply_data["root"],
+                        locale=locale,
+                        extract_referenced_posts=True,
+                        collection_source="thread",
+                    )
+                    referenced_posts = merge_nested_posts(
+                        referenced_posts, nested, post["url"]
+                    )
+
             if "grandparentAuthor" in reply_data:
                 # TODO ? Shall we do anything from that?
                 pass
 
-        # TODO: cleanup/unify referenced_posts coming in duplicate from threads & quotes
-
         assert referenced_posts is not None
-        return referenced_posts + [post]  # type: ignore
+        return [referenced_posts[did] for did in sorted(referenced_posts.keys())] + [
+            post
+        ]  # type: ignore
 
     return post  # type: ignore

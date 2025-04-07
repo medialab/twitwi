@@ -95,4 +95,4 @@ class BlueskyPost(TypedDict):
     # detached_quotes: Optional[List[str]]
     collection_time: Optional[str]
     collected_via: Optional[List[str]]
-    match_query: Optional[str]
+    match_query: Optional[bool]
