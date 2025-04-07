@@ -1,18 +1,29 @@
-from typing import List
+from twitwi.formatters import make_transform_into_csv_dict, make_format_as_csv_row
+from twitwi.bluesky.constants import (
+    PROFILE_FIELDS,
+    POST_FIELDS,
+    POST_PLURAL_FIELDS,
+    POST_BOOLEAN_FIELDS,
+)
 
-from twitwi.bluesky.constants import PROFILE_FIELDS, POST_FIELDS, POST_LIST_FIELDS
-from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
+
+transform_post_into_csv_dict = make_transform_into_csv_dict(
+    POST_PLURAL_FIELDS, POST_BOOLEAN_FIELDS
+)
+
+format_post_as_csv_row = make_format_as_csv_row(
+    POST_FIELDS, POST_PLURAL_FIELDS, POST_BOOLEAN_FIELDS
+)
 
 
-def format_profile_as_csv_row(data: BlueskyProfile) -> List:
-    return [data.get(field, "") for field in PROFILE_FIELDS]
+transform_profile_into_csv_dict = make_transform_into_csv_dict([], [])
+
+format_profile_as_csv_row = make_format_as_csv_row(PROFILE_FIELDS, [], [])
 
 
-def format_post_as_csv_row(data: BlueskyPost) -> List:
-    # TODO: handle other field types than str, maybe reuse formater functions from twitwi/formatters
-    return [
-        data.get(field, "")
-        if field not in POST_LIST_FIELDS
-        else "|".join(data.get(field, []))
-        for field in POST_FIELDS
-    ]
+__all__ = [
+    "transform_post_into_csv_dict",
+    "format_post_as_csv_row",
+    "transform_profile_into_csv_dict",
+    "format_profile_as_csv_row",
+]

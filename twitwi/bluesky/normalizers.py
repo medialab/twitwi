@@ -155,7 +155,6 @@ def merge_nested_posts(referenced_posts, nested, source):
 
 
 # TODO :
-# - complete formatters
 # - add tests for normalizer & formatter
 
 
