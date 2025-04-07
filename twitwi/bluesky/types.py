@@ -36,6 +36,7 @@ class BlueskyPost(TypedDict):
     like_count: int
     reply_count: int
     quote_count: int
+    bridgy_original_url: Optional[str]
     user_url: str
     user_diplay_name: str
     # user_description: str

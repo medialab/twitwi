@@ -5294,5 +5294,66 @@
         "createdAt": "2023-09-01T13:36:06.055Z"
       }
     }
+  },
+  {
+    "uri": "at://did:plc:bg5udl25mvzg3rt7l5n2hzet/app.bsky.feed.post/3kur6sp777oe2",
+    "cid": "bafyreib7e3tudgelox2me4q4onigrizts7ex5dtqu72h6q5wbdpay25phm",
+    "author": {
+      "did": "did:plc:bg5udl25mvzg3rt7l5n2hzet",
+      "handle": "fedi.test.snarfed.org",
+      "displayName": "Ryan Barrett",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bg5udl25mvzg3rt7l5n2hzet/bafkreibs7fzsi2ejadqnptikhkv5klrprdnjpikp5rropgeoj2kgssavea@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "none"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [
+        {
+          "src": "did:plc:bg5udl25mvzg3rt7l5n2hzet",
+          "uri": "at://did:plc:bg5udl25mvzg3rt7l5n2hzet/app.bsky.actor.profile/self",
+          "cid": "bafyreicp7je5o3dvl77qi2zqdrzwl3mflrxystygaevdbpqerc4kl4bbce",
+          "val": "bridged-from-bridgy-fed-activitypub",
+          "cts": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-04-14T22:02:04.453Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "bridgyOriginalText": "<p>here&#39;s an original post with<br />  some<br />    whitespace</p><p><a href=\"https://indieweb.social/tags/ok\" class=\"mention hashtag\" rel=\"tag\">#<span>ok</span></a></p>",
+      "bridgyOriginalUrl": "https://indieweb.social/@snarfed/112606052401093326",
+      "createdAt": "2024-06-12T22:40:00.000Z",
+      "facets": [
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "ok"
+            }
+          ],
+          "index": {
+            "byteEnd": 49,
+            "byteStart": 46
+          }
+        }
+      ],
+      "text": "here's an original post with\nsome\nwhitespace\n\n#ok"
+    },
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-06-12T22:40:00.000Z",
+    "viewer": {
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 ]

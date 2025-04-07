@@ -265,6 +265,9 @@ def normalize_post(
     )
     post["user_langs"] = data["record"].get("langs", [])
 
+    if "bridgyOriginalUrl" in data["record"]:
+        post["bridgy_original_url"] = data["record"]["bridgyOriginalUrl"]
+
     # Handle metrics
     post["repost_count"] = data["repostCount"]
     post["reply_count"] = data["replyCount"]
@@ -608,20 +611,19 @@ def normalize_post(
                     referenced_posts, nested, post["url"]
                 )
 
-            if "root" in reply_data:
-                if (
-                    "parent" not in reply_data
-                    or reply_data["parent"]["cid"] != reply_data["root"]["cid"]
-                ):
-                    nested = normalize_post(
-                        reply_data["root"],
-                        locale=locale,
-                        extract_referenced_posts=True,
-                        collection_source="thread",
-                    )
-                    referenced_posts = merge_nested_posts(
-                        referenced_posts, nested, post["url"]
-                    )
+            if "root" in reply_data and (
+                "parent" not in reply_data
+                or reply_data["parent"]["cid"] != reply_data["root"]["cid"]
+            ):
+                nested = normalize_post(
+                    reply_data["root"],
+                    locale=locale,
+                    extract_referenced_posts=True,
+                    collection_source="thread",
+                )
+                referenced_posts = merge_nested_posts(
+                    referenced_posts, nested, post["url"]
+                )
 
             if "grandparentAuthor" in reply_data:
                 # TODO ? Shall we do anything from that?
