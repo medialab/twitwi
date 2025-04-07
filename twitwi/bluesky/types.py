@@ -89,7 +89,7 @@ class BlueskyPost(TypedDict):
     replies_rules: Optional[List[str]]
     replies_rules_created_at: Optional[str]
     replies_rules_timestamp_utc: Optional[int]
-    hidden_replies: Optional[List[str]]
+    hidden_replies_uris: Optional[List[str]]
     # quotes_rule: Optional[str]
     # quotes_rules_created_at: Optional[str]
     # quotes_rules_timestamp_utc: Optional[int]

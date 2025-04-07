@@ -155,7 +155,7 @@ def merge_nested_posts(referenced_posts, nested, source):
 
 
 # TODO :
-# - add tests for normalizer & formatter
+# - document fields & choices in README
 
 
 @overload
