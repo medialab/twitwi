@@ -59,7 +59,7 @@ def prepare_native_gif_as_media(gif_data, user_did, source):
     _, thumbnail = format_media_url(user_did, media_cid, "image/jpeg", source)
     return {
         "id": media_cid,
-        "type": "image/gif",
+        "type": "video/gif",
         "alt": gif_data["title"],
         "url": gif_data["uri"],
         "thumb": thumbnail,
@@ -473,7 +473,7 @@ def normalize_post(
 
                 # Rewrite post's text to include links to medias within
                 text += b" " + (
-                    media_thumb if media_type.startswith("video") else media_url
+                    media_thumb if media_type.startswith("video") and not media_type.endswith("/gif") else media_url
                 ).encode("utf-8")
 
         # Process quotes
