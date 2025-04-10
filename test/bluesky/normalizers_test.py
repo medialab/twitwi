@@ -10,6 +10,17 @@ from twitwi.bluesky import normalize_profile, normalize_post
 from test.utils import get_json_resource
 
 
+# Set to True to regenerate test results
+OVERWRITE_TESTS = False
+
+
+FAKE_COLLECTION_TIME = "2025-01-01T00:00:00.000000"
+def set_fake_collection_time(dico):
+    if "collection_time" in dico:
+        dico["collection_time"] = FAKE_COLLECTION_TIME
+    return dico
+
+
 def compare_dicts(_id, d1, d2, ignore_fields=[]):
     for k in d2.keys():
         if k not in ignore_fields + ["collection_time"]:
@@ -33,10 +44,11 @@ class TestNormalizers:
         profiles = get_json_resource("bluesky-profiles.json")
         fn = partial(normalize_profile, locale=tz)
 
-        # from test.utils import dump_json_resource
+        if OVERWRITE_TESTS:
+            from test.utils import dump_json_resource
 
-        # normalized_profiles = [fn(profile) for profile in profiles]
-        # dump_json_resource(normalized_profiles, "bluesky-normalized-profiles.json")
+            normalized_profiles = [set_fake_collection_time(fn(profile)) for profile in profiles]
+            dump_json_resource(normalized_profiles, "bluesky-normalized-profiles.json")
 
         expected = get_json_resource("bluesky-normalized-profiles.json")
 
@@ -64,10 +76,11 @@ class TestNormalizers:
         posts = get_json_resource("bluesky-posts.json")
         fn = partial(normalize_post, locale=tz)
 
-        # from test.utils import dump_json_resource
+        if OVERWRITE_TESTS:
+            from test.utils import dump_json_resource
 
-        # normalized_posts = [fn(post, extract_referenced_posts=True) for post in posts]
-        # dump_json_resource(normalized_posts, "bluesky-normalized-posts.json")
+            normalized_posts = [[set_fake_collection_time(p) for p in fn(post, extract_referenced_posts=True)] for post in posts]
+            dump_json_resource(normalized_posts, "bluesky-normalized-posts.json")
 
         expected = get_json_resource("bluesky-normalized-posts.json")
 
@@ -110,7 +123,7 @@ class TestNormalizers:
         assert post == original_arg
 
     def test_normalize_post_should_be_normalized_across_sources(self):
-        # handle feeds and posts payload
+        # handle same post from different sources (search, get_post and user_feed)
         pass
 
     def test_badly_formatted_posts_payload(self):

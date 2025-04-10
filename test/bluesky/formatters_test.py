@@ -10,6 +10,10 @@ from twitwi.bluesky.constants import PROFILE_FIELDS, POST_FIELDS
 from test.utils import get_json_resource, open_resource
 
 
+# Set to True to regenerate test results
+OVERWRITE_TESTS = False
+
+
 class TestFormatters:
     def test_format_profile_as_csv_row(self):
         normalized_profiles = get_json_resource("bluesky-normalized-profiles.json")
@@ -21,10 +25,11 @@ class TestFormatters:
         for profile in normalized_profiles:
             writer.writerow(format_profile_as_csv_row(profile))
 
-        # written = buffer.getvalue()
+        if OVERWRITE_TESTS:
+            written = buffer.getvalue()
 
-        # with open("test/resources/bluesky-profiles-export.csv", "w") as f:
-        #     f.write(written)
+            with open("test/resources/bluesky-profiles-export.csv", "w") as f:
+                f.write(written)
 
         with open_resource("bluesky-profiles-export.csv") as f:
             buffer.seek(0)
@@ -62,10 +67,11 @@ class TestFormatters:
             for post in source:
                 writer.writerow(format_post_as_csv_row(post))
 
-        # written = buffer.getvalue()
+        if OVERWRITE_TESTS:
+            written = buffer.getvalue()
 
-        # with open("test/resources/bluesky-posts-export.csv", "w") as f:
-        #     f.write(written)
+            with open("test/resources/bluesky-posts-export.csv", "w") as f:
+                f.write(written)
 
         with open_resource("bluesky-posts-export.csv") as f:
             buffer.seek(0)
