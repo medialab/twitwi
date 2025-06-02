@@ -3148,5 +3148,56 @@
       "user_timestamp_utc": 1713132124,
       "user_url": "https://bsky.app/profile/fedi.test.snarfed.org"
     }
+  ],
+  [
+    {
+      "cid": "bafyreibyk33gtv677k2xjg22rwqr3jnhosb2456jrm6oht5wchvo57ztsy",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lpmqkkkgp52u",
+      "domains": [
+        "snj.cgt.support"
+      ],
+      "hashtags": [],
+      "like_count": 4,
+      "links": [
+        "https://snj.cgt.support/inscritpion-visiorencontre-avec-david-chavalarias/"
+      ],
+      "local_time": "2025-05-20T20:43:48.199000",
+      "match_query": true,
+      "media_alt_texts": [
+        "Couv Elon Musk en 50 tweets.jpg"
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq@jpeg"
+      ],
+      "media_types": [
+        "image/jpeg"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq@jpeg"
+      ],
+      "mentioned_user_dids": [
+        "did:plc:eeoax6omxd6o6guae7tomwlp"
+      ],
+      "mentioned_user_handles": [
+        "chavalarias.org"
+      ],
+      "original_text": "Ce mercredi 21 mai, à partir de 18h« Rencontre avec David Chavalarias »\r\nLien d’inscription : https://snj.cgt.support/inscritpion-visiorencontre-avec-david-chavalarias/\r\nDirecteur de l’Institut des systèmes complexes de Paris Île-de-France (ISC-PIF), le professeur David @chavalarias.org ",
+      "quote_count": 0,
+      "reply_count": 2,
+      "repost_count": 3,
+      "text": "Ce mercredi 21 mai, à partir de 18h« Rencontre avec David Chavalarias »\r\nLien d’inscription :https://snj.cgt.support/inscritpion-visiorencontre-avec-david-chavalarias//\r\nDirecteur de l’Institut des systèmes complexes de Paris Île-de-France (ISC-PIF), le professeur David @chavalarias.org  https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq@jpeg",
+      "timestamp_utc": 1747766628,
+      "uri": "at://did:plc:45uofmby4qbt44jnwbr36rsv/app.bsky.feed.post/3lpmqkkkgp52u",
+      "url": "https://bsky.app/profile/snjcgt.bsky.social/post/3lpmqkkkgp52u",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreigispdt5mtk6ofivmpwfvrg2226g75hzhsfxlmdvstcih3g5yrvdi@jpeg",
+      "user_created_at": "2023-10-24T20:08:45.643000",
+      "user_did": "did:plc:45uofmby4qbt44jnwbr36rsv",
+      "user_diplay_name": "SNJ-CGT - Syndicat National des Journalistes CGT",
+      "user_handle": "snjcgt.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1698170925,
+      "user_url": "https://bsky.app/profile/snjcgt.bsky.social"
+    }
   ]
 ]

@@ -297,8 +297,15 @@ def normalize_post(
         elif feat["$type"].endswith("#mention"):
             if feat["did"] not in post["mentioned_user_dids"]:
                 post["mentioned_user_dids"].append(feat["did"])
+
+                # Check & fix occasional errored mention positioning
+                # example: https://bsky.app/profile/snjcgt.bsky.social/post/3lpmqkkkgp52u
+                byteStart = facet["index"]["byteStart"]
+                if text[byteStart : byteStart + 1] != b"@":
+                    byteStart = text.find(b"@", byteStart)
+
                 handle = (
-                    text[facet["index"]["byteStart"] + 1 : facet["index"]["byteEnd"]]
+                    text[byteStart + 1 : facet["index"]["byteEnd"] + byteStart - facet["index"]["byteStart"]]
                     .strip()
                     .lower()
                     .decode("utf-8")

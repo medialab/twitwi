@@ -5355,5 +5355,88 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:45uofmby4qbt44jnwbr36rsv/app.bsky.feed.post/3lpmqkkkgp52u",
+    "cid": "bafyreibyk33gtv677k2xjg22rwqr3jnhosb2456jrm6oht5wchvo57ztsy",
+    "author": {
+      "did": "did:plc:45uofmby4qbt44jnwbr36rsv",
+      "handle": "snjcgt.bsky.social",
+      "displayName": "SNJ-CGT - Syndicat National des Journalistes CGT",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreigispdt5mtk6ofivmpwfvrg2226g75hzhsfxlmdvstcih3g5yrvdi@jpeg",
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-10-24T18:08:45.643Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-05-20T18:43:48.199Z",
+      "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+          {
+            "alt": "Couv Elon Musk en 50 tweets.jpg",
+            "image": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq"
+              },
+              "mimeType": "image/jpeg",
+              "size": 970941
+            }
+          }
+        ]
+      },
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#mention",
+              "did": "did:plc:eeoax6omxd6o6guae7tomwlp"
+            }
+          ],
+          "index": {
+            "byteEnd": 286,
+            "byteStart": 270
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://snj.cgt.support/inscritpion-visiorencontre-avec-david-chavalarias/"
+            }
+          ],
+          "index": {
+            "byteEnd": 172,
+            "byteStart": 98
+          }
+        }
+      ],
+      "text": "Ce mercredi 21 mai, \u00e0 partir de 18h\u00ab Rencontre avec David Chavalarias \u00bb\r\nLien d\u2019inscription : https://snj.cgt.support/inscritpion-visiorencontre-avec-david-chavalarias/\r\nDirecteur de l\u2019Institut des syst\u00e8mes complexes de Paris \u00cele-de-France (ISC-PIF), le professeur David @chavalarias.org "
+    },
+    "embed": {
+      "$type": "app.bsky.embed.images#view",
+      "images": [
+        {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq@jpeg",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq@jpeg",
+          "alt": "Couv Elon Musk en 50 tweets.jpg"
+        }
+      ]
+    },
+    "replyCount": 2,
+    "repostCount": 3,
+    "likeCount": 4,
+    "quoteCount": 0,
+    "indexedAt": "2025-05-20T18:43:48.918Z",
+    "viewer": {
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 ]
