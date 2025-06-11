@@ -153,7 +153,9 @@ with open("normalized_bluesky_profiles.csv", "w") as f:
 
 ### normalize_profile
 
-Function taking a nested dict describing a user profile from Bluesky's JSON payload and returning a flat "normalized" dict composed of all [PROFILE_FIELDS](#profile_fields) keys. Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
+Function taking a nested dict describing a user profile from Bluesky's JSON payload and returning a flat "normalized" dict composed of all [PROFILE_FIELDS](#profile_fields) keys.
+
+Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
 
 *Arguments*
 
@@ -162,7 +164,11 @@ Function taking a nested dict describing a user profile from Bluesky's JSON payl
 
 ### normalize_post
 
-Function taking a nested dict describing a post from Bluesky's JSON payload and returning a flat "normalized" dict composed of all [POST_FIELDS](#post_fields) keys. Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone. When setting `extract_referenced_posts` to `True` it will instead return a list of dicts including the desired post as well as each referenced ones such as quoted posts and potentially parent posts of a conversation when the data comes from a Bluesky `feed` payload.
+Function taking a nested dict describing a post from Bluesky's JSON payload and returning a flat "normalized" dict composed of all [POST_FIELDS](#post_fields) keys.
+
+Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone.
+
+When setting `extract_referenced_posts` to `True` it will instead return a list of dicts including the desired post as well as each referenced ones such as quoted posts and potentially parent posts of a conversation when the data comes from a Bluesky `feed` payload.
 
 *Arguments*
 
@@ -174,34 +180,40 @@ Function taking a nested dict describing a post from Bluesky's JSON payload and 
 ### transform_profile_into_csv_dict
 
 Function transforming (i.e. mutating, so beware) a given normalized Bluesky profile into a suitable dict able to be written by a `csv.DictWriter` as a row.
+
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
 ### transform_post_into_csv_dict
 
 Function transforming (i.e. mutating, so beware) a given normalized Bluesky post into a suitable dict able to be written by a `csv.DictWriter` as a row.
+
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
 ### format_profile_as_csv_row
 
 Function formatting the given normalized Bluesky profile as a list able to be written by a `csv.writer` as a row in the order of [PROFILE_FIELDS](#profile_fields) (which can therefore be used as header row of the CSV).
+
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
 ### format_post_as_csv_row
 
 Function formatting the given normalized tBluesky post as a list able to be written by a `csv.writer` as a row in the order of [POST_FIELDS](#post_fields) (which can therefore be used as header row of the CSV).
+
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
 ### PROFILE_FIELDS
 
-List of a Bluesky user profile's normalized field names. Useful to declare headers with csv writers:
+List of a Bluesky user profile's normalized field names. Useful to declare headers with csv writers.
 
 ### POST_FIELDS
 
-List of a Bluesky post's normalized field names. Useful to declare headers with csv writers:
+List of a Bluesky post's normalized field names. Useful to declare headers with csv writers.
 
 ### normalize_user
 
-Function taking a nested dict describing a user from Twitter's JSON payload and returning a flat "normalized" dict composed of all [USER_FIELDS](#user_fields) keys. Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
+Function taking a nested dict describing a user from Twitter's JSON payload and returning a flat "normalized" dict composed of all [USER_FIELDS](#user_fields) keys.
+
+Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
 
 *Arguments*
 
@@ -211,7 +223,11 @@ Function taking a nested dict describing a user from Twitter's JSON payload and 
         
 ### normalize_tweet
 
-Function taking a nested dict describing a tweet from Twitter's JSON payload (API v1.1) and returning a flat "normalized" dict composed of all [TWEET_FIELDS](#tweet_fields) keys. Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone. When setting `extract_referenced_posts` to `True` it will instead return a list of dicts including the desired tweet as well as each referenced ones such as quoted or retweeted tweets.
+Function taking a nested dict describing a tweet from Twitter's JSON payload (API v1.1) and returning a flat "normalized" dict composed of all [TWEET_FIELDS](#tweet_fields) keys.
+
+Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone.
+
+When setting `extract_referenced_posts` to `True` it will instead return a list of dicts including the desired tweet as well as each referenced ones such as quoted or retweeted tweets.
 
 *Arguments*
 
@@ -222,7 +238,11 @@ Function taking a nested dict describing a tweet from Twitter's JSON payload (AP
 
 ### normalize_tweets_payload_v2
 
-Function taking an entire tweets JSON payload from Twitter API v2 and returning a list of all contained tweets formatted as flat "normalized" dicts composed of all [TWEET_FIELDS](#tweet_fields) keys. Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone. When setting `extract_referenced_posts` to `True` it will instead return a list of dicts including the desired tweets as well as each referenced ones such as quoted or retweeted tweets.
+Function taking an entire tweets JSON payload from Twitter API v2 and returning a list of all contained tweets formatted as flat "normalized" dicts composed of all [TWEET_FIELDS](#tweet_fields) keys.
+
+Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone.
+
+When setting `extract_referenced_posts` to `True` it will instead return a list of dicts including the desired tweets as well as each referenced ones such as quoted or retweeted tweets.
 
 *Arguments*
 
@@ -263,6 +283,7 @@ transform_user_into_csv_dict(normalized_user)
 ### transform_tweet_into_csv_dict
 
 Function transforming (i.e. mutating, so beware) a given normalized tweet into a suitable dict able to be written by a `csv.DictWriter` as a row.
+
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
 ```python
@@ -275,6 +296,7 @@ transform_tweet_into_csv_dict(normalized_tweet)
 ### format_user_as_csv_row
 
 Function formatting the given normalized Twitter user as a list able to be written by a `csv.writer` as a row.
+
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
 ```python
@@ -286,6 +308,7 @@ row = format_user_as_csv_row(normalized_user)
 ### format_tweet_as_csv_row
 
 Function formatting the given normalized tweet as a list able to be written by a `csv.writer` as a row.
+
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
 ```python
@@ -338,7 +361,9 @@ w.writeheader()
 
 ### anonymize_normalized_tweet
 
-Function taking a normalized tweet and mutating it by editing the text and removing all metadata related to the tweet's author user. Note that the tweet's ID as well as other users screennames mentioned in the tweet are kept and could require extra processing depending on the use cases.
+Function taking a normalized tweet and mutating it by editing the text and removing all metadata related to the tweet's author user.
+
+Note that the tweet's ID as well as other users screennames mentioned in the tweet are kept and could require extra processing depending on the use cases.
 
 ```python
 from twitwi import anonymize_normalized_tweet
@@ -350,7 +375,9 @@ anonymize_normalized_tweet(normalized_tweet)
 ### get_timestamp_from_id
 
 Function taking a tweet ID and producing from it the UTC UNIX timestamp of when the tweet was posted.
+
 This relies on the Snowflake format used by Twitter to generate tweets IDs, which builds IDs on top of the actual timestamp when a tweet was submitted.
+
 Will only work for tweets with an ID greater than 29700859247, which is the first ID from which the Snowflake algorithm was implemented.
 
 ```python
@@ -362,8 +389,11 @@ timestamp = get_timestamp_from_id(tweet_ID)
 ### get_dates_from_id
 
 Function taking a tweet ID and producing from it the datetime when the tweet was posted.
+
 This relies on the Snowflake format used by Twitter to generate tweets IDs, which builds IDs on top of the actual timestamp when a tweet was submitted.
+
 Will only work for tweets with an ID greater than 29700859247, which is the first ID from which the Snowflake algorithm was implemented.
+
 The function can also take an optional `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
 
 ```python
@@ -377,4 +407,3 @@ paris_tz = timezone('Europe/Paris')
 
 date_time = get_dates_from_id(tweet_ID, locale=paris_tz)
 ```
-
