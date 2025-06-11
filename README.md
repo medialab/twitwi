@@ -38,7 +38,7 @@ pip install twitwi
 * [format_profile_as_csv_row](#format_profile_as_csv_row)
 * [format_post_as_csv_row](#format_post_as_csv_row)
 
-*Useful constants (under twitwi.bluesky.constants)*
+*Useful constants (under `twitwi.bluesky.constants`)*
 
 * [PROFILE_FIELDS](#profile_fields)
 * [POST_FIELDS](#post_fields)
@@ -139,7 +139,7 @@ with open("normalized_bluesky_profiles.csv", "w") as f:
 * [format_tweet_as_csv_row](#format_tweet_as_csv_row)
 * [apply_tcat_format](#apply_tcat_format)
 
-*Useful constants (under twitwi.constants)*
+*Useful constants (under `twitwi.constants`)*
 
 * [USER_FIELDS](#user_fields)
 * [TWEET_FIELDS](#tweet_fields)
