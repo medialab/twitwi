@@ -154,10 +154,6 @@ def merge_nested_posts(referenced_posts, nested, source):
     return referenced_posts
 
 
-# TODO :
-# - document fields & choices in README
-
-
 @overload
 def normalize_post(
     data: Dict,
@@ -189,9 +185,11 @@ def normalize_post(
     Args:
         payload (dict): post or feed payload json dict from Bluesky API.
         locale (pytz.timezone, optional): Timezone for date conversions.
-        extract_referenced_posts (bool, optional): Whether to return only
-            the original post or the full list of posts found in the given
-            payload (including quoted and reposted posts). Defaults
+        extract_referenced_posts (bool, optional): Whether to return, in
+            addition to the original post, also the full list of posts
+            found in the given payload (including the tree of quoted posts
+            as well as the parent and root posts of the thread if the post
+            comes as an answer to another one). Defaults
             to `False`.
         collection_source (str, optional): string explaining how the post
             was collected. Defaults to `None`.
