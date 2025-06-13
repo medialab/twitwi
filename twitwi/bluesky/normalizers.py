@@ -327,6 +327,13 @@ def normalize_post(
 
         # Links
         elif feat["$type"].endswith("#link"):
+            # Handle native polls
+            if "https://poll.blue/" in feat["uri"]:
+                if feat["uri"].endswith("/0"):
+                    links.add(custom_normalize_url(feat["uri"]))
+                    text += b" %s" % feat["uri"].encode("utf-8")
+                continue
+
             links.add(custom_normalize_url(feat["uri"]))
             # Check & fix occasional errored link positioning
             # example: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
@@ -343,6 +350,8 @@ def normalize_post(
             )
 
         elif feat["$type"].endswith("#bold"):
+            pass
+        elif feat["$type"].endswith("#option"):
             pass
         else:
             raise BlueskyPayloadError(

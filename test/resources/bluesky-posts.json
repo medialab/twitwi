@@ -5496,5 +5496,151 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:iesdrkibjhxmpgywy7vuxfuz/app.bsky.feed.post/3lpoug3ljdw27",
+    "cid": "bafyreicyoosn5dgsiobjmurqjy676hx3dck6tmy7v6vre6kzjpeyz5w2qy",
+    "author": {
+      "did": "did:plc:iesdrkibjhxmpgywy7vuxfuz",
+      "handle": "fredbourget.bsky.social",
+      "displayName": "Fred Bourget",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:iesdrkibjhxmpgywy7vuxfuz/bafkreif5tf4t2b5e7ldrro3rgwfnc4oko33b3z62rg4hq7g46kgoruasui@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "following"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-08-16T17:48:29.522Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-05-21T14:58:12.427Z",
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://poll.blue/p/RLnFdE/1"
+            }
+          ],
+          "index": {
+            "byteEnd": 69,
+            "byteStart": 46
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://poll.blue/p/RLnFdE/2"
+            }
+          ],
+          "index": {
+            "byteEnd": 91,
+            "byteStart": 78
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://poll.blue/p/RLnFdE/3"
+            }
+          ],
+          "index": {
+            "byteEnd": 117,
+            "byteStart": 100
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://poll.blue/p/RLnFdE/4"
+            }
+          ],
+          "index": {
+            "byteEnd": 132,
+            "byteStart": 126
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://poll.blue/p/RLnFdE/0"
+            }
+          ],
+          "index": {
+            "byteEnd": 151,
+            "byteStart": 134
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "blue.poll.post.facet#option",
+              "number": 1
+            }
+          ],
+          "index": {
+            "byteEnd": 69,
+            "byteStart": 46
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "blue.poll.post.facet#option",
+              "number": 2
+            }
+          ],
+          "index": {
+            "byteEnd": 91,
+            "byteStart": 78
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "blue.poll.post.facet#option",
+              "number": 3
+            }
+          ],
+          "index": {
+            "byteEnd": 117,
+            "byteStart": 100
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "blue.poll.post.facet#option",
+              "number": 4
+            }
+          ],
+          "index": {
+            "byteEnd": 132,
+            "byteStart": 126
+          }
+        }
+      ],
+      "text": "As tu déjà été victime d'un vol?\n\n1️⃣ A la maison/appartement\n2️⃣ Dans mon auto\n3️⃣ Par un pickpocket\n4️⃣ Jamais\n\n📊 Show results"
+    },
+    "replyCount": 19,
+    "repostCount": 1,
+    "likeCount": 7,
+    "quoteCount": 0,
+    "indexedAt": "2025-05-21T14:58:12.922Z",
+    "viewer": {
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 ]
