@@ -484,7 +484,7 @@ def normalize_post(
                 ).encode("utf-8")
 
         # Process quotes
-        if quoted_data:
+        if quoted_data and "value" in quoted_data:
             if quoted_data["cid"] != post["quoted_cid"]:
                 raise BlueskyPayloadError(
                     post["url"],
