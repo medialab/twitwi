@@ -37,7 +37,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
         "did": data["did"],
         "url": format_profile_url(data["handle"]),
         "handle": data["handle"],
-        "display_name": data["displayName"],
+        "display_name": data.get("displayName", ""),
         "created_at": created_at,
         "timestamp_utc": timestamp_utc,
         "description": data["description"],
@@ -257,7 +257,7 @@ def normalize_post(
         )
 
     # Handle user metadata
-    post["user_diplay_name"] = data["author"]["displayName"]
+    post["user_diplay_name"] = data["author"].get("displayName", "")
     post["user_avatar"] = data["author"].get("avatar", "")
     post["user_timestamp_utc"], post["user_created_at"] = get_dates(
         data["author"]["createdAt"], locale=locale, source="bluesky"

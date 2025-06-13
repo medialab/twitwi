@@ -9,7 +9,7 @@ class BlueskyProfile(TypedDict):
     did: str                            # persistent long-term identifier of the account
     url: str                            # URL of the profile accessible on the web
     handle: str                         # updatable human-readable username of the account (usually like username.bsky.social or username.com)
-    display_name: str                   # updatable human-readable name of the account
+    display_name: Optional[str]         # updatable human-readable name of the account
     description: str                    # profile short description written by the user
     posts: int                          # total number of posts submitted by the user (at collection time)
     followers: int                      # total number of followers of the user (at collection time)
