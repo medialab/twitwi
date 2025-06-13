@@ -122,10 +122,12 @@ def prepare_quote_data(embed_quote, card_data, post, links):
                 break
 
         # Remove quoted link from post links
-        links.remove(post["quoted_url"])
+        if post["quoted_url"] in links:
+            links.remove(post["quoted_url"])
 
         # Extract user handle from url
-        post["quoted_user_handle"], _ = parse_post_url(post["quoted_url"], post["url"])
+        if "did:plc:" not in post["quoted_url"]:
+            post["quoted_user_handle"], _ = parse_post_url(post["quoted_url"], post["url"])
 
     return (post, quoted_data, links)
 
