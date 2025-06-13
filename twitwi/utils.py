@@ -41,14 +41,22 @@ def get_dates(date_str, locale=None, source="v1"):
     if locale is None:
         locale = UTC_TIMEZONE
 
+    # Cleanup messed up Bluesky dates
+    processed_date = date_str
+    if source == "bluesky":
+        if len(date_str) == 29 and date_str.endswith("00Z"):
+            processed_date = date_str[:-3] + "Z"
+        elif len(date_str) >= 25 and date_str.endswith("+00:00"):
+            processed_date = date_str[:-6] + "Z"
+
     try:
         parsed_datetime = datetime.strptime(
-            date_str,
+            processed_date,
             SOURCE_DATETIME_FORMAT if source == "v1" else SOURCE_DATETIME_FORMAT_V2,
         )
     except ValueError as e:
         if source == "bluesky":
-            parsed_datetime = datetime.strptime(date_str, SOURCE_DATETIME_FORMAT_V3)
+            parsed_datetime = datetime.strptime(processed_date, SOURCE_DATETIME_FORMAT_V3)
         else:
             raise e
 
