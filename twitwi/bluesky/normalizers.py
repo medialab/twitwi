@@ -15,6 +15,7 @@ from twitwi.bluesky.utils import (
     format_post_url,
     parse_post_url,
     parse_post_uri,
+    format_starterpack_url,
     format_media_url,
 )
 from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
@@ -79,6 +80,18 @@ def prepare_video_as_media(video_data):
         "id": video_data["ref"]["$link"],
         "type": video_data["mimeType"],
     }
+
+
+def process_starterpack_card(embed_data, post):
+    # Warning: mutates post
+
+    card = embed_data.get("record", {})
+    creator_did, pack_did = parse_post_uri(embed_data["uri"])
+    post["card_link"] = format_starterpack_url(embed_data.get("creator", {}).get("handle") or creator_did, pack_did)
+    post["card_title"] = card.get("name", "")
+    post["card_description"] = card.get("description", "")
+    post["card_thumbnail"] = card.get("thumb", "")
+    return post
 
 
 def process_card_data(embed_data, post):
@@ -401,11 +414,16 @@ def normalize_post(
         if embed["$type"].endswith(".video"):
             media_data.append(prepare_video_as_media(embed["video"]))
 
-        # Quote
+        # Quote & Starter-packs
         if embed["$type"].endswith(".record"):
-            post, quoted_data, links = prepare_quote_data(
-                embed["record"], data.get("embed", {}).get("record"), post, links
-            )
+            if "app.bsky.graph.starterpack" in embed["record"]["uri"]:
+                post = process_starterpack_card(data.get("embed", {}).get("record"), post)
+                if post["card_link"]:
+                    extra_links.append(post["card_link"])
+            else:
+                post, quoted_data, links = prepare_quote_data(
+                    embed["record"], data.get("embed", {}).get("record"), post, links
+                )
 
         # Quote with medias
         if embed["$type"].endswith(".recordWithMedia"):
