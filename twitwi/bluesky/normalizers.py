@@ -361,7 +361,10 @@ def normalize_post(
 
     # Rewrite full links within post's text
     for link in sorted(links_to_replace, key=lambda x: x["start"], reverse=True):
-        text = text[: link["start"]] + link["uri"] + text[link["end"] :]
+        if link["start"] < 0:
+            text = text + b" " + link["uri"]
+        else:
+            text = text[: link["start"]] + link["uri"] + text[link["end"] :]
 
     # Handle thread info when applicable
     # Unfortunately posts' payload only provide at uris for these so we do not have the handles

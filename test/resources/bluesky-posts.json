@@ -5642,5 +5642,144 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3lkctsyce5f42",
+    "cid": "bafyreiep4kllshmisvmcebgyxfs3qmgfv3welvfrx2jxx7ennrqclj56v4",
+    "author": {
+      "did": "did:plc:3auglfwwpebyiozbojq5eqhy",
+      "handle": "NewYork.activitypub.awakari.com.ap.brid.gy",
+      "displayName": "NewYork",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "none"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [
+        {
+          "src": "did:plc:3auglfwwpebyiozbojq5eqhy",
+          "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.actor.profile/self",
+          "cid": "bafyreihkrjxzeiefdtmiwzjuxypih35rqn5unat2j2jsxiwswxztheim44",
+          "val": "bridged-from-bridgy-fed-activitypub",
+          "cts": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "createdAt": "2025-01-03T19:06:32.516Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "bridgyOriginalText": "Justin Bieber ‘Hits All-Time Low’ Admits Feeling ‘Unworthy’ In Concerning New Post Justin...<br/><br/><a href=\"https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/\">https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Celebrity\">#Celebrity</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/justin\">#justin</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/bieber\">#bieber</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=Cx3YHXGKk5qNC2Y9ePemN0O19Zg\">Event Attributes</a>",
+      "bridgyOriginalUrl": "https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/",
+      "createdAt": "2025-03-14T05:08:19.000Z",
+      "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+          "$type": "app.bsky.embed.external#external",
+          "description": "Justin Bieber reveals feelin unworthy and like a fraud in latest social media post sparking new health concerns from fans.",
+          "thumb": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreihaq3bchy7zz7g4qwqcv7ishnhiedcmfs4v4sdxtxwpclc3wmxlly"
+            },
+            "mimeType": "image/jpeg",
+            "size": 100281
+          },
+          "title": "Justin Bieber 'Hits All-Time Low' Admits Feeling 'Unworthy' In Concerning New Post",
+          "uri": "https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/"
+        }
+      },
+      "facets": [
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Celebrity"
+            }
+          ],
+          "index": {
+            "byteEnd": 218,
+            "byteStart": 208
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "justin"
+            }
+          ],
+          "index": {
+            "byteEnd": 226,
+            "byteStart": 219
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "bieber"
+            }
+          ],
+          "index": {
+            "byteEnd": 234,
+            "byteStart": 227
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/"
+            }
+          ],
+          "index": {
+            "byteEnd": 206,
+            "byteStart": 102
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://awakari.com/pub-msg.html?id=Cx3YHXGKk5qNC2Y9ePemN0O19Zg"
+            }
+          ],
+          "index": {
+            "byteEnd": 252,
+            "byteStart": 236
+          }
+        }
+      ],
+      "text": "Justin Bieber ‘Hits All-Time Low’ Admits Feeling ‘Unworthy’ In Concerning New Post Justin...\n\nhttps://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/\n\n#Celebrity #justin #bieber\n\nEvent Attributes"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.external#view",
+      "external": {
+        "uri": "https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/",
+        "title": "Justin Bieber 'Hits All-Time Low' Admits Feeling 'Unworthy' In Concerning New Post",
+        "description": "Justin Bieber reveals feelin unworthy and like a fraud in latest social media post sparking new health concerns from fans.",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreihaq3bchy7zz7g4qwqcv7ishnhiedcmfs4v4sdxtxwpclc3wmxlly@jpeg"
+      }
+    },
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-03-14T05:23:43.221Z",
+    "viewer": {
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 ]

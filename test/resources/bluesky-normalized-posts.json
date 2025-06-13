@@ -3277,5 +3277,55 @@
       "user_timestamp_utc": 1692208109,
       "user_url": "https://bsky.app/profile/fredbourget.bsky.social"
     }
+  ],
+  [
+    {
+      "bridgy_original_url": "https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/",
+      "card_description": "Justin Bieber reveals feelin unworthy and like a fraud in latest social media post sparking new health concerns from fans.",
+      "card_link": "https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/",
+      "card_thumbnail": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreihaq3bchy7zz7g4qwqcv7ishnhiedcmfs4v4sdxtxwpclc3wmxlly@jpeg",
+      "card_title": "Justin Bieber 'Hits All-Time Low' Admits Feeling 'Unworthy' In Concerning New Post",
+      "cid": "bafyreiep4kllshmisvmcebgyxfs3qmgfv3welvfrx2jxx7ennrqclj56v4",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lkctsyce5f42",
+      "domains": [
+        "awakari.com",
+        "thenerdstash.com"
+      ],
+      "hashtags": [
+        "bieber",
+        "celebrity",
+        "justin"
+      ],
+      "like_count": 0,
+      "links": [
+        "https://awakari.com/pub-msg.html?id=Cx3YHXGKk5qNC2Y9ePemN0O19Zg",
+        "https://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/"
+      ],
+      "local_time": "2025-03-14T06:08:19.000000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Justin Bieber ‘Hits All-Time Low’ Admits Feeling ‘Unworthy’ In Concerning New Post Justin...\n\nhttps://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/\n\n#Celebrity #justin #bieber\n\nEvent Attributes",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Justin Bieber ‘Hits All-Time Low’ Admits Feeling ‘Unworthy’ In Concerning New Post Justin...\n\nhttps://thenerdstash.com/justin-bieber-hits-all-time-low-admits-feeling-unworthy-in-concerning-new-post/\n\n#Celebrity #justin #bieber\n\nEvent Attributes https://awakari.com/pub-msg.html?id=Cx3YHXGKk5qNC2Y9ePemN0O19Zg",
+      "timestamp_utc": 1741928899,
+      "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3lkctsyce5f42",
+      "url": "https://bsky.app/profile/NewYork.activitypub.awakari.com.ap.brid.gy/post/3lkctsyce5f42",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+      "user_created_at": "2025-01-03T20:06:32.516000",
+      "user_did": "did:plc:3auglfwwpebyiozbojq5eqhy",
+      "user_diplay_name": "NewYork",
+      "user_handle": "NewYork.activitypub.awakari.com.ap.brid.gy",
+      "user_langs": [],
+      "user_timestamp_utc": 1735931192,
+      "user_url": "https://bsky.app/profile/NewYork.activitypub.awakari.com.ap.brid.gy"
+    }
   ]
 ]
