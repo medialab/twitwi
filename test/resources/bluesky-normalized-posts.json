@@ -3186,7 +3186,7 @@
       "quote_count": 0,
       "reply_count": 2,
       "repost_count": 3,
-      "text": "Ce mercredi 21 mai, à partir de 18h« Rencontre avec David Chavalarias »\r\nLien d’inscription :https://snj.cgt.support/inscritpion-visiorencontre-avec-david-chavalarias//\r\nDirecteur de l’Institut des systèmes complexes de Paris Île-de-France (ISC-PIF), le professeur David @chavalarias.org  https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq@jpeg",
+      "text": "Ce mercredi 21 mai, à partir de 18h« Rencontre avec David Chavalarias »\r\nLien d’inscription : https://snj.cgt.support/inscritpion-visiorencontre-avec-david-chavalarias/\r\nDirecteur de l’Institut des systèmes complexes de Paris Île-de-France (ISC-PIF), le professeur David @chavalarias.org  https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreicaantz5lmbnl5xhnumzsme63g4vr7yui6cqnjgy4p2uwzeeczjqq@jpeg",
       "timestamp_utc": 1747766628,
       "uri": "at://did:plc:45uofmby4qbt44jnwbr36rsv/app.bsky.feed.post/3lpmqkkkgp52u",
       "url": "https://bsky.app/profile/snjcgt.bsky.social/post/3lpmqkkkgp52u",
@@ -3198,6 +3198,45 @@
       "user_langs": [],
       "user_timestamp_utc": 1698170925,
       "user_url": "https://bsky.app/profile/snjcgt.bsky.social"
+    }
+  ],
+  [
+    {
+      "cid": "bafyreic6fx7mlkqyp2cywa2nl6eysqouzzphsf4bl7pb6hbm5qz2ivbzge",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lqotmopayr23",
+      "domains": [
+        "01net.com"
+      ],
+      "hashtags": [],
+      "like_count": 0,
+      "links": [
+        "https://www.01net.com/actualites/cartier-victime-hack-donnees-clients-volees.html"
+      ],
+      "local_time": "2025-06-03T10:09:12.057943",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Cartier est victime d'un hack, les données des clients ont été volées\n\nLa maison de luxe Cartier alerte ses clients après une intrusion dans ses systèmes informatiques. Des p\n\nRead more: https://www.01net.com/actualites/cartier-victime-hack-donnees-clients-volees.html",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Cartier est victime d'un hack, les données des clients ont été volées\n\nLa maison de luxe Cartier alerte ses clients après une intrusion dans ses systèmes informatiques. Des p\n\nRead more: https://www.01net.com/actualites/cartier-victime-hack-donnees-clients-volees.html",
+      "timestamp_utc": 1748938152,
+      "uri": "at://did:plc:u5d54hkw4ysuqtuvcj6cmsin/app.bsky.feed.post/3lqotmopayr23",
+      "url": "https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:u5d54hkw4ysuqtuvcj6cmsin/bafkreidu237hj2xxvquxxgz3py5xhbkkvffawyc27avpvecgxejzozyt2q@jpeg",
+      "user_created_at": "2024-11-15T13:38:51.859000",
+      "user_did": "did:plc:u5d54hkw4ysuqtuvcj6cmsin",
+      "user_diplay_name": "",
+      "user_handle": "ecrime.ch",
+      "user_langs": [],
+      "user_timestamp_utc": 1731674331,
+      "user_url": "https://bsky.app/profile/ecrime.ch"
     }
   ]
 ]

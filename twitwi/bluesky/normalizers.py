@@ -328,14 +328,22 @@ def normalize_post(
         # Links
         elif feat["$type"].endswith("#link"):
             links.add(custom_normalize_url(feat["uri"]))
+            # Check & fix occasional errored link positioning
+            # example: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
+            byteStart = facet["index"]["byteStart"]
+            if b" " in text[byteStart : facet["index"]["byteEnd"]]:
+                byteStart = text.find(b"http", byteStart)
+
             links_to_replace.append(
                 {
                     "uri": feat["uri"].encode("utf-8"),
-                    "start": facet["index"]["byteStart"],
-                    "end": facet["index"]["byteEnd"],
+                    "start": byteStart,
+                    "end": byteStart - facet["index"]["byteStart"] + facet["index"]["byteEnd"],
                 }
             )
 
+        elif feat["$type"].endswith("#bold"):
+            pass
         else:
             raise BlueskyPayloadError(
                 post["url"], "unusual record facet feature $type: %s" % feat

@@ -5438,5 +5438,63 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:u5d54hkw4ysuqtuvcj6cmsin/app.bsky.feed.post/3lqotmopayr23",
+    "cid": "bafyreic6fx7mlkqyp2cywa2nl6eysqouzzphsf4bl7pb6hbm5qz2ivbzge",
+    "author": {
+      "did": "did:plc:u5d54hkw4ysuqtuvcj6cmsin",
+      "handle": "ecrime.ch",
+      "displayName": "",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:u5d54hkw4ysuqtuvcj6cmsin/bafkreidu237hj2xxvquxxgz3py5xhbkkvffawyc27avpvecgxejzozyt2q@jpeg",
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2024-11-15T12:38:51.859Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-06-03T08:09:12.057943+00:00",
+      "facets": [
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#bold"
+            }
+          ],
+          "index": {
+            "byteEnd": 69,
+            "byteStart": 0
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://www.01net.com/actualites/cartier-victime-hack-donnees-clients-volees.html"
+            }
+          ],
+          "index": {
+            "byteEnd": 268,
+            "byteStart": 187
+          }
+        }
+      ],
+      "text": "Cartier est victime d'un hack, les données des clients ont été volées\n\nLa maison de luxe Cartier alerte ses clients après une intrusion dans ses systèmes informatiques. Des p\n\nRead more: https://www.01net.com/actualites/cartier-victime-hack-donnees-clients-volees.html"
+    },
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-06-03T08:09:12.411Z",
+    "viewer": {
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 ]
