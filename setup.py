@@ -17,6 +17,6 @@ setup(
     python_requires=">=3.8",
     packages=find_packages(exclude=["scripts", "test"]),
     package_data={"docs": ["README.md"]},
-    install_requires=["pytz>=2019.3", "ural>=0.31.1"],
+    install_requires=["pytz>=2019.3", "ural>=0.31.1", "python-dateutil>=2.9.0"],
     zip_safe=True,
 )

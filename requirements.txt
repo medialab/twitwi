@@ -7,5 +7,6 @@ twine
 wheel
 
 # Dependencies
+python-dateutil>=2.9.0
 pytz==2019.3
 ural>=0.30.2

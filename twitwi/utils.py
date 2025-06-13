@@ -5,6 +5,7 @@
 # Miscellaneous utility functions.
 #
 from pytz import timezone
+from dateutil.parser import parse as parse_date
 from ural import normalize_url, get_normalized_hostname
 from functools import partial
 from datetime import datetime
@@ -12,7 +13,6 @@ from datetime import datetime
 from twitwi.constants import (
     SOURCE_DATETIME_FORMAT,
     SOURCE_DATETIME_FORMAT_V2,
-    SOURCE_DATETIME_FORMAT_V3,
     FORMATTED_TWEET_DATETIME_FORMAT,
     FORMATTED_FULL_DATETIME_FORMAT,
     CANONICAL_URL_KWARGS,
@@ -41,26 +41,19 @@ def get_dates(date_str, locale=None, source="v1"):
     if locale is None:
         locale = UTC_TIMEZONE
 
-    # Cleanup messed up Bluesky dates
-    processed_date = date_str
-    if source == "bluesky":
-        if len(date_str) == 29 and date_str.endswith("00Z"):
-            processed_date = date_str[:-3] + "Z"
-        elif len(date_str) >= 25 and date_str.endswith("+00:00"):
-            processed_date = date_str[:-6] + "Z"
-
     try:
         parsed_datetime = datetime.strptime(
-            processed_date,
+            date_str,
             SOURCE_DATETIME_FORMAT if source == "v1" else SOURCE_DATETIME_FORMAT_V2,
         )
     except ValueError as e:
-        if source == "bluesky":
-            parsed_datetime = datetime.strptime(processed_date, SOURCE_DATETIME_FORMAT_V3)
-        else:
+        if source != "bluesky":
             raise e
+        parsed_datetime = parse_date(date_str)
 
-    utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
+    utc_datetime = parsed_datetime
+    if not parsed_datetime.tzinfo:
+        utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
     locale_datetime = utc_datetime.astimezone(locale)
 
     return (
