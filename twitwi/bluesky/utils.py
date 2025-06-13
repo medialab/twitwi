@@ -17,7 +17,7 @@ valid_post_keys = [
 valid_record_keys = ["$type", "createdAt", "text"]
 
 
-valid_author_keys = ["did", "handle", "displayName", "avatar", "createdAt"]
+valid_author_keys = ["did", "handle", "displayName", "createdAt"]
 
 
 def validate_post_payload(data):

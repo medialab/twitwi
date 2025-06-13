@@ -17,7 +17,7 @@ class BlueskyProfile(TypedDict):
     lists: int                          # total number of lists created by the user (at collection time)
     feedgens: int                       # total number of custom feeds created by the user (at collection time)
     starter_packs: int                  # total number of starter packs created by the user (at collection time)
-    avatar: str                         # URL to the image serving as avatar to the user
+    avatar: Optional[str]               # URL to the image serving as avatar to the user
     banner: str                         # URL to the image serving as profile banner to the user
     pinned_post_uri: Optional[str]      # ATProto's internal URI to the post potentially pinned by the user to appear at the top of his posts on his profile
     created_at: str                     # datetime (potentially timezoned) of when the user created the account
@@ -63,7 +63,7 @@ class BlueskyPost(TypedDict):
     # user_follows: int                 # not available from posts payloads
     # user_lists: int                   # not available from posts payloads
     user_langs: List[str]               # languages in which the author of the posts usually writes posts (declarative)
-    user_avatar: str                    # URL to the image serving as avatar to the user who authored the post
+    user_avatar: Optional[str]          # URL to the image serving as avatar to the user who authored the post
     user_created_at: str                # datetime (potentially timezoned) ofwhen the user who authored the post created the account
     user_timestamp_utc: int             # Unix UTC timestamp of when the user who authored the post created the account
 
