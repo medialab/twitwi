@@ -56,8 +56,13 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
 
 
 def prepare_native_gif_as_media(gif_data, user_did, source):
-    media_cid = gif_data["thumb"]["ref"]["$link"]
-    _, thumbnail = format_media_url(user_did, media_cid, "image/jpeg", source)
+    if "thumb" in gif_data:
+        media_cid = gif_data["thumb"]["ref"]["$link"]
+        _, thumbnail = format_media_url(user_did, media_cid, "image/jpeg", source)
+    else:
+        media_cid = ""
+        thumbnail = ""
+
     return {
         "id": media_cid,
         "type": "video/gif",
