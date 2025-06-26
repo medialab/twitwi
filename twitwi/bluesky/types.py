@@ -64,7 +64,7 @@ class BlueskyPost(TypedDict):
     # user_lists: int                   # not available from posts payloads
     user_langs: List[str]               # languages in which the author of the posts usually writes posts (declarative)
     user_avatar: Optional[str]          # URL to the image serving as avatar to the user who authored the post
-    user_created_at: str                # datetime (potentially timezoned) ofwhen the user who authored the post created the account
+    user_created_at: str                # datetime (potentially timezoned) of when the user who authored the post created the account
     user_timestamp_utc: int             # Unix UTC timestamp of when the user who authored the post created the account
 
     # Parent post identifying fields
@@ -102,27 +102,27 @@ class BlueskyPost(TypedDict):
     quoted_user_handle: Optional[str]   # updatable human-readable username of the account who authored the quoted post
     quoted_created_at: Optional[int]    # datetime (potentially timezoned) of when the quoted post was submitted
     quoted_timestamp_utc: Optional[int] # Unix UTC timestamp of when the quoted post was submitted
-    quoted_status: Optional[str]        # empty or "detached" when the author of the quoted post intentionnally required the quoting post not to be accessible from their own
+    quoted_status: Optional[str]        # empty or "detached" when the author of the quoted post intentionnally required the quoting post not to appear in the list of this post's quotes
 
     # Embedded elements metadata fields
     links: List[str]                    # list of URLs of all links shared within the post (including potentially the embedded card detailed below, but not the link to a potential quoted post)
-    domains: List[str]                  # list of domains of the links shared within the post (here a domain refer to a full hostname, including subdomains, for instance bluesky.com or medialab.sciencespo.fr)
+    domains: List[str]                  # list of domains of the links shared within the post (here a domain refers to a full hostname, including subdomains, for instance bluesky.com or medialab.sciencespo.fr)
     card_link: Optional[str]            # URL of the link displayed as a card within the post if any
     card_title: Optional[str]           # title of the webpage corresponding to the linkg diplayed as a card within the post if any
     card_description: Optional[str]     # description of the webpage corresponding to the linkg diplayed as a card within the post if any
-    card_thumbnail: Optional[str]       # image displayed as an illustration of the webpage corresponding to the linkg diplayed as a card within the post if any
-    media_urls: List[str]               # list of URLs to all medias (images, videos, gifs) embedded in the post
-    media_thumbnails: List[str]         # list of URLs to small thumbnail version of all medias (images, videos, gifs) embedded in the post
-    media_types: List[str]              # MIME types (such as image/jpeg, image/gif, video/mp4, etc.) of all medias (images, videos, gifs) embedded in the post
-    media_alt_texts: List[str]          # description texts of all medias (images, videos, gifs) embedded in the post
-    mentioned_user_dids: List[str]      # list of all persistent long-term identifier of the accounts adressed within the post (does not include users to which the post replied)
-    mentioned_user_handles: List[str]   # list of all updatable human-readable username of the accounts adressed within the post (does not include users to which the post replied)
+    card_thumbnail: Optional[str]       # image displayed as an illustration of the webpage corresponding to the link diplayed as a card within the post if any
+    media_urls: List[str]               # list of URLs to all media (images, videos, gifs) embedded in the post
+    media_thumbnails: List[str]         # list of URLs to small thumbnail version of all media (images, videos, gifs) embedded in the post
+    media_types: List[str]              # MIME types (such as image/jpeg, image/gif, video/mp4, etc.) of all media (images, videos, gifs) embedded in the post
+    media_alt_texts: List[str]          # description texts of all media (images, videos, gifs) embedded in the post
+    mentioned_user_dids: List[str]      # list of all persistent long-term identifiers of the accounts adressed within the post (does not include users to which the post replied)
+    mentioned_user_handles: List[str]   # list of all updatable human-readable usernames of the accounts adressed within the post (does not include users to which the post replied)
     hashtags: List[str]                 # list of all unique lowercased hashtags found within the post's text
 
     # Conversation rules fields
     replies_rules: Optional[List[str]]          # list of specific conversation rules set by the author for the current post (can be one or a combination of: disallow, allow_from_follower, allow_from_following, allow_from_mention, or allow_from_list: followed by a list of user DIDs)
     replies_rules_created_at: Optional[str]     # datetime (potentially timezoned) of when the user set the replies_rules
-    replies_rules_timestamp_utc: Optional[int]  # Unix UTC timestamp of when the userset the replies_rules
+    replies_rules_timestamp_utc: Optional[int]  # Unix UTC timestamp of when the user set the replies_rules
     hidden_replies_uris: Optional[List[str]]    # list of ATProto's internal URIs to posts who replied to the post, but where intentionnally marked as hidden by the current post's author
     # quotes_rule: Optional[str]                # not available from posts payloads, cf https://github.com/bluesky-social/atproto/issues/3712
     # quotes_rules_created_at: Optional[str]    # not available from posts payloads, cf https://github.com/bluesky-social/atproto/issues/3712
@@ -131,5 +131,5 @@ class BlueskyPost(TypedDict):
 
     # Extra fields linked to the data collection and processing
     collection_time: Optional[str]      # datetime (potentially timezoned) of when the data was normalized
-    collected_via: Optional[List[str]]  # extra field added by the normalization process to express how the data collection was ran, will be "quote" or "thread" when a post was grabbed as a referenced post within a really collected post using the "extract_referenced_posts" option of "normalize_post"
-    match_query: Optional[bool]         # extra field added by the normalization process to express whether the post was an intentionnally collected one or only came as a referenced post within a really collected post using the "extract_referenced_posts" option of "normalize_post"
+    collected_via: Optional[List[str]]  # extra field added by the normalization process to express how the data collection was ran, will be "quote" or "thread" when a post was grabbed as a referenced post within the originally collected post using the "extract_referenced_posts" option of "normalize_post"
+    match_query: Optional[bool]         # extra field added by the normalization process to express whether the post was an intentionnally collected one or only came as a referenced post within the originally collected post using the "extract_referenced_posts" option of "normalize_post"
