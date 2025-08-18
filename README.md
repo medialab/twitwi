@@ -68,7 +68,7 @@ for post_data in posts_payload_from_API:
 
 # Then, saving normalized profiles into a CSV using DictWriter:
 
-from csv import DictWriter
+import csv
 from twitwi.bluesky.constants import POST_FIELDS
 from twitwi.bluesky import transform_post_into_csv_dict
 
@@ -81,7 +81,6 @@ with open("normalized_bluesky_posts.csv", "w") as f:
 
 # Or using the basic CSV writer:
 
-from csv import writer
 from twitwi.bluesky import format_post_as_csv_row
 
 with open("normalized_bluesky_posts.csv", "w") as f:
