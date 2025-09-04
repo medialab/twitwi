@@ -3327,5 +3327,48 @@
       "user_timestamp_utc": 1735931192,
       "user_url": "https://bsky.app/profile/NewYork.activitypub.awakari.com.ap.brid.gy"
     }
+  ],
+  [
+    {
+      "cid": "bafyreie77axka4spbhjtk3za2j6hqeyjnshchpzr2iizcnqtnxky2yujdu",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3kd7xdb24cq27",
+      "domains": [],
+      "hashtags": [],
+      "like_count": 0,
+      "links": [],
+      "local_time": "2023-11-02T19:11:51.000000",
+      "match_query": true,
+      "media_alt_texts": [
+        "Après des mois de patience suite à notre plainte, et après plus de huit heures de procès en septembre dernier, des condamnations sont enfin tombées pour les responsables de l'abattoir de Rodez (Aveyron) :\n• Six mois de prison avec sursis et 1 500 € d'amende pour l'ancien directeur de l'abattoir :\n• Trois mois avec sursis et 3 000 €\npour l'ancien PDG de la société\nArcadie Sud-Ouest;\n• 3 000 € dont 2 000 € avec sursis pour le directeur de la production ovine;\n• 40 000 € pour la société Arcadie;\n• 10 000 € pour la société ADR.\nCes sanctions arrivent quelques mois après la condamnation de l'État pour ses manquements dans ses missions de surveillance et de contrôle en matière de « protection animale » à l'abattoir de Rodez."
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreidt2deg6uzon6x7wlgenved4t4clanxrk4v45ld7iayutrswnu2mq@jpeg"
+      ],
+      "media_types": [
+        "image/jpeg"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreidt2deg6uzon6x7wlgenved4t4clanxrk4v45ld7iayutrswnu2mq@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "🇫🇷 Abattoir de Rodez : amendes et prison avec sursis\n\n#CruautéEnversLesAnimaux #MALTRAITANCEANIMALE\n\n(Crédits: L214)",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "🇫🇷 Abattoir de Rodez : amendes et prison avec sursis\n\n#CruautéEnversLesAnimaux #MALTRAITANCEANIMALE\n\n(Crédits: L214) https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreidt2deg6uzon6x7wlgenved4t4clanxrk4v45ld7iayutrswnu2mq@jpeg",
+      "timestamp_utc": 1698948711,
+      "uri": "at://did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/app.bsky.feed.post/3kd7xdb24cq27",
+      "url": "https://bsky.app/profile/marvinh2g2.fr/post/3kd7xdb24cq27",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreiaxl3ldjsv4fr5tkte6zvvvzsn67zod4uh7iwdcolaa2tlkz5x6qm@jpeg",
+      "user_created_at": "2023-04-13T17:43:19.859000",
+      "user_did": "did:plc:rfbpq5qtn3qt3yxjlqjzs5tw",
+      "user_diplay_name": "Marvin H2G2 - Soutien aux scientifiques !",
+      "user_handle": "marvinh2g2.fr",
+      "user_langs": [],
+      "user_timestamp_utc": 1681400599,
+      "user_url": "https://bsky.app/profile/marvinh2g2.fr"
+    }
   ]
 ]

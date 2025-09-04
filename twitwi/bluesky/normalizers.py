@@ -73,8 +73,12 @@ def prepare_native_gif_as_media(gif_data, user_did, source):
 
 
 def prepare_image_as_media(image_data):
+    if "ref" not in image_data["image"] or "$link" not in image_data["image"]["ref"]:
+        id = image_data["image"]["cid"]
+    else:
+        id = image_data["image"]["ref"]["$link"]
     return {
-        "id": image_data["image"]["ref"]["$link"],
+        "id": id,
         "type": image_data["image"]["mimeType"],
         "alt": image_data["alt"],
     }

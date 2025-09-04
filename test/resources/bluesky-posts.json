@@ -5781,5 +5781,68 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/app.bsky.feed.post/3kd7xdb24cq27",
+    "cid": "bafyreie77axka4spbhjtk3za2j6hqeyjnshchpzr2iizcnqtnxky2yujdu",
+    "author": {
+      "did": "did:plc:rfbpq5qtn3qt3yxjlqjzs5tw",
+      "handle": "marvinh2g2.fr",
+      "displayName": "Marvin H2G2 - Soutien aux scientifiques !",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreiaxl3ldjsv4fr5tkte6zvvvzsn67zod4uh7iwdcolaa2tlkz5x6qm@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "all"
+        },
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-04-13T15:43:19.859Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2023-11-02T18:11:51Z",
+      "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+          {
+            "alt": "Après des mois de patience suite à notre plainte, et après plus de huit heures de procès en septembre dernier, des condamnations sont enfin tombées pour les responsables de l'abattoir de Rodez (Aveyron) :\n• Six mois de prison avec sursis et 1 500 € d'amende pour l'ancien directeur de l'abattoir :\n• Trois mois avec sursis et 3 000 €\npour l'ancien PDG de la société\nArcadie Sud-Ouest;\n• 3 000 € dont 2 000 € avec sursis pour le directeur de la production ovine;\n• 40 000 € pour la société Arcadie;\n• 10 000 € pour la société ADR.\nCes sanctions arrivent quelques mois après la condamnation de l'État pour ses manquements dans ses missions de surveillance et de contrôle en matière de « protection animale » à l'abattoir de Rodez.",
+            "image": {
+              "cid": "bafkreidt2deg6uzon6x7wlgenved4t4clanxrk4v45ld7iayutrswnu2mq",
+              "mimeType": "image/jpeg"
+            }
+          }
+        ]
+      },
+      "text": "🇫🇷 Abattoir de Rodez : amendes et prison avec sursis\n\n#CruautéEnversLesAnimaux #MALTRAITANCEANIMALE\n\n(Crédits: L214)"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.images#view",
+      "images": [
+        {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreidt2deg6uzon6x7wlgenved4t4clanxrk4v45ld7iayutrswnu2mq@jpeg",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreidt2deg6uzon6x7wlgenved4t4clanxrk4v45ld7iayutrswnu2mq@jpeg",
+          "alt": "Après des mois de patience suite à notre plainte, et après plus de huit heures de procès en septembre dernier, des condamnations sont enfin tombées pour les responsables de l'abattoir de Rodez (Aveyron) :\n• Sixmois de prison avec sursis et 1 500 € d'amende pour l'ancien directeur de l'abattoir :\n• Trois mois avec sursis et 3 000 €\npour l'ancien PDG de la société\nArcadie Sud-Ouest;\n• 3 000 € dont 2 000 € avec sursis pour le directeur de la production ovine;\n• 40 000 € pour la société Arcadie;\n• 10 000 € pour la société ADR.\nCes sanctions arrivent quelques mois après la condamnation de l'État pour ses manquements dans ses missions de surveillance et de contrôle en matière de « protection animale » à l'abattoir de Rodez."
+        }
+      ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2023-11-02T18:11:51.000Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 ]
