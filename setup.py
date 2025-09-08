@@ -5,7 +5,7 @@ with open("./README.md", "r") as f:
 
 setup(
     name="twitwi",
-    version="0.21.1",
+    version="0.21.2",
     description="A collection of Twitter-related helper functions for python.",
     long_description=long_description,
     long_description_content_type="text/markdown",
