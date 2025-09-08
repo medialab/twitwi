@@ -96,7 +96,9 @@ def process_starterpack_card(embed_data, post):
 
     card = embed_data.get("record", {})
     creator_did, pack_did = parse_post_uri(embed_data["uri"])
-    post["card_link"] = format_starterpack_url(embed_data.get("creator", {}).get("handle") or creator_did, pack_did)
+    post["card_link"] = format_starterpack_url(
+        embed_data.get("creator", {}).get("handle") or creator_did, pack_did
+    )
     post["card_title"] = card.get("name", "")
     post["card_description"] = card.get("description", "")
     post["card_thumbnail"] = card.get("thumb", "")
@@ -149,7 +151,9 @@ def prepare_quote_data(embed_quote, card_data, post, links):
 
         # Extract user handle from url
         if "did:plc:" not in post["quoted_url"]:
-            post["quoted_user_handle"], _ = parse_post_url(post["quoted_url"], post["url"])
+            post["quoted_user_handle"], _ = parse_post_url(
+                post["quoted_url"], post["url"]
+            )
 
     return (post, quoted_data, links)
 
@@ -180,7 +184,7 @@ def merge_nested_posts(referenced_posts, nested, source):
 
 @overload
 def normalize_post(
-    data: Dict,
+    payload: Dict,
     locale: Optional[str] = ...,
     extract_referenced_posts: Literal[True] = ...,
     collection_source: Optional[str] = ...,
@@ -189,7 +193,7 @@ def normalize_post(
 
 @overload
 def normalize_post(
-    data: Dict,
+    payload: Dict,
     locale: Optional[str] = ...,
     extract_referenced_posts: Literal[False] = ...,
     collection_source: Optional[str] = ...,
@@ -327,7 +331,11 @@ def normalize_post(
                     byteStart = text.find(b"@", byteStart)
 
                 handle = (
-                    text[byteStart + 1 : facet["index"]["byteEnd"] + byteStart - facet["index"]["byteStart"]]
+                    text[
+                        byteStart + 1 : facet["index"]["byteEnd"]
+                        + byteStart
+                        - facet["index"]["byteStart"]
+                    ]
                     .strip()
                     .lower()
                     .decode("utf-8")
@@ -354,7 +362,9 @@ def normalize_post(
                 {
                     "uri": feat["uri"].encode("utf-8"),
                     "start": byteStart,
-                    "end": byteStart - facet["index"]["byteStart"] + facet["index"]["byteEnd"],
+                    "end": byteStart
+                    - facet["index"]["byteStart"]
+                    + facet["index"]["byteEnd"],
                 }
             )
 
@@ -446,7 +456,9 @@ def normalize_post(
         # Quote & Starter-packs
         if embed["$type"].endswith(".record"):
             if "app.bsky.graph.starterpack" in embed["record"]["uri"]:
-                post = process_starterpack_card(data.get("embed", {}).get("record"), post)
+                post = process_starterpack_card(
+                    data.get("embed", {}).get("record"), post
+                )
                 if post["card_link"]:
                     extra_links.append(post["card_link"])
             else:
@@ -527,7 +539,10 @@ def normalize_post(
 
                 # Rewrite post's text to include links to medias within
                 text += b" " + (
-                    media_thumb if media_type.startswith("video") and not media_type.endswith("/gif") else media_url
+                    media_thumb
+                    if media_type.startswith("video")
+                    and not media_type.endswith("/gif")
+                    else media_url
                 ).encode("utf-8")
 
         # Process quotes

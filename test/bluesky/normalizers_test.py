@@ -15,6 +15,8 @@ OVERWRITE_TESTS = False
 
 
 FAKE_COLLECTION_TIME = "2025-01-01T00:00:00.000000"
+
+
 def set_fake_collection_time(dico):
     if "collection_time" in dico:
         dico["collection_time"] = FAKE_COLLECTION_TIME
@@ -47,7 +49,9 @@ class TestNormalizers:
         if OVERWRITE_TESTS:
             from test.utils import dump_json_resource
 
-            normalized_profiles = [set_fake_collection_time(fn(profile)) for profile in profiles]
+            normalized_profiles = [
+                set_fake_collection_time(fn(profile)) for profile in profiles
+            ]
             dump_json_resource(normalized_profiles, "bluesky-normalized-profiles.json")
 
         expected = get_json_resource("bluesky-normalized-profiles.json")
@@ -79,7 +83,13 @@ class TestNormalizers:
         if OVERWRITE_TESTS:
             from test.utils import dump_json_resource
 
-            normalized_posts = [[set_fake_collection_time(p) for p in fn(post, extract_referenced_posts=True)] for post in posts]
+            normalized_posts = [
+                [
+                    set_fake_collection_time(p)
+                    for p in fn(post, extract_referenced_posts=True)
+                ]
+                for post in posts
+            ]
             dump_json_resource(normalized_posts, "bluesky-normalized-posts.json")
 
         expected = get_json_resource("bluesky-normalized-posts.json")
