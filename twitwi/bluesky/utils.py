@@ -88,7 +88,10 @@ def parse_post_uri(uri, source=None):
         raise BlueskyPayloadError(
             source or uri, f"{uri} is not a usual Bluesky post uri"
         )
-    return uri[5:].split("/app.bsky.feed.post/")
+    
+    if "/app.bsky.feed.post/" in uri:
+        return uri[5:].split("/app.bsky.feed.post/")
+    return uri[5:].split("/app.bsky.feed.generator/")
 
 
 def format_starterpack_url(user_handle_or_did, record_did):

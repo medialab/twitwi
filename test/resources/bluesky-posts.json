@@ -5844,5 +5844,73 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:mtyax5fqrdaarejjruev325a/app.bsky.feed.post/3ldzujh66cs2g",
+    "cid": "bafyreibvo6grye7go5hqiyeovlz7caxoxcuv7ghzgzdbpabz6boqgfjhei",
+    "author": {
+        "did": "did:plc:mtyax5fqrdaarejjruev325a",
+        "handle": "vykanoue.bsky.social",
+        "displayName": "Philippe",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mtyax5fqrdaarejjruev325a/bafkreib5y5ivbvefzwe465h2qtcxchur2hjdft4o74x6rn4vahfb4acqau@jpeg",
+        "associated": {"chat": {"allowIncoming": "all"}, "activitySubscription": {"allowSubscriptions": "followers"}},
+        "viewer": {"muted": false, "blockedBy": false},
+        "labels": [],
+        "createdAt": "2024-11-24T07:22:46.045Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-12-24T06:57:03.263Z",
+        "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {"cid": "bafyreibnxghklkcgxu4eq7kvqrguqtnzbzkhdjzclgugckjvgjjfavbx2y", "uri": "at://did:plc:mtyax5fqrdaarejjruev325a/app.bsky.feed.generator/aaaje4n4rupuc"}
+        },
+        "facets": [
+            {"features": [{"$type": "app.bsky.richtext.facet#tag", "tag": "gouvernement"}], "index": {"byteEnd": 136, "byteStart": 123}},
+            {"features": [{"$type": "app.bsky.richtext.facet#tag", "tag": "Bayrou"}], "index": {"byteEnd": 147, "byteStart": 140}},
+            {
+                "features": [{"$type": "app.bsky.richtext.facet#link", "uri": "https://bsky.app/profile/did:plc:mtyax5fqrdaarejjruev325a/feed/aaaje4n4rupuc"}],
+                "index": {"byteEnd": 174, "byteStart": 150}
+            }
+        ],
+        "langs": ["fr", "uk"],
+        "text": "Les dernières 24 heures sont très représentatives de l'état d'esprit d'une bonne partie des français suite au nouveau #gouvernement de #Bayrou.\n\nbsky.app/profile/did:..."
+    },
+    "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+            "uri": "at://did:plc:mtyax5fqrdaarejjruev325a/app.bsky.feed.generator/aaaje4n4rupuc",
+            "cid": "bafyreihaijdubyogdsed753djvfp6thr4merpxslmee6lmlomsouhbphqq",
+            "did": "did:web:skyfeed.me",
+            "creator": {
+                "did": "did:plc:mtyax5fqrdaarejjruev325a",
+                "handle": "vykanoue.bsky.social",
+                "displayName": "Philippe",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mtyax5fqrdaarejjruev325a/bafkreib5y5ivbvefzwe465h2qtcxchur2hjdft4o74x6rn4vahfb4acqau@jpeg",
+                "associated": {"chat": {"allowIncoming": "all"}, "activitySubscription": {"allowSubscriptions": "followers"}},
+                "viewer": {"muted": false, "blockedBy": false},
+                "labels": [],
+                "createdAt": "2024-11-24T07:22:46.045Z",
+                "description": "Si tu ne prends pas le temps d'expliquer, ne demande pas aux autres de prendre le temps de comprendre...\n\nRésolument contre le : \"réformisme de trahison\".\nJe soutiens l'Ukraine en plus d'y vivre.",
+                "indexedAt": "2025-05-14T09:03:44.041Z"
+            },
+            "displayName": "Top Like sur 24H",
+            "description": "Les messages en français qui reçoivent le plus de Like lors des dernières 24 heures",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mtyax5fqrdaarejjruev325a/bafkreigk4hdp3te5lu25nv4snbkzkh5rjqsatfuvbqrxsxgokwlm75jrla@jpeg",
+            "likeCount": 3,
+            "labels": [],
+            "viewer": {},
+            "indexedAt": "2024-12-31T15:06:24.649Z",
+            "$type": "app.bsky.feed.defs#generatorView"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-12-24T06:57:03.551Z",
+    "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
+    "labels": []
   }
 ]

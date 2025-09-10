@@ -3370,5 +3370,55 @@
       "user_timestamp_utc": 1681400599,
       "user_url": "https://bsky.app/profile/marvinh2g2.fr"
     }
+  ],
+  [
+    {
+      "cid": "bafyreibvo6grye7go5hqiyeovlz7caxoxcuv7ghzgzdbpabz6boqgfjhei",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3ldzujh66cs2g",
+      "domains": [
+        "bsky.app"
+      ],
+      "hashtags": [
+        "bayrou",
+        "gouvernement"
+      ],
+      "like_count": 0,
+      "links": [
+        "https://bsky.app/profile/did%3Aplc%3Amtyax5fqrdaarejjruev325a/feed/aaaje4n4rupuc"
+      ],
+      "local_time": "2024-12-24T07:57:03.263000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Les dernières 24 heures sont très représentatives de l'état d'esprit d'une bonne partie des français suite au nouveau #gouvernement de #Bayrou.\n\nbsky.app/profile/did:...",
+      "quote_count": 0,
+      "quoted_cid": "bafyreibnxghklkcgxu4eq7kvqrguqtnzbzkhdjzclgugckjvgjjfavbx2y",
+      "quoted_did": "aaaje4n4rupuc",
+      "quoted_uri": "at://did:plc:mtyax5fqrdaarejjruev325a/app.bsky.feed.generator/aaaje4n4rupuc",
+      "quoted_url": "https://bsky.app/profile/did:plc:mtyax5fqrdaarejjruev325a/post/aaaje4n4rupuc",
+      "quoted_user_did": "did:plc:mtyax5fqrdaarejjruev325a",
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Les dernières 24 heures sont très représentatives de l'état d'esprit d'une bonne partie des français suite au nouveau #gouvernement de #Bayrou.\n\nhttps://bsky.app/profile/did:plc:mtyax5fqrdaarejjruev325a/feed/aaaje4n4rupuc",
+      "timestamp_utc": 1735023423,
+      "uri": "at://did:plc:mtyax5fqrdaarejjruev325a/app.bsky.feed.post/3ldzujh66cs2g",
+      "url": "https://bsky.app/profile/vykanoue.bsky.social/post/3ldzujh66cs2g",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mtyax5fqrdaarejjruev325a/bafkreib5y5ivbvefzwe465h2qtcxchur2hjdft4o74x6rn4vahfb4acqau@jpeg",
+      "user_created_at": "2024-11-24T08:22:46.045000",
+      "user_did": "did:plc:mtyax5fqrdaarejjruev325a",
+      "user_diplay_name": "Philippe",
+      "user_handle": "vykanoue.bsky.social",
+      "user_langs": [
+        "fr",
+        "uk"
+      ],
+      "user_timestamp_utc": 1732432966,
+      "user_url": "https://bsky.app/profile/vykanoue.bsky.social"
+    }
   ]
 ]
