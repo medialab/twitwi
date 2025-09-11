@@ -84,14 +84,15 @@ def parse_post_uri(uri, source=None):
     if uri.startswith("at://") and "/app.bsky.graph.starterpack/" in uri:
         return uri[5:].split("/app.bsky.graph.starterpack/")
 
-    if not uri.startswith("at://") and "/app.bsky.feed.post/" not in uri:
+    if uri.startswith("at://") and "/app.bsky.feed.generator/" in uri:
+        return uri[5:].split("/app.bsky.feed.generator/")
+
+    if not uri.startswith("at://") or "/app.bsky.feed.post/" not in uri:
         raise BlueskyPayloadError(
             source or uri, f"{uri} is not a usual Bluesky post uri"
         )
     
-    if "/app.bsky.feed.post/" in uri:
-        return uri[5:].split("/app.bsky.feed.post/")
-    return uri[5:].split("/app.bsky.feed.generator/")
+    return uri[5:].split("/app.bsky.feed.post/")
 
 
 def format_starterpack_url(user_handle_or_did, record_did):
