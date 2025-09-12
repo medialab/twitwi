@@ -5996,6 +5996,87 @@
     "indexedAt": "2025-09-11T14:17:38.608Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:bvs6b4f4fz2jj73wtrtjiy4j/app.bsky.feed.post/3lh37623txp2g",
+    "cid": "bafyreig3mnixzsqxswd3lblp3u5ionce63g6ijlsrqlnftlnhdu63e57ly",
+    "author": {
+      "did": "did:plc:bvs6b4f4fz2jj73wtrtjiy4j",
+      "handle": "g0rosato.bsky.social",
+      "displayName": "今日視界",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bvs6b4f4fz2jj73wtrtjiy4j/bafkreidajgwqkixixv6u64c4d323zcikkdjk7nm2mwuguddn2wuvtwz42e@jpeg",
+      "associated": {
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2024-05-01T15:49:20.427Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-01-31T23:55:42.952541Z",
+      "embed": {
+        "$type": "app.bsky.embed.external#main",
+        "external": {
+          "description": "雖然我們平凡又渺小，但仍然可以耀眼如星辰——青林之初",
+          "thumb": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreih6kmduzcdvjy7xvvnlk5o2zld3mfccejz7774tlp27g2fhnnrvjy"
+            },
+            "mimeType": "image/jpeg",
+            "size": 53251
+          },
+          "title": "2025二月上市新品‖52款",
+          "uri": "https://www.headline01.com/a/BR_fMgLDnjnzuQfiKl1TKg-F4D16811.html"
+        },
+        "uri": "https://www.headline01.com/a/BR_fMgLDnjnzuQfiKl1TKg-F4D16811.html"
+      },
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "上市"
+            }
+          ],
+          "index": {
+            "byteEnd": 38,
+            "byteStart": 31
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "新品"
+            }
+          ],
+          "index": {
+            "byteEnd": 46,
+            "byteStart": 39
+          }
+        }
+      ],
+      "text": "2025二月上市新品‖52款 #上市 #新品"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-01-31T23:55:47.459Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
