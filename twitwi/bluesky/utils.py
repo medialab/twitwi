@@ -81,11 +81,12 @@ def parse_post_url(url, source):
 def parse_post_uri(uri, source=None):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
-    if uri.startswith("at://") and "/app.bsky.graph.starterpack/" in uri:
-        return uri[5:].split("/app.bsky.graph.starterpack/")
+    known_splits = {"/app.bsky.feed.post/", "/app.bsky.graph.starterpack/", "/app.bsky.feed.generator/", "/app.bsky.graph.list/"}
 
-    if uri.startswith("at://") and "/app.bsky.feed.generator/" in uri:
-        return uri[5:].split("/app.bsky.feed.generator/")
+    if uri.startswith("at://"):
+        for split in known_splits:
+            if split in uri:
+                return uri[5:].split(split)
 
     if not uri.startswith("at://") or "/app.bsky.feed.post/" not in uri:
         raise BlueskyPayloadError(
