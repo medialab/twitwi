@@ -3420,54 +3420,5 @@
       "user_timestamp_utc": 1732432966,
       "user_url": "https://bsky.app/profile/vykanoue.bsky.social"
     }
-  ],
-  [
-    {
-      "cid": "bafyreigxeyjpv7jhqivrnumkhm7biou3dkx7j25q7x3kceh6myzycmoarq",
-      "collection_time": "2025-01-01T00:00:00.000000",
-      "did": "3lykwtl5no22g",
-      "domains": [],
-      "hashtags": [
-        "block",
-        "kirk",
-        "maga",
-        "moderation",
-        "trolls",
-        "trump"
-      ],
-      "like_count": 4,
-      "links": [],
-      "local_time": "2025-09-11T16:17:38.577000",
-      "match_query": true,
-      "media_alt_texts": [],
-      "media_thumbnails": [],
-      "media_types": [],
-      "media_urls": [],
-      "mentioned_user_dids": [],
-      "mentioned_user_handles": [],
-      "original_text": "There has been a big influx of MAGA and rage-baiting trolls hitting Bluesky in the last little while. Keep your Bluesky environment clean, fresh and fun by kicking around 3500 of the worst offenders to the curb with this carefully moderated blocklist. #maga #block #moderation #trolls #trump #kirk",
-      "quote_count": 0,
-      "quoted_cid": "bafyreide2mfsmu3adbfmkvv3dirfprg7m4aoxq6trer2s5ryr6etm2noc4",
-      "quoted_did": "3ljoqzqm7gm2k",
-      "quoted_uri": "at://did:plc:ymccztoissgru2ibl4fvb5iq/app.bsky.graph.list/3ljoqzqm7gm2k",
-      "quoted_url": "https://bsky.app/profile/did:plc:ymccztoissgru2ibl4fvb5iq/post/3ljoqzqm7gm2k",
-      "quoted_user_did": "did:plc:ymccztoissgru2ibl4fvb5iq",
-      "reply_count": 0,
-      "repost_count": 0,
-      "text": "There has been a big influx of MAGA and rage-baiting trolls hitting Bluesky in the last little while. Keep your Bluesky environment clean, fresh and fun by kicking around 3500 of the worst offenders to the curb with this carefully moderated blocklist. #maga #block #moderation #trolls #trump #kirk",
-      "timestamp_utc": 1757600258,
-      "uri": "at://did:plc:ymccztoissgru2ibl4fvb5iq/app.bsky.feed.post/3lykwtl5no22g",
-      "url": "https://bsky.app/profile/cantankerouscanuck.bsky.social/post/3lykwtl5no22g",
-      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ymccztoissgru2ibl4fvb5iq/bafkreihugrnvcpuc2r2yyru7ljfw2kyk73xruytrx7ndq7af2ffcbyewai@jpeg",
-      "user_created_at": "2024-11-15T17:47:01.622000",
-      "user_did": "did:plc:ymccztoissgru2ibl4fvb5iq",
-      "user_diplay_name": "🇨🇦 The Cantankerous Canuck 🇨🇦",
-      "user_handle": "cantankerouscanuck.bsky.social",
-      "user_langs": [
-        "en"
-      ],
-      "user_timestamp_utc": 1731689221,
-      "user_url": "https://bsky.app/profile/cantankerouscanuck.bsky.social"
-    }
   ]
 ]
