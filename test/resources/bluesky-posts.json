@@ -6167,6 +6167,127 @@
     "indexedAt": "2025-05-30T14:51:05.146Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
+},
+{
+    "uri": "at://did:plc:qji2qys3x5mv3qcsk6m4iyrb/app.bsky.feed.post/3lz2qo6oz2227",
+    "cid": "bafyreie5bugeyisat6kw6pdvrjs6p4gito3ytz6qi3qmf3zwbtnr6h6wfm",
+    "author": {
+        "did": "did:plc:qji2qys3x5mv3qcsk6m4iyrb",
+        "handle": "saltystan.bsky.social",
+        "displayName": "Stan 🇨🇦🐻",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qji2qys3x5mv3qcsk6m4iyrb/bafkreiajhfcnnnm5rvwkdbwo4z422xul3tutpsbp37chde2bzfgnx2tov4@jpeg",
+        "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+        "viewer": {"muted": false, "blockedBy": false},
+        "labels": [],
+        "createdAt": "2024-11-26T15:48:25.346Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-09-17T21:09:51.104Z",
+        "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {"cid": "bafyreieer5vb4c2tumqzotyk6glxdfflyd264w4c4j7nypwyztkb2yluta", "uri": "at://did:plc:n36m4kw25hkpzlvv6u4wvirm/app.bsky.feed.post/3lz2aym2ljk2t"}
+        },
+        "langs": ["en"],
+        "text": "As a teacher of AP US History, I am very aware of how the US political system is supposed to work. Unfortunately, even the pathetically weak system of checks and balances no longer works thanks to SCOTUS giving Trump absolute power. He is more of an absolute monarch than George III was in 1775!"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+            "$type": "app.bsky.embed.record#viewRecord",
+            "uri": "at://did:plc:n36m4kw25hkpzlvv6u4wvirm/app.bsky.feed.post/3lz2aym2ljk2t",
+            "cid": "bafyreieer5vb4c2tumqzotyk6glxdfflyd264w4c4j7nypwyztkb2yluta",
+            "author": {
+                "did": "did:plc:n36m4kw25hkpzlvv6u4wvirm",
+                "handle": "proudlycanadian.bsky.social",
+                "displayName": "",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:n36m4kw25hkpzlvv6u4wvirm/bafkreid44ygd3u2c5mfmphvxdywi2tl77vi42z43avgai37rvvhd6qilwm@jpeg",
+                "associated": {"chat": {"allowIncoming": "following"}, "activitySubscription": {"allowSubscriptions": "followers"}},
+                "viewer": {"muted": false, "blockedBy": false},
+                "labels": [],
+                "createdAt": "2024-10-11T19:06:07.707Z"
+            },
+            "value": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-09-17T16:29:20.790Z",
+                "embed": {
+                    "$type": "app.bsky.embed.record",
+                    "record": {"cid": "bafyreiggpkrsoghw5usdqw4yt2ji4olyimiapmkqavdl7d7k57ikgg6vwi", "uri": "at://did:plc:l4y56p5e7ofj2zspucopqzue/app.bsky.feed.post/3lz2arhudnk2u"}
+                },
+                "langs": ["en"],
+                "text": "By the way, since you have added me to your petty childish list,  I am a dual citizen from Grand Falls, Michigan with lots of US family.  And you are just another arrogant American with a false sense of superiority that you haven't earned.  Gee maybe I could make a list too."
+            },
+            "labels": [],
+            "likeCount": 12,
+            "replyCount": 8,
+            "repostCount": 1,
+            "quoteCount": 1,
+            "indexedAt": "2025-09-17T16:29:21.203Z",
+            "embeds": [
+                {
+                    "$type": "app.bsky.embed.record#view",
+                    "record": {
+                        "$type": "app.bsky.embed.record#viewRecord",
+                        "uri": "at://did:plc:l4y56p5e7ofj2zspucopqzue/app.bsky.feed.post/3lz2arhudnk2u",
+                        "cid": "bafyreiggpkrsoghw5usdqw4yt2ji4olyimiapmkqavdl7d7k57ikgg6vwi",
+                        "author": {
+                            "did": "did:plc:l4y56p5e7ofj2zspucopqzue",
+                            "handle": "lanana421.bsky.social",
+                            "displayName": "LANana-Nuestra Señora de la Muerte del Pan 😪",
+                            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:l4y56p5e7ofj2zspucopqzue/bafkreihfta2diqc42tknbolnsviqigezb7qpmxk5d2wmsik67y66pis6aq@jpeg",
+                            "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+                            "viewer": {"muted": false, "blockedBy": false},
+                            "labels": [],
+                            "createdAt": "2023-11-21T03:55:03.473Z"
+                        },
+                        "value": {
+                            "$type": "app.bsky.feed.post",
+                            "createdAt": "2025-09-17T16:25:21.511Z",
+                            "embed": {
+                                "$type": "app.bsky.embed.record",
+                                "record": {
+                                    "cid": "bafyreigxcbqhfnnb2lanmvtl3joeo45d7qj7pjjptuwaazqdeb2zkpfvue",
+                                    "uri": "at://did:plc:l4y56p5e7ofj2zspucopqzue/app.bsky.graph.list/3lxdgjtpqhf2z"
+                                }
+                            },
+                            "facets": [
+                                {
+                                    "features": [{"$type": "app.bsky.richtext.facet#link", "uri": "https://bsky.app/profile/did:plc:l4y56p5e7ofj2zspucopqzue/lists/3lxdgjtpqhf2z"}],
+                                    "index": {"byteEnd": 76, "byteStart": 52}
+                                }
+                            ],
+                            "langs": ["en"],
+                            "reply": {
+                                "parent": {
+                                    "cid": "bafyreib334gfsf7i7swoulhbo4d5bd4prulatv245sedx2vbh3i2jmxfrm",
+                                    "uri": "at://did:plc:ktc7mkfqnint7hmviye6wizr/app.bsky.feed.post/3lyyjulornc2c"
+                                },
+                                "root": {
+                                    "cid": "bafyreib334gfsf7i7swoulhbo4d5bd4prulatv245sedx2vbh3i2jmxfrm",
+                                    "uri": "at://did:plc:ktc7mkfqnint7hmviye6wizr/app.bsky.feed.post/3lyyjulornc2c"
+                                }
+                            },
+                            "text": "I have a mod list just for accounts like this 🤣\n\nbsky.app/profile/did:..."
+                        },
+                        "labels": [],
+                        "likeCount": 1,
+                        "replyCount": 3,
+                        "repostCount": 0,
+                        "quoteCount": 1,
+                        "indexedAt": "2025-09-17T16:25:22.311Z"
+                    }
+                }
+            ]
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-09-17T21:09:52.104Z",
+    "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
+    "labels": []
 }
 
 ]

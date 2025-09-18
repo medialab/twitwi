@@ -73,9 +73,14 @@ def format_post_url(user_handle_or_did, post_did):
 def parse_post_url(url, source):
     """Returns a tuple of (author_handle/did, post_did) from an https://bsky.app post URL"""
 
-    if not url.startswith("https://bsky.app/profile/") and "/post/" not in url:
+    known_splits = {"/post/", "/lists/"}
+
+    if not url.startswith("https://bsky.app/profile/") and not any(split in url for split in known_splits):
         raise BlueskyPayloadError(source, f"{url} is not a usual Bluesky post url")
-    return url[25:].split("/post/")
+    
+    for split in known_splits:
+        if split in url[25:]:
+            return url[25:].split(split)
 
 
 def parse_post_uri(uri, source=None):
