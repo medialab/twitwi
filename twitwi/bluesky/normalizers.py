@@ -515,6 +515,7 @@ def normalize_post(
 
         # Process extra links
         for link in extra_links:
+            link = link.replace("\\", "")
             norm_link = custom_normalize_url(link)
             if norm_link not in links:
                 links.add(norm_link)

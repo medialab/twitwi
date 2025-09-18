@@ -6077,6 +6077,57 @@
       "embeddingDisabled": false
     },
     "labels": []
-  }
+  },
+  {
+    "uri": "at://did:plc:yw52e2bo6zv7ulryr4ryncpu/app.bsky.feed.post/3lvzzqrzy3s2x",
+    "cid": "bafyreibakuvpgbjpznehxugdibxibdodtke55b3hfya3ssj4gjf3nkz33q",
+    "author": {
+        "did": "did:plc:yw52e2bo6zv7ulryr4ryncpu",
+        "handle": "eurobot.bsky.social",
+        "displayName": "Eurobot",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yw52e2bo6zv7ulryr4ryncpu/bafkreif4pebsptscit4xjnsjbkb2mqlfsglcjo5xlmjdi4dvmgkmysjpxa@jpeg",
+        "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+        "viewer": {"muted": false, "blockedBy": false},
+        "labels": [],
+        "createdAt": "2023-10-04T20:14:04.497Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-08-10T10:04:07.217Z",
+        "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+                "description": "We welcome President Trump\\'s work to stop the killing in Ukraine, end the Russian Federation\\'s war of aggression, and achieve just and lasting peace and security for Ukraine.\\nWe are convinced that onl",
+                "thumb": {"$type": "blob", "ref": {"$link": "bafkreib7b745vtqsury5774fnmmt444wijx3cdlzkxb7bf6pz6sbjegsmi"}, "mimeType": "image/jpeg", "size": 84026},
+                "title": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump\\'s planned meeting with President Putin",
+                "uri": "https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952"
+            }
+        },
+        "facets": [
+            {
+                "features": [{"$type": "app.bsky.richtext.facet#link", "uri": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952"}],
+                "index": {"byteEnd": 300, "byteStart": 229}
+            }
+        ],
+        "text": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump's planned meeting ...\n\nhttps://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+            "uri": "https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952",
+            "title": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump\\'s planned meeting with President Putin",
+            "description": "We welcome President Trump\\'s work to stop the killing in Ukraine, end the Russian Federation\\'s war of aggression, and achieve just and lasting peace and security for Ukraine.\\nWe are convinced that onl",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yw52e2bo6zv7ulryr4ryncpu/bafkreib7b745vtqsury5774fnmmt444wijx3cdlzkxb7bf6pz6sbjegsmi@jpeg"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-08-10T10:04:07.704Z",
+    "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
+    "labels": []
+}
 
 ]
