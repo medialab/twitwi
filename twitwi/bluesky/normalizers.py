@@ -353,9 +353,10 @@ def normalize_post(
 
             links.add(custom_normalize_url(feat["uri"]))
             # Check & fix occasional errored link positioning
-            # example: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
+            # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
+            #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
             byteStart = facet["index"]["byteStart"]
-            if b" " in text[byteStart : facet["index"]["byteEnd"]]:
+            if any(c in text[byteStart : facet["index"]["byteEnd"]] for c in (b" ", b"\n")):
                 byteStart = text.find(b"http", byteStart)
 
             links_to_replace.append(

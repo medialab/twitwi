@@ -3550,5 +3550,44 @@
       "user_timestamp_utc": 1696450444,
       "user_url": "https://bsky.app/profile/eurobot.bsky.social"
     }
+  ],
+  [
+    {
+      "cid": "bafyreiaeixjveoju6jyhfj5ex2owte2sjrqpb3yxzo5mqx66xzeljelwle",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lqfi7mnto52w",
+      "domains": [
+        "hindustantimes.com"
+      ],
+      "hashtags": [],
+      "like_count": 0,
+      "links": [
+        "https://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html"
+      ],
+      "local_time": "2025-05-30T16:51:04.213166",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Emmanuel Macron & his wife's shocking conversation after shoving incident decoded by lip reader, ‘Stay away, you loser’\n\nhttps://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Emmanuel Macron & his wife's shocking conversation after shoving incident decoded by lip reader, ‘Stay away, you loser’\n\nhttps://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html",
+      "timestamp_utc": 1748616664,
+      "uri": "at://did:plc:djglyf5epph2tc44lnqsdvfi/app.bsky.feed.post/3lqfi7mnto52w",
+      "url": "https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:djglyf5epph2tc44lnqsdvfi/bafkreie5xhcjxcgbcsl7lglo4hsp6nsbpvcsxvugfiojk43lc5lkkxwe3u@jpeg",
+      "user_created_at": "2025-01-20T15:45:49.643000",
+      "user_did": "did:plc:djglyf5epph2tc44lnqsdvfi",
+      "user_diplay_name": "ClustZ",
+      "user_handle": "clustz.com",
+      "user_langs": [],
+      "user_timestamp_utc": 1737384349,
+      "user_url": "https://bsky.app/profile/clustz.com"
+    }
   ]
 ]

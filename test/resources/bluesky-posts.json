@@ -6128,6 +6128,45 @@
     "indexedAt": "2025-08-10T10:04:07.704Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
+},
+{
+    "uri": "at://did:plc:djglyf5epph2tc44lnqsdvfi/app.bsky.feed.post/3lqfi7mnto52w",
+    "cid": "bafyreiaeixjveoju6jyhfj5ex2owte2sjrqpb3yxzo5mqx66xzeljelwle",
+    "author": {
+        "did": "did:plc:djglyf5epph2tc44lnqsdvfi",
+        "handle": "clustz.com",
+        "displayName": "ClustZ",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:djglyf5epph2tc44lnqsdvfi/bafkreie5xhcjxcgbcsl7lglo4hsp6nsbpvcsxvugfiojk43lc5lkkxwe3u@jpeg",
+        "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+        "viewer": {"muted": false, "blockedBy": false},
+        "labels": [],
+        "createdAt": "2025-01-20T14:45:49.643Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-05-30T14:51:04.213166Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": 
+"https://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html"
+                    }
+                ],
+                "index": {"byteEnd": 276, "byteStart": 121}
+            }
+        ],
+        "text": "Emmanuel Macron & his wife's shocking conversation after shoving incident decoded by lip reader, ‘Stay away, you loser’\n\nhttps://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-05-30T14:51:05.146Z",
+    "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
+    "labels": []
 }
 
 ]
