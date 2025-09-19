@@ -108,7 +108,7 @@ def process_starterpack_card(embed_data, post):
 def process_card_data(embed_data, post):
     # Warning: mutates post
 
-    post["card_link"] = embed_data["uri"]
+    post["card_link"] = embed_data["uri"].replace("\\", "")
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
     post["card_thumbnail"] = embed_data.get("thumb", "")
@@ -430,6 +430,7 @@ def normalize_post(
         # Links from cards
         if embed["$type"].endswith(".external"):
             link = embed["external"]["uri"]
+            link = link.replace("\\", "")
 
             # Handle native gifs as medias
             if link.startswith("https://media.tenor.com/"):
@@ -441,7 +442,7 @@ def normalize_post(
 
             # Extra card links sometimes missing from facets & text due to manual action in post form
             else:
-                extra_links.append(embed["external"]["uri"])
+                extra_links.append(link)
                 # Handle link card metadata
                 if "embed" in data:
                     post = process_card_data(data["embed"]["external"], post)
@@ -479,6 +480,7 @@ def normalize_post(
             # Links from cards
             if embed["media"]["$type"].endswith(".external"):
                 link = embed["media"]["external"]["uri"]
+                link = link.replace("\\", "")
 
                 # Handle native gifs as medias
                 if link.startswith("https://media.tenor.com/"):
@@ -516,7 +518,6 @@ def normalize_post(
 
         # Process extra links
         for link in extra_links:
-            link = link.replace("\\", "")
             norm_link = custom_normalize_url(link)
             if norm_link not in links:
                 links.add(norm_link)

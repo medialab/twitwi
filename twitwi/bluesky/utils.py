@@ -75,7 +75,7 @@ def parse_post_url(url, source):
 
     known_splits = {"/post/", "/lists/"}
 
-    if not url.startswith("https://bsky.app/profile/") and not any(split in url for split in known_splits):
+    if not url.startswith("https://bsky.app/profile/") or not any(split in url for split in known_splits):
         raise BlueskyPayloadError(source, f"{url} is not a usual Bluesky post url")
     
     for split in known_splits:
@@ -109,7 +109,7 @@ def format_media_url(user_did, media_cid, mime_type, source):
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
-    elif mime_type=="application/octet-stream":
+    elif mime_type == "application/octet-stream":
         media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
         media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@jpeg"
     else:
