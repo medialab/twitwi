@@ -3734,5 +3734,63 @@
       "user_timestamp_utc": 1732636105,
       "user_url": "https://bsky.app/profile/saltystan.bsky.social"
     }
+  ],
+  [
+    {
+      "bridgy_original_url": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/",
+      "cid": "bafyreict3skrzt7f3273jy6hzqwrjmhw7epzwqbgibuzywlfnz336gnox4",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lnklxadqgq32",
+      "domains": [
+        "awakari.com",
+        "gizchina.com"
+      ],
+      "hashtags": [
+        "china",
+        "foldable",
+        "huawei",
+        "market",
+        "news",
+        "smartphone",
+        "smartphones"
+      ],
+      "like_count": 0,
+      "links": [
+        "https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android",
+        "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/"
+      ],
+      "local_time": "2025-04-24T11:09:40.000000",
+      "match_query": true,
+      "media_alt_texts": [
+        ""
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg"
+      ],
+      "media_types": [
+        "application/octet-stream"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...\n\nhttps://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\n\n#Huawei #news #foldable #smartphones #smartphone #market #China\n\nResult Details",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...\n\nhttps://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\n\n#Huawei #news #foldable #smartphones #smartphone #market #China\n\nResult Details https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
+      "timestamp_utc": 1745485780,
+      "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.feed.post/3lnklxadqgq32",
+      "url": "https://bsky.app/profile/android.activitypub.awakari.com.ap.brid.gy/post/3lnklxadqgq32",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+      "user_created_at": "2025-01-03T20:27:31.965000",
+      "user_did": "did:plc:etkadjdby46s2skc4shoxp6q",
+      "user_diplay_name": "Android",
+      "user_handle": "android.activitypub.awakari.com.ap.brid.gy",
+      "user_langs": [],
+      "user_timestamp_utc": 1735932451,
+      "user_url": "https://bsky.app/profile/android.activitypub.awakari.com.ap.brid.gy"
+    }
   ]
 ]

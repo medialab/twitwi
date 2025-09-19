@@ -109,6 +109,9 @@ def format_media_url(user_did, media_cid, mime_type, source):
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
+    elif mime_type=="application/octet-stream":
+        media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
+        media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@jpeg"
     else:
-        raise BlueskyPayloadError(source, f"{mime_type} is an usual media mimeType")
+        raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb

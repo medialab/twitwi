@@ -6288,6 +6288,203 @@
     "indexedAt": "2025-09-17T21:09:52.104Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
+},
+{
+  "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.feed.post/3lnklxadqgq32",
+  "cid": "bafyreict3skrzt7f3273jy6hzqwrjmhw7epzwqbgibuzywlfnz336gnox4",
+  "author": {
+    "did": "did:plc:etkadjdby46s2skc4shoxp6q",
+    "handle": "android.activitypub.awakari.com.ap.brid.gy",
+    "displayName": "Android",
+    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+    "associated": {
+      "chat": {
+        "allowIncoming": "none"
+      },
+      "activitySubscription": {
+        "allowSubscriptions": "followers"
+      }
+    },
+    "viewer": {
+      "muted": false,
+      "blockedBy": false
+    },
+    "labels": [
+      {
+        "src": "did:plc:etkadjdby46s2skc4shoxp6q",
+        "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.actor.profile/self",
+        "cid": "bafyreidefimaelx472wl2enh3j3nt2zslkfryrp52r4jacmtnh2qemjdji",
+        "val": "bridged-from-bridgy-fed-activitypub",
+        "cts": "1970-01-01T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2025-01-03T19:27:31.965Z"
+  },
+  "record": {
+    "$type": "app.bsky.feed.post",
+    "bridgyOriginalText": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...<br/><br/><a href=\"https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\">https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Huawei\">#Huawei</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/news\">#news</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/foldable\">#foldable</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphones\">#smartphones</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphone\">#smartphone</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/market\">#market</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/China\">#China</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android\">Result Details</a>",
+    "bridgyOriginalUrl": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/",
+    "createdAt": "2025-04-24T09:09:40.000Z",
+    "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+        {
+          "$type": "app.bsky.embed.images#image",
+          "alt": "",
+          "image": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi"
+            },
+            "mimeType": "application/octet-stream",
+            "size": 67729
+          }
+        }
+      ]
+    },
+    "facets": [
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "Huawei"
+          }
+        ],
+        "index": {
+          "byteEnd": 202,
+          "byteStart": 195
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "news"
+          }
+        ],
+        "index": {
+          "byteEnd": 208,
+          "byteStart": 203
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "foldable"
+          }
+        ],
+        "index": {
+          "byteEnd": 218,
+          "byteStart": 209
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "smartphones"
+          }
+        ],
+        "index": {
+          "byteEnd": 231,
+          "byteStart": 219
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "smartphone"
+          }
+        ],
+        "index": {
+          "byteEnd": 243,
+          "byteStart": 232
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "market"
+          }
+        ],
+        "index": {
+          "byteEnd": 251,
+          "byteStart": 244
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "China"
+          }
+        ],
+        "index": {
+          "byteEnd": 258,
+          "byteStart": 252
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/"
+          }
+        ],
+        "index": {
+          "byteEnd": 193,
+          "byteStart": 102
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android"
+          }
+        ],
+        "index": {
+          "byteEnd": 274,
+          "byteStart": 260
+        }
+      }
+    ],
+    "text": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...\n\nhttps://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\n\n#Huawei #news #foldable #smartphones #smartphone #market #China\n\nResult Details"
+  },
+  "embed": {
+    "$type": "app.bsky.embed.images#view",
+    "images": [
+      {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
+        "alt": ""
+      }
+    ]
+  },
+  "bookmarkCount": 0,
+  "replyCount": 0,
+  "repostCount": 0,
+  "likeCount": 0,
+  "quoteCount": 0,
+  "indexedAt": "2025-04-24T11:26:00.178Z",
+  "viewer": {
+    "bookmarked": false,
+    "threadMuted": false,
+    "embeddingDisabled": false
+  },
+  "labels": []
 }
 
 ]
