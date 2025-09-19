@@ -125,7 +125,12 @@ def prepare_quote_data(embed_quote, card_data, post, links):
     )
 
     # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
-    post["quoted_url"] = format_post_url(post["quoted_user_did"], post["quoted_did"])
+    # Handling special posts types (only lists for now, for example: https://bsky.app/profile/lanana421.bsky.social/lists/3lxdgjtpqhf2z)
+    if "/app.bsky.graph.list/" in post["quoted_uri"]:
+        post_splitter = "/lists/"
+    else:
+        post_splitter = "/post/"
+    post["quoted_url"] = format_post_url(post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter)
 
     quoted_data = None
     if card_data:

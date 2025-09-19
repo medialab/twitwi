@@ -66,8 +66,8 @@ def format_profile_url(user_handle_or_did):
     return f"https://bsky.app/profile/{user_handle_or_did}"
 
 
-def format_post_url(user_handle_or_did, post_did):
-    return f"https://bsky.app/profile/{user_handle_or_did}/post/{post_did}"
+def format_post_url(user_handle_or_did, post_did, post_splitter="/post/"):
+    return f"https://bsky.app/profile/{user_handle_or_did}{post_splitter}{post_did}"
 
 
 def parse_post_url(url, source):
