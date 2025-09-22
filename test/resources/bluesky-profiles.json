@@ -455,5 +455,30 @@
     "followersCount": 1120434,
     "followsCount": 31,
     "postsCount": 12736
+  },
+  {
+      "did": "did:plc:mmbei6khrn63ray3xts7x5gz",
+      "handle": "evancheval.bsky.social",
+      "displayName": "",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mmbei6khrn63ray3xts7x5gz/bafkreicwqhbll7didcskoy2dlwzdqiai4x3ana7qdi4stkk3h5rcgwoskm@jpeg",
+      "associated": {
+        "lists": 0,
+        "feedgens": 0,
+        "starterPacks": 0,
+        "labeler": false,
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2025-09-01T09:38:52.697Z",
+      "indexedAt": "2025-09-01T09:38:52.697Z",
+      "followersCount": 1,
+      "followsCount": 0,
+      "postsCount": 0
   }
 ]
