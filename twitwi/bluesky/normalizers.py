@@ -22,6 +22,9 @@ from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
 
 
 def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfile:
+    # NOTE: data can be None if the account is suspended
+    if not data:
+        return {}
     associated = data["associated"]
 
     pinned_post_uri = None
@@ -41,7 +44,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
         "display_name": data.get("displayName", ""),
         "created_at": created_at,
         "timestamp_utc": timestamp_utc,
-        "description": data["description"],
+        "description": data.get("description", ""),
         "avatar": data.get("avatar", ""),
         "posts": data["postsCount"],
         "followers": data["followersCount"],
@@ -49,7 +52,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
         "lists": associated["lists"],
         "feedgens": associated["feedgens"],
         "starter_packs": associated["starterPacks"],
-        "banner": data["banner"],
+        "banner": data.get("banner", ""),
         "pinned_post_uri": pinned_post_uri,
         "collection_time": get_collection_time(),
     }
