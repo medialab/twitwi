@@ -2,11 +2,13 @@ import csv
 from io import StringIO
 from twitwi.bluesky import (
     format_profile_as_csv_row,
+    format_minimal_profile_as_csv_row,
     format_post_as_csv_row,
     transform_profile_into_csv_dict,
+    transform_minimal_profile_into_csv_dict,
     transform_post_into_csv_dict,
 )
-from twitwi.bluesky.constants import PROFILE_FIELDS, POST_FIELDS
+from twitwi.bluesky.constants import PROFILE_FIELDS, MINIMAL_PROFILE_FIELDS, POST_FIELDS
 from test.utils import get_json_resource, open_resource
 
 
@@ -53,6 +55,47 @@ class TestFormatters:
             writer.writerow(profile)
 
         with open_resource("bluesky-profiles-export.csv") as f:
+            buffer.seek(0)
+            assert list(csv.DictReader(buffer)) == list(csv.DictReader(f))
+
+    def test_format_minimal_profile_as_csv_row(self):
+        normalized_minimal_profiles = get_json_resource("bluesky-normalized-minimal-profiles.json")
+
+        buffer = StringIO(newline=None)
+        writer = csv.writer(buffer, quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(MINIMAL_PROFILE_FIELDS)
+
+        for profile in normalized_minimal_profiles:
+            writer.writerow(format_minimal_profile_as_csv_row(profile))
+
+        if OVERWRITE_TESTS:
+            written = buffer.getvalue()
+
+            with open("test/resources/bluesky-minimal-profiles-export.csv", "w") as f:
+                f.write(written)
+
+        with open_resource("bluesky-minimal-profiles-export.csv") as f:
+            buffer.seek(0)
+            assert list(csv.reader(buffer)) == list(csv.reader(f))
+
+    def test_transform_minimal_profile_into_csv_dict(self):
+        normalized_minimal_profiles = get_json_resource("bluesky-normalized-minimal-profiles.json")
+
+        buffer = StringIO(newline=None)
+        writer = csv.DictWriter(
+            buffer,
+            fieldnames=MINIMAL_PROFILE_FIELDS,
+            extrasaction="ignore",
+            restval="",
+            quoting=csv.QUOTE_MINIMAL,
+        )
+        writer.writeheader()
+
+        for profile in normalized_minimal_profiles:
+            transform_minimal_profile_into_csv_dict(profile)
+            writer.writerow(profile)
+
+        with open_resource("bluesky-minimal-profiles-export.csv") as f:
             buffer.seek(0)
             assert list(csv.DictReader(buffer)) == list(csv.DictReader(f))
 

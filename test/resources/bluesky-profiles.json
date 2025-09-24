@@ -480,53 +480,5 @@
       "followersCount": 1,
       "followsCount": 0,
       "postsCount": 0
-  },
-  {
-      "did": "did:plc:oqpxqoec6ioruglmjrpwlwac",
-      "handle": "jacgriffith.bsky.social",
-      "displayName": "Jac",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oqpxqoec6ioruglmjrpwlwac/bafkreibwonyoiszyp22rjzqyavnrfadoaih4q5xtw3hwca57pqses4n3wq@jpeg",
-      "associated": {
-          "chat": {
-              "allowIncoming": "none"
-          },
-          "activitySubscription": {
-              "allowSubscriptions": "followers"
-          }
-      },
-      "viewer": {
-          "muted": false,
-          "blockedBy": false
-      },
-      "labels": [
-          {
-              "src": "did:plc:oqpxqoec6ioruglmjrpwlwac",
-              "uri": "at://did:plc:oqpxqoec6ioruglmjrpwlwac/app.bsky.actor.profile/self",
-              "cid": "bafyreiaeq4gige7jduccuoy4nj7fncxw6d5rk2dfelh4xhkq55q6bujbiq",
-              "val": "!no-unauthenticated",
-              "cts": "2024-11-22T20:10:04.632Z"
-          }
-      ],
-      "createdAt": "2024-11-22T20:10:05.054Z",
-      "description": "Peace and Justice. \nFree Free Palestine! \nNo Pasaran!\n#AbolishNATO\n#Resist \n#XR \n\n#TheWrongKind - #ItWasAScam #BDS\n\n#YesCymru\n#BRICS",
-      "indexedAt": "2025-06-12T05:05:25.540Z"
-  },
-  {
-      "did": "did:plc:3j3un7aqky626gnch36jm6pr",
-      "handle": "alacranduro.bsky.social",
-      "displayName": "",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3j3un7aqky626gnch36jm6pr/bafkreifwqmn342xze7rdy5asjr2x2g5qxasw73gyycakzij4x4doagwhpa@jpeg",
-      "associated": {
-          "activitySubscription": {
-              "allowSubscriptions": "followers"
-          }
-      },
-      "viewer": {
-          "muted": false,
-          "blockedBy": false
-      },
-      "labels": [],
-      "createdAt": "2025-01-21T03:03:45.746Z",
-      "indexedAt": "2025-01-21T03:03:45.746Z"
   }
 ]

@@ -5,7 +5,7 @@ from functools import partial
 from pytz import timezone
 from copy import deepcopy
 
-from twitwi.bluesky import normalize_profile, normalize_post
+from twitwi.bluesky import normalize_profile, normalize_minimal_profile, normalize_post
 
 from test.utils import get_json_resource
 
@@ -71,6 +71,40 @@ class TestNormalizers:
         original_arg = deepcopy(profile)
 
         normalize_profile(profile)
+
+        assert profile == original_arg
+
+    def test_normalize_minimal_profile(self):
+        tz = timezone("Europe/Paris")
+
+        profiles = get_json_resource("bluesky-minimal-profiles.json")
+        fn = partial(normalize_minimal_profile, locale=tz)
+
+        if OVERWRITE_TESTS:
+            from test.utils import dump_json_resource
+
+            normalized_profiles = [
+                set_fake_collection_time(fn(profile)) for profile in profiles
+            ]
+            dump_json_resource(normalized_profiles, "bluesky-normalized-minimal-profiles.json")
+
+        expected = get_json_resource("bluesky-normalized-minimal-profiles.json")
+
+        for idx, profile in enumerate(profiles):
+            result = fn(profile)
+            assert isinstance(result, dict)
+            assert "collection_time" in result and isinstance(
+                result["collection_time"], str
+            )
+
+            compare_dicts(profile["handle"], result, expected[idx])
+
+    def test_normalize_minimal_profile_should_not_mutate(self):
+        profile = get_json_resource("bluesky-minimal-profiles.json")[0]
+
+        original_arg = deepcopy(profile)
+
+        normalize_minimal_profile(profile)
 
         assert profile == original_arg
 
