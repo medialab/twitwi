@@ -361,8 +361,11 @@ def normalize_post(
             # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
             #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
             byteStart = facet["index"]["byteStart"]
-            if any(c in text[byteStart : facet["index"]["byteEnd"]] for c in (b" ", b"\n")):
-                byteStart = text.find(b"http", byteStart)
+            
+            if not text[byteStart : facet["index"]["byteEnd"]].startswith(b"http"):
+                new_byteStart = text.find(b"http", byteStart, facet["index"]["byteEnd"])
+                if new_byteStart != -1:
+                    byteStart = new_byteStart
 
             links_to_replace.append(
                 {
