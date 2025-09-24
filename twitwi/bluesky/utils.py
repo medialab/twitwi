@@ -73,20 +73,20 @@ def format_post_url(user_handle_or_did, post_did, post_splitter="/post/"):
 def parse_post_url(url, source):
     """Returns a tuple of (author_handle/did, post_did) from an https://bsky.app post URL"""
 
-    known_splits = {"/post/", "/lists/"}
+    known_splits = ["/post/", "/lists/"]
 
-    if not url.startswith("https://bsky.app/profile/") or not any(split in url for split in known_splits):
-        raise BlueskyPayloadError(source, f"{url} is not a usual Bluesky post url")
-    
-    for split in known_splits:
-        if split in url[25:]:
-            return url[25:].split(split)
+    if url.startswith("https://bsky.app/profile/"):
+        for split in known_splits:
+            if split in url[25:]:
+                return url[25:].split(split)
+            
+    raise BlueskyPayloadError(source, f"{url} is not a usual Bluesky post url")
 
 
 def parse_post_uri(uri, source=None):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
-    known_splits = {"/app.bsky.feed.post/", "/app.bsky.graph.starterpack/", "/app.bsky.feed.generator/", "/app.bsky.graph.list/"}
+    known_splits = ["/app.bsky.feed.post/", "/app.bsky.graph.starterpack/", "/app.bsky.feed.generator/", "/app.bsky.graph.list/"]
 
     if uri.startswith("at://"):
         for split in known_splits:
