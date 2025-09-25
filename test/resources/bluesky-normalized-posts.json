@@ -3518,14 +3518,12 @@
       "collection_time": "2025-01-01T00:00:00.000000",
       "did": "3lvzzqrzy3s2x",
       "domains": [
-        "ec.europa.eu",
-        "https"
+        "ec.europa.eu"
       ],
       "hashtags": [],
       "like_count": 1,
       "links": [
-        "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952",
-        "https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952"
+        "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952"
       ],
       "local_time": "2025-08-10T12:04:07.217000",
       "match_query": true,

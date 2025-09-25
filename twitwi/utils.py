@@ -25,13 +25,11 @@ UTC_TIMEZONE = timezone("UTC")
 
 def safe_normalize_url(url):
     try:
-        return partial(normalize_url, **CANONICAL_URL_KWARGS)(url)
+        return custom_normalize_url(url)
     except Exception:
         return url # in case of error, return the original URL. Possibly not a valid URL, e.g. url containing double slashes
 
 custom_normalize_url = partial(normalize_url, **CANONICAL_URL_KWARGS)
-
-custom_safe_normalize_url = safe_normalize_url
 
 custom_get_normalized_hostname = partial(
     get_normalized_hostname, **CANONICAL_HOSTNAME_KWARGS

@@ -1,11 +1,13 @@
 from copy import deepcopy
 from typing import List, Dict, Union, Optional, Literal, overload
 
+from ural import is_url
+
 from twitwi.exceptions import BlueskyPayloadError
 from twitwi.utils import (
     get_collection_time,
     get_dates,
-    custom_safe_normalize_url,
+    safe_normalize_url,
     custom_get_normalized_hostname,
 )
 from twitwi.bluesky.utils import (
@@ -352,11 +354,19 @@ def normalize_post(
             # Handle native polls
             if "https://poll.blue/" in feat["uri"]:
                 if feat["uri"].endswith("/0"):
-                    links.add(custom_safe_normalize_url(feat["uri"]))
+                    link = safe_normalize_url(feat["uri"])
+                    if is_url(link):
+                        links.add(link)
+                    else:
+                        continue
                     text += b" %s" % feat["uri"].encode("utf-8")
                 continue
-
-            links.add(custom_safe_normalize_url(feat["uri"]))
+            
+            link = safe_normalize_url(feat["uri"])
+            if is_url(link):
+                links.add(link)
+            else:
+                continue
             # Check & fix occasional errored link positioning
             # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
             #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
@@ -524,9 +534,10 @@ def normalize_post(
 
         # Process extra links
         for link in extra_links:
-            norm_link = custom_safe_normalize_url(link)
+            norm_link = safe_normalize_url(link)
             if norm_link not in links:
-                links.add(norm_link)
+                if is_url(norm_link):
+                    links.add(norm_link)
                 text += b" " + link.encode("utf-8")
 
         # Process medias
