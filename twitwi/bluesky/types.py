@@ -24,15 +24,15 @@ class BlueskyProfile(TypedDict):
     timestamp_utc: int                  # Unix UTC timestamp of when the user created the account
     collection_time: Optional[str]      # datetime (potentially timezoned) of when the data was normalized
 
-class BlueskyMinimalProfile(TypedDict): # A minimal version of the profile found in follower/follow profile payloads 
+class BlueskyPartialProfile(TypedDict): # A partial version of the profile found in follower/follow profile payloads
     did: str                            # persistent long-term identifier of the account
     url: str                            # URL of the profile accessible on the web
     handle: str                         # updatable human-readable username of the account (usually like username.bsky.social or username.com)
     display_name: Optional[str]         # updatable human-readable name of the account
     description: str                    # profile short description written by the user
-    lists: int                          # total number of lists created by the user (at collection time)
-    feedgens: int                       # total number of custom feeds created by the user (at collection time)
-    starter_packs: int                  # total number of starter packs created by the user (at collection time)
+    lists: Optional[int]                # total number of lists created by the user (at collection time)
+    feedgens: Optional[int]             # total number of custom feeds created by the user (at collection time)
+    starter_packs: Optional[int]        # total number of starter packs created by the user (at collection time)
     avatar: Optional[str]               # URL to the image serving as avatar to the user
     created_at: str                     # datetime (potentially timezoned) of when the user created the account
     timestamp_utc: int                  # Unix UTC timestamp of when the user created the account

@@ -18,7 +18,7 @@ from twitwi.bluesky.utils import (
     format_starterpack_url,
     format_media_url,
 )
-from twitwi.bluesky.types import BlueskyProfile, BlueskyMinimalProfile, BlueskyPost
+from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost
 
 
 def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfile:
@@ -55,7 +55,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
     }
 
 
-def normalize_minimal_profile(data: Dict, locale: Optional[str] = None) -> BlueskyMinimalProfile:
+def normalize_partial_profile(data: Dict, locale: Optional[str] = None) -> BlueskyPartialProfile:
     associated = data["associated"]
 
     timestamp_utc, created_at = get_dates(
@@ -71,9 +71,9 @@ def normalize_minimal_profile(data: Dict, locale: Optional[str] = None) -> Blues
         "timestamp_utc": timestamp_utc,
         "description": data.get("description", ""),
         "avatar": data.get("avatar", ""),
-        "lists": associated.get("lists", 0),
-        "feedgens": associated.get("feedgens", 0),
-        "starter_packs": associated.get("starterPacks", 0),
+        "lists": associated.get("lists", None),
+        "feedgens": associated.get("feedgens", None),
+        "starter_packs": associated.get("starterPacks", None),
         "collection_time": get_collection_time(),
     }
 

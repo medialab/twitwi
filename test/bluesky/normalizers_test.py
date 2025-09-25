@@ -5,7 +5,7 @@ from functools import partial
 from pytz import timezone
 from copy import deepcopy
 
-from twitwi.bluesky import normalize_profile, normalize_minimal_profile, normalize_post
+from twitwi.bluesky import normalize_profile, normalize_partial_profile, normalize_post
 
 from test.utils import get_json_resource
 
@@ -74,11 +74,11 @@ class TestNormalizers:
 
         assert profile == original_arg
 
-    def test_normalize_minimal_profile(self):
+    def test_normalize_partial_profile(self):
         tz = timezone("Europe/Paris")
 
-        profiles = get_json_resource("bluesky-minimal-profiles.json")
-        fn = partial(normalize_minimal_profile, locale=tz)
+        profiles = get_json_resource("bluesky-partial-profiles.json")
+        fn = partial(normalize_partial_profile, locale=tz)
 
         if OVERWRITE_TESTS:
             from test.utils import dump_json_resource
@@ -86,9 +86,9 @@ class TestNormalizers:
             normalized_profiles = [
                 set_fake_collection_time(fn(profile)) for profile in profiles
             ]
-            dump_json_resource(normalized_profiles, "bluesky-normalized-minimal-profiles.json")
+            dump_json_resource(normalized_profiles, "bluesky-normalized-partial-profiles.json")
 
-        expected = get_json_resource("bluesky-normalized-minimal-profiles.json")
+        expected = get_json_resource("bluesky-normalized-partial-profiles.json")
 
         for idx, profile in enumerate(profiles):
             result = fn(profile)
@@ -99,12 +99,12 @@ class TestNormalizers:
 
             compare_dicts(profile["handle"], result, expected[idx])
 
-    def test_normalize_minimal_profile_should_not_mutate(self):
-        profile = get_json_resource("bluesky-minimal-profiles.json")[0]
+    def test_normalize_partial_profile_should_not_mutate(self):
+        profile = get_json_resource("bluesky-partial-profiles.json")[0]
 
         original_arg = deepcopy(profile)
 
-        normalize_minimal_profile(profile)
+        normalize_partial_profile(profile)
 
         assert profile == original_arg
 
