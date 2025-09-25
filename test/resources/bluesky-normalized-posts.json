@@ -3511,19 +3511,21 @@
   [
     {
       "card_description": "We welcome President Trump\\'s work to stop the killing in Ukraine, end the Russian Federation\\'s war of aggression, and achieve just and lasting peace and security for Ukraine.\\nWe are convinced that onl",
-      "card_link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952",
+      "card_link": "https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952",
       "card_thumbnail": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yw52e2bo6zv7ulryr4ryncpu/bafkreib7b745vtqsury5774fnmmt444wijx3cdlzkxb7bf6pz6sbjegsmi@jpeg",
       "card_title": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump\\'s planned meeting with President Putin",
       "cid": "bafyreibakuvpgbjpznehxugdibxibdodtke55b3hfya3ssj4gjf3nkz33q",
       "collection_time": "2025-01-01T00:00:00.000000",
       "did": "3lvzzqrzy3s2x",
       "domains": [
-        "ec.europa.eu"
+        "ec.europa.eu",
+        "https"
       ],
       "hashtags": [],
       "like_count": 1,
       "links": [
-        "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952"
+        "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952",
+        "https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952"
       ],
       "local_time": "2025-08-10T12:04:07.217000",
       "match_query": true,
@@ -3537,7 +3539,7 @@
       "quote_count": 0,
       "reply_count": 0,
       "repost_count": 0,
-      "text": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump's planned meeting ...\n\nhttps://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952",
+      "text": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump's planned meeting ...\n\nhttps://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952 https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952",
       "timestamp_utc": 1754820247,
       "uri": "at://did:plc:yw52e2bo6zv7ulryr4ryncpu/app.bsky.feed.post/3lvzzqrzy3s2x",
       "url": "https://bsky.app/profile/eurobot.bsky.social/post/3lvzzqrzy3s2x",

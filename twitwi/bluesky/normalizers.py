@@ -5,7 +5,7 @@ from twitwi.exceptions import BlueskyPayloadError
 from twitwi.utils import (
     get_collection_time,
     get_dates,
-    custom_normalize_url,
+    custom_safe_normalize_url,
     custom_get_normalized_hostname,
 )
 from twitwi.bluesky.utils import (
@@ -108,7 +108,7 @@ def process_starterpack_card(embed_data, post):
 def process_card_data(embed_data, post):
     # Warning: mutates post
 
-    post["card_link"] = embed_data["uri"].replace("\\", "")
+    post["card_link"] = embed_data["uri"]
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
     post["card_thumbnail"] = embed_data.get("thumb", "")
@@ -352,11 +352,11 @@ def normalize_post(
             # Handle native polls
             if "https://poll.blue/" in feat["uri"]:
                 if feat["uri"].endswith("/0"):
-                    links.add(custom_normalize_url(feat["uri"]))
+                    links.add(custom_safe_normalize_url(feat["uri"]))
                     text += b" %s" % feat["uri"].encode("utf-8")
                 continue
 
-            links.add(custom_normalize_url(feat["uri"]))
+            links.add(custom_safe_normalize_url(feat["uri"]))
             # Check & fix occasional errored link positioning
             # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
             #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
@@ -438,7 +438,6 @@ def normalize_post(
         # Links from cards
         if embed["$type"].endswith(".external"):
             link = embed["external"]["uri"]
-            link = link.replace("\\", "")
 
             # Handle native gifs as medias
             if link.startswith("https://media.tenor.com/"):
@@ -488,7 +487,6 @@ def normalize_post(
             # Links from cards
             if embed["media"]["$type"].endswith(".external"):
                 link = embed["media"]["external"]["uri"]
-                link = link.replace("\\", "")
 
                 # Handle native gifs as medias
                 if link.startswith("https://media.tenor.com/"):
@@ -526,7 +524,7 @@ def normalize_post(
 
         # Process extra links
         for link in extra_links:
-            norm_link = custom_normalize_url(link)
+            norm_link = custom_safe_normalize_url(link)
             if norm_link not in links:
                 links.add(norm_link)
                 text += b" " + link.encode("utf-8")
