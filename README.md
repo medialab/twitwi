@@ -29,18 +29,22 @@ pip install twitwi
 *Normalization functions*
 
 * [normalize_profile](#normalize_profile)
+* [normalize_partial_profile](#normalize_partial_profile)
 * [normalize_post](#normalize_post)
 
 *Formatting functions*
 
 * [transform_profile_into_csv_dict](#transform_profile_into_csv_dict)
+* [transform_partial_profile_into_csv_dict](#transform_partial_profile_into_csv_dict)
 * [transform_post_into_csv_dict](#transform_post_into_csv_dict)
 * [format_profile_as_csv_row](#format_profile_as_csv_row)
+* [format_partial_profile_as_csv_row](#format_partial_profile_as_csv_row)
 * [format_post_as_csv_row](#format_post_as_csv_row)
 
 *Useful constants (under `twitwi.bluesky.constants`)*
 
 * [PROFILE_FIELDS](#profile_fields)
+* [PARTIAL_PROFILE_FIELDS](#partial_profile_fields)
 * [POST_FIELDS](#post_fields)
 
 *Examples*
@@ -152,7 +156,18 @@ with open("normalized_bluesky_profiles.csv", "w") as f:
 
 ### normalize_profile
 
-Function taking a nested dict describing a user profile from Bluesky's JSON payload and returning a flat "normalized" dict composed of all [PROFILE_FIELDS](#profile_fields) keys.
+Function taking a nested dict describing a user profile from Bluesky's JSON payload (with the same format as retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses)) and returning a flat "normalized" dict composed of all [PROFILE_FIELDS](#profile_fields) keys. Be careful not to confuse with the [normalize_partial_profile](#normalize_partial_profile) function which operate on a lighter version of the profile data, retrieved from [follower/follow profile payloads](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example.
+
+Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
+
+*Arguments*
+
+* **data** *(dict)*: user profile data payload coming from Bluesky API.
+* **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
+
+### normalize_partial_profile
+
+Function taking a nested dict describing a user profile from Bluesky's JSON payload (with the same format as retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses)) and returning a flat "normalized" dict composed of all [PARTIAL_PROFILE_FIELDS](#partial_profile_fields) keys. Be careful not to confuse with the [normalize_profile](#normalize_profile) function which operate on the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
 
 Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
 
@@ -182,6 +197,12 @@ Function transforming (i.e. mutating, so beware) a given normalized Bluesky prof
 
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
+### transform_partial_profile_into_csv_dict
+
+Function transforming (i.e. mutating, so beware) a given normalized Bluesky partial profile into a suitable dict able to be written by a `csv.DictWriter` as a row.
+
+Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
+
 ### transform_post_into_csv_dict
 
 Function transforming (i.e. mutating, so beware) a given normalized Bluesky post into a suitable dict able to be written by a `csv.DictWriter` as a row.
@@ -194,6 +215,12 @@ Function formatting the given normalized Bluesky profile as a list able to be wr
 
 Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
 
+### format_partial_profile_as_csv_row
+
+Function formatting the given normalized Bluesky partial profile as a list able to be written by a `csv.writer` as a row in the order of [PARTIAL_PROFILE_FIELDS](#partial_profile_fields) (which can therefore be used as header row of the CSV).
+
+Will convert list elements of the normalized data into a string with all elements separated by the `|` character, which can be changed using an optional `plural_separator` argument.
+
 ### format_post_as_csv_row
 
 Function formatting the given normalized tBluesky post as a list able to be written by a `csv.writer` as a row in the order of [POST_FIELDS](#post_fields) (which can therefore be used as header row of the CSV).
@@ -202,7 +229,11 @@ Will convert list elements of the normalized data into a string with all element
 
 ### PROFILE_FIELDS
 
-List of a Bluesky user profile's normalized field names. Useful to declare headers with csv writers.
+List of a Bluesky user profile's normalized field names. Useful to declare headers with csv writers. Be careful not to confuse with [PARTIAL_PROFILE_FIELDS](#partial_profile_fields) which correspond to a lighter version of the profile data, retrieved from [follower/follow profile payloads](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example.
+
+### PARTIAL_PROFILE_FIELDS
+
+List of a Bluesky user partial profile's (retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example) normalized field names. Useful to declare headers with csv writers. Be careful not to confuse with [PROFILE_FIELDS](#profile_fields) which correspond to the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
 
 ### POST_FIELDS
 
