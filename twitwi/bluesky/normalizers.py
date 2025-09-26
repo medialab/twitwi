@@ -1,5 +1,5 @@
 from copy import deepcopy
-from typing import List, Dict, Union, Optional, Literal, overload
+from typing import List, Dict, Union, Optional, Literal, Any, overload
 
 from ural import is_url
 
@@ -23,7 +23,7 @@ from twitwi.bluesky.utils import (
 from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost
 
 
-def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfile:
+def normalize_profile(data: Dict, locale: Optional[Any] = None) -> BlueskyProfile:
     associated = data["associated"]
 
     pinned_post_uri = None
@@ -58,7 +58,7 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
 
 
 def normalize_partial_profile(
-    data: Dict, locale: Optional[str] = None
+    data: Dict, locale: Optional[Any] = None
 ) -> BlueskyPartialProfile:
     associated = data["associated"]
 
@@ -157,7 +157,9 @@ def prepare_quote_data(embed_quote, card_data, post, links):
         post_splitter = "/lists/"
     else:
         post_splitter = "/post/"
-    post["quoted_url"] = format_post_url(post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter)
+    post["quoted_url"] = format_post_url(
+        post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter
+    )
 
     quoted_data = None
     if card_data:
@@ -234,7 +236,7 @@ def normalize_post(
 
 def normalize_post(
     payload: Dict,
-    locale: Optional[str] = None,
+    locale: Optional[Any] = None,
     extract_referenced_posts: bool = False,
     collection_source: Optional[str] = None,
 ) -> Union[BlueskyPost, List[BlueskyPost]]:
@@ -386,7 +388,7 @@ def normalize_post(
                         continue
                     text += b" %s" % feat["uri"].encode("utf-8")
                 continue
-            
+
             link = safe_normalize_url(feat["uri"])
             if is_url(link):
                 links.add(link)
@@ -396,7 +398,7 @@ def normalize_post(
             # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
             #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
             byteStart = facet["index"]["byteStart"]
-            
+
             if not text[byteStart : facet["index"]["byteEnd"]].startswith(b"http"):
                 new_byteStart = text.find(b"http", byteStart, facet["index"]["byteEnd"])
                 if new_byteStart != -1:

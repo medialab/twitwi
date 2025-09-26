@@ -55,7 +55,9 @@ def validate_post_payload(data):
     return True, None
 
 
-re_embed_types = re.compile(r"\.(record|recordWithMedia|images|video|external)(?:#.*)?$")
+re_embed_types = re.compile(
+    r"\.(record|recordWithMedia|images|video|external)(?:#.*)?$"
+)
 
 
 def valid_embed_type(embed_type):
@@ -79,14 +81,19 @@ def parse_post_url(url, source):
         for split in known_splits:
             if split in url[25:]:
                 return url[25:].split(split)
-            
+
     raise BlueskyPayloadError(source, f"{url} is not a usual Bluesky post url")
 
 
 def parse_post_uri(uri, source=None):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
-    known_splits = ["/app.bsky.feed.post/", "/app.bsky.graph.starterpack/", "/app.bsky.feed.generator/", "/app.bsky.graph.list/"]
+    known_splits = [
+        "/app.bsky.feed.post/",
+        "/app.bsky.graph.starterpack/",
+        "/app.bsky.feed.generator/",
+        "/app.bsky.graph.list/",
+    ]
 
     if uri.startswith("at://"):
         for split in known_splits:
@@ -94,6 +101,7 @@ def parse_post_uri(uri, source=None):
                 return uri[5:].split(split)
 
     raise BlueskyPayloadError(source or uri, f"{uri} is not a usual Bluesky post uri")
+
 
 def format_starterpack_url(user_handle_or_did, record_did):
     return f"https://bsky.app/starter-pack/{user_handle_or_did}/{record_did}"
@@ -110,8 +118,12 @@ def format_media_url(user_did, media_cid, mime_type, source):
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
     elif mime_type == "application/octet-stream":
-        media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
-        media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@jpeg"
+        media_url = (
+            f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
+        )
+        media_thumb = (
+            f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@jpeg"
+        )
     else:
         raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb

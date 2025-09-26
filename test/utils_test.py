@@ -52,6 +52,30 @@ class TestUtils(object):
 
             assert get_dates(date_str, locale=tz) == result, (date_str, tz)
 
+    def test_get_dates_millisecond_precision(self):
+        timestamp, _ = get_dates(
+            "Thu Feb 07 06:43:33 +0000 2013", timezone("Europe/Paris")
+        )
+
+        assert timestamp == 1360219413
+
+        timestamp, _ = get_dates(
+            "Thu Feb 07 06:43:33 +0000 2013",
+            timezone("Europe/Paris"),
+            millisecond_timestamp=True,
+        )
+
+        assert timestamp == 1360219413000
+
+        timestamp, _ = get_dates(
+            "Thu Feb 07 06:43:33.123 +0000 2013",
+            timezone("Europe/Paris"),
+            source="bluesky",
+            millisecond_timestamp=True,
+        )
+
+        assert timestamp == 1360219413123
+
     def test_validate_payload_v2(self):
         assert not validate_payload_v2("hello")
         assert not validate_payload_v2([1, 2, 3])

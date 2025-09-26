@@ -4,6 +4,8 @@
 #
 # Miscellaneous utility functions.
 #
+from typing import Tuple
+
 from pytz import timezone
 from dateutil.parser import parse as parse_date
 from ural import normalize_url, get_normalized_hostname
@@ -49,7 +51,9 @@ def get_collection_time():
     return datetime.now().strftime(FORMATTED_FULL_DATETIME_FORMAT)
 
 
-def get_dates(date_str, locale=None, source="v1"):
+def get_dates(
+    date_str: str, locale=None, source: str = "v1", millisecond_timestamp: bool = False
+) -> Tuple[int, str]:
     if source not in ["v1", "v2", "bluesky"]:
         raise Exception("source should be one of v1, v2 or bluesky")
 
@@ -71,8 +75,14 @@ def get_dates(date_str, locale=None, source="v1"):
         utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
     locale_datetime = utc_datetime.astimezone(locale)
 
+    timestamp = int(utc_datetime.timestamp())
+
+    if millisecond_timestamp:
+        timestamp *= 1000
+        timestamp += utc_datetime.microsecond / 1000
+
     return (
-        int(utc_datetime.timestamp()),
+        int(timestamp),
         datetime.strftime(
             locale_datetime,
             FORMATTED_FULL_DATETIME_FORMAT
@@ -121,6 +131,7 @@ def get_dates_from_id(tweet_id, locale=None):
         locale = UTC_TIMEZONE
 
     timestamp = get_timestamp_from_id(tweet_id)
+    assert timestamp is not None
 
     locale_datetime = datetime.fromtimestamp(timestamp, locale)
 

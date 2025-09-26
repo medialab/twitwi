@@ -23,7 +23,9 @@ format_profile_as_csv_row = make_format_as_csv_row(PROFILE_FIELDS, [], [])
 
 transform_partial_profile_into_csv_dict = make_transform_into_csv_dict([], [])
 
-format_partial_profile_as_csv_row = make_format_as_csv_row(PARTIAL_PROFILE_FIELDS, [], [])
+format_partial_profile_as_csv_row = make_format_as_csv_row(
+    PARTIAL_PROFILE_FIELDS, [], []
+)
 
 
 __all__ = [
