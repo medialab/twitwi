@@ -59,7 +59,9 @@ class TestFormatters:
             assert list(csv.DictReader(buffer)) == list(csv.DictReader(f))
 
     def test_format_partial_profile_as_csv_row(self):
-        normalized_partial_profiles = get_json_resource("bluesky-normalized-partial-profiles.json")
+        normalized_partial_profiles = get_json_resource(
+            "bluesky-normalized-partial-profiles.json"
+        )
 
         buffer = StringIO(newline=None)
         writer = csv.writer(buffer, quoting=csv.QUOTE_MINIMAL)
@@ -79,7 +81,9 @@ class TestFormatters:
             assert list(csv.reader(buffer)) == list(csv.reader(f))
 
     def test_transform_partial_profile_into_csv_dict(self):
-        normalized_partial_profiles = get_json_resource("bluesky-normalized-partial-profiles.json")
+        normalized_partial_profiles = get_json_resource(
+            "bluesky-normalized-partial-profiles.json"
+        )
 
         buffer = StringIO(newline=None)
         writer = csv.DictWriter(

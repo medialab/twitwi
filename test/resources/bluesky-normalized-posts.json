@@ -1023,9 +1023,9 @@
       "hashtags": [],
       "like_count": 544,
       "links": [
-        "https://bsky.app/profile/did%3Aplc%3A2rphjhzdtfztzxtylnb2tl2t/feed/aaaajwbiqyqyi",
-        "https://bsky.app/profile/did%3Aplc%3Atenurhgjptubkk5zf5qhi3og/feed/only-posts",
-        "https://bsky.app/profile/did%3Aplc%3Atk6bkjdozskzgb47umfelfpq/feed/aaaol2lca5c6y",
+        "https://bsky.app/profile/did:plc:2rphjhzdtfztzxtylnb2tl2t/feed/aaaajwbiqyqyi",
+        "https://bsky.app/profile/did:plc:tenurhgjptubkk5zf5qhi3og/feed/only-posts",
+        "https://bsky.app/profile/did:plc:tk6bkjdozskzgb47umfelfpq/feed/aaaol2lca5c6y",
         "https://bsky.app/profile/enfeetamine.bsky.social/post/3k4lnkiiver2i",
         "https://www.mwyann.fr/posts/908"
       ],
@@ -3385,7 +3385,7 @@
       ],
       "like_count": 0,
       "links": [
-        "https://bsky.app/profile/did%3Aplc%3Amtyax5fqrdaarejjruev325a/feed/aaaje4n4rupuc"
+        "https://bsky.app/profile/did:plc:mtyax5fqrdaarejjruev325a/feed/aaaje4n4rupuc"
       ],
       "local_time": "2024-12-24T07:57:03.263000",
       "match_query": true,
@@ -3615,9 +3615,8 @@
       "quoted_cid": "bafyreigxcbqhfnnb2lanmvtl3joeo45d7qj7pjjptuwaazqdeb2zkpfvue",
       "quoted_did": "3lxdgjtpqhf2z",
       "quoted_uri": "at://did:plc:l4y56p5e7ofj2zspucopqzue/app.bsky.graph.list/3lxdgjtpqhf2z",
-      "quoted_url": "https://bsky.app/profile/did%3Aplc%3Al4y56p5e7ofj2zspucopqzue/lists/3lxdgjtpqhf2z",
+      "quoted_url": "https://bsky.app/profile/did:plc:l4y56p5e7ofj2zspucopqzue/lists/3lxdgjtpqhf2z",
       "quoted_user_did": "did:plc:l4y56p5e7ofj2zspucopqzue",
-      "quoted_user_handle": "did%3Aplc%3Al4y56p5e7ofj2zspucopqzue",
       "reply_count": 3,
       "repost_count": 0,
       "text": "I have a mod list just for accounts like this 🤣\n\nhttps://bsky.app/profile/did:plc:l4y56p5e7ofj2zspucopqzue/lists/3lxdgjtpqhf2z",

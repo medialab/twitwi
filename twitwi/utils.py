@@ -23,13 +23,22 @@ from twitwi.constants import (
 
 UTC_TIMEZONE = timezone("UTC")
 
+custom_normalize_url = partial(normalize_url, **CANONICAL_URL_KWARGS)
+
+
 def safe_normalize_url(url):
+    # We avoid normalizing bluesky urls containing specific uri parts because
+    # Bluesky servers don't handle quoting correctly...
+    # See https://github.com/medialab/twitwi/issues/72
+    if "/did:plc:" in url:
+        return url
+
     try:
         return custom_normalize_url(url)
     except Exception:
-        return url # in case of error, return the original URL. Possibly not a valid URL, e.g. url containing double slashes
+        # In case of error, return the original URL. Possibly not a valid URL, e.g. url containing double slashes
+        return url
 
-custom_normalize_url = partial(normalize_url, **CANONICAL_URL_KWARGS)
 
 custom_get_normalized_hostname = partial(
     get_normalized_hostname, **CANONICAL_HOSTNAME_KWARGS
