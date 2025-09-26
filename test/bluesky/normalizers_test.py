@@ -86,7 +86,9 @@ class TestNormalizers:
             normalized_profiles = [
                 set_fake_collection_time(fn(profile)) for profile in profiles
             ]
-            dump_json_resource(normalized_profiles, "bluesky-normalized-partial-profiles.json")
+            dump_json_resource(
+                normalized_profiles, "bluesky-normalized-partial-profiles.json"
+            )
 
         expected = get_json_resource("bluesky-normalized-partial-profiles.json")
 

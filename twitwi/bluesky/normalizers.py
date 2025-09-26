@@ -38,24 +38,26 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
         "did": data["did"],
         "url": format_profile_url(data["handle"]),
         "handle": data["handle"],
-        "display_name": data.get("displayName", ""),
+        "display_name": data.get("displayName"),
         "created_at": created_at,
         "timestamp_utc": timestamp_utc,
-        "description": data.get("description", ""),
-        "avatar": data.get("avatar", ""),
-        "posts": data.get("postsCount", 0),
-        "followers": data.get("followersCount", 0),
-        "follows": data.get("followsCount", 0),
+        "description": data.get("description"),
+        "avatar": data.get("avatar"),
+        "posts": data["postsCount"],
+        "followers": data["followersCount"],
+        "follows": data["followsCount"],
         "lists": associated["lists"],
         "feedgens": associated["feedgens"],
         "starter_packs": associated["starterPacks"],
-        "banner": data.get("banner", ""),
+        "banner": data.get("banner"),
         "pinned_post_uri": pinned_post_uri,
         "collection_time": get_collection_time(),
     }
 
 
-def normalize_partial_profile(data: Dict, locale: Optional[str] = None) -> BlueskyPartialProfile:
+def normalize_partial_profile(
+    data: Dict, locale: Optional[str] = None
+) -> BlueskyPartialProfile:
     associated = data["associated"]
 
     timestamp_utc, created_at = get_dates(
@@ -66,14 +68,14 @@ def normalize_partial_profile(data: Dict, locale: Optional[str] = None) -> Blues
         "did": data["did"],
         "url": format_profile_url(data["handle"]),
         "handle": data["handle"],
-        "display_name": data.get("displayName", ""),
+        "display_name": data.get("displayName"),
         "created_at": created_at,
         "timestamp_utc": timestamp_utc,
-        "description": data.get("description", ""),
-        "avatar": data.get("avatar", ""),
-        "lists": associated.get("lists", None),
-        "feedgens": associated.get("feedgens", None),
-        "starter_packs": associated.get("starterPacks", None),
+        "description": data.get("description"),
+        "avatar": data.get("avatar"),
+        "lists": associated.get("lists"),
+        "feedgens": associated.get("feedgens"),
+        "starter_packs": associated.get("starterPacks"),
         "collection_time": get_collection_time(),
     }
 

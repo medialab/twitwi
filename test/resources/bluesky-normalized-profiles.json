@@ -77,10 +77,10 @@
   },
   {
     "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mmbei6khrn63ray3xts7x5gz/bafkreicwqhbll7didcskoy2dlwzdqiai4x3ana7qdi4stkk3h5rcgwoskm@jpeg",
-    "banner": "",
+    "banner": null,
     "collection_time": "2025-01-01T00:00:00.000000",
     "created_at": "2025-09-01T11:38:52.697000",
-    "description": "",
+    "description": null,
     "did": "did:plc:mmbei6khrn63ray3xts7x5gz",
     "display_name": "",
     "feedgens": 0,
