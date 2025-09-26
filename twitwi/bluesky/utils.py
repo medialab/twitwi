@@ -55,7 +55,7 @@ def validate_post_payload(data):
     return True, None
 
 
-re_embed_types = re.compile(r"\.(record|recordWithMedia|images|video|external)$")
+re_embed_types = re.compile(r"\.(record|recordWithMedia|images|video|external)(?:#.*)?$")
 
 
 def valid_embed_type(embed_type):
@@ -66,22 +66,27 @@ def format_profile_url(user_handle_or_did):
     return f"https://bsky.app/profile/{user_handle_or_did}"
 
 
-def format_post_url(user_handle_or_did, post_did):
-    return f"https://bsky.app/profile/{user_handle_or_did}/post/{post_did}"
+def format_post_url(user_handle_or_did, post_did, post_splitter="/post/"):
+    return f"https://bsky.app/profile/{user_handle_or_did}{post_splitter}{post_did}"
 
 
 def parse_post_url(url, source):
     """Returns a tuple of (author_handle/did, post_did) from an https://bsky.app post URL"""
 
-    if not url.startswith("https://bsky.app/profile/") and "/post/" not in url:
-        raise BlueskyPayloadError(source, f"{url} is not a usual Bluesky post url")
-    return url[25:].split("/post/")
+    known_splits = ["/post/", "/lists/"]
+
+    if url.startswith("https://bsky.app/profile/"):
+        for split in known_splits:
+            if split in url[25:]:
+                return url[25:].split(split)
+            
+    raise BlueskyPayloadError(source, f"{url} is not a usual Bluesky post url")
 
 
 def parse_post_uri(uri, source=None):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
-    known_splits = {"/app.bsky.feed.post/", "/app.bsky.graph.starterpack/", "/app.bsky.feed.generator/", "/app.bsky.graph.list/"}
+    known_splits = ["/app.bsky.feed.post/", "/app.bsky.graph.starterpack/", "/app.bsky.feed.generator/", "/app.bsky.graph.list/"]
 
     if uri.startswith("at://"):
         for split in known_splits:
@@ -104,6 +109,9 @@ def format_media_url(user_did, media_cid, mime_type, source):
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
+    elif mime_type == "application/octet-stream":
+        media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
+        media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@jpeg"
     else:
-        raise BlueskyPayloadError(source, f"{mime_type} is an usual media mimeType")
+        raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb

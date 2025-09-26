@@ -5996,6 +5996,495 @@
     "indexedAt": "2025-09-11T14:17:38.608Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
-  }
+  },
+  {
+    "uri": "at://did:plc:bvs6b4f4fz2jj73wtrtjiy4j/app.bsky.feed.post/3lh37623txp2g",
+    "cid": "bafyreig3mnixzsqxswd3lblp3u5ionce63g6ijlsrqlnftlnhdu63e57ly",
+    "author": {
+      "did": "did:plc:bvs6b4f4fz2jj73wtrtjiy4j",
+      "handle": "g0rosato.bsky.social",
+      "displayName": "今日視界",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bvs6b4f4fz2jj73wtrtjiy4j/bafkreidajgwqkixixv6u64c4d323zcikkdjk7nm2mwuguddn2wuvtwz42e@jpeg",
+      "associated": {
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2024-05-01T15:49:20.427Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-01-31T23:55:42.952541Z",
+      "embed": {
+        "$type": "app.bsky.embed.external#main",
+        "external": {
+          "description": "雖然我們平凡又渺小，但仍然可以耀眼如星辰——青林之初",
+          "thumb": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreih6kmduzcdvjy7xvvnlk5o2zld3mfccejz7774tlp27g2fhnnrvjy"
+            },
+            "mimeType": "image/jpeg",
+            "size": 53251
+          },
+          "title": "2025二月上市新品‖52款",
+          "uri": "https://www.headline01.com/a/BR_fMgLDnjnzuQfiKl1TKg-F4D16811.html"
+        },
+        "uri": "https://www.headline01.com/a/BR_fMgLDnjnzuQfiKl1TKg-F4D16811.html"
+      },
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "上市"
+            }
+          ],
+          "index": {
+            "byteEnd": 38,
+            "byteStart": 31
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "新品"
+            }
+          ],
+          "index": {
+            "byteEnd": 46,
+            "byteStart": 39
+          }
+        }
+      ],
+      "text": "2025二月上市新品‖52款 #上市 #新品"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-01-31T23:55:47.459Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
+  },
+  {
+    "uri": "at://did:plc:yw52e2bo6zv7ulryr4ryncpu/app.bsky.feed.post/3lvzzqrzy3s2x",
+    "cid": "bafyreibakuvpgbjpznehxugdibxibdodtke55b3hfya3ssj4gjf3nkz33q",
+    "author": {
+        "did": "did:plc:yw52e2bo6zv7ulryr4ryncpu",
+        "handle": "eurobot.bsky.social",
+        "displayName": "Eurobot",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yw52e2bo6zv7ulryr4ryncpu/bafkreif4pebsptscit4xjnsjbkb2mqlfsglcjo5xlmjdi4dvmgkmysjpxa@jpeg",
+        "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+        "viewer": {"muted": false, "blockedBy": false},
+        "labels": [],
+        "createdAt": "2023-10-04T20:14:04.497Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-08-10T10:04:07.217Z",
+        "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+                "description": "We welcome President Trump\\'s work to stop the killing in Ukraine, end the Russian Federation\\'s war of aggression, and achieve just and lasting peace and security for Ukraine.\\nWe are convinced that onl",
+                "thumb": {"$type": "blob", "ref": {"$link": "bafkreib7b745vtqsury5774fnmmt444wijx3cdlzkxb7bf6pz6sbjegsmi"}, "mimeType": "image/jpeg", "size": 84026},
+                "title": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump\\'s planned meeting with President Putin",
+                "uri": "https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952"
+            }
+        },
+        "facets": [
+            {
+                "features": [{"$type": "app.bsky.richtext.facet#link", "uri": "https://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952"}],
+                "index": {"byteEnd": 300, "byteStart": 229}
+            }
+        ],
+        "text": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump's planned meeting ...\n\nhttps://ec.europa.eu/commission/presscorner/detail/en/statement_25_1952"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+            "uri": "https:\\/\\/ec.europa.eu\\/commission\\/presscorner\\/detail\\/en\\/statement_25_1952",
+            "title": "Statement by President Macron, Prime Minister Meloni, Chancellor Merz, Prime Minister Tusk, Prime Minister Starmer, President von der Leyen and President Stubb on Peace for Ukraine ahead of President Trump\\'s planned meeting with President Putin",
+            "description": "We welcome President Trump\\'s work to stop the killing in Ukraine, end the Russian Federation\\'s war of aggression, and achieve just and lasting peace and security for Ukraine.\\nWe are convinced that onl",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yw52e2bo6zv7ulryr4ryncpu/bafkreib7b745vtqsury5774fnmmt444wijx3cdlzkxb7bf6pz6sbjegsmi@jpeg"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-08-10T10:04:07.704Z",
+    "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
+    "labels": []
+},
+{
+    "uri": "at://did:plc:djglyf5epph2tc44lnqsdvfi/app.bsky.feed.post/3lqfi7mnto52w",
+    "cid": "bafyreiaeixjveoju6jyhfj5ex2owte2sjrqpb3yxzo5mqx66xzeljelwle",
+    "author": {
+        "did": "did:plc:djglyf5epph2tc44lnqsdvfi",
+        "handle": "clustz.com",
+        "displayName": "ClustZ",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:djglyf5epph2tc44lnqsdvfi/bafkreie5xhcjxcgbcsl7lglo4hsp6nsbpvcsxvugfiojk43lc5lkkxwe3u@jpeg",
+        "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+        "viewer": {"muted": false, "blockedBy": false},
+        "labels": [],
+        "createdAt": "2025-01-20T14:45:49.643Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-05-30T14:51:04.213166Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": 
+"https://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html"
+                    }
+                ],
+                "index": {"byteEnd": 276, "byteStart": 121}
+            }
+        ],
+        "text": "Emmanuel Macron & his wife's shocking conversation after shoving incident decoded by lip reader, ‘Stay away, you loser’\n\nhttps://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-05-30T14:51:05.146Z",
+    "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
+    "labels": []
+},
+{
+    "uri": "at://did:plc:qji2qys3x5mv3qcsk6m4iyrb/app.bsky.feed.post/3lz2qo6oz2227",
+    "cid": "bafyreie5bugeyisat6kw6pdvrjs6p4gito3ytz6qi3qmf3zwbtnr6h6wfm",
+    "author": {
+        "did": "did:plc:qji2qys3x5mv3qcsk6m4iyrb",
+        "handle": "saltystan.bsky.social",
+        "displayName": "Stan 🇨🇦🐻",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qji2qys3x5mv3qcsk6m4iyrb/bafkreiajhfcnnnm5rvwkdbwo4z422xul3tutpsbp37chde2bzfgnx2tov4@jpeg",
+        "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+        "viewer": {"muted": false, "blockedBy": false},
+        "labels": [],
+        "createdAt": "2024-11-26T15:48:25.346Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-09-17T21:09:51.104Z",
+        "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {"cid": "bafyreieer5vb4c2tumqzotyk6glxdfflyd264w4c4j7nypwyztkb2yluta", "uri": "at://did:plc:n36m4kw25hkpzlvv6u4wvirm/app.bsky.feed.post/3lz2aym2ljk2t"}
+        },
+        "langs": ["en"],
+        "text": "As a teacher of AP US History, I am very aware of how the US political system is supposed to work. Unfortunately, even the pathetically weak system of checks and balances no longer works thanks to SCOTUS giving Trump absolute power. He is more of an absolute monarch than George III was in 1775!"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+            "$type": "app.bsky.embed.record#viewRecord",
+            "uri": "at://did:plc:n36m4kw25hkpzlvv6u4wvirm/app.bsky.feed.post/3lz2aym2ljk2t",
+            "cid": "bafyreieer5vb4c2tumqzotyk6glxdfflyd264w4c4j7nypwyztkb2yluta",
+            "author": {
+                "did": "did:plc:n36m4kw25hkpzlvv6u4wvirm",
+                "handle": "proudlycanadian.bsky.social",
+                "displayName": "",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:n36m4kw25hkpzlvv6u4wvirm/bafkreid44ygd3u2c5mfmphvxdywi2tl77vi42z43avgai37rvvhd6qilwm@jpeg",
+                "associated": {"chat": {"allowIncoming": "following"}, "activitySubscription": {"allowSubscriptions": "followers"}},
+                "viewer": {"muted": false, "blockedBy": false},
+                "labels": [],
+                "createdAt": "2024-10-11T19:06:07.707Z"
+            },
+            "value": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-09-17T16:29:20.790Z",
+                "embed": {
+                    "$type": "app.bsky.embed.record",
+                    "record": {"cid": "bafyreiggpkrsoghw5usdqw4yt2ji4olyimiapmkqavdl7d7k57ikgg6vwi", "uri": "at://did:plc:l4y56p5e7ofj2zspucopqzue/app.bsky.feed.post/3lz2arhudnk2u"}
+                },
+                "langs": ["en"],
+                "text": "By the way, since you have added me to your petty childish list,  I am a dual citizen from Grand Falls, Michigan with lots of US family.  And you are just another arrogant American with a false sense of superiority that you haven't earned.  Gee maybe I could make a list too."
+            },
+            "labels": [],
+            "likeCount": 12,
+            "replyCount": 8,
+            "repostCount": 1,
+            "quoteCount": 1,
+            "indexedAt": "2025-09-17T16:29:21.203Z",
+            "embeds": [
+                {
+                    "$type": "app.bsky.embed.record#view",
+                    "record": {
+                        "$type": "app.bsky.embed.record#viewRecord",
+                        "uri": "at://did:plc:l4y56p5e7ofj2zspucopqzue/app.bsky.feed.post/3lz2arhudnk2u",
+                        "cid": "bafyreiggpkrsoghw5usdqw4yt2ji4olyimiapmkqavdl7d7k57ikgg6vwi",
+                        "author": {
+                            "did": "did:plc:l4y56p5e7ofj2zspucopqzue",
+                            "handle": "lanana421.bsky.social",
+                            "displayName": "LANana-Nuestra Señora de la Muerte del Pan 😪",
+                            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:l4y56p5e7ofj2zspucopqzue/bafkreihfta2diqc42tknbolnsviqigezb7qpmxk5d2wmsik67y66pis6aq@jpeg",
+                            "associated": {"activitySubscription": {"allowSubscriptions": "followers"}},
+                            "viewer": {"muted": false, "blockedBy": false},
+                            "labels": [],
+                            "createdAt": "2023-11-21T03:55:03.473Z"
+                        },
+                        "value": {
+                            "$type": "app.bsky.feed.post",
+                            "createdAt": "2025-09-17T16:25:21.511Z",
+                            "embed": {
+                                "$type": "app.bsky.embed.record",
+                                "record": {
+                                    "cid": "bafyreigxcbqhfnnb2lanmvtl3joeo45d7qj7pjjptuwaazqdeb2zkpfvue",
+                                    "uri": "at://did:plc:l4y56p5e7ofj2zspucopqzue/app.bsky.graph.list/3lxdgjtpqhf2z"
+                                }
+                            },
+                            "facets": [
+                                {
+                                    "features": [{"$type": "app.bsky.richtext.facet#link", "uri": "https://bsky.app/profile/did:plc:l4y56p5e7ofj2zspucopqzue/lists/3lxdgjtpqhf2z"}],
+                                    "index": {"byteEnd": 76, "byteStart": 52}
+                                }
+                            ],
+                            "langs": ["en"],
+                            "reply": {
+                                "parent": {
+                                    "cid": "bafyreib334gfsf7i7swoulhbo4d5bd4prulatv245sedx2vbh3i2jmxfrm",
+                                    "uri": "at://did:plc:ktc7mkfqnint7hmviye6wizr/app.bsky.feed.post/3lyyjulornc2c"
+                                },
+                                "root": {
+                                    "cid": "bafyreib334gfsf7i7swoulhbo4d5bd4prulatv245sedx2vbh3i2jmxfrm",
+                                    "uri": "at://did:plc:ktc7mkfqnint7hmviye6wizr/app.bsky.feed.post/3lyyjulornc2c"
+                                }
+                            },
+                            "text": "I have a mod list just for accounts like this 🤣\n\nbsky.app/profile/did:..."
+                        },
+                        "labels": [],
+                        "likeCount": 1,
+                        "replyCount": 3,
+                        "repostCount": 0,
+                        "quoteCount": 1,
+                        "indexedAt": "2025-09-17T16:25:22.311Z"
+                    }
+                }
+            ]
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 2,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-09-17T21:09:52.104Z",
+    "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
+    "labels": []
+},
+{
+  "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.feed.post/3lnklxadqgq32",
+  "cid": "bafyreict3skrzt7f3273jy6hzqwrjmhw7epzwqbgibuzywlfnz336gnox4",
+  "author": {
+    "did": "did:plc:etkadjdby46s2skc4shoxp6q",
+    "handle": "android.activitypub.awakari.com.ap.brid.gy",
+    "displayName": "Android",
+    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+    "associated": {
+      "chat": {
+        "allowIncoming": "none"
+      },
+      "activitySubscription": {
+        "allowSubscriptions": "followers"
+      }
+    },
+    "viewer": {
+      "muted": false,
+      "blockedBy": false
+    },
+    "labels": [
+      {
+        "src": "did:plc:etkadjdby46s2skc4shoxp6q",
+        "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.actor.profile/self",
+        "cid": "bafyreidefimaelx472wl2enh3j3nt2zslkfryrp52r4jacmtnh2qemjdji",
+        "val": "bridged-from-bridgy-fed-activitypub",
+        "cts": "1970-01-01T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2025-01-03T19:27:31.965Z"
+  },
+  "record": {
+    "$type": "app.bsky.feed.post",
+    "bridgyOriginalText": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...<br/><br/><a href=\"https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\">https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Huawei\">#Huawei</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/news\">#news</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/foldable\">#foldable</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphones\">#smartphones</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphone\">#smartphone</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/market\">#market</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/China\">#China</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android\">Result Details</a>",
+    "bridgyOriginalUrl": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/",
+    "createdAt": "2025-04-24T09:09:40.000Z",
+    "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+        {
+          "$type": "app.bsky.embed.images#image",
+          "alt": "",
+          "image": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi"
+            },
+            "mimeType": "application/octet-stream",
+            "size": 67729
+          }
+        }
+      ]
+    },
+    "facets": [
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "Huawei"
+          }
+        ],
+        "index": {
+          "byteEnd": 202,
+          "byteStart": 195
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "news"
+          }
+        ],
+        "index": {
+          "byteEnd": 208,
+          "byteStart": 203
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "foldable"
+          }
+        ],
+        "index": {
+          "byteEnd": 218,
+          "byteStart": 209
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "smartphones"
+          }
+        ],
+        "index": {
+          "byteEnd": 231,
+          "byteStart": 219
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "smartphone"
+          }
+        ],
+        "index": {
+          "byteEnd": 243,
+          "byteStart": 232
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "market"
+          }
+        ],
+        "index": {
+          "byteEnd": 251,
+          "byteStart": 244
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#tag",
+            "tag": "China"
+          }
+        ],
+        "index": {
+          "byteEnd": 258,
+          "byteStart": 252
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/"
+          }
+        ],
+        "index": {
+          "byteEnd": 193,
+          "byteStart": 102
+        }
+      },
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android"
+          }
+        ],
+        "index": {
+          "byteEnd": 274,
+          "byteStart": 260
+        }
+      }
+    ],
+    "text": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...\n\nhttps://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\n\n#Huawei #news #foldable #smartphones #smartphone #market #China\n\nResult Details"
+  },
+  "embed": {
+    "$type": "app.bsky.embed.images#view",
+    "images": [
+      {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
+        "alt": ""
+      }
+    ]
+  },
+  "bookmarkCount": 0,
+  "replyCount": 0,
+  "repostCount": 0,
+  "likeCount": 0,
+  "quoteCount": 0,
+  "indexedAt": "2025-04-24T11:26:00.178Z",
+  "viewer": {
+    "bookmarked": false,
+    "threadMuted": false,
+    "embeddingDisabled": false
+  },
+  "labels": []
+}
 
 ]

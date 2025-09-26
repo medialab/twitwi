@@ -1,11 +1,13 @@
 from copy import deepcopy
 from typing import List, Dict, Union, Optional, Literal, overload
 
+from ural import is_url
+
 from twitwi.exceptions import BlueskyPayloadError
 from twitwi.utils import (
     get_collection_time,
     get_dates,
-    custom_normalize_url,
+    safe_normalize_url,
     custom_get_normalized_hostname,
 )
 from twitwi.bluesky.utils import (
@@ -150,7 +152,12 @@ def prepare_quote_data(embed_quote, card_data, post, links):
     )
 
     # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
-    post["quoted_url"] = format_post_url(post["quoted_user_did"], post["quoted_did"])
+    # Handling special posts types (only lists for now, for example: https://bsky.app/profile/lanana421.bsky.social/lists/3lxdgjtpqhf2z)
+    if "/app.bsky.graph.list/" in post["quoted_uri"]:
+        post_splitter = "/lists/"
+    else:
+        post_splitter = "/post/"
+    post["quoted_url"] = format_post_url(post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter)
 
     quoted_data = None
     if card_data:
@@ -372,16 +379,28 @@ def normalize_post(
             # Handle native polls
             if "https://poll.blue/" in feat["uri"]:
                 if feat["uri"].endswith("/0"):
-                    links.add(custom_normalize_url(feat["uri"]))
+                    link = safe_normalize_url(feat["uri"])
+                    if is_url(link):
+                        links.add(link)
+                    else:
+                        continue
                     text += b" %s" % feat["uri"].encode("utf-8")
                 continue
-
-            links.add(custom_normalize_url(feat["uri"]))
+            
+            link = safe_normalize_url(feat["uri"])
+            if is_url(link):
+                links.add(link)
+            else:
+                continue
             # Check & fix occasional errored link positioning
-            # example: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
+            # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
+            #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
             byteStart = facet["index"]["byteStart"]
-            if b" " in text[byteStart : facet["index"]["byteEnd"]]:
-                byteStart = text.find(b"http", byteStart)
+            
+            if not text[byteStart : facet["index"]["byteEnd"]].startswith(b"http"):
+                new_byteStart = text.find(b"http", byteStart, facet["index"]["byteEnd"])
+                if new_byteStart != -1:
+                    byteStart = new_byteStart
 
             links_to_replace.append(
                 {
@@ -465,7 +484,7 @@ def normalize_post(
 
             # Extra card links sometimes missing from facets & text due to manual action in post form
             else:
-                extra_links.append(embed["external"]["uri"])
+                extra_links.append(link)
                 # Handle link card metadata
                 if "embed" in data:
                     post = process_card_data(data["embed"]["external"], post)
@@ -540,9 +559,10 @@ def normalize_post(
 
         # Process extra links
         for link in extra_links:
-            norm_link = custom_normalize_url(link)
+            norm_link = safe_normalize_url(link)
             if norm_link not in links:
-                links.add(norm_link)
+                if is_url(norm_link):
+                    links.add(norm_link)
                 text += b" " + link.encode("utf-8")
 
         # Process medias
