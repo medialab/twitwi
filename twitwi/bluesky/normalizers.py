@@ -18,7 +18,7 @@ from twitwi.bluesky.utils import (
     format_starterpack_url,
     format_media_url,
 )
-from twitwi.bluesky.types import BlueskyProfile, BlueskyPost
+from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost
 
 
 def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfile:
@@ -38,19 +38,44 @@ def normalize_profile(data: Dict, locale: Optional[str] = None) -> BlueskyProfil
         "did": data["did"],
         "url": format_profile_url(data["handle"]),
         "handle": data["handle"],
-        "display_name": data.get("displayName", ""),
+        "display_name": data.get("displayName"),
         "created_at": created_at,
         "timestamp_utc": timestamp_utc,
-        "description": data["description"],
-        "avatar": data.get("avatar", ""),
+        "description": data.get("description"),
+        "avatar": data.get("avatar"),
         "posts": data["postsCount"],
         "followers": data["followersCount"],
         "follows": data["followsCount"],
         "lists": associated["lists"],
         "feedgens": associated["feedgens"],
         "starter_packs": associated["starterPacks"],
-        "banner": data["banner"],
+        "banner": data.get("banner"),
         "pinned_post_uri": pinned_post_uri,
+        "collection_time": get_collection_time(),
+    }
+
+
+def normalize_partial_profile(
+    data: Dict, locale: Optional[str] = None
+) -> BlueskyPartialProfile:
+    associated = data["associated"]
+
+    timestamp_utc, created_at = get_dates(
+        data["createdAt"], locale=locale, source="bluesky"
+    )
+
+    return {
+        "did": data["did"],
+        "url": format_profile_url(data["handle"]),
+        "handle": data["handle"],
+        "display_name": data.get("displayName"),
+        "created_at": created_at,
+        "timestamp_utc": timestamp_utc,
+        "description": data.get("description"),
+        "avatar": data.get("avatar"),
+        "lists": associated.get("lists"),
+        "feedgens": associated.get("feedgens"),
+        "starter_packs": associated.get("starterPacks"),
         "collection_time": get_collection_time(),
     }
 

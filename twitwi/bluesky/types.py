@@ -10,7 +10,7 @@ class BlueskyProfile(TypedDict):
     url: str                            # URL of the profile accessible on the web
     handle: str                         # updatable human-readable username of the account (usually like username.bsky.social or username.com)
     display_name: Optional[str]         # updatable human-readable name of the account
-    description: str                    # profile short description written by the user
+    description: Optional[str]          # profile short description written by the user
     posts: int                          # total number of posts submitted by the user (at collection time)
     followers: int                      # total number of followers of the user (at collection time)
     follows: int                        # total number of other users followed by the user (at collection time)
@@ -18,8 +18,22 @@ class BlueskyProfile(TypedDict):
     feedgens: int                       # total number of custom feeds created by the user (at collection time)
     starter_packs: int                  # total number of starter packs created by the user (at collection time)
     avatar: Optional[str]               # URL to the image serving as avatar to the user
-    banner: str                         # URL to the image serving as profile banner to the user
+    banner: Optional[str]               # URL to the image serving as profile banner to the user
     pinned_post_uri: Optional[str]      # ATProto's internal URI to the post potentially pinned by the user to appear at the top of his posts on his profile
+    created_at: str                     # datetime (potentially timezoned) of when the user created the account
+    timestamp_utc: int                  # Unix UTC timestamp of when the user created the account
+    collection_time: Optional[str]      # datetime (potentially timezoned) of when the data was normalized
+
+class BlueskyPartialProfile(TypedDict): # A partial version of the profile found in follower/follow profile payloads
+    did: str                            # persistent long-term identifier of the account
+    url: str                            # URL of the profile accessible on the web
+    handle: str                         # updatable human-readable username of the account (usually like username.bsky.social or username.com)
+    display_name: Optional[str]         # updatable human-readable name of the account
+    description: Optional[str]          # profile short description written by the user
+    lists: Optional[int]                # total number of lists created by the user (at collection time)
+    feedgens: Optional[int]             # total number of custom feeds created by the user (at collection time)
+    starter_packs: Optional[int]        # total number of starter packs created by the user (at collection time)
+    avatar: Optional[str]               # URL to the image serving as avatar to the user
     created_at: str                     # datetime (potentially timezoned) of when the user created the account
     timestamp_utc: int                  # Unix UTC timestamp of when the user created the account
     collection_time: Optional[str]      # datetime (potentially timezoned) of when the data was normalized
