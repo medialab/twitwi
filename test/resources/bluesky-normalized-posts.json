@@ -3791,5 +3791,110 @@
       "user_timestamp_utc": 1735932451,
       "user_url": "https://bsky.app/profile/android.activitypub.awakari.com.ap.brid.gy"
     }
+  ],
+  [
+    {
+      "bridgy_original_url": "https://mastodon.social/@1kmadleenfr/115249595914655045",
+      "cid": "bafyreib47yraafby73euwlgdol6lm266ypywgv263mggdvw67kx4po35vy",
+      "collected_via": [
+        "quote"
+      ],
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lzh5m4xok3j2",
+      "domains": [
+        "mastodon.social",
+        "urls.fr"
+      ],
+      "hashtags": [],
+      "like_count": 9,
+      "links": [
+        "https://mastodon.social/%401kmadleenfr/115249595914655045",
+        "https://urls.fr/pRgFag"
+      ],
+      "local_time": "2025-09-22T21:27:53.000000",
+      "match_query": false,
+      "media_alt_texts": [
+        "texte noir, vert et rouge sur fond blanc :\nContacts officiels - par pays \nAction en 1 clic pour protéger la Global Sumud Flotilla\nExhortez les gouvernements et les ministères des Affaires étrangères\nà protéger leurs citoyens et exigez d’eux un passage sûr pour  la Global Sumud Flotilla vers Gaza\nnombre d'emails déjà envoyés : 320 433"
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg"
+      ],
+      "media_types": [
+        "image/jpeg"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "🇵🇸 ✊ ACTION ✊ EN 1 CLIC :\nExhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉https://urls.fr/pRgFag\n- - -\n🇵🇸 ✊ ACTION ✊ IN 1 CLICK:\nUrge governments […] \n\n[Original post on mastodon.social]",
+      "quote_count": 3,
+      "reply_count": 1,
+      "repost_count": 5,
+      "text": "🇵🇸 ✊ ACTION ✊ EN 1 CLIC :\nExhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉https://urls.fr/pRgFag\n- - -\n🇵🇸 ✊ ACTION ✊ IN 1 CLICK:\nUrge governments […] https://mastodon.social/@1kmadleenfr/115249595914655045 https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg",
+      "timestamp_utc": 1758569273,
+      "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2",
+      "url": "https://bsky.app/profile/1kmadleenfr.mastodon.social.ap.brid.gy/post/3lzh5m4xok3j2",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
+      "user_created_at": "2025-08-20T20:32:40.807000",
+      "user_did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+      "user_diplay_name": "Thousand Madleens to Gaza FR",
+      "user_handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+      "user_langs": [
+        "fr"
+      ],
+      "user_timestamp_utc": 1755714760,
+      "user_url": "https://bsky.app/profile/1kmadleenfr.mastodon.social.ap.brid.gy"
+    },
+    {
+      "bridgy_original_url": "https://mastodon.social/@1kmadleenfr/115272683435145839",
+      "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lzrffjgbhgg2",
+      "domains": [
+        "mastodon.social",
+        "mastodon.social"
+      ],
+      "hashtags": [],
+      "like_count": 1,
+      "links": [
+        "https://mastodon.social/%401kmadleenfr/115249595914655045",
+        "https://mastodon.social/%401kmadleenfr/115272683435145839"
+      ],
+      "local_time": "2025-09-26T23:19:21.000000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "RE: https://mastodon.social/@1kmadleenfr/115249595914655045\n\n... petit repost pour les retardataires :o) Action Action Action Go Go Go !\n\nNous sommes les goutelettes d'eau de l'ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et […]",
+      "quote_count": 0,
+      "quoted_cid": "bafyreicggkj4timpsqkpauzjkz7tvekq2r2jjy3fcojjs7c6d4h2gbestu",
+      "quoted_created_at": "2025-09-22T21:27:53.000000",
+      "quoted_did": "3lzh5m4xok3j2",
+      "quoted_timestamp_utc": 1758569273,
+      "quoted_uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2",
+      "quoted_url": "https://bsky.app/profile/1kmadleenfr.mastodon.social.ap.brid.gy/post/3lzh5m4xok3j2",
+      "quoted_user_did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+      "quoted_user_handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+      "reply_count": 0,
+      "repost_count": 1,
+      "text": "RE: https://mastodon.social/@1kmadleenfr/115249595914655045\n\n... petit repost pour les retardataires :o) Action Action Action Go Go Go !\n\nNous sommes les goutelettes d'eau de l'ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et […] https://mastodon.social/@1kmadleenfr/115272683435145839 « @1kmadleenfr.mastodon.social.ap.brid.gy: 🇵🇸 ✊ ACTION ✊ EN 1 CLIC :\nExhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉https://urls.fr/pRgFag\n- - -\n🇵🇸 ✊ ACTION ✊ IN 1 CLICK:\nUrge governments […] https://mastodon.social/@1kmadleenfr/115249595914655045 https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg — https://bsky.app/profile/1kmadleenfr.mastodon.social.ap.brid.gy/post/3lzh5m4xok3j2 »",
+      "timestamp_utc": 1758921561,
+      "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
+      "url": "https://bsky.app/profile/1kmadleenfr.mastodon.social.ap.brid.gy/post/3lzrffjgbhgg2",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
+      "user_created_at": "2025-08-20T20:32:40.807000",
+      "user_did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+      "user_diplay_name": "Thousand Madleens to Gaza FR",
+      "user_handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+      "user_langs": [
+        "fr"
+      ],
+      "user_timestamp_utc": 1755714760,
+      "user_url": "https://bsky.app/profile/1kmadleenfr.mastodon.social.ap.brid.gy"
+    }
   ]
 ]

@@ -6485,6 +6485,231 @@
     "embeddingDisabled": false
   },
   "labels": []
+},
+{
+  "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
+  "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
+  "author": {
+    "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+    "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+    "displayName": "Thousand Madleens to Gaza FR",
+    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
+    "associated": {
+      "chat": {
+        "allowIncoming": "none"
+      },
+      "activitySubscription": {
+        "allowSubscriptions": "followers"
+      }
+    },
+    "viewer": {
+      "muted": false,
+      "blockedBy": false
+    },
+    "labels": [
+      {
+        "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
+        "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
+        "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
+        "val": "bridged-from-bridgy-fed-activitypub",
+        "cts": "1970-01-01T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2025-08-20T18:32:40.807Z"
+  },
+  "record": {
+    "$type": "app.bsky.feed.post",
+    "bridgyOriginalText": "<p class=\"quote-inline\">RE: <a href=\"https://mastodon.social/@1kmadleenfr/115249595914655045\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">mastodon.social/@1kmadleenfr/1</span><span class=\"invisible\">15249595914655045</span></a></p><p>... petit repost pour les retardataires :o) Action Action Action Go Go Go !</p><p>Nous sommes les goutelettes d&#39;eau de l&#39;ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et actions en tout genre pour faire du bruit et faire entendre la voix de la paix et de la justice ✊</p>",
+    "bridgyOriginalUrl": "https://mastodon.social/@1kmadleenfr/115272683435145839",
+    "createdAt": "2025-09-26T21:19:21.000Z",
+    "embed": {
+      "$type": "app.bsky.embed.recordWithMedia",
+      "media": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+          "$type": "app.bsky.embed.external#external",
+          "description": "",
+          "title": "Original post on mastodon.social",
+          "uri": "https://mastodon.social/@1kmadleenfr/115272683435145839"
+        }
+      },
+      "record": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+          "cid": "bafyreicggkj4timpsqkpauzjkz7tvekq2r2jjy3fcojjs7c6d4h2gbestu",
+          "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2"
+        }
+      }
+    },
+    "facets": [
+      {
+        "$type": "app.bsky.richtext.facet",
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://mastodon.social/@1kmadleenfr/115249595914655045"
+          }
+        ],
+        "index": {
+          "byteEnd": 59,
+          "byteStart": 4
+        }
+      }
+    ],
+    "langs": [
+      "fr"
+    ],
+    "text": "RE: https://mastodon.social/@1kmadleenfr/115249595914655045\n\n... petit repost pour les retardataires :o) Action Action Action Go Go Go !\n\nNous sommes les goutelettes d'eau de l'ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et […]"
+  },
+  "embed": {
+    "$type": "app.bsky.embed.recordWithMedia#view",
+    "media": {
+      "$type": "app.bsky.embed.external#view",
+      "external": {
+        "uri": "https://mastodon.social/@1kmadleenfr/115272683435145839",
+        "title": "Original post on mastodon.social",
+        "description": ""
+      }
+    },
+    "record": {
+      "record": {
+        "$type": "app.bsky.embed.record#viewRecord",
+        "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2",
+        "cid": "bafyreib47yraafby73euwlgdol6lm266ypywgv263mggdvw67kx4po35vy",
+        "author": {
+          "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+          "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+          "displayName": "Thousand Madleens to Gaza FR",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
+          "associated": {
+            "chat": {
+              "allowIncoming": "none"
+            },
+            "activitySubscription": {
+              "allowSubscriptions": "followers"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [
+            {
+              "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
+              "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
+              "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
+              "val": "bridged-from-bridgy-fed-activitypub",
+              "cts": "1970-01-01T00:00:00.000Z"
+            }
+          ],
+          "createdAt": "2025-08-20T18:32:40.807Z"
+        },
+        "value": {
+          "$type": "app.bsky.feed.post",
+          "bridgyOriginalText": "<p>🇵🇸 ✊ ACTION ✊ EN 1 CLIC :<br />Exhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉<a href=\"https://urls.fr/pRgFag\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">urls.fr/pRgFag</span><span class=\"invisible\"></span></a><br />- - - <br />🇵🇸 ✊ ACTION ✊ IN 1 CLICK:<br />Urge governments and foreign ministries to protect their citizens and demand safe passage for the Global Sumud Flotilla to <a href=\"https://mastodon.social/tags/Gaza\" class=\"mention hashtag\" rel=\"tag\">#<span>Gaza</span></a> 👉<a href=\"https://urls.fr/pRgFag\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">urls.fr/pRgFag</span><span class=\"invisible\"></span></a></p><p><a href=\"https://mastodon.social/tags/palestine\" class=\"mention hashtag\" rel=\"tag\">#<span>palestine</span></a> <a href=\"https://mastodon.social/tags/globalsumudflotilla\" class=\"mention hashtag\" rel=\"tag\">#<span>globalsumudflotilla</span></a> <a href=\"https://mastodon.social/tags/genocide\" class=\"mention hashtag\" rel=\"tag\">#<span>genocide</span></a> <a href=\"https://mastodon.social/tags/stopgenocide\" class=\"mention hashtag\" rel=\"tag\">#<span>stopgenocide</span></a> <a href=\"https://mastodon.social/tags/sailtogaza\" class=\"mention hashtag\" rel=\"tag\">#<span>sailtogaza</span></a> <a href=\"https://mastodon.social/tags/freepalestine\" class=\"mention hashtag\" rel=\"tag\">#<span>freepalestine</span></a> <a href=\"https://mastodon.social/tags/freegaza\" class=\"mention hashtag\" rel=\"tag\">#<span>freegaza</span></a> <a href=\"https://mastodon.social/tags/petition\" class=\"mention hashtag\" rel=\"tag\">#<span>petition</span></a></p>",
+          "bridgyOriginalUrl": "https://mastodon.social/@1kmadleenfr/115249595914655045",
+          "createdAt": "2025-09-22T19:27:53.000Z",
+          "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+              {
+                "$type": "app.bsky.embed.images#image",
+                "alt": "texte noir, vert et rouge sur fond blanc :\nContacts officiels - par pays \nAction en 1 clic pour protéger la Global Sumud Flotilla\nExhortez les gouvernements et les ministères des Affaires étrangères\nà protéger leurs citoyens et exigez d’eux un passage sûr pour  la Global Sumud Flotilla vers Gaza\nnombre d'emails déjà envoyés : 320 433",
+                "aspectRatio": {
+                  "height": 531,
+                  "width": 937
+                },
+                "image": {
+                  "$type": "blob",
+                  "ref": {
+                    "$link": "bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm"
+                  },
+                  "mimeType": "image/jpeg",
+                  "size": 59519
+                }
+              }
+            ]
+          },
+          "facets": [
+            {
+              "$type": "app.bsky.richtext.facet",
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#link",
+                  "uri": "https://mastodon.social/@1kmadleenfr/115249595914655045"
+                }
+              ],
+              "index": {
+                "byteEnd": 330,
+                "byteStart": 294
+              }
+            },
+            {
+              "$type": "app.bsky.richtext.facet",
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#link",
+                  "uri": "https://urls.fr/pRgFag"
+                }
+              ],
+              "index": {
+                "byteEnd": 228,
+                "byteStart": 206
+              }
+            }
+          ],
+          "langs": [
+            "fr"
+          ],
+          "tags": [
+            "gaza",
+            "palestine",
+            "globalsumudflotilla",
+            "genocide",
+            "stopgenocide",
+            "sailtogaza",
+            "freepalestine",
+            "freegaza"
+          ],
+          "text": "🇵🇸 ✊ ACTION ✊ EN 1 CLIC :\nExhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉https://urls.fr/pRgFag\n- - -\n🇵🇸 ✊ ACTION ✊ IN 1 CLICK:\nUrge governments […] \n\n[Original post on mastodon.social]"
+        },
+        "labels": [],
+        "likeCount": 9,
+        "replyCount": 1,
+        "repostCount": 5,
+        "quoteCount": 3,
+        "indexedAt": "2025-09-22T19:35:20.707Z",
+        "embeds": [
+          {
+            "$type": "app.bsky.embed.images#view",
+            "images": [
+              {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg",
+                "alt": "texte noir, vert et rouge sur fond blanc :\nContacts officiels - par pays \nAction en 1 clic pour protéger la Global Sumud Flotilla\nExhortez les gouvernements et les ministères des Affaires étrangères\nà protéger leurs citoyens et exigez d’eux un passage sûr pour  la Global Sumud Flotilla vers Gaza\nnombre d'emails déjà envoyés : 320 433",
+                "aspectRatio": {
+                  "height": 531,
+                  "width": 937
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "bookmarkCount": 0,
+  "replyCount": 0,
+  "repostCount": 1,
+  "likeCount": 1,
+  "quoteCount": 0,
+  "indexedAt": "2025-09-26T21:23:24.154Z",
+  "viewer": {
+    "bookmarked": false,
+    "threadMuted": false,
+    "embeddingDisabled": false
+  },
+  "labels": []
 }
 
 ]

@@ -594,11 +594,13 @@ def normalize_post(
 
         # Process quotes
         if quoted_data and "value" in quoted_data:
-            if quoted_data["cid"] != post["quoted_cid"]:
+            # We're checking on the uri as the cid can be different in some cases,
+            # and the uri seems to be unique for each post
+            if quoted_data["uri"] != post["quoted_uri"]: 
                 raise BlueskyPayloadError(
                     post["url"],
-                    "inconsistent quote cid found between record.embed.record.cid & embed.record.cid: %s %s"
-                    % (post["quoted_cid"], quoted_data),
+                    "inconsistent quote uri found between record.embed.record.uri & embed.record.uri: %s %s"
+                    % (post["quoted_uri"], quoted_data),
                 )
 
             quoted_data["record"] = quoted_data["value"]
