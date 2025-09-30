@@ -708,7 +708,12 @@ def normalize_post(
             repost_data["indexedAt"], locale=locale, source="bluesky"
         )
 
-    post["text"] = text.decode("utf-8")
+    try:
+        post["text"] = text.decode("utf-8")
+    except UnicodeDecodeError as e:
+        raise UnicodeDecodeError(
+            f"Failed to decode post text: {e}\nPost URL: {post['url']}\nOriginal text bytes: {text}"
+        )
 
     if collection_source is not None:
         post["collected_via"] = [collection_source]
