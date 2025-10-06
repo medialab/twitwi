@@ -403,6 +403,14 @@ def normalize_post(
                 new_byteStart = text.find(b"http", byteStart, facet["index"]["byteEnd"])
                 if new_byteStart != -1:
                     byteStart = new_byteStart
+                else:
+                    for starting in range(facet["index"]["byteEnd"] - byteStart):
+                        try:
+                            if is_url('https://' + text[byteStart + starting : facet["index"]["byteEnd"] + starting].decode("utf-8")):
+                                byteStart = byteStart + starting
+                                break
+                        except UnicodeDecodeError:
+                            pass
 
             links_to_replace.append(
                 {
@@ -711,9 +719,7 @@ def normalize_post(
     try:
         post["text"] = text.decode("utf-8")
     except UnicodeDecodeError as e:
-        raise UnicodeDecodeError(
-            f"Failed to decode post text: {e}\nPost URL: {post['url']}\nOriginal text bytes: {text}"
-        )
+        raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
 
     if collection_source is not None:
         post["collected_via"] = [collection_source]

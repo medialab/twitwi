@@ -6710,6 +6710,142 @@
     "embeddingDisabled": false
   },
   "labels": []
+},
+{  
+  "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
+  "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
+  "author": {
+    "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+    "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+    "displayName": "Thousand Madleens to Gaza FR",
+    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
+    "associated": {
+      "chat": {
+        "allowIncoming": "none"
+      },
+      "activitySubscription": {
+        "allowSubscriptions": "followers"
+      }
+    },
+    "viewer": {
+      "muted": false,
+      "blockedBy": false
+    },
+    "labels": [
+      {
+        "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
+        "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
+        "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
+        "val": "bridged-from-bridgy-fed-activitypub",
+        "cts": "1970-01-01T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2025-08-20T18:32:40.807Z"
+  },
+  "record": {
+    "$type": "app.bsky.feed.post",
+    "createdAt": "2025-10-03T06:28:08.214Z",
+    "embed": {
+      "$type": "app.bsky.embed.images",
+      "images": [
+        {
+          "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+          "aspectRatio": {
+            "height": 510,
+            "width": 923
+          },
+          "image": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu"
+            },
+            "mimeType": "image/jpeg",
+            "size": 276045
+          }
+        },
+        {
+          "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+          "aspectRatio": {
+            "height": 510,
+            "width": 923
+          },
+          "image": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu"
+            },
+            "mimeType": "image/jpeg",
+            "size": 276045
+          }
+        }
+      ]
+    },
+    "facets": [
+      {
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://instagram.com/blueskyoff?igs…"
+          }
+        ],
+        "index": {
+          "byteEnd": 74,
+          "byteStart": 43
+        }
+      },
+      {
+        "features": [
+          {
+            "$type": "app.bsky.richtext.facet#link",
+            "uri": "https://facebook.com/blueskyoff"
+          }
+        ],
+        "index": {
+          "byteEnd": 103,
+          "byteStart": 78
+        }
+      }
+    ],
+    "langs": [
+      "fr"
+    ],
+    "text": "instagram                        facebook \ninstagram.com/blueskyoff?igs… \n�� facebook.com/blueskykyoff"
+  },
+  "embed": {
+    "$type": "app.bsky.embed.images#view",
+    "images": [
+      {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+        "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+        "aspectRatio": {
+          "height": 510,
+          "width": 923
+        }
+      },
+      {
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+        "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+        "aspectRatio": {
+          "height": 510,
+          "width": 923
+        }
+      }
+    ]
+  },
+  "bookmarkCount": 1,
+  "replyCount": 1,
+  "repostCount": 1,
+  "likeCount": 52,
+  "quoteCount": 0,
+  "indexedAt": "2025-10-03T06:28:13.862Z",
+  "viewer": {
+    "bookmarked": false,
+    "threadMuted": false,
+    "embeddingDisabled": false
+  },
+  "labels": []
 }
 
 ]
