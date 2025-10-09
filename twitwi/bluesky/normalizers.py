@@ -364,12 +364,19 @@ def normalize_post(
                 # Check & fix occasional errored mention positioning
                 # example: https://bsky.app/profile/snjcgt.bsky.social/post/3lpmqkkkgp52u
                 byteStart = facet["index"]["byteStart"]
+                byteEnd = facet["index"]["byteEnd"]
                 if text[byteStart : byteStart + 1] != b"@":
                     byteStart = text.find(b"@", byteStart)
+                # in some cases, the errored positioning is before the position given
+                # example: https://bsky.app/profile/springer.springernature.com/post/3lovyad4nt324
+                if byteStart == -1 or byteStart > byteEnd:
+                    byteStart = facet["index"]["byteStart"] - 1
+                    # to extend the size of the mention, which is somehow 1 char too short because of the '@'
+                    byteEnd += 1
 
                 handle = (
                     text[
-                        byteStart + 1 : facet["index"]["byteEnd"]
+                        byteStart + 1 : byteEnd
                         + byteStart
                         - facet["index"]["byteStart"]
                     ]

@@ -4325,5 +4325,59 @@
       "user_timestamp_utc": 1735931192,
       "user_url": "https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy"
     }
+  ],
+  [
+    {
+      "cid": "bafyreig746guz2spqkbwdgjutvqjawotgpgumc5aylqmgeuka62o7n4kqm",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lovyad4nt324",
+      "domains": [
+        "bit.ly"
+      ],
+      "hashtags": [
+        "histsci"
+      ],
+      "indexed_at": "2025-05-11T17:30:01.649Z",
+      "like_count": 13,
+      "links": [
+        "http://bit.ly/3Sp7SeY"
+      ],
+      "local_time": "2025-05-11T19:30:00.919000",
+      "match_query": true,
+      "media_alt_texts": [
+        "Hitler’s Female Physicians"
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4@jpeg"
+      ],
+      "media_types": [
+        "image/jpeg"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4@jpeg"
+      ],
+      "mentioned_user_dids": [
+        "did:plc:4bqqpeponxdqqy7bwyqfqomo"
+      ],
+      "mentioned_user_handles": [
+        "edzard.bsky.social"
+      ],
+      "original_text": "🗃️ 'Hitler’s Female Physicians: Women Doctors During the Third Reich and Their Crimes Against Humanity,' by @edzard.bsky.social, explains the background of the Third Reich in general and medicine during this period in particular. bit.ly/3Sp7SeY #HistSci",
+      "quote_count": 1,
+      "reply_count": 1,
+      "repost_count": 3,
+      "text": "🗃️ 'Hitler’s Female Physicians: Women Doctors During the Third Reich and Their Crimes Against Humanity,' by @edzard.bsky.social, explains the background of the Third Reich in general and medicine during this period in particular. http://bit.ly/3Sp7SeY #HistSci https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4@jpeg",
+      "timestamp_utc": 1746984600,
+      "uri": "at://did:plc:ysc73isz7jkgr4ozyn6azo77/app.bsky.feed.post/3lovyad4nt324",
+      "url": "https://bsky.app/profile/springer.springernature.com/post/3lovyad4nt324",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreif6g7p5jykpgyph7dqrglfktaqwfhvihmff4f2vblbnenx2qh7564@jpeg",
+      "user_created_at": "2023-08-22T16:30:36.857000",
+      "user_did": "did:plc:ysc73isz7jkgr4ozyn6azo77",
+      "user_diplay_name": "Springer",
+      "user_handle": "springer.springernature.com",
+      "user_langs": [],
+      "user_timestamp_utc": 1692714636,
+      "user_url": "https://bsky.app/profile/springer.springernature.com"
+    }
   ]
 ]
