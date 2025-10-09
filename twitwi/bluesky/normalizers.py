@@ -122,13 +122,15 @@ def process_starterpack_card(embed_data, post):
     # Warning: mutates post
 
     card = embed_data.get("record", {})
-    creator_did, pack_did = parse_post_uri(embed_data["uri"])
-    post["card_link"] = format_starterpack_url(
+    if "uri" in embed_data:
+        creator_did, pack_did = parse_post_uri(embed_data["uri"])
+        post["card_link"] = format_starterpack_url(
         embed_data.get("creator", {}).get("handle") or creator_did, pack_did
     )
-    post["card_title"] = card.get("name", "")
-    post["card_description"] = card.get("description", "")
-    post["card_thumbnail"] = card.get("thumb", "")
+    if card:
+        post["card_title"] = card.get("name", "")
+        post["card_description"] = card.get("description", "")
+        post["card_thumbnail"] = card.get("thumb", "")
     return post
 
 
@@ -512,9 +514,9 @@ def normalize_post(
         if embed["$type"].endswith(".record"):
             if "app.bsky.graph.starterpack" in embed["record"]["uri"]:
                 post = process_starterpack_card(
-                    data.get("embed", {}).get("record"), post
+                    data.get("embed", {}).get("record", {}), post
                 )
-                if post["card_link"]:
+                if post.get("card_link"):
                     extra_links.append(post["card_link"])
             else:
                 post, quoted_data, links = prepare_quote_data(
