@@ -4213,5 +4213,117 @@
       "user_timestamp_utc": 1738025676,
       "user_url": "https://bsky.app/profile/indivisiblelb.bsky.social"
     }
+  ],
+  [
+    {
+      "bridgy_original_url": "https://mastodon.social/@memoire2cite/114829510558384526",
+      "cid": "bafyreiauulzocz6duamsnh5rv4wa677s5sts6lquwrovwu4nyqfbuj4tem",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3ltmljz5blca2",
+      "domains": [
+        "youtube.com"
+      ],
+      "hashtags": [],
+      "indexed_at": "2025-07-10T14:55:09.239Z",
+      "like_count": 0,
+      "links": [
+        "https://www.youtube.com/watch?list=RD-KzaJVuViLU&start_radio=1&v=-KzaJVuViLU"
+      ],
+      "local_time": "2025-07-10T16:54:39.000000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "de la NU DISCO en faite LOLA YOUNG ''Messy'' Nu Disco / House] [https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "de la NU DISCO en faite LOLA YOUNG ''Messy'' https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶",
+      "timestamp_utc": 1752159279,
+      "to_post_cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
+      "to_post_did": "3ltml2pximsa2",
+      "to_post_uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2",
+      "to_post_url": "https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltml2pximsa2",
+      "to_root_post_cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
+      "to_root_post_did": "3ltml2pximsa2",
+      "to_root_post_uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2",
+      "to_root_post_url": "https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltml2pximsa2",
+      "to_root_user_did": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
+      "to_user_did": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
+      "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltmljz5blca2",
+      "url": "https://bsky.app/profile/memoire2cite.mastodon.social.ap.brid.gy/post/3ltmljz5blca2",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rkphrshyfiqe4n2hz5vj56ig/bafkreia2pe2tayrxikiute7w7g2qfqvxta27ywggclqz4r47fp53kquyvu@jpeg",
+      "user_created_at": "2025-01-20T11:55:16.746000",
+      "user_did": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
+      "user_diplay_name": "Mémoire2Cité  Mémoire2ville",
+      "user_handle": "memoire2cite.mastodon.social.ap.brid.gy",
+      "user_langs": [
+        "fr"
+      ],
+      "user_timestamp_utc": 1737370516,
+      "user_url": "https://bsky.app/profile/memoire2cite.mastodon.social.ap.brid.gy"
+    }
+  ],
+  [
+    {
+      "bridgy_original_url": "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html",
+      "card_description": "",
+      "card_link": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U",
+      "card_thumbnail": "",
+      "card_title": "Awakari App",
+      "cid": "bafyreifzqnctwwzqsmvvk5xulxnktfzny3yoea5mrera3lezxp6nlel5fe",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3ln33tx7bpdu2",
+      "domains": [
+        "awakari.com",
+        "nytimes.com"
+      ],
+      "hashtags": [
+        "(artist)",
+        "(book)",
+        "and",
+        "books",
+        "czeslaw",
+        "e,",
+        "kayla",
+        "literature",
+        "milosz,",
+        "precious",
+        "rubbish"
+      ],
+      "indexed_at": "2025-04-18T07:28:49.178Z",
+      "like_count": 0,
+      "links": [
+        "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U",
+        "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html"
+      ],
+      "local_time": "2025-04-17T21:04:41.000000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "\n\nhttps://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\n\n#Books #and #Literature #E, #Kayla #(Artist) #Precious #Rubbish #(Book) #Milosz, #Czeslaw\n\nEvent Attributes",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "\n\nhttps://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\n\n#Books #and #Literature #E, #Kayla #(Artist) #Precious #Rubbish #(Book) #Milosz, #Czeslaw\n\nhttps://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U",
+      "timestamp_utc": 1744916681,
+      "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3ln33tx7bpdu2",
+      "url": "https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+      "user_created_at": "2025-01-03T20:06:32.543000",
+      "user_did": "did:plc:3auglfwwpebyiozbojq5eqhy",
+      "user_diplay_name": "NewYork",
+      "user_handle": "newyork.activitypub.awakari.com.ap.brid.gy",
+      "user_langs": [],
+      "user_timestamp_utc": 1735931192,
+      "user_url": "https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy"
+    }
   ]
 ]

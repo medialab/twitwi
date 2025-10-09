@@ -404,9 +404,27 @@ def normalize_post(
 
             if not text[byteStart : facet["index"]["byteEnd"]].startswith(b"http"):
                 new_byteStart = text.find(b"http", byteStart, facet["index"]["byteEnd"])
+
+                # means that the link is shifted, like on this post:
+                # https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
                 if new_byteStart != -1:
                     byteStart = new_byteStart
+
+                    # Find the index of the first space character after byteStart in case the link is a personalized one
+                    # but still with the link in it (somehow existing in some posts, such as this one:
+                    # https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltmljz5blca2)
+                    # In this case, we don't want to touch the position of the link given in the payload
+                    byteEnd = min(byteStart - facet["index"]["byteStart"] + facet["index"]["byteEnd"], len(post["original_text"].encode("utf-8")))
+                    for i in range(byteStart, byteEnd):
+                        if chr(text[i]).isspace():
+                            byteStart = facet["index"]["byteStart"]
+
+                # means that the link is a "personalized" one like on this post: 
+                # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
                 else:
+
+                    # we're looking for a link which could be valid if we add "https://" at the beginning,
+                    # as in some cases the "http(s)://" part is missing in the post text
                     for starting in range(facet["index"]["byteEnd"] - byteStart):
                         try:
                             if is_url('https://' + text[byteStart + starting : facet["index"]["byteEnd"] + starting].decode("utf-8")):
@@ -414,6 +432,8 @@ def normalize_post(
                                 break
                         except UnicodeDecodeError:
                             pass
+                    # If we did not find any valid link, we just keep the original position as it is
+                    # meaning that we have a personalized link like in the example above
 
             links_to_replace.append(
                 {

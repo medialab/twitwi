@@ -7132,6 +7132,331 @@
     },
     "labels": []
   }
+},
+{
+  "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltmljz5blca2",
+  "post": {
+    "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltmljz5blca2",
+    "cid": "bafyreiauulzocz6duamsnh5rv4wa677s5sts6lquwrovwu4nyqfbuj4tem",
+    "author": {
+      "did": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
+      "handle": "memoire2cite.mastodon.social.ap.brid.gy",
+      "displayName": "Mémoire2Cité  Mémoire2ville",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rkphrshyfiqe4n2hz5vj56ig/bafkreia2pe2tayrxikiute7w7g2qfqvxta27ywggclqz4r47fp53kquyvu@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "none"
+        },
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [
+        {
+          "src": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
+          "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.actor.profile/self",
+          "cid": "bafyreifevmukndnhml42dody4ld5l72ianbgtlcz5pfj3c3fehjbi556qm",
+          "val": "bridged-from-bridgy-fed-activitypub",
+          "cts": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "createdAt": "2025-01-20T10:55:16.746Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "bridgyOriginalText": "<p>de la NU DISCO en faite LOLA YOUNG &#39;&#39;Messy&#39;&#39; [Nu Disco / House] <a href=\"https://www.youtube.com/watch?v=-KzaJVuViLU&amp;list=RD-KzaJVuViLU&amp;start_radio=1\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"ellipsis\">youtube.com/watch?v=-KzaJVuViL</span><span class=\"invisible\">U&amp;list=RD-KzaJVuViLU&amp;start_radio=1</span></a> 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶</p>",
+      "bridgyOriginalUrl": "https://mastodon.social/@memoire2cite/114829510558384526",
+      "createdAt": "2025-07-10T14:54:39.000Z",
+      "facets": [
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1"
+            }
+          ],
+          "index": {
+            "byteEnd": 140,
+            "byteStart": 45
+          }
+        }
+      ],
+      "langs": [
+        "fr"
+      ],
+      "reply": {
+        "$type": "app.bsky.feed.post#replyRef",
+        "parent": {
+          "cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
+          "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2"
+        },
+        "root": {
+          "cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
+          "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2"
+        }
+      },
+      "text": "de la NU DISCO en faite LOLA YOUNG ''Messy'' Nu Disco / House] [https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-07-10T14:55:09.239Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
+  }
+},
+{
+  "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3ln33tx7bpdu2",
+  "post": {
+    "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3ln33tx7bpdu2",
+    "cid": "bafyreifzqnctwwzqsmvvk5xulxnktfzny3yoea5mrera3lezxp6nlel5fe",
+    "author": {
+      "did": "did:plc:3auglfwwpebyiozbojq5eqhy",
+      "handle": "newyork.activitypub.awakari.com.ap.brid.gy",
+      "displayName": "NewYork",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "none"
+        },
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [
+        {
+          "src": "did:plc:3auglfwwpebyiozbojq5eqhy",
+          "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.actor.profile/self",
+          "cid": "bafyreihkrjxzeiefdtmiwzjuxypih35rqn5unat2j2jsxiwswxztheim44",
+          "val": "bridged-from-bridgy-fed-activitypub",
+          "cts": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "createdAt": "2025-01-03T19:06:32.543Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "bridgyOriginalText": "<br/><br/><a href=\"https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\">https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Books\">#Books</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/and\">#and</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Literature\">#Literature</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/E,\">#E,</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Kayla\">#Kayla</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/(Artist)\">#(Artist)</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Precious\">#Precious</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Rubbish\">#Rubbish</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/(Book)\">#(Book)</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Milosz,\">#Milosz,</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Czeslaw\">#Czeslaw</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U\">Event Attributes</a>",
+      "bridgyOriginalUrl": "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html",
+      "createdAt": "2025-04-17T19:04:41.000Z",
+      "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+          "$type": "app.bsky.embed.external#external",
+          "description": "",
+          "title": "Awakari App",
+          "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U"
+        }
+      },
+      "facets": [
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Books"
+            }
+          ],
+          "index": {
+            "byteEnd": 88,
+            "byteStart": 82
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "and"
+            }
+          ],
+          "index": {
+            "byteEnd": 93,
+            "byteStart": 89
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Literature"
+            }
+          ],
+          "index": {
+            "byteEnd": 105,
+            "byteStart": 94
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "E,"
+            }
+          ],
+          "index": {
+            "byteEnd": 109,
+            "byteStart": 106
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Kayla"
+            }
+          ],
+          "index": {
+            "byteEnd": 116,
+            "byteStart": 110
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "(Artist)"
+            }
+          ],
+          "index": {
+            "byteEnd": 126,
+            "byteStart": 117
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Precious"
+            }
+          ],
+          "index": {
+            "byteEnd": 136,
+            "byteStart": 127
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Rubbish"
+            }
+          ],
+          "index": {
+            "byteEnd": 145,
+            "byteStart": 137
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "(Book)"
+            }
+          ],
+          "index": {
+            "byteEnd": 153,
+            "byteStart": 146
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Milosz,"
+            }
+          ],
+          "index": {
+            "byteEnd": 162,
+            "byteStart": 154
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Czeslaw"
+            }
+          ],
+          "index": {
+            "byteEnd": 171,
+            "byteStart": 163
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html"
+            }
+          ],
+          "index": {
+            "byteEnd": 80,
+            "byteStart": 2
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U"
+            }
+          ],
+          "index": {
+            "byteEnd": 189,
+            "byteStart": 173
+          }
+        }
+      ],
+      "text": "\n\nhttps://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\n\n#Books #and #Literature #E, #Kayla #(Artist) #Precious #Rubbish #(Book) #Milosz, #Czeslaw\n\nEvent Attributes"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.external#view",
+      "external": {
+        "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U",
+        "title": "Awakari App",
+        "description": ""
+      }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-18T07:28:49.178Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
+  }
 }
 
 ]
