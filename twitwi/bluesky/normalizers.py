@@ -408,9 +408,10 @@ def normalize_post(
             # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
             #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
             byteStart = facet["index"]["byteStart"]
+            byteEnd = facet["index"]["byteEnd"]
 
-            if not text[byteStart : facet["index"]["byteEnd"]].startswith(b"http"):
-                new_byteStart = text.find(b"http", byteStart, facet["index"]["byteEnd"])
+            if not text[byteStart : byteEnd].startswith(b"http"):
+                new_byteStart = text.find(b"http", byteStart, byteEnd)
 
                 # means that the link is shifted, like on this post:
                 # https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
@@ -425,6 +426,7 @@ def normalize_post(
                     for i in range(byteStart, byteEnd):
                         if chr(text[i]).isspace():
                             byteStart = facet["index"]["byteStart"]
+                    byteEnd = byteStart - facet["index"]["byteStart"] + facet["index"]["byteEnd"]
 
                 # means that the link is a "personalized" one like on this post: 
                 # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
@@ -432,23 +434,39 @@ def normalize_post(
 
                     # we're looking for a link which could be valid if we add "https://" at the beginning,
                     # as in some cases the "http(s)://" part is missing in the post text
-                    for starting in range(facet["index"]["byteEnd"] - byteStart):
+                    for starting in range(byteEnd - byteStart):
                         try:
-                            if is_url('https://' + text[byteStart + starting : facet["index"]["byteEnd"] + starting].decode("utf-8")):
-                                byteStart = byteStart + starting
+                            if is_url('https://' + text[byteStart + starting : byteEnd + starting].decode("utf-8")):
+                                byteStart += starting
                                 break
                         except UnicodeDecodeError:
                             pass
                     # If we did not find any valid link, we just keep the original position as it is
                     # meaning that we have a personalized link like in the example above
 
+                    # Extend byteEnd to the right until we find a valid utf-8 ending, 
+                    # as in some cases the link is longer than the position given in the payload
+                    # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
+                    # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
+                    while byteEnd < len(post["original_text"].encode("utf-8")):
+                        try:
+                            text[byteStart : byteEnd].decode("utf-8")
+                            break
+                        except UnicodeDecodeError:
+                            byteEnd += 1
+                            continue
+
+                    if byteEnd == len(post["original_text"].encode("utf-8")):
+                        byteEnd = facet["index"]["byteEnd"]
+
+                    byteEnd += byteStart - facet["index"]["byteStart"]
+
+
             links_to_replace.append(
                 {
                     "uri": feat["uri"].encode("utf-8"),
                     "start": byteStart,
-                    "end": byteStart
-                    - facet["index"]["byteStart"]
-                    + facet["index"]["byteEnd"],
+                    "end": byteEnd,
                 }
             )
 

@@ -7573,6 +7573,135 @@
     },
     "labels": []
   }
+},
+{
+  "uri": "at://did:plc:afklhwqpfjktj3m44h7wfzbu/app.bsky.feed.post/3lmla2zjnbc2q",
+  "post": {
+    "uri": "at://did:plc:afklhwqpfjktj3m44h7wfzbu/app.bsky.feed.post/3lmla2zjnbc2q",
+    "cid": "bafyreic4ikt3xtjdkrh3pwojhnk6mt3d5z6p6fuydkro4v54eeqdtgydsu",
+    "author": {
+      "did": "did:plc:afklhwqpfjktj3m44h7wfzbu",
+      "handle": "pikouse.bsky.social",
+      "displayName": "Pikouse",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:afklhwqpfjktj3m44h7wfzbu/bafkreicdb37vssdu22dimxzyhqx74luvtat33b7ufhb3qip3h2fc5zcghm@jpeg",
+      "associated": {
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-09-03T22:46:43.572Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-04-12T00:00:32.674Z",
+      "embed": {
+        "$type": "app.bsky.embed.record",
+        "record": {
+          "cid": "bafyreic3xlvo27we5mga5tmdl3cdgfxy3kcmxn73zn4wlyrytc4od3ikn4",
+          "uri": "at://did:plc:oekcprj6r6mqorimjaxtvt3a/app.bsky.feed.post/3lmkzhvhtta22"
+        }
+      },
+      "langs": [
+        "fr"
+      ],
+      "text": "On peut pas traiter sans cesse ses concitoyens comme de la merde sans que ça te retombe dessus faut croire"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.record#view",
+      "record": {
+        "$type": "app.bsky.embed.record#viewRecord",
+        "uri": "at://did:plc:oekcprj6r6mqorimjaxtvt3a/app.bsky.feed.post/3lmkzhvhtta22",
+        "cid": "bafyreic3xlvo27we5mga5tmdl3cdgfxy3kcmxn73zn4wlyrytc4od3ikn4",
+        "author": {
+          "did": "did:plc:oekcprj6r6mqorimjaxtvt3a",
+          "handle": "radiogaspesie.bsky.social",
+          "displayName": "Radio Gaspésie",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreig6l7gnbvhgdtiysmb67ymqrawcdfispurryl5jaxitv35imrecrm@jpeg",
+          "associated": {
+            "activitySubscription": {
+              "allowSubscriptions": "followers"
+            }
+          },
+          "viewer": {
+            "muted": false,
+            "blockedBy": false
+          },
+          "labels": [],
+          "createdAt": "2024-11-26T20:54:52.746Z"
+        },
+        "value": {
+          "$type": "app.bsky.feed.post",
+          "createdAt": "2025-04-11T22:02:28.133Z",
+          "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+              {
+                "alt": "stablex",
+                "image": {
+                  "$type": "blob",
+                  "ref": {
+                    "$link": "bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy"
+                  },
+                  "mimeType": "image/png",
+                  "size": 150000
+                }
+              }
+            ]
+          },
+          "facets": [
+            {
+              "features": [
+                {
+                  "$type": "app.bsky.richtext.facet#link",
+                  "uri": "https://www.radiogaspesie.ca/?p=109017"
+                }
+              ],
+              "index": {
+                "byteEnd": 49,
+                "byteStart": 0
+              }
+            }
+          ],
+          "text": "Le bureau de Maïté Blanchette-Vézina vandalisé\n\nIl était possible de lire sur la porte d’entrée «Fuck Stablex, fuck tes déchets». "
+        },
+        "labels": [],
+        "likeCount": 0,
+        "replyCount": 0,
+        "repostCount": 0,
+        "quoteCount": 1,
+        "indexedAt": "2025-04-11T22:02:29.185Z",
+        "embeds": [
+          {
+            "$type": "app.bsky.embed.images#view",
+            "images": [
+              {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy@jpeg",
+                "alt": "stablex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-12T00:00:32.380Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
+  }
 }
 
 ]
