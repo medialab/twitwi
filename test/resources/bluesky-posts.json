@@ -7704,6 +7704,121 @@
   }
 },
 {
+  "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h74wee2m",
+  "post": {
+    "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h74wee2m",
+    "cid": "bafyreigvnfxnrv4biniiaaemprkumzkqtfbusoyfr5mhgtv6mjgobqic6a",
+    "author": {
+      "did": "did:plc:3h2qkkjhjwaqnuuj4dtw6sem",
+      "handle": "sudetsoleil.bsky.social",
+      "displayName": "DePassage 🥖🇫🇷 🤝 💙💛 🗽",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiegjs4cz6k363iwiptou5l26edtq75yf5fwkwhb7gxl2ewumobrrq@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "following"
+        },
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-09-24T17:53:30.072Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-03-02T09:06:19.168Z",
+      "embed": {
+        "$type": "app.bsky.embed.video",
+        "aspectRatio": {
+          "height": 704,
+          "width": 704
+        },
+        "video": {
+          "$type": "blob",
+          "ref": {
+            "$link": "bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm"
+          },
+          "mimeType": "video/mp4",
+          "size": 156127
+        }
+      },
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://buff.ly/DJcXm9v"
+            }
+          ],
+          "index": {
+            "byteEnd": 303,
+            "byteStart": 239
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://buff.ly/Pm9YVgk"
+            }
+          ],
+          "index": {
+            "byteEnd": 324,
+            "byteStart": 301
+          }
+        }
+      ],
+      "reply": {
+        "parent": {
+          "cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
+          "commit": {
+            "cid": "bafyreiftv66lfzbzw5smcbphrvrgnm6iyesyenjnxagcug44ikhmzlbp2u",
+            "rev": "3ljf3h3ozhy2y"
+          },
+          "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
+          "validationStatus": "valid"
+        },
+        "root": {
+          "cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
+          "commit": {
+            "cid": "bafyreiftv66lfzbzw5smcbphrvrgnm6iyesyenjnxagcug44ikhmzlbp2u",
+            "rev": "3ljf3h3ozhy2y"
+          },
+          "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
+          "validationStatus": "valid"
+        }
+      },
+      "text": "📍#FELLAS, nous sommes de retour avec une nouvelle collecte de fonds pour ZSU opérant sur les lignes de front les plus chaudes - Pokrovsk, Kurakhove et avons besoin de votre soutien pour un  🛻  Pick-up de la 37th Brigade !\n\n❎: 517€ 😢\n🎯🏹: 5000€\n\n🏦💱: buff.ly/DJcXm9v\n🅿️🅿️ : buff.ly/Pm9YVgk"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.video#view",
+      "cid": "bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm",
+      "playlist": "https://video.bsky.app/watch/did%3Aplc%3A3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/playlist.m3u8",
+      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3A3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/thumbnail.jpg",
+      "aspectRatio": {
+        "height": 704,
+        "width": 704
+      }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 1,
+    "quoteCount": 2,
+    "indexedAt": "2025-03-02T09:06:19.256Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
+  }
+},
+{
   "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
   "post": {
     "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",

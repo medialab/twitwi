@@ -4477,6 +4477,66 @@
   ],
   [
     {
+      "cid": "bafyreigvnfxnrv4biniiaaemprkumzkqtfbusoyfr5mhgtv6mjgobqic6a",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3ljf3h74wee2m",
+      "domains": [
+        "buff.ly",
+        "buff.ly"
+      ],
+      "hashtags": [],
+      "indexed_at": "2025-03-02T09:06:19.256Z",
+      "like_count": 1,
+      "links": [
+        "https://buff.ly/DJcXm9v",
+        "https://buff.ly/Pm9YVgk"
+      ],
+      "local_time": "2025-03-02T10:06:19.168000",
+      "match_query": true,
+      "media_alt_texts": [
+        ""
+      ],
+      "media_thumbnails": [
+        "https://video.bsky.app/watch/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/thumbnail.jpg"
+      ],
+      "media_types": [
+        "video/mp4"
+      ],
+      "media_urls": [
+        "https://video.bsky.app/watch/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/playlist.m3u8"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "📍#FELLAS, nous sommes de retour avec une nouvelle collecte de fonds pour ZSU opérant sur les lignes de front les plus chaudes - Pokrovsk, Kurakhove et avons besoin de votre soutien pour un  🛻  Pick-up de la 37th Brigade !\n\n❎: 517€ 😢\n🎯🏹: 5000€\n\n🏦💱: buff.ly/DJcXm9v\n🅿️🅿️ : buff.ly/Pm9YVgk",
+      "quote_count": 2,
+      "reply_count": 0,
+      "repost_count": 1,
+      "text": "📍#FELLAS, nous sommes de retour avec une nouvelle collecte de fonds pour ZSU opérant sur les lignes de front les plus chaudes - Pokrovsk, Kurakhove et avons besoin de votre soutien pour un  🛻  Pick-up de la 37th Brigade !\n\n❎: 517€ 😢\n🎯🏹: 5000€\n\n🏦💱: buff.ly/DJcXm9v\n🅿️🅿️ : https://buff.ly/Pm9YVgk https://video.bsky.app/watch/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/thumbnail.jpg",
+      "timestamp_utc": 1740906379,
+      "to_post_cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
+      "to_post_did": "3ljf3h3oqoq2y",
+      "to_post_uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
+      "to_post_url": "https://bsky.app/profile/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/post/3ljf3h3oqoq2y",
+      "to_root_post_cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
+      "to_root_post_did": "3ljf3h3oqoq2y",
+      "to_root_post_uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
+      "to_root_post_url": "https://bsky.app/profile/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/post/3ljf3h3oqoq2y",
+      "to_root_user_did": "did:plc:3h2qkkjhjwaqnuuj4dtw6sem",
+      "to_user_did": "did:plc:3h2qkkjhjwaqnuuj4dtw6sem",
+      "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h74wee2m",
+      "url": "https://bsky.app/profile/sudetsoleil.bsky.social/post/3ljf3h74wee2m",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiegjs4cz6k363iwiptou5l26edtq75yf5fwkwhb7gxl2ewumobrrq@jpeg",
+      "user_created_at": "2023-09-24T19:53:30.072000",
+      "user_did": "did:plc:3h2qkkjhjwaqnuuj4dtw6sem",
+      "user_diplay_name": "DePassage 🥖🇫🇷 🤝 💙💛 🗽",
+      "user_handle": "sudetsoleil.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1695578010,
+      "user_url": "https://bsky.app/profile/sudetsoleil.bsky.social"
+    }
+  ],
+  [
+    {
       "bridgy_original_url": "https://toot.portes-imaginaire.org/@PirouEmpyreal/113730625525064284",
       "cid": "bafyreignzwrypnzerqcisedksbufvhzyy7tb3cjkvmoyq23sjm2izk5b5q",
       "collection_time": "2025-01-01T00:00:00.000000",

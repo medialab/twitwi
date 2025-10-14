@@ -461,14 +461,20 @@ def normalize_post(
 
                     byteEnd += byteStart - facet["index"]["byteStart"]
 
-
-            links_to_replace.append(
-                {
-                    "uri": feat["uri"].encode("utf-8"),
-                    "start": byteStart,
-                    "end": byteEnd,
-                }
-            )
+            # In some cases, the link is completely wrong in the post text,
+            # like in this post: https://bsky.app/profile/sudetsoleil.bsky.social/post/3ljf3h74wee2m
+            # So we chose to not replace anything in the text in this case
+            try:
+                text[byteStart:byteEnd].decode("utf-8")
+                links_to_replace.append(
+                    {
+                        "uri": feat["uri"].encode("utf-8"),
+                        "start": byteStart,
+                        "end": byteEnd,
+                    }
+                )
+            except UnicodeDecodeError:
+                pass
 
         elif feat["$type"].endswith("#bold"):
             pass
