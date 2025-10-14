@@ -4474,5 +4474,52 @@
       "user_timestamp_utc": 1693781203,
       "user_url": "https://bsky.app/profile/pikouse.bsky.social"
     }
+  ],
+  [
+    {
+      "bridgy_original_url": "https://toot.portes-imaginaire.org/@PirouEmpyreal/113730625525064284",
+      "cid": "bafyreignzwrypnzerqcisedksbufvhzyy7tb3cjkvmoyq23sjm2izk5b5q",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3leelh4smyer2",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at": "2024-12-28T13:14:08.450Z",
+      "like_count": 5,
+      "links": [],
+      "local_time": "2024-12-28T14:13:44.000000",
+      "match_query": true,
+      "media_alt_texts": [
+        "Affiche du film Nosferatu de Robert Eggers. "
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg"
+      ],
+      "media_types": [
+        "text/plain"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "On sort de #Nosferatu…\nWow.\nLe film prend son temps mais installe une ambiance incroyable.\nLes acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant.\nUn futur grand classique, qui n’a pas à rougir de la comparaison avec l’original.",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "On sort de #Nosferatu…\nWow.\nLe film prend son temps mais installe une ambiance incroyable.\nLes acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant.\nUn futur grand classique, qui n’a pas à rougir de la comparaison avec l’original. https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg",
+      "timestamp_utc": 1735391624,
+      "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
+      "url": "https://bsky.app/profile/pirouempyreal.toot.portes-imaginaire.org.ap.brid.gy/post/3leelh4smyer2",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreihtgjmilfbcn6u73nx6egpaq362nw52vn2rj6ekb6rq4kzext4544@jpeg",
+      "user_created_at": "2024-06-24T19:35:56.517000",
+      "user_did": "did:plc:laiqcxb5dscghtzvxlyjy677",
+      "user_diplay_name": "Julien Pirou / Empyreal",
+      "user_handle": "pirouempyreal.toot.portes-imaginaire.org.ap.brid.gy",
+      "user_langs": [
+        "fr"
+      ],
+      "user_timestamp_utc": 1719250556,
+      "user_url": "https://bsky.app/profile/pirouempyreal.toot.portes-imaginaire.org.ap.brid.gy"
+    }
   ]
 ]

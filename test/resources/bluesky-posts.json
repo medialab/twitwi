@@ -7702,6 +7702,90 @@
     },
     "labels": []
   }
+},
+{
+  "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
+  "post": {
+    "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
+    "cid": "bafyreignzwrypnzerqcisedksbufvhzyy7tb3cjkvmoyq23sjm2izk5b5q",
+    "author": {
+      "did": "did:plc:laiqcxb5dscghtzvxlyjy677",
+      "handle": "pirouempyreal.toot.portes-imaginaire.org.ap.brid.gy",
+      "displayName": "Julien Pirou / Empyreal",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreihtgjmilfbcn6u73nx6egpaq362nw52vn2rj6ekb6rq4kzext4544@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "none"
+        },
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [
+        {
+          "src": "did:plc:laiqcxb5dscghtzvxlyjy677",
+          "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.actor.profile/self",
+          "cid": "bafyreidzp4oinvgvjeh644iyf5ietx6zeopbfd5bfmhladeg4idysds5fq",
+          "val": "bridged-from-bridgy-fed-activitypub",
+          "cts": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-06-24T17:35:56.517Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "bridgyOriginalText": "<p>On sort de <a href=\"https://toot.portes-imaginaire.org/tags/Nosferatu\" class=\"mention hashtag\" rel=\"tag\">#<span>Nosferatu</span></a>…<br />Wow. <br />Le film prend son temps mais installe une ambiance incroyable. <br />Les acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant. <br />Un futur grand classique, qui n’a pas à rougir de la comparaison avec l’original.</p>",
+      "bridgyOriginalUrl": "https://toot.portes-imaginaire.org/@PirouEmpyreal/113730625525064284",
+      "createdAt": "2024-12-28T13:13:44.000Z",
+      "embed": {
+        "$type": "app.bsky.embed.images",
+        "images": [
+          {
+            "$type": "app.bsky.embed.images#image",
+            "alt": "Affiche du film Nosferatu de Robert Eggers. ",
+            "image": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu"
+              },
+              "mimeType": "text/plain",
+              "size": 75090
+            }
+          }
+        ]
+      },
+      "langs": [
+        "fr"
+      ],
+      "text": "On sort de #Nosferatu…\nWow.\nLe film prend son temps mais installe une ambiance incroyable.\nLes acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant.\nUn futur grand classique, qui n’a pas à rougir de la comparaison avec l’original."
+    },
+    "embed": {
+      "$type": "app.bsky.embed.images#view",
+      "images": [
+        {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg",
+          "alt": "Affiche du film Nosferatu de Robert Eggers. "
+        }
+      ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 5,
+    "quoteCount": 0,
+    "indexedAt": "2024-12-28T13:14:08.450Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
+  }
 }
 
 ]
