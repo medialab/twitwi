@@ -332,6 +332,8 @@ def normalize_post(
     post["reply_count"] = data["replyCount"]
     post["like_count"] = data["likeCount"]
     post["quote_count"] = data["quoteCount"]
+    # When a post cites another, the cited post doesn't have the bookmarkCount field
+    post["bookmark_count"] = data.get("bookmarkCount", None)
 
     # Handle hashtags, mentions & links from facets
     post["mentioned_user_handles"] = []
