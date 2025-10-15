@@ -8277,6 +8277,146 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:exm5zgqj4ktgqwpu2bguopov/app.bsky.feed.post/3kohsirotsl2p",
+    "cid": "bafyreibwl266kzcq4nnigbp4g2xaeajzr7mb7nypovkcatgftlvfc423ai",
+    "author": {
+        "did": "did:plc:exm5zgqj4ktgqwpu2bguopov",
+        "handle": "dahep.bsky.social",
+        "displayName": "Da Hep",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:exm5zgqj4ktgqwpu2bguopov/bafkreiesbbssadalwrp3cuocjpa2mczw5piq475qsya5x7hczzmc74nsay@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "none"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:exm5zgqj4ktgqwpu2bguopov",
+                "uri": "at://did:plc:exm5zgqj4ktgqwpu2bguopov/app.bsky.actor.profile/self",
+                "cid": "bafyreig3qusel6yf3vs3upa2p3pa6vl2dxzzydznbfeklfvgxci22mxhzu",
+                "val": "!no-unauthenticated",
+                "cts": "1970-01-01T00:00:00.000Z"
+            }
+        ],
+        "createdAt": "2023-07-25T20:52:47.138Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-03-24T20:43:54.871Z",
+        "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {
+                "cid": "bafyreibqkizmogprielimnfwk2vdwuy2wtii3hmflyrpn3lgm42l5p6r3i",
+                "uri": "at://did:plc:6tva7ibr24b6qix575yuzkp2/app.bsky.feed.post/3kohov5gif22g"
+            }
+        },
+        "langs": [
+            "fr"
+        ],
+        "text": "Ah, eindelijk."
+    },
+    "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+            "$type": "app.bsky.embed.record#viewRecord",
+            "uri": "at://did:plc:6tva7ibr24b6qix575yuzkp2/app.bsky.feed.post/3kohov5gif22g",
+            "cid": "bafyreibqkizmogprielimnfwk2vdwuy2wtii3hmflyrpn3lgm42l5p6r3i",
+            "author": {
+                "did": "did:plc:6tva7ibr24b6qix575yuzkp2",
+                "handle": "teletekstbot.bsky.social",
+                "displayName": "Teletekstbot",
+                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6tva7ibr24b6qix575yuzkp2/bafkreian3cfqb6ct4nglrxv22wzmzsqs54u2gpwcg7b34uzptt2556ib3y@jpeg",
+                "associated": {
+                    "chat": {
+                        "allowIncoming": "following"
+                    },
+                    "activitySubscription": {
+                        "allowSubscriptions": "followers"
+                    }
+                },
+                "viewer": {
+                    "muted": false,
+                    "blockedBy": false
+                },
+                "labels": [],
+                "createdAt": "2023-08-02T18:05:38.013Z"
+            },
+            "value": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2024-03-24T19:39:13Z",
+                "embed": {
+                    "$type": "app.bsky.embed.images",
+                    "images": [
+                        {
+                            "alt": "Pagina 129 - Titel: Doorbraak politieke moord Brazilië - Inhoud: In Brazilië zijn drie mannen opgepakt\ndie opdracht zouden hebben gegeven voor\nde moord op de linkse politica Marielle\nFranco in 2018.Het zouden twee politici\nen een oud-politiechef zijn.Hun motief\nvoor de moord is nog onduidelijk.\n\nDe 38-jarige Franco was voorvechtster\nvan zwarte vrouwen en bewoners van de\nsloppenwijken,de favela's.Zelf was ze\ndaar ook geboren en getogen.Verder was\nze openlijk biseksueel en erg kritisch\nover politieacties in de favela's.\n\nIn 2019 werden twee oud-politieagenten\nopgepakt die de moord zouden hebben\nuitgevoerd.Een van hen zou nu in een\ndeal met justitie hebben gezegd wie de\nopdrachtgevers waren.",
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreicc6ibvgtfz6a5rvipj3s3c755dax56keq6qpqpm5g6rr62bz4ovm"
+                                },
+                                "mimeType": "image/png",
+                                "size": 73645
+                            }
+                        }
+                    ]
+                },
+                "facets": [
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#link",
+                                "uri": "https://nos.nl/teletekst/129"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 40,
+                            "byteStart": 6
+                        }
+                    }
+                ],
+                "text": "[129] Doorbraak politieke moord Brazilië"
+            },
+            "labels": [],
+            "likeCount": 0,
+            "replyCount": 0,
+            "repostCount": 0,
+            "quoteCount": 1,
+            "indexedAt": "2024-03-24T19:39:13.000Z",
+            "embeds": [
+                {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:6tva7ibr24b6qix575yuzkp2/bafkreicc6ibvgtfz6a5rvipj3s3c755dax56keq6qpqpm5g6rr62bz4ovm@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:6tva7ibr24b6qix575yuzkp2/bafkreicc6ibvgtfz6a5rvipj3s3c755dax56keq6qpqpm5g6rr62bz4ovm@jpeg",
+                            "alt": "Pagina 129 - Titel: Doorbraak politieke moord Brazilië - Inhoud: In Brazilië zijn drie mannen opgepakt\ndie opdracht zouden hebben gegeven voor\nde moord op de linkse politica Marielle\nFranco in 2018.Het zouden twee politici\nen een oud-politiechef zijn.Hun motief\nvoor de moord is nog onduidelijk.\n\nDe 38-jarige Franco was voorvechtster\nvan zwarte vrouwen en bewoners van de\nsloppenwijken,de favela's.Zelf was ze\ndaar ook geboren en getogen.Verder was\nze openlijk biseksueel en erg kritisch\nover politieacties in de favela's.\n\nIn 2019 werden twee oud-politieagenten\nopgepakt die de moord zouden hebben\nuitgevoerd.Een van hen zou nu in een\ndeal met justitie hebben gezegd wie de\nopdrachtgevers waren."
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-03-24T20:43:54.013Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]

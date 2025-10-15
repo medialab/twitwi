@@ -268,6 +268,8 @@ def normalize_post(
 
     """
 
+    raising_errors = False
+
     if not isinstance(payload, dict):
         raise BlueskyPayloadError(
             "UNKNOWN", f"data provided to normalize_post is not a dictionary: {payload}"
@@ -454,7 +456,7 @@ def normalize_post(
                     # as in some cases the link is longer than the position given in the payload
                     # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
                     # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
-                    while byteEnd < len(post["original_text"].encode("utf-8")):
+                    while byteEnd <= len(post["original_text"].encode("utf-8")):
                         try:
                             text[byteStart : byteEnd].decode("utf-8")
                             break
@@ -462,7 +464,7 @@ def normalize_post(
                             byteEnd += 1
                             continue
 
-                    if byteEnd == len(post["original_text"].encode("utf-8")):
+                    if byteEnd > len(post["original_text"].encode("utf-8")):
                         byteEnd = facet["index"]["byteEnd"]
 
                     byteEnd += byteStart - facet["index"]["byteStart"]
@@ -479,8 +481,11 @@ def normalize_post(
                         "end": byteEnd,
                     }
                 )
-            except UnicodeDecodeError:
-                pass
+            except UnicodeDecodeError as e:
+                if raising_errors:
+                    raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
+                else:
+                    pass
 
         elif feat["$type"].endswith("#bold"):
             pass
