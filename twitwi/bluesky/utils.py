@@ -75,7 +75,7 @@ def format_post_url(user_handle_or_did, post_did, post_splitter="/post/"):
 def parse_post_url(url, source):
     """Returns a tuple of (author_handle/did, post_did) from an https://bsky.app post URL"""
 
-    known_splits = ["/post/", "/lists/"]
+    known_splits = ["/post/", "/lists/", "/feed/"]
 
     if url.startswith("https://bsky.app/profile/"):
         for split in known_splits:
