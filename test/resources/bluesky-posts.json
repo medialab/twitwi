@@ -6198,8 +6198,8 @@
     "indexedAt": "2025-08-10T10:04:07.704Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
-},
-{
+  },
+  {
     "uri": "at://did:plc:djglyf5epph2tc44lnqsdvfi/app.bsky.feed.post/3lqfi7mnto52w",
     "cid": "bafyreiaeixjveoju6jyhfj5ex2owte2sjrqpb3yxzo5mqx66xzeljelwle",
     "author": {
@@ -6237,8 +6237,8 @@
     "indexedAt": "2025-05-30T14:51:05.146Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
-},
-{
+  },
+  {
     "uri": "at://did:plc:qji2qys3x5mv3qcsk6m4iyrb/app.bsky.feed.post/3lz2qo6oz2227",
     "cid": "bafyreie5bugeyisat6kw6pdvrjs6p4gito3ytz6qi3qmf3zwbtnr6h6wfm",
     "author": {
@@ -6359,861 +6359,15 @@
     "indexedAt": "2025-09-17T21:09:52.104Z",
     "viewer": {"bookmarked": false, "threadMuted": false, "embeddingDisabled": false},
     "labels": []
-},
-{
-  "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.feed.post/3lnklxadqgq32",
-  "cid": "bafyreict3skrzt7f3273jy6hzqwrjmhw7epzwqbgibuzywlfnz336gnox4",
-  "author": {
-    "did": "did:plc:etkadjdby46s2skc4shoxp6q",
-    "handle": "android.activitypub.awakari.com.ap.brid.gy",
-    "displayName": "Android",
-    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
-    "associated": {
-      "chat": {
-        "allowIncoming": "none"
-      },
-      "activitySubscription": {
-        "allowSubscriptions": "followers"
-      }
-    },
-    "viewer": {
-      "muted": false,
-      "blockedBy": false
-    },
-    "labels": [
-      {
-        "src": "did:plc:etkadjdby46s2skc4shoxp6q",
-        "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.actor.profile/self",
-        "cid": "bafyreidefimaelx472wl2enh3j3nt2zslkfryrp52r4jacmtnh2qemjdji",
-        "val": "bridged-from-bridgy-fed-activitypub",
-        "cts": "1970-01-01T00:00:00.000Z"
-      }
-    ],
-    "createdAt": "2025-01-03T19:27:31.965Z"
   },
-  "record": {
-    "$type": "app.bsky.feed.post",
-    "bridgyOriginalText": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...<br/><br/><a href=\"https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\">https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Huawei\">#Huawei</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/news\">#news</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/foldable\">#foldable</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphones\">#smartphones</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphone\">#smartphone</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/market\">#market</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/China\">#China</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android\">Result Details</a>",
-    "bridgyOriginalUrl": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/",
-    "createdAt": "2025-04-24T09:09:40.000Z",
-    "embed": {
-      "$type": "app.bsky.embed.images",
-      "images": [
-        {
-          "$type": "app.bsky.embed.images#image",
-          "alt": "",
-          "image": {
-            "$type": "blob",
-            "ref": {
-              "$link": "bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi"
-            },
-            "mimeType": "application/octet-stream",
-            "size": 67729
-          }
-        }
-      ]
-    },
-    "facets": [
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#tag",
-            "tag": "Huawei"
-          }
-        ],
-        "index": {
-          "byteEnd": 202,
-          "byteStart": 195
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#tag",
-            "tag": "news"
-          }
-        ],
-        "index": {
-          "byteEnd": 208,
-          "byteStart": 203
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#tag",
-            "tag": "foldable"
-          }
-        ],
-        "index": {
-          "byteEnd": 218,
-          "byteStart": 209
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#tag",
-            "tag": "smartphones"
-          }
-        ],
-        "index": {
-          "byteEnd": 231,
-          "byteStart": 219
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#tag",
-            "tag": "smartphone"
-          }
-        ],
-        "index": {
-          "byteEnd": 243,
-          "byteStart": 232
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#tag",
-            "tag": "market"
-          }
-        ],
-        "index": {
-          "byteEnd": 251,
-          "byteStart": 244
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#tag",
-            "tag": "China"
-          }
-        ],
-        "index": {
-          "byteEnd": 258,
-          "byteStart": 252
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#link",
-            "uri": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/"
-          }
-        ],
-        "index": {
-          "byteEnd": 193,
-          "byteStart": 102
-        }
-      },
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#link",
-            "uri": "https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android"
-          }
-        ],
-        "index": {
-          "byteEnd": 274,
-          "byteStart": 260
-        }
-      }
-    ],
-    "text": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...\n\nhttps://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\n\n#Huawei #news #foldable #smartphones #smartphone #market #China\n\nResult Details"
-  },
-  "embed": {
-    "$type": "app.bsky.embed.images#view",
-    "images": [
-      {
-        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
-        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
-        "alt": ""
-      }
-    ]
-  },
-  "bookmarkCount": 0,
-  "replyCount": 0,
-  "repostCount": 0,
-  "likeCount": 0,
-  "quoteCount": 0,
-  "indexedAt": "2025-04-24T11:26:00.178Z",
-  "viewer": {
-    "bookmarked": false,
-    "threadMuted": false,
-    "embeddingDisabled": false
-  },
-  "labels": []
-},
-{
-  "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
-  "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
-  "author": {
-    "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
-    "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
-    "displayName": "Thousand Madleens to Gaza FR",
-    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
-    "associated": {
-      "chat": {
-        "allowIncoming": "none"
-      },
-      "activitySubscription": {
-        "allowSubscriptions": "followers"
-      }
-    },
-    "viewer": {
-      "muted": false,
-      "blockedBy": false
-    },
-    "labels": [
-      {
-        "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
-        "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
-        "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
-        "val": "bridged-from-bridgy-fed-activitypub",
-        "cts": "1970-01-01T00:00:00.000Z"
-      }
-    ],
-    "createdAt": "2025-08-20T18:32:40.807Z"
-  },
-  "record": {
-    "$type": "app.bsky.feed.post",
-    "bridgyOriginalText": "<p class=\"quote-inline\">RE: <a href=\"https://mastodon.social/@1kmadleenfr/115249595914655045\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">mastodon.social/@1kmadleenfr/1</span><span class=\"invisible\">15249595914655045</span></a></p><p>... petit repost pour les retardataires :o) Action Action Action Go Go Go !</p><p>Nous sommes les goutelettes d&#39;eau de l&#39;ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et actions en tout genre pour faire du bruit et faire entendre la voix de la paix et de la justice ✊</p>",
-    "bridgyOriginalUrl": "https://mastodon.social/@1kmadleenfr/115272683435145839",
-    "createdAt": "2025-09-26T21:19:21.000Z",
-    "embed": {
-      "$type": "app.bsky.embed.recordWithMedia",
-      "media": {
-        "$type": "app.bsky.embed.external",
-        "external": {
-          "$type": "app.bsky.embed.external#external",
-          "description": "",
-          "title": "Original post on mastodon.social",
-          "uri": "https://mastodon.social/@1kmadleenfr/115272683435145839"
-        }
-      },
-      "record": {
-        "$type": "app.bsky.embed.record",
-        "record": {
-          "cid": "bafyreicggkj4timpsqkpauzjkz7tvekq2r2jjy3fcojjs7c6d4h2gbestu",
-          "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2"
-        }
-      }
-    },
-    "facets": [
-      {
-        "$type": "app.bsky.richtext.facet",
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#link",
-            "uri": "https://mastodon.social/@1kmadleenfr/115249595914655045"
-          }
-        ],
-        "index": {
-          "byteEnd": 59,
-          "byteStart": 4
-        }
-      }
-    ],
-    "langs": [
-      "fr"
-    ],
-    "text": "RE: https://mastodon.social/@1kmadleenfr/115249595914655045\n\n... petit repost pour les retardataires :o) Action Action Action Go Go Go !\n\nNous sommes les goutelettes d'eau de l'ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et […]"
-  },
-  "embed": {
-    "$type": "app.bsky.embed.recordWithMedia#view",
-    "media": {
-      "$type": "app.bsky.embed.external#view",
-      "external": {
-        "uri": "https://mastodon.social/@1kmadleenfr/115272683435145839",
-        "title": "Original post on mastodon.social",
-        "description": ""
-      }
-    },
-    "record": {
-      "record": {
-        "$type": "app.bsky.embed.record#viewRecord",
-        "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2",
-        "cid": "bafyreib47yraafby73euwlgdol6lm266ypywgv263mggdvw67kx4po35vy",
-        "author": {
-          "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
-          "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
-          "displayName": "Thousand Madleens to Gaza FR",
-          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
-          "associated": {
-            "chat": {
-              "allowIncoming": "none"
-            },
-            "activitySubscription": {
-              "allowSubscriptions": "followers"
-            }
-          },
-          "viewer": {
-            "muted": false,
-            "blockedBy": false
-          },
-          "labels": [
-            {
-              "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
-              "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
-              "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
-              "val": "bridged-from-bridgy-fed-activitypub",
-              "cts": "1970-01-01T00:00:00.000Z"
-            }
-          ],
-          "createdAt": "2025-08-20T18:32:40.807Z"
-        },
-        "value": {
-          "$type": "app.bsky.feed.post",
-          "bridgyOriginalText": "<p>🇵🇸 ✊ ACTION ✊ EN 1 CLIC :<br />Exhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉<a href=\"https://urls.fr/pRgFag\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">urls.fr/pRgFag</span><span class=\"invisible\"></span></a><br />- - - <br />🇵🇸 ✊ ACTION ✊ IN 1 CLICK:<br />Urge governments and foreign ministries to protect their citizens and demand safe passage for the Global Sumud Flotilla to <a href=\"https://mastodon.social/tags/Gaza\" class=\"mention hashtag\" rel=\"tag\">#<span>Gaza</span></a> 👉<a href=\"https://urls.fr/pRgFag\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">urls.fr/pRgFag</span><span class=\"invisible\"></span></a></p><p><a href=\"https://mastodon.social/tags/palestine\" class=\"mention hashtag\" rel=\"tag\">#<span>palestine</span></a> <a href=\"https://mastodon.social/tags/globalsumudflotilla\" class=\"mention hashtag\" rel=\"tag\">#<span>globalsumudflotilla</span></a> <a href=\"https://mastodon.social/tags/genocide\" class=\"mention hashtag\" rel=\"tag\">#<span>genocide</span></a> <a href=\"https://mastodon.social/tags/stopgenocide\" class=\"mention hashtag\" rel=\"tag\">#<span>stopgenocide</span></a> <a href=\"https://mastodon.social/tags/sailtogaza\" class=\"mention hashtag\" rel=\"tag\">#<span>sailtogaza</span></a> <a href=\"https://mastodon.social/tags/freepalestine\" class=\"mention hashtag\" rel=\"tag\">#<span>freepalestine</span></a> <a href=\"https://mastodon.social/tags/freegaza\" class=\"mention hashtag\" rel=\"tag\">#<span>freegaza</span></a> <a href=\"https://mastodon.social/tags/petition\" class=\"mention hashtag\" rel=\"tag\">#<span>petition</span></a></p>",
-          "bridgyOriginalUrl": "https://mastodon.social/@1kmadleenfr/115249595914655045",
-          "createdAt": "2025-09-22T19:27:53.000Z",
-          "embed": {
-            "$type": "app.bsky.embed.images",
-            "images": [
-              {
-                "$type": "app.bsky.embed.images#image",
-                "alt": "texte noir, vert et rouge sur fond blanc :\nContacts officiels - par pays \nAction en 1 clic pour protéger la Global Sumud Flotilla\nExhortez les gouvernements et les ministères des Affaires étrangères\nà protéger leurs citoyens et exigez d’eux un passage sûr pour  la Global Sumud Flotilla vers Gaza\nnombre d'emails déjà envoyés : 320 433",
-                "aspectRatio": {
-                  "height": 531,
-                  "width": 937
-                },
-                "image": {
-                  "$type": "blob",
-                  "ref": {
-                    "$link": "bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm"
-                  },
-                  "mimeType": "image/jpeg",
-                  "size": 59519
-                }
-              }
-            ]
-          },
-          "facets": [
-            {
-              "$type": "app.bsky.richtext.facet",
-              "features": [
-                {
-                  "$type": "app.bsky.richtext.facet#link",
-                  "uri": "https://mastodon.social/@1kmadleenfr/115249595914655045"
-                }
-              ],
-              "index": {
-                "byteEnd": 330,
-                "byteStart": 294
-              }
-            },
-            {
-              "$type": "app.bsky.richtext.facet",
-              "features": [
-                {
-                  "$type": "app.bsky.richtext.facet#link",
-                  "uri": "https://urls.fr/pRgFag"
-                }
-              ],
-              "index": {
-                "byteEnd": 228,
-                "byteStart": 206
-              }
-            }
-          ],
-          "langs": [
-            "fr"
-          ],
-          "tags": [
-            "gaza",
-            "palestine",
-            "globalsumudflotilla",
-            "genocide",
-            "stopgenocide",
-            "sailtogaza",
-            "freepalestine",
-            "freegaza"
-          ],
-          "text": "🇵🇸 ✊ ACTION ✊ EN 1 CLIC :\nExhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉https://urls.fr/pRgFag\n- - -\n🇵🇸 ✊ ACTION ✊ IN 1 CLICK:\nUrge governments […] \n\n[Original post on mastodon.social]"
-        },
-        "labels": [],
-        "likeCount": 9,
-        "replyCount": 1,
-        "repostCount": 5,
-        "quoteCount": 3,
-        "indexedAt": "2025-09-22T19:35:20.707Z",
-        "embeds": [
-          {
-            "$type": "app.bsky.embed.images#view",
-            "images": [
-              {
-                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg",
-                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg",
-                "alt": "texte noir, vert et rouge sur fond blanc :\nContacts officiels - par pays \nAction en 1 clic pour protéger la Global Sumud Flotilla\nExhortez les gouvernements et les ministères des Affaires étrangères\nà protéger leurs citoyens et exigez d’eux un passage sûr pour  la Global Sumud Flotilla vers Gaza\nnombre d'emails déjà envoyés : 320 433",
-                "aspectRatio": {
-                  "height": 531,
-                  "width": 937
-                }
-              }
-            ]
-          }
-        ]
-      }
-    }
-  },
-  "bookmarkCount": 0,
-  "replyCount": 0,
-  "repostCount": 1,
-  "likeCount": 1,
-  "quoteCount": 0,
-  "indexedAt": "2025-09-26T21:23:24.154Z",
-  "viewer": {
-    "bookmarked": false,
-    "threadMuted": false,
-    "embeddingDisabled": false
-  },
-  "labels": []
-},
-{  
-  "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
-  "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
-  "author": {
-    "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
-    "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
-    "displayName": "Thousand Madleens to Gaza FR",
-    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
-    "associated": {
-      "chat": {
-        "allowIncoming": "none"
-      },
-      "activitySubscription": {
-        "allowSubscriptions": "followers"
-      }
-    },
-    "viewer": {
-      "muted": false,
-      "blockedBy": false
-    },
-    "labels": [
-      {
-        "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
-        "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
-        "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
-        "val": "bridged-from-bridgy-fed-activitypub",
-        "cts": "1970-01-01T00:00:00.000Z"
-      }
-    ],
-    "createdAt": "2025-08-20T18:32:40.807Z"
-  },
-  "record": {
-    "$type": "app.bsky.feed.post",
-    "createdAt": "2025-10-03T06:28:08.214Z",
-    "embed": {
-      "$type": "app.bsky.embed.images",
-      "images": [
-        {
-          "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
-          "aspectRatio": {
-            "height": 510,
-            "width": 923
-          },
-          "image": {
-            "$type": "blob",
-            "ref": {
-              "$link": "bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu"
-            },
-            "mimeType": "image/jpeg",
-            "size": 276045
-          }
-        },
-        {
-          "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
-          "aspectRatio": {
-            "height": 510,
-            "width": 923
-          },
-          "image": {
-            "$type": "blob",
-            "ref": {
-              "$link": "bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu"
-            },
-            "mimeType": "image/jpeg",
-            "size": 276045
-          }
-        }
-      ]
-    },
-    "facets": [
-      {
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#link",
-            "uri": "https://instagram.com/blueskyoff?igs…"
-          }
-        ],
-        "index": {
-          "byteEnd": 74,
-          "byteStart": 43
-        }
-      },
-      {
-        "features": [
-          {
-            "$type": "app.bsky.richtext.facet#link",
-            "uri": "https://facebook.com/blueskyoff"
-          }
-        ],
-        "index": {
-          "byteEnd": 103,
-          "byteStart": 78
-        }
-      }
-    ],
-    "langs": [
-      "fr"
-    ],
-    "text": "instagram                        facebook \ninstagram.com/blueskyoff?igs… \n�� facebook.com/blueskykyoff"
-  },
-  "embed": {
-    "$type": "app.bsky.embed.images#view",
-    "images": [
-      {
-        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
-        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
-        "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
-        "aspectRatio": {
-          "height": 510,
-          "width": 923
-        }
-      },
-      {
-        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
-        "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
-        "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
-        "aspectRatio": {
-          "height": 510,
-          "width": 923
-        }
-      }
-    ]
-  },
-  "bookmarkCount": 1,
-  "replyCount": 1,
-  "repostCount": 1,
-  "likeCount": 52,
-  "quoteCount": 0,
-  "indexedAt": "2025-10-03T06:28:13.862Z",
-  "viewer": {
-    "bookmarked": false,
-    "threadMuted": false,
-    "embeddingDisabled": false
-  },
-  "labels": []
-},
-{
-  "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.feed.post/3m2n2fstwy223",
-  "post": {
-    "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.feed.post/3m2n2fstwy223",
-    "cid": "bafyreifafdpnwmtjkkry5xjquy2wvuwxgxxu6glpismu34zr4jskbb5ore",
+  {
+    "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.feed.post/3lnklxadqgq32",
+    "cid": "bafyreict3skrzt7f3273jy6hzqwrjmhw7epzwqbgibuzywlfnz336gnox4",
     "author": {
-      "did": "did:plc:svoymufgychs3h2mxbf6xydf",
-      "handle": "maplemama20.bsky.social",
-      "displayName": "Maple Mama",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:svoymufgychs3h2mxbf6xydf/bafkreihfstgf7ugp7bdwt6oagaucwiphmvcw6oisawrke32tm2fng2dhry@jpeg",
-      "associated": {
-        "chat": {
-          "allowIncoming": "following"
-        },
-        "activitySubscription": {
-          "allowSubscriptions": "followers"
-        }
-      },
-      "viewer": {
-        "muted": false,
-        "blockedBy": false
-      },
-      "labels": [],
-      "createdAt": "2025-03-04T02:09:18.145Z"
-    },
-    "record": {
-      "$type": "app.bsky.feed.post",
-      "createdAt": "2025-10-07T21:17:14.584Z",
-      "embed": {
-        "$type": "app.bsky.embed.record",
-        "record": {
-          "cid": "bafyreiet2usj7bbonjg5jsuzigfmvoo7heb4npzd2k7wi23tz5b2rwgnzu",
-          "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.graph.starterpack/3m2n2daaflt25"
-        }
-      },
-      "facets": [
-        {
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#link",
-              "uri": "https://go.bsky.app/4TM74fZ"
-            }
-          ],
-          "index": {
-            "byteEnd": 142,
-            "byteStart": 123
-          }
-        }
-      ],
-      "langs": [
-        "en"
-      ],
-      "text": "Taco Tuesday starter pack is here. This is my 62nd Starter pack and it's filled with lots of different awesome accounts. \n\ngo.bsky.app/4TM74fZ"
-    },
-    "embed": {
-      "$type": "app.bsky.embed.record#view",
-      "record": {
-        "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.graph.starterpack/3m2n2daaflt25",
-        "cid": "bafyreiet2usj7bbonjg5jsuzigfmvoo7heb4npzd2k7wi23tz5b2rwgnzu",
-        "record": {
-          "$type": "app.bsky.graph.starterpack",
-          "createdAt": "2025-10-07T21:15:50.445Z",
-          "description": "Happy taco Tuesday. Here's a pack filled with all different size accounts. Old friends and new. Find yourself so awesome resisters",
-          "feeds": [],
-          "list": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.graph.list/3m2n2d6vxze2l",
-          "name": "🥰🥰Maple Mama's 62nd Starter Pack 🥰🥰"
-        },
-        "creator": {
-          "did": "did:plc:svoymufgychs3h2mxbf6xydf",
-          "handle": "maplemama20.bsky.social",
-          "displayName": "Maple Mama",
-          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:svoymufgychs3h2mxbf6xydf/bafkreihfstgf7ugp7bdwt6oagaucwiphmvcw6oisawrke32tm2fng2dhry@jpeg",
-          "associated": {
-            "chat": {
-              "allowIncoming": "following"
-            },
-            "activitySubscription": {
-              "allowSubscriptions": "followers"
-            }
-          },
-          "viewer": {
-            "muted": false,
-            "blockedBy": false
-          },
-          "labels": [],
-          "createdAt": "2025-03-04T02:09:18.145Z"
-        },
-        "joinedAllTimeCount": 0,
-        "joinedWeekCount": 0,
-        "labels": [],
-        "indexedAt": "2025-10-07T21:15:51.027Z",
-        "$type": "app.bsky.graph.defs#starterPackViewBasic"
-      }
-    },
-    "bookmarkCount": 3,
-    "replyCount": 65,
-    "repostCount": 123,
-    "likeCount": 191,
-    "quoteCount": 22,
-    "indexedAt": "2025-10-07T21:17:12.757Z",
-    "viewer": {
-      "bookmarked": false,
-      "threadMuted": false,
-      "embeddingDisabled": false
-    },
-    "labels": []
-  }
-},
-{
-  "uri": "at://did:plc:76nrf6hcsaci3tk7tno6bing/app.bsky.feed.post/3lyxgqz5llc2a",
-  "post": {
-    "uri": "at://did:plc:76nrf6hcsaci3tk7tno6bing/app.bsky.feed.post/3lyxgqz5llc2a",
-    "cid": "bafyreifrzt7t6sxkohlgru47nry6zoja6wbamddyivdnxngxvfkuumtlc4",
-    "author": {
-      "did": "did:plc:76nrf6hcsaci3tk7tno6bing",
-      "handle": "indivisiblelb.bsky.social",
-      "displayName": "Long Beach Indivisible",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:76nrf6hcsaci3tk7tno6bing/bafkreietortsy5skqu6ak5rst5gts2eqpwryq7afyxirey2sx344exay54@jpeg",
-      "associated": {
-        "chat": {
-          "allowIncoming": "all"
-        },
-        "activitySubscription": {
-          "allowSubscriptions": "followers"
-        }
-      },
-      "viewer": {
-        "muted": false,
-        "blockedBy": false
-      },
-      "labels": [],
-      "createdAt": "2025-01-28T00:54:36.746Z"
-    },
-    "record": {
-      "$type": "app.bsky.feed.post",
-      "createdAt": "2025-09-16T13:34:29.320Z",
-      "embed": {
-        "$type": "app.bsky.embed.record",
-        "record": {
-          "cid": "bafyreiazceu7r44pkg3tfuw54f4a2kizarugpklwrx44cwe5ialoiobgte",
-          "uri": "at://did:plc:6cxybub32cqnedyd3pz2wozk/app.bsky.feed.post/3lyvzhnrjxn2z"
-        }
-      },
-      "langs": [
-        "en",
-        "fr"
-      ],
-      "text": "Release the Epstein files"
-    },
-    "embed": {
-      "$type": "app.bsky.embed.record#view",
-      "record": {
-        "$type": "app.bsky.embed.record#viewRecord",
-        "uri": "at://did:plc:6cxybub32cqnedyd3pz2wozk/app.bsky.feed.post/3lyvzhnrjxn2z",
-        "cid": "bafyreiazceu7r44pkg3tfuw54f4a2kizarugpklwrx44cwe5ialoiobgte",
-        "author": {
-          "did": "did:plc:6cxybub32cqnedyd3pz2wozk",
-          "handle": "ltwlauren.bsky.social",
-          "displayName": "ltwlauren🤸‍♀️❤️🎶🎨🐾",
-          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6cxybub32cqnedyd3pz2wozk/bafkreicybziaagpjespizuq3irdwls7le5a6ifbj5xangyrneifwwhcpmy@jpeg",
-          "associated": {
-            "activitySubscription": {
-              "allowSubscriptions": "followers"
-            }
-          },
-          "viewer": {
-            "muted": false,
-            "blockedBy": false
-          },
-          "labels": [],
-          "createdAt": "2023-09-21T16:18:29.150Z"
-        },
-        "value": {
-          "$type": "app.bsky.feed.post",
-          "createdAt": "2025-09-16T00:03:57.020Z",
-          "embed": {
-            "$type": "app.bsky.embed.record",
-            "record": {
-              "cid": "bafyreibzvrgbd34ajz5ptpgkf5pzfzip2vhagoz6xpjqqurv7wskv3xsgm",
-              "uri": "at://did:plc:aj3cdjcejjrldwr7qdidj2z6/app.bsky.feed.post/3lyvhuinsuc2o"
-            }
-          },
-          "langs": [
-            "en"
-          ],
-          "text": "Thank you, Deborah Lynn, for my inclusion in your Starter Pack!"
-        },
-        "labels": [],
-        "likeCount": 4,
-        "replyCount": 0,
-        "repostCount": 0,
-        "quoteCount": 1,
-        "indexedAt": "2025-09-16T00:03:57.506Z",
-        "embeds": [
-          {
-            "$type": "app.bsky.embed.record#view",
-            "record": {
-              "$type": "app.bsky.embed.record#viewRecord",
-              "uri": "at://did:plc:aj3cdjcejjrldwr7qdidj2z6/app.bsky.feed.post/3lyvhuinsuc2o",
-              "cid": "bafyreibzvrgbd34ajz5ptpgkf5pzfzip2vhagoz6xpjqqurv7wskv3xsgm",
-              "author": {
-                "did": "did:plc:aj3cdjcejjrldwr7qdidj2z6",
-                "handle": "mrsdeborahlynn.bsky.social",
-                "displayName": "Deborah Lynn",
-                "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aj3cdjcejjrldwr7qdidj2z6/bafkreia5f6ngpr3c67mpwnxzdrwpsiocpgkxzoajorikw77o5nayujb7mi@jpeg",
-                "associated": {
-                  "chat": {
-                    "allowIncoming": "following"
-                  },
-                  "activitySubscription": {
-                    "allowSubscriptions": "followers"
-                  }
-                },
-                "viewer": {
-                  "muted": false,
-                  "blockedBy": false
-                },
-                "labels": [],
-                "createdAt": "2024-11-25T18:46:41.647Z"
-              },
-              "value": {
-                "$type": "app.bsky.feed.post",
-                "createdAt": "2025-09-15T18:49:00.509Z",
-                "embed": {
-                  "$type": "app.bsky.embed.record",
-                  "record": {
-                    "cid": "bafyreifos5zu7efkxztlre4krornztbyopcziaf5ynakjgioo237aijbqu",
-                    "uri": "at://did:plc:aj3cdjcejjrldwr7qdidj2z6/app.bsky.graph.starterpack/3lyvekcylji2w"
-                  }
-                },
-                "facets": [
-                  {
-                    "features": [
-                      {
-                        "$type": "app.bsky.richtext.facet#link",
-                        "uri": "https://go.bsky.app/QjWHgJ4"
-                      }
-                    ],
-                    "index": {
-                      "byteEnd": 55,
-                      "byteStart": 36
-                    }
-                  },
-                  {
-                    "features": [
-                      {
-                        "$type": "app.bsky.richtext.facet#link",
-                        "uri": "https://go.bsky.app/KMn46AS"
-                      }
-                    ],
-                    "index": {
-                      "byteEnd": 83,
-                      "byteStart": 64
-                    }
-                  }
-                ],
-                "langs": [
-                  "en"
-                ],
-                "text": "Release the Epstein Files \n\nPack 1 \ngo.bsky.app/QjWHgJ4\nPack 2 \ngo.bsky.app/KMn46AS"
-              },
-              "labels": [],
-              "likeCount": 383,
-              "replyCount": 81,
-              "repostCount": 202,
-              "quoteCount": 15,
-              "indexedAt": "2025-09-15T18:49:00.514Z"
-            }
-          }
-        ]
-      }
-    },
-    "bookmarkCount": 0,
-    "replyCount": 0,
-    "repostCount": 1,
-    "likeCount": 0,
-    "quoteCount": 0,
-    "indexedAt": "2025-09-16T13:34:29.703Z",
-    "viewer": {
-      "bookmarked": false,
-      "threadMuted": false,
-      "embeddingDisabled": false
-    },
-    "labels": []
-  }
-},
-{
-  "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltmljz5blca2",
-  "post": {
-    "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltmljz5blca2",
-    "cid": "bafyreiauulzocz6duamsnh5rv4wa677s5sts6lquwrovwu4nyqfbuj4tem",
-    "author": {
-      "did": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
-      "handle": "memoire2cite.mastodon.social.ap.brid.gy",
-      "displayName": "Mémoire2Cité  Mémoire2ville",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rkphrshyfiqe4n2hz5vj56ig/bafkreia2pe2tayrxikiute7w7g2qfqvxta27ywggclqz4r47fp53kquyvu@jpeg",
+      "did": "did:plc:etkadjdby46s2skc4shoxp6q",
+      "handle": "android.activitypub.awakari.com.ap.brid.gy",
+      "displayName": "Android",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
       "associated": {
         "chat": {
           "allowIncoming": "none"
@@ -7228,565 +6382,192 @@
       },
       "labels": [
         {
-          "src": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
-          "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.actor.profile/self",
-          "cid": "bafyreifevmukndnhml42dody4ld5l72ianbgtlcz5pfj3c3fehjbi556qm",
+          "src": "did:plc:etkadjdby46s2skc4shoxp6q",
+          "uri": "at://did:plc:etkadjdby46s2skc4shoxp6q/app.bsky.actor.profile/self",
+          "cid": "bafyreidefimaelx472wl2enh3j3nt2zslkfryrp52r4jacmtnh2qemjdji",
           "val": "bridged-from-bridgy-fed-activitypub",
           "cts": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "createdAt": "2025-01-20T10:55:16.746Z"
+      "createdAt": "2025-01-03T19:27:31.965Z"
     },
     "record": {
       "$type": "app.bsky.feed.post",
-      "bridgyOriginalText": "<p>de la NU DISCO en faite LOLA YOUNG &#39;&#39;Messy&#39;&#39; [Nu Disco / House] <a href=\"https://www.youtube.com/watch?v=-KzaJVuViLU&amp;list=RD-KzaJVuViLU&amp;start_radio=1\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"ellipsis\">youtube.com/watch?v=-KzaJVuViL</span><span class=\"invisible\">U&amp;list=RD-KzaJVuViLU&amp;start_radio=1</span></a> 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶</p>",
-      "bridgyOriginalUrl": "https://mastodon.social/@memoire2cite/114829510558384526",
-      "createdAt": "2025-07-10T14:54:39.000Z",
-      "facets": [
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#link",
-              "uri": "https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1"
-            }
-          ],
-          "index": {
-            "byteEnd": 140,
-            "byteStart": 45
-          }
-        }
-      ],
-      "langs": [
-        "fr"
-      ],
-      "reply": {
-        "$type": "app.bsky.feed.post#replyRef",
-        "parent": {
-          "cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
-          "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2"
-        },
-        "root": {
-          "cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
-          "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2"
-        }
-      },
-      "text": "de la NU DISCO en faite LOLA YOUNG ''Messy'' Nu Disco / House] [https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶"
-    },
-    "bookmarkCount": 0,
-    "replyCount": 0,
-    "repostCount": 0,
-    "likeCount": 0,
-    "quoteCount": 0,
-    "indexedAt": "2025-07-10T14:55:09.239Z",
-    "viewer": {
-      "bookmarked": false,
-      "threadMuted": false,
-      "embeddingDisabled": false
-    },
-    "labels": []
-  }
-},
-{
-  "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3ln33tx7bpdu2",
-  "post": {
-    "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3ln33tx7bpdu2",
-    "cid": "bafyreifzqnctwwzqsmvvk5xulxnktfzny3yoea5mrera3lezxp6nlel5fe",
-    "author": {
-      "did": "did:plc:3auglfwwpebyiozbojq5eqhy",
-      "handle": "newyork.activitypub.awakari.com.ap.brid.gy",
-      "displayName": "NewYork",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
-      "associated": {
-        "chat": {
-          "allowIncoming": "none"
-        },
-        "activitySubscription": {
-          "allowSubscriptions": "followers"
-        }
-      },
-      "viewer": {
-        "muted": false,
-        "blockedBy": false
-      },
-      "labels": [
-        {
-          "src": "did:plc:3auglfwwpebyiozbojq5eqhy",
-          "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.actor.profile/self",
-          "cid": "bafyreihkrjxzeiefdtmiwzjuxypih35rqn5unat2j2jsxiwswxztheim44",
-          "val": "bridged-from-bridgy-fed-activitypub",
-          "cts": "1970-01-01T00:00:00.000Z"
-        }
-      ],
-      "createdAt": "2025-01-03T19:06:32.543Z"
-    },
-    "record": {
-      "$type": "app.bsky.feed.post",
-      "bridgyOriginalText": "<br/><br/><a href=\"https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\">https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Books\">#Books</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/and\">#and</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Literature\">#Literature</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/E,\">#E,</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Kayla\">#Kayla</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/(Artist)\">#(Artist)</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Precious\">#Precious</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Rubbish\">#Rubbish</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/(Book)\">#(Book)</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Milosz,\">#Milosz,</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Czeslaw\">#Czeslaw</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U\">Event Attributes</a>",
-      "bridgyOriginalUrl": "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html",
-      "createdAt": "2025-04-17T19:04:41.000Z",
-      "embed": {
-        "$type": "app.bsky.embed.external",
-        "external": {
-          "$type": "app.bsky.embed.external#external",
-          "description": "",
-          "title": "Awakari App",
-          "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U"
-        }
-      },
-      "facets": [
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "Books"
-            }
-          ],
-          "index": {
-            "byteEnd": 88,
-            "byteStart": 82
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "and"
-            }
-          ],
-          "index": {
-            "byteEnd": 93,
-            "byteStart": 89
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "Literature"
-            }
-          ],
-          "index": {
-            "byteEnd": 105,
-            "byteStart": 94
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "E,"
-            }
-          ],
-          "index": {
-            "byteEnd": 109,
-            "byteStart": 106
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "Kayla"
-            }
-          ],
-          "index": {
-            "byteEnd": 116,
-            "byteStart": 110
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "(Artist)"
-            }
-          ],
-          "index": {
-            "byteEnd": 126,
-            "byteStart": 117
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "Precious"
-            }
-          ],
-          "index": {
-            "byteEnd": 136,
-            "byteStart": 127
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "Rubbish"
-            }
-          ],
-          "index": {
-            "byteEnd": 145,
-            "byteStart": 137
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "(Book)"
-            }
-          ],
-          "index": {
-            "byteEnd": 153,
-            "byteStart": 146
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "Milosz,"
-            }
-          ],
-          "index": {
-            "byteEnd": 162,
-            "byteStart": 154
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#tag",
-              "tag": "Czeslaw"
-            }
-          ],
-          "index": {
-            "byteEnd": 171,
-            "byteStart": 163
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#link",
-              "uri": "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html"
-            }
-          ],
-          "index": {
-            "byteEnd": 80,
-            "byteStart": 2
-          }
-        },
-        {
-          "$type": "app.bsky.richtext.facet",
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#link",
-              "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U"
-            }
-          ],
-          "index": {
-            "byteEnd": 189,
-            "byteStart": 173
-          }
-        }
-      ],
-      "text": "\n\nhttps://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\n\n#Books #and #Literature #E, #Kayla #(Artist) #Precious #Rubbish #(Book) #Milosz, #Czeslaw\n\nEvent Attributes"
-    },
-    "embed": {
-      "$type": "app.bsky.embed.external#view",
-      "external": {
-        "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U",
-        "title": "Awakari App",
-        "description": ""
-      }
-    },
-    "bookmarkCount": 0,
-    "replyCount": 0,
-    "repostCount": 0,
-    "likeCount": 0,
-    "quoteCount": 0,
-    "indexedAt": "2025-04-18T07:28:49.178Z",
-    "viewer": {
-      "bookmarked": false,
-      "threadMuted": false,
-      "embeddingDisabled": false
-    },
-    "labels": []
-  }
-},
-{
-  "uri": "at://did:plc:ysc73isz7jkgr4ozyn6azo77/app.bsky.feed.post/3lovyad4nt324",
-  "post": {
-    "uri": "at://did:plc:ysc73isz7jkgr4ozyn6azo77/app.bsky.feed.post/3lovyad4nt324",
-    "cid": "bafyreig746guz2spqkbwdgjutvqjawotgpgumc5aylqmgeuka62o7n4kqm",
-    "author": {
-      "did": "did:plc:ysc73isz7jkgr4ozyn6azo77",
-      "handle": "springer.springernature.com",
-      "displayName": "Springer",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreif6g7p5jykpgyph7dqrglfktaqwfhvihmff4f2vblbnenx2qh7564@jpeg",
-      "associated": {
-        "chat": {
-          "allowIncoming": "all"
-        },
-        "activitySubscription": {
-          "allowSubscriptions": "followers"
-        }
-      },
-      "viewer": {
-        "muted": false,
-        "blockedBy": false
-      },
-      "labels": [],
-      "createdAt": "2023-08-22T14:30:36.857Z"
-    },
-    "record": {
-      "$type": "app.bsky.feed.post",
-      "createdAt": "2025-05-11T17:30:00.919Z",
+      "bridgyOriginalText": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...<br/><br/><a href=\"https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\">https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Huawei\">#Huawei</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/news\">#news</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/foldable\">#foldable</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphones\">#smartphones</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/smartphone\">#smartphone</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/market\">#market</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/China\">#China</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android\">Result Details</a>",
+      "bridgyOriginalUrl": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/",
+      "createdAt": "2025-04-24T09:09:40.000Z",
       "embed": {
         "$type": "app.bsky.embed.images",
         "images": [
           {
-            "alt": "Hitler’s Female Physicians",
-            "aspectRatio": {
-              "height": 1254,
-              "width": 827
-            },
+            "$type": "app.bsky.embed.images#image",
+            "alt": "",
             "image": {
               "$type": "blob",
               "ref": {
-                "$link": "bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4"
+                "$link": "bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi"
               },
-              "mimeType": "image/jpeg",
-              "size": 204909
+              "mimeType": "application/octet-stream",
+              "size": 67729
             }
           }
         ]
       },
       "facets": [
         {
+          "$type": "app.bsky.richtext.facet",
           "features": [
             {
-              "$type": "app.bsky.richtext.facet#link",
-              "uri": "http://bit.ly/3Sp7SeY"
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "Huawei"
+            }
+          ],
+          "index": {
+            "byteEnd": 202,
+            "byteStart": 195
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "news"
+            }
+          ],
+          "index": {
+            "byteEnd": 208,
+            "byteStart": 203
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "foldable"
+            }
+          ],
+          "index": {
+            "byteEnd": 218,
+            "byteStart": 209
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "smartphones"
+            }
+          ],
+          "index": {
+            "byteEnd": 231,
+            "byteStart": 219
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "smartphone"
+            }
+          ],
+          "index": {
+            "byteEnd": 243,
+            "byteStart": 232
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#tag",
+              "tag": "market"
             }
           ],
           "index": {
             "byteEnd": 251,
-            "byteStart": 237
+            "byteStart": 244
           }
         },
         {
+          "$type": "app.bsky.richtext.facet",
           "features": [
             {
               "$type": "app.bsky.richtext.facet#tag",
-              "tag": "HistSci"
+              "tag": "China"
             }
           ],
           "index": {
-            "byteEnd": 260,
+            "byteEnd": 258,
             "byteStart": 252
           }
         },
         {
+          "$type": "app.bsky.richtext.facet",
           "features": [
             {
-              "$type": "app.bsky.richtext.facet#mention",
-              "did": "did:plc:4bqqpeponxdqqy7bwyqfqomo"
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/"
             }
           ],
           "index": {
-            "byteEnd": 134,
-            "byteStart": 116
+            "byteEnd": 193,
+            "byteStart": 102
+          }
+        },
+        {
+          "$type": "app.bsky.richtext.facet",
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://awakari.com/pub-msg.html?id=KDxHn5Git3LtOPvPzaC6hruwt5U&interestId=Android"
+            }
+          ],
+          "index": {
+            "byteEnd": 274,
+            "byteStart": 260
           }
         }
       ],
-      "text": "🗃️ 'Hitler’s Female Physicians: Women Doctors During the Third Reich and Their Crimes Against Humanity,' by @edzard.bsky.social, explains the background of the Third Reich in general and medicine during this period in particular. bit.ly/3Sp7SeY #HistSci"
+      "text": "Huawei Dominates China’s Foldable Phone Market, Says IDC Huawei is dominating China’s foldabl...\n\nhttps://www.gizchina.com/2025/04/24/huawei-dominates-chinas-foldable-phone-market-says-idc/\n\n#Huawei #news #foldable #smartphones #smartphone #market #China\n\nResult Details"
     },
     "embed": {
       "$type": "app.bsky.embed.images#view",
       "images": [
         {
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4@jpeg",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4@jpeg",
-          "alt": "Hitler’s Female Physicians",
-          "aspectRatio": {
-            "height": 1254,
-            "width": 827
-          }
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibiqotdcrl4jufxca2lkfxspnaunnhqdlkq7uizdsyntso6ro2afi@jpeg",
+          "alt": ""
         }
       ]
-    },
-    "bookmarkCount": 0,
-    "replyCount": 1,
-    "repostCount": 3,
-    "likeCount": 13,
-    "quoteCount": 1,
-    "indexedAt": "2025-05-11T17:30:01.649Z",
-    "viewer": {
-      "bookmarked": false,
-      "threadMuted": false,
-      "embeddingDisabled": false
-    },
-    "labels": []
-  }
-},
-{
-  "uri": "at://did:plc:afklhwqpfjktj3m44h7wfzbu/app.bsky.feed.post/3lmla2zjnbc2q",
-  "post": {
-    "uri": "at://did:plc:afklhwqpfjktj3m44h7wfzbu/app.bsky.feed.post/3lmla2zjnbc2q",
-    "cid": "bafyreic4ikt3xtjdkrh3pwojhnk6mt3d5z6p6fuydkro4v54eeqdtgydsu",
-    "author": {
-      "did": "did:plc:afklhwqpfjktj3m44h7wfzbu",
-      "handle": "pikouse.bsky.social",
-      "displayName": "Pikouse",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:afklhwqpfjktj3m44h7wfzbu/bafkreicdb37vssdu22dimxzyhqx74luvtat33b7ufhb3qip3h2fc5zcghm@jpeg",
-      "associated": {
-        "activitySubscription": {
-          "allowSubscriptions": "followers"
-        }
-      },
-      "viewer": {
-        "muted": false,
-        "blockedBy": false
-      },
-      "labels": [],
-      "createdAt": "2023-09-03T22:46:43.572Z"
-    },
-    "record": {
-      "$type": "app.bsky.feed.post",
-      "createdAt": "2025-04-12T00:00:32.674Z",
-      "embed": {
-        "$type": "app.bsky.embed.record",
-        "record": {
-          "cid": "bafyreic3xlvo27we5mga5tmdl3cdgfxy3kcmxn73zn4wlyrytc4od3ikn4",
-          "uri": "at://did:plc:oekcprj6r6mqorimjaxtvt3a/app.bsky.feed.post/3lmkzhvhtta22"
-        }
-      },
-      "langs": [
-        "fr"
-      ],
-      "text": "On peut pas traiter sans cesse ses concitoyens comme de la merde sans que ça te retombe dessus faut croire"
-    },
-    "embed": {
-      "$type": "app.bsky.embed.record#view",
-      "record": {
-        "$type": "app.bsky.embed.record#viewRecord",
-        "uri": "at://did:plc:oekcprj6r6mqorimjaxtvt3a/app.bsky.feed.post/3lmkzhvhtta22",
-        "cid": "bafyreic3xlvo27we5mga5tmdl3cdgfxy3kcmxn73zn4wlyrytc4od3ikn4",
-        "author": {
-          "did": "did:plc:oekcprj6r6mqorimjaxtvt3a",
-          "handle": "radiogaspesie.bsky.social",
-          "displayName": "Radio Gaspésie",
-          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreig6l7gnbvhgdtiysmb67ymqrawcdfispurryl5jaxitv35imrecrm@jpeg",
-          "associated": {
-            "activitySubscription": {
-              "allowSubscriptions": "followers"
-            }
-          },
-          "viewer": {
-            "muted": false,
-            "blockedBy": false
-          },
-          "labels": [],
-          "createdAt": "2024-11-26T20:54:52.746Z"
-        },
-        "value": {
-          "$type": "app.bsky.feed.post",
-          "createdAt": "2025-04-11T22:02:28.133Z",
-          "embed": {
-            "$type": "app.bsky.embed.images",
-            "images": [
-              {
-                "alt": "stablex",
-                "image": {
-                  "$type": "blob",
-                  "ref": {
-                    "$link": "bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy"
-                  },
-                  "mimeType": "image/png",
-                  "size": 150000
-                }
-              }
-            ]
-          },
-          "facets": [
-            {
-              "features": [
-                {
-                  "$type": "app.bsky.richtext.facet#link",
-                  "uri": "https://www.radiogaspesie.ca/?p=109017"
-                }
-              ],
-              "index": {
-                "byteEnd": 49,
-                "byteStart": 0
-              }
-            }
-          ],
-          "text": "Le bureau de Maïté Blanchette-Vézina vandalisé\n\nIl était possible de lire sur la porte d’entrée «Fuck Stablex, fuck tes déchets». "
-        },
-        "labels": [],
-        "likeCount": 0,
-        "replyCount": 0,
-        "repostCount": 0,
-        "quoteCount": 1,
-        "indexedAt": "2025-04-11T22:02:29.185Z",
-        "embeds": [
-          {
-            "$type": "app.bsky.embed.images#view",
-            "images": [
-              {
-                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy@jpeg",
-                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy@jpeg",
-                "alt": "stablex"
-              }
-            ]
-          }
-        ]
-      }
     },
     "bookmarkCount": 0,
     "replyCount": 0,
     "repostCount": 0,
     "likeCount": 0,
     "quoteCount": 0,
-    "indexedAt": "2025-04-12T00:00:32.380Z",
+    "indexedAt": "2025-04-24T11:26:00.178Z",
     "viewer": {
       "bookmarked": false,
       "threadMuted": false,
       "embeddingDisabled": false
     },
     "labels": []
-  }
-},
-{
-  "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h74wee2m",
-  "post": {
-    "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h74wee2m",
-    "cid": "bafyreigvnfxnrv4biniiaaemprkumzkqtfbusoyfr5mhgtv6mjgobqic6a",
+  },
+  {
+    "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
+    "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
     "author": {
-      "did": "did:plc:3h2qkkjhjwaqnuuj4dtw6sem",
-      "handle": "sudetsoleil.bsky.social",
-      "displayName": "DePassage 🥖🇫🇷 🤝 💙💛 🗽",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiegjs4cz6k363iwiptou5l26edtq75yf5fwkwhb7gxl2ewumobrrq@jpeg",
+      "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+      "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+      "displayName": "Thousand Madleens to Gaza FR",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
       "associated": {
         "chat": {
-          "allowIncoming": "following"
+          "allowIncoming": "none"
         },
         "activitySubscription": {
           "allowSubscriptions": "followers"
@@ -7796,109 +6577,219 @@
         "muted": false,
         "blockedBy": false
       },
-      "labels": [],
-      "createdAt": "2023-09-24T17:53:30.072Z"
+      "labels": [
+        {
+          "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
+          "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
+          "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
+          "val": "bridged-from-bridgy-fed-activitypub",
+          "cts": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "createdAt": "2025-08-20T18:32:40.807Z"
     },
     "record": {
       "$type": "app.bsky.feed.post",
-      "createdAt": "2025-03-02T09:06:19.168Z",
+      "bridgyOriginalText": "<p class=\"quote-inline\">RE: <a href=\"https://mastodon.social/@1kmadleenfr/115249595914655045\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">mastodon.social/@1kmadleenfr/1</span><span class=\"invisible\">15249595914655045</span></a></p><p>... petit repost pour les retardataires :o) Action Action Action Go Go Go !</p><p>Nous sommes les goutelettes d&#39;eau de l&#39;ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et actions en tout genre pour faire du bruit et faire entendre la voix de la paix et de la justice ✊</p>",
+      "bridgyOriginalUrl": "https://mastodon.social/@1kmadleenfr/115272683435145839",
+      "createdAt": "2025-09-26T21:19:21.000Z",
       "embed": {
-        "$type": "app.bsky.embed.video",
-        "aspectRatio": {
-          "height": 704,
-          "width": 704
+        "$type": "app.bsky.embed.recordWithMedia",
+        "media": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "$type": "app.bsky.embed.external#external",
+            "description": "",
+            "title": "Original post on mastodon.social",
+            "uri": "https://mastodon.social/@1kmadleenfr/115272683435145839"
+          }
         },
-        "video": {
-          "$type": "blob",
-          "ref": {
-            "$link": "bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm"
-          },
-          "mimeType": "video/mp4",
-          "size": 156127
+        "record": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreicggkj4timpsqkpauzjkz7tvekq2r2jjy3fcojjs7c6d4h2gbestu",
+            "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2"
+          }
         }
       },
       "facets": [
         {
+          "$type": "app.bsky.richtext.facet",
           "features": [
             {
               "$type": "app.bsky.richtext.facet#link",
-              "uri": "https://buff.ly/DJcXm9v"
+              "uri": "https://mastodon.social/@1kmadleenfr/115249595914655045"
             }
           ],
           "index": {
-            "byteEnd": 303,
-            "byteStart": 239
-          }
-        },
-        {
-          "features": [
-            {
-              "$type": "app.bsky.richtext.facet#link",
-              "uri": "https://buff.ly/Pm9YVgk"
-            }
-          ],
-          "index": {
-            "byteEnd": 324,
-            "byteStart": 301
+            "byteEnd": 59,
+            "byteStart": 4
           }
         }
       ],
-      "reply": {
-        "parent": {
-          "cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
-          "commit": {
-            "cid": "bafyreiftv66lfzbzw5smcbphrvrgnm6iyesyenjnxagcug44ikhmzlbp2u",
-            "rev": "3ljf3h3ozhy2y"
-          },
-          "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
-          "validationStatus": "valid"
-        },
-        "root": {
-          "cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
-          "commit": {
-            "cid": "bafyreiftv66lfzbzw5smcbphrvrgnm6iyesyenjnxagcug44ikhmzlbp2u",
-            "rev": "3ljf3h3ozhy2y"
-          },
-          "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
-          "validationStatus": "valid"
-        }
-      },
-      "text": "📍#FELLAS, nous sommes de retour avec une nouvelle collecte de fonds pour ZSU opérant sur les lignes de front les plus chaudes - Pokrovsk, Kurakhove et avons besoin de votre soutien pour un  🛻  Pick-up de la 37th Brigade !\n\n❎: 517€ 😢\n🎯🏹: 5000€\n\n🏦💱: buff.ly/DJcXm9v\n🅿️🅿️ : buff.ly/Pm9YVgk"
+      "langs": [
+        "fr"
+      ],
+      "text": "RE: https://mastodon.social/@1kmadleenfr/115249595914655045\n\n... petit repost pour les retardataires :o) Action Action Action Go Go Go !\n\nNous sommes les goutelettes d'eau de l'ocean .. pas une ne doit manquer pour que la vague se soulève ... à vos clics, manifs, repouet, drapeaux, parlotte et […]"
     },
     "embed": {
-      "$type": "app.bsky.embed.video#view",
-      "cid": "bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm",
-      "playlist": "https://video.bsky.app/watch/did%3Aplc%3A3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/playlist.m3u8",
-      "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3A3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/thumbnail.jpg",
-      "aspectRatio": {
-        "height": 704,
-        "width": 704
+      "$type": "app.bsky.embed.recordWithMedia#view",
+      "media": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+          "uri": "https://mastodon.social/@1kmadleenfr/115272683435145839",
+          "title": "Original post on mastodon.social",
+          "description": ""
+        }
+      },
+      "record": {
+        "record": {
+          "$type": "app.bsky.embed.record#viewRecord",
+          "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzh5m4xok3j2",
+          "cid": "bafyreib47yraafby73euwlgdol6lm266ypywgv263mggdvw67kx4po35vy",
+          "author": {
+            "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+            "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+            "displayName": "Thousand Madleens to Gaza FR",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
+            "associated": {
+              "chat": {
+                "allowIncoming": "none"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "blockedBy": false
+            },
+            "labels": [
+              {
+                "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
+                "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
+                "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
+                "val": "bridged-from-bridgy-fed-activitypub",
+                "cts": "1970-01-01T00:00:00.000Z"
+              }
+            ],
+            "createdAt": "2025-08-20T18:32:40.807Z"
+          },
+          "value": {
+            "$type": "app.bsky.feed.post",
+            "bridgyOriginalText": "<p>🇵🇸 ✊ ACTION ✊ EN 1 CLIC :<br />Exhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉<a href=\"https://urls.fr/pRgFag\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">urls.fr/pRgFag</span><span class=\"invisible\"></span></a><br />- - - <br />🇵🇸 ✊ ACTION ✊ IN 1 CLICK:<br />Urge governments and foreign ministries to protect their citizens and demand safe passage for the Global Sumud Flotilla to <a href=\"https://mastodon.social/tags/Gaza\" class=\"mention hashtag\" rel=\"tag\">#<span>Gaza</span></a> 👉<a href=\"https://urls.fr/pRgFag\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">urls.fr/pRgFag</span><span class=\"invisible\"></span></a></p><p><a href=\"https://mastodon.social/tags/palestine\" class=\"mention hashtag\" rel=\"tag\">#<span>palestine</span></a> <a href=\"https://mastodon.social/tags/globalsumudflotilla\" class=\"mention hashtag\" rel=\"tag\">#<span>globalsumudflotilla</span></a> <a href=\"https://mastodon.social/tags/genocide\" class=\"mention hashtag\" rel=\"tag\">#<span>genocide</span></a> <a href=\"https://mastodon.social/tags/stopgenocide\" class=\"mention hashtag\" rel=\"tag\">#<span>stopgenocide</span></a> <a href=\"https://mastodon.social/tags/sailtogaza\" class=\"mention hashtag\" rel=\"tag\">#<span>sailtogaza</span></a> <a href=\"https://mastodon.social/tags/freepalestine\" class=\"mention hashtag\" rel=\"tag\">#<span>freepalestine</span></a> <a href=\"https://mastodon.social/tags/freegaza\" class=\"mention hashtag\" rel=\"tag\">#<span>freegaza</span></a> <a href=\"https://mastodon.social/tags/petition\" class=\"mention hashtag\" rel=\"tag\">#<span>petition</span></a></p>",
+            "bridgyOriginalUrl": "https://mastodon.social/@1kmadleenfr/115249595914655045",
+            "createdAt": "2025-09-22T19:27:53.000Z",
+            "embed": {
+              "$type": "app.bsky.embed.images",
+              "images": [
+                {
+                  "$type": "app.bsky.embed.images#image",
+                  "alt": "texte noir, vert et rouge sur fond blanc :\nContacts officiels - par pays \nAction en 1 clic pour protéger la Global Sumud Flotilla\nExhortez les gouvernements et les ministères des Affaires étrangères\nà protéger leurs citoyens et exigez d’eux un passage sûr pour  la Global Sumud Flotilla vers Gaza\nnombre d'emails déjà envoyés : 320 433",
+                  "aspectRatio": {
+                    "height": 531,
+                    "width": 937
+                  },
+                  "image": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 59519
+                  }
+                }
+              ]
+            },
+            "facets": [
+              {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                  {
+                    "$type": "app.bsky.richtext.facet#link",
+                    "uri": "https://mastodon.social/@1kmadleenfr/115249595914655045"
+                  }
+                ],
+                "index": {
+                  "byteEnd": 330,
+                  "byteStart": 294
+                }
+              },
+              {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                  {
+                    "$type": "app.bsky.richtext.facet#link",
+                    "uri": "https://urls.fr/pRgFag"
+                  }
+                ],
+                "index": {
+                  "byteEnd": 228,
+                  "byteStart": 206
+                }
+              }
+            ],
+            "langs": [
+              "fr"
+            ],
+            "tags": [
+              "gaza",
+              "palestine",
+              "globalsumudflotilla",
+              "genocide",
+              "stopgenocide",
+              "sailtogaza",
+              "freepalestine",
+              "freegaza"
+            ],
+            "text": "🇵🇸 ✊ ACTION ✊ EN 1 CLIC :\nExhortez les gouvernements et les ministères des Affaires étrangères à protéger leurs citoyens et exigez un passage sûr pour la Global Sumud Flotilla vers Gaza 👉https://urls.fr/pRgFag\n- - -\n🇵🇸 ✊ ACTION ✊ IN 1 CLICK:\nUrge governments […] \n\n[Original post on mastodon.social]"
+          },
+          "labels": [],
+          "likeCount": 9,
+          "replyCount": 1,
+          "repostCount": 5,
+          "quoteCount": 3,
+          "indexedAt": "2025-09-22T19:35:20.707Z",
+          "embeds": [
+            {
+              "$type": "app.bsky.embed.images#view",
+              "images": [
+                {
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg",
+                  "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreicye3ks35e7zhq7qs4qatbrsh5nkcfsusst6hcnvr4sp2zmhh56mm@jpeg",
+                  "alt": "texte noir, vert et rouge sur fond blanc :\nContacts officiels - par pays \nAction en 1 clic pour protéger la Global Sumud Flotilla\nExhortez les gouvernements et les ministères des Affaires étrangères\nà protéger leurs citoyens et exigez d’eux un passage sûr pour  la Global Sumud Flotilla vers Gaza\nnombre d'emails déjà envoyés : 320 433",
+                  "aspectRatio": {
+                    "height": 531,
+                    "width": 937
+                  }
+                }
+              ]
+            }
+          ]
+        }
       }
     },
     "bookmarkCount": 0,
     "replyCount": 0,
     "repostCount": 1,
     "likeCount": 1,
-    "quoteCount": 2,
-    "indexedAt": "2025-03-02T09:06:19.256Z",
+    "quoteCount": 0,
+    "indexedAt": "2025-09-26T21:23:24.154Z",
     "viewer": {
       "bookmarked": false,
       "threadMuted": false,
       "embeddingDisabled": false
     },
     "labels": []
-  }
-},
-{
-  "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
-  "post": {
-    "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
-    "cid": "bafyreignzwrypnzerqcisedksbufvhzyy7tb3cjkvmoyq23sjm2izk5b5q",
+  },
+  {  
+    "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
+    "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
     "author": {
-      "did": "did:plc:laiqcxb5dscghtzvxlyjy677",
-      "handle": "pirouempyreal.toot.portes-imaginaire.org.ap.brid.gy",
-      "displayName": "Julien Pirou / Empyreal",
-      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreihtgjmilfbcn6u73nx6egpaq362nw52vn2rj6ekb6rq4kzext4544@jpeg",
+      "did": "did:plc:qgunaom6akvc4cajk4dhxwym",
+      "handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
+      "displayName": "Thousand Madleens to Gaza FR",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
       "associated": {
         "chat": {
           "allowIncoming": "none"
@@ -7913,65 +6804,1269 @@
       },
       "labels": [
         {
-          "src": "did:plc:laiqcxb5dscghtzvxlyjy677",
-          "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.actor.profile/self",
-          "cid": "bafyreidzp4oinvgvjeh644iyf5ietx6zeopbfd5bfmhladeg4idysds5fq",
+          "src": "did:plc:qgunaom6akvc4cajk4dhxwym",
+          "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.actor.profile/self",
+          "cid": "bafyreiavxj5fz32rkizsrlohegy2qsad5siuh3byhj2vqjdyzbiru6hnou",
           "val": "bridged-from-bridgy-fed-activitypub",
           "cts": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "createdAt": "2024-06-24T17:35:56.517Z"
+      "createdAt": "2025-08-20T18:32:40.807Z"
     },
     "record": {
       "$type": "app.bsky.feed.post",
-      "bridgyOriginalText": "<p>On sort de <a href=\"https://toot.portes-imaginaire.org/tags/Nosferatu\" class=\"mention hashtag\" rel=\"tag\">#<span>Nosferatu</span></a>…<br />Wow. <br />Le film prend son temps mais installe une ambiance incroyable. <br />Les acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant. <br />Un futur grand classique, qui n’a pas à rougir de la comparaison avec l’original.</p>",
-      "bridgyOriginalUrl": "https://toot.portes-imaginaire.org/@PirouEmpyreal/113730625525064284",
-      "createdAt": "2024-12-28T13:13:44.000Z",
+      "createdAt": "2025-10-03T06:28:08.214Z",
       "embed": {
         "$type": "app.bsky.embed.images",
         "images": [
           {
-            "$type": "app.bsky.embed.images#image",
-            "alt": "Affiche du film Nosferatu de Robert Eggers. ",
+            "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+            "aspectRatio": {
+              "height": 510,
+              "width": 923
+            },
             "image": {
               "$type": "blob",
               "ref": {
-                "$link": "bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu"
+                "$link": "bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu"
               },
-              "mimeType": "text/plain",
-              "size": 75090
+              "mimeType": "image/jpeg",
+              "size": 276045
+            }
+          },
+          {
+            "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+            "aspectRatio": {
+              "height": 510,
+              "width": 923
+            },
+            "image": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu"
+              },
+              "mimeType": "image/jpeg",
+              "size": 276045
             }
           }
         ]
       },
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://instagram.com/blueskyoff?igs…"
+            }
+          ],
+          "index": {
+            "byteEnd": 74,
+            "byteStart": 43
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://facebook.com/blueskyoff"
+            }
+          ],
+          "index": {
+            "byteEnd": 103,
+            "byteStart": 78
+          }
+        }
+      ],
       "langs": [
         "fr"
       ],
-      "text": "On sort de #Nosferatu…\nWow.\nLe film prend son temps mais installe une ambiance incroyable.\nLes acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant.\nUn futur grand classique, qui n’a pas à rougir de la comparaison avec l’original."
+      "text": "instagram                        facebook \ninstagram.com/blueskyoff?igs… \n�� facebook.com/blueskykyoff"
     },
     "embed": {
       "$type": "app.bsky.embed.images#view",
       "images": [
         {
-          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg",
-          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg",
-          "alt": "Affiche du film Nosferatu de Robert Eggers. "
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+          "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+          "aspectRatio": {
+            "height": 510,
+            "width": 923
+          }
+        },
+        {
+          "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+          "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreifwylfjzyts3v34uwnguj4tkbfpdn7k4u4lcfkj2ggu62f7bw7zmu@jpeg",
+          "alt": "Un homme est debout en costume bleu, semble dire une énorme connerie sous le regard amusé de deux femmes attablées un mangé debout, avec le sous titre « entre 200 et 400 milliards »",
+          "aspectRatio": {
+            "height": 510,
+            "width": 923
+          }
         }
       ]
     },
-    "bookmarkCount": 0,
-    "replyCount": 0,
-    "repostCount": 0,
-    "likeCount": 5,
+    "bookmarkCount": 1,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 52,
     "quoteCount": 0,
-    "indexedAt": "2024-12-28T13:14:08.450Z",
+    "indexedAt": "2025-10-03T06:28:13.862Z",
     "viewer": {
       "bookmarked": false,
       "threadMuted": false,
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.feed.post/3m2n2fstwy223",
+    "post": {
+      "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.feed.post/3m2n2fstwy223",
+      "cid": "bafyreifafdpnwmtjkkry5xjquy2wvuwxgxxu6glpismu34zr4jskbb5ore",
+      "author": {
+        "did": "did:plc:svoymufgychs3h2mxbf6xydf",
+        "handle": "maplemama20.bsky.social",
+        "displayName": "Maple Mama",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:svoymufgychs3h2mxbf6xydf/bafkreihfstgf7ugp7bdwt6oagaucwiphmvcw6oisawrke32tm2fng2dhry@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "following"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-03-04T02:09:18.145Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-10-07T21:17:14.584Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreiet2usj7bbonjg5jsuzigfmvoo7heb4npzd2k7wi23tz5b2rwgnzu",
+            "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.graph.starterpack/3m2n2daaflt25"
+          }
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://go.bsky.app/4TM74fZ"
+              }
+            ],
+            "index": {
+              "byteEnd": 142,
+              "byteStart": 123
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "Taco Tuesday starter pack is here. This is my 62nd Starter pack and it's filled with lots of different awesome accounts. \n\ngo.bsky.app/4TM74fZ"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+          "uri": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.graph.starterpack/3m2n2daaflt25",
+          "cid": "bafyreiet2usj7bbonjg5jsuzigfmvoo7heb4npzd2k7wi23tz5b2rwgnzu",
+          "record": {
+            "$type": "app.bsky.graph.starterpack",
+            "createdAt": "2025-10-07T21:15:50.445Z",
+            "description": "Happy taco Tuesday. Here's a pack filled with all different size accounts. Old friends and new. Find yourself so awesome resisters",
+            "feeds": [],
+            "list": "at://did:plc:svoymufgychs3h2mxbf6xydf/app.bsky.graph.list/3m2n2d6vxze2l",
+            "name": "🥰🥰Maple Mama's 62nd Starter Pack 🥰🥰"
+          },
+          "creator": {
+            "did": "did:plc:svoymufgychs3h2mxbf6xydf",
+            "handle": "maplemama20.bsky.social",
+            "displayName": "Maple Mama",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:svoymufgychs3h2mxbf6xydf/bafkreihfstgf7ugp7bdwt6oagaucwiphmvcw6oisawrke32tm2fng2dhry@jpeg",
+            "associated": {
+              "chat": {
+                "allowIncoming": "following"
+              },
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "blockedBy": false
+            },
+            "labels": [],
+            "createdAt": "2025-03-04T02:09:18.145Z"
+          },
+          "joinedAllTimeCount": 0,
+          "joinedWeekCount": 0,
+          "labels": [],
+          "indexedAt": "2025-10-07T21:15:51.027Z",
+          "$type": "app.bsky.graph.defs#starterPackViewBasic"
+        }
+      },
+      "bookmarkCount": 3,
+      "replyCount": 65,
+      "repostCount": 123,
+      "likeCount": 191,
+      "quoteCount": 22,
+      "indexedAt": "2025-10-07T21:17:12.757Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:76nrf6hcsaci3tk7tno6bing/app.bsky.feed.post/3lyxgqz5llc2a",
+    "post": {
+      "uri": "at://did:plc:76nrf6hcsaci3tk7tno6bing/app.bsky.feed.post/3lyxgqz5llc2a",
+      "cid": "bafyreifrzt7t6sxkohlgru47nry6zoja6wbamddyivdnxngxvfkuumtlc4",
+      "author": {
+        "did": "did:plc:76nrf6hcsaci3tk7tno6bing",
+        "handle": "indivisiblelb.bsky.social",
+        "displayName": "Long Beach Indivisible",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:76nrf6hcsaci3tk7tno6bing/bafkreietortsy5skqu6ak5rst5gts2eqpwryq7afyxirey2sx344exay54@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "all"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-01-28T00:54:36.746Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-09-16T13:34:29.320Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreiazceu7r44pkg3tfuw54f4a2kizarugpklwrx44cwe5ialoiobgte",
+            "uri": "at://did:plc:6cxybub32cqnedyd3pz2wozk/app.bsky.feed.post/3lyvzhnrjxn2z"
+          }
+        },
+        "langs": [
+          "en",
+          "fr"
+        ],
+        "text": "Release the Epstein files"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+          "$type": "app.bsky.embed.record#viewRecord",
+          "uri": "at://did:plc:6cxybub32cqnedyd3pz2wozk/app.bsky.feed.post/3lyvzhnrjxn2z",
+          "cid": "bafyreiazceu7r44pkg3tfuw54f4a2kizarugpklwrx44cwe5ialoiobgte",
+          "author": {
+            "did": "did:plc:6cxybub32cqnedyd3pz2wozk",
+            "handle": "ltwlauren.bsky.social",
+            "displayName": "ltwlauren🤸‍♀️❤️🎶🎨🐾",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6cxybub32cqnedyd3pz2wozk/bafkreicybziaagpjespizuq3irdwls7le5a6ifbj5xangyrneifwwhcpmy@jpeg",
+            "associated": {
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "blockedBy": false
+            },
+            "labels": [],
+            "createdAt": "2023-09-21T16:18:29.150Z"
+          },
+          "value": {
+            "$type": "app.bsky.feed.post",
+            "createdAt": "2025-09-16T00:03:57.020Z",
+            "embed": {
+              "$type": "app.bsky.embed.record",
+              "record": {
+                "cid": "bafyreibzvrgbd34ajz5ptpgkf5pzfzip2vhagoz6xpjqqurv7wskv3xsgm",
+                "uri": "at://did:plc:aj3cdjcejjrldwr7qdidj2z6/app.bsky.feed.post/3lyvhuinsuc2o"
+              }
+            },
+            "langs": [
+              "en"
+            ],
+            "text": "Thank you, Deborah Lynn, for my inclusion in your Starter Pack!"
+          },
+          "labels": [],
+          "likeCount": 4,
+          "replyCount": 0,
+          "repostCount": 0,
+          "quoteCount": 1,
+          "indexedAt": "2025-09-16T00:03:57.506Z",
+          "embeds": [
+            {
+              "$type": "app.bsky.embed.record#view",
+              "record": {
+                "$type": "app.bsky.embed.record#viewRecord",
+                "uri": "at://did:plc:aj3cdjcejjrldwr7qdidj2z6/app.bsky.feed.post/3lyvhuinsuc2o",
+                "cid": "bafyreibzvrgbd34ajz5ptpgkf5pzfzip2vhagoz6xpjqqurv7wskv3xsgm",
+                "author": {
+                  "did": "did:plc:aj3cdjcejjrldwr7qdidj2z6",
+                  "handle": "mrsdeborahlynn.bsky.social",
+                  "displayName": "Deborah Lynn",
+                  "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aj3cdjcejjrldwr7qdidj2z6/bafkreia5f6ngpr3c67mpwnxzdrwpsiocpgkxzoajorikw77o5nayujb7mi@jpeg",
+                  "associated": {
+                    "chat": {
+                      "allowIncoming": "following"
+                    },
+                    "activitySubscription": {
+                      "allowSubscriptions": "followers"
+                    }
+                  },
+                  "viewer": {
+                    "muted": false,
+                    "blockedBy": false
+                  },
+                  "labels": [],
+                  "createdAt": "2024-11-25T18:46:41.647Z"
+                },
+                "value": {
+                  "$type": "app.bsky.feed.post",
+                  "createdAt": "2025-09-15T18:49:00.509Z",
+                  "embed": {
+                    "$type": "app.bsky.embed.record",
+                    "record": {
+                      "cid": "bafyreifos5zu7efkxztlre4krornztbyopcziaf5ynakjgioo237aijbqu",
+                      "uri": "at://did:plc:aj3cdjcejjrldwr7qdidj2z6/app.bsky.graph.starterpack/3lyvekcylji2w"
+                    }
+                  },
+                  "facets": [
+                    {
+                      "features": [
+                        {
+                          "$type": "app.bsky.richtext.facet#link",
+                          "uri": "https://go.bsky.app/QjWHgJ4"
+                        }
+                      ],
+                      "index": {
+                        "byteEnd": 55,
+                        "byteStart": 36
+                      }
+                    },
+                    {
+                      "features": [
+                        {
+                          "$type": "app.bsky.richtext.facet#link",
+                          "uri": "https://go.bsky.app/KMn46AS"
+                        }
+                      ],
+                      "index": {
+                        "byteEnd": 83,
+                        "byteStart": 64
+                      }
+                    }
+                  ],
+                  "langs": [
+                    "en"
+                  ],
+                  "text": "Release the Epstein Files \n\nPack 1 \ngo.bsky.app/QjWHgJ4\nPack 2 \ngo.bsky.app/KMn46AS"
+                },
+                "labels": [],
+                "likeCount": 383,
+                "replyCount": 81,
+                "repostCount": 202,
+                "quoteCount": 15,
+                "indexedAt": "2025-09-15T18:49:00.514Z"
+              }
+            }
+          ]
+        }
+      },
+      "bookmarkCount": 0,
+      "replyCount": 0,
+      "repostCount": 1,
+      "likeCount": 0,
+      "quoteCount": 0,
+      "indexedAt": "2025-09-16T13:34:29.703Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltmljz5blca2",
+    "post": {
+      "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltmljz5blca2",
+      "cid": "bafyreiauulzocz6duamsnh5rv4wa677s5sts6lquwrovwu4nyqfbuj4tem",
+      "author": {
+        "did": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
+        "handle": "memoire2cite.mastodon.social.ap.brid.gy",
+        "displayName": "Mémoire2Cité  Mémoire2ville",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rkphrshyfiqe4n2hz5vj56ig/bafkreia2pe2tayrxikiute7w7g2qfqvxta27ywggclqz4r47fp53kquyvu@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "none"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [
+          {
+            "src": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
+            "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.actor.profile/self",
+            "cid": "bafyreifevmukndnhml42dody4ld5l72ianbgtlcz5pfj3c3fehjbi556qm",
+            "val": "bridged-from-bridgy-fed-activitypub",
+            "cts": "1970-01-01T00:00:00.000Z"
+          }
+        ],
+        "createdAt": "2025-01-20T10:55:16.746Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "bridgyOriginalText": "<p>de la NU DISCO en faite LOLA YOUNG &#39;&#39;Messy&#39;&#39; [Nu Disco / House] <a href=\"https://www.youtube.com/watch?v=-KzaJVuViLU&amp;list=RD-KzaJVuViLU&amp;start_radio=1\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"ellipsis\">youtube.com/watch?v=-KzaJVuViL</span><span class=\"invisible\">U&amp;list=RD-KzaJVuViLU&amp;start_radio=1</span></a> 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶</p>",
+        "bridgyOriginalUrl": "https://mastodon.social/@memoire2cite/114829510558384526",
+        "createdAt": "2025-07-10T14:54:39.000Z",
+        "facets": [
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1"
+              }
+            ],
+            "index": {
+              "byteEnd": 140,
+              "byteStart": 45
+            }
+          }
+        ],
+        "langs": [
+          "fr"
+        ],
+        "reply": {
+          "$type": "app.bsky.feed.post#replyRef",
+          "parent": {
+            "cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
+            "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2"
+          },
+          "root": {
+            "cid": "bafyreibthamj2llxfkc7necn64ogxd7ut5chegoke5lz7nqk7qq43miuam",
+            "uri": "at://did:plc:rkphrshyfiqe4n2hz5vj56ig/app.bsky.feed.post/3ltml2pximsa2"
+          }
+        },
+        "text": "de la NU DISCO en faite LOLA YOUNG ''Messy'' Nu Disco / House] [https://www.youtube.com/watch?v=-KzaJVuViLU&list=RD-KzaJVuViLU&start_radio=1 🎵🎶🧐🎶🎵🎵🎵🎵🎵🎶🎶🎶🎶🎶🎶🎶"
+      },
+      "bookmarkCount": 0,
+      "replyCount": 0,
+      "repostCount": 0,
+      "likeCount": 0,
+      "quoteCount": 0,
+      "indexedAt": "2025-07-10T14:55:09.239Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3ln33tx7bpdu2",
+    "post": {
+      "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.feed.post/3ln33tx7bpdu2",
+      "cid": "bafyreifzqnctwwzqsmvvk5xulxnktfzny3yoea5mrera3lezxp6nlel5fe",
+      "author": {
+        "did": "did:plc:3auglfwwpebyiozbojq5eqhy",
+        "handle": "newyork.activitypub.awakari.com.ap.brid.gy",
+        "displayName": "NewYork",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "none"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [
+          {
+            "src": "did:plc:3auglfwwpebyiozbojq5eqhy",
+            "uri": "at://did:plc:3auglfwwpebyiozbojq5eqhy/app.bsky.actor.profile/self",
+            "cid": "bafyreihkrjxzeiefdtmiwzjuxypih35rqn5unat2j2jsxiwswxztheim44",
+            "val": "bridged-from-bridgy-fed-activitypub",
+            "cts": "1970-01-01T00:00:00.000Z"
+          }
+        ],
+        "createdAt": "2025-01-03T19:06:32.543Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "bridgyOriginalText": "<br/><br/><a href=\"https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\">https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html</a><br/><br/><a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Books\">#Books</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/and\">#and</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Literature\">#Literature</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/E,\">#E,</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Kayla\">#Kayla</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/(Artist)\">#(Artist)</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Precious\">#Precious</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Rubbish\">#Rubbish</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/(Book)\">#(Book)</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Milosz,\">#Milosz,</a> <a rel=\"tag\" class=\"mention hashtag\" href=\"https://mastodon.social/tags/Czeslaw\">#Czeslaw</a><br/><br/><a href=\"https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U\">Event Attributes</a>",
+        "bridgyOriginalUrl": "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html",
+        "createdAt": "2025-04-17T19:04:41.000Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "$type": "app.bsky.embed.external#external",
+            "description": "",
+            "title": "Awakari App",
+            "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U"
+          }
+        },
+        "facets": [
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Books"
+              }
+            ],
+            "index": {
+              "byteEnd": 88,
+              "byteStart": 82
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "and"
+              }
+            ],
+            "index": {
+              "byteEnd": 93,
+              "byteStart": 89
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Literature"
+              }
+            ],
+            "index": {
+              "byteEnd": 105,
+              "byteStart": 94
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "E,"
+              }
+            ],
+            "index": {
+              "byteEnd": 109,
+              "byteStart": 106
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Kayla"
+              }
+            ],
+            "index": {
+              "byteEnd": 116,
+              "byteStart": 110
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "(Artist)"
+              }
+            ],
+            "index": {
+              "byteEnd": 126,
+              "byteStart": 117
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Precious"
+              }
+            ],
+            "index": {
+              "byteEnd": 136,
+              "byteStart": 127
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Rubbish"
+              }
+            ],
+            "index": {
+              "byteEnd": 145,
+              "byteStart": 137
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "(Book)"
+              }
+            ],
+            "index": {
+              "byteEnd": 153,
+              "byteStart": 146
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Milosz,"
+              }
+            ],
+            "index": {
+              "byteEnd": 162,
+              "byteStart": 154
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "Czeslaw"
+              }
+            ],
+            "index": {
+              "byteEnd": 171,
+              "byteStart": 163
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html"
+              }
+            ],
+            "index": {
+              "byteEnd": 80,
+              "byteStart": 2
+            }
+          },
+          {
+            "$type": "app.bsky.richtext.facet",
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U"
+              }
+            ],
+            "index": {
+              "byteEnd": 189,
+              "byteStart": 173
+            }
+          }
+        ],
+        "text": "\n\nhttps://www.nytimes.com/2025/04/17/books/review/new-books-recommendations.html\n\n#Books #and #Literature #E, #Kayla #(Artist) #Precious #Rubbish #(Book) #Milosz, #Czeslaw\n\nEvent Attributes"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+          "uri": "https://awakari.com/pub-msg.html?id=RIpffxBu2jJ3RHL5vwGZbsnPu3U",
+          "title": "Awakari App",
+          "description": ""
+        }
+      },
+      "bookmarkCount": 0,
+      "replyCount": 0,
+      "repostCount": 0,
+      "likeCount": 0,
+      "quoteCount": 0,
+      "indexedAt": "2025-04-18T07:28:49.178Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:ysc73isz7jkgr4ozyn6azo77/app.bsky.feed.post/3lovyad4nt324",
+    "post": {
+      "uri": "at://did:plc:ysc73isz7jkgr4ozyn6azo77/app.bsky.feed.post/3lovyad4nt324",
+      "cid": "bafyreig746guz2spqkbwdgjutvqjawotgpgumc5aylqmgeuka62o7n4kqm",
+      "author": {
+        "did": "did:plc:ysc73isz7jkgr4ozyn6azo77",
+        "handle": "springer.springernature.com",
+        "displayName": "Springer",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreif6g7p5jykpgyph7dqrglfktaqwfhvihmff4f2vblbnenx2qh7564@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "all"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-08-22T14:30:36.857Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-05-11T17:30:00.919Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "Hitler’s Female Physicians",
+              "aspectRatio": {
+                "height": 1254,
+                "width": 827
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4"
+                },
+                "mimeType": "image/jpeg",
+                "size": 204909
+              }
+            }
+          ]
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "http://bit.ly/3Sp7SeY"
+              }
+            ],
+            "index": {
+              "byteEnd": 251,
+              "byteStart": 237
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "HistSci"
+              }
+            ],
+            "index": {
+              "byteEnd": 260,
+              "byteStart": 252
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#mention",
+                "did": "did:plc:4bqqpeponxdqqy7bwyqfqomo"
+              }
+            ],
+            "index": {
+              "byteEnd": 134,
+              "byteStart": 116
+            }
+          }
+        ],
+        "text": "🗃️ 'Hitler’s Female Physicians: Women Doctors During the Third Reich and Their Crimes Against Humanity,' by @edzard.bsky.social, explains the background of the Third Reich in general and medicine during this period in particular. bit.ly/3Sp7SeY #HistSci"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4@jpeg",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreieytmce3w5hmphnw73dh4sptid4rvbmhe4usg7s2ddxeizzq62od4@jpeg",
+            "alt": "Hitler’s Female Physicians",
+            "aspectRatio": {
+              "height": 1254,
+              "width": 827
+            }
+          }
+        ]
+      },
+      "bookmarkCount": 0,
+      "replyCount": 1,
+      "repostCount": 3,
+      "likeCount": 13,
+      "quoteCount": 1,
+      "indexedAt": "2025-05-11T17:30:01.649Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:afklhwqpfjktj3m44h7wfzbu/app.bsky.feed.post/3lmla2zjnbc2q",
+    "post": {
+      "uri": "at://did:plc:afklhwqpfjktj3m44h7wfzbu/app.bsky.feed.post/3lmla2zjnbc2q",
+      "cid": "bafyreic4ikt3xtjdkrh3pwojhnk6mt3d5z6p6fuydkro4v54eeqdtgydsu",
+      "author": {
+        "did": "did:plc:afklhwqpfjktj3m44h7wfzbu",
+        "handle": "pikouse.bsky.social",
+        "displayName": "Pikouse",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:afklhwqpfjktj3m44h7wfzbu/bafkreicdb37vssdu22dimxzyhqx74luvtat33b7ufhb3qip3h2fc5zcghm@jpeg",
+        "associated": {
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-09-03T22:46:43.572Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-04-12T00:00:32.674Z",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreic3xlvo27we5mga5tmdl3cdgfxy3kcmxn73zn4wlyrytc4od3ikn4",
+            "uri": "at://did:plc:oekcprj6r6mqorimjaxtvt3a/app.bsky.feed.post/3lmkzhvhtta22"
+          }
+        },
+        "langs": [
+          "fr"
+        ],
+        "text": "On peut pas traiter sans cesse ses concitoyens comme de la merde sans que ça te retombe dessus faut croire"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+          "$type": "app.bsky.embed.record#viewRecord",
+          "uri": "at://did:plc:oekcprj6r6mqorimjaxtvt3a/app.bsky.feed.post/3lmkzhvhtta22",
+          "cid": "bafyreic3xlvo27we5mga5tmdl3cdgfxy3kcmxn73zn4wlyrytc4od3ikn4",
+          "author": {
+            "did": "did:plc:oekcprj6r6mqorimjaxtvt3a",
+            "handle": "radiogaspesie.bsky.social",
+            "displayName": "Radio Gaspésie",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreig6l7gnbvhgdtiysmb67ymqrawcdfispurryl5jaxitv35imrecrm@jpeg",
+            "associated": {
+              "activitySubscription": {
+                "allowSubscriptions": "followers"
+              }
+            },
+            "viewer": {
+              "muted": false,
+              "blockedBy": false
+            },
+            "labels": [],
+            "createdAt": "2024-11-26T20:54:52.746Z"
+          },
+          "value": {
+            "$type": "app.bsky.feed.post",
+            "createdAt": "2025-04-11T22:02:28.133Z",
+            "embed": {
+              "$type": "app.bsky.embed.images",
+              "images": [
+                {
+                  "alt": "stablex",
+                  "image": {
+                    "$type": "blob",
+                    "ref": {
+                      "$link": "bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy"
+                    },
+                    "mimeType": "image/png",
+                    "size": 150000
+                  }
+                }
+              ]
+            },
+            "facets": [
+              {
+                "features": [
+                  {
+                    "$type": "app.bsky.richtext.facet#link",
+                    "uri": "https://www.radiogaspesie.ca/?p=109017"
+                  }
+                ],
+                "index": {
+                  "byteEnd": 49,
+                  "byteStart": 0
+                }
+              }
+            ],
+            "text": "Le bureau de Maïté Blanchette-Vézina vandalisé\n\nIl était possible de lire sur la porte d’entrée «Fuck Stablex, fuck tes déchets». "
+          },
+          "labels": [],
+          "likeCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "quoteCount": 1,
+          "indexedAt": "2025-04-11T22:02:29.185Z",
+          "embeds": [
+            {
+              "$type": "app.bsky.embed.images#view",
+              "images": [
+                {
+                  "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy@jpeg",
+                  "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreigvleaj77nkp5bfma6l4k7qewcsxfrwqckrwx7vktgg2ynqqanhzy@jpeg",
+                  "alt": "stablex"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "bookmarkCount": 0,
+      "replyCount": 0,
+      "repostCount": 0,
+      "likeCount": 0,
+      "quoteCount": 0,
+      "indexedAt": "2025-04-12T00:00:32.380Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h74wee2m",
+    "post": {
+      "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h74wee2m",
+      "cid": "bafyreigvnfxnrv4biniiaaemprkumzkqtfbusoyfr5mhgtv6mjgobqic6a",
+      "author": {
+        "did": "did:plc:3h2qkkjhjwaqnuuj4dtw6sem",
+        "handle": "sudetsoleil.bsky.social",
+        "displayName": "DePassage 🥖🇫🇷 🤝 💙💛 🗽",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiegjs4cz6k363iwiptou5l26edtq75yf5fwkwhb7gxl2ewumobrrq@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "following"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-09-24T17:53:30.072Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-02T09:06:19.168Z",
+        "embed": {
+          "$type": "app.bsky.embed.video",
+          "aspectRatio": {
+            "height": 704,
+            "width": 704
+          },
+          "video": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm"
+            },
+            "mimeType": "video/mp4",
+            "size": 156127
+          }
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://buff.ly/DJcXm9v"
+              }
+            ],
+            "index": {
+              "byteEnd": 303,
+              "byteStart": 239
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://buff.ly/Pm9YVgk"
+              }
+            ],
+            "index": {
+              "byteEnd": 324,
+              "byteStart": 301
+            }
+          }
+        ],
+        "reply": {
+          "parent": {
+            "cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
+            "commit": {
+              "cid": "bafyreiftv66lfzbzw5smcbphrvrgnm6iyesyenjnxagcug44ikhmzlbp2u",
+              "rev": "3ljf3h3ozhy2y"
+            },
+            "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
+            "validationStatus": "valid"
+          },
+          "root": {
+            "cid": "bafyreifekqza6drvzlwlxnu3l4vo5rngbsflw7brgf4z44zlxeqaijghgq",
+            "commit": {
+              "cid": "bafyreiftv66lfzbzw5smcbphrvrgnm6iyesyenjnxagcug44ikhmzlbp2u",
+              "rev": "3ljf3h3ozhy2y"
+            },
+            "uri": "at://did:plc:3h2qkkjhjwaqnuuj4dtw6sem/app.bsky.feed.post/3ljf3h3oqoq2y",
+            "validationStatus": "valid"
+          }
+        },
+        "text": "📍#FELLAS, nous sommes de retour avec une nouvelle collecte de fonds pour ZSU opérant sur les lignes de front les plus chaudes - Pokrovsk, Kurakhove et avons besoin de votre soutien pour un  🛻  Pick-up de la 37th Brigade !\n\n❎: 517€ 😢\n🎯🏹: 5000€\n\n🏦💱: buff.ly/DJcXm9v\n🅿️🅿️ : buff.ly/Pm9YVgk"
+      },
+      "embed": {
+        "$type": "app.bsky.embed.video#view",
+        "cid": "bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3A3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/playlist.m3u8",
+        "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3A3h2qkkjhjwaqnuuj4dtw6sem/bafkreiamidqpalfuwipfgxygvdegbatabobudnncssdewgz3m6yoppohjm/thumbnail.jpg",
+        "aspectRatio": {
+          "height": 704,
+          "width": 704
+        }
+      },
+      "bookmarkCount": 0,
+      "replyCount": 0,
+      "repostCount": 1,
+      "likeCount": 1,
+      "quoteCount": 2,
+      "indexedAt": "2025-03-02T09:06:19.256Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
+    "post": {
+      "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.feed.post/3leelh4smyer2",
+      "cid": "bafyreignzwrypnzerqcisedksbufvhzyy7tb3cjkvmoyq23sjm2izk5b5q",
+      "author": {
+        "did": "did:plc:laiqcxb5dscghtzvxlyjy677",
+        "handle": "pirouempyreal.toot.portes-imaginaire.org.ap.brid.gy",
+        "displayName": "Julien Pirou / Empyreal",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreihtgjmilfbcn6u73nx6egpaq362nw52vn2rj6ekb6rq4kzext4544@jpeg",
+        "associated": {
+          "chat": {
+            "allowIncoming": "none"
+          },
+          "activitySubscription": {
+            "allowSubscriptions": "followers"
+          }
+        },
+        "viewer": {
+          "muted": false,
+          "blockedBy": false
+        },
+        "labels": [
+          {
+            "src": "did:plc:laiqcxb5dscghtzvxlyjy677",
+            "uri": "at://did:plc:laiqcxb5dscghtzvxlyjy677/app.bsky.actor.profile/self",
+            "cid": "bafyreidzp4oinvgvjeh644iyf5ietx6zeopbfd5bfmhladeg4idysds5fq",
+            "val": "bridged-from-bridgy-fed-activitypub",
+            "cts": "1970-01-01T00:00:00.000Z"
+          }
+        ],
+        "createdAt": "2024-06-24T17:35:56.517Z"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "bridgyOriginalText": "<p>On sort de <a href=\"https://toot.portes-imaginaire.org/tags/Nosferatu\" class=\"mention hashtag\" rel=\"tag\">#<span>Nosferatu</span></a>…<br />Wow. <br />Le film prend son temps mais installe une ambiance incroyable. <br />Les acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant. <br />Un futur grand classique, qui n’a pas à rougir de la comparaison avec l’original.</p>",
+        "bridgyOriginalUrl": "https://toot.portes-imaginaire.org/@PirouEmpyreal/113730625525064284",
+        "createdAt": "2024-12-28T13:13:44.000Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "$type": "app.bsky.embed.images#image",
+              "alt": "Affiche du film Nosferatu de Robert Eggers. ",
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu"
+                },
+                "mimeType": "text/plain",
+                "size": 75090
+              }
+            }
+          ]
+        },
+        "langs": [
+          "fr"
+        ],
+        "text": "On sort de #Nosferatu…\nWow.\nLe film prend son temps mais installe une ambiance incroyable.\nLes acteurs sont tous formidables, à commencer par Lily-Rose Depp dans un rôle qu’on imagine éprouvant.\nUn futur grand classique, qui n’a pas à rougir de la comparaison avec l’original."
+      },
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg",
+            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreied7xzv77zkbtsxuat24hq46b67xft3axz6a5kbuszcsc2j62qunu@jpeg",
+            "alt": "Affiche du film Nosferatu de Robert Eggers. "
+          }
+        ]
+      },
+      "bookmarkCount": 0,
+      "replyCount": 0,
+      "repostCount": 0,
+      "likeCount": 5,
+      "quoteCount": 0,
+      "indexedAt": "2024-12-28T13:14:08.450Z",
+      "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+      },
+      "labels": []
+    }
+  },
+  {
+    "uri": "at://did:plc:yjhjukglbxo5asqz34nbuthv/app.bsky.feed.post/3lc6r7nzil6m2",
+    "cid": "bafyreihahxqbkoalbgj22uinmp6mkvubgvbsvj3trjnjsgv56xb2gpma3i",
+    "author": {
+        "did": "did:plc:yjhjukglbxo5asqz34nbuthv",
+        "handle": "takobiotech.masto.bike.ap.brid.gy",
+        "displayName": "Tako",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yjhjukglbxo5asqz34nbuthv/bafkreialjmkxwun3umsadrplejaqtinfqogqbvylrczdswn6au6bexgk2i@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "none"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:yjhjukglbxo5asqz34nbuthv",
+                "uri": "at://did:plc:yjhjukglbxo5asqz34nbuthv/app.bsky.actor.profile/self",
+                "cid": "bafyreihaa7r7226xweklnzfxe6rxgottlkhcq3fl2e36cufgg4kjhifity",
+                "val": "bridged-from-bridgy-fed-activitypub",
+                "cts": "1970-01-01T00:00:00.000Z"
+            }
+        ],
+        "createdAt": "2024-06-27T22:41:48.083Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "bridgyOriginalText": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://bsky.brid.gy/ap/did:plc:ng4vx5yo4w4w7fsw4247l6th\" class=\"u-url mention\">@<span>lisieshy.catgirl.fr</span></a></span> pourquoi tu es motivé par les anglais mais pas par les français ? Une habitude ?</p>",
+        "bridgyOriginalUrl": "https://masto.bike/@Takobiotech/113573404203598333",
+        "createdAt": "2024-11-30T18:50:17.000Z",
+        "embed": {
+            "$type": "app.bsky.embed.record",
+            "record": {
+                "cid": "bafyreicj4ok7nzjuacbtw4zlr5iiilhh2qr7cyn7pysc4ty2ef6xdwz4bi",
+                "uri": "at://did:plc:ng4vx5yo4w4w7fsw4247l6th/app.bsky.actor.profile/self"
+            }
+        },
+        "facets": [
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#mention",
+                        "did": "did:plc:ng4vx5yo4w4w7fsw4247l6th"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 20,
+                    "byteStart": 0
+                }
+            }
+        ],
+        "langs": [
+            "fr"
+        ],
+        "reply": {
+            "$type": "app.bsky.feed.post#replyRef",
+            "parent": {
+                "cid": "bafyreiddp4ubsmbqfitrh5ec7lh67qopvsfxppm4mvk4ijyppafl2x43t4",
+                "uri": "at://did:plc:ng4vx5yo4w4w7fsw4247l6th/app.bsky.feed.post/3lc6pf4icgk2v"
+            },
+            "root": {
+                "cid": "bafyreiatxlqa7icmkk5bt4s7oavekwxus6lz5e7mvu5cvbie4n7p3elvp4",
+                "uri": "at://did:plc:ng4vx5yo4w4w7fsw4247l6th/app.bsky.feed.post/3lc4zqpj4m22j"
+            }
+        },
+        "text": "@lisieshy.catgirl.fr pourquoi tu es motivé par les anglais mais pas par les français ? Une habitude ?"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.record#view",
+        "record": {
+            "$type": "app.bsky.embed.record#viewNotFound",
+            "uri": "at://did:plc:ng4vx5yo4w4w7fsw4247l6th/app.bsky.actor.profile/self",
+            "notFound": true
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2024-11-30T18:54:57.460Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
-}
 
 ]

@@ -147,49 +147,53 @@ def process_card_data(embed_data, post):
 def prepare_quote_data(embed_quote, card_data, post, links):
     # Warning: mutates post and links
 
+    quoted_data = None
+
     post["quoted_cid"] = embed_quote["cid"]
     post["quoted_uri"] = embed_quote["uri"]
-    post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
-        post["quoted_uri"], post["url"]
-    )
-
-    # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
-    # Handling special posts types (only lists for now, for example: https://bsky.app/profile/lanana421.bsky.social/lists/3lxdgjtpqhf2z)
-    if "/app.bsky.graph.list/" in post["quoted_uri"]:
-        post_splitter = "/lists/"
+    if card_data and card_data.get("notFound", False):
+        post["quoted_status"] = "notFound"
     else:
-        post_splitter = "/post/"
-    post["quoted_url"] = format_post_url(
-        post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter
-    )
+        post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
+            post["quoted_uri"], post["url"]
+        )
 
-    quoted_data = None
-    if card_data:
-        if card_data.get("detached", False):
-            post["quoted_status"] = "detached"
-
+        # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
+        # Handling special posts types (only lists for now, for example: https://bsky.app/profile/lanana421.bsky.social/lists/3lxdgjtpqhf2z)
+        if "/app.bsky.graph.list/" in post["quoted_uri"]:
+            post_splitter = "/lists/"
         else:
-            quoted_data = deepcopy(card_data)
+            post_splitter = "/post/"
+        post["quoted_url"] = format_post_url(
+            post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter
+        )
 
-    # Grab user handle and cleanup links when no quote data but url in text
-    if not quoted_data:
-        for link in links:
-            if link.startswith("https://bsky.app/profile/") and link.endswith(
-                post["quoted_did"]
-            ):
-                # Take better quoted url with user_handle
-                post["quoted_url"] = link
-                break
+        if card_data:
+            if card_data.get("detached", False):
+                post["quoted_status"] = "detached"
 
-        # Remove quoted link from post links
-        if post["quoted_url"] in links:
-            links.remove(post["quoted_url"])
+            else:
+                quoted_data = deepcopy(card_data)
 
-        # Extract user handle from url
-        if "did:plc:" not in post["quoted_url"]:
-            post["quoted_user_handle"], _ = parse_post_url(
-                post["quoted_url"], post["url"]
-            )
+        # Grab user handle and cleanup links when no quote data but url in text
+        if not quoted_data:
+            for link in links:
+                if link.startswith("https://bsky.app/profile/") and link.endswith(
+                    post["quoted_did"]
+                ):
+                    # Take better quoted url with user_handle
+                    post["quoted_url"] = link
+                    break
+
+            # Remove quoted link from post links
+            if post["quoted_url"] in links:
+                links.remove(post["quoted_url"])
+
+            # Extract user handle from url
+            if "did:plc:" not in post["quoted_url"]:
+                post["quoted_user_handle"], _ = parse_post_url(
+                    post["quoted_url"], post["url"]
+                )
 
     return (post, quoted_data, links)
 
