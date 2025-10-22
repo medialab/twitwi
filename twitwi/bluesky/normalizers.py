@@ -308,9 +308,7 @@ def normalize_post(
     post["timestamp_utc"], post["local_time"] = get_dates(
         data["record"]["createdAt"], locale=locale, source="bluesky"
     )
-    post["indexed_at"] = get_dates(
-        data.get("indexedAt"), locale=locale, source="bluesky"
-    )[1]
+    post["indexed_at_utc"] = data["indexedAt"]
 
     # Handle post/user identifiers
     post["cid"] = data["cid"]
@@ -380,6 +378,8 @@ def normalize_post(
                 # in some cases, the errored positioning is before the position given
                 # example: https://bsky.app/profile/springer.springernature.com/post/3lovyad4nt324
                 if byteStart == -1 or byteStart > byteEnd:
+                    # When decrementing byteStart, we also decrement byteEnd (see below)
+                    # shifting the slice to extract the mention correctly
                     byteStart = facet["index"]["byteStart"] - 1
                     # to extend the size of the mention, which is somehow 1 char too short because of the '@'
                     byteEnd += 1
