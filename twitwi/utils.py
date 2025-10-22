@@ -68,6 +68,8 @@ def get_dates(
     except ValueError as e:
         if source != "bluesky":
             raise e
+        # Yes, it seems that some people were active in year 0...
+        # see by yourself: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
         if date_str.startswith("0000"):
             date_str_fixed = "0001" + date_str[4:]
             parsed_datetime = parse_date(date_str_fixed)
