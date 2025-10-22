@@ -151,7 +151,9 @@ def prepare_quote_data(embed_quote, card_data, post, links):
 
     post["quoted_cid"] = embed_quote["cid"]
     post["quoted_uri"] = embed_quote["uri"]
-    if card_data and card_data.get("notFound", False):
+    # Sometimes quoted post is not found, even if uri and cid are given
+    # example: https://bsky.app/profile/takobiotech.masto.bike.ap.brid.gy/post/3lc6r7nzil6m2
+    if card_data and card_data.get("notFound"):
         post["quoted_status"] = "notFound"
     else:
         post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
@@ -169,7 +171,7 @@ def prepare_quote_data(embed_quote, card_data, post, links):
         )
 
         if card_data:
-            if card_data.get("detached", False):
+            if card_data.get("detached"):
                 post["quoted_status"] = "detached"
 
             else:
@@ -267,8 +269,6 @@ def normalize_post(
             `extract_referenced_posts` was set to `True`.
 
     """
-
-    raising_errors = False
 
     if not isinstance(payload, dict):
         raise BlueskyPayloadError(
@@ -481,11 +481,9 @@ def normalize_post(
                         "end": byteEnd,
                     }
                 )
-            except UnicodeDecodeError as e:
-                if raising_errors:
-                    raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
-                else:
-                    pass
+            except UnicodeDecodeError:
+                pass
+                # raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
 
         elif feat["$type"].endswith("#bold"):
             pass
