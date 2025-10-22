@@ -64,7 +64,7 @@ class BlueskyPost(TypedDict):
     like_count: int                     # total number of likes received by the post (at collection time)
     reply_count: int                    # total number of replies received by the post (at collection time)
     quote_count: int                    # total number of posts the post was quoted into (at collection time)
-    bookmark_count: int                 # total number of bookmarks received by the post (at collection time)
+    bookmark_count: Optional[int]       # total number of bookmarks received by the post (at collection time)
 
     # Extra field
     bridgy_original_url: Optional[str]  # source of the original post when it was posted from another platform such as Mastodon via the Bridgy connection tool
