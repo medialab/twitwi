@@ -308,7 +308,9 @@ def normalize_post(
     post["timestamp_utc"], post["local_time"] = get_dates(
         data["record"]["createdAt"], locale=locale, source="bluesky"
     )
-    post["indexed_at"] = data.get("indexedAt")
+    post["indexed_at"] = get_dates(
+        data.get("indexedAt"), locale=locale, source="bluesky"
+    )[1]
 
     # Handle post/user identifiers
     post["cid"] = data["cid"]
