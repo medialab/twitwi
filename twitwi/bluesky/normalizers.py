@@ -125,8 +125,8 @@ def process_starterpack_card(embed_data, post):
     if "uri" in embed_data:
         creator_did, pack_did = parse_post_uri(embed_data["uri"])
         post["card_link"] = format_starterpack_url(
-        embed_data.get("creator", {}).get("handle") or creator_did, pack_did
-    )
+            embed_data.get("creator", {}).get("handle") or creator_did, pack_did
+        )
     if card:
         post["card_title"] = card.get("name", "")
         post["card_description"] = card.get("description", "")
@@ -342,7 +342,7 @@ def normalize_post(
     post["like_count"] = data["likeCount"]
     post["quote_count"] = data["quoteCount"]
     # When a post cites another, the cited post doesn't have the bookmarkCount field
-    post["bookmark_count"] = data.get("bookmarkCount", None)
+    post["bookmark_count"] = data.get("bookmarkCount")
 
     # Handle hashtags, mentions & links from facets
     post["mentioned_user_handles"] = []
@@ -420,7 +420,7 @@ def normalize_post(
             byteStart = facet["index"]["byteStart"]
             byteEnd = facet["index"]["byteEnd"]
 
-            if not text[byteStart : byteEnd].startswith(b"http"):
+            if not text[byteStart:byteEnd].startswith(b"http"):
                 new_byteStart = text.find(b"http", byteStart, byteEnd)
 
                 # means that the link is shifted, like on this post:
@@ -432,21 +432,34 @@ def normalize_post(
                     # but still with the link in it (somehow existing in some posts, such as this one:
                     # https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltmljz5blca2)
                     # In this case, we don't want to touch the position of the link given in the payload
-                    byteEnd = min(byteStart - facet["index"]["byteStart"] + facet["index"]["byteEnd"], len(post["original_text"].encode("utf-8")))
+                    byteEnd = min(
+                        byteStart
+                        - facet["index"]["byteStart"]
+                        + facet["index"]["byteEnd"],
+                        len(post["original_text"].encode("utf-8")),
+                    )
                     for i in range(byteStart, byteEnd):
                         if chr(text[i]).isspace():
                             byteStart = facet["index"]["byteStart"]
-                    byteEnd = byteStart - facet["index"]["byteStart"] + facet["index"]["byteEnd"]
+                    byteEnd = (
+                        byteStart
+                        - facet["index"]["byteStart"]
+                        + facet["index"]["byteEnd"]
+                    )
 
-                # means that the link is a "personalized" one like on this post: 
+                # means that the link is a "personalized" one like on this post:
                 # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
                 else:
-
                     # we're looking for a link which could be valid if we add "https://" at the beginning,
                     # as in some cases the "http(s)://" part is missing in the post text
                     for starting in range(byteEnd - byteStart):
                         try:
-                            if is_url('https://' + text[byteStart + starting : byteEnd + starting].decode("utf-8")):
+                            if is_url(
+                                "https://"
+                                + text[
+                                    byteStart + starting : byteEnd + starting
+                                ].decode("utf-8")
+                            ):
                                 byteStart += starting
                                 break
                         except UnicodeDecodeError:
@@ -454,13 +467,13 @@ def normalize_post(
                     # If we did not find any valid link, we just keep the original position as it is
                     # meaning that we have a personalized link like in the example above
 
-                    # Extend byteEnd to the right until we find a valid utf-8 ending, 
+                    # Extend byteEnd to the right until we find a valid utf-8 ending,
                     # as in some cases the link is longer than the position given in the payload
                     # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
                     # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
                     while byteEnd <= len(post["original_text"].encode("utf-8")):
                         try:
-                            text[byteStart : byteEnd].decode("utf-8")
+                            text[byteStart:byteEnd].decode("utf-8")
                             break
                         except UnicodeDecodeError:
                             byteEnd += 1
@@ -669,7 +682,7 @@ def normalize_post(
         if quoted_data and "value" in quoted_data:
             # We're checking on the uri as the cid can be different in some cases,
             # and the uri seems to be unique for each post
-            if quoted_data["uri"] != post["quoted_uri"]: 
+            if quoted_data["uri"] != post["quoted_uri"]:
                 raise BlueskyPayloadError(
                     post["url"],
                     "inconsistent quote uri found between record.embed.record.uri & embed.record.uri: %s %s"
@@ -784,7 +797,13 @@ def normalize_post(
     try:
         post["text"] = text.decode("utf-8")
     except UnicodeDecodeError as e:
-        raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
+        raise UnicodeDecodeError(
+            e.encoding,
+            e.object,
+            e.start,
+            e.end,
+            f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start : e.end]}",
+        )
 
     if collection_source is not None:
         post["collected_via"] = [collection_source]
