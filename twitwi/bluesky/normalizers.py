@@ -122,13 +122,15 @@ def process_starterpack_card(embed_data, post):
     # Warning: mutates post
 
     card = embed_data.get("record", {})
-    creator_did, pack_did = parse_post_uri(embed_data["uri"])
-    post["card_link"] = format_starterpack_url(
-        embed_data.get("creator", {}).get("handle") or creator_did, pack_did
-    )
-    post["card_title"] = card.get("name", "")
-    post["card_description"] = card.get("description", "")
-    post["card_thumbnail"] = card.get("thumb", "")
+    if "uri" in embed_data:
+        creator_did, pack_did = parse_post_uri(embed_data["uri"])
+        post["card_link"] = format_starterpack_url(
+            embed_data.get("creator", {}).get("handle") or creator_did, pack_did
+        )
+    if card:
+        post["card_title"] = card.get("name", "")
+        post["card_description"] = card.get("description", "")
+        post["card_thumbnail"] = card.get("thumb", "")
     return post
 
 
@@ -145,49 +147,55 @@ def process_card_data(embed_data, post):
 def prepare_quote_data(embed_quote, card_data, post, links):
     # Warning: mutates post and links
 
+    quoted_data = None
+
     post["quoted_cid"] = embed_quote["cid"]
     post["quoted_uri"] = embed_quote["uri"]
-    post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
-        post["quoted_uri"], post["url"]
-    )
-
-    # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
-    # Handling special posts types (only lists for now, for example: https://bsky.app/profile/lanana421.bsky.social/lists/3lxdgjtpqhf2z)
-    if "/app.bsky.graph.list/" in post["quoted_uri"]:
-        post_splitter = "/lists/"
+    # Sometimes quoted post is not found, even if uri and cid are given
+    # example: https://bsky.app/profile/takobiotech.masto.bike.ap.brid.gy/post/3lc6r7nzil6m2
+    if card_data and card_data.get("notFound"):
+        post["quoted_status"] = "notFound"
     else:
-        post_splitter = "/post/"
-    post["quoted_url"] = format_post_url(
-        post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter
-    )
+        post["quoted_user_did"], post["quoted_did"] = parse_post_uri(
+            post["quoted_uri"], post["url"]
+        )
 
-    quoted_data = None
-    if card_data:
-        if card_data.get("detached", False):
-            post["quoted_status"] = "detached"
-
+        # First store ugly quoted url with user did in case full quote data is missing (recursion > 3 or detached quote)
+        # Handling special posts types (only lists for now, for example: https://bsky.app/profile/lanana421.bsky.social/lists/3lxdgjtpqhf2z)
+        if "/app.bsky.graph.list/" in post["quoted_uri"]:
+            post_splitter = "/lists/"
         else:
-            quoted_data = deepcopy(card_data)
+            post_splitter = "/post/"
+        post["quoted_url"] = format_post_url(
+            post["quoted_user_did"], post["quoted_did"], post_splitter=post_splitter
+        )
 
-    # Grab user handle and cleanup links when no quote data but url in text
-    if not quoted_data:
-        for link in links:
-            if link.startswith("https://bsky.app/profile/") and link.endswith(
-                post["quoted_did"]
-            ):
-                # Take better quoted url with user_handle
-                post["quoted_url"] = link
-                break
+        if card_data:
+            if card_data.get("detached"):
+                post["quoted_status"] = "detached"
 
-        # Remove quoted link from post links
-        if post["quoted_url"] in links:
-            links.remove(post["quoted_url"])
+            else:
+                quoted_data = deepcopy(card_data)
 
-        # Extract user handle from url
-        if "did:plc:" not in post["quoted_url"]:
-            post["quoted_user_handle"], _ = parse_post_url(
-                post["quoted_url"], post["url"]
-            )
+        # Grab user handle and cleanup links when no quote data but url in text
+        if not quoted_data:
+            for link in links:
+                if link.startswith("https://bsky.app/profile/") and link.endswith(
+                    post["quoted_did"]
+                ):
+                    # Take better quoted url with user_handle
+                    post["quoted_url"] = link
+                    break
+
+            # Remove quoted link from post links
+            if post["quoted_url"] in links:
+                links.remove(post["quoted_url"])
+
+            # Extract user handle from url
+            if "did:plc:" not in post["quoted_url"]:
+                post["quoted_user_handle"], _ = parse_post_url(
+                    post["quoted_url"], post["url"]
+                )
 
     return (post, quoted_data, links)
 
@@ -300,6 +308,7 @@ def normalize_post(
     post["timestamp_utc"], post["local_time"] = get_dates(
         data["record"]["createdAt"], locale=locale, source="bluesky"
     )
+    post["indexed_at_utc"] = data["indexedAt"]
 
     # Handle post/user identifiers
     post["cid"] = data["cid"]
@@ -363,12 +372,21 @@ def normalize_post(
                 # Check & fix occasional errored mention positioning
                 # example: https://bsky.app/profile/snjcgt.bsky.social/post/3lpmqkkkgp52u
                 byteStart = facet["index"]["byteStart"]
+                byteEnd = facet["index"]["byteEnd"]
                 if text[byteStart : byteStart + 1] != b"@":
                     byteStart = text.find(b"@", byteStart)
+                # in some cases, the errored positioning is before the position given
+                # example: https://bsky.app/profile/springer.springernature.com/post/3lovyad4nt324
+                if byteStart == -1 or byteStart > byteEnd:
+                    # When decrementing byteStart, we also decrement byteEnd (see below)
+                    # shifting the slice to extract the mention correctly
+                    byteStart = facet["index"]["byteStart"] - 1
+                    # to extend the size of the mention, which is somehow 1 char too short because of the '@'
+                    byteEnd += 1
 
                 handle = (
                     text[
-                        byteStart + 1 : facet["index"]["byteEnd"]
+                        byteStart + 1 : byteEnd
                         + byteStart
                         - facet["index"]["byteStart"]
                     ]
@@ -400,21 +418,87 @@ def normalize_post(
             # examples: https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
             #           https://bsky.app/profile/clustz.com/post/3lqfi7mnto52w
             byteStart = facet["index"]["byteStart"]
+            byteEnd = facet["index"]["byteEnd"]
 
-            if not text[byteStart : facet["index"]["byteEnd"]].startswith(b"http"):
-                new_byteStart = text.find(b"http", byteStart, facet["index"]["byteEnd"])
+            if not text[byteStart:byteEnd].startswith(b"http"):
+                new_byteStart = text.find(b"http", byteStart, byteEnd)
+
+                # means that the link is shifted, like on this post:
+                # https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
                 if new_byteStart != -1:
                     byteStart = new_byteStart
 
-            links_to_replace.append(
-                {
-                    "uri": feat["uri"].encode("utf-8"),
-                    "start": byteStart,
-                    "end": byteStart
-                    - facet["index"]["byteStart"]
-                    + facet["index"]["byteEnd"],
-                }
-            )
+                    # Find the index of the first space character after byteStart in case the link is a personalized one
+                    # but still with the link in it (somehow existing in some posts, such as this one:
+                    # https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltmljz5blca2)
+                    # In this case, we don't want to touch the position of the link given in the payload
+                    byteEnd = min(
+                        byteStart
+                        - facet["index"]["byteStart"]
+                        + facet["index"]["byteEnd"],
+                        len(post["original_text"].encode("utf-8")),
+                    )
+                    for i in range(byteStart, byteEnd):
+                        if chr(text[i]).isspace():
+                            byteStart = facet["index"]["byteStart"]
+                    byteEnd = (
+                        byteStart
+                        - facet["index"]["byteStart"]
+                        + facet["index"]["byteEnd"]
+                    )
+
+                # means that the link is a "personalized" one like on this post:
+                # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
+                else:
+                    # we're looking for a link which could be valid if we add "https://" at the beginning,
+                    # as in some cases the "http(s)://" part is missing in the post text
+                    for starting in range(byteEnd - byteStart):
+                        try:
+                            if is_url(
+                                "https://"
+                                + text[
+                                    byteStart + starting : byteEnd + starting
+                                ].decode("utf-8")
+                            ):
+                                byteStart += starting
+                                break
+                        except UnicodeDecodeError:
+                            pass
+                    # If we did not find any valid link, we just keep the original position as it is
+                    # meaning that we have a personalized link like in the example above
+
+                    # Extend byteEnd to the right until we find a valid utf-8 ending,
+                    # as in some cases the link is longer than the position given in the payload
+                    # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
+                    # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
+                    while byteEnd <= len(post["original_text"].encode("utf-8")):
+                        try:
+                            text[byteStart:byteEnd].decode("utf-8")
+                            break
+                        except UnicodeDecodeError:
+                            byteEnd += 1
+                            continue
+
+                    if byteEnd > len(post["original_text"].encode("utf-8")):
+                        byteEnd = facet["index"]["byteEnd"]
+
+                    byteEnd += byteStart - facet["index"]["byteStart"]
+
+            # In some cases, the link is completely wrong in the post text,
+            # like in this post: https://bsky.app/profile/sudetsoleil.bsky.social/post/3ljf3h74wee2m
+            # So we chose to not replace anything in the text in this case
+            try:
+                text[byteStart:byteEnd].decode("utf-8")
+                links_to_replace.append(
+                    {
+                        "uri": feat["uri"].encode("utf-8"),
+                        "start": byteStart,
+                        "end": byteEnd,
+                    }
+                )
+            except UnicodeDecodeError:
+                pass
+                # raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
 
         elif feat["$type"].endswith("#bold"):
             pass
@@ -505,9 +589,9 @@ def normalize_post(
         if embed["$type"].endswith(".record"):
             if "app.bsky.graph.starterpack" in embed["record"]["uri"]:
                 post = process_starterpack_card(
-                    data.get("embed", {}).get("record"), post
+                    data.get("embed", {}).get("record", {}), post
                 )
-                if post["card_link"]:
+                if post.get("card_link"):
                     extra_links.append(post["card_link"])
             else:
                 post, quoted_data, links = prepare_quote_data(
@@ -598,7 +682,7 @@ def normalize_post(
         if quoted_data and "value" in quoted_data:
             # We're checking on the uri as the cid can be different in some cases,
             # and the uri seems to be unique for each post
-            if quoted_data["uri"] != post["quoted_uri"]: 
+            if quoted_data["uri"] != post["quoted_uri"]:
                 raise BlueskyPayloadError(
                     post["url"],
                     "inconsistent quote uri found between record.embed.record.uri & embed.record.uri: %s %s"
@@ -714,7 +798,11 @@ def normalize_post(
         post["text"] = text.decode("utf-8")
     except UnicodeDecodeError as e:
         raise UnicodeDecodeError(
-            f"Failed to decode post text: {e}\nPost URL: {post['url']}\nOriginal text bytes: {text}"
+            e.encoding,
+            e.object,
+            e.start,
+            e.end,
+            f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start : e.end]}",
         )
 
     if collection_source is not None:

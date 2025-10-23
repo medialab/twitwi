@@ -50,6 +50,7 @@ class BlueskyPost(TypedDict):
     # Datetime fields
     timestamp_utc: int                  # Unix UTC timestamp of when the post was submitted
     local_time: str                     # datetime (potentially timezoned) of when the post was submitted
+    indexed_at_utc: str                 # datetime (NOT timezoned, for reuse of the Bluesky API) of when the post was indexed by the Bluesky service
 
     # Author identifying fields
     user_did: str                       # persistent long-term identifier of the account who authored the post

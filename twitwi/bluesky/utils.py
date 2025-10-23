@@ -75,7 +75,7 @@ def format_post_url(user_handle_or_did, post_did, post_splitter="/post/"):
 def parse_post_url(url, source):
     """Returns a tuple of (author_handle/did, post_did) from an https://bsky.app post URL"""
 
-    known_splits = ["/post/", "/lists/"]
+    known_splits = ["/post/", "/lists/", "/feed/"]
 
     if url.startswith("https://bsky.app/profile/"):
         for split in known_splits:
@@ -117,7 +117,7 @@ def format_media_url(user_did, media_cid, mime_type, source):
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
-    elif mime_type == "application/octet-stream":
+    elif mime_type in ["application/octet-stream", "text/plain"]:
         media_url = (
             f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
         )
