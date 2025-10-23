@@ -60,6 +60,9 @@ def get_dates(
     if locale is None:
         locale = UTC_TIMEZONE
 
+    # Let's pray we never see a negative year...
+    year_zero = date_str.startswith("0000")
+
     try:
         parsed_datetime = datetime.strptime(
             date_str,
@@ -70,7 +73,7 @@ def get_dates(
             raise e
         # Yes, it seems that some people were active in year 0...
         # see by yourself: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
-        if date_str.startswith("0000"):
+        if year_zero:
             date_str_fixed = "0001" + date_str[4:]
             parsed_datetime = parse_date(date_str_fixed)
         else:
@@ -82,25 +85,25 @@ def get_dates(
     locale_datetime = utc_datetime.astimezone(locale)
 
     timestamp = int(utc_datetime.timestamp())
-    
-    if date_str.startswith("0000"):
-        # Handle year 0 case
-        timestamp -= 31536000  # Subtract one year (year 0001 is not a leap year) in seconds
+
+    if year_zero:
+        # Subtract one year (year 0001 is not a leap year) in seconds
+        timestamp -= 31536000
 
     if millisecond_timestamp:
         timestamp *= 1000
         timestamp += utc_datetime.microsecond / 1000
 
     formatted_date_str = datetime.strftime(
-            locale_datetime,
-            FORMATTED_FULL_DATETIME_FORMAT
-            if source == "bluesky"
-            else FORMATTED_TWEET_DATETIME_FORMAT,
-        )
+        locale_datetime,
+        FORMATTED_FULL_DATETIME_FORMAT
+        if source == "bluesky"
+        else FORMATTED_TWEET_DATETIME_FORMAT,
+    )
 
     return (
         int(timestamp),
-        formatted_date_str if not date_str.startswith("0000") else "0" + formatted_date_str[1:],
+        formatted_date_str if not year_zero else "0" + formatted_date_str[1:],
     )
 
 
