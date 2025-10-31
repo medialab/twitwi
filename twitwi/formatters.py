@@ -52,7 +52,7 @@ def make_transform_into_csv_dict(plural_fields, boolean_fields):
 
 
 def make_format_as_csv_row(fields, plural_fields, boolean_fields):
-    def format_field_for_csv(field, item, item_id=None, plural_separator="|"):
+    def format_field_for_csv(field, item, item_id=None, plural_separator="|", allow_erroneous_plurals=False):
         if field == "id" and item_id is not None:
             return item_id
 
@@ -63,6 +63,11 @@ def make_format_as_csv_row(fields, plural_fields, boolean_fields):
             if field == "links":
                 v = item.get("proper_links", v)
 
+            # Clean None values that may have slipped in, such as in the 'domains' field when
+            # normalizing this Bluesky post: https://bsky.app/profile/did:plc:cs5qjcmnntogoahrrsagmg2z/post/3lvqhn7raq62v
+            if allow_erroneous_plurals:
+                v = [element if element is not None else "" for element in v]
+
             return plural_separator.join(v)
 
         if field in boolean_fields:
@@ -70,10 +75,10 @@ def make_format_as_csv_row(fields, plural_fields, boolean_fields):
 
         return item.get(field, "")
 
-    def format_item_as_csv_row(item, item_id=None, plural_separator="|"):
+    def format_item_as_csv_row(item, item_id=None, plural_separator="|", allow_erroneous_plurals=False):
         return [
             format_field_for_csv(
-                field, item, item_id=item_id, plural_separator=plural_separator
+                field, item, item_id=item_id, plural_separator=plural_separator, allow_erroneous_plurals=allow_erroneous_plurals
             )
             for field in fields
         ]

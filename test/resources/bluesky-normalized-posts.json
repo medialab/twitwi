@@ -5058,5 +5058,54 @@
       "user_timestamp_utc": 1699966122,
       "user_url": "https://bsky.app/profile/waon.me"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "card_description": "最新のPC／スマホ／デジタルガジェットのレビュー＆ニュース情報が満載！難しいことを分かりやすく、最新の情報を楽しくお届けする、総合IT情報サイト。",
+      "card_link": "http://ASCII.jp",
+      "card_thumbnail": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cs5qjcmnntogoahrrsagmg2z/bafkreidxxonqwjwzhtbldquceulmzkwn57dr2n7o2srhwegmx2vlxnmc5e@jpeg",
+      "card_title": "ASCII.jp － トップ",
+      "cid": "bafyreicfcnlkxqb5fvaxztqffpihav62na6mxs7tgewwhd7dqf3e3732aa",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lvqhn7raq62v",
+      "domains": [
+        "ascii.jp",
+        null,
+        "ascii.jp"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2025-08-06T14:46:05.708Z",
+      "like_count": 0,
+      "links": [
+        "http://ascii.jp",
+        "https://ASCII.jp：ついに来た！",
+        "https://ascii.jp/elem/000/004/310/4310823/"
+      ],
+      "local_time": "2025-08-06T16:46:02.062000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "ASCII.jp：ついに来た！ iPhoneがマイナンバーカードになる神機能をデジタル庁��提供開始 https://ascii.jp/elem/000/0/004/310/4310823/",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "https://ASCII.jp：ついに来た！ iPhoneがマイナンバーカードになる神機能をデジタル庁��提供開始 https://ascii.jp/elem/000/004/310/4310823/ http://ASCII.jp",
+      "timestamp_utc": 1754491562,
+      "uri": "at://did:plc:cs5qjcmnntogoahrrsagmg2z/app.bsky.feed.post/3lvqhn7raq62v",
+      "url": "https://bsky.app/profile/madgibel.bsky.social/post/3lvqhn7raq62v",
+      "user_avatar": "",
+      "user_created_at": "2023-12-24T04:59:30.191000",
+      "user_did": "did:plc:cs5qjcmnntogoahrrsagmg2z",
+      "user_diplay_name": "",
+      "user_handle": "madgibel.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1703390370,
+      "user_url": "https://bsky.app/profile/madgibel.bsky.social"
+    }
   ]
 ]

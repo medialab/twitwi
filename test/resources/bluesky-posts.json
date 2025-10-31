@@ -8544,6 +8544,96 @@
       "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:cs5qjcmnntogoahrrsagmg2z/app.bsky.feed.post/3lvqhn7raq62v",
+    "cid": "bafyreicfcnlkxqb5fvaxztqffpihav62na6mxs7tgewwhd7dqf3e3732aa",
+    "author": {
+      "did": "did:plc:cs5qjcmnntogoahrrsagmg2z",
+      "handle": "madgibel.bsky.social",
+      "associated": {
+        "chat": {
+          "allowIncoming": "all"
+        },
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-12-24T03:59:30.191Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-08-06T14:46:02.062Z",
+      "embed": {
+        "$type": "app.bsky.embed.external",
+        "external": {
+          "description": "最新のPC／スマホ／デジタルガジェットのレビュー＆ニュース情報が満載！難しいことを分かりやすく、最新の情報を楽しくお届けする、総合IT情報サイト。",
+          "thumb": {
+            "$type": "blob",
+            "ref": {
+              "$link": "bafkreidxxonqwjwzhtbldquceulmzkwn57dr2n7o2srhwegmx2vlxnmc5e"
+            },
+            "mimeType": "image/png",
+            "size": 152421
+          },
+          "title": "ASCII.jp － トップ",
+          "uri": "http://ASCII.jp"
+        }
+      },
+      "facets": [
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://ASCII.jp：ついに来た！"
+            }
+          ],
+          "index": {
+            "byteEnd": 29,
+            "byteStart": 0
+          }
+        },
+        {
+          "features": [
+            {
+              "$type": "app.bsky.richtext.facet#link",
+              "uri": "https://ascii.jp/elem/000/004/310/4310823/"
+            }
+          ],
+          "index": {
+            "byteEnd": 148,
+            "byteStart": 104
+          }
+        }
+      ],
+      "text": "ASCII.jp：ついに来た！ iPhoneがマイナンバーカードになる神機能をデジタル庁��提供開始 https://ascii.jp/elem/000/0/004/310/4310823/"
+    },
+    "embed": {
+      "$type": "app.bsky.embed.external#view",
+      "external": {
+        "uri": "http://ASCII.jp",
+        "title": "ASCII.jp － トップ",
+        "description": "最新のPC／スマホ／デジタルガジェットのレビュー＆ニュース情報が満載！難しいことを分かりやすく、最新の情報を楽しくお届けする、総合IT情報サイト。",
+        "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cs5qjcmnntogoahrrsagmg2z/bafkreidxxonqwjwzhtbldquceulmzkwn57dr2n7o2srhwegmx2vlxnmc5e@jpeg"
+      }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-08-06T14:46:05.708Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
