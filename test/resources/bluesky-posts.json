@@ -8497,6 +8497,53 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:na6u3avvaz2x5wyzqrnviqiz/app.bsky.feed.post/3lzf5qi2ra62k",
+    "cid": "bafyreicegqljyeaqbibuony3phwpawq3amtwrmxcnbjylpnv3e2cyvzkji",
+    "author": {
+      "did": "did:plc:na6u3avvaz2x5wyzqrnviqiz",
+      "handle": "waon.me",
+      "displayName": "わおん",
+      "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:na6u3avvaz2x5wyzqrnviqiz/bafkreidnupsuaf5dd2335yzx6lil3bfmydxqzv6e65kobgfah3scgvsfzy@jpeg",
+      "associated": {
+        "chat": {
+          "allowIncoming": "none"
+        },
+        "activitySubscription": {
+          "allowSubscriptions": "followers"
+        }
+      },
+      "viewer": {
+        "muted": false,
+        "blockedBy": false
+      },
+      "labels": [],
+      "createdAt": "2023-11-14T12:48:42.816Z"
+    },
+    "record": {
+      "$type": "app.bsky.feed.post",
+      "createdAt": "2025-09-22T00:30:23.597Z",
+      "embed": {
+        "$type": "app.bsky.feed.post"
+      },
+      "langs": [
+        "ja"
+      ],
+      "text": "0時に寝て8時に起きる習慣が欲しい"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-09-22T00:30:24.206Z",
+    "viewer": {
+      "bookmarked": false,
+      "threadMuted": false,
+      "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
