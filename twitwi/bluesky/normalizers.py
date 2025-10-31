@@ -558,6 +558,15 @@ def normalize_post(
                 post["url"], "unusual record embed $type: %s" % embed
             )
 
+        # Empty embed (not usual, but seen in the Bluesky jungle, e.g.
+        # https://bsky.app/profile/did:plc:na6u3avvaz2x5wyzqrnviqiz/post/3lzf5qi2ra62k)
+        if embed["$type"].endswith(".post"):
+            if len(embed.keys()) > 1:
+                raise BlueskyPayloadError(
+                    post["url"], "unusual empty record embed with extra keys: %s" % embed
+                )
+            # Nothing to do for empty embed
+
         # Links from cards
         if embed["$type"].endswith(".external"):
             link = embed["external"]["uri"]
