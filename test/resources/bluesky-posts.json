@@ -6220,7 +6220,7 @@
                 "features": [
                     {
                         "$type": "app.bsky.richtext.facet#link",
-                        "uri": 
+                        "uri":
 "https://www.hindustantimes.com/world-news/emmanuel-macron-his-wifes-shocking-conversation-after-shoving-incident-decoded-by-lip-reader-101748504953501.html"
                     }
                 ],
@@ -6782,7 +6782,7 @@
     },
     "labels": []
   },
-  {  
+  {
     "uri": "at://did:plc:qgunaom6akvc4cajk4dhxwym/app.bsky.feed.post/3lzrffjgbhgg2",
     "cid": "bafyreihcmjiiegk4mpssqlqry4uaqgcgjhwrn4kylgg4e3umhgwbz62doe",
     "author": {
@@ -8411,6 +8411,86 @@
     "likeCount": 0,
     "quoteCount": 0,
     "indexedAt": "2024-03-24T20:43:54.013Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
+  },
+  {
+    "uri": "at://did:plc:ks2g3nvan45uubmdut4eorha/app.bsky.feed.post/3m2hjrykimx2k",
+    "cid": "bafyreibobiqueyxfye5xfoxgopgxoxd2sbub5x234w24ujndvcqxys7j5m",
+    "author": {
+        "did": "did:plc:ks2g3nvan45uubmdut4eorha",
+        "handle": "diffotbollnewsfeed.bsky.social",
+        "displayName": "Djurgården Fotboll - Newsfeed",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ks2g3nvan45uubmdut4eorha/bafkreiekx5nisfxoaiajniadqch5k74h63qesityt4mcxqeqb6p4q774wu@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-04-13T08:16:41.273Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-10-05T16:36:30.410000Z",
+        "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+                "description": "No description available.",
+                "thumb": {
+                    "$type": "blob",
+                    "ref": {
+                        "$link": "bafkreieodgw47dlh66pzpdrw5knkezhjziomoelol4ywzrbrxdz7bkjszy"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 84842
+                },
+                "title": "Highlights | Piteå IF - Djurgården 0-0",
+                "uri": "https://www.dif.se/video/2025/oktober/highlights-pitea-if-djurgarden-0-0"
+            }
+        },
+        "facets": [
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet.link",
+                        "uri": "https://www.dif.se/video/2025/oktober/highlights-pitea-if-djurgarden-0-0"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 135,
+                    "byteStart": 63,
+                    "end": 132,
+                    "start": 60
+                }
+            }
+        ],
+        "text": "Highlights | Piteå IF - Djurgården 0-0\n\nDjurgården Fotboll\n\nhttps://www.dif.se/video/2025/oktober/highlights-pitea-if-djurgarden-0-0"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+            "uri": "https://www.dif.se/video/2025/oktober/highlights-pitea-if-djurgarden-0-0",
+            "title": "Highlights | Piteå IF - Djurgården 0-0",
+            "description": "No description available.",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ks2g3nvan45uubmdut4eorha/bafkreieodgw47dlh66pzpdrw5knkezhjziomoelol4ywzrbrxdz7bkjszy@jpeg"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-10-05T16:36:31.760Z",
     "viewer": {
         "bookmarked": false,
         "threadMuted": false,
