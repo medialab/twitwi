@@ -504,6 +504,10 @@ def normalize_post(
             pass
         elif feat["$type"].endswith("#option"):
             pass
+        # Bluesky seems to use format features for some internal purposes, but we ignore them
+        # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g
+        elif feat["$type"].endswith("format"):
+            pass
         else:
             raise BlueskyPayloadError(
                 post["url"], "unusual record facet feature $type: %s" % feat
