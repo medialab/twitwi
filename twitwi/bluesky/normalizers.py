@@ -420,6 +420,11 @@ def normalize_post(
             byteStart = facet["index"]["byteStart"]
             byteEnd = facet["index"]["byteEnd"]
 
+            # It appears that some links end before they start... Bluesky please: what's going on?
+            # example: https://bsky.app/profile/ondarockwebzine.bsky.social/post/3lqxxejza6o2t
+            if int(byteEnd) < int(byteStart):
+                continue
+
             if not text[byteStart:byteEnd].startswith(b"http"):
                 new_byteStart = text.find(b"http", byteStart, byteEnd)
 
