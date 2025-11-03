@@ -8746,6 +8746,155 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:axnk4tq6meineaeb4xzzvji6/app.bsky.feed.post/3lqxxejza6o2t",
+    "cid": "bafyreigg5v4fh4gh6v4sgstjft5yrxnssf6uwobpl536mwgqh6hh4nxghy",
+    "author": {
+        "did": "did:plc:axnk4tq6meineaeb4xzzvji6",
+        "handle": "ondarockwebzine.bsky.social",
+        "displayName": "Ondarock",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:axnk4tq6meineaeb4xzzvji6/bafkreibibzshygzzky6bobbu2vdht4j4n4dhyvgiprh7namqc2mm7vf6d4@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-06-04T16:25:40.840Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-06-06T23:10:11.133Z",
+        "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+                {
+                    "alt": "Un violinista mago dell'elettronica - Simon House, 1948-2025\n\nUno sguardo sulla carriera del violinista e tastierista che ha segnato la musica britannica anni Settanta, dagli High Tide agli Hawkwind, fino a David Bowie",
+                    "aspectRatio": {
+                        "height": 350,
+                        "width": 700
+                    },
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreihbz2jgodaiv3mda4s6gbfhenqp63p32celjp7435eqobq6s3rwc4"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 30688
+                    }
+                }
+            ]
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://www.ondarock.it/speciali/simon-house-1948-2025.htm"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 82,
+                    "byteStart": 22
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://www.ondarock.it/staff/federicoromagnoli.htm"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 19,
+                    "byteStart": 301
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "Ondarock"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 272,
+                    "byteStart": 263
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "MusicianSky"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 285,
+                    "byteStart": 273
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "MusicSky"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 295,
+                    "byteStart": 286
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "Music"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 302,
+                    "byteStart": 296
+                }
+            }
+        ],
+        "lang": [
+            "it-IT"
+        ],
+        "text": "Approfondimenti 🔍\n\nUn violinista mago dell'elettronica - Simon House, 1948-2025\n\nUno sguardo sulla carriera del violinista e tastierista che ha segnato la musica britannica anni Settanta, dagli High Tide agli Hawkwind, fino a David Bowie\n\na cura di Federi...\n\n#Ondarock #MusicianSky #MusicSky #Music"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:axnk4tq6meineaeb4xzzvji6/bafkreihbz2jgodaiv3mda4s6gbfhenqp63p32celjp7435eqobq6s3rwc4@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:axnk4tq6meineaeb4xzzvji6/bafkreihbz2jgodaiv3mda4s6gbfhenqp63p32celjp7435eqobq6s3rwc4@jpeg",
+                "alt": "Un violinista mago dell'elettronica - Simon House, 1948-2025\n\nUno sguardo sulla carriera del violinista e tastierista che ha segnato la musica britannica anni Settanta, dagli High Tide agli Hawkwind, fino a David Bowie",
+                "aspectRatio": {
+                    "height": 350,
+                    "width": 700
+                }
+            }
+        ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-06-06T23:10:12.854Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
