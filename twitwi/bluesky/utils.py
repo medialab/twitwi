@@ -93,6 +93,7 @@ def parse_post_uri(uri, source=None):
         "/app.bsky.graph.starterpack/",
         "/app.bsky.feed.generator/",
         "/app.bsky.graph.list/",
+        "/app.bsky.graph.follow/", # This one is often found when a post is an anwser to a deleted post (e.g. https://bsky.app/profile/sydney-chat.bsky.social/post/3ltsph6kxfl25)
     ]
 
     if uri.startswith("at://"):
