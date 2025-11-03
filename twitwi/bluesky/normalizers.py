@@ -361,7 +361,7 @@ def normalize_post(
         feat = facet["features"][0]
 
         # Hashtags
-        if feat["$type"].endswith("#tag") or feat["$type"].endswith("#hashtag"):
+        if feat["$type"].endswith("#tag") or feat["$type"].endswith("#hashtag") or feat["$type"] == "FACETTAG":
             hashtags.add(feat["tag"].strip().lower())
 
         # Mentions

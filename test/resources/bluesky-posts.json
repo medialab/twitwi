@@ -8895,6 +8895,70 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:k3segytdbiyvbaimnsskqnf3/app.bsky.feed.post/3lj6nhm2gsn23",
+    "cid": "bafyreickdcpz2sliez3ykjhaevzsg5gazxx466tgkgvi463cpst64ldk5u",
+    "author": {
+        "did": "did:plc:k3segytdbiyvbaimnsskqnf3",
+        "handle": "abbeybot.bsky.social",
+        "displayName": "Ed Abbey Bot",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:k3segytdbiyvbaimnsskqnf3/bafkreib2hfdde5qowgkrommhykiemankuledawfqbrbmgpeeahignoafia@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-02-14T02:31:55.544Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-02-27T19:40:01Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "FACETTAG",
+                        "tag": "Abbey"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 53,
+                    "byteStart": 47
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "FACETTAG",
+                        "tag": "EdAbbey"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 62,
+                    "byteStart": 54
+                }
+            }
+        ],
+        "text": "Ah, to be a buzzard now that spring is here!\n\n\n#Abbey #EdAbbey"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-02-27T19:40:03.959Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
