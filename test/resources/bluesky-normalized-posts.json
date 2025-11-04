@@ -5429,5 +5429,59 @@
       "user_timestamp_utc": 1703062939,
       "user_url": "https://bsky.app/profile/dangelodario.it"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "bridgy_original_url": "https://scroll.in/article/1086813/how-liable-are-ai-chatbots-for-suicide-courts-think-big-tech-must-take-some-responsibility?utm_source=rss&utm_medium=public",
+      "cid": "bafyreifhtz2gqgub5nhzppvucck5erxcsz5llq4wuikc7vbosqjizqtiju",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lzjhnnoxwuk2",
+      "domains": [
+        "awakari.com",
+        "awakari.com",
+        "scroll.in"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2025-09-23T17:38:36.114Z",
+      "like_count": 0,
+      "links": [
+        "https://awakari.com/pub-msg.html?id=9pdOrGS8lCkfflZQuDIaw29ZJOi&interestId=LLMs",
+        "https://awakari.com/sub-details.html?id=LLMs",
+        "https://scroll.in/article/1086813/how-liable-are-ai-chatbots-for-suicide-courts-think-big-tech-must-take-some-responsibility"
+      ],
+      "local_time": "2025-09-23T18:30:00.000000",
+      "match_query": true,
+      "media_alt_texts": [
+        ""
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:s33lmvk7rwmlypc2qm6wn2lr/bafkreidqbqbaopaccg5nocchnq6ajw4m5xixldw4bjlwudgeuz2piplgeu@jpeg"
+      ],
+      "media_types": [
+        "binary/octet-stream"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:s33lmvk7rwmlypc2qm6wn2lr/bafkreidqbqbaopaccg5nocchnq6ajw4m5xixldw4bjlwudgeuz2piplgeu@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "How liable are AI chatbots for suicide? Courts think Big Tech must take some responsibility The more that modern chatbots depart from the old structures of the web, the further away they move from ...\n\n\nOrigin | Interest | Match",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "How liable are AI chatbots for suicide? Courts think Big Tech must take some responsibility The more that modern chatbots depart from the old structures of the web, the further away they move from ...\n\n\nhttps://scroll.in/article/1086813/how-liable-are-ai-chatbots-for-suicide-courts-think-big-tech-must-take-some-responsibility?utm_source=rss&utm_medium=public | https://awakari.com/sub-details.html?id=LLMs | https://awakari.com/pub-msg.html?id=9pdOrGS8lCkfflZQuDIaw29ZJOi&interestId=LLMs https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:s33lmvk7rwmlypc2qm6wn2lr/bafkreidqbqbaopaccg5nocchnq6ajw4m5xixldw4bjlwudgeuz2piplgeu@jpeg",
+      "timestamp_utc": 1758645000,
+      "uri": "at://did:plc:s33lmvk7rwmlypc2qm6wn2lr/app.bsky.feed.post/3lzjhnnoxwuk2",
+      "url": "https://bsky.app/profile/llms.activitypub.awakari.com.ap.brid.gy/post/3lzjhnnoxwuk2",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:s33lmvk7rwmlypc2qm6wn2lr/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
+      "user_created_at": "2025-01-03T20:10:55.244000",
+      "user_did": "did:plc:s33lmvk7rwmlypc2qm6wn2lr",
+      "user_diplay_name": "LLMs",
+      "user_handle": "llms.activitypub.awakari.com.ap.brid.gy",
+      "user_langs": [],
+      "user_timestamp_utc": 1735931455,
+      "user_url": "https://bsky.app/profile/llms.activitypub.awakari.com.ap.brid.gy"
+    }
   ]
 ]
