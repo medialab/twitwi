@@ -88,18 +88,24 @@ def parse_post_url(url, source):
 def parse_post_uri(uri, source=None):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
-    known_splits = [
-        "/app.bsky.feed.post/",
-        "/app.bsky.graph.starterpack/",
-        "/app.bsky.feed.generator/",
-        "/app.bsky.graph.list/",
-        "/app.bsky.graph.follow/", # This one is often found when a post is an anwser to a deleted post (e.g. https://bsky.app/profile/sydney-chat.bsky.social/post/3ltsph6kxfl25)
-    ]
+    # known_splits = [
+    #     "/app.bsky.feed.post/",
+    #     "/app.bsky.graph.starterpack/",
+    #     "/app.bsky.feed.generator/",
+    #     "/app.bsky.graph.list/",
+    #     "/app.bsky.graph.follow/", # This one is often found when a post is an anwser to a deleted post (e.g. https://bsky.app/profile/sydney-chat.bsky.social/post/3ltsph6kxfl25)
+    # ]
 
+    # if uri.startswith("at://"):
+    #     for split in known_splits:
+    #         if split in uri:
+    #             return uri[5:].split(split)
+
+    # There's too much variability in the post URIs, and we cannot be exhaustive,
+    # so we do with the simple approach:
     if uri.startswith("at://"):
-        for split in known_splits:
-            if split in uri:
-                return uri[5:].split(split)
+        author_did, _, post_did = uri[5:].split("/")
+        return author_did, post_did
 
     raise BlueskyPayloadError(source or uri, f"{uri} is not a usual Bluesky post uri")
 
