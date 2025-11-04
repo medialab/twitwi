@@ -118,7 +118,7 @@ def format_media_url(user_did, media_cid, mime_type, source):
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
-    elif mime_type in ["application/octet-stream", "text/plain"]:
+    elif mime_type in ["application/octet-stream", "text/plain", "text/html; charset=utf-8"]:
         media_url = (
             f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
         )

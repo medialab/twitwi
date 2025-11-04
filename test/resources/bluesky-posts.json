@@ -9048,6 +9048,112 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:7rs7ivzymgqcy4rto6utny6w/app.bsky.feed.post/3li6d5cduibg2",
+    "cid": "bafyreic5r63t4la36ihv3rgndjsxgq44vzczbyka6wzwclmlgzlffrqpjm",
+    "author": {
+        "did": "did:plc:7rs7ivzymgqcy4rto6utny6w",
+        "handle": "ndmais.com.br.web.brid.gy",
+        "displayName": "ND Mais - Portal de Notícias de Santa Catarina e do Brasil",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreidzvesbh3vens5fntrs3ymu2w7ipyldiqhflqaido3ysqsyumiive@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "none"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:7rs7ivzymgqcy4rto6utny6w",
+                "uri": "at://did:plc:7rs7ivzymgqcy4rto6utny6w/app.bsky.actor.profile/self",
+                "cid": "bafyreiaizmwpvcuoyztn3rzxxgod2225bhfu7chanaiob4r7unhnkdtaru",
+                "val": "bridged-from-bridgy-fed-web",
+                "cts": "1970-01-01T00:00:00.000Z"
+            }
+        ],
+        "createdAt": "2024-09-20T13:26:06.307Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "bridgyOriginalText": "MPF pede absolvição de professores da UFSC na Operação Ouvidos Moucos",
+        "bridgyOriginalUrl": "https://ndmais.com.br/noticias/mpf-pede-absolvicao-de-professores-da-ufsc-na-operacao-ouvidos-moucos/",
+        "createdAt": "2025-02-14T22:12:00.000Z",
+        "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+                {
+                    "$type": "app.bsky.embed.images#image",
+                    "alt": "<p>O Ministério Público Federal pediu a absolvição dos professores Márcio Santos e Sônia de Souza Cruz, acusados em 2019 por fraude a licitação e participação em organização criminosa na Operação Ouvidos Moucos. Segundo o MPF, não há comprovação do envolvimento deles nas irregularidades apontadas. A operação também teve como alvo o ex-reitor Luiz Carlos Cancellier, que foi preso e, posteriormente, cometeu suicídio. Em 2023, o TCU reconheceu sua inocência.</p>",
+                    "aspectRatio": {
+                        "height": 720,
+                        "width": 1280
+                    },
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreiextrblcdjvdn7hw4wozdphlp3znlmx254sdhrwp4ug3v6j2dhize"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 112468
+                    }
+                },
+                {
+                    "$type": "app.bsky.embed.images#image",
+                    "alt": "",
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreicy2mbrv7z2vhc5xfktwjjny7fyyq3faliw4ztbjrqqhpc32ova24"
+                        },
+                        "mimeType": "text/html; charset=utf-8",
+                        "size": 884323
+                    }
+                }
+            ]
+        },
+        "tags": [
+            "Vídeo da TV"
+        ],
+        "text": "MPF pede absolvição de professores da UFSC na Operação Ouvidos Moucos"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreiextrblcdjvdn7hw4wozdphlp3znlmx254sdhrwp4ug3v6j2dhize@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreiextrblcdjvdn7hw4wozdphlp3znlmx254sdhrwp4ug3v6j2dhize@jpeg",
+                "alt": "<p>O Ministério Público Federal pediu a absolvição dos professores Márcio Santos e Sônia de Souza Cruz, acusados em 2019 por fraude a licitação e participação em organização criminosa na Operação Ouvidos Moucos. Segundo o MPF, não há comprovação do envolvimento deles nas irregularidades apontadas. A operação também teve como alvo o ex-reitor Luiz Carlos Cancellier, que foi preso e, posteriormente, cometeu suicídio. Em 2023, o TCU reconheceu sua inocência.</p>",
+                "aspectRatio": {
+                    "height": 720,
+                    "width": 1280
+                }
+            },
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreicy2mbrv7z2vhc5xfktwjjny7fyyq3faliw4ztbjrqqhpc32ova24@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreicy2mbrv7z2vhc5xfktwjjny7fyyq3faliw4ztbjrqqhpc32ova24@jpeg",
+                "alt": ""
+            }
+        ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-02-14T23:10:30.069Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
