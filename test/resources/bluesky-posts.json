@@ -9967,6 +9967,58 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:jrodn6nnfuwzm2zxbxbpzgot/app.bsky.feed.post/3lhwag3mzoo2k",
+    "cid": "bafyreicdfgnhq7deix3xgi7y7us5fztaa2il44mh66gbc3sow5jxaru5y4",
+    "author": {
+        "did": "did:plc:jrodn6nnfuwzm2zxbxbpzgot",
+        "handle": "nerdburglars.bsky.social",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jrodn6nnfuwzm2zxbxbpzgot/bafkreih427acngzckf7i7frrrilyir42dzypa4rwvm7komm3orqridvkeq@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-04-29T16:11:30.826Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-02-11T18:00:02+00:00",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "text": "#falsed #faussair #falsedat #datadataa"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 38,
+                    "byteStart": 0
+                }
+            }
+        ],
+        "text": "#falsed #faussair #falsedat #datadataa"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-02-11T18:00:03.068Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
