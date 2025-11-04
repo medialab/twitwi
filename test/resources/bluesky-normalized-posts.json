@@ -5541,5 +5541,61 @@
       "user_timestamp_utc": 1756738934,
       "user_url": "https://bsky.app/profile/cdinternational.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "card_description": "Apollo Global Management’s “Chief Economist” Dr. Torsten Sløk released this interesting chart which appears to show a slowdown in AI adoption rates among large (&amp;gt;250 employees) companies: Here’s the full …",
+      "card_link": "https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/",
+      "card_thumbnail": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5ytc5ldidxrzmot6wzozemqh/bafkreidercfl2sowodmmblxyi4uvj6lvla4jj2l3w6ddmzehxatz5hbcii@jpeg",
+      "card_title": "Recreating the Apollo AI adoption rate chart with GPT-5, Python and Pyodide",
+      "cid": "bafyreiar647uf2bokmpwgbig6dbglyytdvoqqace6txb6seeggfe5tm4eq",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lygb2bm64s2j",
+      "domains": [
+        "simonwillison.net"
+      ],
+      "hashtags": [
+        "ai",
+        "chart",
+        "chatgpt",
+        "code",
+        "gpt-5",
+        "python",
+        "simmonwillison",
+        "use-case"
+      ],
+      "indexed_at_utc": "2025-09-09T17:37:06.129Z",
+      "like_count": 1,
+      "links": [
+        "https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/"
+      ],
+      "local_time": "2025-09-09T19:37:01.863000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Recreating the Apollo AI adoption rate chart with GPT-5, Python and Pyodide\nApollo Global Management’s “Chief Economist” Dr. Torsten Sløk released this interesting chart which appears to show a slowdown in AI adoption rates among l…\n#ai #chart #chatgpt #code #gpt-5 #python #simmonwillison #use-case ",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Recreating the Apollo AI adoption rate chart with GPT-5, Python and Pyodide\nApollo Global Management’s “Chief Economist” Dr. Torsten Sløk released this interesting chart which appears to show a slowdown in AI adoption rates among l…\n#ai #chart #chatgpt #code #gpt-5 #python #simmonwillison #use-case  https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/",
+      "timestamp_utc": 1757439421,
+      "uri": "at://did:plc:5ytc5ldidxrzmot6wzozemqh/app.bsky.feed.post/3lygb2bm64s2j",
+      "url": "https://bsky.app/profile/brunoamaral.eu/post/3lygb2bm64s2j",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5ytc5ldidxrzmot6wzozemqh/bafkreif6a7rpcsfqsf7cmhcoekwzc2kru2cxa6ycvvls7nbd2mskqwikxi@jpeg",
+      "user_created_at": "2023-05-29T18:15:10.266000",
+      "user_did": "did:plc:5ytc5ldidxrzmot6wzozemqh",
+      "user_diplay_name": "Bruno Amaral",
+      "user_handle": "brunoamaral.eu",
+      "user_langs": [
+        "en"
+      ],
+      "user_timestamp_utc": 1685376910,
+      "user_url": "https://bsky.app/profile/brunoamaral.eu"
+    }
   ]
 ]

@@ -9542,6 +9542,192 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:5ytc5ldidxrzmot6wzozemqh/app.bsky.feed.post/3lygb2bm64s2j",
+    "cid": "bafyreiar647uf2bokmpwgbig6dbglyytdvoqqace6txb6seeggfe5tm4eq",
+    "author": {
+        "did": "did:plc:5ytc5ldidxrzmot6wzozemqh",
+        "handle": "brunoamaral.eu",
+        "displayName": "Bruno Amaral",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5ytc5ldidxrzmot6wzozemqh/bafkreif6a7rpcsfqsf7cmhcoekwzc2kru2cxa6ycvvls7nbd2mskqwikxi@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "following"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-05-29T16:15:10.266Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-09-09T17:37:01.863Z",
+        "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+                "description": "Apollo Global Management’s “Chief Economist” Dr. Torsten Sløk released this interesting chart which appears to show a slowdown in AI adoption rates among large (&amp;gt;250 employees) companies: Here’s the full …",
+                "thumb": {
+                    "$type": "blob",
+                    "ref": {
+                        "$link": "bafkreidercfl2sowodmmblxyi4uvj6lvla4jj2l3w6ddmzehxatz5hbcii"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 105902
+                },
+                "title": "Recreating the Apollo AI adoption rate chart with GPT-5, Python and Pyodide",
+                "uri": "https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/"
+            }
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/"
+                    },
+                    {
+                        "$type": "app.bsky.richtext.facet#linkcard",
+                        "description": "Apollo Global Management’s “Chief Economist” Dr. Torsten Sløk released this interesting chart which appears to show a slowdown in AI adoption rates among large (&amp;gt;250 employees) companies: Here’s the full …",
+                        "thumb": "https://static.simonwillison.net/static/2025/apollo-ai-card.jpg",
+                        "title": "Recreating the Apollo AI adoption rate chart with GPT-5, Python and Pyodide",
+                        "uri": "https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 75,
+                    "byteStart": 0
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "ai"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 245,
+                    "byteStart": 242
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "chart"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 252,
+                    "byteStart": 246
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "chatgpt"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 261,
+                    "byteStart": 253
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "code"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 267,
+                    "byteStart": 262
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "gpt-5"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 274,
+                    "byteStart": 268
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "python"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 282,
+                    "byteStart": 275
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "simmonwillison"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 298,
+                    "byteStart": 283
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "use-case"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 308,
+                    "byteStart": 299
+                }
+            }
+        ],
+        "langs": [
+            "en"
+        ],
+        "text": "Recreating the Apollo AI adoption rate chart with GPT-5, Python and Pyodide\nApollo Global Management’s “Chief Economist” Dr. Torsten Sløk released this interesting chart which appears to show a slowdown in AI adoption rates among l…\n#ai #chart #chatgpt #code #gpt-5 #python #simmonwillison #use-case "
+    },
+    "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+            "uri": "https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/",
+            "title": "Recreating the Apollo AI adoption rate chart with GPT-5, Python and Pyodide",
+            "description": "Apollo Global Management’s “Chief Economist” Dr. Torsten Sløk released this interesting chart which appears to show a slowdown in AI adoption rates among large (&amp;gt;250 employees) companies: Here’s the full …",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:5ytc5ldidxrzmot6wzozemqh/bafkreidercfl2sowodmmblxyi4uvj6lvla4jj2l3w6ddmzehxatz5hbcii@jpeg"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-09-09T17:37:06.129Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
