@@ -375,7 +375,9 @@ def normalize_post(
 
         # Hashtags
         if feat["$type"].endswith("#tag") or feat["$type"].endswith("#hashtag") or feat["$type"] == "FACETTAG":
-            hashtags.add(feat["tag"].strip().lower())
+            # some posts have "hashtag" instead of "tag" field
+            # example: https://bsky.app/profile/did:plc:jrodn6nnfuwzm2zxbxbpzgot/post/3lhwag3mzoo2k
+            hashtags.add(feat["tag"].strip().lower() if "tag" in feat else feat["hashtag"].strip().lower())
 
         # Mentions
         elif feat["$type"].endswith("#mention"):

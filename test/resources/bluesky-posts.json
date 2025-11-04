@@ -9879,6 +9879,94 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:jrodn6nnfuwzm2zxbxbpzgot/app.bsky.feed.post/3lhwag3mzoo2k",
+    "cid": "bafyreicdfgnhq7deix3xgi7y7us5fztaa2il44mh66gbc3sow5jxaru5y4",
+    "author": {
+        "did": "did:plc:jrodn6nnfuwzm2zxbxbpzgot",
+        "handle": "nerdburglars.bsky.social",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jrodn6nnfuwzm2zxbxbpzgot/bafkreih427acngzckf7i7frrrilyir42dzypa4rwvm7komm3orqridvkeq@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-04-29T16:11:30.826Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-02-11T18:00:02+00:00",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#hashtag",
+                        "hashtag": "GranTurismo7"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 138,
+                    "byteStart": 125
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#hashtag",
+                        "hashtag": "Update155"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 149,
+                    "byteStart": 139
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#hashtag",
+                        "hashtag": "RaceReady"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 160,
+                    "byteStart": 150
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://nerdburglars.net/?p=60857"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 196,
+                    "byteStart": 163
+                }
+            }
+        ],
+        "text": "🚗💨 Gran Turismo 7 Update 1.55: more cars, more events, and AI that's as unpredictable as my driving! Buckle up, folks! #GranTurismo7 #Update155 #RaceReady - https://nerdburglars.net/?p=60857"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-02-11T18:00:03.068Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
