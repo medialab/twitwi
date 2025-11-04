@@ -5681,5 +5681,48 @@
       "user_timestamp_utc": 1748489564,
       "user_url": "https://bsky.app/profile/sydney-chat.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreiaabxjc5n3mkdv3w56mnvq7tgnvtkiwf5hynmtibvdadgbhkaorya",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lml2f5inx52p",
+      "domains": [
+        "promopinke.com"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2025-04-11T22:18:50.092Z",
+      "like_count": 0,
+      "links": [
+        "https://promopinke.com/x/B07MDXGCHK"
+      ],
+      "local_time": "2025-04-12T00:18:49.457000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "N ANDE POR AÍ FEDENDO\n\nDesodorante Gel Gillette 45g\n\n- compre em recorrência (cancele quando quiser)\n- mínimo 2 un.\n\n13,49 à vista\nCool Wave https://promopinke.com/x/B07MDXGCHK\nHydra Gel Aloe https://promopinke.com/x/B07MDXGCHK",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "https://promopinke.com/x/B07MDXGCHK",
+      "timestamp_utc": 1744409929,
+      "uri": "at://did:plc:4kj4etf4a6w6zhmpfkozqybn/app.bsky.feed.post/3lml2f5inx52p",
+      "url": "https://bsky.app/profile/77cupons.bsky.social/post/3lml2f5inx52p",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4kj4etf4a6w6zhmpfkozqybn/bafkreia6n7zdxfkehsoiaif4jn6smbpbarumo4gp7uami62oyrx76lj5za@jpeg",
+      "user_created_at": "2024-09-06T01:09:32.136000",
+      "user_did": "did:plc:4kj4etf4a6w6zhmpfkozqybn",
+      "user_diplay_name": "77 cupons Amazon",
+      "user_handle": "77cupons.bsky.social",
+      "user_langs": [
+        "pt-BR"
+      ],
+      "user_timestamp_utc": 1725577772,
+      "user_url": "https://bsky.app/profile/77cupons.bsky.social"
+    }
   ]
 ]

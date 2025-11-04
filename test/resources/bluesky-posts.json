@@ -9817,6 +9817,68 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:4kj4etf4a6w6zhmpfkozqybn/app.bsky.feed.post/3lml2f5inx52p",
+    "cid": "bafyreiaabxjc5n3mkdv3w56mnvq7tgnvtkiwf5hynmtibvdadgbhkaorya",
+    "author": {
+        "did": "did:plc:4kj4etf4a6w6zhmpfkozqybn",
+        "handle": "77cupons.bsky.social",
+        "displayName": "77 cupons Amazon",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4kj4etf4a6w6zhmpfkozqybn/bafkreia6n7zdxfkehsoiaif4jn6smbpbarumo4gp7uami62oyrx76lj5za@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "following"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-09-05T23:09:32.136Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-04-11T22:18:49.457Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://promopinke.com/x/B07MDXGCHK"
+                    },
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://promopinke.com/x/B07MDXGCHK"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 1226,
+                    "byteStart": 0
+                }
+            }
+        ],
+        "langs": [
+            "pt-BR"
+        ],
+        "text": "N ANDE POR AÍ FEDENDO\n\nDesodorante Gel Gillette 45g\n\n- compre em recorrência (cancele quando quiser)\n- mínimo 2 un.\n\n13,49 à vista\nCool Wave https://promopinke.com/x/B07MDXGCHK\nHydra Gel Aloe https://promopinke.com/x/B07MDXGCHK"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-11T22:18:50.092Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
