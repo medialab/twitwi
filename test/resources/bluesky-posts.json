@@ -9728,6 +9728,47 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:ldpdjlektamog6u4gie4bvdz/app.bsky.feed.post/3lywaa7vhsu2c",
+    "cid": "bafyreif5zudmlquwuew7z5svli2aknbbnpokecq6ly4oicjdy7fnvpv6oa",
+    "author": {
+        "did": "did:plc:ldpdjlektamog6u4gie4bvdz",
+        "handle": "soirilab.bsky.social",
+        "displayName": "Soiri Hiroka",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ldpdjlektamog6u4gie4bvdz/bafkreid5yvhoc4dkyctkw3go7njjk4jncop6plxc5ciaausxberogkgoxm@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-04-12T01:42:28.599Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-08-31T20:07:25.000Z",
+        "embed": {
+            "$type": "N/A"
+        },
+        "text": "i wonder if solar energy will become relevant to the future of ai \nai data centers are not time sensitive but energy intensive\ncould it be the future of those data centers to only operate at maximum clock speed during the day and reduce power during the night?"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-09-16T02:05:04.008Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
