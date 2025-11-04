@@ -5389,5 +5389,45 @@
       "user_timestamp_utc": 1726838766,
       "user_url": "https://bsky.app/profile/ndmais.com.br.web.brid.gy"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreiaqholzrbonzgkk6zamotz5oupcaxnsaph6z4tisqotzszvhlmb6e",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3l3inqifqj42p",
+      "domains": [],
+      "hashtags": [
+        "meloni",
+        "sangiuliano"
+      ],
+      "indexed_at_utc": "2024-09-06T15:18:54.443Z",
+      "like_count": 1,
+      "links": [],
+      "local_time": "2024-09-06T17:18:54.443000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "🚨🇮🇹 Lettera a Giorgia #Meloni di Gennaro #Sangiuliano: \"Dimissioni irrevocabili\".\n",
+      "quote_count": 2,
+      "reply_count": 1,
+      "repost_count": 1,
+      "text": "🚨🇮🇹 Lettera a Giorgia #Meloni di Gennaro #Sangiuliano: \"Dimissioni irrevocabili\".\n",
+      "timestamp_utc": 1725635934,
+      "uri": "at://did:plc:r7bvs55c6ygjpfjrg5dxyjt7/app.bsky.feed.post/3l3inqifqj42p",
+      "url": "https://bsky.app/profile/dangelodario.it/post/3l3inqifqj42p",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:r7bvs55c6ygjpfjrg5dxyjt7/bafkreiakloumgphxoace4oxywvsvajw7k6qv2hq2a5c7rtft44kes6vlxe@jpeg",
+      "user_created_at": "2023-12-20T10:02:19.654000",
+      "user_did": "did:plc:r7bvs55c6ygjpfjrg5dxyjt7",
+      "user_diplay_name": "Dario D'Angelo",
+      "user_handle": "dangelodario.it",
+      "user_langs": [],
+      "user_timestamp_utc": 1703062939,
+      "user_url": "https://bsky.app/profile/dangelodario.it"
+    }
   ]
 ]
