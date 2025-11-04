@@ -5339,5 +5339,55 @@
       "user_timestamp_utc": 1731613903,
       "user_url": "https://bsky.app/profile/sinradio.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "bridgy_original_url": "https://ndmais.com.br/noticias/mpf-pede-absolvicao-de-professores-da-ufsc-na-operacao-ouvidos-moucos/",
+      "cid": "bafyreic5r63t4la36ihv3rgndjsxgq44vzczbyka6wzwclmlgzlffrqpjm",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3li6d5cduibg2",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2025-02-14T23:10:30.069Z",
+      "like_count": 0,
+      "links": [],
+      "local_time": "2025-02-14T23:12:00.000000",
+      "match_query": true,
+      "media_alt_texts": [
+        "<p>O Ministério Público Federal pediu a absolvição dos professores Márcio Santos e Sônia de Souza Cruz, acusados em 2019 por fraude a licitação e participação em organização criminosa na Operação Ouvidos Moucos. Segundo o MPF, não há comprovação do envolvimento deles nas irregularidades apontadas. A operação também teve como alvo o ex-reitor Luiz Carlos Cancellier, que foi preso e, posteriormente, cometeu suicídio. Em 2023, o TCU reconheceu sua inocência.</p>",
+        ""
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreiextrblcdjvdn7hw4wozdphlp3znlmx254sdhrwp4ug3v6j2dhize@jpeg",
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreicy2mbrv7z2vhc5xfktwjjny7fyyq3faliw4ztbjrqqhpc32ova24@jpeg"
+      ],
+      "media_types": [
+        "image/jpeg",
+        "text/html; charset=utf-8"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreiextrblcdjvdn7hw4wozdphlp3znlmx254sdhrwp4ug3v6j2dhize@jpeg",
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreicy2mbrv7z2vhc5xfktwjjny7fyyq3faliw4ztbjrqqhpc32ova24@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "MPF pede absolvição de professores da UFSC na Operação Ouvidos Moucos",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "MPF pede absolvição de professores da UFSC na Operação Ouvidos Moucos https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreiextrblcdjvdn7hw4wozdphlp3znlmx254sdhrwp4ug3v6j2dhize@jpeg https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreicy2mbrv7z2vhc5xfktwjjny7fyyq3faliw4ztbjrqqhpc32ova24@jpeg",
+      "timestamp_utc": 1739571120,
+      "uri": "at://did:plc:7rs7ivzymgqcy4rto6utny6w/app.bsky.feed.post/3li6d5cduibg2",
+      "url": "https://bsky.app/profile/ndmais.com.br.web.brid.gy/post/3li6d5cduibg2",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7rs7ivzymgqcy4rto6utny6w/bafkreidzvesbh3vens5fntrs3ymu2w7ipyldiqhflqaido3ysqsyumiive@jpeg",
+      "user_created_at": "2024-09-20T15:26:06.307000",
+      "user_did": "did:plc:7rs7ivzymgqcy4rto6utny6w",
+      "user_diplay_name": "ND Mais - Portal de Notícias de Santa Catarina e do Brasil",
+      "user_handle": "ndmais.com.br.web.brid.gy",
+      "user_langs": [],
+      "user_timestamp_utc": 1726838766,
+      "user_url": "https://bsky.app/profile/ndmais.com.br.web.brid.gy"
+    }
   ]
 ]
