@@ -9341,6 +9341,207 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:py2dfwxy3iihmcf4loxm7wfw/app.bsky.feed.post/3lyi433cdgw2e",
+    "cid": "bafyreic4bhpijamkptbzl2zl3vdj4hfifmtfmfmgcorzobl2vnjhgsdy6u",
+    "author": {
+        "did": "did:plc:py2dfwxy3iihmcf4loxm7wfw",
+        "handle": "cdinternational.bsky.social",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:py2dfwxy3iihmcf4loxm7wfw/bafkreibawf5pnqki3wtupx67zptobjyfbsio7frwc73nmrv6cdyjfdjgy4@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-09-01T15:02:14.799Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-09-10T11:13:19+00:00",
+        "embed": {
+            "$type": "app.bsky.embed.video",
+            "video": {
+                "$type": "blob",
+                "ref": {
+                    "$link": "bafkreia2ke4vvaz3c6mlr3qojsuvncshyszslwjtnnrtvxv2gzi7avpj5m"
+                },
+                "mimeType": "application/xml",
+                "size": 305
+            }
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "ShoeBot"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 109,
+                    "byteStart": 101
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "AICustomerService"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 128,
+                    "byteStart": 110
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "PersonalShopper"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 145,
+                    "byteStart": 129
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "Footwear"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 155,
+                    "byteStart": 146
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "SmartShopping"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 170,
+                    "byteStart": 156
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "RetailTech"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 182,
+                    "byteStart": 171
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "ShoeStore"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 193,
+                    "byteStart": 183
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "CustomerExperience"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 213,
+                    "byteStart": 194
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "DigitalAssistant"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 231,
+                    "byteStart": 214
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "FootwearFinder"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 247,
+                    "byteStart": 232
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "ShoeRecommendations"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 268,
+                    "byteStart": 248
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "TechInnova"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 280,
+                    "byteStart": 269
+                }
+            }
+        ],
+        "text": "Meet your new favorite shopping assistant! Our AI-powered shoe bot is here to find your perfect fit.\n#ShoeBot #AICustomerService #PersonalShopper #Footwear #SmartShopping #RetailTech #ShoeStore #CustomerExperience #DigitalAssistant #FootwearFinder #ShoeRecommendations #TechInnova"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.video#view",
+        "cid": "bafkreia2ke4vvaz3c6mlr3qojsuvncshyszslwjtnnrtvxv2gzi7avpj5m",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3Apy2dfwxy3iihmcf4loxm7wfw/bafkreia2ke4vvaz3c6mlr3qojsuvncshyszslwjtnnrtvxv2gzi7avpj5m/playlist.m3u8",
+        "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Apy2dfwxy3iihmcf4loxm7wfw/bafkreia2ke4vvaz3c6mlr3qojsuvncshyszslwjtnnrtvxv2gzi7avpj5m/thumbnail.jpg"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-09-10T11:13:20.608Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
