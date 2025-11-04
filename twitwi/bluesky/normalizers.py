@@ -352,6 +352,11 @@ def normalize_post(
     links_to_replace = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
+            if len(facet["features"]) == 2:
+                # Already handled linkcards separately below
+                if facet["features"][1]["$type"].endswith("#linkcard"):
+                    continue
+
             raise BlueskyPayloadError(
                 post["url"],
                 "unusual record facet content with more or less than a unique feature: %s"
