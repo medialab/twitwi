@@ -352,16 +352,24 @@ def normalize_post(
     links_to_replace = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
+            raising_error = False
             if len(facet["features"]) == 2:
                 # Already handled linkcards separately below
                 if facet["features"][1]["$type"].endswith("#linkcard"):
                     continue
+                # Yeah weird case of two identical features...
+                # example: https://bsky.app/profile/77cupons.bsky.social/post/3lml2f5inx52p
+                if facet["features"][0] != facet["features"][1]:
+                    raising_error = True
+            else:
+                raising_error = True
 
-            raise BlueskyPayloadError(
-                post["url"],
-                "unusual record facet content with more or less than a unique feature: %s"
-                % facet,
-            )
+            if raising_error:
+                raise BlueskyPayloadError(
+                    post["url"],
+                    "unusual record facet content with more or less than a unique feature: %s"
+                    % facet,
+                )
 
         feat = facet["features"][0]
 
