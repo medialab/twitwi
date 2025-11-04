@@ -392,8 +392,15 @@ def normalize_post(
                     ]
                     .strip()
                     .lower()
-                    .decode("utf-8")
                 )
+                while byteEnd >= byteStart:
+                    try:
+                        handle.decode("utf-8")
+                        break
+                    except UnicodeDecodeError:
+                        handle = handle[:-1]
+                        continue
+                handle = handle.decode("utf-8")
                 post["mentioned_user_handles"].append(handle)
 
         # Links
