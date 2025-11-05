@@ -350,6 +350,7 @@ def normalize_post(
     hashtags = set()
     links = set()
     links_to_replace = []
+    link_starts = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
             raising_error = False
@@ -549,10 +550,15 @@ def normalize_post(
 
     # Rewrite full links within post's text
     for link in sorted(links_to_replace, key=lambda x: x["start"], reverse=True):
+        # Skip already replaced links (overlapping links cases)
+        # example: https://bsky.app/profile/researchtrend.ai/post/3lbieylwwxs2b
+        if link["start"] in link_starts:
+            continue
         if link["start"] < 0:
             text = text + b" " + link["uri"]
         else:
             text = text[: link["start"]] + link["uri"] + text[link["end"] :]
+        link_starts.append(link["start"])
 
     # Handle thread info when applicable
     # Unfortunately posts' payload only provide at uris for these so we do not have the handles
