@@ -10019,6 +10019,118 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:tjsorjkedppnwafqbphngli2/app.bsky.feed.post/3lbieylwwxs2b",
+    "cid": "bafyreih7v6rqdullgs6zknqfl376lqs3davx2erw7rhh3dhktjyrdrr4yy",
+    "author": {
+        "did": "did:plc:tjsorjkedppnwafqbphngli2",
+        "handle": "researchtrend.ai",
+        "displayName": "ResearchTrend.AI Daily",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tjsorjkedppnwafqbphngli2/bafkreihr7hzpc6o5lj7fr6sexsin45pxkug34npgwqnvwgj3bunnqwnueq@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-19T22:24:16.761Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-11-21T21:13:32.251901Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://researchtrend.ai/papers/2409.10004"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 46,
+                    "byteStart": 5
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://researchtrend.ai/papers/2409.09999"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 37,
+                    "byteStart": 5
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://researchtrend.ai/papers/2409.10002"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 49,
+                    "byteStart": 5
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://researchtrend.ai/papers/2409.10001"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 48,
+                    "byteStart": 5
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://researchtrend.ai/papers/2409.10005"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 49,
+                    "byteStart": 5
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://researchtrend.ai/papers/2409.10003"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 39,
+                    "byteStart": 5
+                }
+            }
+        ],
+        "text": "📝 Explainable AI: Techniques and Challenges\n📝 Comprehensive Study on AI Ethics\n📝 Deep Learning Approaches for Computer Vision\n📝 Advancements in Natural Language Processing\n📝 Federated Learning for Privacy-Preserving AI\n📝 Reinforcement Learning in Robotics"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 2,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2024-11-21T21:13:32.985Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
