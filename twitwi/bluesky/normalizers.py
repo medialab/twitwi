@@ -360,8 +360,22 @@ def normalize_post(
                     continue
                 # Yeah weird case of two identical features...
                 # example: https://bsky.app/profile/77cupons.bsky.social/post/3lml2f5inx52p
+                # example: https://bsky.app/profile/77cupons.bsky.social/post/3latbufuvqw25
                 if facet["features"][0] != facet["features"][1]:
-                    raising_error = True
+                    # Weird case of two link features identical in type and keys in a same facet
+                    # example: https://bsky.app/profile/77cupons.bsky.social/post/3latbufuvqw25
+                    # We register them and do not replace anything in original text
+                    if (facet["features"][0]["$type"] == facet["features"][1]["$type"]
+                        and facet["features"][0].keys() == facet["features"][1].keys()
+                        and facet["features"][0]["$type"].endswith("#link")
+                        and "uri" in facet["features"][0]):
+                        for feat in facet["features"]:
+                            link = safe_normalize_url(feat["uri"])
+                            if is_url(link):
+                                links.add(link)
+                        continue
+                    else:
+                        raising_error = True
             else:
                 raising_error = True
 

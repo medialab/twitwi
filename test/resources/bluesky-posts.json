@@ -10131,6 +10131,68 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:4kj4etf4a6w6zhmpfkozqybn/app.bsky.feed.post/3latbufuvqw25",
+    "cid": "bafyreie5jhrorfcsncl5ks6kc4st7tjxmjhxbdn65ux7htc3mmuezx2jme",
+    "author": {
+        "did": "did:plc:4kj4etf4a6w6zhmpfkozqybn",
+        "handle": "77cupons.bsky.social",
+        "displayName": "77 cupons Amazon",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4kj4etf4a6w6zhmpfkozqybn/bafkreia6n7zdxfkehsoiaif4jn6smbpbarumo4gp7uami62oyrx76lj5za@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "following"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-09-05T23:09:32.136Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-11-13T11:51:30.620Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://amzn.to/3O4q37w"
+                    },
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://amzn.to/3Au3ne3"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 1198,
+                    "byteStart": 0
+                }
+            }
+        ],
+        "langs": [
+            "pt-BR"
+        ],
+        "text": "VAI UM CAFÉZIN AÍ?\nselecione comprar c/ recorrência\n\nCafé Santa Mônica Grãos 1kg \nDe R$ 99 por R$ 55 \nhttps://amzn.to/3O4q37w\n\nCafé Orfeu Grãos Intenso 1kg \nDe R$ 99 por R$ 57\nhttps://amzn.to/3Au3ne3"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-11-13T11:51:36.688Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
