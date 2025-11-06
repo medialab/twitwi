@@ -667,6 +667,9 @@ def normalize_post(
         # Video
         if embed["$type"].endswith(".video"):
             media_data.append(prepare_video_as_media(embed["video"]))
+        if embed["$type"].endswith(".videos"):
+            for elt in embed["videos"]:
+                media_data.append(prepare_video_as_media(elt["video"]))
 
         # Quote & Starter-packs
         if embed["$type"].endswith(".record"):
