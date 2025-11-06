@@ -12564,6 +12564,111 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:xy3inewi7yjeq2dbdpznlnia/app.bsky.feed.post/3lchg3plpdjp2",
+    "cid": "bafyreia6dikw5ub3sjpgatxscbornifhcf2gslj3vfgja6vct7bst5wbhi",
+    "author": {
+        "did": "did:plc:xy3inewi7yjeq2dbdpznlnia",
+        "handle": "dj-cyberspace.otoskey.tarbin.net.ap.brid.gy",
+        "displayName": "Cyberspace@おとすきー",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xy3inewi7yjeq2dbdpznlnia/bafkreifg7rjib3fby25veendzsj46bkzehq4wygd4tdnzysape3xfiofnu@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "none"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:xy3inewi7yjeq2dbdpznlnia",
+                "uri": "at://did:plc:xy3inewi7yjeq2dbdpznlnia/app.bsky.actor.profile/self",
+                "cid": "bafyreicuunjvdfyjf6rms6qm7rlboik3wd2bwibe5m7sp2xepsbquvmjya",
+                "val": "bridged-from-bridgy-fed-activitypub",
+                "cts": "1970-01-01T00:00:00.000Z"
+            }
+        ],
+        "createdAt": "2024-10-18T06:11:57.014Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "bridgyOriginalText": "<p><span>Pete & Bas - Mr Worldwide [Music Video] | GRM Daily </span><a href=\"https://youtu.be/1e5oKp-tCY4?si=KKDR8TXput1hqT4-\">https://youtu.be/1e5oKp-tCY4?si=KKDR8TXput1hqT4-</a><span> </span><a href=\"https://otoskey.tarbin.net/@YouTube\" class=\"u-url mention\">@YouTube</a><span>より 昨夜、The spectacleでサンプリングするための音源を探してたら、とんでもない逸材を見つけてしまった。いい歳こいた爺ちゃんがこんなにかませるとか、ヤバくないかこれ？(褒め言葉)</span></p>",
+        "bridgyOriginalUrl": "https://otoskey.tarbin.net/notes/a1d0e30ux9",
+        "createdAt": "2024-12-04T05:25:40.686Z",
+        "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+                "$type": "app.bsky.embed.external#external",
+                "description": "🚨 SUBSCRIBE: http://bit.ly/GRMsubscribe  📲 FOLLOW: @grmdaily📰 VISIT: http://grmdaily.com/🎧 PLAYLISTS: https://grm.lnk.to/playlist",
+                "thumb": {
+                    "$type": "blob",
+                    "ref": {
+                        "$link": "bafkreicyhgzd2s7mxlsbqy3jdihsbfhueej2g63q4jrdlilta5kaivhw44"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 162537
+                },
+                "title": "Pete & Bas - Mr Worldwide [Music Video] | GRM Daily",
+                "uri": "https://www.youtube.com/watch?si=KKDR8TXput1hqT4-&v=1e5oKp-tCY4&feature=youtu.be"
+            }
+        },
+        "facets": [
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://youtu.be/1e5oKp-tCY4?si=KKDR8TXput1hqT4-"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 100,
+                    "byteStart": 26
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://otoskey.tarbin.net/@YouTube"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 109,
+                    "byteStart": 51
+                }
+            }
+        ],
+        "text": "Pete & Bas - Mr Worldwide Music Video] | GRM Daily https://youtu.be/1e5oKp-tCY4?si=KKDR8TXput1hqT4- [@YouTubeより 昨夜、The spectacleでサンプリングするための音源を探してたら、とんでもない逸材を見つけてしまった。いい歳こいた爺ちゃんがこんなにかませるとか、ヤバくないかこれ？(褒め言葉)"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+            "uri": "https://www.youtube.com/watch?si=KKDR8TXput1hqT4-&v=1e5oKp-tCY4&feature=youtu.be",
+            "title": "Pete & Bas - Mr Worldwide [Music Video] | GRM Daily",
+            "description": "🚨 SUBSCRIBE: http://bit.ly/GRMsubscribe  📲 FOLLOW: @grmdaily📰 VISIT: http://grmdaily.com/🎧 PLAYLISTS: https://grm.lnk.to/playlist",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xy3inewi7yjeq2dbdpznlnia/bafkreicyhgzd2s7mxlsbqy3jdihsbfhueej2g63q4jrdlilta5kaivhw44@jpeg"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-12-04T05:28:13.552Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
