@@ -10193,6 +10193,190 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:4nt6nwx353a3xxo5mzjiy4ha/app.bsky.feed.post/3kmuqjkkozh2r",
+    "cid": "bafyreidx5heu2imavk2ku5weq6jy2yvkibkbxft7shu7kekwippcspnc7a",
+    "author": {
+        "did": "did:plc:4nt6nwx353a3xxo5mzjiy4ha",
+        "handle": "poll.blue",
+        "displayName": "poll.blue",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4nt6nwx353a3xxo5mzjiy4ha/bafkreigolgmfa4so3uatwhmedayag32klacgw6p4yllusu34i4hqicp3yy@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-04-14T17:13:40.963Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-03-04T13:22:45.693Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://staging.bsky.app/profile/ha-chanjp.sunabacks.com/post/3kmuqjjleys2c"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 156,
+                    "byteStart": 132
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://poll.blue/p/UCPisi/1"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 191,
+                    "byteStart": 176
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://poll.blue/p/UCPisi/2"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 232,
+                    "byteStart": 197
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://poll.blue/p/UCPisi/3"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 264,
+                    "byteStart": 238
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://poll.blue/p/UCPisi/4"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 311,
+                    "byteStart": 270
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://poll.blue/p/UCPisi/0"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 330,
+                    "byteStart": 313
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.pollblue.poll.facet#question"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 122,
+                    "byteStart": 0
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.pollblue.poll.facet#option",
+                        "number": 1
+                    }
+                ],
+                "index": {
+                    "byteEnd": 191,
+                    "byteStart": 176
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.pollblue.poll.facet#option",
+                        "number": 2
+                    }
+                ],
+                "index": {
+                    "byteEnd": 232,
+                    "byteStart": 197
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.pollblue.poll.facet#option",
+                        "number": 3
+                    }
+                ],
+                "index": {
+                    "byteEnd": 264,
+                    "byteStart": 238
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.pollblue.poll.facet#option",
+                        "number": 4
+                    }
+                ],
+                "index": {
+                    "byteEnd": 311,
+                    "byteStart": 270
+                }
+            }
+        ],
+        "reply": {
+            "parent": {
+                "cid": "bafyreiahtepstqgabv5darogjeorpdloemwce4eekhqelhwkzjrld6kp7y",
+                "uri": "at://did:plc:ymdqgzoop3puhkbwrd7njbke/app.bsky.feed.post/3kmuqjjleys2c"
+            },
+            "root": {
+                "cid": "bafyreiahtepstqgabv5darogjeorpdloemwce4eekhqelhwkzjrld6kp7y",
+                "uri": "at://did:plc:ymdqgzoop3puhkbwrd7njbke/app.bsky.feed.post/3kmuqjjleys2c"
+            }
+        },
+        "text": "\"砂場鯖リニューアルで「こんなのやってほしい！」というのがあれば投票お願いします！\" asked by @ha-chanjp.sunabacks.com. Vote below!\n\n🅰 経済・生活\n🅱 ミニゲーム(Sky Block・PvP等)\n🅲 FPS(ゾンビ・戦争等)\n🅳 その他(リプ欄にお願いします)\n\n📊 Show results"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2024-03-04T13:22:45.693Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]

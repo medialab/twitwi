@@ -556,6 +556,10 @@ def normalize_post(
         # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g
         elif feat["$type"].endswith("format"):
             pass
+        # We chose to ignore non Bluesky features for now (e.g. personalized features)
+        # example: https://bsky.app/profile/poll.blue/post/3kmuqjkkozh2r
+        elif "app.bsky" not in feat["$type"]:
+            continue
         else:
             raise BlueskyPayloadError(
                 post["url"], "unusual record facet feature $type: %s" % feat
