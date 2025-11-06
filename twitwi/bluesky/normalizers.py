@@ -633,6 +633,11 @@ def normalize_post(
                 post["url"], "unusual empty record embed with extra keys: %s" % embed
             )
 
+        # Links from links embed
+        if embed["$type"].endswith(".links"):
+            for link in embed["links"]:
+                extra_links.append(link)
+
         # Links from cards
         if embed["$type"].endswith(".external"):
             link = embed["external"]["uri"]
