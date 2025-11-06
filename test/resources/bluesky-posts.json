@@ -12368,6 +12368,96 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:2vueugcxuljk4lmre47m7awg/app.bsky.feed.post/3lkgeaf5fus2b",
+    "cid": "bafyreifhkjda7rmu4ft46bjzeowva63qcxxhp4nzuw2eukgm4s4ydnvdfy",
+    "author": {
+        "did": "did:plc:2vueugcxuljk4lmre47m7awg",
+        "handle": "froggydelight.bsky.social",
+        "displayName": "Froggy's Delight",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2vueugcxuljk4lmre47m7awg/bafkreigvi4fjve5hvqh6vnudkr5n7kpdosixd34qq5viaqvnt7a7cbtmre@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-10-12T05:36:26.642Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-15T14:41:25.592725+00:00",
+        "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+                {
+                    "alt": "Binary Audio Misfits - Programme",
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreied7lvmqfoipbn5u7aymu37ag35b6qlwy767dhe3cx7f3pdto3lvi"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 14831
+                    }
+                }
+            ]
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet.link",
+                        "uri": "https://froggydelight.com/article-8495-article.html"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 294,
+                    "byteStart": 243
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet.tag",
+                        "tag": "3"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 181,
+                    "byteStart": 179
+                }
+            }
+        ],
+        "text": "Souvenir de Froggy en 2010 : Binary Audio Misfits - Programme - Grand Mix - Diabologum avait sorti en 1995 un troisième album important avant de se séparer. Sobrement intitulé #3, ce disque d’une maturité incontestable a sensiblement... https://froggydelight.com/article-8495-article.html"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2vueugcxuljk4lmre47m7awg/bafkreied7lvmqfoipbn5u7aymu37ag35b6qlwy767dhe3cx7f3pdto3lvi@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:2vueugcxuljk4lmre47m7awg/bafkreied7lvmqfoipbn5u7aymu37ag35b6qlwy767dhe3cx7f3pdto3lvi@jpeg",
+                "alt": "Binary Audio Misfits - Programme"
+            }
+        ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-03-15T14:41:26.246Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]

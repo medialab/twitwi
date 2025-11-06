@@ -6543,5 +6543,56 @@
       "user_timestamp_utc": 1684874256,
       "user_url": "https://bsky.app/profile/nowbreezing.ntw.app"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreifhkjda7rmu4ft46bjzeowva63qcxxhp4nzuw2eukgm4s4ydnvdfy",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lkgeaf5fus2b",
+      "domains": [
+        "froggydelight.com"
+      ],
+      "hashtags": [
+        "3"
+      ],
+      "indexed_at_utc": "2025-03-15T14:41:26.246Z",
+      "like_count": 0,
+      "links": [
+        "https://froggydelight.com/article-8495-article.html"
+      ],
+      "local_time": "2025-03-15T15:41:25.592725",
+      "match_query": true,
+      "media_alt_texts": [
+        "Binary Audio Misfits - Programme"
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:2vueugcxuljk4lmre47m7awg/bafkreied7lvmqfoipbn5u7aymu37ag35b6qlwy767dhe3cx7f3pdto3lvi@jpeg"
+      ],
+      "media_types": [
+        "image/jpeg"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:2vueugcxuljk4lmre47m7awg/bafkreied7lvmqfoipbn5u7aymu37ag35b6qlwy767dhe3cx7f3pdto3lvi@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Souvenir de Froggy en 2010 : Binary Audio Misfits - Programme - Grand Mix - Diabologum avait sorti en 1995 un troisième album important avant de se séparer. Sobrement intitulé #3, ce disque d’une maturité incontestable a sensiblement... https://froggydelight.com/article-8495-article.html",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Souvenir de Froggy en 2010 : Binary Audio Misfits - Programme - Grand Mix - Diabologum avait sorti en 1995 un troisième album important avant de se séparer. Sobrement intitulé #3, ce disque d’une maturité incontestable a sensiblement... https://froggydelight.com/article-8495-article.html https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:2vueugcxuljk4lmre47m7awg/bafkreied7lvmqfoipbn5u7aymu37ag35b6qlwy767dhe3cx7f3pdto3lvi@jpeg",
+      "timestamp_utc": 1742049685,
+      "uri": "at://did:plc:2vueugcxuljk4lmre47m7awg/app.bsky.feed.post/3lkgeaf5fus2b",
+      "url": "https://bsky.app/profile/froggydelight.bsky.social/post/3lkgeaf5fus2b",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2vueugcxuljk4lmre47m7awg/bafkreigvi4fjve5hvqh6vnudkr5n7kpdosixd34qq5viaqvnt7a7cbtmre@jpeg",
+      "user_created_at": "2023-10-12T07:36:26.642000",
+      "user_did": "did:plc:2vueugcxuljk4lmre47m7awg",
+      "user_diplay_name": "Froggy's Delight",
+      "user_handle": "froggydelight.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1697088986,
+      "user_url": "https://bsky.app/profile/froggydelight.bsky.social"
+    }
   ]
 ]
