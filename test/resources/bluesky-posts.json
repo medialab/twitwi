@@ -10847,6 +10847,1527 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:mcb6n67plnrlx4lg35natk2b/app.bsky.feed.post/3lnd7cbfslo2c",
+    "cid": "bafyreib6pmpeqk4dgkyku5nwxxw6lvmwoxmischmaxobqaxmmga2pk24bu",
+    "author": {
+        "did": "did:plc:mcb6n67plnrlx4lg35natk2b",
+        "handle": "nowbreezing.ntw.app",
+        "displayName": "☁️Now🤖Breezing💨",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreifrm64a6mjzkkpioksokym5jiidww2tu43bkldwp6nc5tmaavcvcq@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "none"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-05-23T20:37:36.553Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-04-21T12:50:36.447449+00:00",
+        "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+                {
+                    "$type": "app.bsky.embed.images#image",
+                    "alt": "Word Cloud; its top words (sorted by weighted frequency, descending):  pope, francis, conclave, papa, pope's, gaza, popes, ukraine, pape, cardinals, francisco, 1﹐402, papst, vatican, papal, pontiff, descanse, catholic, jd, vaticano, catholicism, catholics, franziskus, bergoglio, jesuit, católica, cardinal, vance, paus, papacy, luto, igreja, cónclave, antichrist, pizzaballa, legado, 88, papas, kirche, iglesia, francis's, conservador, progressista, pontífice, papado, françois, fiennes, exiled, católico, 2025-04-21, truss, piastri, ostapenko, morte, morreu, lamenta, franciscus, church's, 4/21, 恐竜, 例える, ゴールデンウィーク, vance's, tagle, ratzinger, l'église, hegseth, francesco, filipino, fallecimiento, church, cardenales, 面影, selecting, secdef, scamparini, ralph, progresista, parolin, opus, muere, mourning, mourn, kristen, humility, homenagem, hegseth's, gestorben, excommunicated, directives, cristão, compassion, catholique, cardeal, baptized, avais, 小話, ローマ, アズレン, へー, século, sinners, saddened, papieża, papabile, padre, muerte, motherhood, maduro, laudato, júlio, jorge, jesuits, ilze, iggy, hendry, gcs, décès, died, cristianismo, converts, cena, cardenal, aryna, alcoholic, 4/21/2025, 학원, 教皇, 割合, メカ, フレーズ, パンク, バク, ギフト, エルフ, zuppi, yoda, xg, wank, votação, vorsichtig, urbi, unto, ullyot, tivemos, timed, teremos, teachings, sucessor, successor, stirbt, spat, sorely, sabalenka, répondu, rip, rhodes, religião, religioso, reformer, profundamente, positioned, pontificat, pierbattista, pete, pentagon, pedophiles, paz, papá, papstes, orchard, orbi, ope, nash, morto, mondays, messe, melo, marginalized, lorenzo, liz, lenses, jd's, jaleco, ivf, incarnate, hb, habemus, gris, ghosted, fijo, falecimento, faleceu, döndü, departed, curia, couchfucker, chimney, bombshell, besungu",
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreihjpjiildqbel6s5jnl4y3btczseuatzt5l36u3klbljcnpqxdx4u"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 253409
+                    }
+                },
+                {
+                    "$type": "app.bsky.embed.images#image",
+                    "alt": "Hashtag Cloud; its hashtagged words/phrases (sorted by weighted frequency, descending):  popefrancis, pope, monochromemonday, 680, mcm, eastcoastkin, blueskymonday, rip, thelastofus, jdvance, horny, haiku, あなた, sinners, hot, 오프, wrestlemania, 414, writer, papafrancisco, papa, macromonday, hegseth, 자위, 능욕, xxx, rippopefrancis, place, photooftheday, photographersofbluesky, foto, ettd, canadastrong, abstractart, 조련, 일탈, 인천, 보지, 변녀, 노예, 네토, 걸레, 近藤夏子, アルバ・セラ, この, wwe, webcomic, vee, vance, truth, trending, travelphotography, thearchers, tennis, rpg, peace, papst, ocs, nfl, nevervoteconservative, mondaymotivation, live, kink, fun, esilaicinadalet, elxn45, diy, digital, conclave, bulge, bigboobs, askwxm, artmoots, 3d, 커닐, 초대, 자지, 육변기, 아줌마, 시오후키, 수치, 보빨, 박제, 대전, 文化, ブルアカ, バースデーグッズ, アズ, あなたを恐竜に例えると, writerscommunity, wordlinxgame, voices4victory, vaticano, tlou, sun, sotd, sherlockholmes, sea, rome, resign, pastpuzzle, party, papafrancesco, ostern, moon, monday, moma, miqote, microsoft, marvelcomics, kleinekunstklasse, jdvancekilledthepope, hbo, good_day_by_day, gaynsfw, gamingcommunity, gameplay, erotic, davidsmonthofmusic, communityengagement, climatecrisis, carneyforcanada, bunny, bekind, basketball, atlanta, 7syllablesentence, 21nisangenelboykot, 13, 1201, 12, 협박플, 협박, 핑거링, 중년, 존잘, 존예, 조교, 전국구, 온플, 에셈, 야외노출, 야단라, 애무, 암퇘지, 신상상납, 시흥, 수치플, 섹벙, 비떱, 부천, 부산, 발정, 마사지, 라인, 대구보도사무실, 대구당일알바, 대구노래방도우미, 대구남구보도사무실, 대구고수익알바, 대구, 남존여비, 건오, 読了, 歴史, 最後, 日向坂46, 仮想通貨, 仕上がりとラフを同時にアップしてみよう, 乃木坂46, レヴリー, ホーランドロップ#ホーランドロップ, ニュース, ダイエット, ストック, シケモクとクズ, ガンプラ, ガン, アート, アズ生春の北風sp, ふるさと納税, おすすめ書籍, うさぎ, วีทูปเบอร์ไทย, รับงานลาดพร้าว, ссср, общество, бывший, şanlıurfa, yankees, wweraw, wrestling, wolf, wildflowers, whitehouse, werder, weekqforqs, webcomics, warhammer40k, waifu",
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreih2hoif24tvhjmh4mglhhhwxpfoo5m4icgvl73vsw7fhbidujw3b4"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 298031
+                    }
+                },
+                {
+                    "$type": "app.bsky.embed.images#image",
+                    "alt": "Emoji Cloud; its emojis (sorted by weighted frequency, descending):  👶🏻, 🐡, ✝️, 🧮, 🤼‍♂️, 🤛, 🚢, 🚌, 🖐, 🕊️, 🔲, 👍🏽, ⚒️, 🫰🏻, 🪻, 🪷, 🪱, 🪛, 🪓, 🪇, 🧼, 🧹, 🧙, 🦫, 🦔, 🦀, 🥤, 🥗, 🥐, 🤷🏼‍♂️, 🤦🏻‍♂️, 🤞🏻, 🤝🏾, 🤌🏼, 🛳️, 🛋️, 🚶‍♀️, 🚙, 🙏🏿, 🙏🏼, 🙇🏻, 🙆🏻‍♂️, 🙅, 🗑️, 🖕🏼, 🕥, 🕐, 🔨, 🔜, 🔐, 📏, 📀, 💳, 💬, 🐿️, 🐚, 🐒, 🐋, 🏷️, 🏰, 🏔️, 🏅, 🎾, 🎹, 🎷, 🎣, 🌶️, 🌬, 🌪️, 🌝, 🇬🇪, 🃏, ⭕, ✖, ✈, ⛱, ⛰️, ⛪, ⚫, ⚜️, ⚔, ⌛",
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreieuu7zgbcpfyqfqcgxq35r4ihaznazbqlm5kofzcuc3q6efiuj35y"
+                        },
+                        "mimeType": "image/jpeg",
+                        "size": 304977
+                    }
+                },
+                {
+                    "$type": "app.bsky.embed.images#image",
+                    "alt": "Emoji Legend\n    ⚠️💨# | \"Trend Strength Rating\" (deprecated; soon to be replaced by 💨x#, see below)\n    🔓 | \"Unlocked\" Ongoing Emergency Word (such words are not weighted down by their own previous usage; their *ongoing* increased usage--weeks, months, years--would otherwise move them down the list.)\n\n    [NOT YET IMPLEMENTED]\n    💨x# | \"Increased Trending Rate\" for a Word (meaningful value; \"💨x8 - burger\" will mean \"burger\" is trending at 8 times its own normal rate for this time of day)\n\n    [PREVIOUSLY USED]\n    ⚠️🌀💨 | \"Trend Strength Rating\" (see above)\n    ⚠️🌀 CAT. # | [same; \"CAT.\" = Category, like hurricane]\n    💬# | 10min Post Count\n    🆎# | 10min Word Count\n    🙂# | 10min Emoji Count",
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreie7hcpfsp3oy2uxrgxlboio7fcnugzae22d6k2dow6tdwqkdtgexi"
+                        },
+                        "mimeType": "image/png",
+                        "size": 96792
+                    }
+                }
+            ]
+        },
+        "facets": [
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=pope"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 70,
+                    "byteStart": 66
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=francis"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 85,
+                    "byteStart": 78
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=conclave"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 100,
+                    "byteStart": 92
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=papa"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 111,
+                    "byteStart": 107
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=pope's"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 124,
+                    "byteStart": 118
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=gaza"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 135,
+                    "byteStart": 131
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=popes"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 152,
+                    "byteStart": 147
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=ukraine"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 166,
+                    "byteStart": 159
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=pape"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 182,
+                    "byteStart": 178
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=cardinals"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 198,
+                    "byteStart": 189
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=francisco"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 214,
+                    "byteStart": 205
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=1﹐402"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 228,
+                    "byteStart": 221
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=papst"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 240,
+                    "byteStart": 235
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=vatican"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 254,
+                    "byteStart": 247
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=papal"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 266,
+                    "byteStart": 261
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=pontiff"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 280,
+                    "byteStart": 273
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=descanse"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 295,
+                    "byteStart": 287
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=catholic"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 310,
+                    "byteStart": 302
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=jd"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 319,
+                    "byteStart": 317
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=vaticano"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 334,
+                    "byteStart": 326
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=catholicism"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 352,
+                    "byteStart": 341
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=catholics"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 368,
+                    "byteStart": 359
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=franziskus"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 385,
+                    "byteStart": 375
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=bergoglio"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 401,
+                    "byteStart": 392
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=jesuit"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 414,
+                    "byteStart": 408
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=católica"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 430,
+                    "byteStart": 421
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=cardinal"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 445,
+                    "byteStart": 437
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=vance"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 457,
+                    "byteStart": 452
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=paus"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 468,
+                    "byteStart": 464
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=papacy"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 481,
+                    "byteStart": 475
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=luto"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 492,
+                    "byteStart": 488
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=igreja"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 505,
+                    "byteStart": 499
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=cónclave"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 521,
+                    "byteStart": 512
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=antichrist"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 538,
+                    "byteStart": 528
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=pizzaballa"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 555,
+                    "byteStart": 545
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=legado"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 568,
+                    "byteStart": 562
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=88"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 577,
+                    "byteStart": 575
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=papas"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 589,
+                    "byteStart": 584
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=kirche"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 602,
+                    "byteStart": 596
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=iglesia"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 616,
+                    "byteStart": 609
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=francis's"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 632,
+                    "byteStart": 623
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=conservador"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 650,
+                    "byteStart": 639
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=progressista"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 669,
+                    "byteStart": 657
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=pontífice"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 686,
+                    "byteStart": 676
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=papado"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 699,
+                    "byteStart": 693
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=françois"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 715,
+                    "byteStart": 706
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=fiennes"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 729,
+                    "byteStart": 722
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=exiled"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 742,
+                    "byteStart": 736
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=católico"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 758,
+                    "byteStart": 749
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=2025-04-21"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 775,
+                    "byteStart": 765
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=truss"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 786,
+                    "byteStart": 781
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=piastri"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 799,
+                    "byteStart": 792
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=ostapenko"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 814,
+                    "byteStart": 805
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=morte"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 825,
+                    "byteStart": 820
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=morreu"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 837,
+                    "byteStart": 831
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=lamenta"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 850,
+                    "byteStart": 843
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=franciscus"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 866,
+                    "byteStart": 856
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=church's"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 880,
+                    "byteStart": 872
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=4/21"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 890,
+                    "byteStart": 886
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=恐竜"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 902,
+                    "byteStart": 896
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=例える"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 917,
+                    "byteStart": 908
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=ゴールデンウィーク"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 950,
+                    "byteStart": 923
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=vance's"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 963,
+                    "byteStart": 956
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=tagle"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 974,
+                    "byteStart": 969
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=ratzinger"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 989,
+                    "byteStart": 980
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=l'église"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1004,
+                    "byteStart": 995
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=hegseth"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1017,
+                    "byteStart": 1010
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=francesco"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1032,
+                    "byteStart": 1023
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=filipino"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1046,
+                    "byteStart": 1038
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=fallecimiento"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1065,
+                    "byteStart": 1052
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=church"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1077,
+                    "byteStart": 1071
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=cardenales"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1093,
+                    "byteStart": 1083
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=面影"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1105,
+                    "byteStart": 1099
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=selecting"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1120,
+                    "byteStart": 1111
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=secdef"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1132,
+                    "byteStart": 1126
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=scamparini"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1148,
+                    "byteStart": 1138
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=ralph"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1159,
+                    "byteStart": 1154
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=progresista"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1176,
+                    "byteStart": 1165
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=parolin"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1189,
+                    "byteStart": 1182
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=opus"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1199,
+                    "byteStart": 1195
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=muere"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1210,
+                    "byteStart": 1205
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=mourning"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1224,
+                    "byteStart": 1216
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=mourn"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1235,
+                    "byteStart": 1230
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=kristen"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1248,
+                    "byteStart": 1241
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=humility"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1262,
+                    "byteStart": 1254
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=homenagem"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1277,
+                    "byteStart": 1268
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=hegseth's"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1292,
+                    "byteStart": 1283
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=gestorben"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1307,
+                    "byteStart": 1298
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=excommunicated"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1327,
+                    "byteStart": 1313
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=directives"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1343,
+                    "byteStart": 1333
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=cristão"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1357,
+                    "byteStart": 1349
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=compassion"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1373,
+                    "byteStart": 1363
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=catholique"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1389,
+                    "byteStart": 1379
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=cardeal"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1402,
+                    "byteStart": 1395
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=baptized"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1416,
+                    "byteStart": 1408
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=avais"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1427,
+                    "byteStart": 1422
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=小話"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1439,
+                    "byteStart": 1433
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=ローマ"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1454,
+                    "byteStart": 1445
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=アズレン"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1472,
+                    "byteStart": 1460
+                }
+            },
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://bsky.app/search?q=へー"
+                    }
+                ],
+                "index": {
+                    "$type": "app.bsky.richtext.facet#byteSlice",
+                    "byteEnd": 1484,
+                    "byteStart": 1478
+                }
+            }
+        ],
+        "text": "\nBluesky's Top 10 Trending Words from the Past 10 Minutes:\nx183 - pope\nx101 - francis\nx78 - conclave\nx73 - papa\nx58 - pope's\nx47 - gaza 🔓\nx42 - popes\nx41 - ukraine 🔓\nx39 - pape\nx38 - cardinals\nx34 - francisco\nx34 - 1﹐402\nx29 - papst\nx27 - vatican\nx27 - papal\nx26 - pontiff\nx26 - descanse\nx26 -"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreihjpjiildqbel6s5jnl4y3btczseuatzt5l36u3klbljcnpqxdx4u@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreihjpjiildqbel6s5jnl4y3btczseuatzt5l36u3klbljcnpqxdx4u@jpeg",
+                "alt": "Word Cloud; its top words (sorted by weighted frequency, descending):  pope, francis, conclave, papa, pope's, gaza, popes, ukraine, pape, cardinals, francisco, 1﹐402, papst, vatican, papal, pontiff, descanse, catholic, jd, vaticano, catholicism, catholics, franziskus, bergoglio, jesuit, católica, cardinal, vance, paus, papacy, luto, igreja, cónclave, antichrist, pizzaballa, legado, 88, papas, kirche, iglesia, francis's, conservador, progressista, pontífice, papado, françois, fiennes, exiled, católico, 2025-04-21, truss, piastri, ostapenko, morte, morreu, lamenta, franciscus, church's, 4/21, 恐竜, 例える, ゴールデンウィーク, vance's, tagle, ratzinger, l'église, hegseth, francesco, filipino, fallecimiento, church, cardenales, 面影, selecting, secdef, scamparini, ralph, progresista, parolin, opus, muere, mourning, mourn, kristen, humility, homenagem, hegseth's, gestorben, excommunicated, directives, cristão, compassion, catholique, cardeal, baptized, avais, 小話, ローマ, アズレン, へー, século, sinners, saddened, papieża, papabile, padre, muerte, motherhood, maduro, laudato, júlio, jorge, jesuits, ilze, iggy, hendry, gcs, décès, died, cristianismo, converts, cena, cardenal, aryna, alcoholic, 4/21/2025, 학원, 教皇, 割合, メカ, フレーズ, パンク, バク, ギフト, エルフ, zuppi, yoda, xg, wank, votação, vorsichtig, urbi, unto, ullyot, tivemos, timed, teremos, teachings, sucessor, successor, stirbt, spat, sorely, sabalenka, répondu, rip, rhodes, religião, religioso, reformer, profundamente, positioned, pontificat, pierbattista, pete, pentagon, pedophiles, paz, papá, papstes, orchard, orbi, ope, nash, morto, mondays, messe, melo, marginalized, lorenzo, liz, lenses, jd's, jaleco, ivf, incarnate, hb, habemus, gris, ghosted, fijo, falecimento, faleceu, döndü, departed, curia, couchfucker, chimney, bombshell, besungu"
+            },
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreih2hoif24tvhjmh4mglhhhwxpfoo5m4icgvl73vsw7fhbidujw3b4@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreih2hoif24tvhjmh4mglhhhwxpfoo5m4icgvl73vsw7fhbidujw3b4@jpeg",
+                "alt": "Hashtag Cloud; its hashtagged words/phrases (sorted by weighted frequency, descending):  popefrancis, pope, monochromemonday, 680, mcm, eastcoastkin, blueskymonday, rip, thelastofus, jdvance, horny, haiku, あなた, sinners, hot, 오프, wrestlemania, 414, writer, papafrancisco, papa, macromonday, hegseth, 자위, 능욕, xxx, rippopefrancis, place, photooftheday, photographersofbluesky, foto, ettd, canadastrong, abstractart, 조련, 일탈, 인천, 보지, 변녀, 노예, 네토, 걸레, 近藤夏子, アルバ・セラ, この, wwe, webcomic, vee, vance, truth, trending, travelphotography, thearchers, tennis, rpg, peace, papst, ocs, nfl, nevervoteconservative, mondaymotivation, live, kink, fun, esilaicinadalet, elxn45, diy, digital, conclave, bulge, bigboobs, askwxm, artmoots, 3d, 커닐, 초대, 자지, 육변기, 아줌마, 시오후키, 수치, 보빨, 박제, 대전, 文化, ブルアカ, バースデーグッズ, アズ, あなたを恐竜に例えると, writerscommunity, wordlinxgame, voices4victory, vaticano, tlou, sun, sotd, sherlockholmes, sea, rome, resign, pastpuzzle, party, papafrancesco, ostern, moon, monday, moma, miqote, microsoft, marvelcomics, kleinekunstklasse, jdvancekilledthepope, hbo, good_day_by_day, gaynsfw, gamingcommunity, gameplay, erotic, davidsmonthofmusic, communityengagement, climatecrisis, carneyforcanada, bunny, bekind, basketball, atlanta, 7syllablesentence, 21nisangenelboykot, 13, 1201, 12, 협박플, 협박, 핑거링, 중년, 존잘, 존예, 조교, 전국구, 온플, 에셈, 야외노출, 야단라, 애무, 암퇘지, 신상상납, 시흥, 수치플, 섹벙, 비떱, 부천, 부산, 발정, 마사지, 라인, 대구보도사무실, 대구당일알바, 대구노래방도우미, 대구남구보도사무실, 대구고수익알바, 대구, 남존여비, 건오, 読了, 歴史, 最後, 日向坂46, 仮想通貨, 仕上がりとラフを同時にアップしてみよう, 乃木坂46, レヴリー, ホーランドロップ#ホーランドロップ, ニュース, ダイエット, ストック, シケモクとクズ, ガンプラ, ガン, アート, アズ生春の北風sp, ふるさと納税, おすすめ書籍, うさぎ, วีทูปเบอร์ไทย, รับงานลาดพร้าว, ссср, общество, бывший, şanlıurfa, yankees, wweraw, wrestling, wolf, wildflowers, whitehouse, werder, weekqforqs, webcomics, warhammer40k, waifu"
+            },
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreieuu7zgbcpfyqfqcgxq35r4ihaznazbqlm5kofzcuc3q6efiuj35y@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreieuu7zgbcpfyqfqcgxq35r4ihaznazbqlm5kofzcuc3q6efiuj35y@jpeg",
+                "alt": "Emoji Cloud; its emojis (sorted by weighted frequency, descending):  👶🏻, 🐡, ✝️, 🧮, 🤼‍♂️, 🤛, 🚢, 🚌, 🖐, 🕊️, 🔲, 👍🏽, ⚒️, 🫰🏻, 🪻, 🪷, 🪱, 🪛, 🪓, 🪇, 🧼, 🧹, 🧙, 🦫, 🦔, 🦀, 🥤, 🥗, 🥐, 🤷🏼‍♂️, 🤦🏻‍♂️, 🤞🏻, 🤝🏾, 🤌🏼, 🛳️, 🛋️, 🚶‍♀️, 🚙, 🙏🏿, 🙏🏼, 🙇🏻, 🙆🏻‍♂️, 🙅, 🗑️, 🖕🏼, 🕥, 🕐, 🔨, 🔜, 🔐, 📏, 📀, 💳, 💬, 🐿️, 🐚, 🐒, 🐋, 🏷️, 🏰, 🏔️, 🏅, 🎾, 🎹, 🎷, 🎣, 🌶️, 🌬, 🌪️, 🌝, 🇬🇪, 🃏, ⭕, ✖, ✈, ⛱, ⛰️, ⛪, ⚫, ⚜️, ⚔, ⌛"
+            },
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreie7hcpfsp3oy2uxrgxlboio7fcnugzae22d6k2dow6tdwqkdtgexi@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:mcb6n67plnrlx4lg35natk2b/bafkreie7hcpfsp3oy2uxrgxlboio7fcnugzae22d6k2dow6tdwqkdtgexi@jpeg",
+                "alt": "Emoji Legend\n    ⚠️💨# | \"Trend Strength Rating\" (deprecated; soon to be replaced by 💨x#, see below)\n    🔓 | \"Unlocked\" Ongoing Emergency Word (such words are not weighted down by their own previous usage; their *ongoing* increased usage--weeks, months, years--would otherwise move them down the list.)\n\n    [NOT YET IMPLEMENTED]\n    💨x# | \"Increased Trending Rate\" for a Word (meaningful value; \"💨x8 - burger\" will mean \"burger\" is trending at 8 times its own normal rate for this time of day)\n\n    [PREVIOUSLY USED]\n    ⚠️🌀💨 | \"Trend Strength Rating\" (see above)\n    ⚠️🌀 CAT. # | [same; \"CAT.\" = Category, like hurricane]\n    💬# | 10min Post Count\n    🆎# | 10min Word Count\n    🙂# | 10min Emoji Count"
+            }
+        ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-21T12:50:36.591Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
