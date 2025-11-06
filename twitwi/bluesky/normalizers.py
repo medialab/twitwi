@@ -356,7 +356,6 @@ def normalize_post(
     hashtags = set()
     links = set()
     links_to_replace = []
-    link_starts = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
             raising_error = False
@@ -473,9 +472,20 @@ def normalize_post(
             byteStart = facet["index"]["byteStart"]
             byteEnd = facet["index"]["byteEnd"]
 
+
+            # Skip overlapping links cases
+            # examples: https://bsky.app/profile/researchtrend.ai/post/3lbieylwwxs2b
+            #           https://bsky.app/profile/dj-cyberspace.otoskey.tarbin.net.ap.brid.gy/post/3lchg3plpdjp2
+            for elt in links_to_replace:
+                if ((byteStart >= elt["start"] and byteStart <= elt["end"])
+                    or (byteEnd >= elt["start"] and byteEnd <= elt["end"])):
+                    # Overlapping links, we skip this one
+                    byteStart = -1
+                    break
+
             # It appears that some links end before they start... Bluesky please: what's going on?
             # example: https://bsky.app/profile/ondarockwebzine.bsky.social/post/3lqxxejza6o2t
-            if int(byteEnd) < int(byteStart):
+            if int(byteEnd) < int(byteStart) or byteStart < 0:
                 continue
 
             # There are mentionned links which are positionned after the end of the text,
@@ -583,15 +593,10 @@ def normalize_post(
 
     # Rewrite full links within post's text
     for link in sorted(links_to_replace, key=lambda x: x["start"], reverse=True):
-        # Skip already replaced links (overlapping links cases)
-        # example: https://bsky.app/profile/researchtrend.ai/post/3lbieylwwxs2b
-        if link["start"] in link_starts:
-            continue
         if link["start"] < 0:
             text = text + b" " + link["uri"]
         else:
             text = text[: link["start"]] + link["uri"] + text[link["end"] :]
-            link_starts.append(link["start"])
 
     # Handle thread info when applicable
     # Unfortunately posts' payload only provide at uris for these so we do not have the handles
