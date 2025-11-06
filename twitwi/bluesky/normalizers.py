@@ -101,7 +101,13 @@ def prepare_native_gif_as_media(gif_data, user_did, source):
 
 def prepare_image_as_media(image_data):
     if "ref" not in image_data["image"] or "$link" not in image_data["image"]["ref"]:
-        image_id = image_data["image"]["cid"]
+        # As in this post: https://bsky.app/profile/testjuan06.bsky.social/post/3ljkzygywso2b
+        if "link" in image_data["image"]:
+            image_id = image_data["image"]["link"]
+        elif "cid" in image_data["image"]:
+            image_id = image_data["image"]["cid"]
+        else:
+            raise BlueskyPayloadError("Unable to find image id in image data: %s" % image_data)
     else:
         image_id = image_data["image"]["ref"]["$link"]
     return {
@@ -662,7 +668,7 @@ def normalize_post(
                     post = process_card_data(data["embed"]["external"], post)
 
         # Images
-        if embed["$type"].endswith(".images"):
+        if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
             media_data.extend([prepare_image_as_media(i) for i in embed["images"]])
 
         # Video

@@ -6239,5 +6239,50 @@
       "user_timestamp_utc": 1743784938,
       "user_url": "https://bsky.app/profile/tsunamialertsptwc.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreif7u6nq6sneogq6wd7m6onmxr3fnjflwcrhn4ztlnorpex42y5g4i",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3ljkzygywso2b",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2025-03-04T17:56:08.957Z",
+      "like_count": 0,
+      "links": [],
+      "local_time": "2024-11-23T03:15:27.000000",
+      "match_query": true,
+      "media_alt_texts": [
+        ""
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:pvk7h5zgb33cjeltsoh3n55r/bafkreifzj56dcdwsftjjzggtuna4mxw6u5wgnu7ag2wm3qbhbrshxdbqxq@jpeg"
+      ],
+      "media_types": [
+        "image/jpeg"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pvk7h5zgb33cjeltsoh3n55r/bafkreifzj56dcdwsftjjzggtuna4mxw6u5wgnu7ag2wm3qbhbrshxdbqxq@jpeg"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "#JournéeMondialeContrelObésité Le diagnostic ne doit plus reposer sur l’IMC seul, et il faut distinguer les stades préclinique et clinique. Ces changements ont des implications majeures pour la pratique, au moment où l’arrivée des aGLP-1 révolutionne la prise en charge👉https://ecs.page.link/p4953",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "#JournéeMondialeContrelObésité Le diagnostic ne doit plus reposer sur l’IMC seul, et il faut distinguer les stades préclinique et clinique. Ces changements ont des implications majeures pour la pratique, au moment où l’arrivée des aGLP-1 révolutionne la prise en charge👉https://ecs.page.link/p4953 https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:pvk7h5zgb33cjeltsoh3n55r/bafkreifzj56dcdwsftjjzggtuna4mxw6u5wgnu7ag2wm3qbhbrshxdbqxq@jpeg",
+      "timestamp_utc": 1732328127,
+      "uri": "at://did:plc:pvk7h5zgb33cjeltsoh3n55r/app.bsky.feed.post/3ljkzygywso2b",
+      "url": "https://bsky.app/profile/testjuan06.bsky.social/post/3ljkzygywso2b",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pvk7h5zgb33cjeltsoh3n55r/bafkreifls6lcoef3i3lk4hzb3slsyhg5hjk74ogp3eera2xngi7qcjrvpe@jpeg",
+      "user_created_at": "2024-11-22T18:07:46.554000",
+      "user_did": "did:plc:pvk7h5zgb33cjeltsoh3n55r",
+      "user_diplay_name": "Test Juan",
+      "user_handle": "testjuan06.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1732295266,
+      "user_url": "https://bsky.app/profile/testjuan06.bsky.social"
+    }
   ]
 ]

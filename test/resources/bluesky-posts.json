@@ -10797,6 +10797,56 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:pvk7h5zgb33cjeltsoh3n55r/app.bsky.feed.post/3ljkzygywso2b",
+    "cid": "bafyreif7u6nq6sneogq6wd7m6onmxr3fnjflwcrhn4ztlnorpex42y5g4i",
+    "author": {
+        "did": "did:plc:pvk7h5zgb33cjeltsoh3n55r",
+        "handle": "testjuan06.bsky.social",
+        "displayName": "Test Juan",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pvk7h5zgb33cjeltsoh3n55r/bafkreifls6lcoef3i3lk4hzb3slsyhg5hjk74ogp3eera2xngi7qcjrvpe@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-22T17:07:46.554Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-11-23T02:15:27.000Z",
+        "embed": {
+            "$type": "image",
+            "images": [
+                {
+                    "alt": "",
+                    "image": {
+                        "link": "bafkreifzj56dcdwsftjjzggtuna4mxw6u5wgnu7ag2wm3qbhbrshxdbqxq",
+                        "mimeType": "image/jpeg"
+                    }
+                }
+            ]
+        },
+        "text": "#JournéeMondialeContrelObésité Le diagnostic ne doit plus reposer sur l’IMC seul, et il faut distinguer les stades préclinique et clinique. Ces changements ont des implications majeures pour la pratique, au moment où l’arrivée des aGLP-1 révolutionne la prise en charge👉https://ecs.page.link/p4953"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-03-04T17:56:08.957Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
