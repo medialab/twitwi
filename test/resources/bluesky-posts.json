@@ -10477,6 +10477,50 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:2gwfvcwbiqwzualcoig7nwsr/app.bsky.feed.post/3ll3rgn3a6u2d",
+    "cid": "bafyreigmesaalnkhavpyr6n3fzev63vlk6jfzsrvebxzp6oellmdn5vqdm",
+    "author": {
+        "did": "did:plc:2gwfvcwbiqwzualcoig7nwsr",
+        "handle": "bamnet.bsky.social",
+        "displayName": "Brian M",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2gwfvcwbiqwzualcoig7nwsr/bafkreienht5x3kw7pycad6kau24hginzcawpsrces4qwhc7okilwbgdyim@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-11-18T21:26:52.443Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-24T03:03:28.293Z",
+        "embed": {
+            "$type": "community.lexicon.embed.geo",
+            "latitude": "40.791200096394995",
+            "longitude": "-74.05726919273859",
+            "name": "Plaza Pizza"
+        },
+        "text": "Walked into my local pizza place, \"Hello Brian, no medium pizza today?\"\n\nHow did he know my name? I place like 1 order a month max. Legit thought they were running some AI camera stuff but, after calling me Brian 4 more times, it was clear he was trying to learn names. +$4 tip."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2025-03-24T03:03:28.549Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
