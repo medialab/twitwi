@@ -389,7 +389,7 @@ def normalize_post(
         feat = facet["features"][0]
 
         # Hashtags
-        if feat["$type"].endswith("#tag") or feat["$type"].endswith("#hashtag") or feat["$type"] == "FACETTAG":
+        if feat["$type"].lower().endswith("#tag") or feat["$type"].lower().endswith("#hashtag") or feat["$type"].lower() == "facettag":
             # Some posts have the full text in the "text" field of the hashtag feature
             if "text" in feat:
                 for tag in feat["text"].split("#"):
