@@ -575,6 +575,10 @@ def normalize_post(
 
         elif feat["$type"].endswith("#bold"):
             pass
+        elif feat["$type"].endswith("#italic"):
+            pass
+        elif feat["$type"].endswith("#underline"):
+            pass
         elif feat["$type"].endswith("#option"):
             pass
         # Bluesky seems to use format features for some internal purposes, but we ignore them
