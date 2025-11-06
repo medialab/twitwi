@@ -5907,5 +5907,58 @@
       "user_timestamp_utc": 1725577772,
       "user_url": "https://bsky.app/profile/77cupons.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreidx5heu2imavk2ku5weq6jy2yvkibkbxft7shu7kekwippcspnc7a",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3kmuqjkkozh2r",
+      "domains": [
+        "poll.blue",
+        "staging.bsky.app"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2024-03-04T13:22:45.693Z",
+      "like_count": 1,
+      "links": [
+        "https://poll.blue/p/UCPisi/0",
+        "https://staging.bsky.app/profile/ha-chanjp.sunabacks.com/post/3kmuqjjleys2c"
+      ],
+      "local_time": "2024-03-04T14:22:45.693000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "\"砂場鯖リニューアルで「こんなのやってほしい！」というのがあれば投票お願いします！\" asked by @ha-chanjp.sunabacks.com. Vote below!\n\n🅰 経済・生活\n🅱 ミニゲーム(Sky Block・PvP等)\n🅲 FPS(ゾンビ・戦争等)\n🅳 その他(リプ欄にお願いします)\n\n📊 Show results",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "\"砂場鯖リニューアルで「こんなのやってほしい！」というのがあれば投票お願いします！\" asked by @https://staging.bsky.app/profile/ha-chanjp.sunabacks.com/post/3kmuqjjleys2c Vote below!\n\n🅰 経済・生活\n🅱 ミニゲーム(Sky Block・PvP等)\n🅲 FPS(ゾンビ・戦争等)\n🅳 その他(リプ欄にお願いします)\n\n📊 Show results https://poll.blue/p/UCPisi/0",
+      "timestamp_utc": 1709558565,
+      "to_post_cid": "bafyreiahtepstqgabv5darogjeorpdloemwce4eekhqelhwkzjrld6kp7y",
+      "to_post_did": "3kmuqjjleys2c",
+      "to_post_uri": "at://did:plc:ymdqgzoop3puhkbwrd7njbke/app.bsky.feed.post/3kmuqjjleys2c",
+      "to_post_url": "https://bsky.app/profile/did:plc:ymdqgzoop3puhkbwrd7njbke/post/3kmuqjjleys2c",
+      "to_root_post_cid": "bafyreiahtepstqgabv5darogjeorpdloemwce4eekhqelhwkzjrld6kp7y",
+      "to_root_post_did": "3kmuqjjleys2c",
+      "to_root_post_uri": "at://did:plc:ymdqgzoop3puhkbwrd7njbke/app.bsky.feed.post/3kmuqjjleys2c",
+      "to_root_post_url": "https://bsky.app/profile/did:plc:ymdqgzoop3puhkbwrd7njbke/post/3kmuqjjleys2c",
+      "to_root_user_did": "did:plc:ymdqgzoop3puhkbwrd7njbke",
+      "to_user_did": "did:plc:ymdqgzoop3puhkbwrd7njbke",
+      "uri": "at://did:plc:4nt6nwx353a3xxo5mzjiy4ha/app.bsky.feed.post/3kmuqjkkozh2r",
+      "url": "https://bsky.app/profile/poll.blue/post/3kmuqjkkozh2r",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4nt6nwx353a3xxo5mzjiy4ha/bafkreigolgmfa4so3uatwhmedayag32klacgw6p4yllusu34i4hqicp3yy@jpeg",
+      "user_created_at": "2023-04-14T19:13:40.963000",
+      "user_did": "did:plc:4nt6nwx353a3xxo5mzjiy4ha",
+      "user_diplay_name": "poll.blue",
+      "user_handle": "poll.blue",
+      "user_langs": [],
+      "user_timestamp_utc": 1681492420,
+      "user_url": "https://bsky.app/profile/poll.blue"
+    }
   ]
 ]
