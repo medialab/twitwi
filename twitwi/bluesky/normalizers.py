@@ -615,9 +615,11 @@ def normalize_post(
         extra_links = []
 
         if not valid_embed_type(embed["$type"]):
-            raise BlueskyPayloadError(
-                post["url"], "unusual record embed $type: %s" % embed
-            )
+            if "bsky.app" in embed["$type"]:
+                raise BlueskyPayloadError(
+                    post["url"], "unusual record embed $type: %s" % embed
+                )
+            # Ignore non Bluesky embeds for now (e.g. personalized embeds)
 
         # Empty embed (not usual, but seen in the Bluesky jungle, e.g.
         # https://bsky.app/profile/did:plc:na6u3avvaz2x5wyzqrnviqiz/post/3lzf5qi2ra62k
@@ -628,6 +630,7 @@ def normalize_post(
                     post["url"], "unusual empty record embed with extra keys: %s" % embed
                 )
             # Nothing to do for empty embed
+
         if embed["$type"].endswith(".embed") and len(embed.keys()) > 2 and len(embed.get('images')) > 0:
             raise BlueskyPayloadError(
                 post["url"], "unusual empty record embed with extra keys: %s" % embed

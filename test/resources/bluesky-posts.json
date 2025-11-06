@@ -10421,6 +10421,62 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:2356xofv4ntrbu42xeilxjnb/app.bsky.feed.post/3lwwfkzikxc23",
+    "cid": "bafyreicqpg73d5ko2wp5a5pyyreaxrqpdszxgab7zvdwssltneew3gzvku",
+    "author": {
+        "did": "did:plc:2356xofv4ntrbu42xeilxjnb",
+        "handle": "tomas.cabildo.ar",
+        "displayName": "Tomás Delgado",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2356xofv4ntrbu42xeilxjnb/bafkreifaatkxi3zcb5r6juowawnpnadnrwjy5poindqd7hlmm7sy6twc5m@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-05-24T18:31:30.614Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-08-21T16:50:10.895Z",
+        "embed": {
+            "$type": "ar.cabildoabierto.embed.selectionQuote",
+            "end": 3085,
+            "start": 2853
+        },
+        "reply": {
+            "parent": {
+                "cid": "bafyreih3rutxbcxzkazjezj2xr4pt7j3t7hhhcms7v6a73wjctsam6tt24",
+                "uri": "at://did:plc:2356xofv4ntrbu42xeilxjnb/ar.cabildoabierto.wiki.topicVersion/3lwuw7yoilc23"
+            },
+            "root": {
+                "cid": "bafyreih3rutxbcxzkazjezj2xr4pt7j3t7hhhcms7v6a73wjctsam6tt24",
+                "uri": "at://did:plc:2356xofv4ntrbu42xeilxjnb/ar.cabildoabierto.wiki.topicVersion/3lwuw7yoilc23"
+            }
+        },
+        "text": "Cabe preguntarse, me parece, si no es un déficit razonable dada la inflación que hubo durante el año 2023 (no lo sé). Similarmente, habría que ver qué hacían esas 900 personas y si es que había un problema de eficiencia ahí o no."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2025-08-21T16:50:11.811Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
