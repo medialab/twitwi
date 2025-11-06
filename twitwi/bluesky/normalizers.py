@@ -475,6 +475,11 @@ def normalize_post(
             if int(byteEnd) < int(byteStart):
                 continue
 
+            # There are mentionned links which are positionned after the end of the text,
+            # so we don't replace them in the original text
+            if byteStart >= len(post["original_text"].encode("utf-8")):
+                continue
+
             if not text[byteStart:byteEnd].startswith(b"http"):
                 new_byteStart = text.find(b"http", byteStart, byteEnd)
 
