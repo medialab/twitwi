@@ -56,7 +56,7 @@ def validate_post_payload(data):
 
 
 re_embed_types = re.compile(
-    r"(\.(record|recordWithMedia|images|videos?|external|post|embed|links|media)(?:#.*)?|N\/A|image)$"
+    r"(\.(record|recordWithMedia|images|videos?|external|post|embed|links|media|file)(?:#.*)?|N\/A|image)$"
 )
 
 

@@ -6639,5 +6639,42 @@
       "user_timestamp_utc": 1731699294,
       "user_url": "https://bsky.app/profile/notf1.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreieyqbd3gw72onqk3qxh47ejw4ngc4p2anbt7vz4jkxfgo3dzld2ve",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lorusdtfur2y",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2025-05-10T02:17:52.943Z",
+      "like_count": 1,
+      "links": [],
+      "local_time": "2025-05-10T04:17:51.506000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "AVEC-AVEC",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "AVEC-AVEC",
+      "timestamp_utc": 1746843471,
+      "uri": "at://did:plc:jh7crpufjisijebktuxn5r2o/app.bsky.feed.post/3lorusdtfur2y",
+      "url": "https://bsky.app/profile/ethehot.bsky.social/post/3lorusdtfur2y",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jh7crpufjisijebktuxn5r2o/bafkreicgolnftrkg5piw5muizjn4mjow6k6mhcx4d2rmj67h5lj35bebxm@jpeg",
+      "user_created_at": "2024-02-07T09:24:17.504000",
+      "user_did": "did:plc:jh7crpufjisijebktuxn5r2o",
+      "user_diplay_name": "E-The-Hot (/ˈɪd.i.ot/)",
+      "user_handle": "ethehot.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1707294257,
+      "user_url": "https://bsky.app/profile/ethehot.bsky.social"
+    }
   ]
 ]
