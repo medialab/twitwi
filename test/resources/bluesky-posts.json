@@ -12669,6 +12669,82 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:zdrwgwi3gwdggzkdz2t6lfy5/app.bsky.feed.post/3ler7vhnraj2f",
+    "cid": "bafyreibq7ebkpc4wm2zylqlmc6qjhqf5xharpq75w7chxmgvndd7pie3be",
+    "author": {
+        "did": "did:plc:zdrwgwi3gwdggzkdz2t6lfy5",
+        "handle": "i4.ispost.ing",
+        "displayName": "nuggetto :3",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zdrwgwi3gwdggzkdz2t6lfy5/bafkreihgypsn4zcaflj2o6nikhi7ohd5zrnu7o26ybbox2z7gqvl7z53dy@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-12-22T18:30:58.505Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-01-02T13:51:51.181Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#bold"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 46,
+                    "byteStart": 0
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#italic"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 46,
+                    "byteStart": 0
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#underline"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 46,
+                    "byteStart": 0
+                }
+            }
+        ],
+        "text": "posting from @imlunahey.com ‘s bluesky client"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2025-01-02T13:51:51.659Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
