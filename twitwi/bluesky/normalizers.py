@@ -354,30 +354,30 @@ def normalize_post(
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
             raising_error = False
-            if len(facet["features"]) == 2:
+            for feat in facet["features"]:
                 # Already handled linkcards separately below
-                if facet["features"][1]["$type"].endswith("#linkcard"):
+                if feat["$type"].endswith("#linkcard"):
                     continue
-                # Yeah weird case of two identical features...
-                # example: https://bsky.app/profile/77cupons.bsky.social/post/3lml2f5inx52p
+
+                # If there are links, we register them and do not replace anything in original text
+                # as we don't have position for each link
                 # example: https://bsky.app/profile/77cupons.bsky.social/post/3latbufuvqw25
-                if facet["features"][0] != facet["features"][1]:
-                    # Weird case of two link features identical in type and keys in a same facet
-                    # example: https://bsky.app/profile/77cupons.bsky.social/post/3latbufuvqw25
-                    # We register them and do not replace anything in original text
-                    if (facet["features"][0]["$type"] == facet["features"][1]["$type"]
-                        and facet["features"][0].keys() == facet["features"][1].keys()
-                        and facet["features"][0]["$type"].endswith("#link")
-                        and "uri" in facet["features"][0]):
-                        for feat in facet["features"]:
-                            link = safe_normalize_url(feat["uri"])
-                            if is_url(link):
-                                links.add(link)
-                        continue
-                    else:
-                        raising_error = True
-            else:
-                raising_error = True
+                elif (feat["$type"].endswith("#link")
+                    and "uri" in feat):
+                    link = safe_normalize_url(feat["uri"])
+                    if is_url(link):
+                        links.add(link)
+                        links_to_replace.append(
+                            {
+                                "uri": feat["uri"].encode("utf-8"),
+                                "start": -1,
+                                "end": -1
+                            }
+                        )
+                elif feat["$type"].lower().endswith("#tag"):
+                    hashtags.add(feat["tag"].strip().lower())
+                else:
+                    raising_error = True
 
             if raising_error:
                 raise BlueskyPayloadError(
@@ -385,6 +385,7 @@ def normalize_post(
                     "unusual record facet content with more or less than a unique feature: %s"
                     % facet,
                 )
+            continue
 
         feat = facet["features"][0]
 
@@ -576,7 +577,7 @@ def normalize_post(
             text = text + b" " + link["uri"]
         else:
             text = text[: link["start"]] + link["uri"] + text[link["end"] :]
-        link_starts.append(link["start"])
+            link_starts.append(link["start"])
 
     # Handle thread info when applicable
     # Unfortunately posts' payload only provide at uris for these so we do not have the handles

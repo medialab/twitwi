@@ -10688,6 +10688,115 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:f2sa3ui7kmuywt34ulsceot4/app.bsky.feed.post/3lv5x3rdw6d2v",
+    "cid": "bafyreieairfp6tfdnnumkjk7mq7yz5mwpjmcecyq7gzuttv6kqfhwt3vhu",
+    "author": {
+        "did": "did:plc:f2sa3ui7kmuywt34ulsceot4",
+        "handle": "tsunamialertsptwc.bsky.social",
+        "displayName": "Tsunami Alerts (PTWC) from Pacific Tsunami Warning Center",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:f2sa3ui7kmuywt34ulsceot4/bafkreihy75h46x2tpbn2ctw7pgubnjkx7ds6vczuthtu5oka5recp2xifm@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-04-04T16:42:18.993Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-07-30T06:02:01.989Z",
+        "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+                {
+                    "alt": "OFF THE EAST COAST OF KAMCHATKA  RUSSIA",
+                    "aspectRatio": {
+                        "height": 400,
+                        "width": 600
+                    },
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreibkpxjvuf7bhiw7a2eajf2mk2htsztk3l3or5qs4evdox27ku4xta"
+                        },
+                        "mimeType": "image/png",
+                        "size": 285343
+                    }
+                }
+            ]
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "Tsunami"
+                    },
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "Earthquake"
+                    },
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "http://www.tsunami.gov/events/PHEB/2025/07/29/25210002/7/WEHW40/WEHW40.txt"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 71,
+                    "byteStart": 0
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://earthquake.usgs.gov/earthquakes/map/?extent=32.99354000000001,106.80517000000002&extent=71.42446,213.15283&listOnlyShown=true&showUSFaults=true&baseLayer=satellite&settings=false&list=false"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 127,
+                    "byteStart": 88
+                }
+            }
+        ],
+        "langs": [
+            "en-US"
+        ],
+        "text": "#7 TSUNAMI WARNING SUPPLEMENT- ALL COUNTIES IN THE STATE OF HAWAII area\nM8.8 earthquake OFF THE EAST COAST OF KAMCHATKA  RUSSIA 16:24PDT Jul 29 Depth 74km\n\nTsunami Warning, Watch, and/or Advisory Bulletin for confirmed or potentially destructive teletsunamis generated anywhere in the Pacific Basin."
+    },
+    "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:f2sa3ui7kmuywt34ulsceot4/bafkreibkpxjvuf7bhiw7a2eajf2mk2htsztk3l3or5qs4evdox27ku4xta@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:f2sa3ui7kmuywt34ulsceot4/bafkreibkpxjvuf7bhiw7a2eajf2mk2htsztk3l3or5qs4evdox27ku4xta@jpeg",
+                "alt": "OFF THE EAST COAST OF KAMCHATKA  RUSSIA",
+                "aspectRatio": {
+                    "height": 400,
+                    "width": 600
+                }
+            }
+        ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 7,
+    "quoteCount": 1,
+    "indexedAt": "2025-07-30T06:02:02.905Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
