@@ -131,6 +131,8 @@ def format_media_url(user_did, media_cid, mime_type, source):
         media_thumb = (
             f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@jpeg"
         )
+    elif "empty" in mime_type:
+        media_url, media_thumb = "", ""
     else:
         raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb
