@@ -13059,6 +13059,110 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:bds54ltpgjtysjgdjhreirgn/app.bsky.feed.post/3lo7etakrla2b",
+    "cid": "bafyreidbgj4kpph4qgq4fhcemp2htrkegqhrcianmem3yfvyzxk7rnfe3u",
+    "author": {
+        "did": "did:plc:bds54ltpgjtysjgdjhreirgn",
+        "handle": "ctmtatemblando.bsky.social",
+        "displayName": "ctmtatemblando",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bds54ltpgjtysjgdjhreirgn/bafkreia6y2bfhtolqqvi7ngyukbfnevy4sf2g7pvhrzlbosragi4jvagmq@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-14T12:01:04.674Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-05-02T13:08:32-04:00",
+        "embed": {
+            "$type": "app.bsky.embed.video",
+            "aspectRatio": {
+                "height": 340,
+                "width": 600
+            },
+            "video": {
+                "$type": "blob",
+                "ref": {
+                    "$link": "bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku"
+                },
+                "mimeType": "application/x-empty",
+                "size": 0
+            }
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "sismo"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 127,
+                    "byteStart": 121
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "temblor"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 136,
+                    "byteStart": 128
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://www.sismologia.cl/sismicidad/informes/2025/05/295927.html"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 120,
+                    "byteStart": 55
+                }
+            }
+        ],
+        "langs": [
+            "es-CL"
+        ],
+        "text": "Temblor magnitud 4.3, 248 km al sur de Puerto Williams https://www.sismologia.cl/sismicidad/informes/2025/05/295927.html #sismo #temblor"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.video#view",
+        "cid": "bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3Abds54ltpgjtysjgdjhreirgn/bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku/playlist.m3u8",
+        "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Abds54ltpgjtysjgdjhreirgn/bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku/thumbnail.jpg",
+        "aspectRatio": {
+            "height": 340,
+            "width": 600
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-05-02T17:44:06.884Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
