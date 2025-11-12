@@ -12886,6 +12886,113 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:w2gqompnxwbcvbsw7h6hkc56/app.bsky.feed.post/3librlatems2w",
+    "cid": "bafyreiaekltsse6uurm7gh3ri5fla3yysrhdm3jrb24z5cnkt2sh63shm4",
+    "author": {
+        "did": "did:plc:w2gqompnxwbcvbsw7h6hkc56",
+        "handle": "whyulooksoblue.bsky.social",
+        "displayName": "ෆ⸒⸒",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:w2gqompnxwbcvbsw7h6hkc56/bafkreia2db2qeamzsu5l7czsy5oqpqycy7bjgiv3hcis2zhojmdwcdwznm@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:w2gqompnxwbcvbsw7h6hkc56",
+                "uri": "at://did:plc:w2gqompnxwbcvbsw7h6hkc56/app.bsky.actor.profile/self",
+                "cid": "bafyreictvw3kb4bixkhbzk3kqxq6wnh3xcylh444ji6lwt4mmlnn2dlwmy",
+                "val": "!no-unauthenticated",
+                "cts": "1970-01-01T00:00:00.000Z"
+            }
+        ],
+        "createdAt": "2024-01-11T16:31:16.202Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-02-16T08:06:26.919Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "그늘셀프"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 13,
+                    "byteStart": 0
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://youtu.be/HF09FA58nOk?si=zL8aCEo-VWmSU1CW"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 97,
+                    "byteStart": 49
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://secret-sky.vercel.app/profile/did:plc:w2gqompnxwbcvbsw7h6hkc56/post/3librlatems2w"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 115,
+                    "byteStart": 99
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#encrypt",
+                        "encrypted": "s6pBm11ilNiF3fWoWJdzrxGB6EBaOaTAzjYgI7wgG5DvusY-atvhK8XWQInfmfaX-Ebr0iZr3n1DTrd8uazm897kSyyE2owvMGif-WgfJ16KgnDqGiYgDjv1XdgUXB2zrw8gV65y8omf"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 0,
+                    "byteStart": 0
+                }
+            }
+        ],
+        "reply": {
+            "parent": {
+                "cid": "bafyreiaofsuk4rrbo4borzlrxdcnrdok5dfvrpvrf6zkhfpjjtpnzeix4e",
+                "uri": "at://did:plc:w2gqompnxwbcvbsw7h6hkc56/app.bsky.feed.post/3libmayfgf22w"
+            },
+            "root": {
+                "cid": "bafyreih2h5g5hgyqkpqefjxloe5rxlilp5w7om2ap46o2xklrgh7bbqthm",
+                "uri": "at://did:plc:w2gqompnxwbcvbsw7h6hkc56/app.bsky.feed.post/3li75ajnhws2w"
+            }
+        },
+        "text": "#그늘셀프\n\n극대화 시키면 이런느낌\r\nhttps://youtu.be/HF09FA58nOk?si=zL8aCEo-VWmSU1CW\n\n비밀글 보기"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-02-16T08:06:29.151Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "replyDisabled": true,
+        "embeddingDisabled": true
+    },
+    "labels": []
   }
 
 ]
