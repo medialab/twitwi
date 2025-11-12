@@ -472,7 +472,6 @@ def normalize_post(
             byteStart = facet["index"]["byteStart"]
             byteEnd = facet["index"]["byteEnd"]
 
-
             # Skip overlapping links cases
             # examples: https://bsky.app/profile/researchtrend.ai/post/3lbieylwwxs2b
             #           https://bsky.app/profile/dj-cyberspace.otoskey.tarbin.net.ap.brid.gy/post/3lchg3plpdjp2
@@ -593,6 +592,8 @@ def normalize_post(
         elif feat["$type"].endswith("#underline"):
             pass
         elif feat["$type"].endswith("#option"):
+            pass
+        elif feat["$type"].endswith("#encrypt"):
             pass
         # Bluesky seems to use format features for some internal purposes, but we ignore them
         # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g
