@@ -12993,6 +12993,72 @@
         "embeddingDisabled": true
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:4kj4etf4a6w6zhmpfkozqybn/app.bsky.feed.post/3l3j4lqa6sd2o",
+    "cid": "bafyreiegh2eqygofygl5n67glypvylpgtnrbwvqvjik6dgiab74wc54yhu",
+    "author": {
+        "did": "did:plc:4kj4etf4a6w6zhmpfkozqybn",
+        "handle": "77cupons.bsky.social",
+        "displayName": "77 cupons Amazon",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4kj4etf4a6w6zhmpfkozqybn/bafkreia6n7zdxfkehsoiaif4jn6smbpbarumo4gp7uami62oyrx76lj5za@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "following"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-09-05T23:09:32.136Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-09-06T19:44:40.754Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#text"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 88,
+                    "byteStart": 0
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://amzn.to/3ZlT718"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 111,
+                    "byteStart": 88
+                }
+            }
+        ],
+        "text": "📦Frete Grátis Amazon Prime\n\nGarrafa Buba Super-Herois Azul\n🔥R$ 26,99\n\n🛍 Compre aqui:\nhttps://amzn.to/3ZlT718"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-09-06T19:44:40.754Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
