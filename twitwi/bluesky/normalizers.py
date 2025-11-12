@@ -556,6 +556,19 @@ def normalize_post(
                         byteEnd = facet["index"]["byteEnd"]
 
                     byteEnd += byteStart - facet["index"]["byteStart"]
+            else:
+                # Handling case of errored byteEnd in the end of the text
+                # example: https://bsky.app/profile/twif.bsky.social/post/3lm4izkvbfm2r
+                while byteEnd <= len(post["original_text"].encode("utf-8")):
+                        try:
+                            text[byteStart:byteEnd].decode("utf-8")
+                            break
+                        except UnicodeDecodeError:
+                            byteEnd += 1
+                            continue
+
+                if byteEnd > len(post["original_text"].encode("utf-8")):
+                        byteEnd = facet["index"]["byteEnd"]
 
             # In some cases, the link is completely wrong in the post text,
             # like in this post: https://bsky.app/profile/sudetsoleil.bsky.social/post/3ljf3h74wee2m

@@ -6763,5 +6763,52 @@
       "user_timestamp_utc": 1703269858,
       "user_url": "https://bsky.app/profile/i4.ispost.ing"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "card_description": "Hi fintech friends, I'm Osborne, investor in early stage startups.\n\nPlease enjoy all the news and updates from the past week in today’s edition. If you feel TWIF brings you value, please share it with your friends (and maybe suggest they subscribe too).\n\nHelp us deliver more value! Please",
+      "card_link": "https://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/",
+      "card_thumbnail": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:6kwl7qmufzubiyth5rj2rs37/bafkreidqwy5w27st74vb3ihw2biuk3nzpzftd3q6tbqwvc4qod4p25igfu@jpeg",
+      "card_title": "NPCI facing the heat with UPI down again; SEA Central Banks launch Nexus | TWIF - 06th Apr 2025",
+      "cid": "bafyreie5mzmrqz77g5wptclu74gw7vyglr3daag4i4pmdmtx7ssyaoiqa4",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lm4izkvbfm2r",
+      "domains": [
+        "thisweekinfintech.com",
+        "thisweekinfintech.com"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2025-04-06T03:30:51.599Z",
+      "like_count": 0,
+      "links": [
+        "https://www.thisweekinfintech.com/content/images/2025/04/TWIF-Header-LI-2.jpg",
+        "https://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/"
+      ],
+      "local_time": "2025-04-06T05:30:49.518000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "NPCI facing the heat with UPI down again; SEA Central Banks launch Nexus | TWIF - 06th Apr 2025\n\nhttps://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/\n\nhttps://www.thisweekinfintech.com/content/images/2025/04/TWIF-Header-LI-2.j…",
+      "quote_count": 0,
+      "reply_count": 11,
+      "repost_count": 0,
+      "text": "NPCI facing the heat with UPI down again; SEA Central Banks launch Nexus | TWIF - 06th Apr 2025\n\nhttps://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/\n\nhttps://www.thisweekinfintech.com/content/images/2025/04/TWIF-Header-LI-2.jpg",
+      "timestamp_utc": 1743910249,
+      "uri": "at://did:plc:6kwl7qmufzubiyth5rj2rs37/app.bsky.feed.post/3lm4izkvbfm2r",
+      "url": "https://bsky.app/profile/twif.bsky.social/post/3lm4izkvbfm2r",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6kwl7qmufzubiyth5rj2rs37/bafkreic4yuo757mudq47cetfw4msalwmf5wv32nxyll3sqg24v455z7poi@jpeg",
+      "user_created_at": "2024-11-18T16:07:30.048000",
+      "user_did": "did:plc:6kwl7qmufzubiyth5rj2rs37",
+      "user_diplay_name": "This Week in Fintech",
+      "user_handle": "twif.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1731942450,
+      "user_url": "https://bsky.app/profile/twif.bsky.social"
+    }
   ]
 ]

@@ -12745,6 +12745,95 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:6kwl7qmufzubiyth5rj2rs37/app.bsky.feed.post/3lm4izkvbfm2r",
+    "cid": "bafyreie5mzmrqz77g5wptclu74gw7vyglr3daag4i4pmdmtx7ssyaoiqa4",
+    "author": {
+        "did": "did:plc:6kwl7qmufzubiyth5rj2rs37",
+        "handle": "twif.bsky.social",
+        "displayName": "This Week in Fintech",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6kwl7qmufzubiyth5rj2rs37/bafkreic4yuo757mudq47cetfw4msalwmf5wv32nxyll3sqg24v455z7poi@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-18T15:07:30.048Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-04-06T03:30:49.518Z",
+        "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+                "description": "Hi fintech friends, I'm Osborne, investor in early stage startups.\n\nPlease enjoy all the news and updates from the past week in today’s edition. If you feel TWIF brings you value, please share it with your friends (and maybe suggest they subscribe too).\n\nHelp us deliver more value! Please",
+                "thumb": {
+                    "$type": "blob",
+                    "ref": {
+                        "$link": "bafkreidqwy5w27st74vb3ihw2biuk3nzpzftd3q6tbqwvc4qod4p25igfu"
+                    },
+                    "mimeType": "image/jpeg",
+                    "size": 11795
+                },
+                "title": "NPCI facing the heat with UPI down again; SEA Central Banks launch Nexus | TWIF - 06th Apr 2025",
+                "uri": "https://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/"
+            }
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 222,
+                    "byteStart": 97
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://www.thisweekinfintech.com/content/images/2025/04/TWIF-Header-LI-2.jpg"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 301,
+                    "byteStart": 224
+                }
+            }
+        ],
+        "text": "NPCI facing the heat with UPI down again; SEA Central Banks launch Nexus | TWIF - 06th Apr 2025\n\nhttps://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/\n\nhttps://www.thisweekinfintech.com/content/images/2025/04/TWIF-Header-LI-2.j…"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+            "uri": "https://www.thisweekinfintech.com/npci-facing-the-heat-with-upi-down-again-sea-central-banks-launch-nexus-twif-06th-apr-2025/",
+            "title": "NPCI facing the heat with UPI down again; SEA Central Banks launch Nexus | TWIF - 06th Apr 2025",
+            "description": "Hi fintech friends, I'm Osborne, investor in early stage startups.\n\nPlease enjoy all the news and updates from the past week in today’s edition. If you feel TWIF brings you value, please share it with your friends (and maybe suggest they subscribe too).\n\nHelp us deliver more value! Please",
+            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:6kwl7qmufzubiyth5rj2rs37/bafkreidqwy5w27st74vb3ihw2biuk3nzpzftd3q6tbqwvc4qod4p25igfu@jpeg"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 11,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-06T03:30:51.599Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
