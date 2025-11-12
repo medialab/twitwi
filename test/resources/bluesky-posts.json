@@ -12834,6 +12834,58 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:huivt3k7rjftkvlwa635wtfc/app.bsky.feed.post/3lhkxvic3jm2j",
+    "cid": "bafyreibrarrkiivytnqa7oquwoy5yeaicbp6dfpo54rxy7uphgoculyice",
+    "author": {
+        "did": "did:plc:huivt3k7rjftkvlwa635wtfc",
+        "handle": "zbem.bsky.social",
+        "displayName": "Zyed",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:huivt3k7rjftkvlwa635wtfc/bafkreigklepyjsqnjv62dlytlgzgakk4i7weojbwurf4lvcq345f53mhsy@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-26T12:03:42.045Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-02-07T06:28:18.571Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://medium.com/@zyed.em/embracing-the-nocode-revolution-transformations-and-lessons-c648c004b95c"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 167,
+                    "byteStart": 135
+                }
+            }
+        ],
+        "text": "Why settle for repetitive when you can automate? With just a photo, I turned hours of work into seconds. That's the NoCode magic! ✨ 👉 My Medium post here 🔗"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-02-07T06:28:18.949Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
