@@ -233,7 +233,7 @@ List of a Bluesky user profile's normalized field names. Useful to declare heade
 
 ### PARTIAL_PROFILE_FIELDS
 
-List of a Bluesky user partial profile's (retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example) normalized field names. Useful to declare headers with csv writers. Be careful not to confuse with [PROFILE_FIELDS](#profile_fields) which correspond to the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
+List of a Bluesky user partial profile's (retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example) normalized field names. Useful to declare headers with csv writers. Be careful not to confuse with [PROFILE_FIELDS](#profile_fields) which correspond to the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
 
 ### POST_FIELDS
 
@@ -250,7 +250,7 @@ Will return datetimes as UTC but can take an optional second `locale` argument a
 * **data** *(dict)*: user profile data payload coming from Twitter API v1.1 or v2.
 * **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
 * **pure** *(bool, optional)*: whether to allow the function to mutate its original `data` argument. Defaults to `True`.
-        
+
 ### normalize_tweet
 
 Function taking a nested dict describing a tweet from Twitter's JSON payload (API v1.1) and returning a flat "normalized" dict composed of all [TWEET_FIELDS](#tweet_fields) keys.
