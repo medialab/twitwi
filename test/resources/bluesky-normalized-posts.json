@@ -7374,5 +7374,46 @@
       "user_timestamp_utc": 1751632654,
       "user_url": "https://bsky.app/profile/lubosmichalik.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreibf7nnenfxs6wlo6gvcsoau2p75dq5mbqpcw4y37pvqqnsdw4pj24",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lcxmdmghfu2i",
+      "domains": [
+        "threads.net"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2024-12-10T16:00:06.555Z",
+      "like_count": 0,
+      "links": [
+        "https://www.threads.net/%40phillychi3/post/DDZwU5WyDP2"
+      ],
+      "local_time": "2024-12-10T17:00:06.000000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "聽說現在一字域名很火\n其實我也有一個La\n而且還非常佛心\n\nhttps://雲.tw/\n\n歡迎分享給你最好的朋友\\nFROM: https://www.threads.net/@phillychi3/post/DDZwU5WyDP2",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "聽說現在一字域名很火\n其實我也有一個La\n而且還非常佛心\n\nhttps://雲.tw/\n\n歡迎分享給你最好的朋友\\nFROM: https://www.threads.net/@phillychi3/post/DDZwU5WyDP2",
+      "timestamp_utc": 1733846406,
+      "uri": "at://did:plc:crlarl7r5ynd2jabu6xbhapd/app.bsky.feed.post/3lcxmdmghfu2i",
+      "url": "https://bsky.app/profile/cloudowo.com/post/3lcxmdmghfu2i",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:crlarl7r5ynd2jabu6xbhapd/bafkreiekqwbm2pofryb4isgvnenjmgsduvfirui7ovpsztyu2y6irx6giu@jpeg",
+      "user_created_at": "2023-11-13T14:10:29.824000",
+      "user_did": "did:plc:crlarl7r5ynd2jabu6xbhapd",
+      "user_diplay_name": "白雲",
+      "user_handle": "cloudowo.com",
+      "user_langs": [],
+      "user_timestamp_utc": 1699881029,
+      "user_url": "https://bsky.app/profile/cloudowo.com"
+    }
   ]
 ]
