@@ -7229,5 +7229,62 @@
       "user_timestamp_utc": 1700342812,
       "user_url": "https://bsky.app/profile/bamnet.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreigmjbgasjs4oqvj42eunfesbpekmpd2ytm472tgjpwjlrrhdmaggm",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3llkxuudzx42x",
+      "domains": [
+        "falifuentes.com",
+        "medium.com"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2025-03-30T04:08:44.902Z",
+      "like_count": 0,
+      "links": [
+        "https://falifuentes.com",
+        "https://medium.com/%40falitroke"
+      ],
+      "local_time": "2025-03-30T06:08:33.991000",
+      "match_query": true,
+      "media_alt_texts": [
+        "¿Sabías que los vehículos autónomos podrían reducir el tráfico urbano hasta un 40%? 🚀 - AI generated image"
+      ],
+      "media_thumbnails": [
+        "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4yzzyoh3mxox2otqvljhdckt/bafkreiev25ztwspa476pd3c7py3go7z6ysin3fidfclnnefuzo6lblcxyq@png"
+      ],
+      "media_types": [
+        "image/png"
+      ],
+      "media_urls": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4yzzyoh3mxox2otqvljhdckt/bafkreiev25ztwspa476pd3c7py3go7z6ysin3fidfclnnefuzo6lblcxyq@png"
+      ],
+      "mentioned_user_dids": [
+        "did:plc:4yzzyoh3mxox2otqvljhdckt"
+      ],
+      "mentioned_user_handles": [
+        "un 40%? "
+      ],
+      "original_text": "¿Sabías que los vehículos autónomos podrían reducir el tráfico urbano hasta un 40%? 🚀 Más info en @falitroke, blog y Medium.",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "¿Sabías que los vehículos autónomos podrían reducir el tráfico urbano hasta un 40%? 🚀 Más info ehttps://medium.com/@falitrokeitroke, blog y Medium. https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4yzzyoh3mxox2otqvljhdckt/bafkreiev25ztwspa476pd3c7py3go7z6ysin3fidfclnnefuzo6lblcxyq@png",
+      "timestamp_utc": 1743307713,
+      "uri": "at://did:plc:4yzzyoh3mxox2otqvljhdckt/app.bsky.feed.post/3llkxuudzx42x",
+      "url": "https://bsky.app/profile/falifuentes.com/post/3llkxuudzx42x",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4yzzyoh3mxox2otqvljhdckt/bafkreiftlh7xq4coyhwzbznh4ofreqjrlz4hn5mqturizpp3tgvbeerwve@jpeg",
+      "user_created_at": "2024-09-16T13:34:54.108000",
+      "user_did": "did:plc:4yzzyoh3mxox2otqvljhdckt",
+      "user_diplay_name": "Fali Fuentes",
+      "user_handle": "falifuentes.com",
+      "user_langs": [
+        "en-US"
+      ],
+      "user_timestamp_utc": 1726486494,
+      "user_url": "https://bsky.app/profile/falifuentes.com"
+    }
   ]
 ]

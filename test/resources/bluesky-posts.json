@@ -13513,6 +13513,111 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:4yzzyoh3mxox2otqvljhdckt/app.bsky.feed.post/3llkxuudzx42x",
+    "cid": "bafyreigmjbgasjs4oqvj42eunfesbpekmpd2ytm472tgjpwjlrrhdmaggm",
+    "author": {
+        "did": "did:plc:4yzzyoh3mxox2otqvljhdckt",
+        "handle": "falifuentes.com",
+        "displayName": "Fali Fuentes",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4yzzyoh3mxox2otqvljhdckt/bafkreiftlh7xq4coyhwzbznh4ofreqjrlz4hn5mqturizpp3tgvbeerwve@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-09-16T11:34:54.108Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-30T04:08:33.991Z",
+        "embed": {
+            "$type": "app.bsky.embed.images",
+            "images": [
+                {
+                    "alt": "¿Sabías que los vehículos autónomos podrían reducir el tráfico urbano hasta un 40%? 🚀 - AI generated image",
+                    "image": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreiev25ztwspa476pd3c7py3go7z6ysin3fidfclnnefuzo6lblcxyq"
+                        },
+                        "mimeType": "image/png",
+                        "size": 367083
+                    }
+                }
+            ]
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#mention",
+                        "did": "did:plc:4yzzyoh3mxox2otqvljhdckt"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 91,
+                    "byteStart": 81
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://falifuentes.com"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 101,
+                    "byteStart": 97
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://medium.com/@falitroke"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 112,
+                    "byteStart": 106
+                }
+            }
+        ],
+        "langs": [
+            "en-US"
+        ],
+        "text": "¿Sabías que los vehículos autónomos podrían reducir el tráfico urbano hasta un 40%? 🚀 Más info en @falitroke, blog y Medium."
+    },
+    "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+            {
+                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4yzzyoh3mxox2otqvljhdckt/bafkreiev25ztwspa476pd3c7py3go7z6ysin3fidfclnnefuzo6lblcxyq@jpeg",
+                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4yzzyoh3mxox2otqvljhdckt/bafkreiev25ztwspa476pd3c7py3go7z6ysin3fidfclnnefuzo6lblcxyq@jpeg",
+                "alt": "¿Sabías que los vehículos autónomos podrían reducir el tráfico urbano hasta un 40%? 🚀 - AI generated image"
+            }
+        ]
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-03-30T04:08:44.902Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
