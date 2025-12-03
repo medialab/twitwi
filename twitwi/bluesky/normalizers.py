@@ -411,7 +411,31 @@ def normalize_post(
             # some posts have "hashtag" instead of "tag" field
             # example: https://bsky.app/profile/did:plc:jrodn6nnfuwzm2zxbxbpzgot/post/3lhwag3mzoo2k
             else:
-                hashtags.add(feat["tag"].strip().lower() if "tag" in feat else feat["hashtag"].strip().lower())
+                if "tag" in feat:
+                    tag = feat["tag"].strip().lower()
+                elif "hashtag" in feat:
+                    tag = feat["hashtag"].strip().lower()
+                # Somehow no tag found, we'll try to get it in the text slice
+                # example: https://bsky.app/profile/did:plc:p6yojdpa5iatdk3ttaty2zu2/post/3knvsl6h4x22i
+                elif len(feat) == 1:
+                    byteStart = facet["index"]["byteStart"]
+                    if text[byteStart : byteStart + 1] == b"#":
+                        byteEnd = facet["index"]["byteEnd"]
+                        try:
+                            tag = text[byteStart:byteEnd].decode("utf-8").strip().lstrip("#").lower()
+                        except UnicodeDecodeError:
+                            raise BlueskyPayloadError(
+                                post["url"],
+                                "unable to decode utf-8 slice for hashtag extraction: %s"
+                                % facet,
+                            )
+                    else:
+                        raise BlueskyPayloadError(
+                            post["url"],
+                            "unable to extract hashtag from text slice: %s"
+                            % facet,
+                        )
+                hashtags.add(tag)
 
         # Mentions
         elif feat["$type"].endswith("#mention"):
