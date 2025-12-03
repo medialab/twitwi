@@ -453,7 +453,7 @@ def normalize_post(
                 post["mentioned_user_handles"].append(handle)
 
         # Links
-        elif feat["$type"].endswith("#link") or feat["$type"].endswith(".link"):
+        elif feat["$type"].endswith("#link") or feat["$type"].endswith(".link") or feat["$type"].endswith(".url"):
             # Handle native polls
             if "https://poll.blue/" in feat["uri"]:
                 if feat["uri"].endswith("/0"):
