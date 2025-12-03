@@ -13869,6 +13869,54 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:7bkvbgrysyow3pf3v6lqp6n4/app.bsky.feed.post/3lbca2nxy4f2a",
+    "cid": "bafyreibnfg7t6avbrjkr2mcj4yjqfjkebtjzfaigpacyfbmpx5wege5lle",
+    "author": {
+        "did": "did:plc:7bkvbgrysyow3pf3v6lqp6n4",
+        "handle": "jacksmithsocial.bsky.social",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7bkvbgrysyow3pf3v6lqp6n4/bafkreia4tjg7y52tcjs3umgmw5vjbnvfp2afkf2kbdwijmhz45bwnwp4zi@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-10-10T06:41:59.006Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-11-19T15:13:01.156888Z",
+        "embed": {
+            "$type": "app.bsky.feed.post",
+            "record": {
+                "cid": "bafyreig2gt5ztxlgebcf7l6ksu7wfhkmw4fvx67dgcrlmibn3zhy52s5wq",
+                "uri": "at://did:plc:525ma2donmlaucqi277pmhgm/app.bsky.feed.post/3l54ktqomjn24"
+            }
+        },
+        "text": "my quoted post via zs"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-11-19T10:29:15.212Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]

@@ -684,9 +684,18 @@ def normalize_post(
         # https://bsky.app/profile/did:plc:na6u3avvaz2x5wyzqrnviqiz/post/3lzf5qi2ra62k
         # or https://bsky.app/profile/dangelodario.it/post/3l3inqifqj42p)
         if embed["$type"].endswith(".post") or embed["$type"] == "N/A":
-            # Some posts have extra keys in their empty embed, and for those we know up to now, we want to ignore them
+            # Some posts have extra keys in their empty embed, certainly personalized ones.
+
+            # Personalized quote (not visible on Bluesky for the example)
+            # example: https://bsky.app/profile/jacksmithsocial.bsky.social/post/3lbca2nxy4f2a
+            if embed.get("$type") == "app.bsky.feed.post" and embed.get("record", {}).get("uri"):
+                post, quoted_data, links = prepare_quote_data(
+                    embed["record"], data.get("embed", {}).get("record"), post, links
+                )
+
+            # for the other ones we know up to now, we want to ignore them
             # e.g.: https://bsky.app/profile/granmouse.bsky.social/post/3lwvh5xd2xk2p
-            if len(embed.keys()) > 1 and embed.get("type") != "private":
+            elif len(embed.keys()) > 1 and embed.get("type") != "private":
                 raise BlueskyPayloadError(
                     post["url"], "unusual empty record embed with extra keys: %s" % embed
                 )

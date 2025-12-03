@@ -7458,5 +7458,47 @@
       "user_timestamp_utc": 1693467366,
       "user_url": "https://bsky.app/profile/tangomuc.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreibnfg7t6avbrjkr2mcj4yjqfjkebtjzfaigpacyfbmpx5wege5lle",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lbca2nxy4f2a",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2024-11-19T10:29:15.212Z",
+      "like_count": 0,
+      "links": [],
+      "local_time": "2024-11-19T16:13:01.156888",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "my quoted post via zs",
+      "quote_count": 0,
+      "quoted_cid": "bafyreig2gt5ztxlgebcf7l6ksu7wfhkmw4fvx67dgcrlmibn3zhy52s5wq",
+      "quoted_did": "3l54ktqomjn24",
+      "quoted_uri": "at://did:plc:525ma2donmlaucqi277pmhgm/app.bsky.feed.post/3l54ktqomjn24",
+      "quoted_url": "https://bsky.app/profile/did:plc:525ma2donmlaucqi277pmhgm/post/3l54ktqomjn24",
+      "quoted_user_did": "did:plc:525ma2donmlaucqi277pmhgm",
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "my quoted post via zs",
+      "timestamp_utc": 1732029181,
+      "uri": "at://did:plc:7bkvbgrysyow3pf3v6lqp6n4/app.bsky.feed.post/3lbca2nxy4f2a",
+      "url": "https://bsky.app/profile/jacksmithsocial.bsky.social/post/3lbca2nxy4f2a",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7bkvbgrysyow3pf3v6lqp6n4/bafkreia4tjg7y52tcjs3umgmw5vjbnvfp2afkf2kbdwijmhz45bwnwp4zi@jpeg",
+      "user_created_at": "2024-10-10T08:41:59.006000",
+      "user_did": "did:plc:7bkvbgrysyow3pf3v6lqp6n4",
+      "user_diplay_name": "",
+      "user_handle": "jacksmithsocial.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1728542519,
+      "user_url": "https://bsky.app/profile/jacksmithsocial.bsky.social"
+    }
   ]
 ]
