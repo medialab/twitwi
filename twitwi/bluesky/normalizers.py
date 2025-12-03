@@ -322,7 +322,11 @@ def normalize_post(
     post["user_did"], post["did"] = parse_post_uri(data["uri"])
     post["user_handle"] = data["author"]["handle"]
     post["user_url"] = format_profile_url(post["user_handle"])
-    post["url"] = format_post_url(post["user_handle"], post["did"])
+    # example: https://bsky.app/profile/did:plc:n5pm4vggu475okayqvqipkoh/post/3lmdcgp3a7cnd
+    if post["user_handle"] == "handle.invalid":
+        post["url"] = format_post_url(post["user_did"], post["did"])
+    else:
+        post["url"] = format_post_url(post["user_handle"], post["did"])
 
     if post["user_did"] != data["author"]["did"]:
         raise BlueskyPayloadError(
@@ -551,6 +555,7 @@ def normalize_post(
                             byteEnd += 1
                             continue
 
+                    # Meaning that we did not find a valid utf-8 ending, so we reset byteEnd to its original value
                     if byteEnd > len(post["original_text"].encode("utf-8")):
                         byteEnd = facet["index"]["byteEnd"]
 

@@ -13618,6 +13618,78 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:n5pm4vggu475okayqvqipkoh/app.bsky.feed.post/3lmdcgp3a7cnd",
+    "cid": "bafyreig77a5mo5a2ozqzicfducb66h2s7l4i5hz2b4hzbglyp2q5ibsl4a",
+    "author": {
+        "did": "did:plc:n5pm4vggu475okayqvqipkoh",
+        "handle": "handle.invalid",
+        "displayName": "Smurf McSmurf",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:n5pm4vggu475okayqvqipkoh/bafkreia5u3rqq7g5kwgopbrot3ehcnchkjebqmez2jdr3yqxl3zt467xhq@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2025-02-11T23:03:45.044Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-04-08T20:21:33.946451Z",
+        "embed": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+                "description": "View spoiler",
+                "title": "J",
+                "uri": "https://bluespoilers.web.app/?post=at://smurf1717.bsky.social/app.bsky.feed.post/3lmdcgp3a7cnd"
+            }
+        },
+        "facets": [
+            {
+                "$type": "app.bsky.richtext.facet",
+                "features": [
+                    {
+                        "$type": "boost.blue.richtext.facet#spoiler",
+                        "spoiler": "J"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 2,
+                    "byteStart": 0
+                }
+            }
+        ],
+        "langs": [
+            "en"
+        ],
+        "text": "Hi"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+            "uri": "https://bluespoilers.web.app/?post=at://smurf1717.bsky.social/app.bsky.feed.post/3lmdcgp3a7cnd",
+            "title": "J",
+            "description": "View spoiler"
+        }
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-08T20:21:34.382Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
