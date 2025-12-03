@@ -119,7 +119,7 @@ def format_media_url(user_did, media_cid, mime_type, source):
     if mime_type.startswith("image"):
         media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@{media_type}"
         media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@{media_type}"
-    elif mime_type.startswith("video") or mime_type == "application/xml":
+    elif mime_type.startswith("video") or mime_type == "application/xml" or mime_type=="*/*":
         media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"

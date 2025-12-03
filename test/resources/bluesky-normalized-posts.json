@@ -7001,5 +7001,52 @@
       "user_timestamp_utc": 1731585664,
       "user_url": "https://bsky.app/profile/ctmtatemblando.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreiginwfbdurr4r66jylllmmqpn3s7rn3fhsqdkwblgb6uiwvp26dsq",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3m23dgjkmlm23",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2025-09-30T20:10:46.958Z",
+      "like_count": 1,
+      "links": [],
+      "local_time": "2025-09-30T22:10:46.740693",
+      "match_query": true,
+      "media_alt_texts": [
+        ""
+      ],
+      "media_thumbnails": [
+        "https://video.bsky.app/watch/did:plc:eaizqn2dz4oriv2p6gykx3iz/bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku/thumbnail.jpg"
+      ],
+      "media_types": [
+        "*/*"
+      ],
+      "media_urls": [
+        "https://video.bsky.app/watch/did:plc:eaizqn2dz4oriv2p6gykx3iz/bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku/playlist.m3u8"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Ryan O'Hearn pops out to shortstop Dansby Swanson.\n\nCatch probability: 28%\nEst. Distance Covered: 61.7 ft \nExit Velo: 64.0 mph\nLaunch Angle: 27 deg\nHit Distance: 196 ft",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Ryan O'Hearn pops out to shortstop Dansby Swanson.\n\nCatch probability: 28%\nEst. Distance Covered: 61.7 ft \nExit Velo: 64.0 mph\nLaunch Angle: 27 deg\nHit Distance: 196 ft https://video.bsky.app/watch/did:plc:eaizqn2dz4oriv2p6gykx3iz/bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku/playlist.m3u8",
+      "timestamp_utc": 1759263046,
+      "uri": "at://did:plc:eaizqn2dz4oriv2p6gykx3iz/app.bsky.feed.post/3m23dgjkmlm23",
+      "url": "https://bsky.app/profile/catchprobability.com/post/3m23dgjkmlm23",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eaizqn2dz4oriv2p6gykx3iz/bafkreiejkit4ebj7pbr7x7wqvfmexdnjugjwpedvgc3qg4d6b5cctzivva@jpeg",
+      "user_created_at": "2024-11-12T23:39:19.308000",
+      "user_did": "did:plc:eaizqn2dz4oriv2p6gykx3iz",
+      "user_diplay_name": "Catch Probability",
+      "user_handle": "catchprobability.com",
+      "user_langs": [
+        "en"
+      ],
+      "user_timestamp_utc": 1731451159,
+      "user_url": "https://bsky.app/profile/catchprobability.com"
+    }
   ]
 ]
