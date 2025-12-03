@@ -585,17 +585,7 @@ def normalize_post(
                 pass
                 # raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
 
-        elif feat["$type"].endswith("#bold"):
-            pass
-        elif feat["$type"].endswith("#italic"):
-            pass
-        elif feat["$type"].endswith("#underline"):
-            pass
-        elif feat["$type"].endswith("#option"):
-            pass
-        elif feat["$type"].endswith("#encrypt"):
-            pass
-        elif feat["$type"].endswith("#text"):
+        elif any (feat["$type"].endswith(suffix) for suffix in ["#bold", "#italic", "#underline", "#option", "#encrypt", "#text"]):
             pass
         # Bluesky seems to use format features for some internal purposes, but we ignore them
         # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g

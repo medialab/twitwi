@@ -13163,6 +13163,66 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:eaizqn2dz4oriv2p6gykx3iz/app.bsky.feed.post/3m23dgjkmlm23",
+    "cid": "bafyreiginwfbdurr4r66jylllmmqpn3s7rn3fhsqdkwblgb6uiwvp26dsq",
+    "author": {
+        "did": "did:plc:eaizqn2dz4oriv2p6gykx3iz",
+        "handle": "catchprobability.com",
+        "displayName": "Catch Probability",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eaizqn2dz4oriv2p6gykx3iz/bafkreiejkit4ebj7pbr7x7wqvfmexdnjugjwpedvgc3qg4d6b5cctzivva@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-12T22:39:19.308Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-09-30T20:10:46.740693+00:00",
+        "embed": {
+            "$type": "app.bsky.embed.video",
+            "alt": "my video alt",
+            "video": {
+                "$type": "blob",
+                "ref": {
+                    "$link": "bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku"
+                },
+                "mimeType": "*/*",
+                "size": 0
+            }
+        },
+        "langs": [
+            "en"
+        ],
+        "text": "Ryan O'Hearn pops out to shortstop Dansby Swanson.\n\nCatch probability: 28%\nEst. Distance Covered: 61.7 ft \nExit Velo: 64.0 mph\nLaunch Angle: 27 deg\nHit Distance: 196 ft"
+    },
+    "embed": {
+        "$type": "app.bsky.embed.video#view",
+        "cid": "bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku",
+        "playlist": "https://video.bsky.app/watch/did%3Aplc%3Aeaizqn2dz4oriv2p6gykx3iz/bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku/playlist.m3u8",
+        "thumbnail": "https://video.bsky.app/watch/did%3Aplc%3Aeaizqn2dz4oriv2p6gykx3iz/bafkreihdwdcefgh4dqkjv67uzcmw7ojee6xedzdetojuzjevtenxquvyku/thumbnail.jpg",
+        "alt": "my video alt"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-09-30T20:10:46.958Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
