@@ -598,7 +598,7 @@ def normalize_post(
             pass
         # We chose to ignore non Bluesky features for now (e.g. personalized features)
         # example: https://bsky.app/profile/poll.blue/post/3kmuqjkkozh2r
-        elif "app.bsky" not in feat["$type"]:
+        elif "bsky" not in feat["$type"]:
             continue
         else:
             raise BlueskyPayloadError(
@@ -650,7 +650,7 @@ def normalize_post(
         extra_links = []
 
         if not valid_embed_type(embed["$type"]):
-            if "bsky.app" in embed["$type"]:
+            if "bsky" in embed["$type"]:
                 raise BlueskyPayloadError(
                     post["url"], "unusual record embed $type: %s" % embed
                 )
@@ -696,6 +696,12 @@ def normalize_post(
                 # Handle link card metadata
                 if "embed" in data:
                     post = process_card_data(data["embed"]["external"], post)
+
+        # Not visible images
+        # example: https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvxsaej62c
+        if embed["$type"].endswith(".viewImages"):
+            for i in embed["images"]:
+                links.add(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
 
         # Images
         if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
