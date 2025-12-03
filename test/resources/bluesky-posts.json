@@ -13314,6 +13314,205 @@
         },
         "lists": []
     }
+  },
+  {
+    "uri": "at://did:plc:2356xofv4ntrbu42xeilxjnb/app.bsky.feed.post/3lwwfkzikxc23",
+    "cid": "bafyreicqpg73d5ko2wp5a5pyyreaxrqpdszxgab7zvdwssltneew3gzvku",
+    "author": {
+        "did": "did:plc:2356xofv4ntrbu42xeilxjnb",
+        "handle": "tomas.cabildo.ar",
+        "displayName": "Tomás Delgado",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2356xofv4ntrbu42xeilxjnb/bafkreifaatkxi3zcb5r6juowawnpnadnrwjy5poindqd7hlmm7sy6twc5m@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-05-24T18:31:30.614Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-08-21T16:50:10.895Z",
+        "embed": {
+            "$type": "ar.cabildoabierto.embed.selectionQuote",
+            "end": 3085,
+            "start": 2853
+        },
+        "reply": {
+            "parent": {
+                "cid": "bafyreih3rutxbcxzkazjezj2xr4pt7j3t7hhhcms7v6a73wjctsam6tt24",
+                "uri": "at://did:plc:2356xofv4ntrbu42xeilxjnb/ar.cabildoabierto.wiki.topicVersion/3lwuw7yoilc23"
+            },
+            "root": {
+                "cid": "bafyreih3rutxbcxzkazjezj2xr4pt7j3t7hhhcms7v6a73wjctsam6tt24",
+                "uri": "at://did:plc:2356xofv4ntrbu42xeilxjnb/ar.cabildoabierto.wiki.topicVersion/3lwuw7yoilc23"
+            }
+        },
+        "text": "Cabe preguntarse, me parece, si no es un déficit razonable dada la inflación que hubo durante el año 2023 (no lo sé). Similarmente, habría que ver qué hacían esas 900 personas y si es que había un problema de eficiencia ahí o no."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2025-08-21T16:50:11.811Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
+  },
+  {
+    "uri": "at://did:plc:abwqrtkahbfyzxxdkybn6l2v/app.bsky.feed.post/3lluwlfyies4u",
+    "cid": "bafyreifvitpnife2mwl5uucqutg7vecgivc4yq4h3rfrs5saah4p6oxh4u",
+    "author": {
+        "did": "did:plc:abwqrtkahbfyzxxdkybn6l2v",
+        "handle": "vxo-uxv.bsky.social",
+        "displayName": "원",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:abwqrtkahbfyzxxdkybn6l2v/bafkreieqctjv6spuscnowgkj75eaeydnaa4l22iacyevn3njt7nwh3z36e@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:abwqrtkahbfyzxxdkybn6l2v",
+                "uri": "at://did:plc:abwqrtkahbfyzxxdkybn6l2v/app.bsky.actor.profile/self",
+                "cid": "bafyreih432rodsqn6mfgjm5flnp3rpzrqfes2srzuovkot62fail7osyqu",
+                "val": "!no-unauthenticated",
+                "cts": "2024-10-17T15:02:54.984Z"
+            }
+        ],
+        "createdAt": "2024-10-17T15:02:54.413Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-04-03T03:12:10.951Z",
+        "embed": {
+            "$type": "dev.chomu.embed.secret",
+            "encrypted": {
+                "$type": "dev.chomu.embed.secret#encrypted",
+                "value": "Dyqe1OIDCtWUUTm7CLpVZclYlf1hQWyMrm3i__dwtrczl4_thbWc6fh-NOmjcEweY2CsQ_1LaBaFnxgrixI6bSFImEHGwG9u2tvOQvQeqAOXIOR2XaUClRPyCjPPZwbm73Djxj9KcY651al4Tk8oRsIAWcDdXPMb-KukOLk45XO9Mx1lN0CG9kb9EgRvfZv9CHF4Dlf29iKnAzQBPxfVlFLOx9rDx9pF8oulXfpqxnxdkT2mOYmb2qx6WvleWyuWejjt4HMYT7bBW0rTdilH5vUAfp-DnHdKIAG1OMXVb4A4D6J23iDaXAyZ_Npo7SEhHvapmOAN0kMUMEflRUJ7NvsGQE1-xXb7YsEUVRSNooBTCgaqYaZtQQHDGJXlWvb1bsij7yVbk0ibELuOcIpgXgozd7UCAavWmhyYnaQWfTbC8b5lMsgN7S4lgDoYwxY2vk8XkwjXWc5oIgMB3qgWHb0vYshZS4LWUJNunsp4RE0t52UUu0ZTaS1ZfZ4nWYFSaX10dYbmL-5NXd-YJSqcwMUMrsFukdjSIXPHkIjwNA3Aw807YErwkYHGNb8LSUQp33xwEnglUPVj9EYNM5euBP17_EoouC5aFIqmMCsugAO1-MRVW3P06AUrv9WwvlE1H2irF-u51Es7N4Wv9QIuwUvtT22dg9VxIRifvzhPq19bdKWsGqCfLOnKmX1eS3nCXthoK99z5rI3Vags_L0UPw"
+            }
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://secret-sky.vercel.app/profile/did:plc:abwqrtkahbfyzxxdkybn6l2v/post/3lluwlfyies4u"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 84,
+                    "byteStart": 68
+                }
+            }
+        ],
+        "labels": {
+            "$type": "com.atproto.label.defs#selfLabels",
+            "values": [
+                {
+                    "val": "!no-unauthenticated"
+                }
+            ]
+        },
+        "text": "지브리ai 기타 등등의 개인적 견해 (ai관련은 아님)\n\n비밀글 보기"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2025-04-03T03:12:13.304Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "replyDisabled": true,
+        "embeddingDisabled": true
+    },
+    "labels": [
+        {
+            "src": "did:plc:abwqrtkahbfyzxxdkybn6l2v",
+            "uri": "at://did:plc:abwqrtkahbfyzxxdkybn6l2v/app.bsky.feed.post/3lluwlfyies4u",
+            "cid": "bafyreifvitpnife2mwl5uucqutg7vecgivc4yq4h3rfrs5saah4p6oxh4u",
+            "val": "!no-unauthenticated",
+            "cts": "2025-04-03T03:12:10.951Z"
+        }
+    ],
+    "threadgate": {
+        "uri": "at://did:plc:abwqrtkahbfyzxxdkybn6l2v/app.bsky.feed.threadgate/3lluwlfyies4u",
+        "cid": "bafyreicxwunsbnofaen5xwu3qtpdrgtd6a6tdf5ophb2cp3tlsxe74spim",
+        "record": {
+            "$type": "app.bsky.feed.threadgate",
+            "allow": [
+                {
+                    "$type": "app.bsky.feed.threadgate#followingRule"
+                }
+            ],
+            "createdAt": "2025-04-03T03:12:10.951Z",
+            "post": "at://did:plc:abwqrtkahbfyzxxdkybn6l2v/app.bsky.feed.post/3lluwlfyies4u"
+        },
+        "lists": []
+    }
+  },
+  {
+    "uri": "at://did:plc:2gwfvcwbiqwzualcoig7nwsr/app.bsky.feed.post/3ll3rgn3a6u2d",
+    "cid": "bafyreigmesaalnkhavpyr6n3fzev63vlk6jfzsrvebxzp6oellmdn5vqdm",
+    "author": {
+        "did": "did:plc:2gwfvcwbiqwzualcoig7nwsr",
+        "handle": "bamnet.bsky.social",
+        "displayName": "Brian M",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2gwfvcwbiqwzualcoig7nwsr/bafkreienht5x3kw7pycad6kau24hginzcawpsrces4qwhc7okilwbgdyim@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-11-18T21:26:52.443Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-03-24T03:03:28.293Z",
+        "embed": {
+            "$type": "community.lexicon.embed.geo",
+            "latitude": "40.791200096394995",
+            "longitude": "-74.05726919273859",
+            "name": "Plaza Pizza"
+        },
+        "text": "Walked into my local pizza place, \"Hello Brian, no medium pizza today?\"\n\nHow did he know my name? I place like 1 order a month max. Legit thought they were running some AI camera stuff but, after calling me Brian 4 more times, it was clear he was trying to learn names. +$4 tip."
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2025-03-24T03:03:28.549Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
