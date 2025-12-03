@@ -99,20 +99,27 @@ def prepare_native_gif_as_media(gif_data, user_did, source):
     }
 
 
-def prepare_image_as_media(image_data):
+def prepare_image_as_media(image_data, source):
+    if isinstance(image_data["image"], str):
+        # As in this post: https://bsky.app/profile/did:plc:xafmeedgq77f6smn6kmalasr/post/3lcnxglm3o62z
+        image_type = "image/jpeg"
+    elif isinstance(image_data["image"], dict):
+        image_type = image_data["image"]["mimeType"]
     if "ref" not in image_data["image"] or "$link" not in image_data["image"]["ref"]:
         # As in this post: https://bsky.app/profile/testjuan06.bsky.social/post/3ljkzygywso2b
-        if "link" in image_data["image"]:
+        if isinstance(image_data["image"], dict) and "link" in image_data["image"]:
             image_id = image_data["image"]["link"]
-        elif "cid" in image_data["image"]:
+        elif isinstance(image_data["image"], dict) and "cid" in image_data["image"]:
             image_id = image_data["image"]["cid"]
+        elif isinstance(image_data["image"], str):
+            image_id = image_data["image"]
         else:
-            raise BlueskyPayloadError("Unable to find image id in image data: %s" % image_data)
+            raise BlueskyPayloadError(source, "Unable to find image id in image data: %s" % image_data)
     else:
         image_id = image_data["image"]["ref"]["$link"]
     return {
         "id": image_id,
-        "type": image_data["image"]["mimeType"],
+        "type": image_type,
         "alt": image_data["alt"],
     }
 
@@ -738,7 +745,7 @@ def normalize_post(
 
         # Images
         if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
-            media_data.extend([prepare_image_as_media(i) for i in embed["images"]])
+            media_data.extend([prepare_image_as_media(i, post['url']) for i in embed["images"]])
 
         # Video
         if embed["$type"].endswith(".video"):
@@ -795,7 +802,7 @@ def normalize_post(
             # Images
             elif embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
-                    [prepare_image_as_media(i) for i in embed["media"]["images"]]
+                    [prepare_image_as_media(i, post['url']) for i in embed["media"]["images"]]
                 )
 
             # Video

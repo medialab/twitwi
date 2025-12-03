@@ -13917,6 +13917,53 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:xafmeedgq77f6smn6kmalasr/app.bsky.feed.post/3lcnxglm3o62z",
+    "cid": "bafyreibkklcqfwsyyqnkldiuew3ia74kozvduzajhrpeccitl37rjlaucy",
+    "author": {
+        "did": "did:plc:xafmeedgq77f6smn6kmalasr",
+        "handle": "galaxy-gaze.bsky.social",
+        "displayName": "Galaxy Gaze 🦋",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xafmeedgq77f6smn6kmalasr/bafkreieawqckahwuhkiwbrybhh2ykmsquewlzgjwzfdfuxqkdkh2cebduy@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-30T18:30:40.546Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-12-06T19:51:59.727Z",
+        "embed": {
+            "$type": "app.bsky.embed.image",
+            "images": [
+                {
+                    "alt": "Random Latest Mars Rover Photo",
+                    "image": "bafkreiaqtz25ko2eg7nxubv5tdzfhiagumk3ygwprw45h5nxdcru52vlh4"
+                }
+            ]
+        },
+        "text": "📸 Random Latest Mars Rover Photo 📸\n\n🚀 Rover: Curiosity\n📅 Date: 2024-02-19\n📷 Camera: Front Hazard Avoidance Camera\n\nExplore the Red Planet! 🪐"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-12-06T19:52:00.158Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
