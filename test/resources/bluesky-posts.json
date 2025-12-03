@@ -13223,6 +13223,97 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:5f3cuso34qfncfgph7is7g4o/app.bsky.feed.post/3lwvh5xd2xk2p",
+    "cid": "bafyreia57avjpshiw7belsb34gozwa6n6mdyqwxtjyvmvdik44k53xcsc4",
+    "author": {
+        "did": "did:plc:5f3cuso34qfncfgph7is7g4o",
+        "handle": "granmouse.bsky.social",
+        "displayName": "G",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5f3cuso34qfncfgph7is7g4o/bafkreifaxtyc4ogvscsfpslporqzvuskw4au22aivyf6a3zdkveippzvca@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "mutuals"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:5f3cuso34qfncfgph7is7g4o",
+                "uri": "at://did:plc:5f3cuso34qfncfgph7is7g4o/app.bsky.actor.profile/self",
+                "cid": "bafyreidywdlshvqngm6lc2rvuyxs46vu5bhe24mnobglwvr55zkhdr5liu",
+                "val": "!no-unauthenticated",
+                "cts": "1970-01-01T00:00:00.000Z"
+            }
+        ],
+        "createdAt": "2023-10-01T09:50:28.291Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-08-21T07:46:01.506Z",
+        "embed": {
+            "$type": "app.midnightsky.post",
+            "id": "0198cb97-8230-7d52-bafc-2b683f1398b6",
+            "type": "private"
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://midnightsky.app/post/did:plc:5f3cuso34qfncfgph7is7g4o/3lwvh5xd2xk2p"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 131,
+                    "byteStart": 121
+                }
+            }
+        ],
+        "langs": [
+            "ko"
+        ],
+        "text": "나는...나는 고객사 담당자가 어떤 AI모델 쓰는지 이렇게 알게 되고 싶지 않았어...‘ㅡ`)...\n\n글 보기"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 3,
+    "quoteCount": 0,
+    "indexedAt": "2025-08-21T07:46:21.906Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "replyDisabled": true,
+        "embeddingDisabled": false
+    },
+    "labels": [],
+    "threadgate": {
+        "uri": "at://did:plc:5f3cuso34qfncfgph7is7g4o/app.bsky.feed.threadgate/3lwvh5xd2xk2p",
+        "cid": "bafyreidshddmquezcqmpkrkj4c2ldwkwai2n2gyo5slsn44qqr2slnhxpe",
+        "record": {
+            "$type": "app.bsky.feed.threadgate",
+            "allow": [
+                {
+                    "$type": "app.bsky.feed.threadgate#followingRule"
+                },
+                {
+                    "$type": "app.bsky.feed.threadgate#followerRule"
+                }
+            ],
+            "createdAt": "2025-08-21T07:46:01.506Z",
+            "hiddenReplies": [],
+            "post": "at://did:plc:5f3cuso34qfncfgph7is7g4o/app.bsky.feed.post/3lwvh5xd2xk2p"
+        },
+        "lists": []
+    }
   }
 
 ]
