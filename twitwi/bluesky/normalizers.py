@@ -765,10 +765,15 @@ def normalize_post(
                     post = process_card_data(data["embed"]["external"], post)
 
         # Not visible images
-        # example: https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvxsaej62c
+        # examples: https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvxsaej62c
+        #           https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvz52x7s2m
         if embed["$type"].endswith(".viewImages"):
-            for i in embed["images"]:
-                links.add(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
+            if "images" in embed:
+                for i in embed["images"]:
+                    links.add(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
+            elif "viewImage" in embed:
+                for i in embed["viewImage"]:
+                    links.add(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
 
         # Images
         if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
