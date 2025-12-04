@@ -770,10 +770,22 @@ def normalize_post(
         if embed["$type"].endswith(".viewImages"):
             if "images" in embed:
                 for i in embed["images"]:
-                    links.add(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
+                    post['media_urls'].append(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
             elif "viewImage" in embed:
                 for i in embed["viewImage"]:
-                    links.add(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
+                    if "viewImage" in i:
+                        post['media_urls'].append(i["viewImage"].get("thumb", {}).get("uri", ""))
+                    elif "image" in i:
+                        post['media_urls'].append(i["image"].get("thumb", {}).get("uri", ""))
+                    else:
+                        raise BlueskyPayloadError(
+                            post["url"],
+                            "unusual viewImages embed content: %s"
+                            % embed,
+                        )
+
+
+
 
         # Images
         if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):

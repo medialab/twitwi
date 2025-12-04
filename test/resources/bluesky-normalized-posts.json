@@ -7340,21 +7340,19 @@
       "cid": "bafyreiej4s5errqh6wwu2wcsraex4ry2oy2ueyqjadn4bgfb2kfobondem",
       "collection_time": "2025-01-01T00:00:00.000000",
       "did": "3ltjvxsaej62c",
-      "domains": [
-        "img.projektn.sk"
-      ],
+      "domains": [],
       "hashtags": [],
       "indexed_at_utc": "2025-07-09T13:23:29.236Z",
       "like_count": 0,
-      "links": [
-        "https://img.projektn.sk/wp-static/2025/07/517349300102317484746804667439191789638104334n.jpg?w=690&fm=jpg&q=85"
-      ],
+      "links": [],
       "local_time": "2025-07-09T14:30:36.000000",
       "match_query": true,
       "media_alt_texts": [],
       "media_thumbnails": [],
       "media_types": [],
-      "media_urls": [],
+      "media_urls": [
+        "https://img.projektn.sk/wp-static/2025/07/517349300102317484746804667439191789638104334n.jpg?w=690&fm=jpg&q=85"
+      ],
       "mentioned_user_dids": [],
       "mentioned_user_handles": [],
       "original_text": "Zlodeji kradnú viac, sú drzejší, niekedy sa aj personálu vyhrážajú. Predavačky, esbéeskár i zákazníci opisujú krádeže po trestnej novele",
@@ -7766,21 +7764,19 @@
       "cid": "bafyreiczyyagt4rfffpnxyttixywhyjwmqkialmrihkogd2jcqhxorgt6e",
       "collection_time": "2025-01-01T00:00:00.000000",
       "did": "3ltjvz52x7s2m",
-      "domains": [
-        "img.projektn.sk"
-      ],
+      "domains": [],
       "hashtags": [],
       "indexed_at_utc": "2025-07-09T13:24:13.643Z",
       "like_count": 0,
-      "links": [
-        "https://img.projektn.sk/wp-static/2025/07/517349300102317484746804667439191789638104334n.jpg?w=690&fm=jpg&q=85"
-      ],
+      "links": [],
       "local_time": "2025-07-09T14:30:36.000000",
       "match_query": true,
       "media_alt_texts": [],
       "media_thumbnails": [],
       "media_types": [],
-      "media_urls": [],
+      "media_urls": [
+        "https://img.projektn.sk/wp-static/2025/07/517349300102317484746804667439191789638104334n.jpg?w=690&fm=jpg&q=85"
+      ],
       "mentioned_user_dids": [],
       "mentioned_user_handles": [],
       "original_text": "Zlodeji kradnú viac, sú drzejší, niekedy sa aj personálu vyhrážajú. Predavačky, esbéeskár i zákazníci opisujú krádeže po trestnej novele",
@@ -7791,6 +7787,45 @@
       "timestamp_utc": 1752064236,
       "uri": "at://did:plc:sm54op5fo6lu3yfo7qesqtuz/app.bsky.feed.post/3ltjvz52x7s2m",
       "url": "https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvz52x7s2m",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:sm54op5fo6lu3yfo7qesqtuz/bafkreib7b4tmaivzd3yeqiebfujud764u2ld3zdtrsglvdb5xorbpsgcwi@jpeg",
+      "user_created_at": "2025-07-04T14:37:34.331000",
+      "user_did": "did:plc:sm54op5fo6lu3yfo7qesqtuz",
+      "user_diplay_name": "",
+      "user_handle": "lubosmichalik.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1751632654,
+      "user_url": "https://bsky.app/profile/lubosmichalik.bsky.social"
+    }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreihm4uyxxnve5z3hm5z5un5ngw7zlfywhmdyc27rg2oyoleprirn7a",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3ltjw2572dt2y",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2025-07-09T13:24:47.342Z",
+      "like_count": 0,
+      "links": [],
+      "local_time": "2025-07-09T14:30:36.000000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [
+        "https://img.projektn.sk/wp-static/2025/07/517349300102317484746804667439191789638104334n.jpg?w=690&fm=jpg&q=85"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "Zlodeji kradnú viac, sú drzejší, niekedy sa aj personálu vyhrážajú. Predavačky, esbéeskár i zákazníci opisujú krádeže po trestnej novele",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 0,
+      "text": "Zlodeji kradnú viac, sú drzejší, niekedy sa aj personálu vyhrážajú. Predavačky, esbéeskár i zákazníci opisujú krádeže po trestnej novele",
+      "timestamp_utc": 1752064236,
+      "uri": "at://did:plc:sm54op5fo6lu3yfo7qesqtuz/app.bsky.feed.post/3ltjw2572dt2y",
+      "url": "https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjw2572dt2y",
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:sm54op5fo6lu3yfo7qesqtuz/bafkreib7b4tmaivzd3yeqiebfujud764u2ld3zdtrsglvdb5xorbpsgcwi@jpeg",
       "user_created_at": "2025-07-04T14:37:34.331000",
       "user_did": "did:plc:sm54op5fo6lu3yfo7qesqtuz",
