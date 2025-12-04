@@ -729,7 +729,8 @@ def normalize_post(
 
             # for the other ones we know up to now, we want to ignore them
             # e.g.: https://bsky.app/profile/granmouse.bsky.social/post/3lwvh5xd2xk2p
-            elif len(embed.keys()) > 1 and embed.get("type") != "private":
+            #       https://bsky.app/profile/flyingaubrey.bsky.social/post/3lxngessntk2p
+            elif len(embed.keys()) > 1 and embed.get("type") not in ["private", "list"]:
                 raise BlueskyPayloadError(
                     post["url"], "unusual empty record embed with extra keys: %s" % embed
                 )
@@ -975,8 +976,13 @@ def normalize_post(
                     "allow_from_" + rule["$type"].split("#")[1].split("Rule")[0]
                 )
                 if rule_string.endswith("_list") and "list" in rule:
-                    for allowed_list in rule["list"]:
-                        post["replies_rules"].append(rule_string + ":" + allowed_list)
+                    if isinstance(rule["list"], str):
+                        post["replies_rules"].append(
+                            rule_string + ":" + rule["list"]
+                        )
+                    else:
+                        for allowed_list in rule["list"]:
+                            post["replies_rules"].append(rule_string + ":" + allowed_list)
                 else:
                     post["replies_rules"].append(rule_string)
             if not data["threadgate"]["record"]["allow"]:

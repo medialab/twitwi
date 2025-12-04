@@ -14429,6 +14429,108 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:2sjfdilgcpeyjnqo7u6apdfn/app.bsky.feed.post/3lxngessntk2p",
+    "cid": "bafyreie4oyin3clm6hsvwkilqaz2yeafx5nvj5ze62upzdetg25nzmgzn4",
+    "author": {
+        "did": "did:plc:2sjfdilgcpeyjnqo7u6apdfn",
+        "handle": "flyingaubrey.bsky.social",
+        "displayName": "🏳️‍⚧️민정냐옹😼",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2sjfdilgcpeyjnqo7u6apdfn/bafkreihcv52esjbes6f3wo7gdsouuatlswhyzd4nsrxgi4h77ojtkgl5ie@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [
+            {
+                "src": "did:plc:2sjfdilgcpeyjnqo7u6apdfn",
+                "uri": "at://did:plc:2sjfdilgcpeyjnqo7u6apdfn/app.bsky.actor.profile/self",
+                "cid": "bafyreia5xwoefxstc4h7s7f6zvet4f7pbxpql2dvvyayr7j3tkbosghrpq",
+                "val": "!no-unauthenticated",
+                "cts": "1970-01-01T00:00:00.000Z"
+            }
+        ],
+        "createdAt": "2023-07-08T04:20:58.204Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-08-30T20:35:51.664Z",
+        "embed": {
+            "$type": "app.midnightsky.post",
+            "id": "0198fcb1-8c60-74d0-95c4-dcd00ae76b63",
+            "type": "list"
+        },
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://midnightsky.app/post/did:plc:2sjfdilgcpeyjnqo7u6apdfn/3lxngessntk2p"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 24,
+                    "byteStart": 14
+                }
+            }
+        ],
+        "langs": [
+            "ko"
+        ],
+        "text": "자동차A/S\n\n글 보기"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 0,
+    "indexedAt": "2025-08-30T20:35:52.510Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "replyDisabled": true,
+        "embeddingDisabled": false
+    },
+    "labels": [],
+    "threadgate": {
+        "uri": "at://did:plc:2sjfdilgcpeyjnqo7u6apdfn/app.bsky.feed.threadgate/3lxngessntk2p",
+        "cid": "bafyreicd7gckd42u6gbslrzq2braopydnytpbyv45ywcb5eu5v5b5oiisq",
+        "record": {
+            "$type": "app.bsky.feed.threadgate",
+            "allow": [
+                {
+                    "$type": "app.bsky.feed.threadgate#listRule",
+                    "list": "at://did:plc:2sjfdilgcpeyjnqo7u6apdfn/app.bsky.graph.list/3lov465soyn2f"
+                }
+            ],
+            "createdAt": "2025-08-30T20:35:51.664Z",
+            "hiddenReplies": [],
+            "post": "at://did:plc:2sjfdilgcpeyjnqo7u6apdfn/app.bsky.feed.post/3lxngessntk2p"
+        },
+        "lists": [
+            {
+                "uri": "at://did:plc:2sjfdilgcpeyjnqo7u6apdfn/app.bsky.graph.list/3lov465soyn2f",
+                "cid": "bafyreiedv66oa5tr4xoogwrxaxkqqhgzcfupc4pi3afqcdw5gchtj2me5u",
+                "name": "멋진 게시자",
+                "purpose": "app.bsky.graph.defs#curatelist",
+                "listItemCount": 107,
+                "indexedAt": "2025-06-28T23:15:32.441Z",
+                "labels": [],
+                "viewer": {
+                    "muted": false
+                }
+            }
+        ]
+    }
   }
 
 ]
