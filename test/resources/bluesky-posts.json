@@ -14244,6 +14244,69 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:2v7p7r2mv6m4fid36g2cpehh/app.bsky.feed.post/3l77w5wpp4m2b",
+    "cid": "bafyreia2vn3uvcqmdeieipfkrv2n3yizlvipqot7a6xxsdnh7l5jh6izzi",
+    "author": {
+        "did": "did:plc:2v7p7r2mv6m4fid36g2cpehh",
+        "handle": "chikitoposteo.bsky.social",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2v7p7r2mv6m4fid36g2cpehh/bafkreihrsklxcj2bmva5onrxykauqceuem6zvv6arjk3tu2ke2oworx6cu@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-10-19T15:12:18.008Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-10-21T04:00:08.070Z",
+        "embed": {
+            "$type": "app.bsky.embed.media",
+            "media": [
+                {
+                    "alt": "Contenido multimedia",
+                    "media": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreif4y7qpijrfzg2ic2d4gohbpnmzfef5bjjz245gef5y2vhw5hnfby"
+                        },
+                        "mimeType": "video/mp4",
+                        "size": 993017
+                    },
+                    "mimeType": "video/mp4",
+                    "thumb": {
+                        "$type": "blob",
+                        "ref": {
+                            "$link": "bafkreihi6om5ycudgadexior3csvzzkl65hvuwq7l6erol2j67r2vrivd4"
+                        },
+                        "mimeType": "image/png",
+                        "size": 182660
+                    }
+                }
+            ]
+        },
+        "text": "#memes #shitpost #funny #brainroot"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 1,
+    "likeCount": 2,
+    "quoteCount": 0,
+    "indexedAt": "2024-10-21T04:00:08.070Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]

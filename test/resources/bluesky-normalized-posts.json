@@ -7714,5 +7714,50 @@
       "user_timestamp_utc": 1692197703,
       "user_url": "https://bsky.app/profile/havehashad.com"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreia2vn3uvcqmdeieipfkrv2n3yizlvipqot7a6xxsdnh7l5jh6izzi",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3l77w5wpp4m2b",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2024-10-21T04:00:08.070Z",
+      "like_count": 2,
+      "links": [],
+      "local_time": "2024-10-21T06:00:08.070000",
+      "match_query": true,
+      "media_alt_texts": [
+        ""
+      ],
+      "media_thumbnails": [
+        "https://video.bsky.app/watch/did:plc:2v7p7r2mv6m4fid36g2cpehh/bafkreif4y7qpijrfzg2ic2d4gohbpnmzfef5bjjz245gef5y2vhw5hnfby/thumbnail.jpg"
+      ],
+      "media_types": [
+        "video/mp4"
+      ],
+      "media_urls": [
+        "https://video.bsky.app/watch/did:plc:2v7p7r2mv6m4fid36g2cpehh/bafkreif4y7qpijrfzg2ic2d4gohbpnmzfef5bjjz245gef5y2vhw5hnfby/playlist.m3u8"
+      ],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "#memes #shitpost #funny #brainroot",
+      "quote_count": 0,
+      "reply_count": 0,
+      "repost_count": 1,
+      "text": "#memes #shitpost #funny #brainroot https://video.bsky.app/watch/did:plc:2v7p7r2mv6m4fid36g2cpehh/bafkreif4y7qpijrfzg2ic2d4gohbpnmzfef5bjjz245gef5y2vhw5hnfby/thumbnail.jpg",
+      "timestamp_utc": 1729483208,
+      "uri": "at://did:plc:2v7p7r2mv6m4fid36g2cpehh/app.bsky.feed.post/3l77w5wpp4m2b",
+      "url": "https://bsky.app/profile/chikitoposteo.bsky.social/post/3l77w5wpp4m2b",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2v7p7r2mv6m4fid36g2cpehh/bafkreihrsklxcj2bmva5onrxykauqceuem6zvv6arjk3tu2ke2oworx6cu@jpeg",
+      "user_created_at": "2024-10-19T17:12:18.008000",
+      "user_did": "did:plc:2v7p7r2mv6m4fid36g2cpehh",
+      "user_diplay_name": "",
+      "user_handle": "chikitoposteo.bsky.social",
+      "user_langs": [],
+      "user_timestamp_utc": 1729350738,
+      "user_url": "https://bsky.app/profile/chikitoposteo.bsky.social"
+    }
   ]
 ]
