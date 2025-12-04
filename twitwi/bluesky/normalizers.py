@@ -153,7 +153,11 @@ def process_card_data(embed_data, post):
     post["card_link"] = embed_data["uri"]
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
-    post["card_thumbnail"] = embed_data.get("thumb", "")
+    if isinstance(embed_data.get("thumb"), dict) and embed_data["thumb"].get("ref", {}).get("$link"):
+        media_cid = embed_data["thumb"]["ref"]["$link"]
+        post["card_thumbnail"] = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{post['user_did']}/{media_cid}@jpeg"
+    else:
+        post["card_thumbnail"] = embed_data.get("thumb", "")
     return post
 
 
@@ -367,6 +371,8 @@ def normalize_post(
     hashtags = set()
     links = set()
     links_to_replace = []
+    media_data = []
+    extra_links = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
             raising_error = False
@@ -627,6 +633,26 @@ def normalize_post(
         # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g
         elif feat["$type"].endswith("format"):
             pass
+        # Not normal feature type, but still existing in some posts
+        # Note that external features aren't visible on the Bluesky app
+        # e.g.: https://bsky.app/profile/did:plc:4qvb4dpkg6tkbzym77j6jcm4/post/3lbjktt6tw52h
+        elif feat["$type"].endswith("external"):
+            link = feat["external"]["uri"]
+
+            # Handle native gifs as medias
+            if link.startswith("https://media.tenor.com/"):
+                media_data.append(
+                    prepare_native_gif_as_media(
+                        feat["external"], post["user_did"], post["url"]
+                    )
+                )
+            # Extra card links sometimes missing from facets & text due to manual action in post form
+            else:
+                extra_links.append(link)
+
+            if isinstance(feat["external"].get("thumb"), dict):
+                post = process_card_data(feat["external"], post)
+
         # We chose to ignore non Bluesky features for now (e.g. personalized features)
         # example: https://bsky.app/profile/poll.blue/post/3kmuqjkkozh2r
         elif "bsky" not in feat["$type"]:
@@ -677,8 +703,6 @@ def normalize_post(
     if "embed" in data["record"]:
         embed = data["record"]["embed"]
         quoted_data = None
-        media_data = []
-        extra_links = []
 
         if not valid_embed_type(embed["$type"]):
             if "bsky" in embed["$type"]:
