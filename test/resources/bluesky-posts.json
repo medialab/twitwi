@@ -13964,6 +13964,130 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:4qvb4dpkg6tkbzym77j6jcm4/app.bsky.feed.post/3lbjktt6tw52h",
+    "cid": "bafyreib5m3u6wquksihf3g2wjfgep6vp2ff5werfvxdjmfuhfix27yzmu4",
+    "author": {
+        "did": "did:plc:4qvb4dpkg6tkbzym77j6jcm4",
+        "handle": "handle.invalid",
+        "displayName": "",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:4qvb4dpkg6tkbzym77j6jcm4/bafkreigiox4h2462wl5bc3nxeinqmsu4n4jvtyjwlfk6x5xufbz57zygfm@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-15T06:25:24.734Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2024-11-22T09:30:54+01:00",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "AstonMartinF1"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 74,
+                    "byteStart": 60
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "CircuitoDeInterlagos"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 96,
+                    "byteStart": 75
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "FernandoAlonso"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 112,
+                    "byteStart": 97
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "Fórmula1"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 123,
+                    "byteStart": 113
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#tag",
+                        "tag": "GPSaoPaulo"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 135,
+                    "byteStart": 124
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.embed.external",
+                        "external": {
+                            "description": "hola",
+                            "thumb": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreiaf2lwea242rsix6rpqbemg3wlbyuo6pxshrlqsmrjb5i7nxh7bbi"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 91941
+                            },
+                            "title": "hola",
+                            "uri": "https://www.motor.es/formula-1/fernando-alonso-danado-emocional-fisicamente-brasil-2024105088.html"
+                        }
+                    }
+                ],
+                "index": {
+                    "byteEnd": 234,
+                    "byteStart": 136
+                }
+            }
+        ],
+        "text": "Fernando Alonso, dañado emocional y físicamente en Brasil #AstonMartinF1 #CircuitoDeInterlagos #FernandoAlonso #Fórmula1 #GPSaoPaulo https://www.motor.es/formula-1/fernando-alonso-danado-emocional-fisicamente-brasil-2024105088.html"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 0,
+    "repostCount": 0,
+    "likeCount": 0,
+    "quoteCount": 0,
+    "indexedAt": "2024-11-22T08:30:55.765Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
