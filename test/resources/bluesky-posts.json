@@ -14088,6 +14088,51 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:k6acu4chiwkixvdedcmdgmal/app.bsky.feed.post/3lagdncjsu22y",
+    "cid": "bafyreigemcchbxsy43dvu5w7zzysinjkaaqt56thssbhsxq5movsee2nty",
+    "author": {
+        "did": "did:plc:k6acu4chiwkixvdedcmdgmal",
+        "handle": "imlunahey.com",
+        "displayName": "luna",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:k6acu4chiwkixvdedcmdgmal/bafkreiefeexuyxlj3gndizkmftpvpg2euztggw3lynwpmejtdugqis4dc4@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-10-21T12:09:53.506Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post#main",
+        "createdAt": "2024-11-08T08:18:49.096Z",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "text": "this post should have extra metadata"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 3,
+    "repostCount": 0,
+    "likeCount": 3,
+    "quoteCount": 2,
+    "indexedAt": "2024-11-08T08:18:50.484Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]

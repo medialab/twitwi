@@ -7592,5 +7592,42 @@
       "user_timestamp_utc": 1731651924,
       "user_url": "https://bsky.app/profile/handle.invalid"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreigemcchbxsy43dvu5w7zzysinjkaaqt56thssbhsxq5movsee2nty",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3lagdncjsu22y",
+      "domains": [],
+      "hashtags": [],
+      "indexed_at_utc": "2024-11-08T08:18:50.484Z",
+      "like_count": 3,
+      "links": [],
+      "local_time": "2024-11-08T09:18:49.096000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "this post should have extra metadata",
+      "quote_count": 2,
+      "reply_count": 3,
+      "repost_count": 0,
+      "text": "this post should have extra metadata",
+      "timestamp_utc": 1731053929,
+      "uri": "at://did:plc:k6acu4chiwkixvdedcmdgmal/app.bsky.feed.post/3lagdncjsu22y",
+      "url": "https://bsky.app/profile/imlunahey.com/post/3lagdncjsu22y",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:k6acu4chiwkixvdedcmdgmal/bafkreiefeexuyxlj3gndizkmftpvpg2euztggw3lynwpmejtdugqis4dc4@jpeg",
+      "user_created_at": "2024-10-21T14:09:53.506000",
+      "user_did": "did:plc:k6acu4chiwkixvdedcmdgmal",
+      "user_diplay_name": "luna",
+      "user_handle": "imlunahey.com",
+      "user_langs": [],
+      "user_timestamp_utc": 1729512593,
+      "user_url": "https://bsky.app/profile/imlunahey.com"
+    }
   ]
 ]

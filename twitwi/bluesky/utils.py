@@ -37,7 +37,9 @@ def validate_post_payload(data):
                 post["record"],
             )
 
-    if post["record"].get("$type") != "app.bsky.feed.post":
+    # Splitting by '#' to ignore possible suffixes in $type
+    # e.g. https://bsky.app/profile/did:plc:k6acu4chiwkixvdedcmdgmal/post/3lagdncjsu22y
+    if post["record"].get("$type").split('#')[0] != "app.bsky.feed.post":
         return False, "payload's record $type is not a post: %s" % post["record"].get(
             "$type"
         )
