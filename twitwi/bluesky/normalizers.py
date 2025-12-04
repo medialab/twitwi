@@ -833,6 +833,11 @@ def normalize_post(
             elif embed["media"]["$type"].endswith(".video"):
                 media_data.append(prepare_video_as_media(embed["media"]["video"]))
 
+            # A personalized record with media embed type, but video unavailable
+            # e.g.: https://bsky.app/profile/meteolatorregassa.bsky.social/post/3lhoxazzptj2b
+            elif embed["media"]["$type"].endswith("#media"):
+                pass
+
             else:
                 raise BlueskyPayloadError(
                     post["url"],
