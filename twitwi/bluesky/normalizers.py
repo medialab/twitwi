@@ -373,6 +373,7 @@ def normalize_post(
     links_to_replace = []
     media_data = []
     extra_links = []
+    post["media_urls"] = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
             raising_error = False
@@ -398,6 +399,9 @@ def normalize_post(
                         )
                 elif feat["$type"].lower().endswith("#tag"):
                     hashtags.add(feat["tag"].strip().lower())
+                # As in this post: https://bsky.app/profile/havehashad.com/post/3ki3rk5ytqd2e
+                elif feat["$type"].endswith("#image") and "uri" in feat:
+                    post['media_urls'].append(safe_normalize_url(feat["uri"]))
                 else:
                     raising_error = True
 
@@ -696,7 +700,6 @@ def normalize_post(
 
     # Handle quotes & medias
     media_ids = set()
-    post["media_urls"] = []
     post["media_thumbnails"] = []
     post["media_types"] = []
     post["media_alt_texts"] = []
