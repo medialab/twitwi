@@ -525,69 +525,91 @@ def normalize_post(
                     or (byteEnd >= elt["start"] and byteEnd <= elt["end"])):
                     # Overlapping links, we skip this one
                     byteStart = -1
+                    byteEnd = -1
                     break
 
-            # It appears that some links end before they start... Bluesky please: what's going on?
-            # example: https://bsky.app/profile/ondarockwebzine.bsky.social/post/3lqxxejza6o2t
-            if int(byteEnd) < int(byteStart) or byteStart < 0:
-                continue
+            # Meaning we will try to fix the link position
+            if byteStart != -1 or byteEnd != -1:
+                # It appears that some links end before they start... Bluesky please: what's going on?
+                # example: https://bsky.app/profile/ondarockwebzine.bsky.social/post/3lqxxejza6o2t
+                # if int(byteEnd) < int(byteStart) or byteStart < 0:
+                if int(byteEnd) < int(byteStart):
+                    byteStart = -1
+                    byteEnd = -1
 
-            # There are mentionned links which are positionned after the end of the text,
-            # so we don't replace them in the original text
-            if byteStart >= len(post["original_text"].encode("utf-8")):
-                continue
+                # There are mentionned links which are positionned after the end of the text,
+                # so we put them at the end of the original text
+                elif byteStart >= len(post["original_text"].encode("utf-8")):
+                    byteStart = -1
+                    byteEnd = -1
 
-            if not text[byteStart:byteEnd].startswith(b"http"):
-                new_byteStart = text.find(b"http", byteStart, byteEnd)
+                elif not text[byteStart:byteEnd].startswith(b"http"):
+                    new_byteStart = text.find(b"http", byteStart, byteEnd)
 
-                # means that the link is shifted, like on this post:
-                # https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
-                if new_byteStart != -1:
-                    byteStart = new_byteStart
+                    # means that the link is shifted, like on this post:
+                    # https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
+                    if new_byteStart != -1:
+                        byteStart = new_byteStart
 
-                    # Find the index of the first space character after byteStart in case the link is a personalized one
-                    # but still with the link in it (somehow existing in some posts, such as this one:
-                    # https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltmljz5blca2)
-                    # In this case, we don't want to touch the position of the link given in the payload
-                    byteEnd = min(
-                        byteStart
-                        - facet["index"]["byteStart"]
-                        + facet["index"]["byteEnd"],
-                        len(post["original_text"].encode("utf-8")),
-                    )
-                    for i in range(byteStart, byteEnd):
-                        if chr(text[i]).isspace():
-                            byteStart = facet["index"]["byteStart"]
-                    byteEnd = (
-                        byteStart
-                        - facet["index"]["byteStart"]
-                        + facet["index"]["byteEnd"]
-                    )
+                        # Find the index of the first space character after byteStart in case the link is a personalized one
+                        # but still with the link in it (somehow existing in some posts, such as this one:
+                        # https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltmljz5blca2)
+                        # In this case, we don't want to touch the position of the link given in the payload
+                        byteEnd = min(
+                            byteStart
+                            - facet["index"]["byteStart"]
+                            + facet["index"]["byteEnd"],
+                            len(post["original_text"].encode("utf-8")),
+                        )
+                        for i in range(byteStart, byteEnd):
+                            if chr(text[i]).isspace():
+                                byteStart = facet["index"]["byteStart"]
+                        byteEnd = (
+                            byteStart
+                            - facet["index"]["byteStart"]
+                            + facet["index"]["byteEnd"]
+                        )
 
-                # means that the link is a "personalized" one like on this post:
-                # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
-                else:
-                    # we're looking for a link which could be valid if we add "https://" at the beginning,
-                    # as in some cases the "http(s)://" part is missing in the post text
-                    for starting in range(byteEnd - byteStart):
-                        try:
-                            if is_url(
-                                "https://"
-                                + text[
-                                    byteStart + starting : byteEnd + starting
-                                ].decode("utf-8")
-                            ):
-                                byteStart += starting
+                    # means that the link is a "personalized" one like on this post:
+                    # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
+                    else:
+                        # we're looking for a link which could be valid if we add "https://" at the beginning,
+                        # as in some cases the "http(s)://" part is missing in the post text
+                        for starting in range(byteEnd - byteStart):
+                            try:
+                                if is_url(
+                                    "https://"
+                                    + text[
+                                        byteStart + starting : byteEnd + starting
+                                    ].decode("utf-8")
+                                ):
+                                    byteStart += starting
+                                    break
+                            except UnicodeDecodeError:
+                                pass
+                        # If we did not find any valid link, we just keep the original position as it is
+                        # meaning that we have a personalized link like in the example above
+
+                        # Extend byteEnd to the right until we find a valid utf-8 ending,
+                        # as in some cases the link is longer than the position given in the payload
+                        # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
+                        # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
+                        while byteEnd <= len(post["original_text"].encode("utf-8")):
+                            try:
+                                text[byteStart:byteEnd].decode("utf-8")
                                 break
-                        except UnicodeDecodeError:
-                            pass
-                    # If we did not find any valid link, we just keep the original position as it is
-                    # meaning that we have a personalized link like in the example above
+                            except UnicodeDecodeError:
+                                byteEnd += 1
+                                continue
 
-                    # Extend byteEnd to the right until we find a valid utf-8 ending,
-                    # as in some cases the link is longer than the position given in the payload
-                    # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
-                    # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
+                        # Meaning that we did not find a valid utf-8 ending, so we reset byteEnd to its original value
+                        if byteEnd > len(post["original_text"].encode("utf-8")):
+                            byteEnd = facet["index"]["byteEnd"]
+
+                        byteEnd += byteStart - facet["index"]["byteStart"]
+                else:
+                    # Handling case of errored byteEnd in the end of the text
+                    # example: https://bsky.app/profile/twif.bsky.social/post/3lm4izkvbfm2r
                     while byteEnd <= len(post["original_text"].encode("utf-8")):
                         try:
                             text[byteStart:byteEnd].decode("utf-8")
@@ -596,23 +618,7 @@ def normalize_post(
                             byteEnd += 1
                             continue
 
-                    # Meaning that we did not find a valid utf-8 ending, so we reset byteEnd to its original value
                     if byteEnd > len(post["original_text"].encode("utf-8")):
-                        byteEnd = facet["index"]["byteEnd"]
-
-                    byteEnd += byteStart - facet["index"]["byteStart"]
-            else:
-                # Handling case of errored byteEnd in the end of the text
-                # example: https://bsky.app/profile/twif.bsky.social/post/3lm4izkvbfm2r
-                while byteEnd <= len(post["original_text"].encode("utf-8")):
-                        try:
-                            text[byteStart:byteEnd].decode("utf-8")
-                            break
-                        except UnicodeDecodeError:
-                            byteEnd += 1
-                            continue
-
-                if byteEnd > len(post["original_text"].encode("utf-8")):
                         byteEnd = facet["index"]["byteEnd"]
 
             # In some cases, the link is completely wrong in the post text,
@@ -638,7 +644,7 @@ def normalize_post(
         elif feat["$type"].endswith("format"):
             pass
         # Not normal feature type, but still existing in some posts
-        # Note that external features aren't visible on the Bluesky app
+        # Note that external features aren't visible on the Bluesky app, only external embeds are
         # e.g.: https://bsky.app/profile/did:plc:4qvb4dpkg6tkbzym77j6jcm4/post/3lbjktt6tw52h
         elif feat["$type"].endswith("external"):
             link = feat["external"]["uri"]
@@ -775,18 +781,16 @@ def normalize_post(
             elif "viewImage" in embed:
                 for i in embed["viewImage"]:
                     if "viewImage" in i:
-                        post['media_urls'].append(i["viewImage"].get("thumb", {}).get("uri", ""))
+                        sub_image = "viewImage"
                     elif "image" in i:
-                        post['media_urls'].append(i["image"].get("thumb", {}).get("uri", ""))
+                        sub_image = "image"
                     else:
                         raise BlueskyPayloadError(
                             post["url"],
                             "unusual viewImages embed content: %s"
                             % embed,
                         )
-
-
-
+                    post['media_urls'].append(i[sub_image].get("thumb", {}).get("uri", ""))
 
         # Images
         if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):

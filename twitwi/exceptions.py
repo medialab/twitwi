@@ -21,4 +21,4 @@ class BlueskyPayloadError(TwitwiError):
     def __init__(self, source, message):
         self.source = source
         self.message = message
-        super().__init__(f"Error while processing Bluesky post {source}:\n{message}")
+        super().__init__(f"Error while processing Bluesky post {source}.\n{message}")
