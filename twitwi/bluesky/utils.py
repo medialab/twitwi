@@ -127,3 +127,8 @@ def format_media_url(user_did, media_cid, mime_type, source):
     else:
         raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb
+
+def format_external_embed_thumbnail_url(thumbnail_cid, user_did):
+    if not thumbnail_cid:
+        return ""
+    return f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{thumbnail_cid}@jpeg"
