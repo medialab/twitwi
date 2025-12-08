@@ -43,7 +43,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:crmrddqmbqzyqd24yjlpibz2/bafkreicyhijgrbdbnceula4sh37lw4y7xzj6m4ur4oytiivpgamgjrwomy@jpeg",
       "user_created_at": "2023-09-23T15:41:23.762000",
       "user_did": "did:plc:crmrddqmbqzyqd24yjlpibz2",
-      "user_diplay_name": "Anthony Pecqueux",
+      "user_display_name": "Anthony Pecqueux",
       "user_handle": "pecqueuxanthony.bsky.social",
       "user_langs": [
         "fr"
@@ -99,7 +99,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:crmrddqmbqzyqd24yjlpibz2/bafkreicyhijgrbdbnceula4sh37lw4y7xzj6m4ur4oytiivpgamgjrwomy@jpeg",
       "user_created_at": "2023-09-23T15:41:23.762000",
       "user_did": "did:plc:crmrddqmbqzyqd24yjlpibz2",
-      "user_diplay_name": "Anthony Pecqueux",
+      "user_display_name": "Anthony Pecqueux",
       "user_handle": "pecqueuxanthony.bsky.social",
       "user_langs": [
         "fr"
@@ -149,7 +149,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2tcpwnpvacttgambthndvcas/bafkreiffq5jgl4szuravtong2756dtcr2jmixx3ovuk5mjgp23zpm2zubq@jpeg",
       "user_created_at": "2023-09-06T13:57:12.909000",
       "user_did": "did:plc:2tcpwnpvacttgambthndvcas",
-      "user_diplay_name": "La Vie des idées",
+      "user_display_name": "La Vie des idées",
       "user_handle": "laviedesidees.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1694001432,
@@ -194,7 +194,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:gzm4qhibsm3o6rg46n3ubswf/bafkreic4csyuscnryjn7kvsgxzgm5cfbw7d7nzks57fr4rr2u6vpjjruei@jpeg",
       "user_created_at": "2023-11-23T15:02:12.614000",
       "user_did": "did:plc:gzm4qhibsm3o6rg46n3ubswf",
-      "user_diplay_name": "Anne Mascret",
+      "user_display_name": "Anne Mascret",
       "user_handle": "annemascret.bsky.social",
       "user_langs": [
         "fr"
@@ -251,7 +251,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:fhv65kba5do4hgyf7yq4dtyo/bafkreidkkt2kb5u3krus6w437iio6abyfbb353sah44nvvhubx73l2txpq@jpeg",
       "user_created_at": "2024-02-06T18:26:00.227000",
       "user_did": "did:plc:fhv65kba5do4hgyf7yq4dtyo",
-      "user_diplay_name": "Pierre Senellart",
+      "user_display_name": "Pierre Senellart",
       "user_handle": "pierre.senellart.com",
       "user_langs": [
         "fr"
@@ -297,7 +297,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7g4ic3vzf6ts42dmpy5usg4l/bafkreidpa4wvhu6ndvcvv4swdrhn5jqudovkj5m4u62h4vz6skvtx5jx3y@jpeg",
       "user_created_at": "2023-08-31T14:01:28.959000",
       "user_did": "did:plc:7g4ic3vzf6ts42dmpy5usg4l",
-      "user_diplay_name": "🏴‍☠️ MC Pablo ∴ #SyndiquezVous",
+      "user_display_name": "🏴‍☠️ MC Pablo ∴ #SyndiquezVous",
       "user_handle": "p4bl0.net",
       "user_langs": [
         "fr"
@@ -344,7 +344,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jitewfrw6ppganrowtvqtkwy/bafkreigzxa66swdzhet5jg3hpa2pqcu3toyol37i7yp55ai5fkeyoukb54@jpeg",
       "user_created_at": "2023-09-30T14:18:36.779000",
       "user_did": "did:plc:jitewfrw6ppganrowtvqtkwy",
-      "user_diplay_name": "ServanneMarzin",
+      "user_display_name": "ServanneMarzin",
       "user_handle": "servannemarzin.bsky.social",
       "user_langs": [
         "fr"
@@ -393,7 +393,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:k2r6bi7z4zvlajkprtrv5re3/bafkreihe64tj5oovcucpgqes34p4akv4dzsvhq4236bmp2qy4aorsok5xm@jpeg",
       "user_created_at": "2023-10-03T13:13:10.954000",
       "user_did": "did:plc:k2r6bi7z4zvlajkprtrv5re3",
-      "user_diplay_name": "Roppick",
+      "user_display_name": "Roppick",
       "user_handle": "roppick.bsky.social",
       "user_langs": [
         "fr"
@@ -440,7 +440,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jqs453ktxco5ho5z46wardhp/bafkreih4vezn4t5mhdjcj4yixt4ypiiljfgtvkqjb3dc45naebuhxnxo3u@jpeg",
       "user_created_at": "2023-04-08T06:44:47.111000",
       "user_did": "did:plc:jqs453ktxco5ho5z46wardhp",
-      "user_diplay_name": "Tracklist",
+      "user_display_name": "Tracklist",
       "user_handle": "tracklist.com.br",
       "user_langs": [
         "pt"
@@ -499,7 +499,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:f22sjd5bmoyykou3335tpznf/bafkreiektk3kqwpimxsccxssgcegcsg6tuasooxttihftc2oira6anfzre@jpeg",
       "user_created_at": "2025-01-20T16:00:14.113000",
       "user_did": "did:plc:f22sjd5bmoyykou3335tpznf",
-      "user_diplay_name": "SNESUP-FSU",
+      "user_display_name": "SNESUP-FSU",
       "user_handle": "snesupfsu.bsky.social",
       "user_langs": [
         "fr"
@@ -549,7 +549,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7g4ic3vzf6ts42dmpy5usg4l/bafkreidpa4wvhu6ndvcvv4swdrhn5jqudovkj5m4u62h4vz6skvtx5jx3y@jpeg",
       "user_created_at": "2023-08-31T14:01:28.959000",
       "user_did": "did:plc:7g4ic3vzf6ts42dmpy5usg4l",
-      "user_diplay_name": "🏴‍☠️ MC Pablo ∴ #SyndiquezVous",
+      "user_display_name": "🏴‍☠️ MC Pablo ∴ #SyndiquezVous",
       "user_handle": "p4bl0.net",
       "user_langs": [
         "fr"
@@ -607,7 +607,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ie76lipowuxef4cv52gjpon5/bafkreicevm7dkqlfx5b73uijyxmq3dafmkahjzg4yl72ij7kezdfvym4iq@jpeg",
       "user_created_at": "2024-06-13T15:42:54.739000",
       "user_did": "did:plc:ie76lipowuxef4cv52gjpon5",
-      "user_diplay_name": "CGT Université Paris 8",
+      "user_display_name": "CGT Université Paris 8",
       "user_handle": "cgt.up8.edu",
       "user_langs": [
         "fr"
@@ -673,7 +673,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7g4ic3vzf6ts42dmpy5usg4l/bafkreidpa4wvhu6ndvcvv4swdrhn5jqudovkj5m4u62h4vz6skvtx5jx3y@jpeg",
       "user_created_at": "2023-08-31T14:01:28.959000",
       "user_did": "did:plc:7g4ic3vzf6ts42dmpy5usg4l",
-      "user_diplay_name": "🏴‍☠️ MC Pablo ∴ #SyndiquezVous",
+      "user_display_name": "🏴‍☠️ MC Pablo ∴ #SyndiquezVous",
       "user_handle": "p4bl0.net",
       "user_langs": [
         "fr"
@@ -724,7 +724,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:gf474l4mkf7icwpvesuejesr/bafkreiaytebf6hzzwhu6rtl2fnx5ixxbzxmejxj6mme55slf3t3hcmtr6y@jpeg",
       "user_created_at": "2023-10-30T10:36:28.370000",
       "user_did": "did:plc:gf474l4mkf7icwpvesuejesr",
-      "user_diplay_name": "bricabraque",
+      "user_display_name": "bricabraque",
       "user_handle": "bricabraque.bsky.social",
       "user_langs": [
         "fr"
@@ -781,7 +781,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3hwum75syrm6oqotgkgrxrbi/bafkreifjinivvuldqbrhzwx7rxblf2fbjlirrl6myatmqpnytgw4aapdx4@jpeg",
       "user_created_at": "2023-08-14T21:15:29.131000",
       "user_did": "did:plc:3hwum75syrm6oqotgkgrxrbi",
-      "user_diplay_name": "LunaKG",
+      "user_display_name": "LunaKG",
       "user_handle": "alinenaft.bsky.social",
       "user_langs": [
         "fr"
@@ -841,7 +841,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:sbkwzapw2fz7mdwq7kxpfeha/bafkreie5ey6azv7e3gluc3qqa6enzxv7sjceswilcysju46knadewwfzjy@jpeg",
       "user_created_at": "2024-11-04T10:34:00.412000",
       "user_did": "did:plc:sbkwzapw2fz7mdwq7kxpfeha",
-      "user_diplay_name": "Zahia Hamdane",
+      "user_display_name": "Zahia Hamdane",
       "user_handle": "zahiahamdane.bsky.social",
       "user_langs": [
         "fr"
@@ -902,7 +902,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -949,7 +949,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:u2vqbvnng24nx2yrzfycf6ew/bafkreibxjus63fnt7zafljmfavco76ufpkl6pnhjlawgtk5ep52pb234qy@jpeg",
       "user_created_at": "2023-12-09T04:22:30.234000",
       "user_did": "did:plc:u2vqbvnng24nx2yrzfycf6ew",
-      "user_diplay_name": "Seph ❄️ CFXX",
+      "user_display_name": "Seph ❄️ CFXX",
       "user_handle": "shiseptiana.bsky.social",
       "user_langs": [
         "en"
@@ -996,7 +996,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:fpruhuo22xkm5o7ttr2ktxdo/bafkreif43mhqajnbnl62u3ezf37g6x22nd762im54thxbil4ga46eugcga@jpeg",
       "user_created_at": "2023-04-08T22:19:22.589000",
       "user_did": "did:plc:fpruhuo22xkm5o7ttr2ktxdo",
-      "user_diplay_name": "dan",
+      "user_display_name": "dan",
       "user_handle": "danabra.mov",
       "user_langs": [
         "en"
@@ -1035,7 +1035,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "fr"
@@ -1100,7 +1100,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2rphjhzdtfztzxtylnb2tl2t/bafkreif2tz2rhx2553olxamepypfvk77fjwmwrdlemyl3l4khzg7qwutr4@jpeg",
       "user_created_at": "2023-07-25T21:04:46.667000",
       "user_did": "did:plc:2rphjhzdtfztzxtylnb2tl2t",
-      "user_diplay_name": "EnFéeTamine 💊",
+      "user_display_name": "EnFéeTamine 💊",
       "user_handle": "enfeetamine.bsky.social",
       "user_langs": [
         "fr"
@@ -1157,7 +1157,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:gumjd5g4juqajl4mo6mptwyi/bafkreih2ki65scwpz4udtgamjdl2zfsv73le4ecg5pqh5ahx6us2fqiv6e@jpeg",
       "user_created_at": "2023-10-20T02:35:36.682000",
       "user_did": "did:plc:gumjd5g4juqajl4mo6mptwyi",
-      "user_diplay_name": "BikoPie, comms closed for now",
+      "user_display_name": "BikoPie, comms closed for now",
       "user_handle": "bikopie.bsky.social",
       "user_langs": [
         "en"
@@ -1214,7 +1214,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:umkdmppnmbfkz65p3xdwxyjc/bafkreic5pi246g65vt642qzkkrkyi4dbluhczo3ubozm34evmhfco7yr7y@jpeg",
       "user_created_at": "2024-11-09T17:08:53.420000",
       "user_did": "did:plc:umkdmppnmbfkz65p3xdwxyjc",
-      "user_diplay_name": "Nichole Hiltz 🇲🇽 🇨🇦 🇺🇦",
+      "user_display_name": "Nichole Hiltz 🇲🇽 🇨🇦 🇺🇦",
       "user_handle": "nicholehiltz.bsky.social",
       "user_langs": [
         "en"
@@ -1275,7 +1275,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:gumjd5g4juqajl4mo6mptwyi/bafkreih2ki65scwpz4udtgamjdl2zfsv73le4ecg5pqh5ahx6us2fqiv6e@jpeg",
       "user_created_at": "2023-10-20T02:35:36.682000",
       "user_did": "did:plc:gumjd5g4juqajl4mo6mptwyi",
-      "user_diplay_name": "BikoPie, comms closed for now",
+      "user_display_name": "BikoPie, comms closed for now",
       "user_handle": "bikopie.bsky.social",
       "user_langs": [
         "en"
@@ -1332,7 +1332,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hytxeoglnrcxbcfbgsyaqfxl/bafkreigropzs72vrzvldacowpsra5kusayealb5wowgsudu5yuo6carb5y@jpeg",
       "user_created_at": "2024-11-25T00:30:58.609000",
       "user_did": "did:plc:hytxeoglnrcxbcfbgsyaqfxl",
-      "user_diplay_name": "Necrophyte🍄",
+      "user_display_name": "Necrophyte🍄",
       "user_handle": "necrophyte-gaming.bsky.social",
       "user_langs": [
         "en"
@@ -1374,7 +1374,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "fr"
@@ -1419,7 +1419,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "en"
@@ -1461,7 +1461,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "fr"
@@ -1509,7 +1509,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "en"
@@ -1554,7 +1554,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "en"
@@ -1610,7 +1610,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -1663,7 +1663,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "en"
@@ -1721,7 +1721,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -1787,7 +1787,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -1836,7 +1836,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -1886,7 +1886,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pmhyscv7t7incelmoevkijpr/bafkreic6uhshdddxkyyplrdvzoph2j2vzxw4h3jlycdvfbsti5bv6pknia@jpeg",
       "user_created_at": "2024-11-06T18:19:06.319000",
       "user_did": "did:plc:pmhyscv7t7incelmoevkijpr",
-      "user_diplay_name": "Art Candee 🍿🥤",
+      "user_display_name": "Art Candee 🍿🥤",
       "user_handle": "artcandee.bsky.social",
       "user_langs": [
         "en"
@@ -1944,7 +1944,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2007,7 +2007,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2061,7 +2061,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2108,7 +2108,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2tcpwnpvacttgambthndvcas/bafkreiffq5jgl4szuravtong2756dtcr2jmixx3ovuk5mjgp23zpm2zubq@jpeg",
       "user_created_at": "2023-09-06T13:57:12.909000",
       "user_did": "did:plc:2tcpwnpvacttgambthndvcas",
-      "user_diplay_name": "La Vie des idées",
+      "user_display_name": "La Vie des idées",
       "user_handle": "laviedesidees.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1694001432,
@@ -2157,7 +2157,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2202,7 +2202,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2252,7 +2252,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2308,7 +2308,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2359,7 +2359,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2410,7 +2410,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2470,7 +2470,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2521,7 +2521,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aru6i7k6wo43msubk6km5td3/bafkreieaedwoulorwisx7yx4oqjse65vpintuq37czqcglpgs4thesfcxi@jpeg",
       "user_created_at": "2023-04-21T08:25:47.542000",
       "user_did": "did:plc:aru6i7k6wo43msubk6km5td3",
-      "user_diplay_name": "Korben",
+      "user_display_name": "Korben",
       "user_handle": "korben.info",
       "user_langs": [
         "fr-FR"
@@ -2581,7 +2581,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreido6n7zkc7ogsw4vrtpnqw6cfjo2hxccde5jltrxqpfhpowpqiouy@jpeg",
       "user_created_at": "2023-07-03T18:21:05.120000",
       "user_did": "did:plc:oklkinuievllgvhrv2nia4gu",
-      "user_diplay_name": "Bearstech",
+      "user_display_name": "Bearstech",
       "user_handle": "bearstech.com",
       "user_langs": [],
       "user_timestamp_utc": 1688401265,
@@ -2637,7 +2637,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oqynptsozcuxi52v5srdwau2/bafkreigxe2gkgiyh2f5luor2aw2v7prsjcpf5tfi42a23l273bsptjamxa@jpeg",
       "user_created_at": "2023-12-02T14:29:41.660000",
       "user_did": "did:plc:oqynptsozcuxi52v5srdwau2",
-      "user_diplay_name": "Julien Leroy",
+      "user_display_name": "Julien Leroy",
       "user_handle": "djoo.org",
       "user_langs": [
         "fr"
@@ -2684,7 +2684,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5klvtukw5fucxsrkjldhrjxs/bafkreibqnfysz5boyav7syezndvt4ehihvp3w7uyrdjdbaktxynnk5gcea@jpeg",
       "user_created_at": "2023-10-10T16:58:21.049000",
       "user_did": "did:plc:5klvtukw5fucxsrkjldhrjxs",
-      "user_diplay_name": "Guillaume Plique",
+      "user_display_name": "Guillaume Plique",
       "user_handle": "yomguithereal.bsky.social",
       "user_langs": [
         "fr"
@@ -2745,7 +2745,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oklkinuievllgvhrv2nia4gu/bafkreido6n7zkc7ogsw4vrtpnqw6cfjo2hxccde5jltrxqpfhpowpqiouy@jpeg",
       "user_created_at": "2023-07-03T18:21:05.120000",
       "user_did": "did:plc:oklkinuievllgvhrv2nia4gu",
-      "user_diplay_name": "Bearstech",
+      "user_display_name": "Bearstech",
       "user_handle": "bearstech.com",
       "user_langs": [],
       "user_timestamp_utc": 1688401265,
@@ -2793,7 +2793,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2849,7 +2849,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2903,7 +2903,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -2950,7 +2950,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -3001,7 +3001,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -3057,7 +3057,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -3111,7 +3111,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -3161,7 +3161,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -3224,7 +3224,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hbbrkyeqnurr25zqve3a5udb/bafkreieuoumty6epnjp33nsxjbskf3tvakp76gc3yk42brzyahbinnfave@jpeg",
       "user_created_at": "2023-09-01T15:36:06.055000",
       "user_did": "did:plc:hbbrkyeqnurr25zqve3a5udb",
-      "user_diplay_name": "Benjamin Ooghe-Tabanou",
+      "user_display_name": "Benjamin Ooghe-Tabanou",
       "user_handle": "boogheta.bsky.social",
       "user_langs": [
         "fr"
@@ -3266,7 +3266,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bg5udl25mvzg3rt7l5n2hzet/bafkreibs7fzsi2ejadqnptikhkv5klrprdnjpikp5rropgeoj2kgssavea@jpeg",
       "user_created_at": "2024-04-15T00:02:04.453000",
       "user_did": "did:plc:bg5udl25mvzg3rt7l5n2hzet",
-      "user_diplay_name": "Ryan Barrett",
+      "user_display_name": "Ryan Barrett",
       "user_handle": "fedi.test.snarfed.org",
       "user_langs": [],
       "user_timestamp_utc": 1713132124,
@@ -3319,7 +3319,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:45uofmby4qbt44jnwbr36rsv/bafkreigispdt5mtk6ofivmpwfvrg2226g75hzhsfxlmdvstcih3g5yrvdi@jpeg",
       "user_created_at": "2023-10-24T20:08:45.643000",
       "user_did": "did:plc:45uofmby4qbt44jnwbr36rsv",
-      "user_diplay_name": "SNJ-CGT - Syndicat National des Journalistes CGT",
+      "user_display_name": "SNJ-CGT - Syndicat National des Journalistes CGT",
       "user_handle": "snjcgt.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1698170925,
@@ -3360,7 +3360,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:u5d54hkw4ysuqtuvcj6cmsin/bafkreidu237hj2xxvquxxgz3py5xhbkkvffawyc27avpvecgxejzozyt2q@jpeg",
       "user_created_at": "2024-11-15T13:38:51.859000",
       "user_did": "did:plc:u5d54hkw4ysuqtuvcj6cmsin",
-      "user_diplay_name": "",
+      "user_display_name": "",
       "user_handle": "ecrime.ch",
       "user_langs": [],
       "user_timestamp_utc": 1731674331,
@@ -3401,7 +3401,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:iesdrkibjhxmpgywy7vuxfuz/bafkreif5tf4t2b5e7ldrro3rgwfnc4oko33b3z62rg4hq7g46kgoruasui@jpeg",
       "user_created_at": "2023-08-16T19:48:29.522000",
       "user_did": "did:plc:iesdrkibjhxmpgywy7vuxfuz",
-      "user_diplay_name": "Fred Bourget",
+      "user_display_name": "Fred Bourget",
       "user_handle": "fredbourget.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1692208109,
@@ -3453,7 +3453,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
       "user_created_at": "2025-01-03T20:06:32.516000",
       "user_did": "did:plc:3auglfwwpebyiozbojq5eqhy",
-      "user_diplay_name": "NewYork",
+      "user_display_name": "NewYork",
       "user_handle": "NewYork.activitypub.awakari.com.ap.brid.gy",
       "user_langs": [],
       "user_timestamp_utc": 1735931192,
@@ -3498,7 +3498,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rfbpq5qtn3qt3yxjlqjzs5tw/bafkreiaxl3ldjsv4fr5tkte6zvvvzsn67zod4uh7iwdcolaa2tlkz5x6qm@jpeg",
       "user_created_at": "2023-04-13T17:43:19.859000",
       "user_did": "did:plc:rfbpq5qtn3qt3yxjlqjzs5tw",
-      "user_diplay_name": "Marvin H2G2 - Soutien aux scientifiques !",
+      "user_display_name": "Marvin H2G2 - Soutien aux scientifiques !",
       "user_handle": "marvinh2g2.fr",
       "user_langs": [],
       "user_timestamp_utc": 1681400599,
@@ -3547,7 +3547,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mtyax5fqrdaarejjruev325a/bafkreib5y5ivbvefzwe465h2qtcxchur2hjdft4o74x6rn4vahfb4acqau@jpeg",
       "user_created_at": "2024-11-24T08:22:46.045000",
       "user_did": "did:plc:mtyax5fqrdaarejjruev325a",
-      "user_diplay_name": "Philippe",
+      "user_display_name": "Philippe",
       "user_handle": "vykanoue.bsky.social",
       "user_langs": [
         "fr",
@@ -3599,7 +3599,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ymccztoissgru2ibl4fvb5iq/bafkreihugrnvcpuc2r2yyru7ljfw2kyk73xruytrx7ndq7af2ffcbyewai@jpeg",
       "user_created_at": "2024-11-15T17:47:01.622000",
       "user_did": "did:plc:ymccztoissgru2ibl4fvb5iq",
-      "user_diplay_name": "🇨🇦 The Cantankerous Canuck 🇨🇦",
+      "user_display_name": "🇨🇦 The Cantankerous Canuck 🇨🇦",
       "user_handle": "cantankerouscanuck.bsky.social",
       "user_langs": [
         "en"
@@ -3641,7 +3641,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bvs6b4f4fz2jj73wtrtjiy4j/bafkreidajgwqkixixv6u64c4d323zcikkdjk7nm2mwuguddn2wuvtwz42e@jpeg",
       "user_created_at": "2024-05-01T17:49:20.427000",
       "user_did": "did:plc:bvs6b4f4fz2jj73wtrtjiy4j",
-      "user_diplay_name": "今日視界",
+      "user_display_name": "今日視界",
       "user_handle": "g0rosato.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1714578560,
@@ -3686,7 +3686,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yw52e2bo6zv7ulryr4ryncpu/bafkreif4pebsptscit4xjnsjbkb2mqlfsglcjo5xlmjdi4dvmgkmysjpxa@jpeg",
       "user_created_at": "2023-10-04T22:14:04.497000",
       "user_did": "did:plc:yw52e2bo6zv7ulryr4ryncpu",
-      "user_diplay_name": "Eurobot",
+      "user_display_name": "Eurobot",
       "user_handle": "eurobot.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1696450444,
@@ -3727,7 +3727,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:djglyf5epph2tc44lnqsdvfi/bafkreie5xhcjxcgbcsl7lglo4hsp6nsbpvcsxvugfiojk43lc5lkkxwe3u@jpeg",
       "user_created_at": "2025-01-20T15:45:49.643000",
       "user_did": "did:plc:djglyf5epph2tc44lnqsdvfi",
-      "user_diplay_name": "ClustZ",
+      "user_display_name": "ClustZ",
       "user_handle": "clustz.com",
       "user_langs": [],
       "user_timestamp_utc": 1737384349,
@@ -3782,7 +3782,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:l4y56p5e7ofj2zspucopqzue/bafkreihfta2diqc42tknbolnsviqigezb7qpmxk5d2wmsik67y66pis6aq@jpeg",
       "user_created_at": "2023-11-21T04:55:03.473000",
       "user_did": "did:plc:l4y56p5e7ofj2zspucopqzue",
-      "user_diplay_name": "LANana-Nuestra Señora de la Muerte del Pan 😪",
+      "user_display_name": "LANana-Nuestra Señora de la Muerte del Pan 😪",
       "user_handle": "lanana421.bsky.social",
       "user_langs": [
         "en"
@@ -3830,7 +3830,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:n36m4kw25hkpzlvv6u4wvirm/bafkreid44ygd3u2c5mfmphvxdywi2tl77vi42z43avgai37rvvhd6qilwm@jpeg",
       "user_created_at": "2024-10-11T21:06:07.707000",
       "user_did": "did:plc:n36m4kw25hkpzlvv6u4wvirm",
-      "user_diplay_name": "",
+      "user_display_name": "",
       "user_handle": "proudlycanadian.bsky.social",
       "user_langs": [
         "en"
@@ -3875,7 +3875,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qji2qys3x5mv3qcsk6m4iyrb/bafkreiajhfcnnnm5rvwkdbwo4z422xul3tutpsbp37chde2bzfgnx2tov4@jpeg",
       "user_created_at": "2024-11-26T16:48:25.346000",
       "user_did": "did:plc:qji2qys3x5mv3qcsk6m4iyrb",
-      "user_diplay_name": "Stan 🇨🇦🐻",
+      "user_display_name": "Stan 🇨🇦🐻",
       "user_handle": "saltystan.bsky.social",
       "user_langs": [
         "en"
@@ -3937,7 +3937,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:etkadjdby46s2skc4shoxp6q/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
       "user_created_at": "2025-01-03T20:27:31.965000",
       "user_did": "did:plc:etkadjdby46s2skc4shoxp6q",
-      "user_diplay_name": "Android",
+      "user_display_name": "Android",
       "user_handle": "android.activitypub.awakari.com.ap.brid.gy",
       "user_langs": [],
       "user_timestamp_utc": 1735932451,
@@ -3992,7 +3992,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
       "user_created_at": "2025-08-20T20:32:40.807000",
       "user_did": "did:plc:qgunaom6akvc4cajk4dhxwym",
-      "user_diplay_name": "Thousand Madleens to Gaza FR",
+      "user_display_name": "Thousand Madleens to Gaza FR",
       "user_handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
       "user_langs": [
         "fr"
@@ -4044,7 +4044,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
       "user_created_at": "2025-08-20T20:32:40.807000",
       "user_did": "did:plc:qgunaom6akvc4cajk4dhxwym",
-      "user_diplay_name": "Thousand Madleens to Gaza FR",
+      "user_display_name": "Thousand Madleens to Gaza FR",
       "user_handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
       "user_langs": [
         "fr"
@@ -4097,7 +4097,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:qgunaom6akvc4cajk4dhxwym/bafkreiaiwkk7652dukngudar4sxbodvdayf6zcjudosjllo7fuka47jelu@jpeg",
       "user_created_at": "2025-08-20T20:32:40.807000",
       "user_did": "did:plc:qgunaom6akvc4cajk4dhxwym",
-      "user_diplay_name": "Thousand Madleens to Gaza FR",
+      "user_display_name": "Thousand Madleens to Gaza FR",
       "user_handle": "1kmadleenfr.mastodon.social.ap.brid.gy",
       "user_langs": [
         "fr"
@@ -4146,7 +4146,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:svoymufgychs3h2mxbf6xydf/bafkreihfstgf7ugp7bdwt6oagaucwiphmvcw6oisawrke32tm2fng2dhry@jpeg",
       "user_created_at": "2025-03-04T03:09:18.145000",
       "user_did": "did:plc:svoymufgychs3h2mxbf6xydf",
-      "user_diplay_name": "Maple Mama",
+      "user_display_name": "Maple Mama",
       "user_handle": "maplemama20.bsky.social",
       "user_langs": [
         "en"
@@ -4194,7 +4194,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aj3cdjcejjrldwr7qdidj2z6/bafkreia5f6ngpr3c67mpwnxzdrwpsiocpgkxzoajorikw77o5nayujb7mi@jpeg",
       "user_created_at": "2024-11-25T19:46:41.647000",
       "user_did": "did:plc:aj3cdjcejjrldwr7qdidj2z6",
-      "user_diplay_name": "Deborah Lynn",
+      "user_display_name": "Deborah Lynn",
       "user_handle": "mrsdeborahlynn.bsky.social",
       "user_langs": [
         "en"
@@ -4242,7 +4242,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6cxybub32cqnedyd3pz2wozk/bafkreicybziaagpjespizuq3irdwls7le5a6ifbj5xangyrneifwwhcpmy@jpeg",
       "user_created_at": "2023-09-21T18:18:29.150000",
       "user_did": "did:plc:6cxybub32cqnedyd3pz2wozk",
-      "user_diplay_name": "ltwlauren🤸‍♀️❤️🎶🎨🐾",
+      "user_display_name": "ltwlauren🤸‍♀️❤️🎶🎨🐾",
       "user_handle": "ltwlauren.bsky.social",
       "user_langs": [
         "en"
@@ -4287,7 +4287,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:76nrf6hcsaci3tk7tno6bing/bafkreietortsy5skqu6ak5rst5gts2eqpwryq7afyxirey2sx344exay54@jpeg",
       "user_created_at": "2025-01-28T01:54:36.746000",
       "user_did": "did:plc:76nrf6hcsaci3tk7tno6bing",
-      "user_diplay_name": "Long Beach Indivisible",
+      "user_display_name": "Long Beach Indivisible",
       "user_handle": "indivisiblelb.bsky.social",
       "user_langs": [
         "en",
@@ -4342,7 +4342,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rkphrshyfiqe4n2hz5vj56ig/bafkreia2pe2tayrxikiute7w7g2qfqvxta27ywggclqz4r47fp53kquyvu@jpeg",
       "user_created_at": "2025-01-20T11:55:16.746000",
       "user_did": "did:plc:rkphrshyfiqe4n2hz5vj56ig",
-      "user_diplay_name": "Mémoire2Cité  Mémoire2ville",
+      "user_display_name": "Mémoire2Cité  Mémoire2ville",
       "user_handle": "memoire2cite.mastodon.social.ap.brid.gy",
       "user_langs": [
         "fr"
@@ -4404,7 +4404,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3auglfwwpebyiozbojq5eqhy/bafkreibltzp64wgqko2zybvena2ajvyo6rt7gzw7qnyr3wfmp6qorslkhu@jpeg",
       "user_created_at": "2025-01-03T20:06:32.543000",
       "user_did": "did:plc:3auglfwwpebyiozbojq5eqhy",
-      "user_diplay_name": "NewYork",
+      "user_display_name": "NewYork",
       "user_handle": "newyork.activitypub.awakari.com.ap.brid.gy",
       "user_langs": [],
       "user_timestamp_utc": 1735931192,
@@ -4459,7 +4459,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ysc73isz7jkgr4ozyn6azo77/bafkreif6g7p5jykpgyph7dqrglfktaqwfhvihmff4f2vblbnenx2qh7564@jpeg",
       "user_created_at": "2023-08-22T16:30:36.857000",
       "user_did": "did:plc:ysc73isz7jkgr4ozyn6azo77",
-      "user_diplay_name": "Springer",
+      "user_display_name": "Springer",
       "user_handle": "springer.springernature.com",
       "user_langs": [],
       "user_timestamp_utc": 1692714636,
@@ -4511,7 +4511,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oekcprj6r6mqorimjaxtvt3a/bafkreig6l7gnbvhgdtiysmb67ymqrawcdfispurryl5jaxitv35imrecrm@jpeg",
       "user_created_at": "2024-11-26T21:54:52.746000",
       "user_did": "did:plc:oekcprj6r6mqorimjaxtvt3a",
-      "user_diplay_name": "Radio Gaspésie",
+      "user_display_name": "Radio Gaspésie",
       "user_handle": "radiogaspesie.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1732654492,
@@ -4554,7 +4554,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:afklhwqpfjktj3m44h7wfzbu/bafkreicdb37vssdu22dimxzyhqx74luvtat33b7ufhb3qip3h2fc5zcghm@jpeg",
       "user_created_at": "2023-09-04T00:46:43.572000",
       "user_did": "did:plc:afklhwqpfjktj3m44h7wfzbu",
-      "user_diplay_name": "Pikouse",
+      "user_display_name": "Pikouse",
       "user_handle": "pikouse.bsky.social",
       "user_langs": [
         "fr"
@@ -4617,7 +4617,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:3h2qkkjhjwaqnuuj4dtw6sem/bafkreiegjs4cz6k363iwiptou5l26edtq75yf5fwkwhb7gxl2ewumobrrq@jpeg",
       "user_created_at": "2023-09-24T19:53:30.072000",
       "user_did": "did:plc:3h2qkkjhjwaqnuuj4dtw6sem",
-      "user_diplay_name": "DePassage 🥖🇫🇷 🤝 💙💛 🗽",
+      "user_display_name": "DePassage 🥖🇫🇷 🤝 💙💛 🗽",
       "user_handle": "sudetsoleil.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1695578010,
@@ -4663,7 +4663,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:laiqcxb5dscghtzvxlyjy677/bafkreihtgjmilfbcn6u73nx6egpaq362nw52vn2rj6ekb6rq4kzext4544@jpeg",
       "user_created_at": "2024-06-24T19:35:56.517000",
       "user_did": "did:plc:laiqcxb5dscghtzvxlyjy677",
-      "user_diplay_name": "Julien Pirou / Empyreal",
+      "user_display_name": "Julien Pirou / Empyreal",
       "user_handle": "pirouempyreal.toot.portes-imaginaire.org.ap.brid.gy",
       "user_langs": [
         "fr"
@@ -4720,7 +4720,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yjhjukglbxo5asqz34nbuthv/bafkreialjmkxwun3umsadrplejaqtinfqogqbvylrczdswn6au6bexgk2i@jpeg",
       "user_created_at": "2024-06-28T00:41:48.083000",
       "user_did": "did:plc:yjhjukglbxo5asqz34nbuthv",
-      "user_diplay_name": "Tako",
+      "user_display_name": "Tako",
       "user_handle": "takobiotech.masto.bike.ap.brid.gy",
       "user_langs": [
         "fr"
@@ -4768,7 +4768,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ragtjsm2j2vknwkz3zp4oxrd/bafkreihhpqdyntku66himwor5wlhtdo44hllmngj2ofmbqnm25bdm454wq@jpeg",
       "user_created_at": "2022-11-17T01:35:16.391000",
       "user_did": "did:plc:ragtjsm2j2vknwkz3zp4oxrd",
-      "user_diplay_name": "Paul Frazee",
+      "user_display_name": "Paul Frazee",
       "user_handle": "pfrazee.com",
       "user_langs": [
         "en"
@@ -4816,7 +4816,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pubxwd65wu755qoupdjr7f7l/bafkreidz6xosdjivm5opwjfdhtyaznjvay7b5ojoqif6f2v4iejj7i33wa@jpeg",
       "user_created_at": "2023-07-10T19:36:33.721000",
       "user_did": "did:plc:pubxwd65wu755qoupdjr7f7l",
-      "user_diplay_name": "Pierre Vak",
+      "user_display_name": "Pierre Vak",
       "user_handle": "piervak.bsky.social",
       "user_langs": [
         "fr"
@@ -4869,7 +4869,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pubxwd65wu755qoupdjr7f7l/bafkreidz6xosdjivm5opwjfdhtyaznjvay7b5ojoqif6f2v4iejj7i33wa@jpeg",
       "user_created_at": "2023-07-10T19:36:33.721000",
       "user_did": "did:plc:pubxwd65wu755qoupdjr7f7l",
-      "user_diplay_name": "Pierre Vak",
+      "user_display_name": "Pierre Vak",
       "user_handle": "piervak.bsky.social",
       "user_langs": [
         "fr"
@@ -4923,7 +4923,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6tva7ibr24b6qix575yuzkp2/bafkreian3cfqb6ct4nglrxv22wzmzsqs54u2gpwcg7b34uzptt2556ib3y@jpeg",
       "user_created_at": "2023-08-02T20:05:38.013000",
       "user_did": "did:plc:6tva7ibr24b6qix575yuzkp2",
-      "user_diplay_name": "Teletekstbot",
+      "user_display_name": "Teletekstbot",
       "user_handle": "teletekstbot.bsky.social",
       "user_langs": [],
       "user_timestamp_utc": 1690999538,
@@ -4966,7 +4966,7 @@
       "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:exm5zgqj4ktgqwpu2bguopov/bafkreiesbbssadalwrp3cuocjpa2mczw5piq475qsya5x7hczzmc74nsay@jpeg",
       "user_created_at": "2023-07-25T22:52:47.138000",
       "user_did": "did:plc:exm5zgqj4ktgqwpu2bguopov",
-      "user_diplay_name": "Da Hep",
+      "user_display_name": "Da Hep",
       "user_handle": "dahep.bsky.social",
       "user_langs": [
         "fr"

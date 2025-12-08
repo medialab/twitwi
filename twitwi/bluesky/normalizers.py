@@ -326,7 +326,7 @@ def normalize_post(
         )
 
     # Handle user metadata
-    post["user_diplay_name"] = data["author"].get("displayName", "")
+    post["user_display_name"] = data["author"].get("displayName", "")
     post["user_avatar"] = data["author"].get("avatar", "")
     post["user_timestamp_utc"], post["user_created_at"] = get_dates(
         data["author"]["createdAt"], locale=locale, source="bluesky"

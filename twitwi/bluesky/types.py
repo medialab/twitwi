@@ -72,7 +72,7 @@ class BlueskyPost(TypedDict):
 
     # Author metadata fields
     user_url: str                       # URL of the profile accessible on the web of the account who authored the post
-    user_diplay_name: str               # updatable human-readable name of the account who authored the post
+    user_display_name: str               # updatable human-readable name of the account who authored the post
     # user_description: str             # not available from posts payloads
     # user_posts: int                   # not available from posts payloads
     # user_followers: int               # not available from posts payloads
