@@ -14,6 +14,15 @@ valid_post_keys = [
     "quoteCount",
 ]
 
+
+valid_partial_post_payload_keys = [
+    "did",
+    "time_us",
+    "kind",
+    "commit",
+]
+
+
 valid_record_keys = ["$type", "createdAt", "text"]
 
 
@@ -55,6 +64,33 @@ def validate_post_payload(data):
     return True, None
 
 
+def validate_partial_post_payload(data):
+    payload = data.get("post", data)
+    post = payload.get("commit", payload)
+
+    for key in valid_partial_post_payload_keys:
+        if key not in payload:
+            return False, f"key {key} is missing from payload: {post}"
+
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
+    for key in valid_record_keys:
+        if key not in post["record"]:
+            return False, "key %s is missing from payload's record: %s" % (
+                key,
+                post["record"],
+            )
+
+    if post["record"].get("$type") != "app.bsky.feed.post":
+        return False, "payload's record $type is not a post: %s" % post["record"].get(
+            "$type"
+        )
+
+    return True, None
+
+
+
 re_embed_types = re.compile(
     r"\.(record|recordWithMedia|images|video|external)(?:#.*)?$"
 )
@@ -70,6 +106,10 @@ def format_profile_url(user_handle_or_did):
 
 def format_post_url(user_handle_or_did, post_did, post_splitter="/post/"):
     return f"https://bsky.app/profile/{user_handle_or_did}{post_splitter}{post_did}"
+
+
+def format_post_uri(user_did, post_did):
+    return f"at://{user_did}/app.bsky.feed.post/{post_did}"
 
 
 def parse_post_url(url, source):

@@ -12,16 +12,18 @@ from twitwi.utils import (
 )
 from twitwi.bluesky.utils import (
     validate_post_payload,
+    validate_partial_post_payload,
     valid_embed_type,
     format_profile_url,
     format_post_url,
+    format_post_uri,
     parse_post_url,
     parse_post_uri,
     format_starterpack_url,
     format_media_url,
     format_external_embed_thumbnail_url,
 )
-from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost
+from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost, BlueskyPartialPost
 
 
 def normalize_profile(data: Dict, locale: Optional[Any] = None) -> BlueskyProfile:
@@ -889,6 +891,152 @@ def normalize_post(
         post["repost_timestamp_utc"], post["repost_created_at"] = get_dates(
             repost_data["indexedAt"], locale=locale, source="bluesky"
         )
+
+    # Finalize text field
+    # Warning: mutates post
+    finalize_post_text(text, post)
+
+
+    # Collection source & match query handling
+    # Warning: mutates post
+    process_collection_source_and_match_query(post, collection_source)
+
+
+    if extract_referenced_posts:
+        # Handle thread posts when data comes from a feed
+        if reply_data:
+            # Warning: mutates referenced_posts
+            process_thread_posts_from_feed(
+                reply_data, post, locale, extract_referenced_posts, referenced_posts
+            )
+
+        assert referenced_posts is not None
+        return [referenced_posts[did] for did in sorted(referenced_posts.keys())] + [
+            post
+        ]  # type: ignore
+
+    return post  # type: ignore
+
+
+
+def normalize_partial_post(
+    payload: Dict,
+    locale: Optional[Any] = None,
+    extract_referenced_posts: bool = False,
+    collection_source: Optional[str] = None,
+) -> Union[BlueskyPartialPost, List[BlueskyPartialPost]]:
+    """
+    Function "normalizing" a partial payload post as returned by Bluesky's Firehose in order to
+    cleanup and optimize some fields.
+
+    Args:
+        payload (dict): partial post or feed payload json dict from Bluesky Firehose.
+        locale (pytz.timezone, optional): Timezone for date conversions.
+        extract_referenced_posts (bool, optional): Whether to return, in
+            addition to the original post, also the full list of posts
+            found in the given payload (including the tree of quoted posts
+            as well as the parent and root posts of the thread if the post
+            comes as an answer to another one). Defaults
+            to `False`.
+        collection_source (str, optional): string explaining how the post
+            was collected. Defaults to `None`.
+
+    Returns:
+        (dict or list): Either a single partial post dict or a list of partial post dicts if
+            `extract_referenced_posts` was set to `True`.
+
+    """
+
+    if not isinstance(payload, dict):
+        raise BlueskyPayloadError(
+            "UNKNOWN", f"data provided to normalize_post is not a dictionary: {payload}"
+        )
+
+    valid, error = validate_partial_post_payload(payload)
+    if not valid:
+        uri = format_post_uri(
+            payload.get("did", "UNKNOWN"),
+            payload.get("commit", {}).get("rkey", "UNKNOWN"),
+        )
+        raise BlueskyPayloadError(
+            uri,
+            f"data provided to normalize_post is not a standard Bluesky post or feed payload:\n{error}",
+        )
+
+    if "post" in payload:
+        data = payload["post"]
+        reply_data = payload.get("reply")
+    else:
+        data = payload
+        reply_data = None
+
+    referenced_posts = {}
+
+    if collection_source is None:
+        collection_source = data.get("collection_source")
+
+    post = {}
+
+    # Store original text and prepare text for quotes & medias enriched version
+    post["original_text"] = data["commit"]["record"]["text"]
+    text = post["original_text"].encode("utf-8")
+
+    # Handle datetime fields
+    post["collection_time"] = get_collection_time()
+    post["timestamp_utc"], post["local_time"] = get_dates(
+        data["commit"]["record"]["createdAt"], locale=locale, source="bluesky"
+    )
+    post["firehose_timestamp_us"] = data["time_us"]
+
+    # Handle post/user identifiers
+    post["cid"] = data["commit"]["cid"]
+    post["user_did"] = data["did"]
+    post["did"] = data["commit"]["rkey"]
+    post["uri"] = format_post_uri(post["user_did"], post["did"])
+
+    post["user_url"] = format_profile_url(post["user_did"])
+    post["url"] = format_post_url(post["user_did"], post["did"])
+
+    # Handle user metadata
+    post["user_langs"] = data["commit"]["record"].get("langs", [])
+
+    if "bridgyOriginalUrl" in data["commit"]["record"]:
+        post["bridgy_original_url"] = data["commit"]["record"]["bridgyOriginalUrl"]
+
+    # Handle hashtags, mentions & links from facets
+    text, links = process_post_facets(
+        data["commit"]["record"].get("facets", []), post, text
+    )
+
+    # Handle thread info when applicable
+    # Unfortunately posts' payload only provide at uris for these so we do not have the handles
+    # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
+    # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
+    if "reply" in data["commit"]["record"]:
+        process_post_thread_info(data["commit"]["record"]["reply"], post)
+
+    # Handle quotes & medias
+    post["media_urls"] = []
+    post["media_thumbnails"] = []
+    post["media_types"] = []
+    post["media_alt_texts"] = []
+    if "embed" in data["commit"]["record"]:
+        # Warning: mutates post, links and referenced_posts
+        text = process_links_from_card(
+            data["commit"]["record"],
+            post,
+            links,
+            text,
+            locale,
+            extract_referenced_posts,
+            referenced_posts,
+        )
+
+
+    # Process links domains
+    # Warning: mutates post
+    process_links_domains(post, links)
+
 
     # Finalize text field
     # Warning: mutates post

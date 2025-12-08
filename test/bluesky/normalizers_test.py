@@ -5,7 +5,8 @@ from functools import partial
 from pytz import timezone
 from copy import deepcopy
 
-from twitwi.bluesky import normalize_profile, normalize_partial_profile, normalize_post
+from twitwi.bluesky import normalize_profile, normalize_partial_profile, normalize_post, normalize_partial_post
+from twitwi.bluesky.utils import format_post_uri
 
 from test.utils import get_json_resource
 
@@ -167,6 +168,127 @@ class TestNormalizers:
         normalize_post(post)
 
         assert post == original_arg
+
+    def test_normalize_partial_post(self):
+        tz = timezone("Europe/Paris")
+
+        posts = get_json_resource("bluesky-partial-posts.json")
+        fn = partial(normalize_partial_post, locale=tz)
+
+        if OVERWRITE_TESTS:
+            from test.utils import dump_json_resource
+
+            normalized_partial_posts = [
+                [
+                    set_fake_collection_time(p)
+                    for p in fn(post, extract_referenced_posts=True)
+                ]
+                for post in posts
+            ]
+            dump_json_resource(normalized_partial_posts, "bluesky-normalized-partial-posts.json")
+
+        expected = get_json_resource("bluesky-normalized-partial-posts.json")
+
+        # With referenced tweets
+        for idx, post in enumerate(posts):
+            result = fn(post, extract_referenced_posts=True)
+            assert isinstance(result, list)
+            assert set(p["uri"] for p in result) == set(p["uri"] for p in expected[idx])
+            for idx2, p in enumerate(result):
+                assert "collection_time" in p and isinstance(p["collection_time"], str)
+
+                if "post" in post:
+                    uri = format_post_uri(
+                        post["post"].get("did", "UNKNOWN"),
+                        post["post"].get("commit", {}).get("rkey", "UNKNOWN"),
+                    )
+                else:
+                    uri = format_post_uri(
+                        post.get("did", "UNKNOWN"),
+                        post.get("commit", {}).get("rkey", "UNKNOWN"),
+                    )
+                compare_dicts(uri, p, expected[idx][idx2])
+
+        # With single output
+        for idx, post in enumerate(posts):
+            result = fn(post)
+
+            assert isinstance(result, dict)
+
+            _id = p["uri"]
+            compare_dicts(_id, result, expected[idx][-1])
+
+        # With custom collection_source
+        for post in posts:
+            result = fn(post, collection_source="unit_test")
+
+            assert result["collected_via"] == ["unit_test"]
+
+    def test_normalize_partial_post_should_not_mutate(self):
+        post = get_json_resource("bluesky-partial-posts.json")[0]
+
+        original_arg = deepcopy(post)
+
+        normalize_partial_post(post)
+
+        assert post == original_arg
+
+    def test_partial_post_has_same_field_values_as_full_post(self):
+        tz = timezone("Europe/Paris")
+
+        full_posts = get_json_resource("bluesky-partial-posts-full-payloads.json")
+        partial_posts = get_json_resource("bluesky-partial-posts.json")
+
+        fn_full = partial(normalize_post, locale=tz)
+        fn_partial = partial(normalize_partial_post, locale=tz)
+
+        for full_post, partial_post in zip(full_posts, partial_posts):
+            full_result = fn_full(full_post)
+            if not isinstance(full_result, list):
+                full_result = [full_result]
+
+            partial_result = fn_partial(partial_post)
+            if not isinstance(partial_result, list):
+                partial_result = [partial_result]
+
+            # In case of multiple normalized posts (due to referenced posts extraction)
+            for full_post_normalized, partial_post_normalized in zip(full_result, partial_result):
+                if full_post_normalized["uri"] != partial_post_normalized["uri"]:
+                    raise AssertionError(
+                        f"Post URIs do not match between full and partial normalization: {full_post_normalized['uri']} != {partial_post_normalized['uri']}"
+                    )
+
+                compare_dicts(
+                    full_post_normalized["uri"],
+                    full_post_normalized,
+                    partial_post_normalized,
+                    ignore_fields=[
+                        "url",
+                        "indexed_at_utc",
+                        "firehose_timestamp_us",
+                        "user_handle",
+                        "repost_count",
+                        "like_count",
+                        "reply_count",
+                        "quote_count",
+                        "bookmark_count",
+                        "user_url",
+                        "user_display_name",
+                        "user_avatar",
+                        "user_created_at",
+                        "user_timestamp_utc",
+                        "repost_by_user_did",
+                        "repost_by_user_handle",
+                        "repost_created_at",
+                        "repost_timestamp_utc",
+                        "replies_rules",
+                        "replies_rules_created_at",
+                        "replies_rules_timestamp_utc",
+                        "hidden_replies_uris",
+                        "collection_time",
+                        "match_query",
+                    ],
+                )
 
     def test_normalize_post_should_be_normalized_across_sources(self):
         # handle same post from different sources (search, get_post and user_feed)

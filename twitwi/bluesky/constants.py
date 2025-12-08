@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost
+from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost, BlueskyPartialPost
 
 PROFILE_FIELDS = list(BlueskyProfile.__annotations__.keys())
 
@@ -17,5 +17,19 @@ POST_PLURAL_FIELDS = [
 POST_BOOLEAN_FIELDS = [
     k
     for k, v in BlueskyPost.__annotations__.items()
+    if v is bool or v == Optional[bool]
+]
+
+PARTIAL_POST_FIELDS = list(BlueskyPartialPost.__annotations__.keys())
+
+PARTIAL_POST_PLURAL_FIELDS = [
+    k
+    for k, v in BlueskyPartialPost.__annotations__.items()
+    if v == List[str] or v == Optional[List[str]]
+]
+
+PARTIAL_POST_BOOLEAN_FIELDS = [
+    k
+    for k, v in BlueskyPartialPost.__annotations__.items()
     if v is bool or v == Optional[bool]
 ]
