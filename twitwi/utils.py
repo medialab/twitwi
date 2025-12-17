@@ -54,8 +54,8 @@ def get_collection_time():
 def get_dates(
     date_str: str, locale=None, source: str = "v1", millisecond_timestamp: bool = False
 ) -> Tuple[int, str]:
-    if source not in ["v1", "v2", "bluesky"]:
-        raise Exception("source should be one of v1, v2 or bluesky")
+    if source not in ["v1", "v2", "no_api_key", "bluesky"]:
+        raise Exception("source should be one of v1, v2, no_api_key or bluesky")
 
     if locale is None:
         locale = UTC_TIMEZONE
@@ -154,3 +154,6 @@ def get_dates_from_id(tweet_id, locale=None):
         timestamp,
         datetime.strftime(locale_datetime, FORMATTED_TWEET_DATETIME_FORMAT),
     )
+
+def format_profile_url(user_screen_name):
+    return f"https://twitter.com/{user_screen_name}"

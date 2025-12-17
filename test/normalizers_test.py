@@ -230,3 +230,48 @@ class TestNormalizers(object):
 
         assert exc_info.value.kind == "user"
         assert exc_info.value.key == "1217864994852941825"
+
+    def test_normalize_tweet_without_api_key(self):
+        # tz = timezone("Europe/Paris")
+
+        tests = get_json_resource("normalization-no-api-key.json")
+        fn = partial(normalize_tweet, source_version="no_api_key")
+
+        # from test.utils import dump_json_resource
+        # for idx, test in enumerate(tests):
+        #     tests[idx]['normalized'] = fn(test['source'], extract_referenced_tweets=True)
+        # dump_json_resource(tests, 'normalization.json')
+
+        # With referenced tweets
+        for test in tests:
+            result = fn(test["source"], extract_referenced_tweets=True)
+
+            assert isinstance(result, list)
+            assert set(t["id"] for t in result) == set(
+                t["id"] for t in test["normalized"]
+            )
+
+            for tweet in result:
+                assert "collection_time" in tweet and isinstance(
+                    tweet["collection_time"], str
+                )
+
+            for t1, t2 in zip(result, test["normalized"]):
+                compare_tweets(test["source"]["id_str"], t1, t2)
+
+        # With single output
+        for test in tests:
+            tweet = fn(test["source"])
+
+            assert isinstance(tweet, dict)
+
+            _id = test["source"]["id_str"]
+            compare_tweets(
+                _id, tweet, next(t for t in test["normalized"] if t["id"] == _id)
+            )
+
+        # With custom collection_source
+        for test in tests:
+            tweet = fn(test["source"], collection_source="unit_test")
+
+            assert tweet["collected_via"] == ["unit_test"]
