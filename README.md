@@ -250,7 +250,7 @@ Will return datetimes as UTC but can take an optional second `locale` argument a
 * **data** *(dict)*: user profile data payload coming from Twitter API v1.1 or v2.
 * **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
 * **pure** *(bool, optional)*: whether to allow the function to mutate its original `data` argument. Defaults to `True`.
-        
+
 ### normalize_tweet
 
 Function taking a nested dict describing a tweet from Twitter's JSON payload (API v1.1) and returning a flat "normalized" dict composed of all [TWEET_FIELDS](#tweet_fields) keys.
@@ -265,6 +265,7 @@ When setting `extract_referenced_posts` to `True` it will instead return a list 
 * **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
 * **extract_referenced_posts** *(bool, optional)*: whether to return in the output, in addition to the tweet to be normalized, also normalized data for each other referenced tweets found in the payload data (including retweeted and quoted tweets). If `False`, the function will return a `dict`, if `True` a `list` of `dict`. Defaults to `False`.
 * **collection_source** *(string, optional)*: An optional information to add within the `collected_via` field of the normalized tweet to indicate whence it was collected.
+* **source_version** *(str, optional)*: version of the Twitter payload. Default to "v1".
 
 ### normalize_tweets_payload_v2
 
