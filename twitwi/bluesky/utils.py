@@ -106,7 +106,8 @@ def parse_post_uri(uri, source=None):
     # There's too much variability in the post URIs, and we cannot be exhaustive,
     # so we do with the simple approach:
     if uri.startswith("at://"):
-        author_did, _, post_did = uri[5:].split("/")
+        # Using maxsplit=3 to avoid issues if future uris contain more slashes
+        author_did, _, post_did = uri[5:].split("/", 3)
         return author_did, post_did
 
     raise BlueskyPayloadError(source or uri, f"{uri} is not a usual Bluesky post uri")

@@ -103,20 +103,21 @@ def prepare_image_as_media(image_data, source):
     if isinstance(image_data["image"], str):
         # As in this post: https://bsky.app/profile/did:plc:xafmeedgq77f6smn6kmalasr/post/3lcnxglm3o62z
         image_type = "image/jpeg"
+        image_id = image_data["image"]
     elif isinstance(image_data["image"], dict):
         image_type = image_data["image"]["mimeType"]
-    if "ref" not in image_data["image"] or "$link" not in image_data["image"]["ref"]:
-        # As in this post: https://bsky.app/profile/testjuan06.bsky.social/post/3ljkzygywso2b
-        if isinstance(image_data["image"], dict) and "link" in image_data["image"]:
-            image_id = image_data["image"]["link"]
-        elif isinstance(image_data["image"], dict) and "cid" in image_data["image"]:
-            image_id = image_data["image"]["cid"]
-        elif isinstance(image_data["image"], str):
-            image_id = image_data["image"]
+        if "ref" not in image_data["image"] or "$link" not in image_data["image"]["ref"]:
+            # As in this post: https://bsky.app/profile/testjuan06.bsky.social/post/3ljkzygywso2b
+            if "link" in image_data["image"]:
+                image_id = image_data["image"]["link"]
+            elif "cid" in image_data["image"]:
+                image_id = image_data["image"]["cid"]
+            else:
+                raise BlueskyPayloadError(source, "Unable to find image id in image data: %s" % image_data)
         else:
-            raise BlueskyPayloadError(source, "Unable to find image id in image data: %s" % image_data)
+            image_id = image_data["image"]["ref"]["$link"]
     else:
-        image_id = image_data["image"]["ref"]["$link"]
+        raise BlueskyPayloadError(source, "Unable to parse image data: %s" % image_data)
     return {
         "id": image_id,
         "type": image_type,
@@ -722,7 +723,8 @@ def normalize_post(
 
         # Empty embed (not usual, but seen in the Bluesky jungle, e.g.
         # https://bsky.app/profile/did:plc:na6u3avvaz2x5wyzqrnviqiz/post/3lzf5qi2ra62k
-        # or https://bsky.app/profile/dangelodario.it/post/3l3inqifqj42p)
+        # https://bsky.app/profile/dangelodario.it/post/3l3inqifqj42p
+        # or https://bsky.app/profile/soirilab.bsky.social/post/3lywaa7vhsu2c)
         if embed["$type"].endswith(".post") or embed["$type"] == "N/A":
             # Some posts have extra keys in their empty embed, certainly personalized ones.
 
@@ -748,6 +750,7 @@ def normalize_post(
             )
 
         # Links from links embed
+        # e.g.: https://bsky.app/profile/sacredatoz.bsky.social/post/3lrqvemv7qe2f
         if embed["$type"].endswith(".links"):
             for link in embed["links"]:
                 extra_links.append(link)
@@ -799,10 +802,10 @@ def normalize_post(
         # Video
         if embed["$type"].endswith(".video"):
             media_data.append(prepare_video_as_media(embed["video"]))
-        if embed["$type"].endswith(".videos"):
+        elif embed["$type"].endswith(".videos"):
             for elt in embed["videos"]:
                 media_data.append(prepare_video_as_media(elt["video"]))
-        if embed["$type"].endswith(".media"):
+        elif embed["$type"].endswith(".media"):
             if isinstance(embed["media"], dict):
                 media_data.append(prepare_video_as_media(embed["media"]["video"]))
             elif isinstance(embed["media"], list):
