@@ -15,11 +15,22 @@ valid_post_keys = [
 ]
 
 
-valid_partial_post_payload_keys = [
+valid_firehose_post_payload_keys = [
     "did",
     "time_us",
     "kind",
     "commit",
+]
+
+
+valid_tap_post_payload_keys = [
+    "live",
+    "did",
+    "rev",
+    "collection",
+    "rkey",
+    "record",
+    "cid",
 ]
 
 
@@ -64,11 +75,19 @@ def validate_post_payload(data):
     return True, None
 
 
-def validate_partial_post_payload(data):
+def validate_partial_post_payload(data, app_source: str = "firehose"):
+    if app_source == "firehose":
+        return validate_firehose_post_payload(data)
+    elif app_source == "tap":
+        return validate_tap_post_payload(data)
+    else:
+        return False, f"Unknown app_source {app_source} for partial post payload validation"
+
+def validate_firehose_post_payload(data):
     payload = data.get("post", data)
     post = payload.get("commit", payload)
 
-    for key in valid_partial_post_payload_keys:
+    for key in valid_firehose_post_payload_keys:
         if key not in payload:
             return False, f"key {key} is missing from payload: {post}"
 
@@ -89,6 +108,34 @@ def validate_partial_post_payload(data):
 
     return True, None
 
+def validate_tap_post_payload(data):
+    payload = data.get("post", data)
+
+    if payload.get("type") != "record":
+        return False, f"payload type is not record: {payload.get('type')}"
+
+    post = payload.get("record", payload)
+
+    for key in valid_tap_post_payload_keys:
+        if key not in post:
+            return False, f"key {key} is missing from payload: {post}"
+
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
+    for key in valid_record_keys:
+        if key not in post["record"]:
+            return False, "key %s is missing from payload's record: %s" % (
+                key,
+                post["record"],
+            )
+
+    if post["record"].get("$type") != "app.bsky.feed.post":
+        return False, "payload's record $type is not a post: %s" % post["record"].get(
+            "$type"
+        )
+
+    return True, None
 
 
 re_embed_types = re.compile(

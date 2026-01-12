@@ -169,10 +169,10 @@ class TestNormalizers:
 
         assert post == original_arg
 
-    def test_normalize_partial_post(self):
+    def test_normalize_firehose_post(self):
         tz = timezone("Europe/Paris")
 
-        posts = get_json_resource("bluesky-partial-posts.json")
+        posts = get_json_resource("bluesky-firehose-posts.json")
         fn = partial(normalize_partial_post, locale=tz)
 
         if OVERWRITE_TESTS:
@@ -185,9 +185,9 @@ class TestNormalizers:
                 ]
                 for post in posts
             ]
-            dump_json_resource(normalized_partial_posts, "bluesky-normalized-partial-posts.json")
+            dump_json_resource(normalized_partial_posts, "bluesky-normalized-firehose-posts.json")
 
-        expected = get_json_resource("bluesky-normalized-partial-posts.json")
+        expected = get_json_resource("bluesky-normalized-firehose-posts.json")
 
         # With referenced tweets
         for idx, post in enumerate(posts):
@@ -224,8 +224,8 @@ class TestNormalizers:
 
             assert result["collected_via"] == ["unit_test"]
 
-    def test_normalize_partial_post_should_not_mutate(self):
-        post = get_json_resource("bluesky-partial-posts.json")[0]
+    def test_normalize_firehose_post_should_not_mutate(self):
+        post = get_json_resource("bluesky-firehose-posts.json")[0]
 
         original_arg = deepcopy(post)
 
@@ -233,11 +233,75 @@ class TestNormalizers:
 
         assert post == original_arg
 
+    def test_normalize_tap_post(self):
+        tz = timezone("Europe/Paris")
+
+        posts = get_json_resource("bluesky-tap-posts.json")
+        fn = partial(normalize_partial_post, locale=tz, app_source="tap")
+
+        if OVERWRITE_TESTS:
+            from test.utils import dump_json_resource
+
+            normalized_partial_posts = [
+                [
+                    set_fake_collection_time(p)
+                    for p in fn(post, extract_referenced_posts=True)
+                ]
+                for post in posts
+            ]
+            dump_json_resource(normalized_partial_posts, "bluesky-normalized-tap-posts.json")
+
+        expected = get_json_resource("bluesky-normalized-tap-posts.json")
+
+        # With referenced tweets
+        for idx, post in enumerate(posts):
+            result = fn(post, extract_referenced_posts=True)
+            assert isinstance(result, list)
+            assert set(p["uri"] for p in result) == set(p["uri"] for p in expected[idx])
+            for idx2, p in enumerate(result):
+                assert "collection_time" in p and isinstance(p["collection_time"], str)
+
+                if "post" in post:
+                    uri = format_post_uri(
+                        post["post"].get("record", {}).get("did", "UNKNOWN"),
+                        post["post"].get("record", {}).get("rkey", "UNKNOWN"),
+                    )
+                else:
+                    uri = format_post_uri(
+                        post.get("record", {}).get("did", "UNKNOWN"),
+                        post.get("record", {}).get("rkey", "UNKNOWN"),
+                    )
+                compare_dicts(uri, p, expected[idx][idx2])
+
+        # With single output
+        for idx, post in enumerate(posts):
+            result = fn(post)
+
+            assert isinstance(result, dict)
+
+            _id = p["uri"]
+            compare_dicts(_id, result, expected[idx][-1])
+
+        # With custom collection_source
+        for post in posts:
+            result = fn(post, collection_source="unit_test")
+
+            assert result["collected_via"] == ["unit_test"]
+
+    def test_normalize_tap_post_should_not_mutate(self):
+        post = get_json_resource("bluesky-tap-posts.json")[0]
+
+        original_arg = deepcopy(post)
+
+        normalize_partial_post(post, app_source="tap")
+
+        assert post == original_arg
+
     def test_partial_post_has_same_field_values_as_full_post(self):
         tz = timezone("Europe/Paris")
 
-        full_posts = get_json_resource("bluesky-partial-posts-full-payloads.json")
-        partial_posts = get_json_resource("bluesky-partial-posts.json")
+        full_posts = get_json_resource("bluesky-firehose-posts-full-payloads.json")
+        partial_posts = get_json_resource("bluesky-firehose-posts.json")
 
         fn_full = partial(normalize_post, locale=tz)
         fn_partial = partial(normalize_partial_post, locale=tz)
@@ -287,6 +351,7 @@ class TestNormalizers:
                         "hidden_replies_uris",
                         "collection_time",
                         "match_query",
+                        "app_source",
                     ],
                 )
 

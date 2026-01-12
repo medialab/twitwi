@@ -31,6 +31,7 @@ pip install twitwi
 * [normalize_profile](#normalize_profile)
 * [normalize_partial_profile](#normalize_partial_profile)
 * [normalize_post](#normalize_post)
+* [normalize_partial_post](#normalize_partial_post)
 
 *Formatting functions*
 
@@ -46,6 +47,7 @@ pip install twitwi
 * [PROFILE_FIELDS](#profile_fields)
 * [PARTIAL_PROFILE_FIELDS](#partial_profile_fields)
 * [POST_FIELDS](#post_fields)
+* [PARTIAL_POST_FIELDS](#partial_post_fields)
 
 *Examples*
 
@@ -178,7 +180,7 @@ Will return datetimes as UTC but can take an optional second `locale` argument a
 
 ### normalize_post
 
-Function taking a nested dict describing a post from Bluesky's JSON payload and returning a flat "normalized" dict composed of all [POST_FIELDS](#post_fields) keys.
+Function taking a nested dict describing a post from Bluesky's JSON payload (with the same format as retrieved from [Bluesky API](https://docs.bsky.app/docs/category/http-reference)) and returning a flat "normalized" dict composed of all [POST_FIELDS](#post_fields) keys. Be careful not to confuse with the [normalize_partial_post](#normalize_partial_post) function which operate on a lighter version of the post data, retrieved from Bluesky Firehose or Bluesky Tap tool (experimental) for example.
 
 Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone.
 
@@ -190,6 +192,22 @@ When setting `extract_referenced_posts` to `True` it will instead return a list 
 * **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
 * **extract_referenced_posts** *(bool, optional)*: whether to return in the output, in addition to the post to be normalized, also normalized data for each other referenced posts found in the payload data (including potentially other quoted posts as well as the parent and root posts of a thread if the post comes as an answer to another one). If `False`, the function will return a `dict`, if `True` a `list` of `dict`. Defaults to `False`.
 * **collection_source** *(string, optional)*: An optional information to add within the `collected_via` field of the normalized post to indicate whence it was collected.
+
+### normalize_partial_post
+
+Function taking a nested dict describing a post from Bluesky's JSON payload (with the same format as retrieved from [Bluesky Firehose](https://docs.bsky.app/blog/jetstream)) and returning a flat "normalized" dict composed of all [PARTIAL_POST_FIELDS](#partial_post_fields) keys. Be careful not to confuse with the [normalize_post](#normalize_post) function which operate on the full version of the post data, retrieved from Bluesky API for example.
+
+Will return datetimes as UTC but can take an optional last `locale` argument as a `pytz` string timezone.
+
+When setting `extract_referenced_posts` to `True` it will instead return a list of dicts including the desired post as well as each referenced ones such as quoted posts and potentially parent posts of a conversation when the data comes from a Bluesky `feed` payload.
+
+*Arguments*
+
+* **payload** *(dict)*: post or feed data payload coming from Bluesky API.
+* **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
+* **extract_referenced_posts** *(bool, optional)*: whether to return in the output, in addition to the post to be normalized, also normalized data for each other referenced posts found in the payload data (including potentially other quoted posts as well as the parent and root posts of a thread if the post comes as an answer to another one). If `False`, the function will return a `dict`, if `True` a `list` of `dict`. Defaults to `False`.
+* **collection_source** *(string, optional)*: An optional information to add within the `collected_via` field of the normalized post to indicate whence it was collected.
+* **app_source** *(str)*: Source application of the payload, either `firehose` or `tap`, which is experimental for now. Defaults to `firehose`.
 
 ### transform_profile_into_csv_dict
 
@@ -239,6 +257,10 @@ List of a Bluesky user partial profile's (retrieved from [`app.bsky.graph.getFol
 
 List of a Bluesky post's normalized field names. Useful to declare headers with csv writers.
 
+### PARTIAL_POST_FIELDS
+
+List of a Bluesky partial post's (retrieved from [Bluesky Firehose](https://docs.bsky.app/blog/jetstream) for example) normalized field names. Useful to declare headers with csv writers.
+
 ### normalize_user
 
 Function taking a nested dict describing a user from Twitter's JSON payload and returning a flat "normalized" dict composed of all [USER_FIELDS](#user_fields) keys.
@@ -250,7 +272,7 @@ Will return datetimes as UTC but can take an optional second `locale` argument a
 * **data** *(dict)*: user profile data payload coming from Twitter API v1.1 or v2.
 * **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
 * **pure** *(bool, optional)*: whether to allow the function to mutate its original `data` argument. Defaults to `True`.
-        
+
 ### normalize_tweet
 
 Function taking a nested dict describing a tweet from Twitter's JSON payload (API v1.1) and returning a flat "normalized" dict composed of all [TWEET_FIELDS](#tweet_fields) keys.

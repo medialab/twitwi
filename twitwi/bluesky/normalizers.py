@@ -924,6 +924,7 @@ def normalize_partial_post(
     locale: Optional[Any] = None,
     extract_referenced_posts: bool = False,
     collection_source: Optional[str] = None,
+    app_source: str = "firehose",
 ) -> Union[BlueskyPartialPost, List[BlueskyPartialPost]]:
     """
     Function "normalizing" a partial payload post as returned by Bluesky's Firehose in order to
@@ -932,7 +933,7 @@ def normalize_partial_post(
     Args:
         payload (dict): partial post or feed payload json dict from Bluesky Firehose.
         locale (pytz.timezone, optional): Timezone for date conversions.
-        extract_referenced_posts (bool, optional): Whether to return, in
+        extract_referenced_posts (bool): Whether to return, in
             addition to the original post, also the full list of posts
             found in the given payload (including the tree of quoted posts
             as well as the parent and root posts of the thread if the post
@@ -940,6 +941,8 @@ def normalize_partial_post(
             to `False`.
         collection_source (str, optional): string explaining how the post
             was collected. Defaults to `None`.
+        app_source (str): Source application of the payload, either `firehose` or `tap`,
+            which is experimental for now. Defaults to `firehose`.
 
     Returns:
         (dict or list): Either a single partial post dict or a list of partial post dicts if
@@ -949,18 +952,27 @@ def normalize_partial_post(
 
     if not isinstance(payload, dict):
         raise BlueskyPayloadError(
-            "UNKNOWN", f"data provided to normalize_post is not a dictionary: {payload}"
+            "UNKNOWN", f"data provided to normalize_partial_post is not a dictionary: {payload}"
         )
 
-    valid, error = validate_partial_post_payload(payload)
+    if app_source not in ["firehose", "tap"]:
+        raise ValueError(f"app_source must be either 'firehose' or 'tap', got: {app_source}")
+
+    if app_source == "firehose":
+        post_field = "commit"
+    else:  # tap
+        post_field = "record"
+
+    valid, error = validate_partial_post_payload(payload, app_source=app_source)
+
     if not valid:
         uri = format_post_uri(
-            payload.get("did", "UNKNOWN"),
-            payload.get("commit", {}).get("rkey", "UNKNOWN"),
+            payload.get("did", payload.get(post_field, {}).get("did", "UNKNOWN")),
+            payload.get(post_field, {}).get("rkey", "UNKNOWN"),
         )
         raise BlueskyPayloadError(
             uri,
-            f"data provided to normalize_post is not a standard Bluesky post or feed payload:\n{error}",
+            f"data provided to normalize_partial_post is not a standard Bluesky post or feed payload:\n{error}",
         )
 
     if "post" in payload:
@@ -977,53 +989,55 @@ def normalize_partial_post(
 
     post = {}
 
+    post["app_source"] = app_source
+
     # Store original text and prepare text for quotes & medias enriched version
-    post["original_text"] = data["commit"]["record"]["text"]
+    post["original_text"] = data[post_field]["record"]["text"]
     text = post["original_text"].encode("utf-8")
 
     # Handle datetime fields
     post["collection_time"] = get_collection_time()
     post["timestamp_utc"], post["local_time"] = get_dates(
-        data["commit"]["record"]["createdAt"], locale=locale, source="bluesky"
+        data[post_field]["record"]["createdAt"], locale=locale, source="bluesky"
     )
-    post["firehose_timestamp_us"] = data["time_us"]
+    post["firehose_timestamp_us"] = data["time_us"] if app_source == "firehose" else None
 
     # Handle post/user identifiers
-    post["cid"] = data["commit"]["cid"]
-    post["user_did"] = data["did"]
-    post["did"] = data["commit"]["rkey"]
+    post["cid"] = data[post_field]["cid"]
+    post["user_did"] = data.get("did", payload.get(post_field, {}).get("did"))
+    post["did"] = data[post_field]["rkey"]
     post["uri"] = format_post_uri(post["user_did"], post["did"])
 
     post["user_url"] = format_profile_url(post["user_did"])
     post["url"] = format_post_url(post["user_did"], post["did"])
 
     # Handle user metadata
-    post["user_langs"] = data["commit"]["record"].get("langs", [])
+    post["user_langs"] = data[post_field]["record"].get("langs", [])
 
-    if "bridgyOriginalUrl" in data["commit"]["record"]:
-        post["bridgy_original_url"] = data["commit"]["record"]["bridgyOriginalUrl"]
+    if "bridgyOriginalUrl" in data[post_field]["record"]:
+        post["bridgy_original_url"] = data[post_field]["record"]["bridgyOriginalUrl"]
 
     # Handle hashtags, mentions & links from facets
     text, links = process_post_facets(
-        data["commit"]["record"].get("facets", []), post, text
+        data[post_field]["record"].get("facets", []), post, text
     )
 
     # Handle thread info when applicable
     # Unfortunately posts' payload only provide at uris for these so we do not have the handles
     # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
     # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
-    if "reply" in data["commit"]["record"]:
-        process_post_thread_info(data["commit"]["record"]["reply"], post)
+    if "reply" in data[post_field]["record"]:
+        process_post_thread_info(data[post_field]["record"]["reply"], post)
 
     # Handle quotes & medias
     post["media_urls"] = []
     post["media_thumbnails"] = []
     post["media_types"] = []
     post["media_alt_texts"] = []
-    if "embed" in data["commit"]["record"]:
+    if "embed" in data[post_field]["record"]:
         # Warning: mutates post, links and referenced_posts
         text = process_links_from_card(
-            data["commit"]["record"],
+            data[post_field]["record"],
             post,
             links,
             text,

@@ -150,7 +150,7 @@ class TestFormatters:
             assert list(csv.DictReader(buffer)) == list(csv.DictReader(f))
 
     def test_format_partial_post_as_csv_row(self):
-        normalized_partial_posts = get_json_resource("bluesky-normalized-partial-posts.json")
+        normalized_partial_posts = get_json_resource("bluesky-normalized-firehose-posts.json")
 
         buffer = StringIO(newline=None)
         writer = csv.writer(buffer, quoting=csv.QUOTE_MINIMAL)
@@ -163,16 +163,16 @@ class TestFormatters:
         if OVERWRITE_TESTS:
             written = buffer.getvalue()
 
-            with open("test/resources/bluesky-partial-posts-export.csv", "w") as f:
+            with open("test/resources/bluesky-firehose-posts-export.csv", "w") as f:
                 f.write(written)
 
-        with open_resource("bluesky-partial-posts-export.csv") as f:
+        with open_resource("bluesky-firehose-posts-export.csv") as f:
             buffer.seek(0)
 
             assert list(csv.reader(buffer)) == list(csv.reader(f))
 
     def test_transform_partial_post_into_csv_dict(self):
-        normalized_partial_posts = get_json_resource("bluesky-normalized-partial-posts.json")
+        normalized_partial_posts = get_json_resource("bluesky-normalized-firehose-posts.json")
 
         buffer = StringIO(newline=None)
         writer = csv.DictWriter(
@@ -189,6 +189,6 @@ class TestFormatters:
                 transform_partial_post_into_csv_dict(post)
                 writer.writerow(post)
 
-        with open_resource("bluesky-partial-posts-export.csv") as f:
+        with open_resource("bluesky-firehose-posts-export.csv") as f:
             buffer.seek(0)
             assert list(csv.DictReader(buffer)) == list(csv.DictReader(f))

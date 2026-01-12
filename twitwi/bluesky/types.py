@@ -152,7 +152,7 @@ class BlueskyPost(TypedDict):
 
 
 
-# Partial version of a post, collected from the Bluesky firehose using JetStream
+# Partial version of a post, collected from the Bluesky firehose using JetStream or from the Tap tool
 class BlueskyPartialPost(TypedDict):
     # Identifying fields
     cid: str                            # internal content identifier of the post
@@ -163,39 +163,39 @@ class BlueskyPartialPost(TypedDict):
     # Datetime fields
     timestamp_utc: int                  # Unix UTC timestamp of when the post was submitted
     local_time: str                     # datetime (potentially timezoned) of when the post was submitted
-    # indexed_at_utc: str               # not available from firehose payloads
-    firehose_timestamp_us : str         # datetime (NOT timezoned, for configuring/debugging the firehose) of the firehose event, in microseconds since epoch
+    # indexed_at_utc: str               # not available from firehose nor tap payloads
+    firehose_timestamp_us : str         # datetime (NOT timezoned, for configuring/debugging the firehose) of the firehose event, in microseconds since epoch, only available when collected from the firehose
 
     # Author identifying fields
     user_did: str                       # persistent long-term identifier of the account who authored the post
-    # user_handle: str                  # not available from firehose payloads
+    # user_handle: str                  # not available from firehose nor tap payloads
 
     # Content fields
     text: str                           # reprocessed complete text of the post, including full links, full text of the quoted post (recursively up to 3 posts) and links to images or videos included within
     original_text: str                  # original text of the post as returned by the Bluesky API
 
     # Metrics fields
-    # repost_count: int                 # not available from firehose payloads
-    # like_count: int                   # not available from firehose payloads
-    # reply_count: int                  # not available from firehose payloads
-    # quote_count: int                  # not available from firehose payloads
-    # bookmark_count: Optional[int]     # not available from firehose payloads
+    # repost_count: int                 # not available from firehose nor tap payloads
+    # like_count: int                   # not available from firehose nor tap payloads
+    # reply_count: int                  # not available from firehose nor tap payloads
+    # quote_count: int                  # not available from firehose nor tap payloads
+    # bookmark_count: Optional[int]     # not available from firehose nor tap payloads
 
     # Extra field
     bridgy_original_url: Optional[str]  # source of the original post when it was posted from another platform such as Mastodon via the Bridgy connection tool
 
     # Author metadata fields
     user_url: str                       # URL of the profile accessible on the web of the account who authored the post
-    # user_display_name: str             # not available from firehose payloads
+    # user_display_name: str             # not available from firehose nor tap payloads
     # user_description: str             # not available from posts payloads
     # user_posts: int                   # not available from posts payloads
     # user_followers: int               # not available from posts payloads
     # user_follows: int                 # not available from posts payloads
     # user_lists: int                   # not available from posts payloads
     user_langs: List[str]               # languages in which the author of the posts usually writes posts (declarative)
-    # user_avatar: Optional[str]        # not available from firehose payloads
-    # user_created_at: str              # not available from firehose payloads
-    # user_timestamp_utc: int           # not available from firehose payloads
+    # user_avatar: Optional[str]        # not available from firehose nor tap payloads
+    # user_created_at: str              # not available from firehose nor tap payloads
+    # user_timestamp_utc: int           # not available from firehose nor tap payloads
 
     # Parent post identifying fields
     # (if the post comes in a conversation as an answer to another post)
@@ -217,10 +217,10 @@ class BlueskyPartialPost(TypedDict):
 
     # Repost metadata fields
     # Contrary to Twitter where a retweet is a new tweet with its own ID, reposting on Bluesky only adds a flag to the post saying it was reposted by a specific user at a specific time. These are available for instance when collecting a user's feed.
-    # repost_by_user_did: Optional[str]       # not available from firehose payloads
-    # repost_by_user_handle: Optional[str]    # not available from firehose payloads
-    # repost_created_at: Optional[int]        # not available from firehose payloads
-    # repost_timestamp_utc: Optional[int]     # not available from firehose payloads
+    # repost_by_user_did: Optional[str]       # not available from firehose nor tap payloads
+    # repost_by_user_handle: Optional[str]    # not available from firehose nor tap payloads
+    # repost_created_at: Optional[int]        # not available from firehose nor tap payloads
+    # repost_timestamp_utc: Optional[int]     # not available from firehose nor tap payloads
 
     # Quoted post metadata fields
     # (when a post embeds another one)
@@ -250,10 +250,10 @@ class BlueskyPartialPost(TypedDict):
     hashtags: List[str]                 # list of all unique lowercased hashtags found within the post's text
 
     # Conversation rules fields
-    # replies_rules: Optional[List[str]]          # not available from firehose payloads
-    # replies_rules_created_at: Optional[str]     # not available from firehose payloads
-    # replies_rules_timestamp_utc: Optional[int]  # not available from firehose payloads
-    # hidden_replies_uris: Optional[List[str]]    # not available from firehose payloads
+    # replies_rules: Optional[List[str]]          # not available from firehose nor tap payloads
+    # replies_rules_created_at: Optional[str]     # not available from firehose nor tap payloads
+    # replies_rules_timestamp_utc: Optional[int]  # not available from firehose nor tap payloads
+    # hidden_replies_uris: Optional[List[str]]    # not available from firehose nor tap payloads
     # quotes_rule: Optional[str]                # not available from posts payloads, cf https://github.com/bluesky-social/atproto/issues/3712
     # quotes_rules_created_at: Optional[str]    # not available from posts payloads, cf https://github.com/bluesky-social/atproto/issues/3712
     # quotes_rules_timestamp_utc: Optional[int] # not available from posts payloads, cf https://github.com/bluesky-social/atproto/issues/3712
@@ -262,4 +262,5 @@ class BlueskyPartialPost(TypedDict):
     # Extra fields linked to the data collection and processing
     collection_time: Optional[str]      # datetime (potentially timezoned) of when the data was normalized
     collected_via: Optional[List[str]]  # extra field added by the normalization process to express how the data collection was ran, will be "quote" or "thread" when a post was grabbed as a referenced post within the originally collected post using the "extract_referenced_posts" option of "normalize_post"
-    # match_query: Optional[bool]         # not meaningful for firehose collected posts
+    # match_query: Optional[bool]         # not meaningful for firehose nor tap collected posts
+    app_source: Optional[str]           # extra field added by the normalization process to express the source of the data, either "firehose" or "tap"
