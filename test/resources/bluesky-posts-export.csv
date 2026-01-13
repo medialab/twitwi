@@ -999,3 +999,33 @@ bafyreie4oyin3clm6hsvwkilqaz2yeafx5nvj5ze62upzdetg25nzmgzn4,3lxngessntk2p,at://d
 https://midnightsky.app/post/did:plc:2sjfdilgcpeyjnqo7u6apdfn/3lxngessntk2p","자동차A/S
 
 글 보기",0,1,0,0,0,,https://bsky.app/profile/flyingaubrey.bsky.social,🏳️‍⚧️민정냐옹😼,ko,https://cdn.bsky.app/img/avatar/plain/did:plc:2sjfdilgcpeyjnqo7u6apdfn/bafkreihcv52esjbes6f3wo7gdsouuatlswhyzd4nsrxgi4h77ojtkgl5ie@jpeg,2023-07-08T06:20:58.204000,1688790058,,,,,,,,,,,,,,,,,,,,,,,,https://midnightsky.app/post/did:plc:2sjfdilgcpeyjnqo7u6apdfn/3lxngessntk2p,midnightsky.app,,,,,,,,,,,,allow_from_list:at://did:plc:2sjfdilgcpeyjnqo7u6apdfn/app.bsky.graph.list/3lov465soyn2f,2025-08-30T22:35:51.664000,1756586151,,2025-01-01T00:00:00.000000,,1
+bafyreiabdboo352u2dki6ar4gso22zcucuxtl6m4rgplcwp7g4txruwuny,3mbwzgrymow2o,at://did:plc:er6erflnnxcozlbqmrpflt6h/app.bsky.feed.post/3mbwzgrymow2o,https://bsky.app/profile/alexdln.com/post/3mbwzgrymow2o,1767910970,2026-01-08T23:22:50.705000,2026-01-08T22:22:53.146Z,did:plc:er6erflnnxcozlbqmrpflt6h,alexdln.com,"And as an example of such a solution,
+
+https://atsky.app/profile/alexdln.com/post/3mbwzgrymow2o
+
+(yes, this is not the first attempt, it was a fun evening 😅)
+```python
+import asyncio
+import websockets
+
+uri = ""wss://jetstream2.us-east.bsky.network/subscribe?wantedCollections=app.bsky.feed.post""
+
+async def listen_to_websocket():
+  async with websockets.connect(uri) as websocket:
+    while True:
+      try:
+        message = await websocket.recv()
+        print(message)
+      except websockets.ConnectionClosed as e:
+        print(f""Connection closed: {e}"")
+        break
+      except Exception as e:
+        print(f""Error: {e}"")
+
+asyncio.get_event_loop().run_until_complete(listen_to_websocket())
+```
+","And as an example of such a solution,
+
+This is a code snippet facet
+
+(yes, this is not the first attempt, it was a fun evening 😅)",0,1,1,1,0,,https://bsky.app/profile/alexdln.com,Alex,,https://cdn.bsky.app/img/avatar/plain/did:plc:er6erflnnxcozlbqmrpflt6h/bafkreieroaneiobsowwop7dvxchj6kofurkgo5mupns5yuagvrjg7y2jsy@jpeg,2024-11-08T13:59:15.382000,1731070755,bafyreiftyswafqzknc2htz4uhubgdyad5bwww7vnghog2q7z43tzev7544,3mbwopvr7ua2i,at://did:plc:er6erflnnxcozlbqmrpflt6h/app.bsky.feed.post/3mbwopvr7ua2i,https://bsky.app/profile/did:plc:er6erflnnxcozlbqmrpflt6h/post/3mbwopvr7ua2i,did:plc:er6erflnnxcozlbqmrpflt6h,bafyreihcgvu4srmaek4odsankdt4shkrmzgz3wveqniyyd6bc4a5sqp5ka,3mbwnjqltac2r,at://did:plc:2gkh62xvzokhlf6li4ol3b3d/app.bsky.feed.post/3mbwnjqltac2r,https://bsky.app/profile/did:plc:2gkh62xvzokhlf6li4ol3b3d/post/3mbwnjqltac2r,did:plc:2gkh62xvzokhlf6li4ol3b3d,,,,,,,,,,,,,,https://atsky.app/profile/alexdln.com/post/3mbwzgrymow2o,atsky.app,,,,,,,,,,,,,,,,2025-01-01T00:00:00.000000,,1
