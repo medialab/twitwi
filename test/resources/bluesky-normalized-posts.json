@@ -7884,5 +7884,56 @@
       "user_timestamp_utc": 1688790058,
       "user_url": "https://bsky.app/profile/flyingaubrey.bsky.social"
     }
+  ],
+  [
+    {
+      "bookmark_count": 0,
+      "cid": "bafyreiabdboo352u2dki6ar4gso22zcucuxtl6m4rgplcwp7g4txruwuny",
+      "collection_time": "2025-01-01T00:00:00.000000",
+      "did": "3mbwzgrymow2o",
+      "domains": [
+        "atsky.app"
+      ],
+      "hashtags": [],
+      "indexed_at_utc": "2026-01-08T22:22:53.146Z",
+      "like_count": 1,
+      "links": [
+        "https://atsky.app/profile/alexdln.com/post/3mbwzgrymow2o"
+      ],
+      "local_time": "2026-01-08T23:22:50.705000",
+      "match_query": true,
+      "media_alt_texts": [],
+      "media_thumbnails": [],
+      "media_types": [],
+      "media_urls": [],
+      "mentioned_user_dids": [],
+      "mentioned_user_handles": [],
+      "original_text": "And as an example of such a solution,\n\nThis is a code snippet facet\n\n(yes, this is not the first attempt, it was a fun evening 😅)",
+      "quote_count": 1,
+      "reply_count": 1,
+      "repost_count": 0,
+      "text": "And as an example of such a solution,\n\nhttps://atsky.app/profile/alexdln.com/post/3mbwzgrymow2o\n\n(yes, this is not the first attempt, it was a fun evening 😅)\n```python\nimport asyncio\nimport websockets\n\nuri = \"wss://jetstream2.us-east.bsky.network/subscribe?wantedCollections=app.bsky.feed.post\"\n\nasync def listen_to_websocket():\n  async with websockets.connect(uri) as websocket:\n    while True:\n      try:\n        message = await websocket.recv()\n        print(message)\n      except websockets.ConnectionClosed as e:\n        print(f\"Connection closed: {e}\")\n        break\n      except Exception as e:\n        print(f\"Error: {e}\")\n\nasyncio.get_event_loop().run_until_complete(listen_to_websocket())\n```\n",
+      "timestamp_utc": 1767910970,
+      "to_post_cid": "bafyreiftyswafqzknc2htz4uhubgdyad5bwww7vnghog2q7z43tzev7544",
+      "to_post_did": "3mbwopvr7ua2i",
+      "to_post_uri": "at://did:plc:er6erflnnxcozlbqmrpflt6h/app.bsky.feed.post/3mbwopvr7ua2i",
+      "to_post_url": "https://bsky.app/profile/did:plc:er6erflnnxcozlbqmrpflt6h/post/3mbwopvr7ua2i",
+      "to_root_post_cid": "bafyreihcgvu4srmaek4odsankdt4shkrmzgz3wveqniyyd6bc4a5sqp5ka",
+      "to_root_post_did": "3mbwnjqltac2r",
+      "to_root_post_uri": "at://did:plc:2gkh62xvzokhlf6li4ol3b3d/app.bsky.feed.post/3mbwnjqltac2r",
+      "to_root_post_url": "https://bsky.app/profile/did:plc:2gkh62xvzokhlf6li4ol3b3d/post/3mbwnjqltac2r",
+      "to_root_user_did": "did:plc:2gkh62xvzokhlf6li4ol3b3d",
+      "to_user_did": "did:plc:er6erflnnxcozlbqmrpflt6h",
+      "uri": "at://did:plc:er6erflnnxcozlbqmrpflt6h/app.bsky.feed.post/3mbwzgrymow2o",
+      "url": "https://bsky.app/profile/alexdln.com/post/3mbwzgrymow2o",
+      "user_avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:er6erflnnxcozlbqmrpflt6h/bafkreieroaneiobsowwop7dvxchj6kofurkgo5mupns5yuagvrjg7y2jsy@jpeg",
+      "user_created_at": "2024-11-08T13:59:15.382000",
+      "user_did": "did:plc:er6erflnnxcozlbqmrpflt6h",
+      "user_diplay_name": "Alex",
+      "user_handle": "alexdln.com",
+      "user_langs": [],
+      "user_timestamp_utc": 1731070755,
+      "user_url": "https://bsky.app/profile/alexdln.com"
+    }
   ]
 ]

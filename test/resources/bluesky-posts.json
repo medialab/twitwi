@@ -14531,6 +14531,83 @@
             }
         ]
     }
+  },
+  {
+    "uri": "at://did:plc:er6erflnnxcozlbqmrpflt6h/app.bsky.feed.post/3mbwzgrymow2o",
+    "cid": "bafyreiabdboo352u2dki6ar4gso22zcucuxtl6m4rgplcwp7g4txruwuny",
+    "author": {
+        "did": "did:plc:er6erflnnxcozlbqmrpflt6h",
+        "handle": "alexdln.com",
+        "displayName": "Alex",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:er6erflnnxcozlbqmrpflt6h/bafkreieroaneiobsowwop7dvxchj6kofurkgo5mupns5yuagvrjg7y2jsy@jpeg",
+        "associated": {
+            "chat": {
+                "allowIncoming": "all"
+            },
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2024-11-08T12:59:15.382Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-01-08T22:22:50.705Z",
+        "facets": [
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#link",
+                        "uri": "https://atsky.app/profile/alexdln.com/post/3mbwzgrymow2o"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 67,
+                    "byteStart": 39
+                }
+            },
+            {
+                "features": [
+                    {
+                        "$type": "app.bsky.richtext.facet#code.python",
+                        "code": "import asyncio\nimport websockets\n\nuri = \"wss://jetstream2.us-east.bsky.network/subscribe?wantedCollections=app.bsky.feed.post\"\n\nasync def listen_to_websocket():\n  async with websockets.connect(uri) as websocket:\n    while True:\n      try:\n        message = await websocket.recv()\n        print(message)\n      except websockets.ConnectionClosed as e:\n        print(f\"Connection closed: {e}\")\n        break\n      except Exception as e:\n        print(f\"Error: {e}\")\n\nasyncio.get_event_loop().run_until_complete(listen_to_websocket())"
+                    }
+                ],
+                "index": {
+                    "byteEnd": 67,
+                    "byteStart": 39
+                }
+            }
+        ],
+        "reply": {
+            "parent": {
+                "cid": "bafyreiftyswafqzknc2htz4uhubgdyad5bwww7vnghog2q7z43tzev7544",
+                "uri": "at://did:plc:er6erflnnxcozlbqmrpflt6h/app.bsky.feed.post/3mbwopvr7ua2i"
+            },
+            "root": {
+                "cid": "bafyreihcgvu4srmaek4odsankdt4shkrmzgz3wveqniyyd6bc4a5sqp5ka",
+                "uri": "at://did:plc:2gkh62xvzokhlf6li4ol3b3d/app.bsky.feed.post/3mbwnjqltac2r"
+            }
+        },
+        "text": "And as an example of such a solution,\n\nThis is a code snippet facet\n\n(yes, this is not the first attempt, it was a fun evening 😅)"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 0,
+    "likeCount": 1,
+    "quoteCount": 1,
+    "indexedAt": "2026-01-08T22:22:53.146Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]

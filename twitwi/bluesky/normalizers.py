@@ -664,6 +664,14 @@ def normalize_post(
             if isinstance(feat["external"].get("thumb"), dict):
                 post = process_card_data(feat["external"], post)
 
+        # Some people share code snippets using third party apps
+        # e.g.: https://bsky.app/profile/alexdln.com/post/3mbwzgrymow2o
+        elif ("#" in feat["$type"]
+            and feat["$type"].split("#")[1].startswith("code")
+            and "code" in feat):
+            language = feat["$type"].split("#")[1].split(".")[1] if "." in feat["$type"].split("#")[1] else "plain"
+            text += b"\n```" + language.encode("utf-8") + b"\n" + feat["code"].encode("utf-8") + b"\n```\n"
+
         # We chose to ignore non Bluesky features for now (e.g. personalized features)
         # example: https://bsky.app/profile/poll.blue/post/3kmuqjkkozh2r
         elif "bsky" not in feat["$type"]:
