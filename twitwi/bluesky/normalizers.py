@@ -326,6 +326,10 @@ def normalize_post(
     post["timestamp_utc"], post["local_time"] = get_dates(
         data["record"]["createdAt"], locale=locale, source="bluesky"
     )
+    # Completing year with less than 4 digits as in some posts: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
+    # len 26 example: '2023-06-15T12:34:56.789000'
+    while len(post["local_time"]) < 26 and len(post["local_time"].split("-")[0]) < 4:
+        post["local_time"] = "0" + post["local_time"]
     post["indexed_at_utc"] = data["indexedAt"]
 
     # Handle post/user identifiers
