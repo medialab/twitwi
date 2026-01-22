@@ -14608,6 +14608,47 @@
         "embeddingDisabled": false
     },
     "labels": []
+  },
+  {
+    "uri": "at://did:plc:jhzoul6h437y2g5xsnsr2qr5/app.bsky.feed.post/3kbpuogc6fz2o",
+    "cid": "bafyreie3rlhshlv4exjki4nxxtdp5xhxfd5zkrpmv3spb3disrpabffyei",
+    "author": {
+        "did": "did:plc:jhzoul6h437y2g5xsnsr2qr5",
+        "handle": "koro.icu",
+        "displayName": "koro",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jhzoul6h437y2g5xsnsr2qr5/bafkreihk2rmbdg446pmuql3wm2jp2mmzkvv7emffxsxdxageikphi5f7we@jpeg",
+        "associated": {
+            "activitySubscription": {
+                "allowSubscriptions": "followers"
+            }
+        },
+        "viewer": {
+            "muted": false,
+            "blockedBy": false
+        },
+        "labels": [],
+        "createdAt": "2023-10-12T12:34:40.754Z"
+    },
+    "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "0000-10-14T15:06:10.730Z",
+        "langs": [
+            "fr"
+        ],
+        "text": "le post il daaaaaaate"
+    },
+    "bookmarkCount": 0,
+    "replyCount": 1,
+    "repostCount": 1,
+    "likeCount": 3,
+    "quoteCount": 1,
+    "indexedAt": "0000-10-14T15:06:10.730Z",
+    "viewer": {
+        "bookmarked": false,
+        "threadMuted": false,
+        "embeddingDisabled": false
+    },
+    "labels": []
   }
 
 ]
