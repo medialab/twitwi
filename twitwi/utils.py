@@ -61,7 +61,7 @@ def get_dates(
         locale = UTC_TIMEZONE
 
     # Let's pray we never see a negative year...
-    year_zero = date_str.startswith("0000")
+    year_zero = date_str.startswith("0000") or all(c == "0" for c in date_str.split("-")[0])
 
     try:
         parsed_datetime = datetime.strptime(
@@ -84,16 +84,6 @@ def get_dates(
         utc_datetime = UTC_TIMEZONE.localize(parsed_datetime)
     locale_datetime = utc_datetime.astimezone(locale)
 
-    timestamp = int(utc_datetime.timestamp())
-
-    if year_zero:
-        # Subtract one year (year 0001 is not a leap year) in seconds
-        timestamp -= 31536000
-
-    if millisecond_timestamp:
-        timestamp *= 1000
-        timestamp += utc_datetime.microsecond / 1000
-
     formatted_date_str = datetime.strftime(
         locale_datetime,
         FORMATTED_FULL_DATETIME_FORMAT
@@ -101,9 +91,23 @@ def get_dates(
         else FORMATTED_TWEET_DATETIME_FORMAT,
     )
 
+    timestamp = int(utc_datetime.timestamp())
+
+    if year_zero:
+        # Subtract one year (year 0001 is not a leap year) in seconds
+        timestamp -= 31536000
+        # Doing like so using split because on ubuntu, datetime.strftime on year with less than 4 digits
+        # only returns 1 digit for year 0 (e.g. "0-05-12...") instead of 4 digits ("0000-05-12..."),
+        # whereas on macOS and Windows it returns 4 digits.
+        formatted_date_str = "0000-" + formatted_date_str.split("-", 1)[1]
+
+    if millisecond_timestamp:
+        timestamp *= 1000
+        timestamp += utc_datetime.microsecond / 1000
+
     return (
         int(timestamp),
-        formatted_date_str if not year_zero else "0" + formatted_date_str[1:],
+        formatted_date_str,
     )
 
 
