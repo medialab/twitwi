@@ -112,7 +112,9 @@ class TestFormatters:
 
         for source in normalized_posts:
             for post in source:
-                writer.writerow(format_post_as_csv_row(post, allow_erroneous_plurals=True))
+                writer.writerow(
+                    format_post_as_csv_row(post, allow_erroneous_plurals=True)
+                )
 
         if OVERWRITE_TESTS:
             written = buffer.getvalue()
