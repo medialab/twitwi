@@ -39,7 +39,7 @@ def validate_post_payload(data):
 
     # Splitting by '#' to ignore possible suffixes in $type
     # e.g. https://bsky.app/profile/did:plc:k6acu4chiwkixvdedcmdgmal/post/3lagdncjsu22y
-    if post["record"].get("$type").split('#')[0] != "app.bsky.feed.post":
+    if post["record"].get("$type").split("#")[0] != "app.bsky.feed.post":
         return False, "payload's record $type is not a post: %s" % post["record"].get(
             "$type"
         )
@@ -58,7 +58,7 @@ def validate_post_payload(data):
 
 
 re_embed_types = re.compile(
-    r"(\.(record|recordWithMedia|images|videos?|external|post|embed|links|media|file|viewImages)(?:#.*)?|N\/A|image)$"
+    r"(?:\.(?:record|recordWithMedia|images|videos?|external|post|embed|links|media|file|viewImages)(?:#.*)?|N\/A|image)$"
 )
 
 
@@ -122,12 +122,16 @@ def format_media_url(user_did, media_cid, mime_type, source):
     if mime_type.startswith("image"):
         media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@{media_type}"
         media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@{media_type}"
-    elif mime_type.startswith("video") or mime_type == "application/xml" or mime_type=="*/*":
+    elif (
+        mime_type.startswith("video")
+        or mime_type == "application/xml"
+        or mime_type == "*/*"
+    ):
         media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
-    elif any (mt in mime_type for mt in ["octet-stream", "text/plain", "text/html"]):
+    elif any(mt in mime_type for mt in ["octet-stream", "text/plain", "text/html"]):
         media_url = (
             f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
         )

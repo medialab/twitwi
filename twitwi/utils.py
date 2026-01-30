@@ -61,7 +61,9 @@ def get_dates(
         locale = UTC_TIMEZONE
 
     # Let's pray we never see a negative year...
-    year_zero = date_str.startswith("0000") or all(c == "0" for c in date_str.split("-")[0])
+    year_zero = date_str.startswith("0000") or all(
+        c == "0" for c in date_str.split("-")[0]
+    )
 
     try:
         parsed_datetime = datetime.strptime(

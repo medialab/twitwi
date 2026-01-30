@@ -52,7 +52,9 @@ def make_transform_into_csv_dict(plural_fields, boolean_fields):
 
 
 def make_format_as_csv_row(fields, plural_fields, boolean_fields):
-    def format_field_for_csv(field, item, item_id=None, plural_separator="|", allow_erroneous_plurals=False):
+    def format_field_for_csv(
+        field, item, item_id=None, plural_separator="|", allow_erroneous_plurals=False
+    ):
         if field == "id" and item_id is not None:
             return item_id
 
@@ -75,10 +77,16 @@ def make_format_as_csv_row(fields, plural_fields, boolean_fields):
 
         return item.get(field, "")
 
-    def format_item_as_csv_row(item, item_id=None, plural_separator="|", allow_erroneous_plurals=False):
+    def format_item_as_csv_row(
+        item, item_id=None, plural_separator="|", allow_erroneous_plurals=False
+    ):
         return [
             format_field_for_csv(
-                field, item, item_id=item_id, plural_separator=plural_separator, allow_erroneous_plurals=allow_erroneous_plurals
+                field,
+                item,
+                item_id=item_id,
+                plural_separator=plural_separator,
+                allow_erroneous_plurals=allow_erroneous_plurals,
             )
             for field in fields
         ]

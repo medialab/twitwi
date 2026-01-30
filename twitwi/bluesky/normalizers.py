@@ -106,14 +106,19 @@ def prepare_image_as_media(image_data, source):
         image_id = image_data["image"]
     elif isinstance(image_data["image"], dict):
         image_type = image_data["image"]["mimeType"]
-        if "ref" not in image_data["image"] or "$link" not in image_data["image"]["ref"]:
+        if (
+            "ref" not in image_data["image"]
+            or "$link" not in image_data["image"]["ref"]
+        ):
             # As in this post: https://bsky.app/profile/testjuan06.bsky.social/post/3ljkzygywso2b
             if "link" in image_data["image"]:
                 image_id = image_data["image"]["link"]
             elif "cid" in image_data["image"]:
                 image_id = image_data["image"]["cid"]
             else:
-                raise BlueskyPayloadError(source, "Unable to find image id in image data: %s" % image_data)
+                raise BlueskyPayloadError(
+                    source, "Unable to find image id in image data: %s" % image_data
+                )
         else:
             image_id = image_data["image"]["ref"]["$link"]
     else:
@@ -154,9 +159,13 @@ def process_card_data(embed_data, post):
     post["card_link"] = embed_data["uri"]
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
-    if isinstance(embed_data.get("thumb"), dict) and embed_data["thumb"].get("ref", {}).get("$link"):
+    if isinstance(embed_data.get("thumb"), dict) and embed_data["thumb"].get(
+        "ref", {}
+    ).get("$link"):
         media_cid = embed_data["thumb"]["ref"]["$link"]
-        post["card_thumbnail"] = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{post['user_did']}/{media_cid}@jpeg"
+        post["card_thumbnail"] = (
+            f"https://cdn.bsky.app/img/feed_thumbnail/plain/{post['user_did']}/{media_cid}@jpeg"
+        )
     else:
         post["card_thumbnail"] = embed_data.get("thumb", "")
     return post
@@ -390,23 +399,18 @@ def normalize_post(
                 # If there are links, we register them and do not replace anything in original text
                 # as we don't have position for each link
                 # example: https://bsky.app/profile/77cupons.bsky.social/post/3latbufuvqw25
-                elif (feat["$type"].endswith("#link")
-                    and "uri" in feat):
+                elif feat["$type"].endswith("#link") and "uri" in feat:
                     link = safe_normalize_url(feat["uri"])
                     if is_url(link):
                         links.add(link)
                         links_to_replace.append(
-                            {
-                                "uri": feat["uri"].encode("utf-8"),
-                                "start": -1,
-                                "end": -1
-                            }
+                            {"uri": feat["uri"].encode("utf-8"), "start": -1, "end": -1}
                         )
                 elif feat["$type"].lower().endswith("#tag"):
                     hashtags.add(feat["tag"].strip().lower())
                 # As in this post: https://bsky.app/profile/havehashad.com/post/3ki3rk5ytqd2e
                 elif feat["$type"].endswith("#image") and "uri" in feat:
-                    post['media_urls'].append(safe_normalize_url(feat["uri"]))
+                    post["media_urls"].append(safe_normalize_url(feat["uri"]))
                 else:
                     raising_error = True
 
@@ -419,12 +423,15 @@ def normalize_post(
             continue
 
         feat = facet["features"][0]
+        lower_feat_type = feat["$type"].lower()
 
         # Hashtags
-        if (feat["$type"].lower().endswith("#tag")
-            or feat["$type"].lower().endswith(".tag")
-            or feat["$type"].lower().endswith("#hashtag")
-            or feat["$type"].lower() == "facettag"):
+        if (
+            lower_feat_type.endswith("#tag")
+            or lower_feat_type.endswith(".tag")
+            or lower_feat_type.endswith("#hashtag")
+            or lower_feat_type == "facettag"
+        ):
             # Some posts have the full text in the "text" field of the hashtag feature
             if "text" in feat:
                 for tag in feat["text"].split("#"):
@@ -444,7 +451,13 @@ def normalize_post(
                     if text[byteStart : byteStart + 1] == b"#":
                         byteEnd = facet["index"]["byteEnd"]
                         try:
-                            tag = text[byteStart:byteEnd].decode("utf-8").strip().lstrip("#").lower()
+                            tag = (
+                                text[byteStart:byteEnd]
+                                .decode("utf-8")
+                                .strip()
+                                .lstrip("#")
+                                .lower()
+                            )
                         except UnicodeDecodeError:
                             raise BlueskyPayloadError(
                                 post["url"],
@@ -454,8 +467,7 @@ def normalize_post(
                     else:
                         raise BlueskyPayloadError(
                             post["url"],
-                            "unable to extract hashtag from text slice: %s"
-                            % facet,
+                            "unable to extract hashtag from text slice: %s" % facet,
                         )
                 hashtags.add(tag)
 
@@ -499,7 +511,11 @@ def normalize_post(
                 post["mentioned_user_handles"].append(handle)
 
         # Links
-        elif feat["$type"].endswith("#link") or feat["$type"].endswith(".link") or feat["$type"].endswith(".url"):
+        elif (
+            feat["$type"].endswith("#link")
+            or feat["$type"].endswith(".link")
+            or feat["$type"].endswith(".url")
+        ):
             # Handle native polls
             if "https://poll.blue/" in feat["uri"]:
                 if feat["uri"].endswith("/0"):
@@ -526,8 +542,9 @@ def normalize_post(
             # examples: https://bsky.app/profile/researchtrend.ai/post/3lbieylwwxs2b
             #           https://bsky.app/profile/dj-cyberspace.otoskey.tarbin.net.ap.brid.gy/post/3lchg3plpdjp2
             for elt in links_to_replace:
-                if ((byteStart >= elt["start"] and byteStart <= elt["end"])
-                    or (byteEnd >= elt["start"] and byteEnd <= elt["end"])):
+                if (byteStart >= elt["start"] and byteStart <= elt["end"]) or (
+                    byteEnd >= elt["start"] and byteEnd <= elt["end"]
+                ):
                     # Overlapping links, we skip this one
                     byteStart = -1
                     byteEnd = -1
@@ -642,7 +659,17 @@ def normalize_post(
                 pass
                 # raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
 
-        elif any (feat["$type"].endswith(suffix) for suffix in ["#bold", "#italic", "#underline", "#option", "#encrypt", "#text"]):
+        elif any(
+            feat["$type"].endswith(suffix)
+            for suffix in [
+                "#bold",
+                "#italic",
+                "#underline",
+                "#option",
+                "#encrypt",
+                "#text",
+            ]
+        ):
             pass
         # Bluesky seems to use format features for some internal purposes, but we ignore them
         # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g
@@ -670,11 +697,23 @@ def normalize_post(
 
         # Some people share code snippets using third party apps
         # e.g.: https://bsky.app/profile/alexdln.com/post/3mbwzgrymow2o
-        elif ("#" in feat["$type"]
+        elif (
+            "#" in feat["$type"]
             and feat["$type"].split("#")[1].startswith("code")
-            and "code" in feat):
-            language = feat["$type"].split("#")[1].split(".")[1] if "." in feat["$type"].split("#")[1] else "plain"
-            text += b"\n```" + language.encode("utf-8") + b"\n" + feat["code"].encode("utf-8") + b"\n```\n"
+            and "code" in feat
+        ):
+            language = (
+                feat["$type"].split("#")[1].split(".")[1]
+                if "." in feat["$type"].split("#")[1]
+                else "plain"
+            )
+            text += (
+                b"\n```"
+                + language.encode("utf-8")
+                + b"\n"
+                + feat["code"].encode("utf-8")
+                + b"\n```\n"
+            )
 
         # We chose to ignore non Bluesky features for now (e.g. personalized features)
         # example: https://bsky.app/profile/poll.blue/post/3kmuqjkkozh2r
@@ -742,7 +781,9 @@ def normalize_post(
 
             # Personalized quote (not visible on Bluesky for the example)
             # example: https://bsky.app/profile/jacksmithsocial.bsky.social/post/3lbca2nxy4f2a
-            if embed.get("$type") == "app.bsky.feed.post" and embed.get("record", {}).get("uri"):
+            if embed.get("$type") == "app.bsky.feed.post" and embed.get(
+                "record", {}
+            ).get("uri"):
                 post, quoted_data, links = prepare_quote_data(
                     embed["record"], data.get("embed", {}).get("record"), post, links
                 )
@@ -752,11 +793,16 @@ def normalize_post(
             #       https://bsky.app/profile/flyingaubrey.bsky.social/post/3lxngessntk2p
             elif len(embed.keys()) > 1 and embed.get("type") not in ["private", "list"]:
                 raise BlueskyPayloadError(
-                    post["url"], "unusual empty record embed with extra keys: %s" % embed
+                    post["url"],
+                    "unusual empty record embed with extra keys: %s" % embed,
                 )
             # Nothing to do for empty embed
 
-        if embed["$type"].endswith(".embed") and len(embed.keys()) > 2 and len(embed.get('images')) > 0:
+        if (
+            embed["$type"].endswith(".embed")
+            and len(embed.keys()) > 2
+            and len(embed.get("images")) > 0
+        ):
             raise BlueskyPayloadError(
                 post["url"], "unusual empty record embed with extra keys: %s" % embed
             )
@@ -792,7 +838,9 @@ def normalize_post(
         if embed["$type"].endswith(".viewImages"):
             if "images" in embed:
                 for i in embed["images"]:
-                    post['media_urls'].append(i.get("viewImage", {}).get("thumb", {}).get("uri", ""))
+                    post["media_urls"].append(
+                        i.get("viewImage", {}).get("thumb", {}).get("uri", "")
+                    )
             elif "viewImage" in embed:
                 for i in embed["viewImage"]:
                     if "viewImage" in i:
@@ -802,14 +850,17 @@ def normalize_post(
                     else:
                         raise BlueskyPayloadError(
                             post["url"],
-                            "unusual viewImages embed content: %s"
-                            % embed,
+                            "unusual viewImages embed content: %s" % embed,
                         )
-                    post['media_urls'].append(i[sub_image].get("thumb", {}).get("uri", ""))
+                    post["media_urls"].append(
+                        i[sub_image].get("thumb", {}).get("uri", "")
+                    )
 
         # Images
         if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
-            media_data.extend([prepare_image_as_media(i, post['url']) for i in embed["images"]])
+            media_data.extend(
+                [prepare_image_as_media(i, post["url"]) for i in embed["images"]]
+            )
 
         # Video
         if embed["$type"].endswith(".video"):
@@ -870,7 +921,10 @@ def normalize_post(
             # Images
             elif embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
-                    [prepare_image_as_media(i, post['url']) for i in embed["media"]["images"]]
+                    [
+                        prepare_image_as_media(i, post["url"])
+                        for i in embed["media"]["images"]
+                    ]
                 )
 
             # Video
@@ -996,12 +1050,12 @@ def normalize_post(
                 )
                 if rule_string.endswith("_list") and "list" in rule:
                     if isinstance(rule["list"], str):
-                        post["replies_rules"].append(
-                            rule_string + ":" + rule["list"]
-                        )
+                        post["replies_rules"].append(rule_string + ":" + rule["list"])
                     else:
                         for allowed_list in rule["list"]:
-                            post["replies_rules"].append(rule_string + ":" + allowed_list)
+                            post["replies_rules"].append(
+                                rule_string + ":" + allowed_list
+                            )
                 else:
                     post["replies_rules"].append(rule_string)
             if not data["threadgate"]["record"]["allow"]:
