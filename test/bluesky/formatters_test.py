@@ -114,7 +114,9 @@ class TestFormatters:
 
         for source in normalized_posts:
             for post in source:
-                writer.writerow(format_post_as_csv_row(post))
+                writer.writerow(
+                    format_post_as_csv_row(post, allow_erroneous_plurals=True)
+                )
 
         if OVERWRITE_TESTS:
             written = buffer.getvalue()
@@ -142,7 +144,7 @@ class TestFormatters:
 
         for source in normalized_posts:
             for post in source:
-                transform_post_into_csv_dict(post)
+                transform_post_into_csv_dict(post, allow_erroneous_plurals=True)
                 writer.writerow(post)
 
         with open_resource("bluesky-posts-export.csv") as f:

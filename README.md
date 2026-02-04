@@ -249,7 +249,7 @@ List of a Bluesky user profile's normalized field names. Useful to declare heade
 
 ### PARTIAL_PROFILE_FIELDS
 
-List of a Bluesky user partial profile's (retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example) normalized field names. Useful to declare headers with csv writers. Be careful not to confuse with [PROFILE_FIELDS](#profile_fields) which correspond to the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
+List of a Bluesky user partial profile's (retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example) normalized field names. Useful to declare headers with csv writers. Be careful not to confuse with [PROFILE_FIELDS](#profile_fields) which correspond to the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
 
 ### POST_FIELDS
 
