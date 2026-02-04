@@ -156,9 +156,8 @@ class TestFormatters:
         writer = csv.writer(buffer, quoting=csv.QUOTE_MINIMAL)
         writer.writerow(PARTIAL_POST_FIELDS)
 
-        for source in normalized_partial_posts:
-            for post in source:
-                writer.writerow(format_partial_post_as_csv_row(post))
+        for post in normalized_partial_posts:
+            writer.writerow(format_partial_post_as_csv_row(post))
 
         if OVERWRITE_TESTS:
             written = buffer.getvalue()
@@ -184,10 +183,9 @@ class TestFormatters:
         )
         writer.writeheader()
 
-        for source in normalized_partial_posts:
-            for post in source:
-                transform_partial_post_into_csv_dict(post)
-                writer.writerow(post)
+        for post in normalized_partial_posts:
+            transform_partial_post_into_csv_dict(post)
+            writer.writerow(post)
 
         with open_resource("bluesky-firehose-posts-export.csv") as f:
             buffer.seek(0)

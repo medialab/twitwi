@@ -158,7 +158,7 @@ with open("normalized_bluesky_profiles.csv", "w") as f:
 
 ### normalize_profile
 
-Function taking a nested dict describing a user profile from Bluesky's JSON payload (with the same format as retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses)) and returning a flat "normalized" dict composed of all [PROFILE_FIELDS](#profile_fields) keys. Be careful not to confuse with the [normalize_partial_profile](#normalize_partial_profile) function which operate on a lighter version of the profile data, retrieved from [follower/follow profile payloads](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example.
+Function taking a nested dict describing a user profile from Bluesky's JSON payload (with the same format as retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses)) and returning a flat "normalized" dict composed of all [PROFILE_FIELDS](#profile_fields) keys. Be careful not to confuse with the [normalize_partial_profile](#normalize_partial_profile) function which operates on a lighter version of the profile data, retrieved from [follower/follow profile payloads](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses) for example.
 
 Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
 
@@ -169,7 +169,7 @@ Will return datetimes as UTC but can take an optional second `locale` argument a
 
 ### normalize_partial_profile
 
-Function taking a nested dict describing a user profile from Bluesky's JSON payload (with the same format as retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses)) and returning a flat "normalized" dict composed of all [PARTIAL_PROFILE_FIELDS](#partial_profile_fields) keys. Be careful not to confuse with the [normalize_profile](#normalize_profile) function which operate on the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
+Function taking a nested dict describing a user profile from Bluesky's JSON payload (with the same format as retrieved from [`app.bsky.graph.getFollowers` HTTP endpoint](https://docs.bsky.app/docs/api/app-bsky-graph-get-followers#responses)) and returning a flat "normalized" dict composed of all [PARTIAL_PROFILE_FIELDS](#partial_profile_fields) keys. Be careful not to confuse with the [normalize_profile](#normalize_profile) function which operates on the full version of the profile data, retrieved from [`app.bsky.actor.getProfiles` HTTP endpoint](docs.bsky.app/docs/api/app-bsky-actor-get-profiles#responses) for example.
 
 Will return datetimes as UTC but can take an optional second `locale` argument as a [`pytz`](https://pypi.org/project/pytz/) string timezone.
 
@@ -205,9 +205,7 @@ When setting `extract_referenced_posts` to `True` it will instead return a list 
 
 * **payload** *(dict)*: post or feed data payload coming from Bluesky API.
 * **locale** *(pytz.timezone as str, optional)*: timezone used to convert dates. If not given, will default to UTC.
-* **extract_referenced_posts** *(bool, optional)*: whether to return in the output, in addition to the post to be normalized, also normalized data for each other referenced posts found in the payload data (including potentially other quoted posts as well as the parent and root posts of a thread if the post comes as an answer to another one). If `False`, the function will return a `dict`, if `True` a `list` of `dict`. Defaults to `False`.
-* **collection_source** *(string, optional)*: An optional information to add within the `collected_via` field of the normalized post to indicate whence it was collected.
-* **app_source** *(str)*: Source application of the payload, either `firehose` or `tap`, which is experimental for now. Defaults to `firehose`.
+* **collection_source** *(string, optional)*: Source application of the payload, either `firehose` or `tap`, which is experimental for now. Defaults to `firehose`.
 
 ### transform_profile_into_csv_dict
 

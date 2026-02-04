@@ -75,13 +75,13 @@ def validate_post_payload(data):
     return True, None
 
 
-def validate_partial_post_payload(data, app_source: str = "firehose"):
-    if app_source == "firehose":
+def validate_partial_post_payload(data, collection_source: str = "firehose"):
+    if collection_source == "firehose":
         return validate_firehose_post_payload(data)
-    elif app_source == "tap":
+    elif collection_source == "tap":
         return validate_tap_post_payload(data)
     else:
-        return False, f"Unknown app_source {app_source} for partial post payload validation"
+        return False, f"Unknown collection_source {collection_source} for partial post payload validation"
 
 def validate_firehose_post_payload(data):
     payload = data.get("post", data)

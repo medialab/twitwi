@@ -72,7 +72,7 @@ class BlueskyPost(TypedDict):
 
     # Author metadata fields
     user_url: str                       # URL of the profile accessible on the web of the account who authored the post
-    user_display_name: str               # updatable human-readable name of the account who authored the post
+    user_display_name: str              # updatable human-readable name of the account who authored the post
     # user_description: str             # not available from posts payloads
     # user_posts: int                   # not available from posts payloads
     # user_followers: int               # not available from posts payloads
@@ -186,7 +186,7 @@ class BlueskyPartialPost(TypedDict):
 
     # Author metadata fields
     user_url: str                       # URL of the profile accessible on the web of the account who authored the post
-    # user_display_name: str             # not available from firehose nor tap payloads
+    # user_display_name: str            # not available from firehose nor tap payloads
     # user_description: str             # not available from posts payloads
     # user_posts: int                   # not available from posts payloads
     # user_followers: int               # not available from posts payloads
@@ -224,15 +224,15 @@ class BlueskyPartialPost(TypedDict):
 
     # Quoted post metadata fields
     # (when a post embeds another one)
-    quoted_cid: Optional[str]           # internal content identifier of the quoted post
-    quoted_did: Optional[str]           # persistent long-term identifier of the quoted post
-    quoted_uri: Optional[str]           # ATProto's internal URI to the quoted post
-    quoted_url: Optional[str]           # URL of the quoted post accessible on the web
-    quoted_user_did: Optional[str]      # persistent long-term identifier of the account who authored the quoted post
-    quoted_user_handle: Optional[str]   # updatable human-readable username of the account who authored the quoted post
-    quoted_created_at: Optional[int]    # datetime (potentially timezoned) of when the quoted post was submitted
-    quoted_timestamp_utc: Optional[int] # Unix UTC timestamp of when the quoted post was submitted
-    quoted_status: Optional[str]        # empty or "detached" when the author of the quoted post intentionnally required the quoting post not to appear in the list of this post's quotes
+    quoted_cid: Optional[str]             # internal content identifier of the quoted post
+    quoted_did: Optional[str]             # persistent long-term identifier of the quoted post
+    quoted_uri: Optional[str]             # ATProto's internal URI to the quoted post
+    quoted_url: Optional[str]             # URL of the quoted post accessible on the web
+    quoted_user_did: Optional[str]        # persistent long-term identifier of the account who authored the quoted post
+    # quoted_user_handle: Optional[str]   # not available from firehose nor tap payloads
+    # quoted_created_at: Optional[int]    # not available from firehose nor tap payloads
+    # quoted_timestamp_utc: Optional[int] # not available from firehose nor tap payloads
+    # quoted_status: Optional[str]        # not available from firehose nor tap payloads
 
     # Embedded elements metadata fields
     links: List[str]                    # list of URLs of all links shared within the post (including potentially the embedded card detailed below, but not the link to a potential quoted post)
@@ -261,6 +261,5 @@ class BlueskyPartialPost(TypedDict):
 
     # Extra fields linked to the data collection and processing
     collection_time: Optional[str]      # datetime (potentially timezoned) of when the data was normalized
-    collected_via: Optional[List[str]]  # extra field added by the normalization process to express how the data collection was ran, will be "quote" or "thread" when a post was grabbed as a referenced post within the originally collected post using the "extract_referenced_posts" option of "normalize_post"
-    # match_query: Optional[bool]         # not meaningful for firehose nor tap collected posts
-    app_source: Optional[str]           # extra field added by the normalization process to express the source of the data, either "firehose" or "tap"
+    collected_via: Optional[List[str]]  # extra field added by the normalization process to express how the data collection was ran, will be "quote" or "thread" when a post was grabbed as a referenced post within the originally collected post using the "extract_referenced_posts" option of "normalize_post", and "firehose" or "tap" when collected from the firehose or tap tool
+    # match_query: Optional[bool]       # not meaningful for firehose nor tap collected posts

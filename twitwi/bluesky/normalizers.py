@@ -136,9 +136,8 @@ def process_starterpack_card(embed_data, post):
         post["card_thumbnail"] = card.get("thumb", "")
 
 
+# Warning: mutates post
 def process_card_data(embed_data, post):
-    # Warning: mutates post
-
     post["card_link"] = embed_data["uri"]
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
@@ -147,9 +146,8 @@ def process_card_data(embed_data, post):
     )
 
 
+# Warning: mutates post and links
 def prepare_quote_data(embed_quote, card_data, post, links):
-    # Warning: mutates post and links
-
     quoted_data = None
 
     post["quoted_cid"] = embed_quote["cid"]
@@ -203,6 +201,7 @@ def prepare_quote_data(embed_quote, card_data, post, links):
     return quoted_data
 
 
+# Warning: mutates referenced_posts
 def merge_nested_posts(referenced_posts, nested, source):
     for new_post in nested:
         ordered_id = "%s_%s" % (new_post["did"], new_post["user_handle"])
@@ -226,8 +225,8 @@ def merge_nested_posts(referenced_posts, nested, source):
                         )
 
 # Handle hashtags, mentions & links from facets
+# Warning: mutates post
 def process_post_facets(facets: List[Dict], post: Dict, text: str) -> Tuple[str, Set[str]]:
-    # Warning: mutates post
     post["mentioned_user_handles"] = []
     post["mentioned_user_dids"] = []
     hashtags = set()
@@ -403,8 +402,8 @@ def process_post_facets(facets: List[Dict], post: Dict, text: str) -> Tuple[str,
     return text, links
 
 # Handle thread info when applicable
+# Warning: mutates post
 def process_post_thread_info(reply_data: Dict, post: Dict):
-    # Warning: mutates post
     if "parent" in reply_data:
         post["to_post_cid"] = reply_data["parent"]["cid"]
         post["to_post_uri"] = reply_data["parent"]["uri"]
@@ -426,6 +425,7 @@ def process_post_thread_info(reply_data: Dict, post: Dict):
 
 
 # Handle quotes & medias
+# Warning: mutates post, links and referenced_posts
 def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str, locale: Optional[Any], extract_referenced_posts: bool, referenced_posts: Dict, data: Dict = {}) -> str:
     media_ids = set()
     embed = record["embed"]
@@ -507,6 +507,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
                 extra_links = [link] + extra_links
                 # Handle link card metadata
                 if "embed" in data and "media" in data["embed"]["media"]:
+                    # Warning: mutates post
                     process_card_data(
                         embed["media"]["external"], post
                     )
@@ -624,12 +625,14 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
 
 
 # Process links domains
+# Warning: mutates post
 def process_links_domains(post:Dict, links: Set[str]):
     post["links"] = sorted(links)
     post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
 
 
 # Finalize text field
+# Warning: mutates post
 def finalize_post_text(text: str, post: Dict):
     try:
         post["text"] = text.decode("utf-8")
@@ -644,6 +647,7 @@ def finalize_post_text(text: str, post: Dict):
 
 
 # Collection source & match query
+# Warning: mutates post
 def process_collection_source_and_match_query(post: Dict, collection_source: Optional[str]):
     if collection_source is not None:
         post["collected_via"] = [collection_source]
@@ -651,6 +655,7 @@ def process_collection_source_and_match_query(post: Dict, collection_source: Opt
 
 
 # Handle thread posts when data comes from a feed
+# Warning: mutates referenced_posts
 def process_thread_posts_from_feed(reply_data: Dict, post: Dict, locale: Optional[Any], extract_referenced_posts: bool, referenced_posts: Dict):
     if "parent" in reply_data:
         nested = normalize_post(
@@ -659,6 +664,7 @@ def process_thread_posts_from_feed(reply_data: Dict, post: Dict, locale: Optiona
             extract_referenced_posts=True,
             collection_source="thread",
         )
+        # Warning: mutates referenced_posts
         merge_nested_posts(
             referenced_posts, nested, post["url"]
         )
@@ -673,6 +679,7 @@ def process_thread_posts_from_feed(reply_data: Dict, post: Dict, locale: Optiona
             extract_referenced_posts=True,
             collection_source="thread",
         )
+        # Warning: mutates referenced_posts
         merge_nested_posts(
             referenced_posts, nested, post["url"]
         )
@@ -803,6 +810,7 @@ def normalize_post(
     post["bookmark_count"] = data.get("bookmarkCount")
 
     # Handle hashtags, mentions & links from facets
+    # Warning: mutates post
     text, links = process_post_facets(
         data["record"].get("facets", []), post, text
     )
@@ -812,6 +820,7 @@ def normalize_post(
     # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
     # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
     if "reply" in data["record"]:
+        # Warning: mutates post
         process_post_thread_info(data["record"]["reply"], post)
 
     # Handle quotes & medias
@@ -922,10 +931,8 @@ def normalize_post(
 def normalize_partial_post(
     payload: Dict,
     locale: Optional[Any] = None,
-    extract_referenced_posts: bool = False,
     collection_source: Optional[str] = None,
-    app_source: str = "firehose",
-) -> Union[BlueskyPartialPost, List[BlueskyPartialPost]]:
+) -> BlueskyPartialPost:
     """
     Function "normalizing" a partial payload post as returned by Bluesky's Firehose in order to
     cleanup and optimize some fields.
@@ -933,16 +940,9 @@ def normalize_partial_post(
     Args:
         payload (dict): partial post or feed payload json dict from Bluesky Firehose.
         locale (pytz.timezone, optional): Timezone for date conversions.
-        extract_referenced_posts (bool): Whether to return, in
-            addition to the original post, also the full list of posts
-            found in the given payload (including the tree of quoted posts
-            as well as the parent and root posts of the thread if the post
-            comes as an answer to another one). Defaults
-            to `False`.
         collection_source (str, optional): string explaining how the post
-            was collected. Defaults to `None`.
-        app_source (str): Source application of the payload, either `firehose` or `tap`,
-            which is experimental for now. Defaults to `firehose`.
+            was collected. Source application of the payload, either `firehose` or `tap`,
+            which is experimental for now. Defaults to `None`.
 
     Returns:
         (dict or list): Either a single partial post dict or a list of partial post dicts if
@@ -955,15 +955,15 @@ def normalize_partial_post(
             "UNKNOWN", f"data provided to normalize_partial_post is not a dictionary: {payload}"
         )
 
-    if app_source not in ["firehose", "tap"]:
-        raise ValueError(f"app_source must be either 'firehose' or 'tap', got: {app_source}")
+    if collection_source not in ["firehose", "tap", "unit_test"]:
+        raise ValueError(f"collection_source must be either 'firehose' or 'tap', got: {collection_source}")
 
-    if app_source == "firehose":
+    if collection_source == "firehose":
         post_field = "commit"
     else:  # tap
         post_field = "record"
 
-    valid, error = validate_partial_post_payload(payload, app_source=app_source)
+    valid, error = validate_partial_post_payload(payload, collection_source=collection_source)
 
     if not valid:
         uri = format_post_uri(
@@ -977,19 +977,14 @@ def normalize_partial_post(
 
     if "post" in payload:
         data = payload["post"]
-        reply_data = payload.get("reply")
     else:
         data = payload
-        reply_data = None
 
     referenced_posts = {}
 
-    if collection_source is None:
-        collection_source = data.get("collection_source")
-
     post = {}
 
-    post["app_source"] = app_source
+    post["collection_source"] = collection_source
 
     # Store original text and prepare text for quotes & medias enriched version
     post["original_text"] = data[post_field]["record"]["text"]
@@ -1000,7 +995,7 @@ def normalize_partial_post(
     post["timestamp_utc"], post["local_time"] = get_dates(
         data[post_field]["record"]["createdAt"], locale=locale, source="bluesky"
     )
-    post["firehose_timestamp_us"] = data["time_us"] if app_source == "firehose" else None
+    post["firehose_timestamp_us"] = data["time_us"] if collection_source == "firehose" else None
 
     # Handle post/user identifiers
     post["cid"] = data[post_field]["cid"]
@@ -1018,6 +1013,7 @@ def normalize_partial_post(
         post["bridgy_original_url"] = data[post_field]["record"]["bridgyOriginalUrl"]
 
     # Handle hashtags, mentions & links from facets
+    # Warning: mutates post
     text, links = process_post_facets(
         data[post_field]["record"].get("facets", []), post, text
     )
@@ -1027,6 +1023,7 @@ def normalize_partial_post(
     # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
     # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
     if "reply" in data[post_field]["record"]:
+        # Warning: mutates post
         process_post_thread_info(data[post_field]["record"]["reply"], post)
 
     # Handle quotes & medias
@@ -1042,7 +1039,7 @@ def normalize_partial_post(
             links,
             text,
             locale,
-            extract_referenced_posts,
+            False,
             referenced_posts,
         )
 
@@ -1061,18 +1058,5 @@ def normalize_partial_post(
     # Warning: mutates post
     process_collection_source_and_match_query(post, collection_source)
 
-
-    if extract_referenced_posts:
-        # Handle thread posts when data comes from a feed
-        if reply_data:
-            # Warning: mutates referenced_posts
-            process_thread_posts_from_feed(
-                reply_data, post, locale, extract_referenced_posts, referenced_posts
-            )
-
-        assert referenced_posts is not None
-        return [referenced_posts[did] for did in sorted(referenced_posts.keys())] + [
-            post
-        ]  # type: ignore
 
     return post  # type: ignore

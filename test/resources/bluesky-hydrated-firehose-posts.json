@@ -36,7 +36,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:vckwyfbegq5i4fzdzkxtdzih/app.bsky.feed.post/3m7hzqrjojp2o",
@@ -153,7 +153,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:als3olc4h5kbm5ntevl7mexn/app.bsky.feed.post/3m7hzqqgw622p",
@@ -213,7 +213,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:kuym5x2wlgqposqke54avldl/app.bsky.feed.post/3m7hzqrq7ol2i",
@@ -272,7 +272,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:p5bhraeyrta4wk5gxqsfo7xm/app.bsky.feed.post/3m7hzqrr3rk25",
@@ -355,7 +355,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:6jrgkhgxjkwn6kn72pdj325g/app.bsky.feed.post/3m7hzqqc2vc2z",
@@ -472,7 +472,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:tlo5etp4tntwlbeu4b55jbvv/app.bsky.feed.post/3m7hzqsq3xk2h",
@@ -547,7 +547,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:6yvceec5j3d7h263v35vw43j/app.bsky.feed.post/3m7hzqr7la225",
@@ -674,7 +674,7 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     },
     {
         "uri": "at://did:plc:ljkrr2d7afnjmx3huawzzhf2/app.bsky.feed.post/3m7hzqjyes22l",
@@ -850,6 +850,6 @@
             "embeddingDisabled": false
         },
         "labels": [],
-        "app_source": "firehose"
+        "collection_source": "firehose"
     }
 ]
