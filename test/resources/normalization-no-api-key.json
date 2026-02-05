@@ -1,0 +1,1113 @@
+[
+  {
+    "normalized": [
+      {
+        "collected_via": [
+          "quote"
+        ],
+        "collection_time": "2025-12-17T10:11:25.742168",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [],
+        "id": "1838281150755967063",
+        "lang": "en",
+        "like_count": 9033,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2024-09-23T18:15:54",
+        "match_query": false,
+        "media_alt_texts": [
+          "",
+          ""
+        ],
+        "media_files": [
+          "1838281150755967063_GYLiiraXgAAUM7W.png",
+          "1838281150755967063_GYLisRdXQAAO31j.jpg"
+        ],
+        "media_types": [
+          "photo",
+          "photo"
+        ],
+        "media_urls": [
+          "https://pbs.twimg.com/media/GYLiiraXgAAUM7W.png",
+          "https://pbs.twimg.com/media/GYLisRdXQAAO31j.jpg"
+        ],
+        "mentioned_ids": [
+          "1324273819184361472"
+        ],
+        "mentioned_names": [
+          "nima_owji"
+        ],
+        "possibly_sensitive": false,
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "reply_count": 1545,
+        "retweet_count": 866,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "text": "X/Twitter is reportedly set to remove the block button\n\nIf the blocked account is public, it will still be visible to you\n\nvia @nima_owji https://x.com/Dexerto/status/1838281150755967063/photo/1",
+        "timestamp_utc": 1727115354,
+        "url": "https://twitter.com/Dexerto/status/1838281150755967063",
+        "user_id": "76766018",
+        "user_image": "https://pbs.twimg.com/profile_images/1714301666445402112/5U5myYFv_normal.jpg",
+        "user_is_blue_verified": false,
+        "user_likes": null,
+        "user_lists": null,
+        "user_name": "Dexerto",
+        "user_screen_name": "Dexerto",
+        "user_tweets": null,
+        "user_url": "https://twitter.com/Dexerto",
+        "user_verified": false,
+        "user_verified_type": "Business"
+      },
+      {
+        "collection_time": "2025-12-17T10:11:25.746766",
+        "coordinates": null,
+        "domains": [
+          "bsky.app"
+        ],
+        "hashtags": [],
+        "id": "1838292181909672312",
+        "lang": "en",
+        "like_count": 6912,
+        "links": [
+          "http://bsky.app/download"
+        ],
+        "links_to_resolve": true,
+        "local_time": "2024-09-23T18:59:44",
+        "match_query": true,
+        "media_alt_texts": [
+          "",
+          ""
+        ],
+        "media_files": [
+          "1838281150755967063_GYLiiraXgAAUM7W.png",
+          "1838281150755967063_GYLisRdXQAAO31j.jpg"
+        ],
+        "media_types": [
+          "photo",
+          "photo"
+        ],
+        "media_urls": [
+          "https://pbs.twimg.com/media/GYLiiraXgAAUM7W.png",
+          "https://pbs.twimg.com/media/GYLisRdXQAAO31j.jpg"
+        ],
+        "mentioned_ids": [
+          "1324273819184361472"
+        ],
+        "mentioned_names": [
+          "nima_owji"
+        ],
+        "possibly_sensitive": false,
+        "quoted_id": "1838281150755967063",
+        "quoted_timestamp_utc": 1727115354,
+        "quoted_user": "Dexerto",
+        "quoted_user_id": "76766018",
+        "reply_count": 93,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "text": "damn that's crazy\n\nanyway on bluesky, users have named the blocking function \"the nuclear block\" because it's such a powerful tool to reduce harassment and dogpiling\n\nyou should have control over your experience online\n\nhttp://bsky.app/download \u00ab Dexerto: X/Twitter is reportedly set to remove the block button\n\nIf the blocked account is public, it will still be visible to you\n\nvia @nima_owji https://x.com/Dexerto/status/1838281150755967063/photo/1 \u2014 https://twitter.com/dexerto/status/1838281150755967063 \u00bb",
+        "timestamp_utc": 1727117984,
+        "url": "https://twitter.com/bluesky/status/1838292181909672312",
+        "user_id": "1199812749469126657",
+        "user_image": "https://pbs.twimg.com/profile_images/1738291333268377600/QjJngnVB_normal.jpg",
+        "user_is_blue_verified": true,
+        "user_likes": null,
+        "user_lists": null,
+        "user_name": "Bluesky",
+        "user_screen_name": "bluesky",
+        "user_tweets": null,
+        "user_url": "https://twitter.com/bluesky",
+        "user_verified": false
+      }
+    ],
+    "source": {
+      "__typename": "Tweet",
+      "conversation_count": 93,
+      "created_at": "2024-09-23T18:59:44.000Z",
+      "display_text_range": [
+        0,
+        243
+      ],
+      "edit_control": {
+        "edit_tweet_ids": [
+          "1838292181909672312"
+        ],
+        "editable_until_msecs": "1727121584000",
+        "edits_remaining": "5",
+        "is_edit_eligible": true
+      },
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [
+          {
+            "display_url": "bsky.app/download",
+            "expanded_url": "http://bsky.app/download",
+            "indices": [
+              220,
+              243
+            ],
+            "url": "https://t.co/x6v5YW0WFT"
+          }
+        ],
+        "user_mentions": []
+      },
+      "favorite_count": 6912,
+      "id_str": "1838292181909672312",
+      "isEdited": false,
+      "isStaleEdit": false,
+      "lang": "en",
+      "news_action_type": "conversation",
+      "possibly_sensitive": false,
+      "quoted_tweet": {
+        "birdwatch_pivot": {
+          "destinationUrl": "https://twitter.com/i/birdwatch/n/1838320446477050325",
+          "footer": {
+            "entities": [
+              {
+                "fromIndex": 83,
+                "ref": {
+                  "url": {
+                    "url": "https://twitter.com/i/flow/join-birdwatch",
+                    "urlType": "ExternalUrl"
+                  }
+                },
+                "toIndex": 96
+              }
+            ],
+            "text": "Context is written by people who use X, and appears when rated helpful by others.  Find out more."
+          },
+          "footerIconType": "BirdwatchEyeOff",
+          "iconType": "BirdwatchV1Icon",
+          "noteId": "1838320446477050325",
+          "shorttitle": "Readers added context",
+          "subtitle": {
+            "entities": [
+              {
+                "fromIndex": 97,
+                "ref": {
+                  "url": {
+                    "url": "https://t.co/iK29efJlSg",
+                    "urlType": "ExternalUrl"
+                  }
+                },
+                "toIndex": 124
+              }
+            ],
+            "text": "This is incorrect. The block button will not be removed, but its functionality will be changed.\n\ntwitter.com/elonmusk/statu\u2026\n\nAdditionally, this was discussed earlier, and the changes never went through due to non-compliance with app store guidelines."
+          },
+          "title": "Readers added context they thought people might want to know",
+          "visualStyle": "Default"
+        },
+        "created_at": "2024-09-23T18:15:54.000Z",
+        "display_text_range": [
+          0,
+          137
+        ],
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1838280860652507349",
+            "1838281150755967063"
+          ],
+          "editable_until_msecs": "1727118885000",
+          "edits_remaining": "4",
+          "initial_tweet_id": "1838280860652507349",
+          "is_edit_eligible": true
+        },
+        "entities": {
+          "hashtags": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/tLoi8fhHfI",
+              "expanded_url": "https://x.com/Dexerto/status/1838281150755967063/photo/1",
+              "indices": [
+                138,
+                161
+              ],
+              "url": "https://t.co/tLoi8fhHfI"
+            }
+          ],
+          "symbols": [],
+          "urls": [],
+          "user_mentions": [
+            {
+              "id_str": "1324273819184361472",
+              "indices": [
+                127,
+                137
+              ],
+              "name": "Nima Owji",
+              "screen_name": "nima_owji"
+            }
+          ]
+        },
+        "favorite_count": 9033,
+        "id_str": "1838281150755967063",
+        "isEdited": true,
+        "isStaleEdit": false,
+        "lang": "en",
+        "mediaDetails": [
+          {
+            "display_url": "pic.x.com/tLoi8fhHfI",
+            "expanded_url": "https://x.com/Dexerto/status/1838281150755967063/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              138,
+              161
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/GYLiiraXgAAUM7W.png",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 189,
+                  "w": 338,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 338,
+                  "w": 338,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 338,
+                  "w": 296,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 338,
+                  "w": 169,
+                  "x": 25,
+                  "y": 0
+                },
+                {
+                  "h": 338,
+                  "w": 338,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 338,
+              "width": 338
+            },
+            "sizes": {
+              "large": {
+                "h": 338,
+                "resize": "fit",
+                "w": 338
+              },
+              "medium": {
+                "h": 338,
+                "resize": "fit",
+                "w": 338
+              },
+              "small": {
+                "h": 338,
+                "resize": "fit",
+                "w": 338
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/tLoi8fhHfI"
+          },
+          {
+            "display_url": "pic.x.com/tLoi8fhHfI",
+            "expanded_url": "https://x.com/Dexerto/status/1838281150755967063/photo/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              138,
+              161
+            ],
+            "media_url_https": "https://pbs.twimg.com/media/GYLisRdXQAAO31j.jpg",
+            "original_info": {
+              "focus_rects": [
+                {
+                  "h": 601,
+                  "w": 1074,
+                  "x": 0,
+                  "y": 404
+                },
+                {
+                  "h": 1074,
+                  "w": 1074,
+                  "x": 0,
+                  "y": 167
+                },
+                {
+                  "h": 1224,
+                  "w": 1074,
+                  "x": 0,
+                  "y": 92
+                },
+                {
+                  "h": 1344,
+                  "w": 672,
+                  "x": 33,
+                  "y": 0
+                },
+                {
+                  "h": 1344,
+                  "w": 1074,
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "height": 1344,
+              "width": 1074
+            },
+            "sizes": {
+              "large": {
+                "h": 1344,
+                "resize": "fit",
+                "w": 1074
+              },
+              "medium": {
+                "h": 1200,
+                "resize": "fit",
+                "w": 959
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 543
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "photo",
+            "url": "https://t.co/tLoi8fhHfI"
+          }
+        ],
+        "photos": [
+          {
+            "backgroundColor": {
+              "blue": 221,
+              "green": 214,
+              "red": 204
+            },
+            "cropCandidates": [
+              {
+                "h": 189,
+                "w": 338,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 338,
+                "w": 338,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 338,
+                "w": 296,
+                "x": 0,
+                "y": 0
+              },
+              {
+                "h": 338,
+                "w": 169,
+                "x": 25,
+                "y": 0
+              },
+              {
+                "h": 338,
+                "w": 338,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "expandedUrl": "https://x.com/Dexerto/status/1838281150755967063/photo/1",
+            "height": 338,
+            "url": "https://pbs.twimg.com/media/GYLiiraXgAAUM7W.png",
+            "width": 338
+          },
+          {
+            "backgroundColor": {
+              "blue": 221,
+              "green": 214,
+              "red": 204
+            },
+            "cropCandidates": [
+              {
+                "h": 601,
+                "w": 1074,
+                "x": 0,
+                "y": 404
+              },
+              {
+                "h": 1074,
+                "w": 1074,
+                "x": 0,
+                "y": 167
+              },
+              {
+                "h": 1224,
+                "w": 1074,
+                "x": 0,
+                "y": 92
+              },
+              {
+                "h": 1344,
+                "w": 672,
+                "x": 33,
+                "y": 0
+              },
+              {
+                "h": 1344,
+                "w": 1074,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "expandedUrl": "https://x.com/Dexerto/status/1838281150755967063/photo/1",
+            "height": 1344,
+            "url": "https://pbs.twimg.com/media/GYLisRdXQAAO31j.jpg",
+            "width": 1074
+          }
+        ],
+        "possibly_sensitive": false,
+        "reply_count": 1545,
+        "retweet_count": 866,
+        "text": "X/Twitter is reportedly set to remove the block button\n\nIf the blocked account is public, it will still be visible to you\n\nvia @nima_owji https://t.co/tLoi8fhHfI",
+        "user": {
+          "id_str": "76766018",
+          "is_blue_verified": false,
+          "name": "Dexerto",
+          "profile_image_shape": "Square",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1714301666445402112/5U5myYFv_normal.jpg",
+          "screen_name": "Dexerto",
+          "verified": false,
+          "verified_type": "Business"
+        }
+      },
+      "text": "damn that's crazy\n\nanyway on bluesky, users have named the blocking function \"the nuclear block\" because it's such a powerful tool to reduce harassment and dogpiling\n\nyou should have control over your experience online\n\nhttps://t.co/x6v5YW0WFT",
+      "user": {
+        "id_str": "1199812749469126657",
+        "is_blue_verified": true,
+        "name": "Bluesky",
+        "profile_image_shape": "Circle",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1738291333268377600/QjJngnVB_normal.jpg",
+        "screen_name": "bluesky",
+        "verified": false
+      }
+    }
+  },
+  {
+    "normalized": [
+      {
+        "collected_via": [
+          "quote"
+        ],
+        "collection_time": "2025-12-17T10:13:43.899571",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [],
+        "id": "1457465550750330883",
+        "lang": "en",
+        "like_count": 30222,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-11-07T21:50:40",
+        "match_query": false,
+        "media_alt_texts": [
+          ""
+        ],
+        "media_files": [
+          "1457465550750330883_nPvNXR5jCB6zj35M.mp4"
+        ],
+        "media_types": [
+          "video"
+        ],
+        "media_urls": [
+          "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/638x798/nPvNXR5jCB6zj35M.mp4"
+        ],
+        "mentioned_ids": [],
+        "mentioned_names": [],
+        "possibly_sensitive": false,
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "reply_count": 1148,
+        "retweet_count": 2040,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "text": "Leo is Mr. Steal Yo Girl https://x.com/2cooI2blog/status/1457245864271953920/video/1",
+        "timestamp_utc": 1636321840,
+        "url": "https://twitter.com/barstoolsports/status/1457465550750330883",
+        "user_id": "22637974",
+        "user_image": "https://pbs.twimg.com/profile_images/1222128514624892935/zC0ABl3m_normal.jpg",
+        "user_is_blue_verified": true,
+        "user_likes": null,
+        "user_lists": null,
+        "user_name": "Barstool Sports",
+        "user_screen_name": "barstoolsports",
+        "user_tweets": null,
+        "user_url": "https://twitter.com/barstoolsports",
+        "user_verified": false,
+        "user_verified_type": "Business"
+      },
+      {
+        "collection_time": "2025-12-17T10:13:43.904052",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [],
+        "id": "1457720343297019909",
+        "lang": "en",
+        "like_count": 236042,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2021-11-08T14:43:07",
+        "match_query": true,
+        "media_alt_texts": [
+          "",
+          ""
+        ],
+        "media_files": [
+          "1457465550750330883_FDrc7LRVQAEMGv2.jpg",
+          "1457465550750330883_nPvNXR5jCB6zj35M.mp4"
+        ],
+        "media_types": [
+          "photo",
+          "video"
+        ],
+        "media_urls": [
+          "https://pbs.twimg.com/media/FDrc7LRVQAEMGv2.jpg",
+          "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/638x798/nPvNXR5jCB6zj35M.mp4"
+        ],
+        "mentioned_ids": [
+          "133880286"
+        ],
+        "mentioned_names": [
+          "leodicaprio"
+        ],
+        "possibly_sensitive": false,
+        "quoted_id": "1457465550750330883",
+        "quoted_timestamp_utc": 1636321840,
+        "quoted_user": "barstoolsports",
+        "quoted_user_id": "22637974",
+        "reply_count": 7727,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "text": "Leo, come over here, I want to show you something\u2026 @LeoDiCaprio https://x.com/JeffBezos/status/1457720343297019909/photo/1 \u00ab barstoolsports: Leo is Mr. Steal Yo Girl https://x.com/2cooI2blog/status/1457245864271953920/video/1 \u2014 https://twitter.com/barstoolsports/status/1457465550750330883 \u00bb",
+        "timestamp_utc": 1636382587,
+        "url": "https://twitter.com/JeffBezos/status/1457720343297019909",
+        "user_id": "15506669",
+        "user_image": "https://pbs.twimg.com/profile_images/1591558315254890500/ETIHb4Nl_normal.jpg",
+        "user_is_blue_verified": true,
+        "user_likes": null,
+        "user_lists": null,
+        "user_name": "Jeff Bezos",
+        "user_screen_name": "JeffBezos",
+        "user_tweets": null,
+        "user_url": "https://twitter.com/JeffBezos",
+        "user_verified": false
+      }
+    ],
+    "source": {
+      "__typename": "Tweet",
+      "conversation_count": 7727,
+      "created_at": "2021-11-08T14:43:07.000Z",
+      "display_text_range": [
+        0,
+        63
+      ],
+      "edit_control": {
+        "edit_tweet_ids": [
+          "1457720343297019909"
+        ],
+        "editable_until_msecs": "1636384387633",
+        "edits_remaining": "5",
+        "is_edit_eligible": true
+      },
+      "entities": {
+        "hashtags": [],
+        "media": [
+          {
+            "display_url": "pic.x.com/KqGLB839NI",
+            "expanded_url": "https://x.com/JeffBezos/status/1457720343297019909/photo/1",
+            "indices": [
+              64,
+              87
+            ],
+            "url": "https://t.co/KqGLB839NI"
+          }
+        ],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "id_str": "133880286",
+            "indices": [
+              51,
+              63
+            ],
+            "name": "Leonardo DiCaprio",
+            "screen_name": "LeoDiCaprio"
+          }
+        ]
+      },
+      "favorite_count": 236042,
+      "id_str": "1457720343297019909",
+      "isEdited": false,
+      "isStaleEdit": false,
+      "lang": "en",
+      "mediaDetails": [
+        {
+          "display_url": "pic.x.com/KqGLB839NI",
+          "expanded_url": "https://x.com/JeffBezos/status/1457720343297019909/photo/1",
+          "ext_media_availability": {
+            "status": "Available"
+          },
+          "indices": [
+            64,
+            87
+          ],
+          "media_url_https": "https://pbs.twimg.com/media/FDrc7LRVQAEMGv2.jpg",
+          "original_info": {
+            "focus_rects": [
+              {
+                "h": 672,
+                "w": 1200,
+                "x": 0,
+                "y": 664
+              },
+              {
+                "h": 1200,
+                "w": 1200,
+                "x": 0,
+                "y": 400
+              },
+              {
+                "h": 1368,
+                "w": 1200,
+                "x": 0,
+                "y": 232
+              },
+              {
+                "h": 1600,
+                "w": 800,
+                "x": 200,
+                "y": 0
+              },
+              {
+                "h": 1600,
+                "w": 1200,
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "height": 1600,
+            "width": 1200
+          },
+          "sizes": {
+            "large": {
+              "h": 1600,
+              "resize": "fit",
+              "w": 1200
+            },
+            "medium": {
+              "h": 1200,
+              "resize": "fit",
+              "w": 900
+            },
+            "small": {
+              "h": 680,
+              "resize": "fit",
+              "w": 510
+            },
+            "thumb": {
+              "h": 150,
+              "resize": "crop",
+              "w": 150
+            }
+          },
+          "type": "photo",
+          "url": "https://t.co/KqGLB839NI"
+        }
+      ],
+      "news_action_type": "conversation",
+      "photos": [
+        {
+          "backgroundColor": {
+            "blue": 221,
+            "green": 214,
+            "red": 204
+          },
+          "cropCandidates": [
+            {
+              "h": 672,
+              "w": 1200,
+              "x": 0,
+              "y": 664
+            },
+            {
+              "h": 1200,
+              "w": 1200,
+              "x": 0,
+              "y": 400
+            },
+            {
+              "h": 1368,
+              "w": 1200,
+              "x": 0,
+              "y": 232
+            },
+            {
+              "h": 1600,
+              "w": 800,
+              "x": 200,
+              "y": 0
+            },
+            {
+              "h": 1600,
+              "w": 1200,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "expandedUrl": "https://x.com/JeffBezos/status/1457720343297019909/photo/1",
+          "height": 1600,
+          "url": "https://pbs.twimg.com/media/FDrc7LRVQAEMGv2.jpg",
+          "width": 1200
+        }
+      ],
+      "possibly_sensitive": false,
+      "quoted_tweet": {
+        "created_at": "2021-11-07T21:50:40.000Z",
+        "display_text_range": [
+          0,
+          48
+        ],
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1457465550750330883"
+          ],
+          "editable_until_msecs": "1636323640356",
+          "edits_remaining": "5",
+          "is_edit_eligible": true
+        },
+        "entities": {
+          "hashtags": [],
+          "media": [
+            {
+              "display_url": "pic.x.com/PkwcRcoFvS",
+              "expanded_url": "https://x.com/2cooI2blog/status/1457245864271953920/video/1",
+              "indices": [
+                25,
+                48
+              ],
+              "url": "https://t.co/PkwcRcoFvS"
+            }
+          ],
+          "symbols": [],
+          "urls": [],
+          "user_mentions": []
+        },
+        "favorite_count": 30222,
+        "id_str": "1457465550750330883",
+        "isEdited": false,
+        "isStaleEdit": false,
+        "lang": "en",
+        "mediaDetails": [
+          {
+            "additional_media_info": {},
+            "display_url": "pic.x.com/PkwcRcoFvS",
+            "expanded_url": "https://x.com/2cooI2blog/status/1457245864271953920/video/1",
+            "ext_media_availability": {
+              "status": "Available"
+            },
+            "indices": [
+              25,
+              48
+            ],
+            "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1457245836606324736/pu/img/EOCvhNiyAanLa19H.jpg",
+            "original_info": {
+              "focus_rects": [],
+              "height": 798,
+              "width": 638
+            },
+            "sizes": {
+              "large": {
+                "h": 798,
+                "resize": "fit",
+                "w": 638
+              },
+              "medium": {
+                "h": 798,
+                "resize": "fit",
+                "w": 638
+              },
+              "small": {
+                "h": 680,
+                "resize": "fit",
+                "w": 544
+              },
+              "thumb": {
+                "h": 150,
+                "resize": "crop",
+                "w": 150
+              }
+            },
+            "type": "video",
+            "url": "https://t.co/PkwcRcoFvS",
+            "video_info": {
+              "aspect_ratio": [
+                319,
+                399
+              ],
+              "duration_millis": 6366,
+              "variants": [
+                {
+                  "content_type": "application/x-mpegURL",
+                  "url": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/pl/LUCj-PbJzCqxuPt0.m3u8?tag=12&v=44b"
+                },
+                {
+                  "bitrate": 632000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/320x400/0Dn2_L3rSmL92Vpt.mp4?tag=12"
+                },
+                {
+                  "bitrate": 950000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/480x600/NQonfn0lnyYwlNcl.mp4?tag=12"
+                },
+                {
+                  "bitrate": 2176000,
+                  "content_type": "video/mp4",
+                  "url": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/638x798/nPvNXR5jCB6zj35M.mp4?tag=12"
+                }
+              ]
+            }
+          }
+        ],
+        "photos": [],
+        "possibly_sensitive": false,
+        "reply_count": 1148,
+        "retweet_count": 2040,
+        "text": "Leo is Mr. Steal Yo Girl https://t.co/PkwcRcoFvS",
+        "user": {
+          "id_str": "22637974",
+          "is_blue_verified": true,
+          "name": "Barstool Sports",
+          "profile_image_shape": "Square",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1222128514624892935/zC0ABl3m_normal.jpg",
+          "screen_name": "barstoolsports",
+          "verified": false,
+          "verified_type": "Business"
+        },
+        "video": {
+          "aspectRatio": [
+            319,
+            399
+          ],
+          "contentType": "media_entity",
+          "durationMs": 6366,
+          "mediaAvailability": {
+            "status": "available"
+          },
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1457245836606324736/pu/img/EOCvhNiyAanLa19H.jpg",
+          "variants": [
+            {
+              "src": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/pl/LUCj-PbJzCqxuPt0.m3u8?tag=12&v=44b",
+              "type": "application/x-mpegURL"
+            },
+            {
+              "src": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/320x400/0Dn2_L3rSmL92Vpt.mp4?tag=12",
+              "type": "video/mp4"
+            },
+            {
+              "src": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/480x600/NQonfn0lnyYwlNcl.mp4?tag=12",
+              "type": "video/mp4"
+            },
+            {
+              "src": "https://video.twimg.com/ext_tw_video/1457245836606324736/pu/vid/638x798/nPvNXR5jCB6zj35M.mp4?tag=12",
+              "type": "video/mp4"
+            }
+          ],
+          "videoId": {
+            "id": "1457465550750330883",
+            "type": "tweet"
+          },
+          "viewCount": 0
+        }
+      },
+      "text": "Leo, come over here, I want to show you something\u2026 @LeoDiCaprio https://t.co/KqGLB839NI",
+      "user": {
+        "highlighted_label": {
+          "badge": {
+            "url": "https://pbs.twimg.com/profile_images/1912984084516831232/BHv0mcPd_bigger.jpg"
+          },
+          "description": "Amazon",
+          "url": {
+            "url": "https://twitter.com/amazon",
+            "url_type": "DeepLink"
+          },
+          "user_label_display_type": "Badge",
+          "user_label_type": "BusinessLabel"
+        },
+        "id_str": "15506669",
+        "is_blue_verified": true,
+        "name": "Jeff Bezos",
+        "profile_image_shape": "Circle",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1591558315254890500/ETIHb4Nl_normal.jpg",
+        "screen_name": "JeffBezos",
+        "verified": false
+      }
+    }
+  },
+  {
+    "normalized": [
+      {
+        "collection_time": "2025-12-17T10:20:20.362270",
+        "coordinates": null,
+        "domains": [],
+        "hashtags": [],
+        "id": "1482900151027052550",
+        "lang": "en",
+        "like_count": 97,
+        "links": [],
+        "links_to_resolve": false,
+        "local_time": "2022-01-17T02:18:41",
+        "match_query": true,
+        "media_alt_texts": [],
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "mentioned_ids": [],
+        "mentioned_names": [],
+        "quoted_id": null,
+        "quoted_timestamp_utc": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "reply_count": 7,
+        "retweeted_id": null,
+        "retweeted_timestamp_utc": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "text": "The governor does not have the authority to put our children\u2019s lives in danger. There are children and teachers with sickle cell, cancer and other illnesses whose lives would be on the line. Our teachers, SB and students have enough to content with. Stop wasting their time.",
+        "timestamp_utc": 1642385921,
+        "to_tweetid": "1482900149336608769",
+        "to_userid": "1338350035361292291",
+        "to_username": "CandiMundonKing",
+        "url": "https://twitter.com/CandiMundonKing/status/1482900151027052550",
+        "user_id": "1338350035361292291",
+        "user_image": "https://pbs.twimg.com/profile_images/1500282884573347846/C955Af5j_normal.jpg",
+        "user_is_blue_verified": false,
+        "user_likes": null,
+        "user_lists": null,
+        "user_name": "Delegate Candi Mundon King",
+        "user_screen_name": "CandiMundonKing",
+        "user_tweets": null,
+        "user_url": "https://twitter.com/CandiMundonKing",
+        "user_verified": false
+      }
+    ],
+    "source": {
+      "__typename": "Tweet",
+      "conversation_count": 7,
+      "created_at": "2022-01-17T02:18:41.000Z",
+      "display_text_range": [
+        0,
+        274
+      ],
+      "edit_control": {
+        "edit_tweet_ids": [
+          "1482900151027052550"
+        ],
+        "editable_until_msecs": "1642387721614",
+        "edits_remaining": "5",
+        "is_edit_eligible": true
+      },
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": []
+      },
+      "favorite_count": 97,
+      "id_str": "1482900151027052550",
+      "in_reply_to_screen_name": "CandiMundonKing",
+      "in_reply_to_status_id_str": "1482900149336608769",
+      "in_reply_to_user_id_str": "1338350035361292291",
+      "isEdited": false,
+      "isStaleEdit": false,
+      "lang": "en",
+      "news_action_type": "conversation",
+      "parent": {
+        "created_at": "2022-01-17T02:18:41.000Z",
+        "display_text_range": [
+          0,
+          247
+        ],
+        "edit_control": {
+          "edit_tweet_ids": [
+            "1482900149336608769"
+          ],
+          "editable_until_msecs": "1642387721211",
+          "edits_remaining": "5",
+          "is_edit_eligible": true
+        },
+        "entities": {
+          "hashtags": [],
+          "symbols": [],
+          "urls": [],
+          "user_mentions": []
+        },
+        "favorite_count": 49,
+        "id_str": "1482900149336608769",
+        "isEdited": false,
+        "isStaleEdit": false,
+        "lang": "en",
+        "reply_count": 3,
+        "retweet_count": 9,
+        "text": "Last year, we passed legislation to ensure children could be in school safely. That means following CDC guidelines. That includes following the science around masks. The bill had bipartisan support because our children are not political footballs.",
+        "user": {
+          "id_str": "1338350035361292291",
+          "is_blue_verified": false,
+          "name": "Delegate Candi Mundon King",
+          "profile_image_shape": "Circle",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1500282884573347846/C955Af5j_normal.jpg",
+          "screen_name": "CandiMundonKing",
+          "verified": false
+        }
+      },
+      "text": "The governor does not have the authority to put our children\u2019s lives in danger. There are children and teachers with sickle cell, cancer and other illnesses whose lives would be on the line. Our teachers, SB and students have enough to content with. Stop wasting their time.",
+      "user": {
+        "id_str": "1338350035361292291",
+        "is_blue_verified": false,
+        "name": "Delegate Candi Mundon King",
+        "profile_image_shape": "Circle",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1500282884573347846/C955Af5j_normal.jpg",
+        "screen_name": "CandiMundonKing",
+        "verified": false
+      }
+    }
+  }
+]

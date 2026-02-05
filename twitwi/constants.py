@@ -39,7 +39,9 @@ TWEET_FIELDS = [
     "lng",                      # longitude of messages geolocalized
     "user_id",                  # author's user digital ID
     "user_name",                # author's detailed textual name (at collection time)
-    "user_verified",            # whether the author's account is certified
+    "user_verified",            # whether the author's account is certified (classical certification). Note that it is falsely set to false when the verified type is set.
+    "user_verified_type",       # type of certification of the author's account (Government, Business, etc.)
+    "user_is_blue_verified",    # whether the author's account is certified with a blue badge (since 2023)
     "user_description",         # description given in the author's profile (at collection time)
     "user_url",                 # link to a website given in the author's profile (at collection time)
     "user_image",               # link to the image avatar of the author's profile (at collection time)
@@ -211,7 +213,7 @@ TWEET_PLURAL_FIELDS = {
     "mentions",
 }
 
-TWEET_BOOLEAN_FIELDS = {"possibly_sensitive", "user_verified", "match_query"}
+TWEET_BOOLEAN_FIELDS = {"possibly_sensitive", "user_verified", "user_is_blue_verified", "match_query"}
 
 # More details on Twitter's users metadata can be read here: https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
 USER_FIELDS = [
