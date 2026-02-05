@@ -4,7 +4,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7aazmldai25",
     "domains": [],
@@ -37,7 +36,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqrjojp2o",
     "domains": [
@@ -77,7 +75,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqqgw622p",
     "domains": [],
@@ -122,7 +119,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqrq7ol2i",
     "domains": [
@@ -157,7 +153,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqrr3rk25",
     "domains": [],
@@ -196,7 +191,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqqc2vc2z",
     "domains": [
@@ -239,7 +233,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqsq3xk2h",
     "domains": [
@@ -274,7 +267,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqr7la225",
     "domains": [],
@@ -321,7 +313,6 @@
     "collected_via": [
       "firehose"
     ],
-    "collection_source": "firehose",
     "collection_time": "2025-01-01T00:00:00.000000",
     "did": "3m7hzqjyes22l",
     "domains": [],

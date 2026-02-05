@@ -629,7 +629,7 @@ def process_post_thread_info(reply_data: Dict, post: Dict):
 
 # Handle quotes & medias
 # Warning: mutates post, links and referenced_posts
-def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str, media_data: List[Dict], extra_links: List[str], locale: Optional[Any], extract_referenced_posts: bool, referenced_posts: Dict, data: Dict = {}) -> str:
+def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str, media_data: List[Dict], extra_links: List[str], locale: Optional[Any], extract_referenced_posts: bool = False, referenced_posts: Dict = {}, data: Dict = {}) -> str:
     media_ids = set()
     embed = record["embed"]
     quoted_data = None
@@ -976,6 +976,25 @@ def process_thread_posts_from_feed(reply_data: Dict, post: Dict, locale: Optiona
         # TODO ? Shall we do anything from that?
         pass
 
+# Warning: mutates post
+def handle_text_and_datetime_fields(data: Dict, post: Dict, locale: Optional[Any] = None) -> str:
+    # Store original text and prepare text for quotes & medias enriched version
+    post["original_text"] = data["record"]["text"]
+    text = post["original_text"].encode("utf-8")
+
+    # Handle datetime fields
+    post["collection_time"] = get_collection_time()
+    post["timestamp_utc"], post["local_time"] = get_dates(
+        data["record"]["createdAt"], locale=locale, source="bluesky"
+    )
+    # Completing year with less than 4 digits as in some posts: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
+    # len 26 example: '2023-06-15T12:34:56.789000'
+    while len(post["local_time"]) < 26 and len(post["local_time"].split("-")[0]) < 4:
+        post["local_time"] = "0" + post["local_time"]
+
+    return text
+
+
 
 
 @overload
@@ -1052,19 +1071,8 @@ def normalize_post(
 
     post = {}
 
-    # Store original text and prepare text for quotes & medias enriched version
-    post["original_text"] = data["record"]["text"]
-    text = post["original_text"].encode("utf-8")
-
-    # Handle datetime fields
-    post["collection_time"] = get_collection_time()
-    post["timestamp_utc"], post["local_time"] = get_dates(
-        data["record"]["createdAt"], locale=locale, source="bluesky"
-    )
-    # Completing year with less than 4 digits as in some posts: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
-    # len 26 example: '2023-06-15T12:34:56.789000'
-    while len(post["local_time"]) < 26 and len(post["local_time"].split("-")[0]) < 4:
-        post["local_time"] = "0" + post["local_time"]
+    # Warning: mutates post
+    text = handle_text_and_datetime_fields(data, post, locale)
     post["indexed_at_utc"] = data["indexedAt"]
 
     # Handle post/user identifiers
@@ -1258,7 +1266,7 @@ def normalize_partial_post(
         )
 
     if collection_source not in ["firehose", "tap", "unit_test"]:
-        raise ValueError(f"collection_source must be either 'firehose' or 'tap', got: {collection_source}")
+        raise ValueError(f"collection_source must be either 'firehose', 'tap' or 'unit_test', got: {collection_source}")
 
     if collection_source == "firehose":
         post_field = "commit"
@@ -1282,25 +1290,10 @@ def normalize_partial_post(
     else:
         data = payload
 
-    referenced_posts = {}
-
     post = {}
 
-    post["collection_source"] = collection_source
-
-    # Store original text and prepare text for quotes & medias enriched version
-    post["original_text"] = data[post_field]["record"]["text"]
-    text = post["original_text"].encode("utf-8")
-
-    # Handle datetime fields
-    post["collection_time"] = get_collection_time()
-    post["timestamp_utc"], post["local_time"] = get_dates(
-        data[post_field]["record"]["createdAt"], locale=locale, source="bluesky"
-    )
-    # Completing year with less than 4 digits as in some posts: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
-    # len 26 example: '2023-06-15T12:34:56.789000'
-    while len(post["local_time"]) < 26 and len(post["local_time"].split("-")[0]) < 4:
-        post["local_time"] = "0" + post["local_time"]
+    # Warning: mutates post
+    text = handle_text_and_datetime_fields(data[post_field], post, locale)
     post["firehose_timestamp_us"] = data["time_us"] if collection_source == "firehose" else None
 
     # Handle post/user identifiers
@@ -1346,8 +1339,6 @@ def normalize_partial_post(
             media_data,
             extra_links,
             locale,
-            False,
-            referenced_posts,
         )
 
 
