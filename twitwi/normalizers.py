@@ -112,18 +112,8 @@ META_FIELDS = [
     "possibly_sensitive",
     "retweet_count",
     "favorite_count",
+    "conversation_count", # equivalent of reply_count in payload without API key
     "reply_count",
-]
-
-META_FIELDS_NO_API_KEY = [
-    "in_reply_to_status_id_str",
-    "in_reply_to_screen_name",
-    "in_reply_to_user_id_str",
-    "lang",
-    "possibly_sensitive",
-    "retweet_count",
-    "favorite_count",
-    "conversation_count",
 ]
 
 META_FIELD_TRANSLATIONS = {
@@ -131,14 +121,7 @@ META_FIELD_TRANSLATIONS = {
     "in_reply_to_screen_name": "to_username",
     "in_reply_to_user_id_str": "to_userid",
     "favorite_count": "like_count",
-}
-
-META_FIELD_TRANSLATIONS_NO_API_KEY = {
-    "in_reply_to_status_id_str": "to_tweetid",
-    "in_reply_to_screen_name": "to_username",
-    "in_reply_to_user_id_str": "to_userid",
-    "favorite_count": "like_count",
-    "conversation_count": "reply_count",
+    "conversation_count": "reply_count", # equivalent of reply_count in payload without API key
 }
 
 USER_META_FIELDS = [
@@ -172,21 +155,11 @@ def grab_extra_meta(source, result, locale=None, source_version: str = "v1"):
         # TODO: this is hardly optimal
         result["coordinates"] = None
 
-    if source_version == "v1":
-        for meta in META_FIELDS:
-            if meta in source:
-                result[META_FIELD_TRANSLATIONS.get(meta, meta)] = source[meta]
-            elif nostr_field(meta) in source:
-                result[meta] = str(source[nostr_field(meta)])
-
-    elif source_version == "no_api_key":
-        for meta in META_FIELDS_NO_API_KEY:
-            if meta in source:
-                result[META_FIELD_TRANSLATIONS_NO_API_KEY.get(meta, meta)] = source[meta]
-            elif nostr_field(meta) in source:
-                result[meta] = str(source[nostr_field(meta)])
-    else:
-        raise TwitwiError("source_version should be one of v1 or no_api_key")
+    for meta in META_FIELDS:
+        if meta in source:
+            result[META_FIELD_TRANSLATIONS.get(meta, meta)] = source[meta]
+        elif nostr_field(meta) in source:
+            result[meta] = str(source[nostr_field(meta)])
 
 
     # impression_count when scraping
