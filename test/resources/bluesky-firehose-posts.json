@@ -1,0 +1,529 @@
+[
+    {
+        "did": "did:plc:uu5mtxzumfsy5hqknfetoyft",
+        "time_us": 1764929823464700,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7aazmlmyy25",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7aazmldai25",
+            "record": {"$type": "app.bsky.feed.post", "createdAt": "2025-12-05T10:16:59.78349200Z", "text": "all that i got is what you see, and isn't a lot, just lil' ol' me."},
+            "cid": "bafyreiax5xxi5sjaorti75ll6nbjudfzelqopzobaurtl23ytdiobzjc4y"
+        }
+    },
+    {
+        "did": "did:plc:vckwyfbegq5i4fzdzkxtdzih",
+        "time_us": 1765196888459879,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqrk37x2o",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqrjojp2o",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:07.000Z",
+                "embed": {
+                    "$type": "app.bsky.embed.external",
+                    "external": {
+                        "description": "",
+                        "thumb": {
+                            "$type": "blob",
+                            "ref": {
+                                "$link": "bafkreidipgz7xikculcjhcsqxtgve7vu7cclccd2ewafc4qb67npdygega"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 55464
+                        },
+                        "title": "CLIQ Portable Chair - Lightweight Folding Chair for Camping - Supports 300 Lbs - Perfect for Outdoor Adventures",
+                        "uri": "https://www.amazon.com/dp/B0B8H1C4GM?tag=douglas0bd0-20"
+                    }
+                },
+                "facets": [
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "outdoor"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 120,
+                            "byteStart": 112
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "hiking"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 128,
+                            "byteStart": 121
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "CLIQ"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 134,
+                            "byteStart": 129
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "lightweight"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 147,
+                            "byteStart": 135
+                        }
+                    }
+                ],
+                "langs": [
+                    "en-US"
+                ],
+                "text": "CLIQ Portable Chair - Lightweight Folding Chair for Camping - Supports 300 Lbs - Perfect for Outdoor Adventures #outdoor #hiking #CLIQ #lightweight"
+            },
+            "cid": "bafyreihgm6ud2rutiowakudp2i65zg35eoujyvfppcouikeykkttktonti"
+        }
+    },
+    {
+        "did": "did:plc:als3olc4h5kbm5ntevl7mexn",
+        "time_us": 1765196888468708,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqrrvmh2s",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqqgw622p",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:06.864Z",
+                "langs": [
+                    "en"
+                ],
+                "reply": {
+                    "parent": {
+                        "cid": "bafyreiefk5svmt6oxeci5terg2gx34xixgh7jybhvmhlrvpvfiztaxv7su",
+                        "uri": "at://did:plc:4h65nhr2m7biwnispzw7ewqg/app.bsky.feed.post/3m7hfm6ym5s2z"
+                    },
+                    "root": {
+                        "cid": "bafyreiefk5svmt6oxeci5terg2gx34xixgh7jybhvmhlrvpvfiztaxv7su",
+                        "uri": "at://did:plc:4h65nhr2m7biwnispzw7ewqg/app.bsky.feed.post/3m7hfm6ym5s2z"
+                    }
+                },
+                "text": "Beautiful colors.  🍁"
+            },
+            "cid": "bafyreihpiytltb4gymt7cnjj7qqdnqkrsdqrirzg4bthzlvjn4bucjb3f4"
+        }
+    },
+    {
+        "did": "did:plc:kuym5x2wlgqposqke54avldl",
+        "time_us": 1765196888471245,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqrqlfl2i",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqrq7ol2i",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:08.150931+00:00",
+                "embed": {
+                    "$type": "app.bsky.embed.external",
+                    "external": {
+                        "$type": "app.bsky.embed.external#external",
+                        "description": "シューティングゲーム『カラス』が2025年11月27日にSteamで配信されることを発表しました。\n\nさらに、オリジナルサウンドトラック『KAROUS original soundtrack SPRING RAIN』とアレンジサウンドトラック『KAROUS remixed soundtrack DEFECT IN MY HEAD』の発売も知らせています。\n\n『KAROUS original soundtrack SPRING RAIN』は、2007年の発売以来再版されておらず、クラウドファンディングの支援を受けて復刻が決定しました。\n\nこのサウンドトラックには、ゲーム中の全楽曲に加えて7曲のリミックスも収録されています。\n\n一方、アレンジサウンドトラック『KAROUS remixed soundtrack DEFECT IN MY HEAD』では、オリジナルのリミックスバージョンや未音源化楽曲が含まれています。\n\n両方のサウンドトラックは2025年12月25日に発売予定で、希望小売価格は3,000円（税抜）です。\n\n加えて、2022年に発売された『イルベロスウォンプ オリジナル サウンドトラック』も、12月中旬からサブスク音楽配信サービスで順次提供されます。\n\n『カラス』のSteam配信は2026年1月22日を予定しており、希望小売価格は3,800円（税抜）となっています。\n\nゲームやサウンドトラックの魅力を詰め込んだリリースに、期待が高まります。",
+                        "title": "シューティングゲーム『カラス』Steam配信決定！待望のサウンドトラックも発売予定 - AIゲームまとめ",
+                        "uri": "https://gaming-matome.com/?p=14256"
+                    }
+                },
+                "langs": [
+                    "en"
+                ],
+                "text": "シューティングゲーム『カラス』Steam配信決定！待望のサウンドトラックも発売予定 - AIゲームまとめ\n\n▼詳細はこちら"
+            },
+            "cid": "bafyreidli7b57fy6d4w5lrnuyyqwazznusujnsjwezhg4xrrsoqbliqkny"
+        }
+    },
+    {
+        "did": "did:plc:p5bhraeyrta4wk5gxqsfo7xm",
+        "time_us": 1765196888487650,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqrv3hk2j",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqrr3rk25",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:08.246Z",
+                "facets": [
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "Regionaljournal"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 50,
+                            "byteStart": 34
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "Radio"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 149,
+                            "byteStart": 143
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "SRF"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 154,
+                            "byteStart": 150
+                        }
+                    }
+                ],
+                "langs": [
+                    "de"
+                ],
+                "text": "Hurra (Huaa), der Mann vom Berner #Regionaljournal ist nun auch aufs propere Bühnendeutsch gekommen (grad den einschlägigen Bühnen-Kuas von #Radio #SRF durchlaufen?): \"Imma mea Tuuistn im Bena Obaland\"). Toll, Aadio Hannowa nun auch in Abländschen."
+            },
+            "cid": "bafyreigh3pn4esqh72mak6a5gzs7t2zdpuugnisg7y4xgmruwsoycvmzwa"
+        }
+    },
+    {
+        "did": "did:plc:6jrgkhgxjkwn6kn72pdj325g",
+        "time_us": 1765196888764402,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqrmf3r2r",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqqc2vc2z",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:06.706Z",
+                "embed": {
+                    "$type": "app.bsky.embed.external",
+                    "external": {
+                        "description": "Hand sanitizer or soap: When you want to disinfect your hands fast, what works best?",
+                        "thumb": {
+                            "$type": "blob",
+                            "ref": {
+                                "$link": "bafkreidmeixjyjgs3puoiita4gjtymotonowthji3arzeeypjh6roj2y7y"
+                            },
+                            "mimeType": "image/jpeg",
+                            "size": 569676
+                        },
+                        "title": "Which Is Best, Hand Sanitizer or Soap and Water?",
+                        "uri": "https://sm.eatright.org/soapvsanitizer"
+                    }
+                },
+                "facets": [
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "Handwashing"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 87,
+                            "byteStart": 75
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#link",
+                                "uri": "https://sm.eatright.org/soapvsanitizer"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 173,
+                            "byteStart": 143
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "eatright"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 184,
+                            "byteStart": 175
+                        }
+                    },
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#tag",
+                                "tag": "foodsafety"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 196,
+                            "byteStart": 185
+                        }
+                    }
+                ],
+                "langs": [
+                    "en"
+                ],
+                "text": "Which is more effective: Hand sanitizer or soap and water? During National #Handwashing Awareness Week, review these guidelines to learn more: sm.eatright.org/soapvsanitizer  #eatright #foodsafety"
+            },
+            "cid": "bafyreieuo23tsud7kjh22tznpsd4em2pmqj74hiublkwro5mqejyzwflcq"
+        }
+    },
+    {
+        "did": "did:plc:tlo5etp4tntwlbeu4b55jbvv",
+        "time_us": 1765196889669594,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqsyd2i2d",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqsq3xk2h",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:09.263Z",
+                "embed": {
+                    "$type": "app.bsky.embed.external",
+                    "external": {
+                        "description": "Prof. Dr. Aline Deicke (Philipps-Universität Marburg)",
+                        "title": "Disiecta Membra als disiecta data? Herausforderungen in einem archäologischen Langzeitvorhaben",
+                        "uri": "https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/2025-26/n/disiecta-membra-als-disiecta-data-herausforderungen-in-einem-archaeologischen-langzeitvorhaben-245593/"
+                    }
+                },
+                "facets": [
+                    {
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#link",
+                                "uri": "https://www.germanistik.uni-rostock.de/forschung/digital-humanities/rosdh/ringvorlesung/2025-26/n/disiecta-membra-als-disiecta-data-herausforderungen-in-einem-archaeologischen-langzeitvorhaben-245593/"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 296,
+                            "byteStart": 250
+                        }
+                    }
+                ],
+                "langs": [
+                    "de"
+                ],
+                "text": "Today there's another lecture in the lecture series of the German Studies working group at the University of Rostock. Title: Digital Humanities in Focus: Methods, Applications, and Perspectives. Today at 5:15 pm, transmitted via zoom! Don't miss it! www.germanistik.uni-rostock.de/forschung/di..."
+            },
+            "cid": "bafyreia44h4xsdymnop5erua2gdkx6djxswnflkpt677qykkt6hk4zu4ve"
+        }
+    },
+    {
+        "did": "did:plc:6yvceec5j3d7h263v35vw43j",
+        "time_us": 1765196889867723,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqsmivr2a",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqr7la225",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:07.671Z",
+                "embed": {
+                    "$type": "app.bsky.embed.images",
+                    "images": [
+                        {
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 422,
+                                "width": 750
+                            },
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreieqimliw3k4txlm2indy55zjjxcjccnhnbukgnvxrmazmylgf3hrm"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 115575
+                            }
+                        },
+                        {
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 960,
+                                "width": 688
+                            },
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreifn2npr3cccajplmwenrcvgqpcowuu5jtsbbvrpgcjzoa3tqjk6qy"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 363745
+                            }
+                        },
+                        {
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 960,
+                                "width": 695
+                            },
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreicidyemwsqbq3esidxpvx2aascx3q2rlp67w4luwlumln3curo7xy"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 419712
+                            }
+                        }
+                    ]
+                },
+                "langs": [
+                    "en"
+                ],
+                "text": "\"There are things you know about, and things you don’t, the known and the unknown, and in between are the doors—that’s us.\" ~ Ray Manzarek\n\"If the doors of perception were cleansed, every thing would appear to man as it is: infinite.\"  ~ William Blake, The Marriage of Heaven and Hell, 1790"
+            },
+            "cid": "bafyreigb2kybib6yrd2cpplgwdinfegpt6oy7hpdulz3f2weikv6di5r2m"
+        }
+    },
+    {
+        "did": "did:plc:ljkrr2d7afnjmx3huawzzhf2",
+        "time_us": 1765196890170392,
+        "kind": "commit",
+        "commit": {
+            "rev": "3m7hzqt25re2n",
+            "operation": "create",
+            "collection": "app.bsky.feed.post",
+            "rkey": "3m7hzqjyes22l",
+            "record": {
+                "$type": "app.bsky.feed.post",
+                "createdAt": "2025-12-08T12:28:00.086Z",
+                "embed": {
+                    "$type": "app.bsky.embed.images",
+                    "images": [
+                        {
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 2000,
+                                "width": 1500
+                            },
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreic4ldnxbogu7sca2z22o3awzuoqnugdstm4nlpj37h3atmt5smopm"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 978513
+                            }
+                        },
+                        {
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 2000,
+                                "width": 1500
+                            },
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreiggt4mpekpsdrmut2x4kx3ufgabglw6372nve7y23x2f6a6cracfu"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 989323
+                            }
+                        },
+                        {
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 2000,
+                                "width": 1500
+                            },
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreihcg5isxqeqmgrsd33uahq5q2rnhyqulcbqj7pmspskumyfxtwkcm"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 960701
+                            }
+                        },
+                        {
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 2000,
+                                "width": 1500
+                            },
+                            "image": {
+                                "$type": "blob",
+                                "ref": {
+                                    "$link": "bafkreibmqxhsiqhtcccduahofx74yaurhzyhvk7kzyjhkoojqhwqi77jxe"
+                                },
+                                "mimeType": "image/jpeg",
+                                "size": 978151
+                            }
+                        }
+                    ]
+                },
+                "facets": [
+                    {
+                        "$type": "app.bsky.richtext.facet",
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#mention",
+                                "did": "did:plc:dpham6cjmebj2wjaseb55k32"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 154,
+                            "byteStart": 127
+                        }
+                    },
+                    {
+                        "$type": "app.bsky.richtext.facet",
+                        "features": [
+                            {
+                                "$type": "app.bsky.richtext.facet#mention",
+                                "did": "did:plc:2qbv2k7oxxhkscjrjhqroiwp"
+                            }
+                        ],
+                        "index": {
+                            "byteEnd": 182,
+                            "byteStart": 156
+                        }
+                    }
+                ],
+                "langs": [
+                    "en"
+                ],
+                "text": "Nursery - We’re going on a Christmas Hunt\nRoom 1 - Squirrel’s Snowman\nRoom 2 - Green is for Christmas\nRoom 3 - Dear Santa \n@hareleeshillps.bsky.social \n@hlhnursery255.bsky.social"
+            },
+            "cid": "bafyreigmymmepihunn5eiwrfpu3oeyxyh6kh335slwdjricthbirblxxpu"
+        }
+    }
+]
