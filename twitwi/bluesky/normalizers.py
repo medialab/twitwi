@@ -965,7 +965,7 @@ def process_thread_posts_from_feed(
         nested = normalize_post(
             reply_data["parent"],
             locale=locale,
-            extract_referenced_posts=True,
+            extract_referenced_posts=extract_referenced_posts,
             collection_source="thread",
         )
         # Warning: mutates referenced_posts
@@ -978,7 +978,7 @@ def process_thread_posts_from_feed(
         nested = normalize_post(
             reply_data["root"],
             locale=locale,
-            extract_referenced_posts=True,
+            extract_referenced_posts=extract_referenced_posts,
             collection_source="thread",
         )
         # Warning: mutates referenced_posts
