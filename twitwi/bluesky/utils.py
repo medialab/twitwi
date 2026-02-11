@@ -14,6 +14,26 @@ valid_post_keys = [
     "quoteCount",
 ]
 
+
+valid_firehose_post_payload_keys = [
+    "did",
+    "time_us",
+    "kind",
+    "commit",
+]
+
+
+valid_tap_post_payload_keys = [
+    "live",
+    "did",
+    "rev",
+    "collection",
+    "rkey",
+    "record",
+    "cid",
+]
+
+
 valid_record_keys = ["$type", "createdAt", "text"]
 
 
@@ -23,12 +43,12 @@ valid_author_keys = ["did", "handle", "createdAt"]
 def validate_post_payload(data):
     post = data.get("post", data)
 
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
     for key in valid_post_keys:
         if key not in post:
             return False, f"key {key} is missing from payload: {post}"
-
-    if not isinstance(post["record"], dict):
-        return False, "payload's record is not a dictionary: %s" % post["record"]
 
     for key in valid_record_keys:
         if key not in post["record"]:
@@ -57,6 +77,74 @@ def validate_post_payload(data):
     return True, None
 
 
+def validate_partial_post_payload(data, collection_source: str = "firehose"):
+    if collection_source == "firehose":
+        return validate_firehose_post_payload(data)
+    elif collection_source == "tap":
+        return validate_tap_post_payload(data)
+    else:
+        return (
+            False,
+            f"Unknown collection_source {collection_source} for partial post payload validation",
+        )
+
+
+def validate_firehose_post_payload(data):
+    payload = data.get("post", data)
+    post = payload.get("commit", payload)
+
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
+    for key in valid_firehose_post_payload_keys:
+        if key not in payload:
+            return False, f"key {key} is missing from payload: {post}"
+
+    for key in valid_record_keys:
+        if key not in post["record"]:
+            return False, "key %s is missing from payload's record: %s" % (
+                key,
+                post["record"],
+            )
+
+    if post["record"].get("$type") != "app.bsky.feed.post":
+        return False, "payload's record $type is not a post: %s" % post["record"].get(
+            "$type"
+        )
+
+    return True, None
+
+
+def validate_tap_post_payload(data):
+    payload = data.get("post", data)
+
+    if payload.get("type") != "record":
+        return False, f"payload type is not record: {payload.get('type')}"
+
+    post = payload.get("record", payload)
+
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
+    for key in valid_tap_post_payload_keys:
+        if key not in post:
+            return False, f"key {key} is missing from payload: {post}"
+
+    for key in valid_record_keys:
+        if key not in post["record"]:
+            return False, "key %s is missing from payload's record: %s" % (
+                key,
+                post["record"],
+            )
+
+    if post["record"].get("$type") != "app.bsky.feed.post":
+        return False, "payload's record $type is not a post: %s" % post["record"].get(
+            "$type"
+        )
+
+    return True, None
+
+
 re_embed_types = re.compile(
     r"(?:\.(?:record|recordWithMedia|images|videos?|external|post|embed|links|media|file|viewImages)(?:#.*)?|N\/A|image)$"
 )
@@ -72,6 +160,10 @@ def format_profile_url(user_handle_or_did):
 
 def format_post_url(user_handle_or_did, post_did, post_splitter="/post/"):
     return f"https://bsky.app/profile/{user_handle_or_did}{post_splitter}{post_did}"
+
+
+def format_post_uri(user_did, post_did):
+    return f"at://{user_did}/app.bsky.feed.post/{post_did}"
 
 
 def parse_post_url(url, source):
@@ -143,3 +235,9 @@ def format_media_url(user_did, media_cid, mime_type, source):
     else:
         raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb
+
+
+def format_external_embed_thumbnail_url(thumbnail_cid: str, user_did: str) -> str:
+    return (
+        f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{thumbnail_cid}@jpeg"
+    )

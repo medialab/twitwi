@@ -1,5 +1,5 @@
 from copy import deepcopy
-from typing import List, Dict, Union, Optional, Literal, Any, overload
+from typing import List, Dict, Union, Optional, Literal, Any, overload, Tuple, Set
 
 from ural import is_url
 
@@ -12,15 +12,23 @@ from twitwi.utils import (
 )
 from twitwi.bluesky.utils import (
     validate_post_payload,
+    validate_partial_post_payload,
     valid_embed_type,
     format_profile_url,
     format_post_url,
+    format_post_uri,
     parse_post_url,
     parse_post_uri,
     format_starterpack_url,
     format_media_url,
+    format_external_embed_thumbnail_url,
 )
-from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost
+from twitwi.bluesky.types import (
+    BlueskyProfile,
+    BlueskyPartialProfile,
+    BlueskyPost,
+    BlueskyPartialPost,
+)
 
 
 def normalize_profile(data: Dict, locale: Optional[Any] = None) -> BlueskyProfile:
@@ -150,30 +158,25 @@ def process_starterpack_card(embed_data, post):
         post["card_title"] = card.get("name", "")
         post["card_description"] = card.get("description", "")
         post["card_thumbnail"] = card.get("thumb", "")
-    return post
 
 
+# Warning: mutates post
 def process_card_data(embed_data, post):
-    # Warning: mutates post
-
     post["card_link"] = embed_data["uri"]
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
-    if isinstance(embed_data.get("thumb"), dict) and embed_data["thumb"].get(
-        "ref", {}
-    ).get("$link"):
-        media_cid = embed_data["thumb"]["ref"]["$link"]
-        post["card_thumbnail"] = (
-            f"https://cdn.bsky.app/img/feed_thumbnail/plain/{post['user_did']}/{media_cid}@jpeg"
-        )
-    else:
-        post["card_thumbnail"] = embed_data.get("thumb", "")
-    return post
+
+    thumbnail_cid = embed_data.get("thumb", {}).get("ref", {}).get("$link", "")
+
+    post["card_thumbnail"] = (
+        format_external_embed_thumbnail_url(thumbnail_cid, post["user_did"])
+        if thumbnail_cid
+        else ""
+    )
 
 
+# Warning: mutates post and links
 def prepare_quote_data(embed_quote, card_data, post, links):
-    # Warning: mutates post and links
-
     quoted_data = None
 
     post["quoted_cid"] = embed_quote["cid"]
@@ -224,9 +227,10 @@ def prepare_quote_data(embed_quote, card_data, post, links):
                     post["quoted_url"], post["url"]
                 )
 
-    return (post, quoted_data, links)
+    return quoted_data
 
 
+# Warning: mutates referenced_posts
 def merge_nested_posts(referenced_posts, nested, source):
     for new_post in nested:
         ordered_id = "%s_%s" % (new_post["did"], new_post["user_handle"])
@@ -248,138 +252,13 @@ def merge_nested_posts(referenced_posts, nested, source):
                             "a nested post appearing twice in the same payload has some diverging metadata for key %s: %s / %s"
                             % (key, old_post[key], new_post[key]),
                         )
-    return referenced_posts
 
 
-@overload
-def normalize_post(
-    payload: Dict,
-    locale: Optional[str] = ...,
-    extract_referenced_posts: Literal[True] = ...,
-    collection_source: Optional[str] = ...,
-) -> List[BlueskyPost]: ...
-
-
-@overload
-def normalize_post(
-    payload: Dict,
-    locale: Optional[str] = ...,
-    extract_referenced_posts: Literal[False] = ...,
-    collection_source: Optional[str] = ...,
-) -> BlueskyPost: ...
-
-
-def normalize_post(
-    payload: Dict,
-    locale: Optional[Any] = None,
-    extract_referenced_posts: bool = False,
-    collection_source: Optional[str] = None,
-) -> Union[BlueskyPost, List[BlueskyPost]]:
-    """
-    Function "normalizing" a post as returned by Bluesky's API in order to
-    cleanup and optimize some fields.
-
-    Args:
-        payload (dict): post or feed payload json dict from Bluesky API.
-        locale (pytz.timezone, optional): Timezone for date conversions.
-        extract_referenced_posts (bool, optional): Whether to return, in
-            addition to the original post, also the full list of posts
-            found in the given payload (including the tree of quoted posts
-            as well as the parent and root posts of the thread if the post
-            comes as an answer to another one). Defaults
-            to `False`.
-        collection_source (str, optional): string explaining how the post
-            was collected. Defaults to `None`.
-
-    Returns:
-        (dict or list): Either a single post dict or a list of post dicts if
-            `extract_referenced_posts` was set to `True`.
-
-    """
-
-    if not isinstance(payload, dict):
-        raise BlueskyPayloadError(
-            "UNKNOWN", f"data provided to normalize_post is not a dictionary: {payload}"
-        )
-
-    valid, error = validate_post_payload(payload)
-    if not valid:
-        raise BlueskyPayloadError(
-            payload.get("uri", payload.get("post", {}).get("uri", "UNKNOWN")),
-            f"data provided to normalize_post is not a standard Bluesky post or feed payload:\n{error}",
-        )
-
-    if "post" in payload:
-        data = payload["post"]
-        reply_data = payload.get("reply")
-        repost_data = payload.get("reason")
-    else:
-        data = payload
-        reply_data = None
-        repost_data = None
-
-    if extract_referenced_posts:
-        referenced_posts = {}
-
-    if collection_source is None:
-        collection_source = data.get("collection_source")
-
-    post = {}
-
-    # Store original text and prepare text for quotes & medias enriched version
-    post["original_text"] = data["record"]["text"]
-    text = post["original_text"].encode("utf-8")
-
-    # Handle datetime fields
-    post["collection_time"] = get_collection_time()
-    post["timestamp_utc"], post["local_time"] = get_dates(
-        data["record"]["createdAt"], locale=locale, source="bluesky"
-    )
-    # Completing year with less than 4 digits as in some posts: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
-    # len 26 example: '2023-06-15T12:34:56.789000'
-    while len(post["local_time"]) < 26 and len(post["local_time"].split("-")[0]) < 4:
-        post["local_time"] = "0" + post["local_time"]
-    post["indexed_at_utc"] = data["indexedAt"]
-
-    # Handle post/user identifiers
-    post["cid"] = data["cid"]
-    post["uri"] = data["uri"]
-    post["user_did"], post["did"] = parse_post_uri(data["uri"])
-    post["user_handle"] = data["author"]["handle"]
-    post["user_url"] = format_profile_url(post["user_handle"])
-    # example: https://bsky.app/profile/did:plc:n5pm4vggu475okayqvqipkoh/post/3lmdcgp3a7cnd
-    if post["user_handle"] == "handle.invalid":
-        post["url"] = format_post_url(post["user_did"], post["did"])
-    else:
-        post["url"] = format_post_url(post["user_handle"], post["did"])
-
-    if post["user_did"] != data["author"]["did"]:
-        raise BlueskyPayloadError(
-            post["url"],
-            "inconsistent user_did between Bluesky post's uri and post's author metadata: %s %s"
-            % (data["uri"], data["author"]),
-        )
-
-    # Handle user metadata
-    post["user_diplay_name"] = data["author"].get("displayName", "")
-    post["user_avatar"] = data["author"].get("avatar", "")
-    post["user_timestamp_utc"], post["user_created_at"] = get_dates(
-        data["author"]["createdAt"], locale=locale, source="bluesky"
-    )
-    post["user_langs"] = data["record"].get("langs", [])
-
-    if "bridgyOriginalUrl" in data["record"]:
-        post["bridgy_original_url"] = data["record"]["bridgyOriginalUrl"]
-
-    # Handle metrics
-    post["repost_count"] = data["repostCount"]
-    post["reply_count"] = data["replyCount"]
-    post["like_count"] = data["likeCount"]
-    post["quote_count"] = data["quoteCount"]
-    # When a post cites another, the cited post doesn't have the bookmarkCount field
-    post["bookmark_count"] = data.get("bookmarkCount")
-
-    # Handle hashtags, mentions & links from facets
+# Handle hashtags, mentions & links from facets
+# Warning: mutates post
+def process_post_facets(
+    facets: List[Dict], post: Dict, text: str
+) -> Tuple[str, Set[str], List[Dict], List[str]]:
     post["mentioned_user_handles"] = []
     post["mentioned_user_dids"] = []
     hashtags = set()
@@ -388,7 +267,7 @@ def normalize_post(
     media_data = []
     extra_links = []
     post["media_urls"] = []
-    for facet in data["record"].get("facets", []):
+    for facet in facets:
         if len(facet["features"]) != 1:
             raising_error = False
             for feat in facet["features"]:
@@ -671,6 +550,7 @@ def normalize_post(
             ]
         ):
             pass
+
         # Bluesky seems to use format features for some internal purposes, but we ignore them
         # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g
         elif feat["$type"].endswith("format"):
@@ -693,7 +573,7 @@ def normalize_post(
                 extra_links.append(link)
 
             if isinstance(feat["external"].get("thumb"), dict):
-                post = process_card_data(feat["external"], post)
+                process_card_data(feat["external"], post)
 
         # Some people share code snippets using third party apps
         # e.g.: https://bsky.app/profile/alexdln.com/post/3mbwzgrymow2o
@@ -732,311 +612,556 @@ def normalize_post(
         else:
             text = text[: link["start"]] + link["uri"] + text[link["end"] :]
 
-    # Handle thread info when applicable
-    # Unfortunately posts' payload only provide at uris for these so we do not have the handles
-    # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
-    # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
-    if "reply" in data["record"]:
-        if "parent" in data["record"]["reply"]:
-            post["to_post_cid"] = data["record"]["reply"]["parent"]["cid"]
-            post["to_post_uri"] = data["record"]["reply"]["parent"]["uri"]
-            post["to_user_did"], post["to_post_did"] = parse_post_uri(
-                post["to_post_uri"], post["url"]
-            )
-            post["to_post_url"] = format_post_url(
-                post["to_user_did"], post["to_post_did"]
-            )
-        if "root" in data["record"]["reply"]:
-            post["to_root_post_cid"] = data["record"]["reply"]["root"]["cid"]
-            post["to_root_post_uri"] = data["record"]["reply"]["root"]["uri"]
-            post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(
-                post["to_root_post_uri"], post["url"]
-            )
-            post["to_root_post_url"] = format_post_url(
-                post["to_root_user_did"], post["to_root_post_did"]
-            )
+    return text, links, media_data, extra_links
 
-    # Handle quotes & medias
+
+# Handle thread info when applicable
+# Warning: mutates post
+def process_post_thread_info(reply_data: Dict, post: Dict):
+    if "parent" in reply_data:
+        post["to_post_cid"] = reply_data["parent"]["cid"]
+        post["to_post_uri"] = reply_data["parent"]["uri"]
+        post["to_user_did"], post["to_post_did"] = parse_post_uri(
+            post["to_post_uri"], post["url"]
+        )
+        post["to_post_url"] = format_post_url(post["to_user_did"], post["to_post_did"])
+    if "root" in reply_data:
+        post["to_root_post_cid"] = reply_data["root"]["cid"]
+        post["to_root_post_uri"] = reply_data["root"]["uri"]
+        post["to_root_user_did"], post["to_root_post_did"] = parse_post_uri(
+            post["to_root_post_uri"], post["url"]
+        )
+        post["to_root_post_url"] = format_post_url(
+            post["to_root_user_did"], post["to_root_post_did"]
+        )
+
+
+# Handle quotes & medias
+# Warning: mutates post, links and referenced_posts
+def process_links_from_card(
+    record: Dict,
+    post: Dict,
+    links: Set[str],
+    text: str,
+    media_data: List[Dict],
+    extra_links: List[str],
+    locale: Optional[Any],
+    extract_referenced_posts: bool = False,
+    referenced_posts: Dict = {},
+    data: Dict = {},
+) -> str:
     media_ids = set()
-    post["media_thumbnails"] = []
-    post["media_types"] = []
-    post["media_alt_texts"] = []
-    if "embed" in data["record"]:
-        embed = data["record"]["embed"]
-        quoted_data = None
+    embed = record["embed"]
+    quoted_data = None
 
-        if not valid_embed_type(embed["$type"]):
-            if "bsky" in embed["$type"]:
-                raise BlueskyPayloadError(
-                    post["url"], "unusual record embed $type: %s" % embed
-                )
-            # Ignore non Bluesky embeds for now (e.g. personalized embeds)
-
-        # Empty embed (not usual, but seen in the Bluesky jungle, e.g.
-        # https://bsky.app/profile/did:plc:na6u3avvaz2x5wyzqrnviqiz/post/3lzf5qi2ra62k
-        # https://bsky.app/profile/dangelodario.it/post/3l3inqifqj42p
-        # or https://bsky.app/profile/soirilab.bsky.social/post/3lywaa7vhsu2c)
-        if embed["$type"].endswith(".post") or embed["$type"] == "N/A":
-            # Some posts have extra keys in their empty embed, certainly personalized ones.
-
-            # Personalized quote (not visible on Bluesky for the example)
-            # example: https://bsky.app/profile/jacksmithsocial.bsky.social/post/3lbca2nxy4f2a
-            if embed.get("$type") == "app.bsky.feed.post" and embed.get(
-                "record", {}
-            ).get("uri"):
-                post, quoted_data, links = prepare_quote_data(
-                    embed["record"], data.get("embed", {}).get("record"), post, links
-                )
-
-            # for the other ones we know up to now, we want to ignore them
-            # e.g.: https://bsky.app/profile/granmouse.bsky.social/post/3lwvh5xd2xk2p
-            #       https://bsky.app/profile/flyingaubrey.bsky.social/post/3lxngessntk2p
-            elif len(embed.keys()) > 1 and embed.get("type") not in ["private", "list"]:
-                raise BlueskyPayloadError(
-                    post["url"],
-                    "unusual empty record embed with extra keys: %s" % embed,
-                )
-            # Nothing to do for empty embed
-
-        if (
-            embed["$type"].endswith(".embed")
-            and len(embed.keys()) > 2
-            and len(embed.get("images")) > 0
-        ):
+    if not valid_embed_type(embed["$type"]):
+        if "bsky" in embed["$type"]:
             raise BlueskyPayloadError(
-                post["url"], "unusual empty record embed with extra keys: %s" % embed
+                post["url"], "unusual record embed $type: %s" % embed
+            )
+        # Ignore non Bluesky embeds for now (e.g. personalized embeds)
+
+    # Empty embed (not usual, but seen in the Bluesky jungle, e.g.
+    # https://bsky.app/profile/did:plc:na6u3avvaz2x5wyzqrnviqiz/post/3lzf5qi2ra62k
+    # https://bsky.app/profile/dangelodario.it/post/3l3inqifqj42p
+    # or https://bsky.app/profile/soirilab.bsky.social/post/3lywaa7vhsu2c)
+    if embed["$type"].endswith(".post") or embed["$type"] == "N/A":
+        # Some posts have extra keys in their empty embed, certainly personalized ones.
+
+        # Personalized quote (not visible on Bluesky for the example)
+        # example: https://bsky.app/profile/jacksmithsocial.bsky.social/post/3lbca2nxy4f2a
+        if embed.get("$type") == "app.bsky.feed.post" and embed.get("record", {}).get(
+            "uri"
+        ):
+            quoted_data = prepare_quote_data(
+                embed["record"], data.get("embed", {}).get("record"), post, links
             )
 
-        # Links from links embed
-        # e.g.: https://bsky.app/profile/sacredatoz.bsky.social/post/3lrqvemv7qe2f
-        if embed["$type"].endswith(".links"):
-            for link in embed["links"]:
-                extra_links.append(link)
+        # for the other ones we know up to now, we want to ignore them
+        # e.g.: https://bsky.app/profile/granmouse.bsky.social/post/3lwvh5xd2xk2p
+        #       https://bsky.app/profile/flyingaubrey.bsky.social/post/3lxngessntk2p
+        elif len(embed.keys()) > 1 and embed.get("type") not in ["private", "list"]:
+            raise BlueskyPayloadError(
+                post["url"],
+                "unusual empty record embed with extra keys: %s" % embed,
+            )
+        # Nothing to do for empty embed
+
+    if (
+        embed["$type"].endswith(".embed")
+        and len(embed.keys()) > 2
+        and len(embed.get("images")) > 0
+    ):
+        raise BlueskyPayloadError(
+            post["url"], "unusual empty record embed with extra keys: %s" % embed
+        )
+
+    # Links from links embed
+    # e.g.: https://bsky.app/profile/sacredatoz.bsky.social/post/3lrqvemv7qe2f
+    if embed["$type"].endswith(".links"):
+        for link in embed["links"]:
+            extra_links.append(link)
+
+    # Links from cards
+    if embed["$type"].endswith(".external"):
+        link = embed["external"]["uri"]
+
+        # Handle native gifs as medias
+        if link.startswith("https://media.tenor.com/"):
+            media_data.append(
+                prepare_native_gif_as_media(
+                    embed["external"], post["user_did"], post["url"]
+                )
+            )
+
+        # Extra card links sometimes missing from facets & text due to manual action in post form
+        else:
+            extra_links.append(link)
+            # Handle link card metadata
+            # Warning: mutates post
+            process_card_data(embed["external"], post)
+
+    # Not visible images
+    # examples: https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvxsaej62c
+    #           https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvz52x7s2m
+    if embed["$type"].endswith(".viewImages"):
+        if "images" in embed:
+            for i in embed["images"]:
+                post["media_urls"].append(
+                    i.get("viewImage", {}).get("thumb", {}).get("uri", "")
+                )
+        elif "viewImage" in embed:
+            for i in embed["viewImage"]:
+                if "viewImage" in i:
+                    sub_image = "viewImage"
+                elif "image" in i:
+                    sub_image = "image"
+                else:
+                    raise BlueskyPayloadError(
+                        post["url"],
+                        "unusual viewImages embed content: %s" % embed,
+                    )
+                post["media_urls"].append(i[sub_image].get("thumb", {}).get("uri", ""))
+
+    # Images
+    if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
+        media_data.extend(
+            [prepare_image_as_media(i, post["url"]) for i in embed["images"]]
+        )
+
+    # Video
+    if embed["$type"].endswith(".video"):
+        media_data.append(prepare_video_as_media(embed["video"]))
+    elif embed["$type"].endswith(".videos"):
+        for elt in embed["videos"]:
+            media_data.append(prepare_video_as_media(elt["video"]))
+    elif embed["$type"].endswith(".media"):
+        if isinstance(embed["media"], dict):
+            media_data.append(prepare_video_as_media(embed["media"]["video"]))
+        elif isinstance(embed["media"], list):
+            for elt in embed["media"]:
+                media_data.append(prepare_video_as_media(elt["media"]))
+
+    # Quote & Starter-packs
+    if embed["$type"].endswith(".record"):
+        if "app.bsky.graph.starterpack" in embed["record"]["uri"]:
+            # Warning: mutates post
+            process_starterpack_card(data.get("embed", {}).get("record", {}), post)
+            if post.get("card_link"):
+                extra_links.append(post["card_link"])
+        else:
+            # Warning: mutates post and links
+            quoted_data = prepare_quote_data(
+                embed["record"], data.get("embed", {}).get("record", {}), post, links
+            )
+
+    # Quote with medias
+    if embed["$type"].endswith(".recordWithMedia"):
+        # Warning: mutates post and links
+        quoted_data = prepare_quote_data(
+            embed["record"]["record"],
+            data.get("embed", {}).get("record", {}).get("record", {}),
+            post,
+            links,
+        )
 
         # Links from cards
-        if embed["$type"].endswith(".external"):
-            link = embed["external"]["uri"]
+        if embed["media"]["$type"].endswith(".external"):
+            link = embed["media"]["external"]["uri"]
 
             # Handle native gifs as medias
             if link.startswith("https://media.tenor.com/"):
                 media_data.append(
                     prepare_native_gif_as_media(
-                        embed["external"], post["user_did"], post["url"]
+                        embed["media"]["external"], post["user_did"], post["url"]
                     )
                 )
 
             # Extra card links sometimes missing from facets & text due to manual action in post form
             else:
-                extra_links.append(link)
+                extra_links = [link] + extra_links
                 # Handle link card metadata
-                if "embed" in data:
-                    post = process_card_data(data["embed"]["external"], post)
-
-        # Not visible images
-        # examples: https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvxsaej62c
-        #           https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvz52x7s2m
-        if embed["$type"].endswith(".viewImages"):
-            if "images" in embed:
-                for i in embed["images"]:
-                    post["media_urls"].append(
-                        i.get("viewImage", {}).get("thumb", {}).get("uri", "")
-                    )
-            elif "viewImage" in embed:
-                for i in embed["viewImage"]:
-                    if "viewImage" in i:
-                        sub_image = "viewImage"
-                    elif "image" in i:
-                        sub_image = "image"
-                    else:
-                        raise BlueskyPayloadError(
-                            post["url"],
-                            "unusual viewImages embed content: %s" % embed,
-                        )
-                    post["media_urls"].append(
-                        i[sub_image].get("thumb", {}).get("uri", "")
-                    )
+                if "embed" in data and "media" in data["embed"]["media"]:
+                    # Warning: mutates post
+                    process_card_data(embed["media"]["external"], post)
 
         # Images
-        if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
+        elif embed["media"]["$type"].endswith(".images"):
             media_data.extend(
-                [prepare_image_as_media(i, post["url"]) for i in embed["images"]]
+                [
+                    prepare_image_as_media(i, post["url"])
+                    for i in embed["media"]["images"]
+                ]
             )
 
         # Video
-        if embed["$type"].endswith(".video"):
-            media_data.append(prepare_video_as_media(embed["video"]))
-        elif embed["$type"].endswith(".videos"):
-            for elt in embed["videos"]:
-                media_data.append(prepare_video_as_media(elt["video"]))
-        elif embed["$type"].endswith(".media"):
-            if isinstance(embed["media"], dict):
-                media_data.append(prepare_video_as_media(embed["media"]["video"]))
-            elif isinstance(embed["media"], list):
-                for elt in embed["media"]:
-                    media_data.append(prepare_video_as_media(elt["media"]))
+        elif embed["media"]["$type"].endswith(".video"):
+            media_data.append(prepare_video_as_media(embed["media"]["video"]))
 
-        # Quote & Starter-packs
-        if embed["$type"].endswith(".record"):
-            if "app.bsky.graph.starterpack" in embed["record"]["uri"]:
-                post = process_starterpack_card(
-                    data.get("embed", {}).get("record", {}), post
-                )
-                if post.get("card_link"):
-                    extra_links.append(post["card_link"])
-            else:
-                post, quoted_data, links = prepare_quote_data(
-                    embed["record"], data.get("embed", {}).get("record"), post, links
-                )
+        # A personalized record with media embed type, but video unavailable
+        # e.g.: https://bsky.app/profile/meteolatorregassa.bsky.social/post/3lhoxazzptj2b
+        elif embed["media"]["$type"].endswith("#media"):
+            pass
 
-        # Quote with medias
-        if embed["$type"].endswith(".recordWithMedia"):
-            post, quoted_data, links = prepare_quote_data(
-                embed["record"]["record"],
-                data.get("embed", {}).get("record", {}).get("record"),
-                post,
-                links,
+        else:
+            raise BlueskyPayloadError(
+                post["url"],
+                "unusual record embed media $type from a recordWithMedia: %s" % embed,
             )
 
-            # Links from cards
-            if embed["media"]["$type"].endswith(".external"):
-                link = embed["media"]["external"]["uri"]
+    # Process extra links
+    for link in extra_links:
+        norm_link = safe_normalize_url(link)
+        if norm_link not in links:
+            if is_url(norm_link):
+                links.add(norm_link)
+            text += b" " + link.encode("utf-8")
 
-                # Handle native gifs as medias
-                if link.startswith("https://media.tenor.com/"):
-                    media_data.append(
-                        prepare_native_gif_as_media(
-                            embed["media"]["external"], post["user_did"], post["url"]
-                        )
-                    )
-
-                # Extra card links sometimes missing from facets & text due to manual action in post form
-                else:
-                    extra_links = [link] + extra_links
-                    # Handle link card metadata
-                    if "embed" in data and "media" in data["embed"]["media"]:
-                        post = process_card_data(
-                            data["embed"]["media"]["external"], post
-                        )
-
-            # Images
-            elif embed["media"]["$type"].endswith(".images"):
-                media_data.extend(
-                    [
-                        prepare_image_as_media(i, post["url"])
-                        for i in embed["media"]["images"]
-                    ]
-                )
-
-            # Video
-            elif embed["media"]["$type"].endswith(".video"):
-                media_data.append(prepare_video_as_media(embed["media"]["video"]))
-
-            # A personalized record with media embed type, but video unavailable
-            # e.g.: https://bsky.app/profile/meteolatorregassa.bsky.social/post/3lhoxazzptj2b
-            elif embed["media"]["$type"].endswith("#media"):
-                pass
-
+    # Process medias
+    for media in media_data:
+        if media["id"] not in media_ids:
+            media_ids.add(media["id"])
+            media_type = media["type"]
+            if "url" in media:
+                media_url = media["url"]
+                media_thumb = media["thumb"]
             else:
-                raise BlueskyPayloadError(
-                    post["url"],
-                    "unusual record embed media $type from a recordWithMedia: %s"
-                    % embed,
+                media_url, media_thumb = format_media_url(
+                    post["user_did"], media["id"], media_type, post["url"]
                 )
+            post["media_urls"].append(media_url)
+            post["media_thumbnails"].append(media_thumb)
+            post["media_types"].append(media_type)
+            post["media_alt_texts"].append(media.get("alt", ""))
 
-        # Process extra links
-        for link in extra_links:
-            norm_link = safe_normalize_url(link)
-            if norm_link not in links:
-                if is_url(norm_link):
-                    links.add(norm_link)
-                text += b" " + link.encode("utf-8")
-
-        # Process medias
-        for media in media_data:
-            if media["id"] not in media_ids:
-                media_ids.add(media["id"])
-                media_type = media["type"]
-                if "url" in media:
-                    media_url = media["url"]
-                    media_thumb = media["thumb"]
-                else:
-                    media_url, media_thumb = format_media_url(
-                        post["user_did"], media["id"], media_type, post["url"]
-                    )
-                post["media_urls"].append(media_url)
-                post["media_thumbnails"].append(media_thumb)
-                post["media_types"].append(media_type)
-                post["media_alt_texts"].append(media.get("alt", ""))
-
-                # Rewrite post's text to include links to medias within
-                text += b" " + (
-                    media_thumb
-                    if media_type.startswith("video")
-                    and not media_type.endswith("/gif")
-                    else media_url
-                ).encode("utf-8")
-
-        # Process quotes
-        if quoted_data and "value" in quoted_data:
-            # We're checking on the uri as the cid can be different in some cases,
-            # and the uri seems to be unique for each post
-            if quoted_data["uri"] != post["quoted_uri"]:
-                raise BlueskyPayloadError(
-                    post["url"],
-                    "inconsistent quote uri found between record.embed.record.uri & embed.record.uri: %s %s"
-                    % (post["quoted_uri"], quoted_data),
-                )
-
-            quoted_data["record"] = quoted_data["value"]
-            del quoted_data["value"]
-            if "embeds" in quoted_data and len(quoted_data["embeds"]):
-                if len(quoted_data["embeds"]) != 1:
-                    raise BlueskyPayloadError(
-                        post["url"],
-                        "unusual multiple embeds found within a quoted post: %s"
-                        % quoted_data["embeds"],
-                    )
-                quoted_data["embed"] = quoted_data["embeds"][0]
-                del quoted_data["embeds"]
-
-            nested = normalize_post(
-                quoted_data,
-                locale=locale,
-                extract_referenced_posts=True,
-                collection_source="quote",
-            )
-            quoted = nested[-1]
-            if extract_referenced_posts:
-                referenced_posts = merge_nested_posts(
-                    referenced_posts, nested, post["url"]
-                )
-
-            # Take better quoted url with user_handle
-            post["quoted_url"] = quoted["url"]
-            post["quoted_user_handle"] = quoted["user_handle"]
-            post["quoted_created_at"] = quoted["local_time"]
-            post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
-
-            # Remove quoted link from post links if present in text
-            if quoted["url"] in links:
-                links.remove(quoted["url"])
-
-            # Rewrite post's text to include quote within (or replace the link to the quote if present)
-            quote = (
-                "« @%s: %s — %s »"
-                % (quoted["user_handle"], quoted["text"], quoted["url"])
+            # Rewrite post's text to include links to medias within
+            text += b" " + (
+                media_thumb
+                if media_type.startswith("video") and not media_type.endswith("/gif")
+                else media_url
             ).encode("utf-8")
-            url_lower = quoted["url"].encode("utf-8").lower()
-            text_lower = text.lower()
-            if url_lower in text_lower:
-                url_pos = text_lower.find(url_lower)
-                text = text[:url_pos] + quote + text[url_pos + len(quoted["url"]) :]
-            else:
-                text += b" " + quote
 
-    # Process links domains
+    # Process quotes
+    if quoted_data and "value" in quoted_data:
+        # We're checking on the uri as the cid can be different in some cases,
+        # and the uri seems to be unique for each post
+        if quoted_data["uri"] != post["quoted_uri"]:
+            raise BlueskyPayloadError(
+                post["url"],
+                "inconsistent quote uri found between record.embed.record.uri & embed.record.uri: %s %s"
+                % (post["quoted_uri"], quoted_data),
+            )
+
+        quoted_data["record"] = quoted_data["value"]
+        del quoted_data["value"]
+        if "embeds" in quoted_data and len(quoted_data["embeds"]):
+            if len(quoted_data["embeds"]) != 1:
+                raise BlueskyPayloadError(
+                    post["url"],
+                    "unusual multiple embeds found within a quoted post: %s"
+                    % quoted_data["embeds"],
+                )
+            quoted_data["embed"] = quoted_data["embeds"][0]
+            del quoted_data["embeds"]
+
+        nested = normalize_post(
+            quoted_data,
+            locale=locale,
+            extract_referenced_posts=True,
+            collection_source="quote",
+        )
+        quoted = nested[-1]
+        if extract_referenced_posts:
+            # Warning: mutates referenced_posts
+            merge_nested_posts(referenced_posts, nested, post["url"])
+
+        # Take better quoted url with user_handle
+        post["quoted_url"] = quoted["url"]
+        post["quoted_user_handle"] = quoted["user_handle"]
+        post["quoted_created_at"] = quoted["local_time"]
+        post["quoted_timestamp_utc"] = quoted["timestamp_utc"]
+
+        # Remove quoted link from post links if present in text
+        if quoted["url"] in links:
+            links.remove(quoted["url"])
+
+        # Rewrite post's text to include quote within (or replace the link to the quote if present)
+        quote = (
+            "« @%s: %s — %s »" % (quoted["user_handle"], quoted["text"], quoted["url"])
+        ).encode("utf-8")
+        url_lower = quoted["url"].encode("utf-8").lower()
+        text_lower = text.lower()
+        if url_lower in text_lower:
+            url_pos = text_lower.find(url_lower)
+            text = text[:url_pos] + quote + text[url_pos + len(quoted["url"]) :]
+        else:
+            text += b" " + quote
+
+    return text
+
+
+# Process links domains
+# Warning: mutates post
+def process_links_domains(post: Dict, links: Set[str]):
     post["links"] = sorted(links)
     post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
+
+
+# Finalize text field
+# Warning: mutates post
+def finalize_post_text(text: str, post: Dict):
+    try:
+        post["text"] = text.decode("utf-8")
+    except UnicodeDecodeError as e:
+        raise UnicodeDecodeError(
+            e.encoding,
+            e.object,
+            e.start,
+            e.end,
+            f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start : e.end]}",
+        )
+
+
+# Collection source & match query
+# Warning: mutates post
+def process_collection_source_and_match_query(
+    post: Dict, collection_source: Optional[str]
+):
+    if collection_source is not None:
+        post["collected_via"] = [collection_source]
+    post["match_query"] = collection_source not in ["thread", "quote"]
+
+
+# Handle thread posts when data comes from a feed
+# Warning: mutates referenced_posts
+def process_thread_posts_from_feed(
+    reply_data: Dict,
+    post: Dict,
+    locale: Optional[Any],
+    extract_referenced_posts: bool,
+    referenced_posts: Dict,
+):
+    if "parent" in reply_data:
+        nested = normalize_post(
+            reply_data["parent"],
+            locale=locale,
+            extract_referenced_posts=extract_referenced_posts,
+            collection_source="thread",
+        )
+        # Warning: mutates referenced_posts
+        merge_nested_posts(referenced_posts, nested, post["url"])
+
+    if "root" in reply_data and (
+        "parent" not in reply_data
+        or reply_data["parent"]["cid"] != reply_data["root"]["cid"]
+    ):
+        nested = normalize_post(
+            reply_data["root"],
+            locale=locale,
+            extract_referenced_posts=extract_referenced_posts,
+            collection_source="thread",
+        )
+        # Warning: mutates referenced_posts
+        merge_nested_posts(referenced_posts, nested, post["url"])
+
+    if "grandparentAuthor" in reply_data:
+        # TODO ? Shall we do anything from that?
+        pass
+
+
+# Warning: mutates post
+def handle_text_and_datetime_fields(
+    data: Dict, post: Dict, locale: Optional[Any] = None
+) -> str:
+    # Store original text and prepare text for quotes & medias enriched version
+    post["original_text"] = data["record"]["text"]
+    text = post["original_text"].encode("utf-8")
+
+    # Handle datetime fields
+    post["collection_time"] = get_collection_time()
+    post["timestamp_utc"], post["local_time"] = get_dates(
+        data["record"]["createdAt"], locale=locale, source="bluesky"
+    )
+    # Completing year with less than 4 digits as in some posts: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
+    # len 26 example: '2023-06-15T12:34:56.789000'
+    while len(post["local_time"]) < 26 and len(post["local_time"].split("-")[0]) < 4:
+        post["local_time"] = "0" + post["local_time"]
+
+    return text
+
+
+@overload
+def normalize_post(
+    payload: Dict,
+    locale: Optional[str] = ...,
+    extract_referenced_posts: Literal[True] = ...,
+    collection_source: Optional[str] = ...,
+) -> List[BlueskyPost]: ...
+
+
+@overload
+def normalize_post(
+    payload: Dict,
+    locale: Optional[str] = ...,
+    extract_referenced_posts: Literal[False] = ...,
+    collection_source: Optional[str] = ...,
+) -> BlueskyPost: ...
+
+
+def normalize_post(
+    payload: Dict,
+    locale: Optional[Any] = None,
+    extract_referenced_posts: bool = False,
+    collection_source: Optional[str] = None,
+) -> Union[BlueskyPost, List[BlueskyPost]]:
+    """
+    Function "normalizing" a post as returned by Bluesky's API in order to
+    cleanup and optimize some fields.
+
+    Args:
+        payload (dict): post or feed payload json dict from Bluesky API.
+        locale (pytz.timezone, optional): Timezone for date conversions.
+        extract_referenced_posts (bool, optional): Whether to return, in
+            addition to the original post, also the full list of posts
+            found in the given payload (including the tree of quoted posts
+            as well as the parent and root posts of the thread if the post
+            comes as an answer to another one). Defaults
+            to `False`.
+        collection_source (str, optional): string explaining how the post
+            was collected. Defaults to `None`.
+
+    Returns:
+        (dict or list): Either a single post dict or a list of post dicts if
+            `extract_referenced_posts` was set to `True`.
+
+    """
+
+    if not isinstance(payload, dict):
+        raise BlueskyPayloadError(
+            "UNKNOWN", f"data provided to normalize_post is not a dictionary: {payload}"
+        )
+
+    valid, error = validate_post_payload(payload)
+    if not valid:
+        raise BlueskyPayloadError(
+            payload.get("uri", payload.get("post", {}).get("uri", "UNKNOWN")),
+            f"data provided to normalize_post is not a standard Bluesky post or feed payload:\n{error}",
+        )
+
+    if "post" in payload:
+        data = payload["post"]
+        reply_data = payload.get("reply")
+        repost_data = payload.get("reason")
+    else:
+        data = payload
+        reply_data = None
+        repost_data = None
+
+    referenced_posts = {}
+
+    if collection_source is None:
+        collection_source = data.get("collection_source")
+
+    post = {}
+
+    # Warning: mutates post
+    text = handle_text_and_datetime_fields(data, post, locale)
+    post["indexed_at_utc"] = data["indexedAt"]
+
+    # Handle post/user identifiers
+    post["cid"] = data["cid"]
+    post["uri"] = data["uri"]
+    post["user_did"], post["did"] = parse_post_uri(data["uri"])
+    post["user_handle"] = data["author"]["handle"]
+    post["user_url"] = format_profile_url(post["user_handle"])
+    # example: https://bsky.app/profile/did:plc:n5pm4vggu475okayqvqipkoh/post/3lmdcgp3a7cnd
+    if post["user_handle"] == "handle.invalid":
+        post["url"] = format_post_url(post["user_did"], post["did"])
+    else:
+        post["url"] = format_post_url(post["user_handle"], post["did"])
+
+    if post["user_did"] != data["author"]["did"]:
+        raise BlueskyPayloadError(
+            post["url"],
+            "inconsistent user_did between Bluesky post's uri and post's author metadata: %s %s"
+            % (data["uri"], data["author"]),
+        )
+
+    # Handle user metadata
+    post["user_display_name"] = data["author"].get("displayName", "")
+    post["user_avatar"] = data["author"].get("avatar", "")
+    post["user_timestamp_utc"], post["user_created_at"] = get_dates(
+        data["author"]["createdAt"], locale=locale, source="bluesky"
+    )
+    post["user_langs"] = data["record"].get("langs", [])
+
+    if "bridgyOriginalUrl" in data["record"]:
+        post["bridgy_original_url"] = data["record"]["bridgyOriginalUrl"]
+
+    # Handle metrics
+    post["repost_count"] = data["repostCount"]
+    post["reply_count"] = data["replyCount"]
+    post["like_count"] = data["likeCount"]
+    post["quote_count"] = data["quoteCount"]
+    # When a post cites another, the cited post doesn't have the bookmarkCount field
+    post["bookmark_count"] = data.get("bookmarkCount")
+
+    # Handle hashtags, mentions & links from facets
+    # Warning: mutates post
+    text, links, media_data, extra_links = process_post_facets(
+        data["record"].get("facets", []), post, text
+    )
+
+    # Handle thread info when applicable
+    # Unfortunately posts' payload only provide at uris for these so we do not have the handles
+    # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
+    # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
+    if "reply" in data["record"]:
+        # Warning: mutates post
+        process_post_thread_info(data["record"]["reply"], post)
+
+    # Handle quotes & medias
+    post["media_thumbnails"] = []
+    post["media_types"] = []
+    post["media_alt_texts"] = []
+    if "embed" in data["record"]:
+        # Warning: mutates post, links and referenced_posts
+        text = process_links_from_card(
+            data["record"],
+            post,
+            links,
+            text,
+            media_data,
+            extra_links,
+            locale,
+            extract_referenced_posts,
+            referenced_posts,
+            data,
+        )
+
+    # Process links domains
+    # Warning: mutates post
+    process_links_domains(post, links)
 
     # Handle threadgates (replies rules)
     # WARNING: quoted posts do not seem to include threadgates info
@@ -1097,56 +1222,150 @@ def normalize_post(
             repost_data["indexedAt"], locale=locale, source="bluesky"
         )
 
-    try:
-        post["text"] = text.decode("utf-8")
-    except UnicodeDecodeError as e:
-        raise UnicodeDecodeError(
-            e.encoding,
-            e.object,
-            e.start,
-            e.end,
-            f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start : e.end]}",
-        )
+    # Finalize text field
+    # Warning: mutates post
+    finalize_post_text(text, post)
 
-    if collection_source is not None:
-        post["collected_via"] = [collection_source]
-    post["match_query"] = collection_source not in ["thread", "quote"]
+    # Collection source & match query handling
+    # Warning: mutates post
+    process_collection_source_and_match_query(post, collection_source)
 
     if extract_referenced_posts:
         # Handle thread posts when data comes from a feed
         if reply_data:
-            if "parent" in reply_data:
-                nested = normalize_post(
-                    reply_data["parent"],
-                    locale=locale,
-                    extract_referenced_posts=True,
-                    collection_source="thread",
-                )
-                referenced_posts = merge_nested_posts(
-                    referenced_posts, nested, post["url"]
-                )
-
-            if "root" in reply_data and (
-                "parent" not in reply_data
-                or reply_data["parent"]["cid"] != reply_data["root"]["cid"]
-            ):
-                nested = normalize_post(
-                    reply_data["root"],
-                    locale=locale,
-                    extract_referenced_posts=True,
-                    collection_source="thread",
-                )
-                referenced_posts = merge_nested_posts(
-                    referenced_posts, nested, post["url"]
-                )
-
-            if "grandparentAuthor" in reply_data:
-                # TODO ? Shall we do anything from that?
-                pass
+            # Warning: mutates referenced_posts
+            process_thread_posts_from_feed(
+                reply_data, post, locale, extract_referenced_posts, referenced_posts
+            )
 
         assert referenced_posts is not None
         return [referenced_posts[did] for did in sorted(referenced_posts.keys())] + [
             post
         ]  # type: ignore
+
+    return post  # type: ignore
+
+
+def normalize_partial_post(
+    payload: Dict,
+    locale: Optional[Any] = None,
+    collection_source: Optional[str] = None,
+) -> BlueskyPartialPost:
+    """
+    Function "normalizing" a partial payload post as returned by Bluesky's Firehose in order to
+    cleanup and optimize some fields.
+
+    Args:
+        payload (dict): partial post or feed payload json dict from Bluesky Firehose.
+        locale (pytz.timezone, optional): Timezone for date conversions.
+        collection_source (str, optional): string explaining how the post
+            was collected. Source application of the payload, either `firehose` or `tap`,
+            which is experimental for now. Defaults to `None`.
+
+    Returns:
+        (dict or list): Either a single partial post dict or a list of partial post dicts if
+            `extract_referenced_posts` was set to `True`.
+
+    """
+
+    if not isinstance(payload, dict):
+        raise BlueskyPayloadError(
+            "UNKNOWN",
+            f"data provided to normalize_partial_post is not a dictionary: {payload}",
+        )
+
+    if collection_source not in ["firehose", "tap", "unit_test"]:
+        raise ValueError(
+            f"collection_source must be either 'firehose', 'tap' or 'unit_test', got: {collection_source}"
+        )
+
+    if collection_source == "firehose":
+        post_field = "commit"
+    else:  # tap
+        post_field = "record"
+
+    valid, error = validate_partial_post_payload(
+        payload, collection_source=collection_source
+    )
+
+    if not valid:
+        uri = format_post_uri(
+            payload.get("did", payload.get(post_field, {}).get("did", "UNKNOWN")),
+            payload.get(post_field, {}).get("rkey", "UNKNOWN"),
+        )
+        raise BlueskyPayloadError(
+            uri,
+            f"data provided to normalize_partial_post is not a standard Bluesky post or feed payload:\n{error}",
+        )
+
+    if "post" in payload:
+        data = payload["post"]
+    else:
+        data = payload
+
+    post = {}
+
+    # Warning: mutates post
+    text = handle_text_and_datetime_fields(data[post_field], post, locale)
+    post["firehose_timestamp_us"] = (
+        data["time_us"] if collection_source == "firehose" else None
+    )
+
+    # Handle post/user identifiers
+    post["cid"] = data[post_field]["cid"]
+    post["user_did"] = data.get("did", payload.get(post_field, {}).get("did"))
+    post["did"] = data[post_field]["rkey"]
+    post["uri"] = format_post_uri(post["user_did"], post["did"])
+
+    post["user_url"] = format_profile_url(post["user_did"])
+    post["url"] = format_post_url(post["user_did"], post["did"])
+
+    # Handle user metadata
+    post["user_langs"] = data[post_field]["record"].get("langs", [])
+
+    if "bridgyOriginalUrl" in data[post_field]["record"]:
+        post["bridgy_original_url"] = data[post_field]["record"]["bridgyOriginalUrl"]
+
+    # Handle hashtags, mentions & links from facets
+    # Warning: mutates post
+    text, links, media_data, extra_links = process_post_facets(
+        data[post_field]["record"].get("facets", []), post, text
+    )
+
+    # Handle thread info when applicable
+    # Unfortunately posts' payload only provide at uris for these so we do not have the handles
+    # We could sometimes resolve them from the mentionned and quote data but that would not handle most cases
+    # Issue opened here to have user handles along: https://github.com/bluesky-social/atproto/issues/3722
+    if "reply" in data[post_field]["record"]:
+        # Warning: mutates post
+        process_post_thread_info(data[post_field]["record"]["reply"], post)
+
+    # Handle quotes & medias
+    post["media_thumbnails"] = []
+    post["media_types"] = []
+    post["media_alt_texts"] = []
+    if "embed" in data[post_field]["record"]:
+        # Warning: mutates post, links and referenced_posts
+        text = process_links_from_card(
+            data[post_field]["record"],
+            post,
+            links,
+            text,
+            media_data,
+            extra_links,
+            locale,
+        )
+
+    # Process links domains
+    # Warning: mutates post
+    process_links_domains(post, links)
+
+    # Finalize text field
+    # Warning: mutates post
+    finalize_post_text(text, post)
+
+    # Collection source & match query handling
+    # Warning: mutates post
+    process_collection_source_and_match_query(post, collection_source)
 
     return post  # type: ignore
