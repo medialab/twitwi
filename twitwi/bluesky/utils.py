@@ -37,7 +37,9 @@ def validate_post_payload(data):
                 post["record"],
             )
 
-    if post["record"].get("$type") != "app.bsky.feed.post":
+    # Splitting by '#' to ignore possible suffixes in $type
+    # e.g. https://bsky.app/profile/did:plc:k6acu4chiwkixvdedcmdgmal/post/3lagdncjsu22y
+    if post["record"].get("$type").split("#")[0] != "app.bsky.feed.post":
         return False, "payload's record $type is not a post: %s" % post["record"].get(
             "$type"
         )
@@ -56,7 +58,7 @@ def validate_post_payload(data):
 
 
 re_embed_types = re.compile(
-    r"\.(record|recordWithMedia|images|video|external)(?:#.*)?$"
+    r"(?:\.(?:record|recordWithMedia|images|videos?|external|post|embed|links|media|file|viewImages)(?:#.*)?|N\/A|image)$"
 )
 
 
@@ -88,17 +90,25 @@ def parse_post_url(url, source):
 def parse_post_uri(uri, source=None):
     """Returns a tuple of (author_did, post_did) from an at:// post URI"""
 
-    known_splits = [
-        "/app.bsky.feed.post/",
-        "/app.bsky.graph.starterpack/",
-        "/app.bsky.feed.generator/",
-        "/app.bsky.graph.list/",
-    ]
+    # known_splits = [
+    #     "/app.bsky.feed.post/",
+    #     "/app.bsky.graph.starterpack/",
+    #     "/app.bsky.feed.generator/",
+    #     "/app.bsky.graph.list/",
+    #     "/app.bsky.graph.follow/", # This one is often found when a post is an anwser to a deleted post (e.g. https://bsky.app/profile/sydney-chat.bsky.social/post/3ltsph6kxfl25)
+    # ]
 
+    # if uri.startswith("at://"):
+    #     for split in known_splits:
+    #         if split in uri:
+    #             return uri[5:].split(split)
+
+    # There's too much variability in the post URIs, and we cannot be exhaustive,
+    # so we do with the simple approach:
     if uri.startswith("at://"):
-        for split in known_splits:
-            if split in uri:
-                return uri[5:].split(split)
+        # Using maxsplit=3 to avoid issues if future uris contain more slashes
+        author_did, _, post_did = uri[5:].split("/", 3)
+        return author_did, post_did
 
     raise BlueskyPayloadError(source or uri, f"{uri} is not a usual Bluesky post uri")
 
@@ -112,18 +122,24 @@ def format_media_url(user_did, media_cid, mime_type, source):
     if mime_type.startswith("image"):
         media_url = f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@{media_type}"
         media_thumb = f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@{media_type}"
-    elif mime_type.startswith("video"):
+    elif (
+        mime_type.startswith("video")
+        or mime_type == "application/xml"
+        or mime_type == "*/*"
+    ):
         media_url = f"https://video.bsky.app/watch/{user_did}/{media_cid}/playlist.m3u8"
         media_thumb = (
             f"https://video.bsky.app/watch/{user_did}/{media_cid}/thumbnail.jpg"
         )
-    elif mime_type in ["application/octet-stream", "text/plain"]:
+    elif any(mt in mime_type for mt in ["octet-stream", "text/plain", "text/html"]):
         media_url = (
             f"https://cdn.bsky.app/img/feed_fullsize/plain/{user_did}/{media_cid}@jpeg"
         )
         media_thumb = (
             f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{media_cid}@jpeg"
         )
+    elif "empty" in mime_type:
+        media_url, media_thumb = "", ""
     else:
         raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb

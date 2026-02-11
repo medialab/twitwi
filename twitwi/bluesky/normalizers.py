@@ -99,14 +99,33 @@ def prepare_native_gif_as_media(gif_data, user_did, source):
     }
 
 
-def prepare_image_as_media(image_data):
-    if "ref" not in image_data["image"] or "$link" not in image_data["image"]["ref"]:
-        image_id = image_data["image"]["cid"]
+def prepare_image_as_media(image_data, source):
+    if isinstance(image_data["image"], str):
+        # As in this post: https://bsky.app/profile/did:plc:xafmeedgq77f6smn6kmalasr/post/3lcnxglm3o62z
+        image_type = "image/jpeg"
+        image_id = image_data["image"]
+    elif isinstance(image_data["image"], dict):
+        image_type = image_data["image"]["mimeType"]
+        if (
+            "ref" not in image_data["image"]
+            or "$link" not in image_data["image"]["ref"]
+        ):
+            # As in this post: https://bsky.app/profile/testjuan06.bsky.social/post/3ljkzygywso2b
+            if "link" in image_data["image"]:
+                image_id = image_data["image"]["link"]
+            elif "cid" in image_data["image"]:
+                image_id = image_data["image"]["cid"]
+            else:
+                raise BlueskyPayloadError(
+                    source, "Unable to find image id in image data: %s" % image_data
+                )
+        else:
+            image_id = image_data["image"]["ref"]["$link"]
     else:
-        image_id = image_data["image"]["ref"]["$link"]
+        raise BlueskyPayloadError(source, "Unable to parse image data: %s" % image_data)
     return {
         "id": image_id,
-        "type": image_data["image"]["mimeType"],
+        "type": image_type,
         "alt": image_data["alt"],
     }
 
@@ -140,7 +159,15 @@ def process_card_data(embed_data, post):
     post["card_link"] = embed_data["uri"]
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
-    post["card_thumbnail"] = embed_data.get("thumb", "")
+    if isinstance(embed_data.get("thumb"), dict) and embed_data["thumb"].get(
+        "ref", {}
+    ).get("$link"):
+        media_cid = embed_data["thumb"]["ref"]["$link"]
+        post["card_thumbnail"] = (
+            f"https://cdn.bsky.app/img/feed_thumbnail/plain/{post['user_did']}/{media_cid}@jpeg"
+        )
+    else:
+        post["card_thumbnail"] = embed_data.get("thumb", "")
     return post
 
 
@@ -308,6 +335,10 @@ def normalize_post(
     post["timestamp_utc"], post["local_time"] = get_dates(
         data["record"]["createdAt"], locale=locale, source="bluesky"
     )
+    # Completing year with less than 4 digits as in some posts: https://bsky.app/profile/koro.icu/post/3kbpuogc6fz2o
+    # len 26 example: '2023-06-15T12:34:56.789000'
+    while len(post["local_time"]) < 26 and len(post["local_time"].split("-")[0]) < 4:
+        post["local_time"] = "0" + post["local_time"]
     post["indexed_at_utc"] = data["indexedAt"]
 
     # Handle post/user identifiers
@@ -316,7 +347,11 @@ def normalize_post(
     post["user_did"], post["did"] = parse_post_uri(data["uri"])
     post["user_handle"] = data["author"]["handle"]
     post["user_url"] = format_profile_url(post["user_handle"])
-    post["url"] = format_post_url(post["user_handle"], post["did"])
+    # example: https://bsky.app/profile/did:plc:n5pm4vggu475okayqvqipkoh/post/3lmdcgp3a7cnd
+    if post["user_handle"] == "handle.invalid":
+        post["url"] = format_post_url(post["user_did"], post["did"])
+    else:
+        post["url"] = format_post_url(post["user_handle"], post["did"])
 
     if post["user_did"] != data["author"]["did"]:
         raise BlueskyPayloadError(
@@ -350,19 +385,91 @@ def normalize_post(
     hashtags = set()
     links = set()
     links_to_replace = []
+    media_data = []
+    extra_links = []
+    post["media_urls"] = []
     for facet in data["record"].get("facets", []):
         if len(facet["features"]) != 1:
-            raise BlueskyPayloadError(
-                post["url"],
-                "unusual record facet content with more or less than a unique feature: %s"
-                % facet,
-            )
+            raising_error = False
+            for feat in facet["features"]:
+                # Already handled linkcards separately below
+                if feat["$type"].endswith("#linkcard"):
+                    continue
+
+                # If there are links, we register them and do not replace anything in original text
+                # as we don't have position for each link
+                # example: https://bsky.app/profile/77cupons.bsky.social/post/3latbufuvqw25
+                elif feat["$type"].endswith("#link") and "uri" in feat:
+                    link = safe_normalize_url(feat["uri"])
+                    if is_url(link):
+                        links.add(link)
+                        links_to_replace.append(
+                            {"uri": feat["uri"].encode("utf-8"), "start": -1, "end": -1}
+                        )
+                elif feat["$type"].lower().endswith("#tag"):
+                    hashtags.add(feat["tag"].strip().lower())
+                # As in this post: https://bsky.app/profile/havehashad.com/post/3ki3rk5ytqd2e
+                elif feat["$type"].endswith("#image") and "uri" in feat:
+                    post["media_urls"].append(safe_normalize_url(feat["uri"]))
+                else:
+                    raising_error = True
+
+            if raising_error:
+                raise BlueskyPayloadError(
+                    post["url"],
+                    "unusual record facet content with more or less than a unique feature: %s"
+                    % facet,
+                )
+            continue
 
         feat = facet["features"][0]
+        lower_feat_type = feat["$type"].lower()
 
         # Hashtags
-        if feat["$type"].endswith("#tag") or feat["$type"].endswith("#hashtag"):
-            hashtags.add(feat["tag"].strip().lower())
+        if (
+            lower_feat_type.endswith("#tag")
+            or lower_feat_type.endswith(".tag")
+            or lower_feat_type.endswith("#hashtag")
+            or lower_feat_type == "facettag"
+        ):
+            # Some posts have the full text in the "text" field of the hashtag feature
+            if "text" in feat:
+                for tag in feat["text"].split("#"):
+                    if tag.strip():
+                        hashtags.add(tag.strip().lower())
+            # some posts have "hashtag" instead of "tag" field
+            # example: https://bsky.app/profile/did:plc:jrodn6nnfuwzm2zxbxbpzgot/post/3lhwag3mzoo2k
+            else:
+                if "tag" in feat:
+                    tag = feat["tag"].strip().lower()
+                elif "hashtag" in feat:
+                    tag = feat["hashtag"].strip().lower()
+                # Somehow no tag found, we'll try to get it in the text slice
+                # example: https://bsky.app/profile/did:plc:p6yojdpa5iatdk3ttaty2zu2/post/3knvsl6h4x22i
+                elif len(feat) == 1:
+                    byteStart = facet["index"]["byteStart"]
+                    if text[byteStart : byteStart + 1] == b"#":
+                        byteEnd = facet["index"]["byteEnd"]
+                        try:
+                            tag = (
+                                text[byteStart:byteEnd]
+                                .decode("utf-8")
+                                .strip()
+                                .lstrip("#")
+                                .lower()
+                            )
+                        except UnicodeDecodeError:
+                            raise BlueskyPayloadError(
+                                post["url"],
+                                "unable to decode utf-8 slice for hashtag extraction: %s"
+                                % facet,
+                            )
+                    else:
+                        raise BlueskyPayloadError(
+                            post["url"],
+                            "unable to extract hashtag from text slice: %s" % facet,
+                        )
+                hashtags.add(tag)
 
         # Mentions
         elif feat["$type"].endswith("#mention"):
@@ -392,12 +499,23 @@ def normalize_post(
                     ]
                     .strip()
                     .lower()
-                    .decode("utf-8")
                 )
+                while byteEnd >= byteStart:
+                    try:
+                        handle.decode("utf-8")
+                        break
+                    except UnicodeDecodeError:
+                        handle = handle[:-1]
+                        continue
+                handle = handle.decode("utf-8")
                 post["mentioned_user_handles"].append(handle)
 
         # Links
-        elif feat["$type"].endswith("#link"):
+        elif (
+            feat["$type"].endswith("#link")
+            or feat["$type"].endswith(".link")
+            or feat["$type"].endswith(".url")
+        ):
             # Handle native polls
             if "https://poll.blue/" in feat["uri"]:
                 if feat["uri"].endswith("/0"):
@@ -420,57 +538,100 @@ def normalize_post(
             byteStart = facet["index"]["byteStart"]
             byteEnd = facet["index"]["byteEnd"]
 
-            if not text[byteStart:byteEnd].startswith(b"http"):
-                new_byteStart = text.find(b"http", byteStart, byteEnd)
+            # Skip overlapping links cases
+            # examples: https://bsky.app/profile/researchtrend.ai/post/3lbieylwwxs2b
+            #           https://bsky.app/profile/dj-cyberspace.otoskey.tarbin.net.ap.brid.gy/post/3lchg3plpdjp2
+            for elt in links_to_replace:
+                if (byteStart >= elt["start"] and byteStart <= elt["end"]) or (
+                    byteEnd >= elt["start"] and byteEnd <= elt["end"]
+                ):
+                    # Overlapping links, we skip this one
+                    byteStart = -1
+                    byteEnd = -1
+                    break
 
-                # means that the link is shifted, like on this post:
-                # https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
-                if new_byteStart != -1:
-                    byteStart = new_byteStart
+            # Meaning we will try to fix the link position
+            if byteStart != -1 or byteEnd != -1:
+                # It appears that some links end before they start... Bluesky please: what's going on?
+                # example: https://bsky.app/profile/ondarockwebzine.bsky.social/post/3lqxxejza6o2t
+                # if int(byteEnd) < int(byteStart) or byteStart < 0:
+                if int(byteEnd) < int(byteStart):
+                    byteStart = -1
+                    byteEnd = -1
 
-                    # Find the index of the first space character after byteStart in case the link is a personalized one
-                    # but still with the link in it (somehow existing in some posts, such as this one:
-                    # https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltmljz5blca2)
-                    # In this case, we don't want to touch the position of the link given in the payload
-                    byteEnd = min(
-                        byteStart
-                        - facet["index"]["byteStart"]
-                        + facet["index"]["byteEnd"],
-                        len(post["original_text"].encode("utf-8")),
-                    )
-                    for i in range(byteStart, byteEnd):
-                        if chr(text[i]).isspace():
-                            byteStart = facet["index"]["byteStart"]
-                    byteEnd = (
-                        byteStart
-                        - facet["index"]["byteStart"]
-                        + facet["index"]["byteEnd"]
-                    )
+                # There are mentionned links which are positionned after the end of the text,
+                # so we put them at the end of the original text
+                elif byteStart >= len(post["original_text"].encode("utf-8")):
+                    byteStart = -1
+                    byteEnd = -1
 
-                # means that the link is a "personalized" one like on this post:
-                # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
-                else:
-                    # we're looking for a link which could be valid if we add "https://" at the beginning,
-                    # as in some cases the "http(s)://" part is missing in the post text
-                    for starting in range(byteEnd - byteStart):
-                        try:
-                            if is_url(
-                                "https://"
-                                + text[
-                                    byteStart + starting : byteEnd + starting
-                                ].decode("utf-8")
-                            ):
-                                byteStart += starting
+                elif not text[byteStart:byteEnd].startswith(b"http"):
+                    new_byteStart = text.find(b"http", byteStart, byteEnd)
+
+                    # means that the link is shifted, like on this post:
+                    # https://bsky.app/profile/ecrime.ch/post/3lqotmopayr23
+                    if new_byteStart != -1:
+                        byteStart = new_byteStart
+
+                        # Find the index of the first space character after byteStart in case the link is a personalized one
+                        # but still with the link in it (somehow existing in some posts, such as this one:
+                        # https://bsky.app/profile/did:plc:rkphrshyfiqe4n2hz5vj56ig/post/3ltmljz5blca2)
+                        # In this case, we don't want to touch the position of the link given in the payload
+                        byteEnd = min(
+                            byteStart
+                            - facet["index"]["byteStart"]
+                            + facet["index"]["byteEnd"],
+                            len(post["original_text"].encode("utf-8")),
+                        )
+                        for i in range(byteStart, byteEnd):
+                            if chr(text[i]).isspace():
+                                byteStart = facet["index"]["byteStart"]
+                        byteEnd = (
+                            byteStart
+                            - facet["index"]["byteStart"]
+                            + facet["index"]["byteEnd"]
+                        )
+
+                    # means that the link is a "personalized" one like on this post:
+                    # https://bsky.app/profile/newyork.activitypub.awakari.com.ap.brid.gy/post/3ln33tx7bpdu2
+                    else:
+                        # we're looking for a link which could be valid if we add "https://" at the beginning,
+                        # as in some cases the "http(s)://" part is missing in the post text
+                        for starting in range(byteEnd - byteStart):
+                            try:
+                                if is_url(
+                                    "https://"
+                                    + text[
+                                        byteStart + starting : byteEnd + starting
+                                    ].decode("utf-8")
+                                ):
+                                    byteStart += starting
+                                    break
+                            except UnicodeDecodeError:
+                                pass
+                        # If we did not find any valid link, we just keep the original position as it is
+                        # meaning that we have a personalized link like in the example above
+
+                        # Extend byteEnd to the right until we find a valid utf-8 ending,
+                        # as in some cases the link is longer than the position given in the payload
+                        # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
+                        # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
+                        while byteEnd <= len(post["original_text"].encode("utf-8")):
+                            try:
+                                text[byteStart:byteEnd].decode("utf-8")
                                 break
-                        except UnicodeDecodeError:
-                            pass
-                    # If we did not find any valid link, we just keep the original position as it is
-                    # meaning that we have a personalized link like in the example above
+                            except UnicodeDecodeError:
+                                byteEnd += 1
+                                continue
 
-                    # Extend byteEnd to the right until we find a valid utf-8 ending,
-                    # as in some cases the link is longer than the position given in the payload
-                    # and it gets cut in the middle of a utf-8 char, leading to UnicodeDecodeError
-                    # example: https://bsky.app/profile/radiogaspesie.bsky.social/post/3lmkzhvhtta22
+                        # Meaning that we did not find a valid utf-8 ending, so we reset byteEnd to its original value
+                        if byteEnd > len(post["original_text"].encode("utf-8")):
+                            byteEnd = facet["index"]["byteEnd"]
+
+                        byteEnd += byteStart - facet["index"]["byteStart"]
+                else:
+                    # Handling case of errored byteEnd in the end of the text
+                    # example: https://bsky.app/profile/twif.bsky.social/post/3lm4izkvbfm2r
                     while byteEnd <= len(post["original_text"].encode("utf-8")):
                         try:
                             text[byteStart:byteEnd].decode("utf-8")
@@ -481,8 +642,6 @@ def normalize_post(
 
                     if byteEnd > len(post["original_text"].encode("utf-8")):
                         byteEnd = facet["index"]["byteEnd"]
-
-                    byteEnd += byteStart - facet["index"]["byteStart"]
 
             # In some cases, the link is completely wrong in the post text,
             # like in this post: https://bsky.app/profile/sudetsoleil.bsky.social/post/3ljf3h74wee2m
@@ -500,10 +659,66 @@ def normalize_post(
                 pass
                 # raise UnicodeDecodeError(e.encoding, e.object, e.start, e.end, f"{e.reason} in post {post['url']}.\nText to decode: {text}\nSlice of text to decode: {text[e.start:e.end]}")
 
-        elif feat["$type"].endswith("#bold"):
+        elif any(
+            feat["$type"].endswith(suffix)
+            for suffix in [
+                "#bold",
+                "#italic",
+                "#underline",
+                "#option",
+                "#encrypt",
+                "#text",
+            ]
+        ):
             pass
-        elif feat["$type"].endswith("#option"):
+        # Bluesky seems to use format features for some internal purposes, but we ignore them
+        # e.g.: https://bsky.app/profile/ferromar.bsky.social/post/3lzyfaixayd2g
+        elif feat["$type"].endswith("format"):
             pass
+        # Not normal feature type, but still existing in some posts
+        # Note that external features aren't visible on the Bluesky app, only external embeds are
+        # e.g.: https://bsky.app/profile/did:plc:4qvb4dpkg6tkbzym77j6jcm4/post/3lbjktt6tw52h
+        elif feat["$type"].endswith("external"):
+            link = feat["external"]["uri"]
+
+            # Handle native gifs as medias
+            if link.startswith("https://media.tenor.com/"):
+                media_data.append(
+                    prepare_native_gif_as_media(
+                        feat["external"], post["user_did"], post["url"]
+                    )
+                )
+            # Extra card links sometimes missing from facets & text due to manual action in post form
+            else:
+                extra_links.append(link)
+
+            if isinstance(feat["external"].get("thumb"), dict):
+                post = process_card_data(feat["external"], post)
+
+        # Some people share code snippets using third party apps
+        # e.g.: https://bsky.app/profile/alexdln.com/post/3mbwzgrymow2o
+        elif (
+            "#" in feat["$type"]
+            and feat["$type"].split("#")[1].startswith("code")
+            and "code" in feat
+        ):
+            language = (
+                feat["$type"].split("#")[1].split(".")[1]
+                if "." in feat["$type"].split("#")[1]
+                else "plain"
+            )
+            text += (
+                b"\n```"
+                + language.encode("utf-8")
+                + b"\n"
+                + feat["code"].encode("utf-8")
+                + b"\n```\n"
+            )
+
+        # We chose to ignore non Bluesky features for now (e.g. personalized features)
+        # example: https://bsky.app/profile/poll.blue/post/3kmuqjkkozh2r
+        elif "bsky" not in feat["$type"]:
+            continue
         else:
             raise BlueskyPayloadError(
                 post["url"], "unusual record facet feature $type: %s" % feat
@@ -543,20 +758,60 @@ def normalize_post(
 
     # Handle quotes & medias
     media_ids = set()
-    post["media_urls"] = []
     post["media_thumbnails"] = []
     post["media_types"] = []
     post["media_alt_texts"] = []
     if "embed" in data["record"]:
         embed = data["record"]["embed"]
         quoted_data = None
-        media_data = []
-        extra_links = []
 
         if not valid_embed_type(embed["$type"]):
+            if "bsky" in embed["$type"]:
+                raise BlueskyPayloadError(
+                    post["url"], "unusual record embed $type: %s" % embed
+                )
+            # Ignore non Bluesky embeds for now (e.g. personalized embeds)
+
+        # Empty embed (not usual, but seen in the Bluesky jungle, e.g.
+        # https://bsky.app/profile/did:plc:na6u3avvaz2x5wyzqrnviqiz/post/3lzf5qi2ra62k
+        # https://bsky.app/profile/dangelodario.it/post/3l3inqifqj42p
+        # or https://bsky.app/profile/soirilab.bsky.social/post/3lywaa7vhsu2c)
+        if embed["$type"].endswith(".post") or embed["$type"] == "N/A":
+            # Some posts have extra keys in their empty embed, certainly personalized ones.
+
+            # Personalized quote (not visible on Bluesky for the example)
+            # example: https://bsky.app/profile/jacksmithsocial.bsky.social/post/3lbca2nxy4f2a
+            if embed.get("$type") == "app.bsky.feed.post" and embed.get(
+                "record", {}
+            ).get("uri"):
+                post, quoted_data, links = prepare_quote_data(
+                    embed["record"], data.get("embed", {}).get("record"), post, links
+                )
+
+            # for the other ones we know up to now, we want to ignore them
+            # e.g.: https://bsky.app/profile/granmouse.bsky.social/post/3lwvh5xd2xk2p
+            #       https://bsky.app/profile/flyingaubrey.bsky.social/post/3lxngessntk2p
+            elif len(embed.keys()) > 1 and embed.get("type") not in ["private", "list"]:
+                raise BlueskyPayloadError(
+                    post["url"],
+                    "unusual empty record embed with extra keys: %s" % embed,
+                )
+            # Nothing to do for empty embed
+
+        if (
+            embed["$type"].endswith(".embed")
+            and len(embed.keys()) > 2
+            and len(embed.get("images")) > 0
+        ):
             raise BlueskyPayloadError(
-                post["url"], "unusual record embed $type: %s" % embed
+                post["url"], "unusual empty record embed with extra keys: %s" % embed
             )
+
+        # Links from links embed
+        # e.g.: https://bsky.app/profile/sacredatoz.bsky.social/post/3lrqvemv7qe2f
+        if embed["$type"].endswith(".links"):
+            for link in embed["links"]:
+                extra_links.append(link)
 
         # Links from cards
         if embed["$type"].endswith(".external"):
@@ -577,13 +832,48 @@ def normalize_post(
                 if "embed" in data:
                     post = process_card_data(data["embed"]["external"], post)
 
+        # Not visible images
+        # examples: https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvxsaej62c
+        #           https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvz52x7s2m
+        if embed["$type"].endswith(".viewImages"):
+            if "images" in embed:
+                for i in embed["images"]:
+                    post["media_urls"].append(
+                        i.get("viewImage", {}).get("thumb", {}).get("uri", "")
+                    )
+            elif "viewImage" in embed:
+                for i in embed["viewImage"]:
+                    if "viewImage" in i:
+                        sub_image = "viewImage"
+                    elif "image" in i:
+                        sub_image = "image"
+                    else:
+                        raise BlueskyPayloadError(
+                            post["url"],
+                            "unusual viewImages embed content: %s" % embed,
+                        )
+                    post["media_urls"].append(
+                        i[sub_image].get("thumb", {}).get("uri", "")
+                    )
+
         # Images
-        if embed["$type"].endswith(".images"):
-            media_data.extend([prepare_image_as_media(i) for i in embed["images"]])
+        if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
+            media_data.extend(
+                [prepare_image_as_media(i, post["url"]) for i in embed["images"]]
+            )
 
         # Video
         if embed["$type"].endswith(".video"):
             media_data.append(prepare_video_as_media(embed["video"]))
+        elif embed["$type"].endswith(".videos"):
+            for elt in embed["videos"]:
+                media_data.append(prepare_video_as_media(elt["video"]))
+        elif embed["$type"].endswith(".media"):
+            if isinstance(embed["media"], dict):
+                media_data.append(prepare_video_as_media(embed["media"]["video"]))
+            elif isinstance(embed["media"], list):
+                for elt in embed["media"]:
+                    media_data.append(prepare_video_as_media(elt["media"]))
 
         # Quote & Starter-packs
         if embed["$type"].endswith(".record"):
@@ -631,12 +921,20 @@ def normalize_post(
             # Images
             elif embed["media"]["$type"].endswith(".images"):
                 media_data.extend(
-                    [prepare_image_as_media(i) for i in embed["media"]["images"]]
+                    [
+                        prepare_image_as_media(i, post["url"])
+                        for i in embed["media"]["images"]
+                    ]
                 )
 
             # Video
             elif embed["media"]["$type"].endswith(".video"):
                 media_data.append(prepare_video_as_media(embed["media"]["video"]))
+
+            # A personalized record with media embed type, but video unavailable
+            # e.g.: https://bsky.app/profile/meteolatorregassa.bsky.social/post/3lhoxazzptj2b
+            elif embed["media"]["$type"].endswith("#media"):
+                pass
 
             else:
                 raise BlueskyPayloadError(
@@ -751,8 +1049,13 @@ def normalize_post(
                     "allow_from_" + rule["$type"].split("#")[1].split("Rule")[0]
                 )
                 if rule_string.endswith("_list") and "list" in rule:
-                    for allowed_list in rule["list"]:
-                        post["replies_rules"].append(rule_string + ":" + allowed_list)
+                    if isinstance(rule["list"], str):
+                        post["replies_rules"].append(rule_string + ":" + rule["list"])
+                    else:
+                        for allowed_list in rule["list"]:
+                            post["replies_rules"].append(
+                                rule_string + ":" + allowed_list
+                            )
                 else:
                     post["replies_rules"].append(rule_string)
             if not data["threadgate"]["record"]["allow"]:
