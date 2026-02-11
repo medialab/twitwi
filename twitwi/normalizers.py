@@ -10,13 +10,14 @@ import re
 from copy import deepcopy
 from html import unescape
 
-from twitwi.exceptions import TwitterPayloadV2IncompleteIncludesError
+from twitwi.exceptions import TwitterPayloadV2IncompleteIncludesError, TwitwiError
 from twitwi.utils import (
     get_collection_time,
     get_dates,
     custom_normalize_url,
     validate_payload_v2,
     custom_get_normalized_hostname,
+    format_profile_url,
 )
 
 CLEAN_RT_PATTERN = re.compile(r"^RT @\w+: ")
@@ -68,18 +69,27 @@ def extract_mentions_from_text(text):
     return extract_items_from_text(text, "@")
 
 
-def resolve_entities(tweet, prefix):
-    status_key = "%s_status" % prefix
+def resolve_entities(tweet, prefix, source_version: str = "v1"):
+    if source_version == "v1":
+        suffix = "status"
+    elif source_version == "iframe":
+        suffix = "tweet"
+    else:
+        raise TwitwiError("source_version should be one of v1 or iframe")
+    status_key = "%s_%s" % (prefix, suffix)
     target = tweet[status_key]
 
-    for ent in ["entities", "extended_entities"]:
+    for ent in ["entities", "extended_entities", "mediaDetails"]:
         if ent not in target:
             continue
-        tweet[ent] = tweet.get(ent, {})
-        for field in target[ent]:
-            tweet[ent][field] = tweet[ent].get(field, [])
-            if field in target[ent]:
-                tweet[ent][field] += target[ent][field]
+        if isinstance(target[ent], dict):
+            tweet[ent] = tweet.get(ent, {})
+            for field in target[ent]:
+                tweet[ent][field] = tweet[ent].get(field, [])
+                if field in target[ent]:
+                    tweet[ent][field] += target[ent][field]
+        elif isinstance(target[ent], list):
+            tweet[ent] = tweet.get(ent, []) + target[ent]
 
 
 def get_bitrate(x):
@@ -102,6 +112,7 @@ META_FIELDS = [
     "possibly_sensitive",
     "retweet_count",
     "favorite_count",
+    "conversation_count",  # equivalent of reply_count in payload without API key
     "reply_count",
 ]
 
@@ -110,6 +121,7 @@ META_FIELD_TRANSLATIONS = {
     "in_reply_to_screen_name": "to_username",
     "in_reply_to_user_id_str": "to_userid",
     "favorite_count": "like_count",
+    "conversation_count": "reply_count",  # equivalent of reply_count in payload without API key
 }
 
 USER_META_FIELDS = [
@@ -123,10 +135,18 @@ USER_META_FIELDS = [
     "created_at",
 ]
 
+USER_META_FIELDS_IFRAME = [
+    "screen_name",
+    "name",
+    "verified",
+    "verified_type",
+    "is_blue_verified",
+]
+
 PLACE_META_FIELDS = ["country_code", "full_name", "place_type"]
 
 
-def grab_extra_meta(source, result, locale=None):
+def grab_extra_meta(source, result, locale=None, source_version: str = "v1"):
     if source.get("coordinates"):
         result["coordinates"] = source["coordinates"]["coordinates"]
         result["lat"] = source["coordinates"]["coordinates"][1]
@@ -145,7 +165,14 @@ def grab_extra_meta(source, result, locale=None):
     if "ext_views" in source:
         result["impression_count"] = source["ext_views"].get("count")
 
-    for meta in USER_META_FIELDS:
+    if source_version == "v1":
+        user_meta_field_to_use = USER_META_FIELDS
+    elif source_version == "iframe":
+        user_meta_field_to_use = USER_META_FIELDS_IFRAME
+    else:
+        raise TwitwiError("source_version should be one of v1 or iframe")
+
+    for meta in user_meta_field_to_use:
         key = "user_%s" % meta.replace("_count", "")
         if key in source:
             result[key] = source[key]
@@ -154,9 +181,9 @@ def grab_extra_meta(source, result, locale=None):
 
     if "user" in source:
         result["user_id"] = source["user"]["id_str"]
-        result["user_tweets"] = source["user"]["statuses_count"]
-        result["user_likes"] = source["user"]["favourites_count"]
-        result["user_lists"] = source["user"]["listed_count"]
+        result["user_tweets"] = source["user"].get("statuses_count")
+        result["user_likes"] = source["user"].get("favourites_count")
+        result["user_lists"] = source["user"].get("listed_count")
         result["user_image"] = source["user"]["profile_image_url_https"]
 
     if "place" in source and source["place"] is not None:
@@ -183,7 +210,11 @@ def grab_extra_meta(source, result, locale=None):
         try:
             result["user_url"] = source["user"]["url"]
         except KeyError:
-            pass
+            try:
+                # Formatting user_url by hand
+                result["user_url"] = format_profile_url(result["user_screen_name"])
+            except KeyError:
+                pass
 
     if "user_created_at" in result:
         result["user_timestamp_utc"], result["user_created_at"] = get_dates(
@@ -207,6 +238,7 @@ def normalize_tweet(
     extract_referenced_tweets=False,
     collection_source=None,
     pure=True,
+    source_version: str = "v1",
 ):
     """
     Function "normalizing" a tweet as returned by Twitter's API in order to
@@ -225,12 +257,18 @@ def normalize_tweet(
             was collected. Defaults to `None`.
         pure (bool, optional): whether to allow the function to mutate its
             original argument. Default to `True`.
+        source_version (str, optional): version of the Twitter payload. Must be
+            either "v1" or "iframe". Default to "v1".
 
     Returns:
         (dict or list): Either a single tweet dict or a list of tweet dicts if
             `extract_referenced_tweets` was set to `True`.
 
     """
+
+    # iframe is for the method without api key (here https://shkspr.mobi/blog/2025/04/you-dont-need-an-api-key-to-archive-twitter-data/)
+    if source_version not in ["v1", "iframe"]:
+        raise Exception("source should be one of v1 or iframe")
 
     if pure:
         tweet = deepcopy(tweet)
@@ -252,6 +290,11 @@ def normalize_tweet(
     qtu = None
     qtuid = None
     qtime = None
+
+    if source_version == "v1":
+        quoted_status_key = "quoted_status"
+    elif source_version == "iframe":
+        quoted_status_key = "quoted_tweet"
 
     if (
         "retweeted_status" in tweet
@@ -279,18 +322,20 @@ def normalize_tweet(
         resolve_entities(tweet, "retweeted")
 
     elif (
-        "quoted_status" in tweet and tweet["quoted_status"]["id_str"] != tweet["id_str"]
+        quoted_status_key in tweet
+        and tweet[quoted_status_key]["id_str"] != tweet["id_str"]
     ):
-        qti = tweet["quoted_status"]["id_str"]
-        qtu = tweet["quoted_status"]["user"]["screen_name"]
-        qtuid = tweet["quoted_status"]["user"]["id_str"]
+        qti = tweet[quoted_status_key]["id_str"]
+        qtu = tweet[quoted_status_key]["user"]["screen_name"]
+        qtuid = tweet[quoted_status_key]["user"]["id_str"]
 
         nested = normalize_tweet(
-            tweet["quoted_status"],
+            tweet[quoted_status_key],
             locale=locale,
             extract_referenced_tweets=True,
             collection_source="quote",
             pure=False,
+            source_version=source_version,
         )
 
         qtweet = nested[-1]
@@ -304,7 +349,7 @@ def normalize_tweet(
             qturl = qtweet["url"]
         qtime = qtweet["timestamp_utc"]
 
-        resolve_entities(tweet, "quoted")
+        resolve_entities(tweet, "quoted", source_version=source_version)
 
     medids = set()
     media_urls = []
@@ -319,7 +364,14 @@ def normalize_tweet(
     if "entities" in tweet or "extended_entities" in tweet:
         source_id = rti or qti or tweet["id_str"]
 
-        entities = tweet.get("extended_entities", tweet["entities"]).get("media", [])
+        entities = []
+
+        if source_version == "v1":
+            entities += tweet.get("extended_entities", tweet["entities"]).get(
+                "media", []
+            )
+        elif source_version == "iframe":
+            entities += tweet.get("mediaDetails", [])
         entities += tweet["entities"].get("urls", [])
 
         for entity in entities:
@@ -373,7 +425,9 @@ def normalize_tweet(
             if link.lower() == qturl_lc:
                 links.remove(link)
 
-    timestamp_utc, local_time = get_dates(tweet["created_at"], locale)
+    timestamp_utc, local_time = get_dates(
+        tweet["created_at"], locale, source=source_version
+    )
     text = unescape(text)
 
     if collection_source is None:
@@ -418,7 +472,7 @@ def normalize_tweet(
     if collection_source is not None:
         normalized_tweet["collected_via"] = [collection_source]
 
-    grab_extra_meta(tweet, normalized_tweet, locale)
+    grab_extra_meta(tweet, normalized_tweet, locale, source_version)
 
     if rtu and not normalized_tweet["retweet_count"]:
         normalized_tweet["retweet_count"] = rtweet["retweet_count"]
