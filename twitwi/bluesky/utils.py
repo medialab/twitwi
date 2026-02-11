@@ -43,12 +43,12 @@ valid_author_keys = ["did", "handle", "createdAt"]
 def validate_post_payload(data):
     post = data.get("post", data)
 
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
     for key in valid_post_keys:
         if key not in post:
             return False, f"key {key} is missing from payload: {post}"
-
-    if not isinstance(post["record"], dict):
-        return False, "payload's record is not a dictionary: %s" % post["record"]
 
     for key in valid_record_keys:
         if key not in post["record"]:
@@ -93,12 +93,12 @@ def validate_firehose_post_payload(data):
     payload = data.get("post", data)
     post = payload.get("commit", payload)
 
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
     for key in valid_firehose_post_payload_keys:
         if key not in payload:
             return False, f"key {key} is missing from payload: {post}"
-
-    if not isinstance(post["record"], dict):
-        return False, "payload's record is not a dictionary: %s" % post["record"]
 
     for key in valid_record_keys:
         if key not in post["record"]:
@@ -123,12 +123,12 @@ def validate_tap_post_payload(data):
 
     post = payload.get("record", payload)
 
+    if not isinstance(post["record"], dict):
+        return False, "payload's record is not a dictionary: %s" % post["record"]
+
     for key in valid_tap_post_payload_keys:
         if key not in post:
             return False, f"key {key} is missing from payload: {post}"
-
-    if not isinstance(post["record"], dict):
-        return False, "payload's record is not a dictionary: %s" % post["record"]
 
     for key in valid_record_keys:
         if key not in post["record"]:
@@ -237,9 +237,7 @@ def format_media_url(user_did, media_cid, mime_type, source):
     return media_url, media_thumb
 
 
-def format_external_embed_thumbnail_url(thumbnail_cid, user_did):
-    if not thumbnail_cid:
-        return ""
+def format_external_embed_thumbnail_url(thumbnail_cid: str, user_did: str) -> str:
     return (
         f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{thumbnail_cid}@jpeg"
     )

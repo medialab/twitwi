@@ -165,8 +165,13 @@ def process_card_data(embed_data, post):
     post["card_link"] = embed_data["uri"]
     post["card_title"] = embed_data.get("title", "")
     post["card_description"] = embed_data.get("description", "")
-    post["card_thumbnail"] = format_external_embed_thumbnail_url(
-        embed_data.get("thumb", {}).get("ref", {}).get("$link", ""), post["user_did"]
+
+    thumbnail_cid = embed_data.get("thumb", {}).get("ref", {}).get("$link", "")
+
+    post["card_thumbnail"] = (
+        format_external_embed_thumbnail_url(thumbnail_cid, post["user_did"])
+        if thumbnail_cid
+        else ""
     )
 
 
