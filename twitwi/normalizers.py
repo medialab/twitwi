@@ -112,7 +112,7 @@ META_FIELDS = [
     "possibly_sensitive",
     "retweet_count",
     "favorite_count",
-    "conversation_count", # equivalent of reply_count in payload without API key
+    "conversation_count",  # equivalent of reply_count in payload without API key
     "reply_count",
 ]
 
@@ -121,7 +121,7 @@ META_FIELD_TRANSLATIONS = {
     "in_reply_to_screen_name": "to_username",
     "in_reply_to_user_id_str": "to_userid",
     "favorite_count": "like_count",
-    "conversation_count": "reply_count", # equivalent of reply_count in payload without API key
+    "conversation_count": "reply_count",  # equivalent of reply_count in payload without API key
 }
 
 USER_META_FIELDS = [
@@ -160,7 +160,6 @@ def grab_extra_meta(source, result, locale=None, source_version: str = "v1"):
             result[META_FIELD_TRANSLATIONS.get(meta, meta)] = source[meta]
         elif nostr_field(meta) in source:
             result[meta] = str(source[nostr_field(meta)])
-
 
     # impression_count when scraping
     if "ext_views" in source:
@@ -239,7 +238,7 @@ def normalize_tweet(
     extract_referenced_tweets=False,
     collection_source=None,
     pure=True,
-    source_version: str = "v1"
+    source_version: str = "v1",
 ):
     """
     Function "normalizing" a tweet as returned by Twitter's API in order to
@@ -322,7 +321,8 @@ def normalize_tweet(
         resolve_entities(tweet, "retweeted")
 
     elif (
-        quoted_status_key in tweet and tweet[quoted_status_key]["id_str"] != tweet["id_str"]
+        quoted_status_key in tweet
+        and tweet[quoted_status_key]["id_str"] != tweet["id_str"]
     ):
         qti = tweet[quoted_status_key]["id_str"]
         qtu = tweet[quoted_status_key]["user"]["screen_name"]
@@ -366,7 +366,9 @@ def normalize_tweet(
         entities = []
 
         if source_version == "v1":
-            entities += tweet.get("extended_entities", tweet["entities"]).get("media", [])
+            entities += tweet.get("extended_entities", tweet["entities"]).get(
+                "media", []
+            )
         elif source_version == "no_api_key":
             entities += tweet.get("mediaDetails", [])
         entities += tweet["entities"].get("urls", [])
@@ -422,7 +424,9 @@ def normalize_tweet(
             if link.lower() == qturl_lc:
                 links.remove(link)
 
-    timestamp_utc, local_time = get_dates(tweet["created_at"], locale, source=source_version)
+    timestamp_utc, local_time = get_dates(
+        tweet["created_at"], locale, source=source_version
+    )
     text = unescape(text)
 
     if collection_source is None:

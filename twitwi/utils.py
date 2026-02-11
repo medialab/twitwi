@@ -161,5 +161,6 @@ def get_dates_from_id(tweet_id, locale=None):
         datetime.strftime(locale_datetime, FORMATTED_TWEET_DATETIME_FORMAT),
     )
 
+
 def format_profile_url(user_screen_name):
     return f"https://twitter.com/{user_screen_name}"
