@@ -54,8 +54,8 @@ def get_collection_time():
 def get_dates(
     date_str: str, locale=None, source: str = "v1", millisecond_timestamp: bool = False
 ) -> Tuple[int, str]:
-    if source not in ["v1", "v2", "no_api_key", "bluesky"]:
-        raise Exception("source should be one of v1, v2, no_api_key or bluesky")
+    if source not in ["v1", "v2", "iframe", "bluesky"]:
+        raise Exception("source should be one of v1, v2, iframe or bluesky")
 
     if locale is None:
         locale = UTC_TIMEZONE

@@ -72,10 +72,10 @@ def extract_mentions_from_text(text):
 def resolve_entities(tweet, prefix, source_version: str = "v1"):
     if source_version == "v1":
         suffix = "status"
-    elif source_version == "no_api_key":
+    elif source_version == "iframe":
         suffix = "tweet"
     else:
-        raise TwitwiError("source_version should be one of v1 or no_api_key")
+        raise TwitwiError("source_version should be one of v1 or iframe")
     status_key = "%s_%s" % (prefix, suffix)
     target = tweet[status_key]
 
@@ -135,7 +135,7 @@ USER_META_FIELDS = [
     "created_at",
 ]
 
-USER_META_FIELDS_NO_API_KEY = [
+USER_META_FIELDS_iframe = [
     "screen_name",
     "name",
     "verified",
@@ -167,10 +167,10 @@ def grab_extra_meta(source, result, locale=None, source_version: str = "v1"):
 
     if source_version == "v1":
         user_meta_field_to_use = USER_META_FIELDS
-    elif source_version == "no_api_key":
-        user_meta_field_to_use = USER_META_FIELDS_NO_API_KEY
+    elif source_version == "iframe":
+        user_meta_field_to_use = USER_META_FIELDS_iframe
     else:
-        raise TwitwiError("source_version should be one of v1 or no_api_key")
+        raise TwitwiError("source_version should be one of v1 or iframe")
 
     for meta in user_meta_field_to_use:
         key = "user_%s" % meta.replace("_count", "")
@@ -265,9 +265,9 @@ def normalize_tweet(
 
     """
 
-    # no_api_key is for the method without api key (here https://shkspr.mobi/blog/2025/04/you-dont-need-an-api-key-to-archive-twitter-data/)
-    if source_version not in ["v1", "no_api_key", "bluesky"]:
-        raise Exception("source should be one of v1, no_api_key or bluesky")
+    # iframe is for the method without api key (here https://shkspr.mobi/blog/2025/04/you-dont-need-an-api-key-to-archive-twitter-data/)
+    if source_version not in ["v1", "iframe", "bluesky"]:
+        raise Exception("source should be one of v1, iframe or bluesky")
 
     if pure:
         tweet = deepcopy(tweet)
@@ -292,7 +292,7 @@ def normalize_tweet(
 
     if source_version == "v1":
         quoted_status_key = "quoted_status"
-    elif source_version == "no_api_key":
+    elif source_version == "iframe":
         quoted_status_key = "quoted_tweet"
 
     if (
@@ -369,7 +369,7 @@ def normalize_tweet(
             entities += tweet.get("extended_entities", tweet["entities"]).get(
                 "media", []
             )
-        elif source_version == "no_api_key":
+        elif source_version == "iframe":
             entities += tweet.get("mediaDetails", [])
         entities += tweet["entities"].get("urls", [])
 

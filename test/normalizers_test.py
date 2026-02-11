@@ -235,7 +235,7 @@ class TestNormalizers(object):
         # tz = timezone("Europe/Paris")
 
         tests = get_json_resource("normalization-no-api-key.json")
-        fn = partial(normalize_tweet, source_version="no_api_key")
+        fn = partial(normalize_tweet, source_version="iframe")
 
         # from test.utils import dump_json_resource
         # for idx, test in enumerate(tests):
