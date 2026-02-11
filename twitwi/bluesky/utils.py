@@ -83,7 +83,11 @@ def validate_partial_post_payload(data, collection_source: str = "firehose"):
     elif collection_source == "tap":
         return validate_tap_post_payload(data)
     else:
-        return False, f"Unknown collection_source {collection_source} for partial post payload validation"
+        return (
+            False,
+            f"Unknown collection_source {collection_source} for partial post payload validation",
+        )
+
 
 def validate_firehose_post_payload(data):
     payload = data.get("post", data)
@@ -109,6 +113,7 @@ def validate_firehose_post_payload(data):
         )
 
     return True, None
+
 
 def validate_tap_post_payload(data):
     payload = data.get("post", data)
@@ -231,7 +236,10 @@ def format_media_url(user_did, media_cid, mime_type, source):
         raise BlueskyPayloadError(source, f"{mime_type} is an unusual media mimeType")
     return media_url, media_thumb
 
+
 def format_external_embed_thumbnail_url(thumbnail_cid, user_did):
     if not thumbnail_cid:
         return ""
-    return f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{thumbnail_cid}@jpeg"
+    return (
+        f"https://cdn.bsky.app/img/feed_thumbnail/plain/{user_did}/{thumbnail_cid}@jpeg"
+    )

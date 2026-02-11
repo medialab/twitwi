@@ -1,6 +1,11 @@
 from typing import List, Optional
 
-from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost, BlueskyPartialPost
+from twitwi.bluesky.types import (
+    BlueskyProfile,
+    BlueskyPartialProfile,
+    BlueskyPost,
+    BlueskyPartialPost,
+)
 
 PROFILE_FIELDS = list(BlueskyProfile.__annotations__.keys())
 

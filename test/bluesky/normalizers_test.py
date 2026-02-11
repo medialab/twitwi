@@ -5,7 +5,12 @@ from functools import partial
 from pytz import timezone
 from copy import deepcopy
 
-from twitwi.bluesky import normalize_profile, normalize_partial_profile, normalize_post, normalize_partial_post
+from twitwi.bluesky import (
+    normalize_profile,
+    normalize_partial_profile,
+    normalize_post,
+    normalize_partial_post,
+)
 from twitwi.bluesky.utils import format_post_uri
 
 from test.utils import get_json_resource
@@ -179,10 +184,11 @@ class TestNormalizers:
             from test.utils import dump_json_resource
 
             normalized_partial_posts = [
-                set_fake_collection_time(fn(post))
-                for post in posts
+                set_fake_collection_time(fn(post)) for post in posts
             ]
-            dump_json_resource(normalized_partial_posts, "bluesky-normalized-firehose-posts.json")
+            dump_json_resource(
+                normalized_partial_posts, "bluesky-normalized-firehose-posts.json"
+            )
 
         expected = get_json_resource("bluesky-normalized-firehose-posts.json")
 
@@ -190,7 +196,9 @@ class TestNormalizers:
             result = fn(post)
             assert isinstance(result, dict)
             assert result["uri"] == expected[idx]["uri"]
-            assert "collection_time" in result and isinstance(result["collection_time"], str)
+            assert "collection_time" in result and isinstance(
+                result["collection_time"], str
+            )
 
             if "post" in post:
                 uri = format_post_uri(
@@ -203,7 +211,6 @@ class TestNormalizers:
                     post.get("commit", {}).get("rkey", "UNKNOWN"),
                 )
             compare_dicts(uri, result, expected[idx])
-
 
     def test_normalize_firehose_post_should_not_mutate(self):
         post = get_json_resource("bluesky-firehose-posts.json")[0]
@@ -224,10 +231,11 @@ class TestNormalizers:
             from test.utils import dump_json_resource
 
             normalized_partial_posts = [
-                set_fake_collection_time(fn(post))
-                for post in posts
+                set_fake_collection_time(fn(post)) for post in posts
             ]
-            dump_json_resource(normalized_partial_posts, "bluesky-normalized-tap-posts.json")
+            dump_json_resource(
+                normalized_partial_posts, "bluesky-normalized-tap-posts.json"
+            )
 
         expected = get_json_resource("bluesky-normalized-tap-posts.json")
 
@@ -235,7 +243,9 @@ class TestNormalizers:
             result = fn(post)
             assert isinstance(result, dict)
             assert result["uri"] == expected[idx]["uri"]
-            assert "collection_time" in result and isinstance(result["collection_time"], str)
+            assert "collection_time" in result and isinstance(
+                result["collection_time"], str
+            )
 
             if "post" in post:
                 uri = format_post_uri(
@@ -265,7 +275,9 @@ class TestNormalizers:
         partial_posts = get_json_resource("bluesky-firehose-posts.json")
 
         fn_full = partial(normalize_post, locale=tz)
-        fn_partial = partial(normalize_partial_post, locale=tz, collection_source="firehose")
+        fn_partial = partial(
+            normalize_partial_post, locale=tz, collection_source="firehose"
+        )
 
         for full_post, partial_post in zip(full_posts, partial_posts):
             full_result = fn_full(full_post)

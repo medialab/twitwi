@@ -10,7 +10,12 @@ from twitwi.bluesky import (
     transform_post_into_csv_dict,
     transform_partial_post_into_csv_dict,
 )
-from twitwi.bluesky.constants import PROFILE_FIELDS, PARTIAL_PROFILE_FIELDS, POST_FIELDS, PARTIAL_POST_FIELDS
+from twitwi.bluesky.constants import (
+    PROFILE_FIELDS,
+    PARTIAL_PROFILE_FIELDS,
+    POST_FIELDS,
+    PARTIAL_POST_FIELDS,
+)
 from test.utils import get_json_resource, open_resource
 
 
@@ -152,7 +157,9 @@ class TestFormatters:
             assert list(csv.DictReader(buffer)) == list(csv.DictReader(f))
 
     def test_format_partial_post_as_csv_row(self):
-        normalized_partial_posts = get_json_resource("bluesky-normalized-firehose-posts.json")
+        normalized_partial_posts = get_json_resource(
+            "bluesky-normalized-firehose-posts.json"
+        )
 
         buffer = StringIO(newline=None)
         writer = csv.writer(buffer, quoting=csv.QUOTE_MINIMAL)
@@ -173,7 +180,9 @@ class TestFormatters:
             assert list(csv.reader(buffer)) == list(csv.reader(f))
 
     def test_transform_partial_post_into_csv_dict(self):
-        normalized_partial_posts = get_json_resource("bluesky-normalized-firehose-posts.json")
+        normalized_partial_posts = get_json_resource(
+            "bluesky-normalized-firehose-posts.json"
+        )
 
         buffer = StringIO(newline=None)
         writer = csv.DictWriter(

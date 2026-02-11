@@ -23,7 +23,12 @@ from twitwi.bluesky.utils import (
     format_media_url,
     format_external_embed_thumbnail_url,
 )
-from twitwi.bluesky.types import BlueskyProfile, BlueskyPartialProfile, BlueskyPost, BlueskyPartialPost
+from twitwi.bluesky.types import (
+    BlueskyProfile,
+    BlueskyPartialProfile,
+    BlueskyPost,
+    BlueskyPartialPost,
+)
 
 
 def normalize_profile(data: Dict, locale: Optional[Any] = None) -> BlueskyProfile:
@@ -243,9 +248,12 @@ def merge_nested_posts(referenced_posts, nested, source):
                             % (key, old_post[key], new_post[key]),
                         )
 
+
 # Handle hashtags, mentions & links from facets
 # Warning: mutates post
-def process_post_facets(facets: List[Dict], post: Dict, text: str) -> Tuple[str, Set[str], List[Dict], List[str]]:
+def process_post_facets(
+    facets: List[Dict], post: Dict, text: str
+) -> Tuple[str, Set[str], List[Dict], List[str]]:
     post["mentioned_user_handles"] = []
     post["mentioned_user_dids"] = []
     hashtags = set()
@@ -404,7 +412,6 @@ def process_post_facets(facets: List[Dict], post: Dict, text: str) -> Tuple[str,
             byteStart = facet["index"]["byteStart"]
             byteEnd = facet["index"]["byteEnd"]
 
-
             # Skip overlapping links cases
             # examples: https://bsky.app/profile/researchtrend.ai/post/3lbieylwwxs2b
             #           https://bsky.app/profile/dj-cyberspace.otoskey.tarbin.net.ap.brid.gy/post/3lchg3plpdjp2
@@ -491,11 +498,9 @@ def process_post_facets(facets: List[Dict], post: Dict, text: str) -> Tuple[str,
                                 byteEnd += 1
                                 continue
 
-
                         # Meaning that we did not find a valid utf-8 ending, so we reset byteEnd to its original value
                         if byteEnd > len(post["original_text"].encode("utf-8")):
                             byteEnd = facet["index"]["byteEnd"]
-
 
                         byteEnd += byteStart - facet["index"]["byteStart"]
                 else:
@@ -604,6 +609,7 @@ def process_post_facets(facets: List[Dict], post: Dict, text: str) -> Tuple[str,
 
     return text, links, media_data, extra_links
 
+
 # Handle thread info when applicable
 # Warning: mutates post
 def process_post_thread_info(reply_data: Dict, post: Dict):
@@ -613,9 +619,7 @@ def process_post_thread_info(reply_data: Dict, post: Dict):
         post["to_user_did"], post["to_post_did"] = parse_post_uri(
             post["to_post_uri"], post["url"]
         )
-        post["to_post_url"] = format_post_url(
-            post["to_user_did"], post["to_post_did"]
-        )
+        post["to_post_url"] = format_post_url(post["to_user_did"], post["to_post_did"])
     if "root" in reply_data:
         post["to_root_post_cid"] = reply_data["root"]["cid"]
         post["to_root_post_uri"] = reply_data["root"]["uri"]
@@ -629,7 +633,18 @@ def process_post_thread_info(reply_data: Dict, post: Dict):
 
 # Handle quotes & medias
 # Warning: mutates post, links and referenced_posts
-def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str, media_data: List[Dict], extra_links: List[str], locale: Optional[Any], extract_referenced_posts: bool = False, referenced_posts: Dict = {}, data: Dict = {}) -> str:
+def process_links_from_card(
+    record: Dict,
+    post: Dict,
+    links: Set[str],
+    text: str,
+    media_data: List[Dict],
+    extra_links: List[str],
+    locale: Optional[Any],
+    extract_referenced_posts: bool = False,
+    referenced_posts: Dict = {},
+    data: Dict = {},
+) -> str:
     media_ids = set()
     embed = record["embed"]
     quoted_data = None
@@ -650,9 +665,9 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
 
         # Personalized quote (not visible on Bluesky for the example)
         # example: https://bsky.app/profile/jacksmithsocial.bsky.social/post/3lbca2nxy4f2a
-        if embed.get("$type") == "app.bsky.feed.post" and embed.get(
-            "record", {}
-        ).get("uri"):
+        if embed.get("$type") == "app.bsky.feed.post" and embed.get("record", {}).get(
+            "uri"
+        ):
             quoted_data = prepare_quote_data(
                 embed["record"], data.get("embed", {}).get("record"), post, links
             )
@@ -701,7 +716,6 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
             # Warning: mutates post
             process_card_data(embed["external"], post)
 
-
     # Not visible images
     # examples: https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvxsaej62c
     #           https://bsky.app/profile/lubosmichalik.bsky.social/post/3ltjvz52x7s2m
@@ -722,9 +736,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
                         post["url"],
                         "unusual viewImages embed content: %s" % embed,
                     )
-                post["media_urls"].append(
-                    i[sub_image].get("thumb", {}).get("uri", "")
-                )
+                post["media_urls"].append(i[sub_image].get("thumb", {}).get("uri", ""))
 
     # Images
     if embed["$type"].endswith(".images") or embed["$type"].endswith("image"):
@@ -749,9 +761,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
     if embed["$type"].endswith(".record"):
         if "app.bsky.graph.starterpack" in embed["record"]["uri"]:
             # Warning: mutates post
-            process_starterpack_card(
-                data.get("embed", {}).get("record", {}), post
-            )
+            process_starterpack_card(data.get("embed", {}).get("record", {}), post)
             if post.get("card_link"):
                 extra_links.append(post["card_link"])
         else:
@@ -788,9 +798,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
                 # Handle link card metadata
                 if "embed" in data and "media" in data["embed"]["media"]:
                     # Warning: mutates post
-                    process_card_data(
-                        embed["media"]["external"], post
-                    )
+                    process_card_data(embed["media"]["external"], post)
 
         # Images
         elif embed["media"]["$type"].endswith(".images"):
@@ -813,8 +821,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
         else:
             raise BlueskyPayloadError(
                 post["url"],
-                "unusual record embed media $type from a recordWithMedia: %s"
-                % embed,
+                "unusual record embed media $type from a recordWithMedia: %s" % embed,
             )
 
     # Process extra links
@@ -845,8 +852,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
             # Rewrite post's text to include links to medias within
             text += b" " + (
                 media_thumb
-                if media_type.startswith("video")
-                and not media_type.endswith("/gif")
+                if media_type.startswith("video") and not media_type.endswith("/gif")
                 else media_url
             ).encode("utf-8")
 
@@ -882,9 +888,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
         quoted = nested[-1]
         if extract_referenced_posts:
             # Warning: mutates referenced_posts
-            merge_nested_posts(
-                referenced_posts, nested, post["url"]
-            )
+            merge_nested_posts(referenced_posts, nested, post["url"])
 
         # Take better quoted url with user_handle
         post["quoted_url"] = quoted["url"]
@@ -898,8 +902,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
 
         # Rewrite post's text to include quote within (or replace the link to the quote if present)
         quote = (
-            "« @%s: %s — %s »"
-            % (quoted["user_handle"], quoted["text"], quoted["url"])
+            "« @%s: %s — %s »" % (quoted["user_handle"], quoted["text"], quoted["url"])
         ).encode("utf-8")
         url_lower = quoted["url"].encode("utf-8").lower()
         text_lower = text.lower()
@@ -914,7 +917,7 @@ def process_links_from_card(record: Dict, post: Dict, links: Set[str], text: str
 
 # Process links domains
 # Warning: mutates post
-def process_links_domains(post:Dict, links: Set[str]):
+def process_links_domains(post: Dict, links: Set[str]):
     post["links"] = sorted(links)
     post["domains"] = [custom_get_normalized_hostname(link) for link in post["links"]]
 
@@ -936,7 +939,9 @@ def finalize_post_text(text: str, post: Dict):
 
 # Collection source & match query
 # Warning: mutates post
-def process_collection_source_and_match_query(post: Dict, collection_source: Optional[str]):
+def process_collection_source_and_match_query(
+    post: Dict, collection_source: Optional[str]
+):
     if collection_source is not None:
         post["collected_via"] = [collection_source]
     post["match_query"] = collection_source not in ["thread", "quote"]
@@ -944,7 +949,13 @@ def process_collection_source_and_match_query(post: Dict, collection_source: Opt
 
 # Handle thread posts when data comes from a feed
 # Warning: mutates referenced_posts
-def process_thread_posts_from_feed(reply_data: Dict, post: Dict, locale: Optional[Any], extract_referenced_posts: bool, referenced_posts: Dict):
+def process_thread_posts_from_feed(
+    reply_data: Dict,
+    post: Dict,
+    locale: Optional[Any],
+    extract_referenced_posts: bool,
+    referenced_posts: Dict,
+):
     if "parent" in reply_data:
         nested = normalize_post(
             reply_data["parent"],
@@ -953,9 +964,7 @@ def process_thread_posts_from_feed(reply_data: Dict, post: Dict, locale: Optiona
             collection_source="thread",
         )
         # Warning: mutates referenced_posts
-        merge_nested_posts(
-            referenced_posts, nested, post["url"]
-        )
+        merge_nested_posts(referenced_posts, nested, post["url"])
 
     if "root" in reply_data and (
         "parent" not in reply_data
@@ -968,16 +977,17 @@ def process_thread_posts_from_feed(reply_data: Dict, post: Dict, locale: Optiona
             collection_source="thread",
         )
         # Warning: mutates referenced_posts
-        merge_nested_posts(
-            referenced_posts, nested, post["url"]
-        )
+        merge_nested_posts(referenced_posts, nested, post["url"])
 
     if "grandparentAuthor" in reply_data:
         # TODO ? Shall we do anything from that?
         pass
 
+
 # Warning: mutates post
-def handle_text_and_datetime_fields(data: Dict, post: Dict, locale: Optional[Any] = None) -> str:
+def handle_text_and_datetime_fields(
+    data: Dict, post: Dict, locale: Optional[Any] = None
+) -> str:
     # Store original text and prepare text for quotes & medias enriched version
     post["original_text"] = data["record"]["text"]
     text = post["original_text"].encode("utf-8")
@@ -993,8 +1003,6 @@ def handle_text_and_datetime_fields(data: Dict, post: Dict, locale: Optional[Any
         post["local_time"] = "0" + post["local_time"]
 
     return text
-
-
 
 
 @overload
@@ -1146,11 +1154,9 @@ def normalize_post(
             data,
         )
 
-
     # Process links domains
     # Warning: mutates post
     process_links_domains(post, links)
-
 
     # Handle threadgates (replies rules)
     # WARNING: quoted posts do not seem to include threadgates info
@@ -1215,11 +1221,9 @@ def normalize_post(
     # Warning: mutates post
     finalize_post_text(text, post)
 
-
     # Collection source & match query handling
     # Warning: mutates post
     process_collection_source_and_match_query(post, collection_source)
-
 
     if extract_referenced_posts:
         # Handle thread posts when data comes from a feed
@@ -1235,7 +1239,6 @@ def normalize_post(
         ]  # type: ignore
 
     return post  # type: ignore
-
 
 
 def normalize_partial_post(
@@ -1262,18 +1265,23 @@ def normalize_partial_post(
 
     if not isinstance(payload, dict):
         raise BlueskyPayloadError(
-            "UNKNOWN", f"data provided to normalize_partial_post is not a dictionary: {payload}"
+            "UNKNOWN",
+            f"data provided to normalize_partial_post is not a dictionary: {payload}",
         )
 
     if collection_source not in ["firehose", "tap", "unit_test"]:
-        raise ValueError(f"collection_source must be either 'firehose', 'tap' or 'unit_test', got: {collection_source}")
+        raise ValueError(
+            f"collection_source must be either 'firehose', 'tap' or 'unit_test', got: {collection_source}"
+        )
 
     if collection_source == "firehose":
         post_field = "commit"
     else:  # tap
         post_field = "record"
 
-    valid, error = validate_partial_post_payload(payload, collection_source=collection_source)
+    valid, error = validate_partial_post_payload(
+        payload, collection_source=collection_source
+    )
 
     if not valid:
         uri = format_post_uri(
@@ -1294,7 +1302,9 @@ def normalize_partial_post(
 
     # Warning: mutates post
     text = handle_text_and_datetime_fields(data[post_field], post, locale)
-    post["firehose_timestamp_us"] = data["time_us"] if collection_source == "firehose" else None
+    post["firehose_timestamp_us"] = (
+        data["time_us"] if collection_source == "firehose" else None
+    )
 
     # Handle post/user identifiers
     post["cid"] = data[post_field]["cid"]
@@ -1341,20 +1351,16 @@ def normalize_partial_post(
             locale,
         )
 
-
     # Process links domains
     # Warning: mutates post
     process_links_domains(post, links)
-
 
     # Finalize text field
     # Warning: mutates post
     finalize_post_text(text, post)
 
-
     # Collection source & match query handling
     # Warning: mutates post
     process_collection_source_and_match_query(post, collection_source)
-
 
     return post  # type: ignore
