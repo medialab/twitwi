@@ -135,7 +135,7 @@ USER_META_FIELDS = [
     "created_at",
 ]
 
-USER_META_FIELDS_iframe = [
+USER_META_FIELDS_IFRAME = [
     "screen_name",
     "name",
     "verified",
@@ -168,7 +168,7 @@ def grab_extra_meta(source, result, locale=None, source_version: str = "v1"):
     if source_version == "v1":
         user_meta_field_to_use = USER_META_FIELDS
     elif source_version == "iframe":
-        user_meta_field_to_use = USER_META_FIELDS_iframe
+        user_meta_field_to_use = USER_META_FIELDS_IFRAME
     else:
         raise TwitwiError("source_version should be one of v1 or iframe")
 
@@ -257,7 +257,8 @@ def normalize_tweet(
             was collected. Defaults to `None`.
         pure (bool, optional): whether to allow the function to mutate its
             original argument. Default to `True`.
-        source_version (str, optional): version of the Twitter payload. Default to "v1".
+        source_version (str, optional): version of the Twitter payload. Must be
+            either "v1" or "iframe". Default to "v1".
 
     Returns:
         (dict or list): Either a single tweet dict or a list of tweet dicts if
@@ -266,8 +267,8 @@ def normalize_tweet(
     """
 
     # iframe is for the method without api key (here https://shkspr.mobi/blog/2025/04/you-dont-need-an-api-key-to-archive-twitter-data/)
-    if source_version not in ["v1", "iframe", "bluesky"]:
-        raise Exception("source should be one of v1, iframe or bluesky")
+    if source_version not in ["v1", "iframe"]:
+        raise Exception("source should be one of v1 or iframe")
 
     if pure:
         tweet = deepcopy(tweet)
