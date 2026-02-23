@@ -879,7 +879,13 @@ def normalize_tweets_payload_v2(
     output = []
     already_seen = {}
 
-    for item in payload["data"]:
+    ## payload can contain just a single tweet
+    if isinstance(payload["data"], (dict)):
+        items = [payload["data"]]
+    elif isinstance(payload["data"], (list)):
+        items = payload["data"]
+
+    for item in items:
         normalized_tweets = normalize_tweet_v2(
             item,
             users_by_id=users_by_id,
