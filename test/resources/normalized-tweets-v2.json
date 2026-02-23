@@ -965,5 +965,53 @@
     "user_tweets": 165675,
     "user_url": "https://bfmbusiness.bfmtv.com/",
     "user_verified": false
+  },
+  {
+    "collected_via": [
+      "test"
+    ],
+    "collection_time": "2026-02-23T14:17:43.605763",
+    "hashtags": [],
+    "id": "1618628579440619521",
+    "impression_count": 0,
+    "lang": "ja",
+    "like_count": 0,
+    "links": [],
+    "local_time": "2023-01-26T16:15:00",
+    "match_query": true,
+    "media_files": [],
+    "media_types": [],
+    "media_urls": [],
+    "mentioned_ids": [
+      "135064055"
+    ],
+    "mentioned_names": [
+      "kojiharunyan"
+    ],
+    "possibly_sensitive": false,
+    "quote_count": 0,
+    "reply_count": 0,
+    "retweet_count": 0,
+    "source_name": null,
+    "text": "@kojiharunyan わーん神3🐰🐰🐰💞",
+    "timestamp_utc": 1674746100,
+    "to_tweetid": "1618619004586950657",
+    "to_userid": "135064055",
+    "to_username": "kojiharunyan",
+    "url": "https://twitter.com/TOMOKAPEACE/status/1618628579440619521",
+    "user_created_at": "2015-11-14T14:35:31",
+    "user_description": "１本会フェアリーズ♡好きには全力♡ディズニーとミッキーと大阪とくだらないこと大好きっっ♡👶🏻🍼💕",
+    "user_followers": 250,
+    "user_friends": 44,
+    "user_id": "4234967894",
+    "user_image": "https://pbs.twimg.com/profile_images/1421660585549123584/MO7HGIV1_normal.jpg",
+    "user_lists": 3,
+    "user_location": "らぶあんどぴーす☺︎❤︎",
+    "user_name": "❤︎𝒕𝒐𝒎𝒐𝒌𝒂𝒑𝒆𝒂𝒄𝒆❤︎",
+    "user_screen_name": "TOMOKAPEACE",
+    "user_timestamp_utc": 1447508131,
+    "user_tweets": 14905,
+    "user_url": null,
+    "user_verified": false
   }
 ]
