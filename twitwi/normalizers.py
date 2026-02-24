@@ -206,7 +206,7 @@ def grab_extra_meta(source, result, locale=None, source_version: str = "v1"):
         result["user_url"] = source["user"]["entities"]["url"]["urls"][0][
             "expanded_url"
         ]
-    except KeyError, IndexError:
+    except (KeyError, IndexError):
         try:
             result["user_url"] = source["user"]["url"]
         except KeyError:
