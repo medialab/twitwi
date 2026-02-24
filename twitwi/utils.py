@@ -128,7 +128,7 @@ def validate_payload_v2(payload):
             return False
 
     # there can also just be a single tweet in the payload
-    if not isinstance(payload['data'], (list,dict)):
+    if not isinstance(payload["data"], (list, dict)):
         return False
 
     # NOTE: not sure it cannot be absent altogether
