@@ -2704,11 +2704,14 @@
         "coordinates": null,
         "id": "1529111439562223616",
         "impression_count": 1456,
-        "hashtags": ["afp"],
+        "hashtags": [
+          "afp"
+        ],
         "lang": "fr",
         "like_count": 7586,
         "links": [],
-        "links_to_resolve": false, "domains": [],
+        "links_to_resolve": false,
+        "domains": [],
         "local_time": "2022-05-24T16:45:51",
         "match_query": true,
         "media_alt_texts": [],
@@ -2796,7 +2799,10 @@
                 "url": "https://t.co/l1tEDjlKD9",
                 "expanded_url": "http://www.afp.com",
                 "display_url": "afp.com",
-                "indices": [0, 23]
+                "indices": [
+                  0,
+                  23
+                ]
               }
             ]
           },
@@ -2806,7 +2812,10 @@
                 "url": "https://t.co/VOvpA2ky3O",
                 "expanded_url": "http://u.afp.com/AFPTwitter",
                 "display_url": "u.afp.com/AFPTwitter",
-                "indices": [123, 146]
+                "indices": [
+                  123,
+                  146
+                ]
               }
             ]
           }
@@ -2832,6 +2841,322 @@
         "utc_offset": null,
         "verified": true
       }
+    }
+  },
+  {
+    "normalized": [
+      {
+        "id": "1253871810204106754",
+        "local_time": "2020-04-25T04:21:50",
+        "timestamp_utc": 1587781310,
+        "text": "Si @nayteFN rentre Grizi, j’offre un skin à 800 à tout les RT!",
+        "url": "https://twitter.com/veernoksss/status/1253871810204106754",
+        "quoted_id": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "quoted_timestamp_utc": null,
+        "retweeted_id": null,
+        "retweeted_user": null,
+        "retweeted_user_id": null,
+        "retweeted_timestamp_utc": null,
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "media_alt_texts": [],
+        "links": [],
+        "links_to_resolve": false,
+        "domains": [],
+        "hashtags": [],
+        "mentioned_ids": [
+          "2789058753"
+        ],
+        "mentioned_names": [
+          "naytefn"
+        ],
+        "collection_time": "2026-11-12T17:05:56.111902",
+        "match_query": true,
+        "collected_via": [
+          "retweet"
+        ],
+        "coordinates": null,
+        "to_tweetid": null,
+        "to_username": null,
+        "to_userid": null,
+        "lang": "fr",
+        "retweet_count": 516,
+        "like_count": 127,
+        "reply_count": 16,
+        "user_screen_name": "veernoksss",
+        "user_name": "Stellar VeerNokss 🧬",
+        "user_friends": 351,
+        "user_followers": 340,
+        "user_location": null,
+        "user_verified": false,
+        "user_description": "Fortnite Player for @StellarGGS 🧬 • Managed by @tonydpmn • Inquieries : contact.veernokss@gmail.com",
+        "user_created_at": "2020-01-06T23:01:24",
+        "user_id": "1214305969783459840",
+        "user_tweets": 737,
+        "user_likes": 24752,
+        "user_lists": 1,
+        "user_image": "https://pbs.twimg.com/profile_images/1256393185267462146/95b-jLGo_normal.jpg",
+        "user_url": "https://www.youtube.com/channel/UCtH7V41WWFWPDBqjUikp0ZA?view_as=subscriber",
+        "user_timestamp_utc": 1578348084,
+        "source_url": "http://twitter.com/download/iphone",
+        "source_name": "Twitter for iPhone"
+      },
+      {
+        "id": "1257823435323052032",
+        "local_time": "2020-05-06T02:04:10",
+        "timestamp_utc": 1588723450,
+        "text": "RT @veernoksss: Si @nayteFN rentre Grizi, j’offre un skin à 800 à tout les RT!",
+        "url": "https://twitter.com/Antares_Greenn/status/1257823435323052032",
+        "quoted_id": null,
+        "quoted_user": null,
+        "quoted_user_id": null,
+        "quoted_timestamp_utc": null,
+        "retweeted_id": "1253871810204106754",
+        "retweeted_user": "veernoksss",
+        "retweeted_user_id": "1214305969783459840",
+        "retweeted_timestamp_utc": 1587781310,
+        "media_files": [],
+        "media_types": [],
+        "media_urls": [],
+        "media_alt_texts": [],
+        "links": [],
+        "links_to_resolve": false,
+        "domains": [],
+        "hashtags": [],
+        "mentioned_ids": [
+          "2789058753",
+          "1214305969783459840"
+        ],
+        "mentioned_names": [
+          "naytefn",
+          "veernoksss"
+        ],
+        "collection_time": "2026-11-12T17:05:56.111984",
+        "match_query": true,
+        "coordinates": null,
+        "to_tweetid": null,
+        "to_username": null,
+        "to_userid": null,
+        "lang": "fr",
+        "retweet_count": 516,
+        "like_count": 0,
+        "reply_count": 0,
+        "user_screen_name": "Antares_Greenn",
+        "user_name": "Greenn.",
+        "user_friends": 110,
+        "user_followers": 18,
+        "user_location": null,
+        "user_verified": false,
+        "user_description": "Pc player🌴      15yo  \n  Chaîne Youtube : Greenn.",
+        "user_created_at": "2019-11-13T23:33:31",
+        "user_id": "1194745095561654272",
+        "user_tweets": 33,
+        "user_likes": 89,
+        "user_lists": 0,
+        "user_image": "https://pbs.twimg.com/profile_images/1247296272727445506/2Xq3NavV_normal.jpg",
+        "user_url": null,
+        "user_timestamp_utc": 1573684411,
+        "source_url": "http://twitter.com/download/android",
+        "source_name": "Twitter for Android"
+      }
+    ],
+    "source": {
+      "in_reply_to_status_id": null,
+      "place": null,
+      "contributors": null,
+      "text": "RT @veernoksss: Si @nayteFN rentre Grizi, j’offre un skin à 800 à tout les RT!",
+      "events": [
+        ""
+      ],
+      "geo": null,
+      "quote_count": 0,
+      "coordinates": null,
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "favorite_count": 0,
+      "is_quote_status": false,
+      "truncated": false,
+      "retweet_count": 0,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "entities": {
+        "user_mentions": [
+          {
+            "id_str": null,
+            "screen_name": "veernoksss",
+            "indices": [
+              3,
+              14
+            ],
+            "name": null,
+            "id": null
+          },
+          {
+            "id_str": "2789058753",
+            "screen_name": "nayteFN",
+            "indices": [
+              19,
+              27
+            ],
+            "name": "nayte",
+            "id": 2789058753
+          },
+          {
+            "id_str": "2789058753",
+            "screen_name": "nayteFN",
+            "indices": [
+              3,
+              11
+            ],
+            "name": "nayte",
+            "id": 2789058753
+          }
+        ],
+        "urls": [],
+        "symbols": [],
+        "hashtags": []
+      },
+      "timestamp_ms": "1588723450867",
+      "retweeted_status": {
+        "in_reply_to_status_id": null,
+        "place": null,
+        "contributors": null,
+        "geo": null,
+        "quote_count": 0,
+        "coordinates": null,
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "favorite_count": 127,
+        "is_quote_status": false,
+        "truncated": false,
+        "retweet_count": 516,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "entities": {
+          "user_mentions": [
+            {
+              "id_str": "2789058753",
+              "screen_name": "nayteFN",
+              "indices": [
+                3,
+                11
+              ],
+              "name": "nayte",
+              "id": 2789058753
+            }
+          ],
+          "urls": [],
+          "symbols": [],
+          "hashtags": []
+        },
+        "text": "Si @nayteFN rentre Grizi, j’offre un skin à 800 à tout les RT!",
+        "in_reply_to_user_id_str": null,
+        "filter_level": "low",
+        "id_str": "1253871810204106754",
+        "reply_count": 16,
+        "retweeted": false,
+        "in_reply_to_screen_name": null,
+        "created_at": "Sat Apr 25 02:21:50 +0000 2020",
+        "favorited": false,
+        "lang": "fr",
+        "user": {
+          "is_translator": false,
+          "default_profile": true,
+          "id": 1214305969783459840,
+          "location": null,
+          "profile_text_color": "333333",
+          "followers_count": 340,
+          "profile_sidebar_fill_color": "DDEEF6",
+          "listed_count": 1,
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/1214305969783459840/1587515783",
+          "following": null,
+          "default_profile_image": false,
+          "screen_name": "veernoksss",
+          "profile_use_background_image": true,
+          "profile_background_image_url": "",
+          "favourites_count": 24752,
+          "friends_count": 351,
+          "time_zone": null,
+          "created_at": "Mon Jan 06 22:01:24 +0000 2020",
+          "name": "Stellar VeerNokss 🧬",
+          "protected": false,
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1256393185267462146/95b-jLGo_normal.jpg",
+          "verified": false,
+          "id_str": "1214305969783459840",
+          "profile_sidebar_border_color": "C0DEED",
+          "url": "https://www.youtube.com/channel/UCtH7V41WWFWPDBqjUikp0ZA?view_as=subscriber",
+          "profile_background_tile": false,
+          "description": "Fortnite Player for @StellarGGS 🧬 • Managed by @tonydpmn • Inquieries : contact.veernokss@gmail.com",
+          "profile_link_color": "1DA1F2",
+          "notifications": null,
+          "profile_image_url": "http://pbs.twimg.com/profile_images/1256393185267462146/95b-jLGo_normal.jpg",
+          "profile_background_color": "F5F8FA",
+          "translator_type": "none",
+          "statuses_count": 737,
+          "contributors_enabled": false,
+          "profile_background_image_url_https": "",
+          "geo_enabled": false,
+          "utc_offset": null,
+          "follow_request_sent": null,
+          "lang": null
+        },
+        "id": 1253871810204106754
+      },
+      "in_reply_to_user_id_str": null,
+      "filter_level": "low",
+      "id_str": "1257823435323052032",
+      "tags": [
+        "(200, 3, 'clusters')"
+      ],
+      "reply_count": 0,
+      "retweeted": false,
+      "in_reply_to_screen_name": null,
+      "created_at": "Wed May 06 00:04:10 +0000 2020",
+      "favorited": false,
+      "lang": "fr",
+      "user": {
+        "is_translator": false,
+        "default_profile": true,
+        "id": 1194745095561654272,
+        "location": null,
+        "profile_text_color": "333333",
+        "followers_count": 18,
+        "profile_sidebar_fill_color": "DDEEF6",
+        "listed_count": 0,
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1194745095561654272/1582324116",
+        "following": null,
+        "default_profile_image": false,
+        "screen_name": "Antares_Greenn",
+        "profile_use_background_image": true,
+        "profile_background_image_url": "",
+        "favourites_count": 89,
+        "friends_count": 110,
+        "time_zone": null,
+        "created_at": "Wed Nov 13 22:33:31 +0000 2019",
+        "name": "Greenn.",
+        "protected": false,
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1247296272727445506/2Xq3NavV_normal.jpg",
+        "verified": false,
+        "id_str": "1194745095561654272",
+        "profile_sidebar_border_color": "C0DEED",
+        "url": null,
+        "profile_background_tile": false,
+        "description": "Pc player🌴      15yo  \n  Chaîne Youtube : Greenn.",
+        "profile_link_color": "1DA1F2",
+        "notifications": null,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1247296272727445506/2Xq3NavV_normal.jpg",
+        "profile_background_color": "F5F8FA",
+        "translator_type": "none",
+        "statuses_count": 33,
+        "contributors_enabled": false,
+        "profile_background_image_url_https": "",
+        "geo_enabled": false,
+        "utc_offset": null,
+        "follow_request_sent": null,
+        "lang": null
+      },
+      "id": 1257823435323052032
     }
   }
 ]
