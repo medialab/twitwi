@@ -409,8 +409,8 @@ def normalize_tweet(
             hashtags.add(hashtag["text"].lower())
 
         for mention in tweet["entities"].get("user_mentions", []):
-            lowered_name = mention["screen_name"].lower()
-            mentions[lowered_name] = rtuid if lowered_name == rtu.lower() else mention["id_str"]
+            name = mention["screen_name"]
+            mentions[name.lower()] = rtuid if name == rtu else mention["id_str"]
 
     if rtu:
         text = format_rt_text(rtu, rtweet["text"])
